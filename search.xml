@@ -1,29 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World</title>
-    <url>/2021/12/28/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start">Quick Start</h2>
-<h3 id="Create-a-new-post">Create a new post</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server">Run server</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<span id="more"></span>
-<h3 id="Generate-static-files">Generate static files</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites">Deploy to remote sites</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-      <tags>
-        <tag>documents</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>About Me</title>
     <url>/2021/12/28/About-Me/</url>
     <content><![CDATA[<blockquote>
@@ -38,6 +15,193 @@
 <h4 id="😀QQ：1194749361">😀QQ：1194749361</h4>
 <p><img src="https://gitee.com/zyzhang98/typora-picgo/raw/master/img/zgr.jpg" alt=""></p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>博客搭建(2)---主题配置遗留问题</title>
+    <url>/2021/12/28/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA(2)/</url>
+    <content><![CDATA[<h2 id="分类、标签、关于我">分类、标签、关于我</h2>
+<p>如果是跟着第一节的搭建教程完全搭建下来的话，最后，你会发现虽然整体的博客框架有了，但是或多或少还存在着一些小 Bug，比如，点击侧边栏的<code>分类、标签、关于我</code>这些会报错，显示无法 Get。</p>
+<h3 id="解决方法">解决方法</h3>
+<p>其实出现这些问题也不算是 Bug，<code>Ayer</code>主题的作者已经在说明文档中给出了。</p>
+<ul>
+<li>
+<p>首先在博客根目录右键<code>Git Bash Here</code>，键入以下命令。</p>
+<span id="more"></span>
+</li>
+</ul>
+<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new page categories</span><br></pre></td></tr></table></figure></div>
+<p>然后将以下文本复制到<code>D:/MyBlog/source/categories/index.md</code>文件中。</p>
+<div class="highlight-wrap" data-rel="Markdown"><figure class="iseeu highlight markdown"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: categories</span><br><span class="line">type: &quot;categories&quot;</span><br><span class="line"><span class="section">layout: &quot;categories&quot;</span></span><br><span class="line"><span class="section">---</span></span><br></pre></td></tr></table></figure></div>
+<p>保存退出。这样就解决了侧边栏<code>分类</code>的问题。</p>
+<ul>
+<li><code>标签</code>的问题解决方法与上边的相似。</li>
+</ul>
+<p>博客根目录下右键<code>Git Bash Here</code>，键入以下命令。</p>
+<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new page tags</span><br></pre></td></tr></table></figure></div>
+<p>然后将以下文本复制到<code>D:/MyBlog/source/tags/index.md</code>文件中。</p>
+<div class="highlight-wrap" data-rel="Markdown"><figure class="iseeu highlight markdown"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: tags</span><br><span class="line">type: &quot;tags&quot;</span><br><span class="line"><span class="section">layout: &quot;tags&quot;</span></span><br><span class="line"><span class="section">---</span></span><br></pre></td></tr></table></figure></div>
+<p><code>标签</code>的问题也解决了。</p>
+<ul>
+<li><code>关于我</code>标签的问题</li>
+</ul>
+<p>首先打开<code>主题配置文件</code>(注意不是根目录配置文件)，第10行代码修改为<code>关于我: /about</code></p>
+<p>然后博客根目录下右键<code>Git Bash Here</code>，键入以下命令。</p>
+<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new page about</span><br></pre></td></tr></table></figure></div>
+<p>然后打开<code>D:/MyBlog/source/about/index.md</code>文件，以下列模板来书写文件即可。</p>
+<div class="highlight-wrap" data-rel="Markdown"><figure class="iseeu highlight markdown"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: &lt;自定义 关于我 界面打开的标题&gt;</span><br><span class="line">type: about</span><br><span class="line"><span class="section">layout: about</span></span><br><span class="line"><span class="section">---</span></span><br><span class="line">&lt;输入自己的个人简介或者其他想输入的信息&gt;</span><br></pre></td></tr></table></figure></div>
+<p>其中<code>&lt;&gt;</code>部分全部为自己自定义内容，可任意修改，除此之外的部分，连一个空格都不要动，防止可能出现的问题。</p>
+<p>我的博客<code>about</code>界面设置如下图所示，仅供参考。</p>
+<p><img src="https://gitee.com/zyzhang98/typora-picgo/raw/master/img/image-20211228215633839.png" alt=""></p>
+<h2 id="emoji表情添加">emoji表情添加</h2>
+<p>博客写作只是单调的文字总是显得不那么有活力，所以插入一些类似😀😶😐😹😻👌👊👧👦👨‍❤️‍👨🐶🐭🐻🐰🙉🍏🍑🍒⚽🏀🚗🚗🚕❤️会显得文章不是那么单调。</p>
+<p>Hexo 默认使用的是<a href="https://github.com/hexojs/hexo-renderer-marked">Hexo-renderer-marked</a>渲染器，它不支持插件扩展，也不支持 emoji解析，所以我们选用<a href="https://github.com/hexojs/hexo-renderer-markdown-it">hexo-renderer-markdown-it</a>渲染器。下面我们将原本默认的渲染器更换为 markdown-it 渲染器，使用这个渲染引擎就可以支持 emoji 表情了。</p>
+<p>首先进入博客根目录，右键运行<code>Git Bash Here</code>，输入命令如下。</p>
+<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 卸载默认的 marked 渲染器</span></span><br><span class="line">npm un hexo-renderer-marked --save</span><br><span class="line"><span class="comment"># 安装 markdown-it 渲染器</span></span><br><span class="line">npm i hexo-renderer-markdown-it --save</span><br><span class="line"><span class="comment"># 安装 markdown-it-emoji 插件</span></span><br><span class="line">npm install markdown-it-emoji --save</span><br></pre></td></tr></table></figure></div>
+<p>完成以上安装后，我们进行配置，打开<code>根目录配置文件</code>，在最后添加以下内容。</p>
+<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Markdown-it config</span></span><br><span class="line"><span class="comment">## Docs: https://github.com/celsomiranda/hexo-renderer-markdown-it/wiki</span></span><br><span class="line">markdown:</span><br><span class="line">  render:</span><br><span class="line">    html: <span class="literal">true</span></span><br><span class="line">    xhtmlOut: <span class="literal">false</span></span><br><span class="line">    breaks: <span class="literal">true</span></span><br><span class="line">    linkify: <span class="literal">true</span></span><br><span class="line">    typographer: <span class="literal">true</span></span><br><span class="line">    quotes: <span class="string">&#x27;“”‘’&#x27;</span></span><br><span class="line">  plugins:</span><br><span class="line">    - markdown-it-abbr</span><br><span class="line">    - markdown-it-footnote</span><br><span class="line">    - markdown-it-ins</span><br><span class="line">    - markdown-it-sub</span><br><span class="line">    - markdown-it-sup</span><br><span class="line">    - markdown-it-emoji  <span class="comment">## add emoji</span></span><br><span class="line">  anchors:</span><br><span class="line">    level: 2</span><br><span class="line">    collisionSuffix: <span class="string">&#x27;v&#x27;</span></span><br><span class="line">    <span class="comment"># If `true`, creates an anchor tag with a permalink besides the heading.</span></span><br><span class="line">    permalink: <span class="literal">false</span>  </span><br><span class="line">    permalinkClass: header-anchor</span><br><span class="line">    <span class="comment"># The symbol used to make the permalink</span></span><br><span class="line">    permalinkSymbol: ¶</span><br></pre></td></tr></table></figure></div>
+<p>保存退出。上面的内容主要就是<code>hexo-renderer-markdown-it</code>的一些选项配置，详细的每一项的配置可以查阅其<a href="https://github.com/hexojs/hexo-renderer-markdown-it"> Github 项目主页</a>。</p>
+<p>然后，在<a href="https://www.emojicopy.com/"> emoji 列表</a>中找到自己需要的表情，复制粘贴到<code>Typora</code>或者其他<code>Markdown</code>语法编辑器中即可。</p>
+<h2 id="评论添加">评论添加</h2>
+<p>博客最后的评论框存在 Bug，是由于<code>Ayer</code>主题默认使用了<code>Leancloud + Valine</code>接口的无后端评论系统，但是里边需要填入自己的<code>app_id</code>和<code>app_key</code>，所以我们需要先创建 <a href="https://console.leancloud.cn/apps">LeanCloud 应用</a>，创建应用后在应用设置里边的应用凭证找到<code>AppID</code>和<code>AppKey</code>，然后打开<code>主题配置文件</code>，找到第209~210行，将自己的<code>app_id</code>和<code>app_key</code>填入即可，另外<code>avatar</code>标签的参数可以更换，查看 <a href="https://valine.js.org/avatar.html">Valine 头像配置</a>更换参数来实现评论头像的更换。</p>
+<h2 id="自动打开新创建文件">自动打开新创建文件</h2>
+<p>每次我们在博客根目录使用右键<code>Git Bash Here</code>打开命令窗口输入<code>hexo new &quot;file&quot;</code>新建博客文件时，总是要自己手动去打开<code>D:\MyBlog\source\_posts</code>文件夹的新建<code>.md</code>文件来编辑文章内容，这样显得很麻烦，所以添加一个 js 脚本来实现每次创建新的博客文件时使用自己指定的编辑器自动打开文件，方便我们直接进行编辑。</p>
+<p>首先我们需要在博客根目录下创建一个文件夹<code>scripts</code>用来存放脚本的目录，在<code>scripts</code>中新建一个<code>openNewFile.js</code>文件，将以下内容复制进此<code>.js</code>文件中。</p>
+<div class="highlight-wrap" data-rel="Js"><figure class="iseeu highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 注意将”“部分内容更换为自己的编辑器路径 */</span></span><br><span class="line"><span class="keyword">var</span> exec = <span class="built_in">require</span>(<span class="string">&#x27;child_process&#x27;</span>).exec;</span><br><span class="line">hexo.on(<span class="string">&#x27;new&#x27;</span>, <span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">	exec(<span class="string">&#x27;start  &quot;‪D:/Software/Typora/Typora/Typora.exe&quot; &#x27;</span> + data.path);</span><br><span class="line">&#125;); </span><br></pre></td></tr></table></figure></div>
+<p>保存退出，这样每次在<code>hexo new &quot;file&quot;</code>命令运行后，<code>.js</code>脚本会监听到命令的运行，然后自动执行打开文件的任务。</p>
+<h2 id="背景特效添加">背景特效添加</h2>
+<p><code>Ayer</code>主题已经自带了鼠标点击特效和动态线条背景，现在我添加飘雪的背景。</p>
+<p>首先在<code>D:\MyBlog\themes\ayer\source\js\</code>文件夹内放入一个<code>snow.js</code>文件，将以下内容输入此<code>.js</code>文件中。</p>
+<!--注意此处文件路径根据你的主题选择，一般将ayer替换为你的主题名即为正确路径，下边涉及路径同理。-->
+<div class="highlight-wrap" data-rel="Js"><figure class="iseeu highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*雪花*/</span></span><br><span class="line">(<span class="function"><span class="keyword">function</span> (<span class="params">$</span>) </span>&#123;</span><br><span class="line">    $.fn.snow = <span class="function"><span class="keyword">function</span> (<span class="params">options</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> $flake = $(<span class="string">&#x27;&lt;div id=&quot;snowbox&quot; /&gt;&#x27;</span>).css(&#123;</span><br><span class="line">                <span class="string">&#x27;position&#x27;</span>: <span class="string">&#x27;absolute&#x27;</span>,</span><br><span class="line">                <span class="string">&#x27;z-index&#x27;</span>: <span class="string">&#x27;9999&#x27;</span>,</span><br><span class="line">                <span class="string">&#x27;top&#x27;</span>: <span class="string">&#x27;-50px&#x27;</span></span><br><span class="line">            &#125;).html(<span class="string">&#x27;❄&#x27;</span>),</span><br><span class="line">            documentHeight = $(<span class="built_in">document</span>).height(),</span><br><span class="line">            documentWidth = $(<span class="built_in">document</span>).width(),</span><br><span class="line">            defaults = &#123;</span><br><span class="line">                <span class="attr">minSize</span>: <span class="number">10</span>,</span><br><span class="line">                <span class="attr">maxSize</span>: <span class="number">20</span>,</span><br><span class="line">                <span class="attr">newOn</span>: <span class="number">1000</span>,</span><br><span class="line">                <span class="attr">flakeColor</span>: <span class="string">&quot;#AFDAEF&quot;</span> <span class="comment">/* 此处可以定义雪花颜色，若要白色可以改为#FFFFFF */</span></span><br><span class="line">            &#125;,</span><br><span class="line">            options = $.extend(&#123;&#125;, defaults, options);</span><br><span class="line">        <span class="keyword">var</span> interval = <span class="built_in">setInterval</span>(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="keyword">var</span> startPositionLeft = <span class="built_in">Math</span>.random() * documentWidth - <span class="number">100</span>,</span><br><span class="line">                startOpacity = <span class="number">0.5</span> + <span class="built_in">Math</span>.random(),</span><br><span class="line">                sizeFlake = options.minSize + <span class="built_in">Math</span>.random() * options.maxSize,</span><br><span class="line">                endPositionTop = documentHeight - <span class="number">200</span>,</span><br><span class="line">                endPositionLeft = startPositionLeft - <span class="number">500</span> + <span class="built_in">Math</span>.random() * <span class="number">500</span>,</span><br><span class="line">                durationFall = documentHeight * <span class="number">10</span> + <span class="built_in">Math</span>.random() * <span class="number">5000</span>;</span><br><span class="line">            $flake.clone().appendTo(<span class="string">&#x27;body&#x27;</span>).css(&#123;</span><br><span class="line">                <span class="attr">left</span>: startPositionLeft,</span><br><span class="line">                <span class="attr">opacity</span>: startOpacity,</span><br><span class="line">                <span class="string">&#x27;font-size&#x27;</span>: sizeFlake,</span><br><span class="line">                <span class="attr">color</span>: options.flakeColor</span><br><span class="line">            &#125;).animate(&#123;</span><br><span class="line">                <span class="attr">top</span>: endPositionTop,</span><br><span class="line">                <span class="attr">left</span>: endPositionLeft,</span><br><span class="line">                <span class="attr">opacity</span>: <span class="number">0.2</span></span><br><span class="line">            &#125;, durationFall, <span class="string">&#x27;linear&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">                $(<span class="built_in">this</span>).remove()</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;, options.newOn);</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;)(jQuery);</span><br><span class="line">$(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    $.fn.snow(&#123;</span><br><span class="line">        <span class="attr">minSize</span>: <span class="number">5</span>,</span><br><span class="line">        <span class="comment">/* 定义雪花最小尺寸 */</span></span><br><span class="line">        <span class="attr">maxSize</span>: <span class="number">50</span>,</span><br><span class="line">        <span class="comment">/* 定义雪花最大尺寸 */</span></span><br><span class="line">        <span class="attr">newOn</span>: <span class="number">300</span> <span class="comment">/* 定义密集程度，数字越小越密集 */</span></span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></div>
+<p>然后打开<code>D:\MyBlog\themes\ayer\layout\layout.ejs</code>文件，将以下代码输入。</p>
+<div class="highlight-wrap" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!-- 雪花特效 --&gt;</span><br><span class="line">&lt;% if (theme.snow)&#123; %&gt;</span><br><span class="line">  &lt;script type=&quot;text/javascript&quot; src=&quot;/js/snow.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure></div>
+<p>最后打开<code>主题配置文件</code>，在最后添加<code>snow: true</code>即可。</p>
+<p>重新运行<code>hexo g &amp;&amp; hexo s</code>，打开浏览器预览一下效果。</p>
+<h2 id="其他">其他</h2>
+<p>除此之外，网络上还有许多的美化教程，比如阅读全文添加边框，背景飘带，添加 live2d 看板娘，添加网站运行时间，动态诗词，各种网页小挂件，音乐插件等，大家自行研究。</p>
+]]></content>
+      <categories>
+        <category>博客搭建</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>ayer</tag>
+        <tag>美化</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>博客搭建(3)---Github部署</title>
+    <url>/2021/12/29/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-3-Github%E9%83%A8%E7%BD%B2/</url>
+    <content><![CDATA[<h2 id="背景">背景</h2>
+<p>有了前边的一系列配置，我们已经可以在本地端口访问到我们自己的博客主页了，但是想要发布到互联网上，让其他人可以访问，还需要对它进行部署。</p>
+<p>因为我们的个人博客仅仅需要的功能比较简单，无非是一些文章记录，所以部署在提供静态网页托管服务的网站上，这样就省去了购买云服务器，购买域名、ip 等这些繁杂的步骤，更重要的是免费。</p>
+<p>提供静态网页托管服务的平台有很多，<code>Github</code>最为方便出名，但是由于其服务器不在国内，国内可能出现速度慢的情况，所以还有备用选择<code>Gitee</code>。<span id="more"></span></p>
+<h2 id="Github-Pages部署">Github Pages部署</h2>
+<h3 id="注册Github账号">注册Github账号</h3>
+<p>这个，直接去 <a href="https://github.com/">Github</a> 进行注册就行了，注意用户名非常重要，建议取个好记有意义的名字。</p>
+<h3 id="创建Github-Pages仓库">创建Github Pages仓库</h3>
+<p>点击右上角的 Sign in 登陆自己的账号，然后左上角有一个<code>New</code>的选项，点击进行新建仓库。其中</p>
+<ul>
+<li>
+<p>Owner 部分自动填充好了,不需要改动</p>
+</li>
+<li>
+<p>Repository name 部分填写<code>你的用户名.github.io</code></p>
+</li>
+<li>
+<p>Description 部分填写自己仓库的描述，无其他要求，也可选择不填</p>
+</li>
+<li>
+<p>Public ☑️</p>
+</li>
+<li>
+<p>Initialize this repository with 部分勾选<code>Add a README file</code></p>
+</li>
+</ul>
+<p>然后点击<code>Create repository</code>创建仓库。</p>
+<p>接着我们开始测试能否访问 Github Pages 服务，点击<code>Add file - Create new file</code>创建一个新的静态网页。</p>
+<p>输入文件名<code>first.html</code>，然后在 Edit new file 输入<code>&lt;h1&gt;Hello My Blog!&lt;/h1&gt;</code>，然后直接点击下方绿色按钮<code>Commit new file</code>提交文件到仓库。</p>
+<p><img src="https://gitee.com/zyzhang98/typora-picgo/raw/master/img/image-20211229202836811.png" alt=""></p>
+<p>然后在浏览器中输入网址<code>https://你的用户名.github.io</code>，看到刚才我们创建的网页的内容，说明 Github Pages 服务正常。</p>
+<h2 id="Github-Pages发布">Github Pages发布</h2>
+<p>我们在测试的时候直接在仓库目录下创建了一个<code>first.html</code>，就可以通过自己固定的网址来看到我们创建的网页内容，那么我们只要将我们本地写的博客文章生成静态的 html 网页，然后提交到刚才的仓库中，就可以在网址中看到我们博客的内容了。完成这样的一整个流程，我们需要几条简单的命令。</p>
+<h3 id="配置Git参数">配置Git参数</h3>
+<h4 id="配置身份识别">配置身份识别</h4>
+<p>在博客根目录下右键打开<code>Git Bash Here</code>，键入以下命令。</p>
+<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># username 和 username@XXX.com 是你注册 Github 的用户名和邮箱(之后的代码中涉及到不再提示)</span></span><br><span class="line">git config --global user.name <span class="string">&quot;username&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;username@XXX.com&quot;</span></span><br></pre></td></tr></table></figure></div>
+<h4 id="生成SSH-Keys">生成SSH Keys</h4>
+<p>生成 SSH keys 主要是用于 Git 提交时的权限控制和加密，本地根据 RSA 算法生成公私密钥对，然后将公钥添加到 Github 上，本机就可以提交代码到自己的 Github 库了，这个是根据当前使用的电脑的一些信息生成的，所以换电脑提交时要重新生成并进行重新添加。</p>
+<p>同样，博客根目录下右键打开<code>Git Bash Here</code>，输入以下命令，一直按<code>Enter</code>即可。</p>
+<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">&quot;username@XXX.com&quot;</span></span><br></pre></td></tr></table></figure></div>
+<p>运行结束后，如下图所示，其中红色方框圈出部分即为生成公钥文件的位置。</p>
+<p><img src="https://gitee.com/zyzhang98/typora-picgo/raw/master/img/image-20211229204748093.png" alt=""></p>
+<p>然后，继续输入以下命令，查看公钥文件的具体内容，是一个以<code>ssh-rsa</code>开头，以<code>username@XXX.com</code>结尾的字符串。</p>
+<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># cat 后边的内容就是上边红色方框圈出的部分，根据自己的填写</span></span><br><span class="line">cat /c/Users/dell/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure></div>
+<p>然后将这一长串字符串，从开头到结尾全部复制。</p>
+<h4 id="配置公钥">配置公钥</h4>
+<p>打开自己的 Github 主页，点击自己的头像，选择<code>Setting--SSH and GPG keys</code>，选择右边绿色的<code>New SSH key</code>，<code>Title</code>部分任意填写，<code>Key</code>部分粘贴你刚才复制的一长串字符串，然后点击<code>Add SSH key</code>。</p>
+<p>接着打开博客根目录右键<code>Git Bash Here</code>，输入以下命令。</p>
+<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 直接复制使用，无需修改</span></span><br><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure></div>
+<p>第一次连接 SSH 可能会出现<code>Are you sure you want to continue connecting?</code>，直接输入<code>yes</code>，然后回车即可。窗口出现<code>Hi 用户名!You've successfully...</code>说明配置公钥成功。</p>
+<h3 id="安装Hexo发布插件">安装Hexo发布插件</h3>
+<p>博客根目录下右键打开<code>Git Bash Here</code>，输入以下命令，安装<code>hexo-deployer-git</code>，这个插件的主要作用就是将本地生成好的静态网页提交到 Github Pages 仓库中。</p>
+<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git</span><br></pre></td></tr></table></figure></div>
+<h3 id="发布">发布</h3>
+<p>发布之前，先打开<code>根目录配置文件</code>，将以下内容添加到文件最后，有 deploy 标签的改参数即可，没有的自行添加。</p>
+<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># XXX 表示前边 Github 的用户名</span></span><br><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repo: git@github.com:XXX/XXX.github.io.git</span><br><span class="line">  branch: main</span><br></pre></td></tr></table></figure></div>
+<p>经过一系列的操作，终于可以发布文章到网页上了，右键<code>Git Bash Here</code>，输入以下命令。</p>
+<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure></div>
+<p>运行结束后，打开浏览器输入网址<code>https://用户名.github.io</code>，就可以看到之前本地部署的博客文章了。</p>
+]]></content>
+      <categories>
+        <category>博客搭建</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>github</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2021/12/28/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start">Quick Start</h2>
+<h3 id="Create-a-new-post">Create a new post</h3>
+<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure></div>
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server">Run server</h3>
+<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></div>
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<span id="more"></span>
+<h3 id="Generate-static-files">Generate static files</h3>
+<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure></div>
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites">Deploy to remote sites</h3>
+<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></div>
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+      <tags>
+        <tag>documents</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>不宠无惊过一生</title>
+    <url>/2021/12/28/%E4%B8%8D%E5%AE%A0%E6%97%A0%E6%83%8A%E8%BF%87%E4%B8%80%E7%94%9F/</url>
+    <content><![CDATA[<p>不乱于心，不困于情。不畏将来，不念过往。如此，安好。</p>
+<p>深谋若谷，深交若水。深明大义，深悉小节。已然，静舒。</p>
+<span id="more"></span>
+<p>善宽以怀，善感以恩。善博以浪，善精以业。这般，最佳。</p>
+<p>勿感于时，勿伤于怀。勿耽美色，勿沉虚妄。从今，进取。</p>
+<p>无愧于天，无愧于地。无怍于人，无惧于鬼。这样，人生。</p>
+]]></content>
+      <categories>
+        <category>文化</category>
+      </categories>
+      <tags>
+        <tag>诗词</tag>
+        <tag>丰子恺</tag>
+        <tag>文化</tag>
+      </tags>
   </entry>
   <entry>
     <title>博客搭建(1)---Hexo框架安装</title>
@@ -185,170 +349,6 @@
 <blockquote>
 <p>本文安装配置过程参考 <a href="https://yushuaigee.gitee.io/">半亩方塘</a></p>
 </blockquote>
-]]></content>
-      <categories>
-        <category>博客搭建</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>ayer</tag>
-        <tag>美化</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>不宠无惊过一生</title>
-    <url>/2021/12/28/%E4%B8%8D%E5%AE%A0%E6%97%A0%E6%83%8A%E8%BF%87%E4%B8%80%E7%94%9F/</url>
-    <content><![CDATA[<p>不乱于心，不困于情。不畏将来，不念过往。如此，安好。</p>
-<p>深谋若谷，深交若水。深明大义，深悉小节。已然，静舒。</p>
-<span id="more"></span>
-<p>善宽以怀，善感以恩。善博以浪，善精以业。这般，最佳。</p>
-<p>勿感于时，勿伤于怀。勿耽美色，勿沉虚妄。从今，进取。</p>
-<p>无愧于天，无愧于地。无怍于人，无惧于鬼。这样，人生。</p>
-]]></content>
-      <categories>
-        <category>文化</category>
-      </categories>
-      <tags>
-        <tag>诗词</tag>
-        <tag>丰子恺</tag>
-        <tag>文化</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>博客搭建(3)---Github部署</title>
-    <url>/2021/12/29/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-3-Github%E9%83%A8%E7%BD%B2/</url>
-    <content><![CDATA[<h2 id="背景">背景</h2>
-<p>有了前边的一系列配置，我们已经可以在本地端口访问到我们自己的博客主页了，但是想要发布到互联网上，让其他人可以访问，还需要对它进行部署。</p>
-<p>因为我们的个人博客仅仅需要的功能比较简单，无非是一些文章记录，所以部署在提供静态网页托管服务的网站上，这样就省去了购买云服务器，购买域名、ip 等这些繁杂的步骤，更重要的是免费。</p>
-<p>提供静态网页托管服务的平台有很多，<code>Github</code>最为方便出名，但是由于其服务器不在国内，国内可能出现速度慢的情况，所以还有备用选择<code>Gitee</code>。<span id="more"></span></p>
-<h2 id="Github-Pages部署">Github Pages部署</h2>
-<h3 id="注册Github账号">注册Github账号</h3>
-<p>这个，直接去 <a href="https://github.com/">Github</a> 进行注册就行了，注意用户名非常重要，建议取个好记有意义的名字。</p>
-<h3 id="创建Github-Pages仓库">创建Github Pages仓库</h3>
-<p>点击右上角的 Sign in 登陆自己的账号，然后左上角有一个<code>New</code>的选项，点击进行新建仓库。其中</p>
-<ul>
-<li>
-<p>Owner 部分自动填充好了,不需要改动</p>
-</li>
-<li>
-<p>Repository name 部分填写<code>你的用户名.github.io</code></p>
-</li>
-<li>
-<p>Description 部分填写自己仓库的描述，无其他要求，也可选择不填</p>
-</li>
-<li>
-<p>Public ☑️</p>
-</li>
-<li>
-<p>Initialize this repository with 部分勾选<code>Add a README file</code></p>
-</li>
-</ul>
-<p>然后点击<code>Create repository</code>创建仓库。</p>
-<p>接着我们开始测试能否访问 Github Pages 服务，点击<code>Add file - Create new file</code>创建一个新的静态网页。</p>
-<p>输入文件名<code>first.html</code>，然后在 Edit new file 输入<code>&lt;h1&gt;Hello My Blog!&lt;/h1&gt;</code>，然后直接点击下方绿色按钮<code>Commit new file</code>提交文件到仓库。</p>
-<p><img src="https://gitee.com/zyzhang98/typora-picgo/raw/master/img/image-20211229202836811.png" alt=""></p>
-<p>然后在浏览器中输入网址<code>https://你的用户名.github.io</code>，看到刚才我们创建的网页的内容，说明 Github Pages 服务正常。</p>
-<h2 id="Github-Pages发布">Github Pages发布</h2>
-<p>我们在测试的时候直接在仓库目录下创建了一个<code>first.html</code>，就可以通过自己固定的网址来看到我们创建的网页内容，那么我们只要将我们本地写的博客文章生成静态的 html 网页，然后提交到刚才的仓库中，就可以在网址中看到我们博客的内容了。完成这样的一整个流程，我们需要几条简单的命令。</p>
-<h3 id="配置Git参数">配置Git参数</h3>
-<h4 id="配置身份识别">配置身份识别</h4>
-<p>在博客根目录下右键打开<code>Git Bash Here</code>，键入以下命令。</p>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># username 和 username@XXX.com 是你注册 Github 的用户名和邮箱(之后的代码中涉及到不再提示)</span></span><br><span class="line">git config --global user.name <span class="string">&quot;username&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;username@XXX.com&quot;</span></span><br></pre></td></tr></table></figure></div>
-<h4 id="生成SSH-Keys">生成SSH Keys</h4>
-<p>生成 SSH keys 主要是用于 Git 提交时的权限控制和加密，本地根据 RSA 算法生成公私密钥对，然后将公钥添加到 Github 上，本机就可以提交代码到自己的 Github 库了，这个是根据当前使用的电脑的一些信息生成的，所以换电脑提交时要重新生成并进行重新添加。</p>
-<p>同样，博客根目录下右键打开<code>Git Bash Here</code>，输入以下命令，一直按<code>Enter</code>即可。</p>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">&quot;username@XXX.com&quot;</span></span><br></pre></td></tr></table></figure></div>
-<p>运行结束后，如下图所示，其中红色方框圈出部分即为生成公钥文件的位置。</p>
-<p><img src="https://gitee.com/zyzhang98/typora-picgo/raw/master/img/image-20211229204748093.png" alt=""></p>
-<p>然后，继续输入以下命令，查看公钥文件的具体内容，是一个以<code>ssh-rsa</code>开头，以<code>username@XXX.com</code>结尾的字符串。</p>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># cat 后边的内容就是上边红色方框圈出的部分，根据自己的填写</span></span><br><span class="line">cat /c/Users/dell/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure></div>
-<p>然后将这一长串字符串，从开头到结尾全部复制。</p>
-<h4 id="配置公钥">配置公钥</h4>
-<p>打开自己的 Github 主页，点击自己的头像，选择<code>Setting--SSH and GPG keys</code>，选择右边绿色的<code>New SSH key</code>，<code>Title</code>部分任意填写，<code>Key</code>部分粘贴你刚才复制的一长串字符串，然后点击<code>Add SSH key</code>。</p>
-<p>接着打开博客根目录右键<code>Git Bash Here</code>，输入以下命令。</p>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 直接复制使用，无需修改</span></span><br><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure></div>
-<p>第一次连接 SSH 可能会出现<code>Are you sure you want to continue connecting?</code>，直接输入<code>yes</code>，然后回车即可。窗口出现<code>Hi 用户名!You've successfully...</code>说明配置公钥成功。</p>
-<h3 id="安装Hexo发布插件">安装Hexo发布插件</h3>
-<p>博客根目录下右键打开<code>Git Bash Here</code>，输入以下命令，安装<code>hexo-deployer-git</code>，这个插件的主要作用就是将本地生成好的静态网页提交到 Github Pages 仓库中。</p>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git</span><br></pre></td></tr></table></figure></div>
-<h3 id="发布">发布</h3>
-<p>发布之前，先打开<code>根目录配置文件</code>，将以下内容添加到文件最后，有 deploy 标签的改参数即可，没有的自行添加。</p>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># XXX 表示前边 Github 的用户名</span></span><br><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repo: git@github.com:XXX/XXX.github.io.git</span><br><span class="line">  branch: main</span><br></pre></td></tr></table></figure></div>
-<p>经过一系列的操作，终于可以发布文章到网页上了，右键<code>Git Bash Here</code>，输入以下命令。</p>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure></div>
-<p>运行结束后，打开浏览器输入网址<code>https://用户名.github.io</code>，就可以看到之前本地部署的博客文章了。</p>
-]]></content>
-      <categories>
-        <category>博客搭建</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>github</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>博客搭建(2)---主题配置遗留问题</title>
-    <url>/2021/12/28/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA(2)/</url>
-    <content><![CDATA[<h2 id="分类、标签、关于我">分类、标签、关于我</h2>
-<p>如果是跟着第一节的搭建教程完全搭建下来的话，最后，你会发现虽然整体的博客框架有了，但是或多或少还存在着一些小 Bug，比如，点击侧边栏的<code>分类、标签、关于我</code>这些会报错，显示无法 Get。</p>
-<h3 id="解决方法">解决方法</h3>
-<p>其实出现这些问题也不算是 Bug，<code>Ayer</code>主题的作者已经在说明文档中给出了。</p>
-<ul>
-<li>
-<p>首先在博客根目录右键<code>Git Bash Here</code>，键入以下命令。</p>
-<span id="more"></span>
-</li>
-</ul>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new page categories</span><br></pre></td></tr></table></figure></div>
-<p>然后将以下文本复制到<code>D:/MyBlog/source/categories/index.md</code>文件中。</p>
-<div class="highlight-wrap" data-rel="Markdown"><figure class="iseeu highlight markdown"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: categories</span><br><span class="line">type: &quot;categories&quot;</span><br><span class="line"><span class="section">layout: &quot;categories&quot;</span></span><br><span class="line"><span class="section">---</span></span><br></pre></td></tr></table></figure></div>
-<p>保存退出。这样就解决了侧边栏<code>分类</code>的问题。</p>
-<ul>
-<li><code>标签</code>的问题解决方法与上边的相似。</li>
-</ul>
-<p>博客根目录下右键<code>Git Bash Here</code>，键入以下命令。</p>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new page tags</span><br></pre></td></tr></table></figure></div>
-<p>然后将以下文本复制到<code>D:/MyBlog/source/tags/index.md</code>文件中。</p>
-<div class="highlight-wrap" data-rel="Markdown"><figure class="iseeu highlight markdown"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: tags</span><br><span class="line">type: &quot;tags&quot;</span><br><span class="line"><span class="section">layout: &quot;tags&quot;</span></span><br><span class="line"><span class="section">---</span></span><br></pre></td></tr></table></figure></div>
-<p><code>标签</code>的问题也解决了。</p>
-<ul>
-<li><code>关于我</code>标签的问题</li>
-</ul>
-<p>首先打开<code>主题配置文件</code>(注意不是根目录配置文件)，第10行代码修改为<code>关于我: /about</code></p>
-<p>然后博客根目录下右键<code>Git Bash Here</code>，键入以下命令。</p>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new page about</span><br></pre></td></tr></table></figure></div>
-<p>然后打开<code>D:/MyBlog/source/about/index.md</code>文件，以下列模板来书写文件即可。</p>
-<div class="highlight-wrap" data-rel="Markdown"><figure class="iseeu highlight markdown"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: &lt;自定义 关于我 界面打开的标题&gt;</span><br><span class="line">type: about</span><br><span class="line"><span class="section">layout: about</span></span><br><span class="line"><span class="section">---</span></span><br><span class="line">&lt;输入自己的个人简介或者其他想输入的信息&gt;</span><br></pre></td></tr></table></figure></div>
-<p>其中<code>&lt;&gt;</code>部分全部为自己自定义内容，可任意修改，除此之外的部分，连一个空格都不要动，防止可能出现的问题。</p>
-<p>我的博客<code>about</code>界面设置如下图所示，仅供参考。</p>
-<p><img src="https://gitee.com/zyzhang98/typora-picgo/raw/master/img/image-20211228215633839.png" alt=""></p>
-<h2 id="emoji表情添加">emoji表情添加</h2>
-<p>博客写作只是单调的文字总是显得不那么有活力，所以插入一些类似😀😶😐😹😻👌👊👧👦👨‍❤️‍👨🐶🐭🐻🐰🙉🍏🍑🍒⚽🏀🚗🚗🚕❤️会显得文章不是那么单调。</p>
-<p>Hexo 默认使用的是<a href="https://github.com/hexojs/hexo-renderer-marked">Hexo-renderer-marked</a>渲染器，它不支持插件扩展，也不支持 emoji解析，所以我们选用<a href="https://github.com/hexojs/hexo-renderer-markdown-it">hexo-renderer-markdown-it</a>渲染器。下面我们将原本默认的渲染器更换为 markdown-it 渲染器，使用这个渲染引擎就可以支持 emoji 表情了。</p>
-<p>首先进入博客根目录，右键运行<code>Git Bash Here</code>，输入命令如下。</p>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 卸载默认的 marked 渲染器</span></span><br><span class="line">npm un hexo-renderer-marked --save</span><br><span class="line"><span class="comment"># 安装 markdown-it 渲染器</span></span><br><span class="line">npm i hexo-renderer-markdown-it --save</span><br><span class="line"><span class="comment"># 安装 markdown-it-emoji 插件</span></span><br><span class="line">npm install markdown-it-emoji --save</span><br></pre></td></tr></table></figure></div>
-<p>完成以上安装后，我们进行配置，打开<code>根目录配置文件</code>，在最后添加以下内容。</p>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Markdown-it config</span></span><br><span class="line"><span class="comment">## Docs: https://github.com/celsomiranda/hexo-renderer-markdown-it/wiki</span></span><br><span class="line">markdown:</span><br><span class="line">  render:</span><br><span class="line">    html: <span class="literal">true</span></span><br><span class="line">    xhtmlOut: <span class="literal">false</span></span><br><span class="line">    breaks: <span class="literal">true</span></span><br><span class="line">    linkify: <span class="literal">true</span></span><br><span class="line">    typographer: <span class="literal">true</span></span><br><span class="line">    quotes: <span class="string">&#x27;“”‘’&#x27;</span></span><br><span class="line">  plugins:</span><br><span class="line">    - markdown-it-abbr</span><br><span class="line">    - markdown-it-footnote</span><br><span class="line">    - markdown-it-ins</span><br><span class="line">    - markdown-it-sub</span><br><span class="line">    - markdown-it-sup</span><br><span class="line">    - markdown-it-emoji  <span class="comment">## add emoji</span></span><br><span class="line">  anchors:</span><br><span class="line">    level: 2</span><br><span class="line">    collisionSuffix: <span class="string">&#x27;v&#x27;</span></span><br><span class="line">    <span class="comment"># If `true`, creates an anchor tag with a permalink besides the heading.</span></span><br><span class="line">    permalink: <span class="literal">false</span>  </span><br><span class="line">    permalinkClass: header-anchor</span><br><span class="line">    <span class="comment"># The symbol used to make the permalink</span></span><br><span class="line">    permalinkSymbol: ¶</span><br></pre></td></tr></table></figure></div>
-<p>保存退出。上面的内容主要就是<code>hexo-renderer-markdown-it</code>的一些选项配置，详细的每一项的配置可以查阅其<a href="https://github.com/hexojs/hexo-renderer-markdown-it"> Github 项目主页</a>。</p>
-<p>然后，在<a href="https://www.emojicopy.com/"> emoji 列表</a>中找到自己需要的表情，复制粘贴到<code>Typora</code>或者其他<code>Markdown</code>语法编辑器中即可。</p>
-<h2 id="评论添加">评论添加</h2>
-<p>博客最后的评论框存在 Bug，是由于<code>Ayer</code>主题默认使用了<code>Leancloud + Valine</code>接口的无后端评论系统，但是里边需要填入自己的<code>app_id</code>和<code>app_key</code>，所以我们需要先创建 <a href="https://console.leancloud.cn/apps">LeanCloud 应用</a>，创建应用后在应用设置里边的应用凭证找到<code>AppID</code>和<code>AppKey</code>，然后打开<code>主题配置文件</code>，找到第209~210行，将自己的<code>app_id</code>和<code>app_key</code>填入即可，另外<code>avatar</code>标签的参数可以更换，查看 <a href="https://valine.js.org/avatar.html">Valine 头像配置</a>更换参数来实现评论头像的更换。</p>
-<h2 id="自动打开新创建文件">自动打开新创建文件</h2>
-<p>每次我们在博客根目录使用右键<code>Git Bash Here</code>打开命令窗口输入<code>hexo new &quot;file&quot;</code>新建博客文件时，总是要自己手动去打开<code>D:\MyBlog\source\_posts</code>文件夹的新建<code>.md</code>文件来编辑文章内容，这样显得很麻烦，所以添加一个 js 脚本来实现每次创建新的博客文件时使用自己指定的编辑器自动打开文件，方便我们直接进行编辑。</p>
-<p>首先我们需要在博客根目录下创建一个文件夹<code>scripts</code>用来存放脚本的目录，在<code>scripts</code>中新建一个<code>openNewFile.js</code>文件，将以下内容复制进此<code>.js</code>文件中。</p>
-<div class="highlight-wrap" data-rel="Js"><figure class="iseeu highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 注意将”“部分内容更换为自己的编辑器路径 */</span></span><br><span class="line"><span class="keyword">var</span> exec = <span class="built_in">require</span>(<span class="string">&#x27;child_process&#x27;</span>).exec;</span><br><span class="line">hexo.on(<span class="string">&#x27;new&#x27;</span>, <span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">	exec(<span class="string">&#x27;start  &quot;‪D:/Software/Typora/Typora/Typora.exe&quot; &#x27;</span> + data.path);</span><br><span class="line">&#125;); </span><br></pre></td></tr></table></figure></div>
-<p>保存退出，这样每次在<code>hexo new &quot;file&quot;</code>命令运行后，<code>.js</code>脚本会监听到命令的运行，然后自动执行打开文件的任务。</p>
-<h2 id="背景特效添加">背景特效添加</h2>
-<p><code>Ayer</code>主题已经自带了鼠标点击特效和动态线条背景，现在我添加飘雪的背景。</p>
-<p>首先在<code>D:\MyBlog\themes\ayer\source\js\</code>文件夹内放入一个<code>snow.js</code>文件，将以下内容输入此<code>.js</code>文件中。</p>
-<!--注意此处文件路径根据你的主题选择，一般将ayer替换为你的主题名即为正确路径，下边涉及路径同理。-->
-<div class="highlight-wrap" data-rel="Js"><figure class="iseeu highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*雪花*/</span></span><br><span class="line">(<span class="function"><span class="keyword">function</span> (<span class="params">$</span>) </span>&#123;</span><br><span class="line">    $.fn.snow = <span class="function"><span class="keyword">function</span> (<span class="params">options</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> $flake = $(<span class="string">&#x27;&lt;div id=&quot;snowbox&quot; /&gt;&#x27;</span>).css(&#123;</span><br><span class="line">                <span class="string">&#x27;position&#x27;</span>: <span class="string">&#x27;absolute&#x27;</span>,</span><br><span class="line">                <span class="string">&#x27;z-index&#x27;</span>: <span class="string">&#x27;9999&#x27;</span>,</span><br><span class="line">                <span class="string">&#x27;top&#x27;</span>: <span class="string">&#x27;-50px&#x27;</span></span><br><span class="line">            &#125;).html(<span class="string">&#x27;❄&#x27;</span>),</span><br><span class="line">            documentHeight = $(<span class="built_in">document</span>).height(),</span><br><span class="line">            documentWidth = $(<span class="built_in">document</span>).width(),</span><br><span class="line">            defaults = &#123;</span><br><span class="line">                <span class="attr">minSize</span>: <span class="number">10</span>,</span><br><span class="line">                <span class="attr">maxSize</span>: <span class="number">20</span>,</span><br><span class="line">                <span class="attr">newOn</span>: <span class="number">1000</span>,</span><br><span class="line">                <span class="attr">flakeColor</span>: <span class="string">&quot;#AFDAEF&quot;</span> <span class="comment">/* 此处可以定义雪花颜色，若要白色可以改为#FFFFFF */</span></span><br><span class="line">            &#125;,</span><br><span class="line">            options = $.extend(&#123;&#125;, defaults, options);</span><br><span class="line">        <span class="keyword">var</span> interval = <span class="built_in">setInterval</span>(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="keyword">var</span> startPositionLeft = <span class="built_in">Math</span>.random() * documentWidth - <span class="number">100</span>,</span><br><span class="line">                startOpacity = <span class="number">0.5</span> + <span class="built_in">Math</span>.random(),</span><br><span class="line">                sizeFlake = options.minSize + <span class="built_in">Math</span>.random() * options.maxSize,</span><br><span class="line">                endPositionTop = documentHeight - <span class="number">200</span>,</span><br><span class="line">                endPositionLeft = startPositionLeft - <span class="number">500</span> + <span class="built_in">Math</span>.random() * <span class="number">500</span>,</span><br><span class="line">                durationFall = documentHeight * <span class="number">10</span> + <span class="built_in">Math</span>.random() * <span class="number">5000</span>;</span><br><span class="line">            $flake.clone().appendTo(<span class="string">&#x27;body&#x27;</span>).css(&#123;</span><br><span class="line">                <span class="attr">left</span>: startPositionLeft,</span><br><span class="line">                <span class="attr">opacity</span>: startOpacity,</span><br><span class="line">                <span class="string">&#x27;font-size&#x27;</span>: sizeFlake,</span><br><span class="line">                <span class="attr">color</span>: options.flakeColor</span><br><span class="line">            &#125;).animate(&#123;</span><br><span class="line">                <span class="attr">top</span>: endPositionTop,</span><br><span class="line">                <span class="attr">left</span>: endPositionLeft,</span><br><span class="line">                <span class="attr">opacity</span>: <span class="number">0.2</span></span><br><span class="line">            &#125;, durationFall, <span class="string">&#x27;linear&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">                $(<span class="built_in">this</span>).remove()</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;, options.newOn);</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;)(jQuery);</span><br><span class="line">$(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    $.fn.snow(&#123;</span><br><span class="line">        <span class="attr">minSize</span>: <span class="number">5</span>,</span><br><span class="line">        <span class="comment">/* 定义雪花最小尺寸 */</span></span><br><span class="line">        <span class="attr">maxSize</span>: <span class="number">50</span>,</span><br><span class="line">        <span class="comment">/* 定义雪花最大尺寸 */</span></span><br><span class="line">        <span class="attr">newOn</span>: <span class="number">300</span> <span class="comment">/* 定义密集程度，数字越小越密集 */</span></span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></div>
-<p>然后打开<code>D:\MyBlog\themes\ayer\layout\layout.ejs</code>文件，将以下代码输入。</p>
-<div class="highlight-wrap" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!-- 雪花特效 --&gt;</span><br><span class="line">&lt;% if (theme.snow)&#123; %&gt;</span><br><span class="line">  &lt;script type=&quot;text/javascript&quot; src=&quot;/js/snow.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure></div>
-<p>最后打开<code>主题配置文件</code>，在最后添加<code>snow: true</code>即可。</p>
-<p>重新运行<code>hexo g &amp;&amp; hexo s</code>，打开浏览器预览一下效果。</p>
-<h2 id="其他">其他</h2>
-<p>除此之外，网络上还有许多的美化教程，比如阅读全文添加边框，背景飘带，添加 live2d 看板娘，添加网站运行时间，动态诗词，各种网页小挂件，音乐插件等，大家自行研究。</p>
 ]]></content>
       <categories>
         <category>博客搭建</category>
