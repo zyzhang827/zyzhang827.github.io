@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+
+
+<html lang="zh-CN">
+  
+
+    <head>
+      <meta charset="utf-8" />
+        
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title>博客搭建(1)---Hexo框架安装 |  一方天地</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/css/remixicon.min.css"
+      />
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+       
+ 
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
+      <!-- mermaid -->
+      
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
+    </head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      <canvas class="fireworks"></canvas>
+      <style>
+        .fireworks {
+          position: fixed;
+          left: 0;
+          top: 0;
+          z-index: 99999;
+          pointer-events: none;
+        }
+      </style>
+      
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="post-博客搭建-1-Hexo框架安装"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  博客搭建(1)---Hexo框架安装
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/12/28/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-1-Hexo%E6%A1%86%E6%9E%B6%E5%AE%89%E8%A3%85/" class="article-date">
+  <time datetime="2021-12-28T08:13:10.000Z" itemprop="datePublished">2021-12-28</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">博客搭建</a>
+  </div>
+  
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> 字数统计:</span>
+            <span class="post-count">3k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> 阅读时长≈</span>
+            <span class="post-count">10 分钟</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h2 id="一、Hexo框架介绍">一、Hexo框架介绍</h2>
+<h2 id=""></h2>
+<p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。<span id="more"></span></p>
+<p>Hexo 中文官网：<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">hexo.io</a></p>
+<h2 id="二、依赖环境的安装">二、依赖环境的安装</h2>
+<p><strong>无特殊说明情况下，本文所有下载及安装过程仅限于Windows系统。</strong></p>
+<h3 id="1-Node-js安装">1.Node.js安装</h3>
+<h4 id="官网下载">官网下载</h4>
+<p><a target="_blank" rel="noopener" href="https://nodejs.org/en/">Node.js官网</a>下载安装包，非专业人士建议选择 LTS 长期支持版本即可，比较稳定，经过了充分的测试。</p>
+<h4 id="云盘下载">云盘下载</h4>
+<p>有限选择官网最新版本进行下载，如果官网速度较慢，可以选择以下链接进行 Node.js 16.13.1 版本的下载。</p>
+<p><a target="_blank" rel="noopener" href="https://www.123pan.com/s/XHVA-JQQ5d">123云盘下载链接</a>，提取码：z827。</p>
+<p><a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1zW4zsP7wEUhQSTOY8qYiRA">百度网盘下载链接</a>，提取码：ts6k。</p>
+<p><a target="_blank" rel="noopener" href="https://www.aliyundrive.com/s/cRiENyN6xzT">阿里云盘下载链接</a>，提取码：z827。</p>
+<p><a target="_blank" rel="noopener" href="https://zyzhang.lanzouw.com/iF3iJy23svi">蓝奏云盘下载链接</a>，提取码：z827。</p>
+<h4 id="安装过程">安装过程</h4>
+<p>安装过程一路点击 Next 即可。注意 Tools for Native Modules 步骤为额外工具，可视个人需求取消勾选。</p>
+<h4 id="测试安装">测试安装</h4>
+<p>安装完成后，使用 Win+R 打开运行框，输入<code>cmd</code>回车打开命令行窗口，输入<code>npm -v</code>回车，出现版本号即代表安装成功。</p>
+<h3 id="2-Git安装">2.Git安装</h3>
+<h4 id="官网下载-v2">官网下载</h4>
+<p><a target="_blank" rel="noopener" href="https://git-scm.com/">Git官网</a>下载安装包。</p>
+<h4 id="云盘下载-v2">云盘下载</h4>
+<p>网络速度慢，可以选择以下链接进行 Git-2.34.1-64bit 版本的下载。</p>
+<p><a target="_blank" rel="noopener" href="https://www.123pan.com/s/XHVA-IQQ5d">123云盘下载链接</a>，提取码：z827。</p>
+<p><a target="_blank" rel="noopener" href="https://www.aliyundrive.com/s/da9QVGQYN4Q">阿里云盘下载链接</a>，提取码：z827。</p>
+<p><a target="_blank" rel="noopener" href="https://pan.baidu.com/s/12yJP_b18pA7BwEk5dCgNqg">百度网盘下载链接</a>，提取码：sim9。</p>
+<p><a target="_blank" rel="noopener" href="https://zyzhang.lanzouw.com/i6ZsEy24x5i">蓝奏云盘下载链接</a>，提取码：z827。</p>
+<h4 id="安装过程-v2">安装过程</h4>
+<p>安装过程一路点击 Next 即可。</p>
+<h4 id="测试安装-v2">测试安装</h4>
+<p>安装完成后，桌面右键，多出<code>Git GUI Here</code>和<code>Git Bash Here</code>两个选项。</p>
+<p>点击<code>Git Bash Here</code>后进行新的命令行窗口，输入<code>git --version</code>回车，出现版本号即说明安装成功。</p>
+<h2 id="三、Hexo安装">三、Hexo安装</h2>
+<h3 id="1-本地创建目录">1.本地创建目录</h3>
+<p>先在电脑磁盘创建一个空的文件夹，此文件夹用来存放 Hexo 的文件以及之后所写的博客文件，注意不要有中文路径，避免可能出现的 Bug。我选择在 D 盘下新建 MyBlog 文件夹。</p>
+<h3 id="2-安装命令">2.安装命令</h3>
+<p>在上述自行创建的新文件夹下右键选择<code>Git Bash Here</code>，输入以下命令。</p>
+<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 安装 hexo 框架(注意 # 开头的为注释文本，无需键入命令)</span></span><br><span class="line">npm install -g hexo-cli</span><br><span class="line"><span class="comment"># 初始化文件夹</span></span><br><span class="line">hexo init</span><br><span class="line"><span class="comment"># 安装 hexo</span></span><br><span class="line">npm install</span><br></pre></td></tr></table></figure></div>
+<h4 id="报错解决">报错解决</h4>
+<ul>
+<li>
+<p><code>npm install -g hexo-cli</code>命令卡住或者报错无法连接。</p>
+<p>可能是由于 npm 的源速度太慢，可以尝试以下命令来重新安装。</p>
+<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm config get registry</span><br><span class="line">npm --registry=https://registry.npm.taobao.org install -g hexo-cli</span><br></pre></td></tr></table></figure></div>
+</li>
+</ul>
+<p>​	显示如下类似内容即为安装成功。</p>
+<p><img src="https://gitee.com/zyzhang98/typora-picgo/raw/master/img/image-20211228125951269.png" alt=""></p>
+<ul>
+<li>
+<p><code>hexo init</code>命令执行卡住或者报错无法连接。</p>
+<p>给 git 配置代理，具体配置方法不再给出，有需要可以百度。</p>
+</li>
+<li>
+<p>可以根据报错反馈的错误号进行百度，查找相应的解决办法。</p>
+</li>
+</ul>
+<h3 id="3-本地博客效果预览">3.本地博客效果预览</h3>
+<p>上述命令执行成功之后，Hexo 框架已经在本地搭建完成，可以通过输入命令查看效果。</p>
+<p>在自己创建的博客目录文件夹下，右键打开<code>Git Bash Here</code>，键入以下命令。</p>
+<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 生成静态网站</span></span><br><span class="line">hexo g</span><br><span class="line"><span class="comment"># 启动服务器</span></span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure></div>
+<p>当运行之后出现如下窗口即可。</p>
+<p><img src="https://gitee.com/zyzhang98/typora-picgo/raw/master/img/image-20211228131356433.png" alt=""></p>
+<p>此时，打开浏览器，输入网址<code>http://localhost:4000</code>就可以看到我们使用 Hexo 搭建的博客示例了，此时的博客是默认主题，比较简洁，可以根据个人喜好进行美化。</p>
+<p><img src="https://gitee.com/zyzhang98/typora-picgo/raw/master/img/image-20211228131638203.png" alt=""></p>
+<h2 id="四、美化Hexo博客">四、美化Hexo博客</h2>
+<h3 id="1-主题下载">1.主题下载</h3>
+<h4 id="官方网站">官方网站</h4>
+<p><a target="_blank" rel="noopener" href="https://hexo.io/themes/">Hexo 主题页</a></p>
+<h4 id="Github">Github</h4>
+<p><a target="_blank" rel="noopener" href="https://github.com/search?q=hexo-theme">Github hexo-theme 搜索页</a></p>
+<h4 id="其他网站">其他网站</h4>
+<p>简书，CSDN，知乎等网站里搜索 Hexo 主题推荐。</p>
+<h3 id="2-主题更换">2.主题更换</h3>
+<p>本文选择主题 <strong>ayer</strong></p>
+<p>Github 项目主页链接：<a target="_blank" rel="noopener" href="https://github.com/shen-yu/hexo-theme-ayer">Hexo-Ayer</a></p>
+<p>网站主题示例效果：<a target="_blank" rel="noopener" href="https://shen-yu.gitee.io/">Demo网站</a></p>
+<h4 id="主题下载">主题下载</h4>
+<p>在自己创建的博客根目录(<code>D:\MyBlog</code>)下，右键选择<code>Git Bash Here</code>进行命令窗口，键入以下命令。</p>
+<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 下载主题仓库到 themes 文件夹</span></span><br><span class="line">git <span class="built_in">clone</span> &lt;仓库地址&gt; themes/&lt;主题名&gt;</span><br></pre></td></tr></table></figure></div>
+<p>其中，仓库地址可以在相应主题的 Github 主页找到，例如主题 ayer 的仓库地址如下图所示。</p>
+<p><img src="https://gitee.com/zyzhang98/typora-picgo/raw/master/img/image-20211228134058891.png" alt=""></p>
+<p>那么，我这边所需要执行的命令就是</p>
+<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/shen-yu/hexo-theme-ayer.git themes/ayer</span><br></pre></td></tr></table></figure></div>
+<p>执行完成之后，打开博客目录下的 themes 文件夹，发现多了刚才了下载的主题文件夹。</p>
+<p><img src="https://gitee.com/zyzhang98/typora-picgo/raw/master/img/image-20211228134655121.png" alt=""></p>
+<h4 id="应用主题">应用主题</h4>
+<p>上一步我们只是完成了主题的下载，还没有将主题应用到 Hexo 中去，下面我们开始应用主题。</p>
+<p>首先使用文本软件打开博客根目录下的<code>_config.yml</code>文件，找到<code>theme</code>标签，默认值为<code>landscape</code>主题，我们把它改为上一步中我们下载的主题名字即可，这里我设置为<code>ayer</code>，局部截图如下所示。</p>
+<p><img src="https://gitee.com/zyzhang98/typora-picgo/raw/master/img/image-20211228135323342.png" alt=""></p>
+<p>然后同样在根目录使用<code>Git Bash Here</code>执行以下命令重新启动 Hexo。</p>
+<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 清理 &amp;&amp; 编译 &amp;&amp; 启动</span></span><br><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</span><br></pre></td></tr></table></figure></div>
+<p>此时再打开浏览器输入<code>http://localhost:4000</code>发现博客主题风格已经更换。</p>
+<h4 id="报错解决-v2">报错解决</h4>
+<p>我这里下载的主题为<code>ayer</code>，没有用到特殊的插件，如果下载其他主题，在前面过程没有错误的前提下，打开浏览器输入网址发现报错信息，大概率是缺少某个依赖库，解决方法一般是<code>Git Bash Here</code>中输入<code>npm install &lt;缺少的依赖库&gt;</code>来安装。</p>
+<p>例如，<code>Next</code>主题报错后，需要先使用命令<code>npm install hexo-renderer-swig</code>安装依赖</p>
+<p><code>stun</code>主题报错后，需要先使用命令<code>npm install hexo-renderer-pug</code>安装依赖。</p>
+<p>不同的主题缺少的依赖可能不一样，但解决方法大致相同，具体到某一个主题，其缺少的依赖库名字可以通过百度查找。</p>
+<h4 id="配置修改">配置修改</h4>
+<p>更换自己喜欢的主题后，我们需要修改一些博客网页的一些基本属性，比如博客的名字，图片背景或者是添加一些鼠标光标，点击特效，音乐插件等都可以实现。</p>
+<h5 id="根目录配置文件"><strong>根目录配置文件</strong></h5>
+<p>Hexo 的基本配置大部分都在博客根目录下的<code>_config.yml</code>文件中，它可以叫做<code>根目录配置文件</code>，直接修改这个文件可以修改博客的一些设置，例如前面我们对于下载主题的更换就是修改里边<code>theme</code>标签的参数来实现的。关于<code>根目录配置文件</code>的每个标签及参数的具体意义和使用方法，可以查阅 <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/configuration">Hexo 配置文件官方文档</a>。</p>
+<h5 id="主题配置文件"><strong>主题配置文件</strong></h5>
+<p>除了上边的根目录配置文件外，我们自己下载的主题文件夹内也会有一个<code>_config.yml</code>文件，这里的这个文件我们叫做<code>主题配置文件</code>。比如我下载的主题是<code>ayer</code>，那么我的<code>主题配置文件</code>路径就是<code>D:\MyBlog\themes\ayer\_config.yml</code>，同样改动参数可以实现对博客页面的改变。关于<code>主题配置文件</code>的每个标签及参数的具体意义和使用方法，可以查阅对应主题的 Github 主页。</p>
+<p>如果博客使用的是默认的<code>landscape</code>主题，那么所有的配置仅在<code>根目录配置文件</code>即可修改，如果使用的是第三方下载的主题，那么需要配合使用<code>根目录配置文件</code>和<code>主题配置文件</code>来实现修改博客的目的。</p>
+<h5 id="具体修改">具体修改</h5>
+<p>下面以我所使用的<code>ayer</code>主题为例，来对博客做一些简单的调整。</p>
+<ul>
+<li>
+<p>打开<code>根目录配置文件</code></p>
+<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Site 部分</span></span><br><span class="line">title: &lt;自定义&gt;				<span class="comment"># 博客标题</span></span><br><span class="line">author: &lt;自定义&gt;				<span class="comment"># 博客作者</span></span><br><span class="line">language: zh-CN				  <span class="comment"># 网站语言 zh-CN中文  en英文</span></span><br></pre></td></tr></table></figure></div>
+</li>
+<li>
+<p>打开<code>主题配置文件</code></p>
+<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 侧边栏菜单		不需要打开的可以直接在前边加 # 进行注释掉</span></span><br><span class="line">menu:</span><br><span class="line">  主页: /</span><br><span class="line">  归档: /archives</span><br><span class="line">  分类: /categories</span><br><span class="line">  标签: /tags</span><br><span class="line"><span class="comment">#  旅行: /tags/旅行/</span></span><br><span class="line"><span class="comment">#  摄影: http://shenyu-vip.lofter.com</span></span><br><span class="line"><span class="comment">#  友链: /friends</span></span><br><span class="line">  关于我: /2019/about</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 站点次标题和打字特效</span></span><br><span class="line">subtitle:</span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span> <span class="comment"># 是否开启动效</span></span><br><span class="line">  text: 面朝大海，春暖花开 <span class="comment"># 显示的文字</span></span><br><span class="line">  text2: 愿你一生努力，一生被爱 <span class="comment"># 滚动播放，如果不需要可以留空</span></span><br><span class="line">  text3: 想要的都拥有，得不到的都释怀 <span class="comment"># 最多支持三段文字</span></span><br><span class="line">  startDelay: 0 <span class="comment"># 延迟时间</span></span><br><span class="line">  typeSpeed: 200 <span class="comment"># 打字速度</span></span><br><span class="line">  loop: <span class="literal">true</span> <span class="comment"># 是否循环</span></span><br><span class="line">  backSpeed: 100 <span class="comment"># 回退速度</span></span><br><span class="line">  showCursor: <span class="literal">true</span> <span class="comment"># 是否显示光标</span></span><br></pre></td></tr></table></figure></div>
+<p>第26~27行为修改网站图标和侧边栏 logo。方法：只需要将自己的图标文件放在<code>D:\MyBlog\themes\ayer\source\</code>文件夹下，将配置文件中的<code>favicon.ico</code>修改为自己图标的名称即可。</p>
+<p>第31~34行为修改封面配置。方法：只需要将自己的图片文件放在<code>D:\MyBlog\themes\ayer\source\images\</code>文件夹下，将配置文件中的<code>cover1.jpg</code>修改为自己图片文件的名称即可。</p>
+<p>第83行为打赏功能。注意：一定要将<code>reward_type</code>的参数修改为<code>0</code>，将打赏功能关闭，否则博客中插入的就是主题作者的收款码了。当然，也可以将收款码更改为自己的。</p>
+</li>
+</ul>
+<p>修改完上述基本配置后，在根目录下运行<code>Git Bash Here</code>，执行命令<code>hexo g &amp;&amp; hexo s</code>，浏览器输入网址<code>http://localhost:4000</code>看一下效果。</p>
+<p><img src="https://gitee.com/zyzhang98/typora-picgo/raw/master/img/image-20211228151605388.png" alt=""></p>
+<p>​</p>
+<p>到此为止，我们的博客基本配置已经修改好了，如果后续还需要修改某些配置，可以对照官方文档进行修改。</p>
+<h2 id="五、本地发布文章">五、本地发布文章</h2>
+<p>博客搭建好了，但是现在只有示例的<code>Hello World</code>一篇文章，如何发布自己的文章？</p>
+<h3 id="1-新建文章">1.新建文章</h3>
+<p>在博客根目录下右键进入<code>Git Bash Here</code>，输入以下命令。</p>
+<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new <span class="string">&quot;不宠无惊过一生&quot;</span></span><br></pre></td></tr></table></figure></div>
+<p>然后进入博客根目录下的<code>source\_posts</code>文件夹，可以看到多了一个<code>不宠无惊过一生.md</code>的文件，这就是新生成的博客文章，因为 Hexo 默认使用 Markdown 语法，所以文件后缀显示为<code>.md</code>，可以使用记事本和<code>Typora</code>打开，个人推荐后者，但是最新版的后者有了收费模式，建议使用<code>0.x</code>版本，Markdown 语法简单易学。</p>
+<p>在连接服务器的情况下，键入<code>Ctrl+C</code>停止服务器，重新运行<code>hexo g &amp;&amp; hexo s</code>打开浏览器输入网址即可看到新发布的文章。</p>
+<h3 id="2-修改发布文章的模板">2.修改发布文章的模板</h3>
+<p>打开位于<code>D:\MyBlog\source\_posts</code>文件夹内的新发布文章的<code>md</code>文件，发现其中并非空白的，这是由于 Hexo 已经根据默认模板为我们生成了一些参数，例如文章创建时间、标签等，方便我们整理归档，当然，这个模板是可以更改的。</p>
+<p>我们只要修改<code>根目录配置文件</code>中的<code>new_post_name</code>参数就可以了。</p>
+<p>例如修改为<code>new_post_name: :year-:month-:day-:title.md</code>这样以后创建的文章就会自动加上年月日信息，便于通过日期来管理文章。另外，在发布文章的内部，直接修改三个参数也是可以的。</p>
+<p><img src="https://gitee.com/zyzhang98/typora-picgo/raw/master/img/image-20211228155450126.png" alt=""></p>
+<h2 id="六、后续">六、后续</h2>
+<p>至此，博客已经基本可以使用了，只是还部署在本地，下一步的任务就是将这一整套的文件全部部署到服务器上，使得其他人也可以通过固定的网址来访问我们自己的博客。</p>
+<blockquote>
+<p>本文安装配置过程参考 <a target="_blank" rel="noopener" href="https://yushuaigee.gitee.io/">半亩方塘</a></p>
+</blockquote>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2021/12/28/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-1-Hexo%E6%A1%86%E6%9E%B6%E5%AE%89%E8%A3%85/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ayer/" rel="tag">ayer</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%BE%8E%E5%8C%96/" rel="tag">美化</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+      <a href="/2021/12/28/About-Me/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            About Me
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2021/12/28/%E4%B8%8D%E5%AE%A0%E6%97%A0%E6%83%8A%E8%BF%87%E4%B8%80%E7%94%9F/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">不宠无惊过一生</div>
+      </a>
+    
+  </nav>
+
+   
+<!-- valine评论 -->
+<div id="vcomments-box">
+  <div id="vcomments"></div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script>
+<script>
+  new Valine({
+    el: "#vcomments",
+    app_id: "n4pHsUlbm3Bkd829iMBXvzAw-gzGzoHsz",
+    app_key: "oJ4qdGrUrguFexAiIRkAzPlb",
+    path: window.location.pathname,
+    avatar: "monsterid",
+    placeholder: "给我的文章加点评论吧~",
+    recordIP: true,
+  });
+  const infoEle = document.querySelector("#vcomments .info");
+  if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+    infoEle.childNodes.forEach(function (item) {
+      item.parentNode.removeChild(item);
+    });
+  }
+</script>
+<style>
+  #vcomments-box {
+    padding: 5px 30px;
+  }
+
+  @media screen and (max-width: 800px) {
+    #vcomments-box {
+      padding: 5px 0px;
+    }
+  }
+
+  #vcomments-box #vcomments {
+    background-color: #fff;
+  }
+
+  .v .vlist .vcard .vh {
+    padding-right: 20px;
+  }
+
+  .v .vlist .vcard {
+    padding-left: 10px;
+  }
+</style>
+
+ 
+   
+     
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2021
+        <i class="ri-heart-fill heart_icon"></i> ZYZhang
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>访问人数:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>浏览次数:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+      </li>
+    </ul>
+  </div>
+</footer>    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+    </div>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/zhangguorong.ico" alt="一方天地"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/about">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="搜索">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css">
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script>
+
+<script src="/js/clickBoom1.js"></script>
+ 
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+ 
+<script src="/js/dz.js"></script>
+ 
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    
+
+  </div>
+  <!-- 雪花特效 -->
+
+  <script type="text/javascript" src="/js/BigSnow.js"></script>
+  <!--单击显示文字-->
+  <script type="text/javascript" src="/js/show_text.js"></script>
+
+</body>
+
+</html>
