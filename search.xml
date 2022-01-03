@@ -7,12 +7,12 @@
 <p>A student, live in Ji’nan, China.</p>
 </blockquote>
 <span id="more"></span>
-<h4 id="😊姓名：ZYZhang">😊姓名：ZYZhang</h4>
-<h4 id="😉性别：男">😉性别：男</h4>
-<h4 id="😃现居：济南">😃现居：济南</h4>
-<h4 id="😆Github：ZYZhang">😆Github：<a href="https://github.com/zyzhang827">ZYZhang</a></h4>
-<h4 id="😂Gitee：ZYZhang">😂Gitee：<a href="https://gitee.com/zyzhang98">ZYZhang</a></h4>
-<h4 id="😀QQ：1194749361">😀QQ：1194749361</h4>
+<h4 id="姓名：ZYZhang">姓名：ZYZhang</h4>
+<h4 id="性别：男">性别：男</h4>
+<h4 id="现居：济南">现居：济南</h4>
+<h4 id="Github：ZYZhang">Github：<a href="https://github.com/zyzhang827">ZYZhang</a></h4>
+<h4 id="Gitee：ZYZhang">Gitee：<a href="https://gitee.com/zyzhang98">ZYZhang</a></h4>
+<h4 id="QQ：1194749361">QQ：1194749361</h4>
 <p><img src="https://gitee.com/zyzhang98/typora-picgo/raw/master/img/zgr.jpg" alt=""></p>
 ]]></content>
   </entry>
@@ -152,6 +152,7 @@
 <p>经过一系列的操作，终于可以发布文章到网页上了，右键<code>Git Bash Here</code>，输入以下命令。</p>
 <div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure></div>
 <p>运行结束后，打开浏览器输入网址<code>https://用户名.github.io</code>，就可以看到之前本地部署的博客文章了。</p>
+<p>此时，终于可以让别人访问我们自己的博客了。</p>
 ]]></content>
       <categories>
         <category>博客搭建</category>
@@ -159,29 +160,6 @@
       <tags>
         <tag>hexo</tag>
         <tag>github</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2021/12/28/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start">Quick Start</h2>
-<h3 id="Create-a-new-post">Create a new post</h3>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure></div>
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server">Run server</h3>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></div>
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<span id="more"></span>
-<h3 id="Generate-static-files">Generate static files</h3>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure></div>
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites">Deploy to remote sites</h3>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></div>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-      <tags>
-        <tag>documents</tag>
       </tags>
   </entry>
   <entry>
