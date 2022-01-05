@@ -350,6 +350,7 @@
 <div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;hello world&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;hello world&quot;</span>)</span><br></pre></td></tr></table></figure></div>
 <h2 id="3-可以输出含有运算符的表达式">3. 可以输出含有运算符的表达式</h2>
 <div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="number">3</span>+<span class="number">1</span>)</span><br></pre></td></tr></table></figure></div>
+<span id="more"></span>
 <h2 id="4-可以输出到文件">4. 可以输出到文件</h2>
 <div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">fp = <span class="built_in">open</span>(<span class="string">&#x27;D:/text.txt&#x27;</span>,<span class="string">&#x27;a+&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;hello world&#x27;</span>,file=fp)</span><br><span class="line">fp.close</span><br></pre></td></tr></table></figure></div>
 <p>**注意：**1.所指定的盘符必须存在；2.使用<code>file=fp</code>；3.<code>a+</code>表示文件不存在就创建，存在的话就在内容上继续追加。</p>
@@ -1695,6 +1696,7 @@ $$</p>
 <li>时常优化自己的程序，避免干扰被访问网站的正常运行</li>
 <li>在使用，传播爬取到的数据时，审查抓取到的内容，如果发现了涉及到用户隐私或者商业机密等敏感内容，需要及时停止爬取或者传播。</li>
 </ul>
+<span id="more"></span>
 <h2 id="3-爬虫初试深入">3. 爬虫初试深入</h2>
 <p><strong>爬虫在使用场景中的分类：</strong></p>
 <ul>
