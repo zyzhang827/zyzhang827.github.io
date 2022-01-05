@@ -16,79 +16,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>博客搭建(2)---主题配置遗留问题</title>
-    <url>/2021/12/28/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA(2)/</url>
-    <content><![CDATA[<h2 id="分类、标签、关于我">分类、标签、关于我</h2>
-<p>如果是跟着第一节的搭建教程完全搭建下来的话，最后，你会发现虽然整体的博客框架有了，但是或多或少还存在着一些小 Bug，比如，点击侧边栏的<code>分类、标签、关于我</code>这些会报错，显示无法 Get。</p>
-<h3 id="解决方法">解决方法</h3>
-<p>其实出现这些问题也不算是 Bug，<code>Ayer</code>主题的作者已经在说明文档中给出了。</p>
-<ul>
-<li>
-<p>首先在博客根目录右键<code>Git Bash Here</code>，键入以下命令。</p>
-<span id="more"></span>
-</li>
-</ul>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new page categories</span><br></pre></td></tr></table></figure></div>
-<p>然后将以下文本复制到<code>D:/MyBlog/source/categories/index.md</code>文件中。</p>
-<div class="highlight-wrap" data-rel="Markdown"><figure class="iseeu highlight markdown"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: categories</span><br><span class="line">type: &quot;categories&quot;</span><br><span class="line"><span class="section">layout: &quot;categories&quot;</span></span><br><span class="line"><span class="section">---</span></span><br></pre></td></tr></table></figure></div>
-<p>保存退出。这样就解决了侧边栏<code>分类</code>的问题。</p>
-<ul>
-<li><code>标签</code>的问题解决方法与上边的相似。</li>
-</ul>
-<p>博客根目录下右键<code>Git Bash Here</code>，键入以下命令。</p>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new page tags</span><br></pre></td></tr></table></figure></div>
-<p>然后将以下文本复制到<code>D:/MyBlog/source/tags/index.md</code>文件中。</p>
-<div class="highlight-wrap" data-rel="Markdown"><figure class="iseeu highlight markdown"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: tags</span><br><span class="line">type: &quot;tags&quot;</span><br><span class="line"><span class="section">layout: &quot;tags&quot;</span></span><br><span class="line"><span class="section">---</span></span><br></pre></td></tr></table></figure></div>
-<p><code>标签</code>的问题也解决了。</p>
-<ul>
-<li><code>关于我</code>标签的问题</li>
-</ul>
-<p>首先打开<code>主题配置文件</code>(注意不是根目录配置文件)，第10行代码修改为<code>关于我: /about</code></p>
-<p>然后博客根目录下右键<code>Git Bash Here</code>，键入以下命令。</p>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new page about</span><br></pre></td></tr></table></figure></div>
-<p>然后打开<code>D:/MyBlog/source/about/index.md</code>文件，以下列模板来书写文件即可。</p>
-<div class="highlight-wrap" data-rel="Markdown"><figure class="iseeu highlight markdown"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: &lt;自定义 关于我 界面打开的标题&gt;</span><br><span class="line">type: about</span><br><span class="line"><span class="section">layout: about</span></span><br><span class="line"><span class="section">---</span></span><br><span class="line">&lt;输入自己的个人简介或者其他想输入的信息&gt;</span><br></pre></td></tr></table></figure></div>
-<p>其中<code>&lt;&gt;</code>部分全部为自己自定义内容，可任意修改，除此之外的部分，连一个空格都不要动，防止可能出现的问题。</p>
-<p>我的博客<code>about</code>界面设置如下图所示，仅供参考。</p>
-<p><img src="https://gitee.com/zyzhang98/typora-picgo/raw/master/img/image-20211228215633839.png" alt=""></p>
-<h2 id="emoji表情添加">emoji表情添加</h2>
-<p>博客写作只是单调的文字总是显得不那么有活力，所以插入一些类似😀😶😐😹😻👌👊👧👦👨‍❤️‍👨🐶🐭🐻🐰🙉🍏🍑🍒⚽🏀🚗🚗🚕❤️会显得文章不是那么单调。</p>
-<p>Hexo 默认使用的是<a href="https://github.com/hexojs/hexo-renderer-marked">Hexo-renderer-marked</a>渲染器，它不支持插件扩展，也不支持 emoji解析，所以我们选用<a href="https://github.com/hexojs/hexo-renderer-markdown-it">hexo-renderer-markdown-it</a>渲染器。下面我们将原本默认的渲染器更换为 markdown-it 渲染器，使用这个渲染引擎就可以支持 emoji 表情了。</p>
-<p>首先进入博客根目录，右键运行<code>Git Bash Here</code>，输入命令如下。</p>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 卸载默认的 marked 渲染器</span></span><br><span class="line">npm un hexo-renderer-marked --save</span><br><span class="line"><span class="comment"># 安装 markdown-it 渲染器</span></span><br><span class="line">npm i hexo-renderer-markdown-it --save</span><br><span class="line"><span class="comment"># 安装 markdown-it-emoji 插件</span></span><br><span class="line">npm install markdown-it-emoji --save</span><br></pre></td></tr></table></figure></div>
-<p>完成以上安装后，我们进行配置，打开<code>根目录配置文件</code>，在最后添加以下内容。</p>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Markdown-it config</span></span><br><span class="line"><span class="comment">## Docs: https://github.com/celsomiranda/hexo-renderer-markdown-it/wiki</span></span><br><span class="line">markdown:</span><br><span class="line">  render:</span><br><span class="line">    html: <span class="literal">true</span></span><br><span class="line">    xhtmlOut: <span class="literal">false</span></span><br><span class="line">    breaks: <span class="literal">true</span></span><br><span class="line">    linkify: <span class="literal">true</span></span><br><span class="line">    typographer: <span class="literal">true</span></span><br><span class="line">    quotes: <span class="string">&#x27;“”‘’&#x27;</span></span><br><span class="line">  plugins:</span><br><span class="line">    - markdown-it-abbr</span><br><span class="line">    - markdown-it-footnote</span><br><span class="line">    - markdown-it-ins</span><br><span class="line">    - markdown-it-sub</span><br><span class="line">    - markdown-it-sup</span><br><span class="line">    - markdown-it-emoji  <span class="comment">## add emoji</span></span><br><span class="line">  anchors:</span><br><span class="line">    level: 2</span><br><span class="line">    collisionSuffix: <span class="string">&#x27;v&#x27;</span></span><br><span class="line">    <span class="comment"># If `true`, creates an anchor tag with a permalink besides the heading.</span></span><br><span class="line">    permalink: <span class="literal">false</span>  </span><br><span class="line">    permalinkClass: header-anchor</span><br><span class="line">    <span class="comment"># The symbol used to make the permalink</span></span><br><span class="line">    permalinkSymbol: ¶</span><br></pre></td></tr></table></figure></div>
-<p>保存退出。上面的内容主要就是<code>hexo-renderer-markdown-it</code>的一些选项配置，详细的每一项的配置可以查阅其<a href="https://github.com/hexojs/hexo-renderer-markdown-it"> Github 项目主页</a>。</p>
-<p>然后，在<a href="https://www.emojicopy.com/"> emoji 列表</a>中找到自己需要的表情，复制粘贴到<code>Typora</code>或者其他<code>Markdown</code>语法编辑器中即可。</p>
-<h2 id="评论添加">评论添加</h2>
-<p>博客最后的评论框存在 Bug，是由于<code>Ayer</code>主题默认使用了<code>Leancloud + Valine</code>接口的无后端评论系统，但是里边需要填入自己的<code>app_id</code>和<code>app_key</code>，所以我们需要先创建 <a href="https://console.leancloud.cn/apps">LeanCloud 应用</a>，创建应用后在应用设置里边的应用凭证找到<code>AppID</code>和<code>AppKey</code>，然后打开<code>主题配置文件</code>，找到第209~210行，将自己的<code>app_id</code>和<code>app_key</code>填入即可，另外<code>avatar</code>标签的参数可以更换，查看 <a href="https://valine.js.org/avatar.html">Valine 头像配置</a>更换参数来实现评论头像的更换。</p>
-<h2 id="自动打开新创建文件">自动打开新创建文件</h2>
-<p>每次我们在博客根目录使用右键<code>Git Bash Here</code>打开命令窗口输入<code>hexo new &quot;file&quot;</code>新建博客文件时，总是要自己手动去打开<code>D:\MyBlog\source\_posts</code>文件夹的新建<code>.md</code>文件来编辑文章内容，这样显得很麻烦，所以添加一个 js 脚本来实现每次创建新的博客文件时使用自己指定的编辑器自动打开文件，方便我们直接进行编辑。</p>
-<p>首先我们需要在博客根目录下创建一个文件夹<code>scripts</code>用来存放脚本的目录，在<code>scripts</code>中新建一个<code>openNewFile.js</code>文件，将以下内容复制进此<code>.js</code>文件中。</p>
-<div class="highlight-wrap" data-rel="Js"><figure class="iseeu highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 注意将”“部分内容更换为自己的编辑器路径 */</span></span><br><span class="line"><span class="keyword">var</span> exec = <span class="built_in">require</span>(<span class="string">&#x27;child_process&#x27;</span>).exec;</span><br><span class="line">hexo.on(<span class="string">&#x27;new&#x27;</span>, <span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">	exec(<span class="string">&#x27;start  &quot;‪D:/Software/Typora/Typora/Typora.exe&quot; &#x27;</span> + data.path);</span><br><span class="line">&#125;); </span><br></pre></td></tr></table></figure></div>
-<p>保存退出，这样每次在<code>hexo new &quot;file&quot;</code>命令运行后，<code>.js</code>脚本会监听到命令的运行，然后自动执行打开文件的任务。</p>
-<h2 id="背景特效添加">背景特效添加</h2>
-<p><code>Ayer</code>主题已经自带了鼠标点击特效和动态线条背景，现在我添加飘雪的背景。</p>
-<p>首先在<code>D:\MyBlog\themes\ayer\source\js\</code>文件夹内放入一个<code>snow.js</code>文件，将以下内容输入此<code>.js</code>文件中。</p>
-<!--注意此处文件路径根据你的主题选择，一般将ayer替换为你的主题名即为正确路径，下边涉及路径同理。-->
-<div class="highlight-wrap" data-rel="Js"><figure class="iseeu highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*雪花*/</span></span><br><span class="line">(<span class="function"><span class="keyword">function</span> (<span class="params">$</span>) </span>&#123;</span><br><span class="line">    $.fn.snow = <span class="function"><span class="keyword">function</span> (<span class="params">options</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> $flake = $(<span class="string">&#x27;&lt;div id=&quot;snowbox&quot; /&gt;&#x27;</span>).css(&#123;</span><br><span class="line">                <span class="string">&#x27;position&#x27;</span>: <span class="string">&#x27;absolute&#x27;</span>,</span><br><span class="line">                <span class="string">&#x27;z-index&#x27;</span>: <span class="string">&#x27;9999&#x27;</span>,</span><br><span class="line">                <span class="string">&#x27;top&#x27;</span>: <span class="string">&#x27;-50px&#x27;</span></span><br><span class="line">            &#125;).html(<span class="string">&#x27;❄&#x27;</span>),</span><br><span class="line">            documentHeight = $(<span class="built_in">document</span>).height(),</span><br><span class="line">            documentWidth = $(<span class="built_in">document</span>).width(),</span><br><span class="line">            defaults = &#123;</span><br><span class="line">                <span class="attr">minSize</span>: <span class="number">10</span>,</span><br><span class="line">                <span class="attr">maxSize</span>: <span class="number">20</span>,</span><br><span class="line">                <span class="attr">newOn</span>: <span class="number">1000</span>,</span><br><span class="line">                <span class="attr">flakeColor</span>: <span class="string">&quot;#AFDAEF&quot;</span> <span class="comment">/* 此处可以定义雪花颜色，若要白色可以改为#FFFFFF */</span></span><br><span class="line">            &#125;,</span><br><span class="line">            options = $.extend(&#123;&#125;, defaults, options);</span><br><span class="line">        <span class="keyword">var</span> interval = <span class="built_in">setInterval</span>(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="keyword">var</span> startPositionLeft = <span class="built_in">Math</span>.random() * documentWidth - <span class="number">100</span>,</span><br><span class="line">                startOpacity = <span class="number">0.5</span> + <span class="built_in">Math</span>.random(),</span><br><span class="line">                sizeFlake = options.minSize + <span class="built_in">Math</span>.random() * options.maxSize,</span><br><span class="line">                endPositionTop = documentHeight - <span class="number">200</span>,</span><br><span class="line">                endPositionLeft = startPositionLeft - <span class="number">500</span> + <span class="built_in">Math</span>.random() * <span class="number">500</span>,</span><br><span class="line">                durationFall = documentHeight * <span class="number">10</span> + <span class="built_in">Math</span>.random() * <span class="number">5000</span>;</span><br><span class="line">            $flake.clone().appendTo(<span class="string">&#x27;body&#x27;</span>).css(&#123;</span><br><span class="line">                <span class="attr">left</span>: startPositionLeft,</span><br><span class="line">                <span class="attr">opacity</span>: startOpacity,</span><br><span class="line">                <span class="string">&#x27;font-size&#x27;</span>: sizeFlake,</span><br><span class="line">                <span class="attr">color</span>: options.flakeColor</span><br><span class="line">            &#125;).animate(&#123;</span><br><span class="line">                <span class="attr">top</span>: endPositionTop,</span><br><span class="line">                <span class="attr">left</span>: endPositionLeft,</span><br><span class="line">                <span class="attr">opacity</span>: <span class="number">0.2</span></span><br><span class="line">            &#125;, durationFall, <span class="string">&#x27;linear&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">                $(<span class="built_in">this</span>).remove()</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;, options.newOn);</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;)(jQuery);</span><br><span class="line">$(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    $.fn.snow(&#123;</span><br><span class="line">        <span class="attr">minSize</span>: <span class="number">5</span>,</span><br><span class="line">        <span class="comment">/* 定义雪花最小尺寸 */</span></span><br><span class="line">        <span class="attr">maxSize</span>: <span class="number">50</span>,</span><br><span class="line">        <span class="comment">/* 定义雪花最大尺寸 */</span></span><br><span class="line">        <span class="attr">newOn</span>: <span class="number">300</span> <span class="comment">/* 定义密集程度，数字越小越密集 */</span></span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></div>
-<p>然后打开<code>D:\MyBlog\themes\ayer\layout\layout.ejs</code>文件，将以下代码输入。</p>
-<div class="highlight-wrap" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!-- 雪花特效 --&gt;</span><br><span class="line">&lt;% if (theme.snow)&#123; %&gt;</span><br><span class="line">  &lt;script type=&quot;text/javascript&quot; src=&quot;/js/snow.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure></div>
-<p>最后打开<code>主题配置文件</code>，在最后添加<code>snow: true</code>即可。</p>
-<p>重新运行<code>hexo g &amp;&amp; hexo s</code>，打开浏览器预览一下效果。</p>
-<h2 id="其他">其他</h2>
-<p>除此之外，网络上还有许多的美化教程，比如阅读全文添加边框，背景飘带，添加 live2d 看板娘，添加网站运行时间，动态诗词，各种网页小挂件，音乐插件等，大家自行研究。</p>
-]]></content>
-      <categories>
-        <category>博客搭建</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>ayer</tag>
-        <tag>美化</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>博客搭建(3)---Github部署</title>
     <url>/2021/12/29/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-3-Github%E9%83%A8%E7%BD%B2/</url>
     <content><![CDATA[<h2 id="背景">背景</h2>
@@ -159,6 +86,79 @@
       <tags>
         <tag>hexo</tag>
         <tag>github</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>博客搭建(2)---主题配置遗留问题</title>
+    <url>/2021/12/28/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA(2)/</url>
+    <content><![CDATA[<h2 id="分类、标签、关于我">分类、标签、关于我</h2>
+<p>如果是跟着第一节的搭建教程完全搭建下来的话，最后，你会发现虽然整体的博客框架有了，但是或多或少还存在着一些小 Bug，比如，点击侧边栏的<code>分类、标签、关于我</code>这些会报错，显示无法 Get。</p>
+<h3 id="解决方法">解决方法</h3>
+<p>其实出现这些问题也不算是 Bug，<code>Ayer</code>主题的作者已经在说明文档中给出了。</p>
+<ul>
+<li>
+<p>首先在博客根目录右键<code>Git Bash Here</code>，键入以下命令。</p>
+<span id="more"></span>
+</li>
+</ul>
+<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new page categories</span><br></pre></td></tr></table></figure></div>
+<p>然后将以下文本复制到<code>D:/MyBlog/source/categories/index.md</code>文件中。</p>
+<div class="highlight-wrap" data-rel="Markdown"><figure class="iseeu highlight markdown"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: categories</span><br><span class="line">type: &quot;categories&quot;</span><br><span class="line"><span class="section">layout: &quot;categories&quot;</span></span><br><span class="line"><span class="section">---</span></span><br></pre></td></tr></table></figure></div>
+<p>保存退出。这样就解决了侧边栏<code>分类</code>的问题。</p>
+<ul>
+<li><code>标签</code>的问题解决方法与上边的相似。</li>
+</ul>
+<p>博客根目录下右键<code>Git Bash Here</code>，键入以下命令。</p>
+<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new page tags</span><br></pre></td></tr></table></figure></div>
+<p>然后将以下文本复制到<code>D:/MyBlog/source/tags/index.md</code>文件中。</p>
+<div class="highlight-wrap" data-rel="Markdown"><figure class="iseeu highlight markdown"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: tags</span><br><span class="line">type: &quot;tags&quot;</span><br><span class="line"><span class="section">layout: &quot;tags&quot;</span></span><br><span class="line"><span class="section">---</span></span><br></pre></td></tr></table></figure></div>
+<p><code>标签</code>的问题也解决了。</p>
+<ul>
+<li><code>关于我</code>标签的问题</li>
+</ul>
+<p>首先打开<code>主题配置文件</code>(注意不是根目录配置文件)，第10行代码修改为<code>关于我: /about</code></p>
+<p>然后博客根目录下右键<code>Git Bash Here</code>，键入以下命令。</p>
+<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new page about</span><br></pre></td></tr></table></figure></div>
+<p>然后打开<code>D:/MyBlog/source/about/index.md</code>文件，以下列模板来书写文件即可。</p>
+<div class="highlight-wrap" data-rel="Markdown"><figure class="iseeu highlight markdown"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: &lt;自定义 关于我 界面打开的标题&gt;</span><br><span class="line">type: about</span><br><span class="line"><span class="section">layout: about</span></span><br><span class="line"><span class="section">---</span></span><br><span class="line">&lt;输入自己的个人简介或者其他想输入的信息&gt;</span><br></pre></td></tr></table></figure></div>
+<p>其中<code>&lt;&gt;</code>部分全部为自己自定义内容，可任意修改，除此之外的部分，连一个空格都不要动，防止可能出现的问题。</p>
+<p>我的博客<code>about</code>界面设置如下图所示，仅供参考。</p>
+<p><img src="https://gitee.com/zyzhang98/typora-picgo/raw/master/img/image-20211228215633839.png" alt=""></p>
+<h2 id="emoji表情添加">emoji表情添加</h2>
+<p>博客写作只是单调的文字总是显得不那么有活力，所以插入一些类似😀😶😐😹😻👌👊👧👦👨‍❤️‍👨🐶🐭🐻🐰🙉🍏🍑🍒⚽🏀🚗🚗🚕❤️会显得文章不是那么单调。</p>
+<p>Hexo 默认使用的是<a href="https://github.com/hexojs/hexo-renderer-marked">Hexo-renderer-marked</a>渲染器，它不支持插件扩展，也不支持 emoji解析，所以我们选用<a href="https://github.com/hexojs/hexo-renderer-markdown-it">hexo-renderer-markdown-it</a>渲染器。下面我们将原本默认的渲染器更换为 markdown-it 渲染器，使用这个渲染引擎就可以支持 emoji 表情了。</p>
+<p>首先进入博客根目录，右键运行<code>Git Bash Here</code>，输入命令如下。</p>
+<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 卸载默认的 marked 渲染器</span></span><br><span class="line">npm un hexo-renderer-marked --save</span><br><span class="line"><span class="comment"># 安装 markdown-it 渲染器</span></span><br><span class="line">npm i hexo-renderer-markdown-it --save</span><br><span class="line"><span class="comment"># 安装 markdown-it-emoji 插件</span></span><br><span class="line">npm install markdown-it-emoji --save</span><br></pre></td></tr></table></figure></div>
+<p>完成以上安装后，我们进行配置，打开<code>根目录配置文件</code>，在最后添加以下内容。</p>
+<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Markdown-it config</span></span><br><span class="line"><span class="comment">## Docs: https://github.com/celsomiranda/hexo-renderer-markdown-it/wiki</span></span><br><span class="line">markdown:</span><br><span class="line">  render:</span><br><span class="line">    html: <span class="literal">true</span></span><br><span class="line">    xhtmlOut: <span class="literal">false</span></span><br><span class="line">    breaks: <span class="literal">true</span></span><br><span class="line">    linkify: <span class="literal">true</span></span><br><span class="line">    typographer: <span class="literal">true</span></span><br><span class="line">    quotes: <span class="string">&#x27;“”‘’&#x27;</span></span><br><span class="line">  plugins:</span><br><span class="line">    - markdown-it-abbr</span><br><span class="line">    - markdown-it-footnote</span><br><span class="line">    - markdown-it-ins</span><br><span class="line">    - markdown-it-sub</span><br><span class="line">    - markdown-it-sup</span><br><span class="line">    - markdown-it-emoji  <span class="comment">## add emoji</span></span><br><span class="line">  anchors:</span><br><span class="line">    level: 2</span><br><span class="line">    collisionSuffix: <span class="string">&#x27;v&#x27;</span></span><br><span class="line">    <span class="comment"># If `true`, creates an anchor tag with a permalink besides the heading.</span></span><br><span class="line">    permalink: <span class="literal">false</span>  </span><br><span class="line">    permalinkClass: header-anchor</span><br><span class="line">    <span class="comment"># The symbol used to make the permalink</span></span><br><span class="line">    permalinkSymbol: ¶</span><br></pre></td></tr></table></figure></div>
+<p>保存退出。上面的内容主要就是<code>hexo-renderer-markdown-it</code>的一些选项配置，详细的每一项的配置可以查阅其<a href="https://github.com/hexojs/hexo-renderer-markdown-it"> Github 项目主页</a>。</p>
+<p>然后，在<a href="https://www.emojicopy.com/"> emoji 列表</a>中找到自己需要的表情，复制粘贴到<code>Typora</code>或者其他<code>Markdown</code>语法编辑器中即可。</p>
+<h2 id="评论添加">评论添加</h2>
+<p>博客最后的评论框存在 Bug，是由于<code>Ayer</code>主题默认使用了<code>Leancloud + Valine</code>接口的无后端评论系统，但是里边需要填入自己的<code>app_id</code>和<code>app_key</code>，所以我们需要先创建 <a href="https://console.leancloud.cn/apps">LeanCloud 应用</a>，创建应用后在应用设置里边的应用凭证找到<code>AppID</code>和<code>AppKey</code>，然后打开<code>主题配置文件</code>，找到第209~210行，将自己的<code>app_id</code>和<code>app_key</code>填入即可，另外<code>avatar</code>标签的参数可以更换，查看 <a href="https://valine.js.org/avatar.html">Valine 头像配置</a>更换参数来实现评论头像的更换。</p>
+<h2 id="自动打开新创建文件">自动打开新创建文件</h2>
+<p>每次我们在博客根目录使用右键<code>Git Bash Here</code>打开命令窗口输入<code>hexo new &quot;file&quot;</code>新建博客文件时，总是要自己手动去打开<code>D:\MyBlog\source\_posts</code>文件夹的新建<code>.md</code>文件来编辑文章内容，这样显得很麻烦，所以添加一个 js 脚本来实现每次创建新的博客文件时使用自己指定的编辑器自动打开文件，方便我们直接进行编辑。</p>
+<p>首先我们需要在博客根目录下创建一个文件夹<code>scripts</code>用来存放脚本的目录，在<code>scripts</code>中新建一个<code>openNewFile.js</code>文件，将以下内容复制进此<code>.js</code>文件中。</p>
+<div class="highlight-wrap" data-rel="Js"><figure class="iseeu highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 注意将”“部分内容更换为自己的编辑器路径 */</span></span><br><span class="line"><span class="keyword">var</span> exec = <span class="built_in">require</span>(<span class="string">&#x27;child_process&#x27;</span>).exec;</span><br><span class="line">hexo.on(<span class="string">&#x27;new&#x27;</span>, <span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">	exec(<span class="string">&#x27;start  &quot;‪D:/Software/Typora/Typora/Typora.exe&quot; &#x27;</span> + data.path);</span><br><span class="line">&#125;); </span><br></pre></td></tr></table></figure></div>
+<p>保存退出，这样每次在<code>hexo new &quot;file&quot;</code>命令运行后，<code>.js</code>脚本会监听到命令的运行，然后自动执行打开文件的任务。</p>
+<h2 id="背景特效添加">背景特效添加</h2>
+<p><code>Ayer</code>主题已经自带了鼠标点击特效和动态线条背景，现在我添加飘雪的背景。</p>
+<p>首先在<code>D:\MyBlog\themes\ayer\source\js\</code>文件夹内放入一个<code>snow.js</code>文件，将以下内容输入此<code>.js</code>文件中。</p>
+<!--注意此处文件路径根据你的主题选择，一般将ayer替换为你的主题名即为正确路径，下边涉及路径同理。-->
+<div class="highlight-wrap" data-rel="Js"><figure class="iseeu highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*雪花*/</span></span><br><span class="line">(<span class="function"><span class="keyword">function</span> (<span class="params">$</span>) </span>&#123;</span><br><span class="line">    $.fn.snow = <span class="function"><span class="keyword">function</span> (<span class="params">options</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> $flake = $(<span class="string">&#x27;&lt;div id=&quot;snowbox&quot; /&gt;&#x27;</span>).css(&#123;</span><br><span class="line">                <span class="string">&#x27;position&#x27;</span>: <span class="string">&#x27;absolute&#x27;</span>,</span><br><span class="line">                <span class="string">&#x27;z-index&#x27;</span>: <span class="string">&#x27;9999&#x27;</span>,</span><br><span class="line">                <span class="string">&#x27;top&#x27;</span>: <span class="string">&#x27;-50px&#x27;</span></span><br><span class="line">            &#125;).html(<span class="string">&#x27;❄&#x27;</span>),</span><br><span class="line">            documentHeight = $(<span class="built_in">document</span>).height(),</span><br><span class="line">            documentWidth = $(<span class="built_in">document</span>).width(),</span><br><span class="line">            defaults = &#123;</span><br><span class="line">                <span class="attr">minSize</span>: <span class="number">10</span>,</span><br><span class="line">                <span class="attr">maxSize</span>: <span class="number">20</span>,</span><br><span class="line">                <span class="attr">newOn</span>: <span class="number">1000</span>,</span><br><span class="line">                <span class="attr">flakeColor</span>: <span class="string">&quot;#AFDAEF&quot;</span> <span class="comment">/* 此处可以定义雪花颜色，若要白色可以改为#FFFFFF */</span></span><br><span class="line">            &#125;,</span><br><span class="line">            options = $.extend(&#123;&#125;, defaults, options);</span><br><span class="line">        <span class="keyword">var</span> interval = <span class="built_in">setInterval</span>(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="keyword">var</span> startPositionLeft = <span class="built_in">Math</span>.random() * documentWidth - <span class="number">100</span>,</span><br><span class="line">                startOpacity = <span class="number">0.5</span> + <span class="built_in">Math</span>.random(),</span><br><span class="line">                sizeFlake = options.minSize + <span class="built_in">Math</span>.random() * options.maxSize,</span><br><span class="line">                endPositionTop = documentHeight - <span class="number">200</span>,</span><br><span class="line">                endPositionLeft = startPositionLeft - <span class="number">500</span> + <span class="built_in">Math</span>.random() * <span class="number">500</span>,</span><br><span class="line">                durationFall = documentHeight * <span class="number">10</span> + <span class="built_in">Math</span>.random() * <span class="number">5000</span>;</span><br><span class="line">            $flake.clone().appendTo(<span class="string">&#x27;body&#x27;</span>).css(&#123;</span><br><span class="line">                <span class="attr">left</span>: startPositionLeft,</span><br><span class="line">                <span class="attr">opacity</span>: startOpacity,</span><br><span class="line">                <span class="string">&#x27;font-size&#x27;</span>: sizeFlake,</span><br><span class="line">                <span class="attr">color</span>: options.flakeColor</span><br><span class="line">            &#125;).animate(&#123;</span><br><span class="line">                <span class="attr">top</span>: endPositionTop,</span><br><span class="line">                <span class="attr">left</span>: endPositionLeft,</span><br><span class="line">                <span class="attr">opacity</span>: <span class="number">0.2</span></span><br><span class="line">            &#125;, durationFall, <span class="string">&#x27;linear&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">                $(<span class="built_in">this</span>).remove()</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;, options.newOn);</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;)(jQuery);</span><br><span class="line">$(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    $.fn.snow(&#123;</span><br><span class="line">        <span class="attr">minSize</span>: <span class="number">5</span>,</span><br><span class="line">        <span class="comment">/* 定义雪花最小尺寸 */</span></span><br><span class="line">        <span class="attr">maxSize</span>: <span class="number">50</span>,</span><br><span class="line">        <span class="comment">/* 定义雪花最大尺寸 */</span></span><br><span class="line">        <span class="attr">newOn</span>: <span class="number">300</span> <span class="comment">/* 定义密集程度，数字越小越密集 */</span></span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></div>
+<p>然后打开<code>D:\MyBlog\themes\ayer\layout\layout.ejs</code>文件，将以下代码输入。</p>
+<div class="highlight-wrap" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!-- 雪花特效 --&gt;</span><br><span class="line">&lt;% if (theme.snow)&#123; %&gt;</span><br><span class="line">  &lt;script type=&quot;text/javascript&quot; src=&quot;/js/snow.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure></div>
+<p>最后打开<code>主题配置文件</code>，在最后添加<code>snow: true</code>即可。</p>
+<p>重新运行<code>hexo g &amp;&amp; hexo s</code>，打开浏览器预览一下效果。</p>
+<h2 id="其他">其他</h2>
+<p>除此之外，网络上还有许多的美化教程，比如阅读全文添加边框，背景飘带，添加 live2d 看板娘，添加网站运行时间，动态诗词，各种网页小挂件，音乐插件等，大家自行研究。</p>
+]]></content>
+      <categories>
+        <category>博客搭建</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>ayer</tag>
+        <tag>美化</tag>
       </tags>
   </entry>
   <entry>
@@ -1514,6 +1514,162 @@ $$</p>
       </tags>
   </entry>
   <entry>
+    <title>博客搭建(1)---Hexo框架安装</title>
+    <url>/2021/12/28/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-1-Hexo%E6%A1%86%E6%9E%B6%E5%AE%89%E8%A3%85/</url>
+    <content><![CDATA[<h2 id="一、Hexo框架介绍">一、Hexo框架介绍</h2>
+<h2 id=""></h2>
+<p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。<span id="more"></span></p>
+<p>Hexo 中文官网：<a href="https://hexo.io/zh-cn/docs/">hexo.io</a></p>
+<h2 id="二、依赖环境的安装">二、依赖环境的安装</h2>
+<p><strong>无特殊说明情况下，本文所有下载及安装过程仅限于Windows系统。</strong></p>
+<h3 id="1-Node-js安装">1.Node.js安装</h3>
+<h4 id="官网下载">官网下载</h4>
+<p><a href="https://nodejs.org/en/">Node.js官网</a>下载安装包，非专业人士建议选择 LTS 长期支持版本即可，比较稳定，经过了充分的测试。</p>
+<h4 id="云盘下载">云盘下载</h4>
+<p>有限选择官网最新版本进行下载，如果官网速度较慢，可以选择以下链接进行 Node.js 16.13.1 版本的下载。</p>
+<p><a href="https://www.123pan.com/s/XHVA-JQQ5d">123云盘下载链接</a>，提取码：z827。</p>
+<p><a href="https://pan.baidu.com/s/1zW4zsP7wEUhQSTOY8qYiRA">百度网盘下载链接</a>，提取码：ts6k。</p>
+<p><a href="https://www.aliyundrive.com/s/cRiENyN6xzT">阿里云盘下载链接</a>，提取码：z827。</p>
+<p><a href="https://zyzhang.lanzouw.com/iF3iJy23svi">蓝奏云盘下载链接</a>，提取码：z827。</p>
+<h4 id="安装过程">安装过程</h4>
+<p>安装过程一路点击 Next 即可。注意 Tools for Native Modules 步骤为额外工具，可视个人需求取消勾选。</p>
+<h4 id="测试安装">测试安装</h4>
+<p>安装完成后，使用 Win+R 打开运行框，输入<code>cmd</code>回车打开命令行窗口，输入<code>npm -v</code>回车，出现版本号即代表安装成功。</p>
+<h3 id="2-Git安装">2.Git安装</h3>
+<h4 id="官网下载-v2">官网下载</h4>
+<p><a href="https://git-scm.com/">Git官网</a>下载安装包。</p>
+<h4 id="云盘下载-v2">云盘下载</h4>
+<p>网络速度慢，可以选择以下链接进行 Git-2.34.1-64bit 版本的下载。</p>
+<p><a href="https://www.123pan.com/s/XHVA-IQQ5d">123云盘下载链接</a>，提取码：z827。</p>
+<p><a href="https://www.aliyundrive.com/s/da9QVGQYN4Q">阿里云盘下载链接</a>，提取码：z827。</p>
+<p><a href="https://pan.baidu.com/s/12yJP_b18pA7BwEk5dCgNqg">百度网盘下载链接</a>，提取码：sim9。</p>
+<p><a href="https://zyzhang.lanzouw.com/i6ZsEy24x5i">蓝奏云盘下载链接</a>，提取码：z827。</p>
+<h4 id="安装过程-v2">安装过程</h4>
+<p>安装过程一路点击 Next 即可。</p>
+<h4 id="测试安装-v2">测试安装</h4>
+<p>安装完成后，桌面右键，多出<code>Git GUI Here</code>和<code>Git Bash Here</code>两个选项。</p>
+<p>点击<code>Git Bash Here</code>后进行新的命令行窗口，输入<code>git --version</code>回车，出现版本号即说明安装成功。</p>
+<h2 id="三、Hexo安装">三、Hexo安装</h2>
+<h3 id="1-本地创建目录">1.本地创建目录</h3>
+<p>先在电脑磁盘创建一个空的文件夹，此文件夹用来存放 Hexo 的文件以及之后所写的博客文件，注意不要有中文路径，避免可能出现的 Bug。我选择在 D 盘下新建 MyBlog 文件夹。</p>
+<h3 id="2-安装命令">2.安装命令</h3>
+<p>在上述自行创建的新文件夹下右键选择<code>Git Bash Here</code>，输入以下命令。</p>
+<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 安装 hexo 框架(注意 # 开头的为注释文本，无需键入命令)</span></span><br><span class="line">npm install -g hexo-cli</span><br><span class="line"><span class="comment"># 初始化文件夹</span></span><br><span class="line">hexo init</span><br><span class="line"><span class="comment"># 安装 hexo</span></span><br><span class="line">npm install</span><br></pre></td></tr></table></figure></div>
+<h4 id="报错解决">报错解决</h4>
+<ul>
+<li>
+<p><code>npm install -g hexo-cli</code>命令卡住或者报错无法连接。</p>
+<p>可能是由于 npm 的源速度太慢，可以尝试以下命令来重新安装。</p>
+<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">npm config get registry</span><br><span class="line">npm --registry=https://registry.npm.taobao.org install -g hexo-cli</span><br></pre></td></tr></table></figure></div>
+</li>
+</ul>
+<p>​	显示如下类似内容即为安装成功。</p>
+<p><img src="https://gitee.com/zyzhang98/typora-picgo/raw/master/img/image-20211228125951269.png" alt=""></p>
+<ul>
+<li>
+<p><code>hexo init</code>命令执行卡住或者报错无法连接。</p>
+<p>给 git 配置代理，具体配置方法不再给出，有需要可以百度。</p>
+</li>
+<li>
+<p>可以根据报错反馈的错误号进行百度，查找相应的解决办法。</p>
+</li>
+</ul>
+<h3 id="3-本地博客效果预览">3.本地博客效果预览</h3>
+<p>上述命令执行成功之后，Hexo 框架已经在本地搭建完成，可以通过输入命令查看效果。</p>
+<p>在自己创建的博客目录文件夹下，右键打开<code>Git Bash Here</code>，键入以下命令。</p>
+<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 生成静态网站</span></span><br><span class="line">hexo g</span><br><span class="line"><span class="comment"># 启动服务器</span></span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure></div>
+<p>当运行之后出现如下窗口即可。</p>
+<p><img src="https://gitee.com/zyzhang98/typora-picgo/raw/master/img/image-20211228131356433.png" alt=""></p>
+<p>此时，打开浏览器，输入网址<code>http://localhost:4000</code>就可以看到我们使用 Hexo 搭建的博客示例了，此时的博客是默认主题，比较简洁，可以根据个人喜好进行美化。</p>
+<p><img src="https://gitee.com/zyzhang98/typora-picgo/raw/master/img/image-20211228131638203.png" alt=""></p>
+<h2 id="四、美化Hexo博客">四、美化Hexo博客</h2>
+<h3 id="1-主题下载">1.主题下载</h3>
+<h4 id="官方网站">官方网站</h4>
+<p><a href="https://hexo.io/themes/">Hexo 主题页</a></p>
+<h4 id="Github">Github</h4>
+<p><a href="https://github.com/search?q=hexo-theme">Github hexo-theme 搜索页</a></p>
+<h4 id="其他网站">其他网站</h4>
+<p>简书，CSDN，知乎等网站里搜索 Hexo 主题推荐。</p>
+<h3 id="2-主题更换">2.主题更换</h3>
+<p>本文选择主题 <strong>ayer</strong></p>
+<p>Github 项目主页链接：<a href="https://github.com/shen-yu/hexo-theme-ayer">Hexo-Ayer</a></p>
+<p>网站主题示例效果：<a href="https://shen-yu.gitee.io/">Demo网站</a></p>
+<h4 id="主题下载">主题下载</h4>
+<p>在自己创建的博客根目录(<code>D:\MyBlog</code>)下，右键选择<code>Git Bash Here</code>进行命令窗口，键入以下命令。</p>
+<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 下载主题仓库到 themes 文件夹</span></span><br><span class="line">git <span class="built_in">clone</span> &lt;仓库地址&gt; themes/&lt;主题名&gt;</span><br></pre></td></tr></table></figure></div>
+<p>其中，仓库地址可以在相应主题的 Github 主页找到，例如主题 ayer 的仓库地址如下图所示。</p>
+<p><img src="https://gitee.com/zyzhang98/typora-picgo/raw/master/img/image-20211228134058891.png" alt=""></p>
+<p>那么，我这边所需要执行的命令就是</p>
+<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/shen-yu/hexo-theme-ayer.git themes/ayer</span><br></pre></td></tr></table></figure></div>
+<p>执行完成之后，打开博客目录下的 themes 文件夹，发现多了刚才了下载的主题文件夹。</p>
+<p><img src="https://gitee.com/zyzhang98/typora-picgo/raw/master/img/image-20211228134655121.png" alt=""></p>
+<h4 id="应用主题">应用主题</h4>
+<p>上一步我们只是完成了主题的下载，还没有将主题应用到 Hexo 中去，下面我们开始应用主题。</p>
+<p>首先使用文本软件打开博客根目录下的<code>_config.yml</code>文件，找到<code>theme</code>标签，默认值为<code>landscape</code>主题，我们把它改为上一步中我们下载的主题名字即可，这里我设置为<code>ayer</code>，局部截图如下所示。</p>
+<p><img src="https://gitee.com/zyzhang98/typora-picgo/raw/master/img/image-20211228135323342.png" alt=""></p>
+<p>然后同样在根目录使用<code>Git Bash Here</code>执行以下命令重新启动 Hexo。</p>
+<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 清理 &amp;&amp; 编译 &amp;&amp; 启动</span></span><br><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</span><br></pre></td></tr></table></figure></div>
+<p>此时再打开浏览器输入<code>http://localhost:4000</code>发现博客主题风格已经更换。</p>
+<h4 id="报错解决-v2">报错解决</h4>
+<p>我这里下载的主题为<code>ayer</code>，没有用到特殊的插件，如果下载其他主题，在前面过程没有错误的前提下，打开浏览器输入网址发现报错信息，大概率是缺少某个依赖库，解决方法一般是<code>Git Bash Here</code>中输入<code>npm install &lt;缺少的依赖库&gt;</code>来安装。</p>
+<p>例如，<code>Next</code>主题报错后，需要先使用命令<code>npm install hexo-renderer-swig</code>安装依赖</p>
+<p><code>stun</code>主题报错后，需要先使用命令<code>npm install hexo-renderer-pug</code>安装依赖。</p>
+<p>不同的主题缺少的依赖可能不一样，但解决方法大致相同，具体到某一个主题，其缺少的依赖库名字可以通过百度查找。</p>
+<h4 id="配置修改">配置修改</h4>
+<p>更换自己喜欢的主题后，我们需要修改一些博客网页的一些基本属性，比如博客的名字，图片背景或者是添加一些鼠标光标，点击特效，音乐插件等都可以实现。</p>
+<h5 id="根目录配置文件"><strong>根目录配置文件</strong></h5>
+<p>Hexo 的基本配置大部分都在博客根目录下的<code>_config.yml</code>文件中，它可以叫做<code>根目录配置文件</code>，直接修改这个文件可以修改博客的一些设置，例如前面我们对于下载主题的更换就是修改里边<code>theme</code>标签的参数来实现的。关于<code>根目录配置文件</code>的每个标签及参数的具体意义和使用方法，可以查阅 <a href="https://hexo.io/zh-cn/docs/configuration">Hexo 配置文件官方文档</a>。</p>
+<h5 id="主题配置文件"><strong>主题配置文件</strong></h5>
+<p>除了上边的根目录配置文件外，我们自己下载的主题文件夹内也会有一个<code>_config.yml</code>文件，这里的这个文件我们叫做<code>主题配置文件</code>。比如我下载的主题是<code>ayer</code>，那么我的<code>主题配置文件</code>路径就是<code>D:\MyBlog\themes\ayer\_config.yml</code>，同样改动参数可以实现对博客页面的改变。关于<code>主题配置文件</code>的每个标签及参数的具体意义和使用方法，可以查阅对应主题的 Github 主页。</p>
+<p>如果博客使用的是默认的<code>landscape</code>主题，那么所有的配置仅在<code>根目录配置文件</code>即可修改，如果使用的是第三方下载的主题，那么需要配合使用<code>根目录配置文件</code>和<code>主题配置文件</code>来实现修改博客的目的。</p>
+<h5 id="具体修改">具体修改</h5>
+<p>下面以我所使用的<code>ayer</code>主题为例，来对博客做一些简单的调整。</p>
+<ul>
+<li>
+<p>打开<code>根目录配置文件</code></p>
+<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Site 部分</span></span><br><span class="line">title: &lt;自定义&gt;				<span class="comment"># 博客标题</span></span><br><span class="line">author: &lt;自定义&gt;				<span class="comment"># 博客作者</span></span><br><span class="line">language: zh-CN				  <span class="comment"># 网站语言 zh-CN中文  en英文</span></span><br></pre></td></tr></table></figure></div>
+</li>
+<li>
+<p>打开<code>主题配置文件</code></p>
+<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 侧边栏菜单		不需要打开的可以直接在前边加 # 进行注释掉</span></span><br><span class="line">menu:</span><br><span class="line">  主页: /</span><br><span class="line">  归档: /archives</span><br><span class="line">  分类: /categories</span><br><span class="line">  标签: /tags</span><br><span class="line"><span class="comment">#  旅行: /tags/旅行/</span></span><br><span class="line"><span class="comment">#  摄影: http://shenyu-vip.lofter.com</span></span><br><span class="line"><span class="comment">#  友链: /friends</span></span><br><span class="line">  关于我: /2019/about</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 站点次标题和打字特效</span></span><br><span class="line">subtitle:</span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span> <span class="comment"># 是否开启动效</span></span><br><span class="line">  text: 面朝大海，春暖花开 <span class="comment"># 显示的文字</span></span><br><span class="line">  text2: 愿你一生努力，一生被爱 <span class="comment"># 滚动播放，如果不需要可以留空</span></span><br><span class="line">  text3: 想要的都拥有，得不到的都释怀 <span class="comment"># 最多支持三段文字</span></span><br><span class="line">  startDelay: 0 <span class="comment"># 延迟时间</span></span><br><span class="line">  typeSpeed: 200 <span class="comment"># 打字速度</span></span><br><span class="line">  loop: <span class="literal">true</span> <span class="comment"># 是否循环</span></span><br><span class="line">  backSpeed: 100 <span class="comment"># 回退速度</span></span><br><span class="line">  showCursor: <span class="literal">true</span> <span class="comment"># 是否显示光标</span></span><br></pre></td></tr></table></figure></div>
+<p>第26~27行为修改网站图标和侧边栏 logo。方法：只需要将自己的图标文件放在<code>D:\MyBlog\themes\ayer\source\</code>文件夹下，将配置文件中的<code>favicon.ico</code>修改为自己图标的名称即可。</p>
+<p>第31~34行为修改封面配置。方法：只需要将自己的图片文件放在<code>D:\MyBlog\themes\ayer\source\images\</code>文件夹下，将配置文件中的<code>cover1.jpg</code>修改为自己图片文件的名称即可。</p>
+<p>第83行为打赏功能。注意：一定要将<code>reward_type</code>的参数修改为<code>0</code>，将打赏功能关闭，否则博客中插入的就是主题作者的收款码了。当然，也可以将收款码更改为自己的。</p>
+</li>
+</ul>
+<p>修改完上述基本配置后，在根目录下运行<code>Git Bash Here</code>，执行命令<code>hexo g &amp;&amp; hexo s</code>，浏览器输入网址<code>http://localhost:4000</code>看一下效果。</p>
+<p><img src="https://gitee.com/zyzhang98/typora-picgo/raw/master/img/image-20211228151605388.png" alt=""></p>
+<p>​</p>
+<p>到此为止，我们的博客基本配置已经修改好了，如果后续还需要修改某些配置，可以对照官方文档进行修改。</p>
+<h2 id="五、本地发布文章">五、本地发布文章</h2>
+<p>博客搭建好了，但是现在只有示例的<code>Hello World</code>一篇文章，如何发布自己的文章？</p>
+<h3 id="1-新建文章">1.新建文章</h3>
+<p>在博客根目录下右键进入<code>Git Bash Here</code>，输入以下命令。</p>
+<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new <span class="string">&quot;不宠无惊过一生&quot;</span></span><br></pre></td></tr></table></figure></div>
+<p>然后进入博客根目录下的<code>source\_posts</code>文件夹，可以看到多了一个<code>不宠无惊过一生.md</code>的文件，这就是新生成的博客文章，因为 Hexo 默认使用 Markdown 语法，所以文件后缀显示为<code>.md</code>，可以使用记事本和<code>Typora</code>打开，个人推荐后者，但是最新版的后者有了收费模式，建议使用<code>0.x</code>版本，Markdown 语法简单易学。</p>
+<p>在连接服务器的情况下，键入<code>Ctrl+C</code>停止服务器，重新运行<code>hexo g &amp;&amp; hexo s</code>打开浏览器输入网址即可看到新发布的文章。</p>
+<h3 id="2-修改发布文章的模板">2.修改发布文章的模板</h3>
+<p>打开位于<code>D:\MyBlog\source\_posts</code>文件夹内的新发布文章的<code>md</code>文件，发现其中并非空白的，这是由于 Hexo 已经根据默认模板为我们生成了一些参数，例如文章创建时间、标签等，方便我们整理归档，当然，这个模板是可以更改的。</p>
+<p>我们只要修改<code>根目录配置文件</code>中的<code>new_post_name</code>参数就可以了。</p>
+<p>例如修改为<code>new_post_name: :year-:month-:day-:title.md</code>这样以后创建的文章就会自动加上年月日信息，便于通过日期来管理文章。另外，在发布文章的内部，直接修改三个参数也是可以的。</p>
+<p><img src="https://gitee.com/zyzhang98/typora-picgo/raw/master/img/image-20211228155450126.png" alt=""></p>
+<h2 id="六、后续">六、后续</h2>
+<p>至此，博客已经基本可以使用了，只是还部署在本地，下一步的任务就是将这一整套的文件全部部署到服务器上，使得其他人也可以通过固定的网址来访问我们自己的博客。</p>
+<blockquote>
+<p>本文安装配置过程参考 <a href="https://yushuaigee.gitee.io/">半亩方塘</a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>博客搭建</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>ayer</tag>
+        <tag>美化</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Python爬虫学习笔记</title>
     <url>/2022/01/05/Python%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<blockquote>
@@ -2709,162 +2865,6 @@ $$</p>
       <tags>
         <tag>python</tag>
         <tag>爬虫</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>博客搭建(1)---Hexo框架安装</title>
-    <url>/2021/12/28/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-1-Hexo%E6%A1%86%E6%9E%B6%E5%AE%89%E8%A3%85/</url>
-    <content><![CDATA[<h2 id="一、Hexo框架介绍">一、Hexo框架介绍</h2>
-<h2 id=""></h2>
-<p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。<span id="more"></span></p>
-<p>Hexo 中文官网：<a href="https://hexo.io/zh-cn/docs/">hexo.io</a></p>
-<h2 id="二、依赖环境的安装">二、依赖环境的安装</h2>
-<p><strong>无特殊说明情况下，本文所有下载及安装过程仅限于Windows系统。</strong></p>
-<h3 id="1-Node-js安装">1.Node.js安装</h3>
-<h4 id="官网下载">官网下载</h4>
-<p><a href="https://nodejs.org/en/">Node.js官网</a>下载安装包，非专业人士建议选择 LTS 长期支持版本即可，比较稳定，经过了充分的测试。</p>
-<h4 id="云盘下载">云盘下载</h4>
-<p>有限选择官网最新版本进行下载，如果官网速度较慢，可以选择以下链接进行 Node.js 16.13.1 版本的下载。</p>
-<p><a href="https://www.123pan.com/s/XHVA-JQQ5d">123云盘下载链接</a>，提取码：z827。</p>
-<p><a href="https://pan.baidu.com/s/1zW4zsP7wEUhQSTOY8qYiRA">百度网盘下载链接</a>，提取码：ts6k。</p>
-<p><a href="https://www.aliyundrive.com/s/cRiENyN6xzT">阿里云盘下载链接</a>，提取码：z827。</p>
-<p><a href="https://zyzhang.lanzouw.com/iF3iJy23svi">蓝奏云盘下载链接</a>，提取码：z827。</p>
-<h4 id="安装过程">安装过程</h4>
-<p>安装过程一路点击 Next 即可。注意 Tools for Native Modules 步骤为额外工具，可视个人需求取消勾选。</p>
-<h4 id="测试安装">测试安装</h4>
-<p>安装完成后，使用 Win+R 打开运行框，输入<code>cmd</code>回车打开命令行窗口，输入<code>npm -v</code>回车，出现版本号即代表安装成功。</p>
-<h3 id="2-Git安装">2.Git安装</h3>
-<h4 id="官网下载-v2">官网下载</h4>
-<p><a href="https://git-scm.com/">Git官网</a>下载安装包。</p>
-<h4 id="云盘下载-v2">云盘下载</h4>
-<p>网络速度慢，可以选择以下链接进行 Git-2.34.1-64bit 版本的下载。</p>
-<p><a href="https://www.123pan.com/s/XHVA-IQQ5d">123云盘下载链接</a>，提取码：z827。</p>
-<p><a href="https://www.aliyundrive.com/s/da9QVGQYN4Q">阿里云盘下载链接</a>，提取码：z827。</p>
-<p><a href="https://pan.baidu.com/s/12yJP_b18pA7BwEk5dCgNqg">百度网盘下载链接</a>，提取码：sim9。</p>
-<p><a href="https://zyzhang.lanzouw.com/i6ZsEy24x5i">蓝奏云盘下载链接</a>，提取码：z827。</p>
-<h4 id="安装过程-v2">安装过程</h4>
-<p>安装过程一路点击 Next 即可。</p>
-<h4 id="测试安装-v2">测试安装</h4>
-<p>安装完成后，桌面右键，多出<code>Git GUI Here</code>和<code>Git Bash Here</code>两个选项。</p>
-<p>点击<code>Git Bash Here</code>后进行新的命令行窗口，输入<code>git --version</code>回车，出现版本号即说明安装成功。</p>
-<h2 id="三、Hexo安装">三、Hexo安装</h2>
-<h3 id="1-本地创建目录">1.本地创建目录</h3>
-<p>先在电脑磁盘创建一个空的文件夹，此文件夹用来存放 Hexo 的文件以及之后所写的博客文件，注意不要有中文路径，避免可能出现的 Bug。我选择在 D 盘下新建 MyBlog 文件夹。</p>
-<h3 id="2-安装命令">2.安装命令</h3>
-<p>在上述自行创建的新文件夹下右键选择<code>Git Bash Here</code>，输入以下命令。</p>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 安装 hexo 框架(注意 # 开头的为注释文本，无需键入命令)</span></span><br><span class="line">npm install -g hexo-cli</span><br><span class="line"><span class="comment"># 初始化文件夹</span></span><br><span class="line">hexo init</span><br><span class="line"><span class="comment"># 安装 hexo</span></span><br><span class="line">npm install</span><br></pre></td></tr></table></figure></div>
-<h4 id="报错解决">报错解决</h4>
-<ul>
-<li>
-<p><code>npm install -g hexo-cli</code>命令卡住或者报错无法连接。</p>
-<p>可能是由于 npm 的源速度太慢，可以尝试以下命令来重新安装。</p>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">npm config get registry</span><br><span class="line">npm --registry=https://registry.npm.taobao.org install -g hexo-cli</span><br></pre></td></tr></table></figure></div>
-</li>
-</ul>
-<p>​	显示如下类似内容即为安装成功。</p>
-<p><img src="https://gitee.com/zyzhang98/typora-picgo/raw/master/img/image-20211228125951269.png" alt=""></p>
-<ul>
-<li>
-<p><code>hexo init</code>命令执行卡住或者报错无法连接。</p>
-<p>给 git 配置代理，具体配置方法不再给出，有需要可以百度。</p>
-</li>
-<li>
-<p>可以根据报错反馈的错误号进行百度，查找相应的解决办法。</p>
-</li>
-</ul>
-<h3 id="3-本地博客效果预览">3.本地博客效果预览</h3>
-<p>上述命令执行成功之后，Hexo 框架已经在本地搭建完成，可以通过输入命令查看效果。</p>
-<p>在自己创建的博客目录文件夹下，右键打开<code>Git Bash Here</code>，键入以下命令。</p>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 生成静态网站</span></span><br><span class="line">hexo g</span><br><span class="line"><span class="comment"># 启动服务器</span></span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure></div>
-<p>当运行之后出现如下窗口即可。</p>
-<p><img src="https://gitee.com/zyzhang98/typora-picgo/raw/master/img/image-20211228131356433.png" alt=""></p>
-<p>此时，打开浏览器，输入网址<code>http://localhost:4000</code>就可以看到我们使用 Hexo 搭建的博客示例了，此时的博客是默认主题，比较简洁，可以根据个人喜好进行美化。</p>
-<p><img src="https://gitee.com/zyzhang98/typora-picgo/raw/master/img/image-20211228131638203.png" alt=""></p>
-<h2 id="四、美化Hexo博客">四、美化Hexo博客</h2>
-<h3 id="1-主题下载">1.主题下载</h3>
-<h4 id="官方网站">官方网站</h4>
-<p><a href="https://hexo.io/themes/">Hexo 主题页</a></p>
-<h4 id="Github">Github</h4>
-<p><a href="https://github.com/search?q=hexo-theme">Github hexo-theme 搜索页</a></p>
-<h4 id="其他网站">其他网站</h4>
-<p>简书，CSDN，知乎等网站里搜索 Hexo 主题推荐。</p>
-<h3 id="2-主题更换">2.主题更换</h3>
-<p>本文选择主题 <strong>ayer</strong></p>
-<p>Github 项目主页链接：<a href="https://github.com/shen-yu/hexo-theme-ayer">Hexo-Ayer</a></p>
-<p>网站主题示例效果：<a href="https://shen-yu.gitee.io/">Demo网站</a></p>
-<h4 id="主题下载">主题下载</h4>
-<p>在自己创建的博客根目录(<code>D:\MyBlog</code>)下，右键选择<code>Git Bash Here</code>进行命令窗口，键入以下命令。</p>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 下载主题仓库到 themes 文件夹</span></span><br><span class="line">git <span class="built_in">clone</span> &lt;仓库地址&gt; themes/&lt;主题名&gt;</span><br></pre></td></tr></table></figure></div>
-<p>其中，仓库地址可以在相应主题的 Github 主页找到，例如主题 ayer 的仓库地址如下图所示。</p>
-<p><img src="https://gitee.com/zyzhang98/typora-picgo/raw/master/img/image-20211228134058891.png" alt=""></p>
-<p>那么，我这边所需要执行的命令就是</p>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/shen-yu/hexo-theme-ayer.git themes/ayer</span><br></pre></td></tr></table></figure></div>
-<p>执行完成之后，打开博客目录下的 themes 文件夹，发现多了刚才了下载的主题文件夹。</p>
-<p><img src="https://gitee.com/zyzhang98/typora-picgo/raw/master/img/image-20211228134655121.png" alt=""></p>
-<h4 id="应用主题">应用主题</h4>
-<p>上一步我们只是完成了主题的下载，还没有将主题应用到 Hexo 中去，下面我们开始应用主题。</p>
-<p>首先使用文本软件打开博客根目录下的<code>_config.yml</code>文件，找到<code>theme</code>标签，默认值为<code>landscape</code>主题，我们把它改为上一步中我们下载的主题名字即可，这里我设置为<code>ayer</code>，局部截图如下所示。</p>
-<p><img src="https://gitee.com/zyzhang98/typora-picgo/raw/master/img/image-20211228135323342.png" alt=""></p>
-<p>然后同样在根目录使用<code>Git Bash Here</code>执行以下命令重新启动 Hexo。</p>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 清理 &amp;&amp; 编译 &amp;&amp; 启动</span></span><br><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</span><br></pre></td></tr></table></figure></div>
-<p>此时再打开浏览器输入<code>http://localhost:4000</code>发现博客主题风格已经更换。</p>
-<h4 id="报错解决-v2">报错解决</h4>
-<p>我这里下载的主题为<code>ayer</code>，没有用到特殊的插件，如果下载其他主题，在前面过程没有错误的前提下，打开浏览器输入网址发现报错信息，大概率是缺少某个依赖库，解决方法一般是<code>Git Bash Here</code>中输入<code>npm install &lt;缺少的依赖库&gt;</code>来安装。</p>
-<p>例如，<code>Next</code>主题报错后，需要先使用命令<code>npm install hexo-renderer-swig</code>安装依赖</p>
-<p><code>stun</code>主题报错后，需要先使用命令<code>npm install hexo-renderer-pug</code>安装依赖。</p>
-<p>不同的主题缺少的依赖可能不一样，但解决方法大致相同，具体到某一个主题，其缺少的依赖库名字可以通过百度查找。</p>
-<h4 id="配置修改">配置修改</h4>
-<p>更换自己喜欢的主题后，我们需要修改一些博客网页的一些基本属性，比如博客的名字，图片背景或者是添加一些鼠标光标，点击特效，音乐插件等都可以实现。</p>
-<h5 id="根目录配置文件"><strong>根目录配置文件</strong></h5>
-<p>Hexo 的基本配置大部分都在博客根目录下的<code>_config.yml</code>文件中，它可以叫做<code>根目录配置文件</code>，直接修改这个文件可以修改博客的一些设置，例如前面我们对于下载主题的更换就是修改里边<code>theme</code>标签的参数来实现的。关于<code>根目录配置文件</code>的每个标签及参数的具体意义和使用方法，可以查阅 <a href="https://hexo.io/zh-cn/docs/configuration">Hexo 配置文件官方文档</a>。</p>
-<h5 id="主题配置文件"><strong>主题配置文件</strong></h5>
-<p>除了上边的根目录配置文件外，我们自己下载的主题文件夹内也会有一个<code>_config.yml</code>文件，这里的这个文件我们叫做<code>主题配置文件</code>。比如我下载的主题是<code>ayer</code>，那么我的<code>主题配置文件</code>路径就是<code>D:\MyBlog\themes\ayer\_config.yml</code>，同样改动参数可以实现对博客页面的改变。关于<code>主题配置文件</code>的每个标签及参数的具体意义和使用方法，可以查阅对应主题的 Github 主页。</p>
-<p>如果博客使用的是默认的<code>landscape</code>主题，那么所有的配置仅在<code>根目录配置文件</code>即可修改，如果使用的是第三方下载的主题，那么需要配合使用<code>根目录配置文件</code>和<code>主题配置文件</code>来实现修改博客的目的。</p>
-<h5 id="具体修改">具体修改</h5>
-<p>下面以我所使用的<code>ayer</code>主题为例，来对博客做一些简单的调整。</p>
-<ul>
-<li>
-<p>打开<code>根目录配置文件</code></p>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Site 部分</span></span><br><span class="line">title: &lt;自定义&gt;				<span class="comment"># 博客标题</span></span><br><span class="line">author: &lt;自定义&gt;				<span class="comment"># 博客作者</span></span><br><span class="line">language: zh-CN				  <span class="comment"># 网站语言 zh-CN中文  en英文</span></span><br></pre></td></tr></table></figure></div>
-</li>
-<li>
-<p>打开<code>主题配置文件</code></p>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 侧边栏菜单		不需要打开的可以直接在前边加 # 进行注释掉</span></span><br><span class="line">menu:</span><br><span class="line">  主页: /</span><br><span class="line">  归档: /archives</span><br><span class="line">  分类: /categories</span><br><span class="line">  标签: /tags</span><br><span class="line"><span class="comment">#  旅行: /tags/旅行/</span></span><br><span class="line"><span class="comment">#  摄影: http://shenyu-vip.lofter.com</span></span><br><span class="line"><span class="comment">#  友链: /friends</span></span><br><span class="line">  关于我: /2019/about</span><br></pre></td></tr></table></figure></div>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 站点次标题和打字特效</span></span><br><span class="line">subtitle:</span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span> <span class="comment"># 是否开启动效</span></span><br><span class="line">  text: 面朝大海，春暖花开 <span class="comment"># 显示的文字</span></span><br><span class="line">  text2: 愿你一生努力，一生被爱 <span class="comment"># 滚动播放，如果不需要可以留空</span></span><br><span class="line">  text3: 想要的都拥有，得不到的都释怀 <span class="comment"># 最多支持三段文字</span></span><br><span class="line">  startDelay: 0 <span class="comment"># 延迟时间</span></span><br><span class="line">  typeSpeed: 200 <span class="comment"># 打字速度</span></span><br><span class="line">  loop: <span class="literal">true</span> <span class="comment"># 是否循环</span></span><br><span class="line">  backSpeed: 100 <span class="comment"># 回退速度</span></span><br><span class="line">  showCursor: <span class="literal">true</span> <span class="comment"># 是否显示光标</span></span><br></pre></td></tr></table></figure></div>
-<p>第26~27行为修改网站图标和侧边栏 logo。方法：只需要将自己的图标文件放在<code>D:\MyBlog\themes\ayer\source\</code>文件夹下，将配置文件中的<code>favicon.ico</code>修改为自己图标的名称即可。</p>
-<p>第31~34行为修改封面配置。方法：只需要将自己的图片文件放在<code>D:\MyBlog\themes\ayer\source\images\</code>文件夹下，将配置文件中的<code>cover1.jpg</code>修改为自己图片文件的名称即可。</p>
-<p>第83行为打赏功能。注意：一定要将<code>reward_type</code>的参数修改为<code>0</code>，将打赏功能关闭，否则博客中插入的就是主题作者的收款码了。当然，也可以将收款码更改为自己的。</p>
-</li>
-</ul>
-<p>修改完上述基本配置后，在根目录下运行<code>Git Bash Here</code>，执行命令<code>hexo g &amp;&amp; hexo s</code>，浏览器输入网址<code>http://localhost:4000</code>看一下效果。</p>
-<p><img src="https://gitee.com/zyzhang98/typora-picgo/raw/master/img/image-20211228151605388.png" alt=""></p>
-<p>​</p>
-<p>到此为止，我们的博客基本配置已经修改好了，如果后续还需要修改某些配置，可以对照官方文档进行修改。</p>
-<h2 id="五、本地发布文章">五、本地发布文章</h2>
-<p>博客搭建好了，但是现在只有示例的<code>Hello World</code>一篇文章，如何发布自己的文章？</p>
-<h3 id="1-新建文章">1.新建文章</h3>
-<p>在博客根目录下右键进入<code>Git Bash Here</code>，输入以下命令。</p>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new <span class="string">&quot;不宠无惊过一生&quot;</span></span><br></pre></td></tr></table></figure></div>
-<p>然后进入博客根目录下的<code>source\_posts</code>文件夹，可以看到多了一个<code>不宠无惊过一生.md</code>的文件，这就是新生成的博客文章，因为 Hexo 默认使用 Markdown 语法，所以文件后缀显示为<code>.md</code>，可以使用记事本和<code>Typora</code>打开，个人推荐后者，但是最新版的后者有了收费模式，建议使用<code>0.x</code>版本，Markdown 语法简单易学。</p>
-<p>在连接服务器的情况下，键入<code>Ctrl+C</code>停止服务器，重新运行<code>hexo g &amp;&amp; hexo s</code>打开浏览器输入网址即可看到新发布的文章。</p>
-<h3 id="2-修改发布文章的模板">2.修改发布文章的模板</h3>
-<p>打开位于<code>D:\MyBlog\source\_posts</code>文件夹内的新发布文章的<code>md</code>文件，发现其中并非空白的，这是由于 Hexo 已经根据默认模板为我们生成了一些参数，例如文章创建时间、标签等，方便我们整理归档，当然，这个模板是可以更改的。</p>
-<p>我们只要修改<code>根目录配置文件</code>中的<code>new_post_name</code>参数就可以了。</p>
-<p>例如修改为<code>new_post_name: :year-:month-:day-:title.md</code>这样以后创建的文章就会自动加上年月日信息，便于通过日期来管理文章。另外，在发布文章的内部，直接修改三个参数也是可以的。</p>
-<p><img src="https://gitee.com/zyzhang98/typora-picgo/raw/master/img/image-20211228155450126.png" alt=""></p>
-<h2 id="六、后续">六、后续</h2>
-<p>至此，博客已经基本可以使用了，只是还部署在本地，下一步的任务就是将这一整套的文件全部部署到服务器上，使得其他人也可以通过固定的网址来访问我们自己的博客。</p>
-<blockquote>
-<p>本文安装配置过程参考 <a href="https://yushuaigee.gitee.io/">半亩方塘</a></p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>博客搭建</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>ayer</tag>
-        <tag>美化</tag>
       </tags>
   </entry>
 </search>
