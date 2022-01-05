@@ -281,20 +281,20 @@
 </blockquote>
 <h1>一、爬虫基础简介</h1>
 <h2 id="1-爬虫简介">1. 爬虫简介</h2>
-<p>**什么是爬虫：**通过编写程序，模拟浏览器上网，然后让其去互联网上抓取数据的过程。</p>
+<p>什么是爬虫：通过编写程序，模拟浏览器上网，然后让其去互联网上抓取数据的过程。</p>
 <h2 id="2-爬虫合法性探究">2. 爬虫合法性探究</h2>
-<p><strong>爬虫究竟是合法还是违法的？</strong></p>
+<p>爬虫究竟是合法还是违法的？</p>
 <ul>
 <li>在法律中是不被禁止的</li>
 <li>具有违法风险</li>
 <li>善意爬虫 &amp; 恶意爬虫</li>
 </ul>
-<p><strong>爬虫带来的风险可以体现在如下两个方面：</strong></p>
+<p>爬虫带来的风险可以体现在如下两个方面：</p>
 <ol>
 <li>爬虫干扰了被访问网站的正常运营</li>
 <li>爬虫抓取了受到法律保护的特定类型的数据或信息</li>
 </ol>
-<p><strong>如何在编写使用的过程中避免进入局子的厄运？</strong></p>
+<p>如何在编写使用的过程中避免进入局子的厄运？</p>
 <ul>
 <li>时常优化自己的程序，避免干扰被访问网站的正常运行</li>
 <li>在使用，传播爬取到的数据时，审查抓取到的内容，如果发现了涉及到用户隐私或者商业机密等敏感内容，需要及时停止爬取或者传播。</li>
@@ -860,6 +860,29 @@
     viewer_init()
 </script> 
 <!-- MathJax -->
+ <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+  });
+
+  MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.6/unpacked/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+  var ayerConfig = {
+    mathjax: true,
+  };
+</script>
 
 <!-- Katex -->
 
@@ -951,10 +974,6 @@
 
   </div>
   <!-- 雪花特效 -->
-
-  <script type="text/javascript" src="/js/BigSnow.js"></script>
-  <!--单击显示文字-->
-  <script type="text/javascript" src="/js/show_text.js"></script>
 
 </body>
 
