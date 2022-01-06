@@ -175,6 +175,7 @@
 <p>找到<code>MS.zip</code>压缩包内的<code>msi2018.lic</code>文件，右键选择”写字板“打开，将第一行中的<code>DESKTOP-HVJ2DIM</code>替换为你刚才复制的自己的计算机名，保存后关闭文件。</p>
 </li>
 </ol>
+<span id="more"></span>
 <h2 id="安装MS软件">安装MS软件</h2>
 <p>将<code>MS.zip</code>压缩包内的<code>MaterialsStudio2018.rar</code>解压，然后进入解压后的<code>MaterialsStudio2018</code>文件夹，找到<code>setup.exe</code>文件，双击进行安装，安装位置选择默认即可，无需进行改动，直到安装结束显示Finsh，关闭即可。</p>
 <p><img src="https://cdn.jsdelivr.net/gh/zyzhang827/filesimage@main/images/image-20220106142453557.png" alt=""><img src="https://cdn.jsdelivr.net/gh/zyzhang827/filesimage@main/images/image-20220106142527139.png" alt=""></p>
