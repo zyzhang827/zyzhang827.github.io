@@ -192,6 +192,7 @@
 ]]></content>
       <categories>
         <category>Molecular Dynamics</category>
+        <category>Materials Studio</category>
       </categories>
       <tags>
         <tag>MD</tag>
@@ -2909,9 +2910,9 @@ $$</p>
   <entry>
     <title>装系统神器--Ventoy</title>
     <url>/2022/01/07/%E8%A3%85%E7%B3%BB%E7%BB%9F%E7%A5%9E%E5%99%A8-Ventoy/</url>
-    <content><![CDATA[<h2 id=""></h2>
-<h2 id="介绍">介绍</h2>
+    <content><![CDATA[<h2 id="介绍">介绍</h2>
 <p>Ventoy 是国人自己开发的 ISO 启动引导程序软件，其主要的功能就是可以通过 Ventoy 存储系统的 ISO 镜像文件，然后对电脑进行系统重装。</p>
+<span id="more"></span>
 <h2 id="优势">优势</h2>
 <p>选择 Ventoy 的原因有很多：</p>
 <ul>
