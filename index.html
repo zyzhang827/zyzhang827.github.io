@@ -177,6 +177,68 @@
     
     
     <article
+  id="post-浏览器插件推荐"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2022/01/18/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%8F%92%E4%BB%B6%E6%8E%A8%E8%8D%90/"
+    >浏览器插件和脚本</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2022/01/18/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%8F%92%E4%BB%B6%E6%8E%A8%E8%8D%90/" class="article-date">
+  <time datetime="2022-01-18T12:24:40.000Z" itemprop="datePublished">2022-01-18</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E8%BD%AF%E4%BB%B6/">软件</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h2 id="Tampermonkey">Tampermonkey</h2>
+<h3 id="安装扩展">安装扩展</h3>
+<h4 id="Chrome浏览器安装">Chrome浏览器安装</h4>
+<p>由于 Chrome 浏览器自带的插件商店，国内用户需要“魔法上网”才能进去，所以这里我直接提供了 Tampermonkey 插件的下载链接。</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://zyzhang.lanzouw.com/ilYXtyyaehe 		[Z827]</span><br></pre></td></tr></table></figure>
+<p>首先打开 Chrome 浏览器，点击右上角的三个点的标志，找到更多工具中的扩展选项，进入。</p> 
+      <a class="article-more-link" href="/2022/01/18/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%8F%92%E4%BB%B6%E6%8E%A8%E8%8D%90/"
+        >阅读全文</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%8F%92%E4%BB%B6/" rel="tag">插件</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
   id="post-KMCLib安装"
   class="article article-type-post"
   itemscope
@@ -210,55 +272,11 @@
        
   <h2 id="基础包安装">基础包安装</h2>
 <p>检查一些需要安装的包是否存在并且为最新版本。打开终端<code>ctrl+alt+t</code>，输入以下命令</p>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 安装适用 C++ 的编译器</span></span><br><span class="line">sudo apt install g++</span><br><span class="line"><span class="comment"># 安装 cmake</span></span><br><span class="line">sudo apt install cmake</span><br><span class="line"><span class="comment"># 安装 python 的头文件和静态库</span></span><br><span class="line">sudo apt install python-dev</span><br><span class="line"><span class="comment"># 查找已安装包的更新，并进行更新</span></span><br><span class="line">sudo apt update &amp;&amp; sudo apt upgrade</span><br></pre></td></tr></table></figure></div>
-<h2 id="下载-KMCLib">下载 KMCLib</h2>
-<p><s>首先直接从 github 上拉取 KMCLib 的仓库进行下载，但是由于国内访问 github 存在网络慢甚至连接失败的问题，所以我将 github 上的仓库直接 Fork 到了国内网站 gitee 上，不懂得“魔法上网”或者无法访问 github 的，推荐采取方法二。</s></p>
-<p>开源的<code>KMCLib</code>源码中有许多错误，直接采用下面两种方法下载后需要再进行修改。如果对于<code>C++</code>和<code>python</code>有一定的了解，可以采用下面的方式一或者方式二下载后，<strong>自行对源码进行修改</strong>。</p>
-<p>对于没有编程基础，不想自己动手修改的，可以自己选择方法三中提供的蓝奏云盘链接下载，其中的代码包括源码部分以及截至到 2020-12-30 <code>74780ff</code>的所有 <code>Commits</code>部分。</p>
-<div class="highlight-wrap" data-rel="Markdown"><figure class="iseeu highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="section"># 方法一</span></span><br><span class="line">git clone https://github.com/leetmaa/KMCLib.git</span><br><span class="line"><span class="section"># 方法二</span></span><br><span class="line">git clone https://gitee.com/zyzhang98/KMCLib.git</span><br><span class="line"><span class="section"># 蓝奏云链接</span></span><br><span class="line">https://zyzhang.lanzouw.com/ivKVWyxxgbc    【Z827】</span><br></pre></td></tr></table></figure></div>
-<h2 id="修改python默认版本">修改python默认版本</h2>
-<p><code>KMCLib</code>源码中 Python 部分最初是由 Python2.x 编写的，但是上边蓝奏云链接里的版本经过多次<code>Commits</code>之后，已经实现了对 python3.x 语法的兼容。考虑个人最初接触的是 Python3 ，所以这里将 Ubuntu 系统的默认版本设置为 Python3.x。</p>
-<p>最新版的 Ubuntu 中已经内置了 Python2 和 Python3 双版本，只需要进行简单的设置即可更改默认调用的 Python 版本。</p>
-<p>打开终端，输入以下命令</p>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看自己电脑中所有 Python 版本及路径</span></span><br><span class="line">ls /usr/bin/python*</span><br><span class="line"><span class="comment"># 查看自己电脑默认的 Python 版本</span></span><br><span class="line">python --version</span><br></pre></td></tr></table></figure></div>
-<p>我的电脑是<code>Ubuntu 20.04.3 LTS</code>版本系统，经过运行上述代码后，可以看到系统中有<code>Python2.7</code>和<code>Python3.8</code>双版本，且默认为<code>Python2.7</code>版本。</p>
-<ol>
-<li>
-<p>系统级修改默认 Python 版本</p>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 列出所有可用的 Python 替代版本</span></span><br><span class="line">sudo update-alternatives --list python</span><br></pre></td></tr></table></figure></div>
-<p>如果运行上述代码报错<code>no alternatives for python</code>，请先运行以下代码(注意如果路径与我不同，要将其中 Python2/3 修改为自己的路径)</p>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo update-alternatives --install /usr/bin/python python /usr/bin/python2.7 1</span><br><span class="line">sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.8 2</span><br></pre></td></tr></table></figure></div>
-<p>然后重新运行列出所有版本的代码和设置代码。</p>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 列出所有可用版本</span></span><br><span class="line">sudo update-alternatives --list python</span><br><span class="line"><span class="comment"># 输入序号切换可用版本</span></span><br><span class="line">sudo update-alternatives --config python</span><br></pre></td></tr></table></figure></div>
-</li>
-<li>
-<p>基于个人用户修改默认 Python 版本</p>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo gedit ~/.bashrc</span><br></pre></td></tr></table></figure></div>
-<p>在<code>~/.bashrc</code>文件最后添加<code>alias python='/usr/bin/python3.8'</code></p>
-<p>然后打开终端运行</p>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.bashrc</span><br><span class="line">python --version</span><br></pre></td></tr></table></figure></div>
-</li>
-</ol>
-<h2 id="添加环境变量">添加环境变量</h2>
-<p>我下载后的<code>KMCLib</code>文件夹路径设置为<code>/home/&lt;用户名&gt;/KMCLib</code>，其中<code>KMCLib</code>文件夹下存在<code>c++</code>,<code>manual</code>,<code>python</code>三个子文件夹。</p>
-<p>添加环境变量</p>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo gedit ~/.bashrc</span><br></pre></td></tr></table></figure></div>
-<p>在<code>~/.bashrc</code>文件末尾添加以下内容</p>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> CPLUS_INCLUDE_PATH=/usr/include/python3.8:<span class="variable">$&#123;CPLUS_INCLUDE_PATH&#125;</span></span><br><span class="line"><span class="comment"># 如果全部是按照以下步骤进行配置，只需要将用户名部分改为自己的正式路径即可</span></span><br><span class="line"><span class="built_in">export</span> PYTHONPATH=/home/你自己用户名/KMCLib/python/src:<span class="variable">$&#123;PYTHONPATH&#125;</span></span><br></pre></td></tr></table></figure></div>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 终端更新 ~/.bashrc 文件</span></span><br><span class="line"><span class="built_in">source</span> ~/.bashrc</span><br></pre></td></tr></table></figure></div>
-<h2 id="安装Swig">安装Swig</h2>
-<p>swig 主要是为了将 C++ 程序封装在 Python 环境中，前端为 Python，后端为 C++。可以简单理解为包装盒是 Python，包装盒里装的是 C++。Swig 的作用就是为了能够将 C++ 装进 Python 包装盒里。</p>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/</span><br><span class="line">sudo apt install swig</span><br></pre></td></tr></table></figure></div>
-<h2 id="安装外部依赖">安装外部依赖</h2>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 进入 externals 文件夹</span></span><br><span class="line"><span class="built_in">cd</span> KMCLib/c++/externals</span><br><span class="line"><span class="comment"># 配置 C 和 C++ 编译器</span></span><br><span class="line">CXX=g++ CC=gcc make</span><br></pre></td></tr></table></figure></div>
-<h2 id="安装-KMCLib-测试包和后端文件">安装 KMCLib 测试包和后端文件</h2>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> KMCLib/c++</span><br><span class="line"><span class="comment"># 创建 build 文件夹</span></span><br><span class="line">mkdir build</span><br><span class="line"><span class="comment"># 进入新创建的文件夹</span></span><br><span class="line"><span class="built_in">cd</span> build</span><br></pre></td></tr></table></figure></div>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 串行版本安装</span></span><br><span class="line">cmake ..</span><br><span class="line"><span class="comment"># 并行版本安装(仅安装串行即可0)</span></span><br><span class="line">cmake-DMP=g++..</span><br></pre></td></tr></table></figure></div>
-<h2 id="编译test文件">编译test文件</h2>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /KMCLib/c++/build</span><br><span class="line">make test.x</span><br><span class="line">./unittest/test.x</span><br><span class="line">make install</span><br></pre></td></tr></table></figure></div>
-<h2 id="示例运行">示例运行</h2>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> KMCLib/python/unittest/</span><br><span class="line">python3 utest.py</span><br></pre></td></tr></table></figure></div>
- 
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 安装适用 C++ 的编译器</span></span><br><span class="line">sudo apt install g++</span><br><span class="line"><span class="comment"># 安装 cmake</span></span><br><span class="line">sudo apt install cmake</span><br><span class="line"><span class="comment"># 安装 python 的头文件和静态库</span></span><br><span class="line">sudo apt install python-dev</span><br><span class="line"><span class="comment"># 查找已安装包的更新，并进行更新</span></span><br><span class="line">sudo apt update &amp;&amp; sudo apt upgrade</span><br></pre></td></tr></table></figure> 
+      <a class="article-more-link" href="/2022/01/18/KMCLib%E5%AE%89%E8%A3%85/"
+        >阅读全文</a
+      >
+       
       <!-- reward -->
       
     </div>
@@ -313,29 +331,11 @@
        
   <h2 id="基础安装包">基础安装包</h2>
 <p>打开电脑终端<code>ctrl+alt+t</code>，依次键入以下命令，<code>#</code>后的文字为注释部分</p>
-<div class="highlight-wrap" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install build-essential</span><br><span class="line"><span class="meta">#</span><span class="bash"> 基于cmake安装lammps</span></span><br><span class="line">sudo apt-get install cmake</span><br><span class="line"><span class="meta">#</span><span class="bash"> 安装fortran编译器</span></span><br><span class="line">sudo apt-get install gfortran</span><br><span class="line"><span class="meta">#</span><span class="bash"> 安装自己熟悉的文本编辑器vim, vi, emacs等</span></span><br><span class="line">sudo apt-get install vim</span><br><span class="line">sudo apt-get install libssl-dev</span><br><span class="line"><span class="meta">#</span><span class="bash"> 更新已安装的所有包</span></span><br><span class="line">sudo apt update &amp;&amp; sudo apt upgrade</span><br></pre></td></tr></table></figure></div>
-<h2 id="mpich安装">mpich安装</h2>
-<p>可以根据自己的需要，自行选择实现 MPI 的包，这里以 mpich 为例。</p>
-<p>打开电脑终端，依次输入以下命令</p>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 使用内置 wget 命令下载 mpich 安装包文件</span></span><br><span class="line">wget https://www.mpich.org/static/downloads/3.4.3/mpich-3.4.3.tar.gz</span><br><span class="line"><span class="comment"># 对安装包进行解压缩</span></span><br><span class="line">tar -xvf mpich-3.4.3.tar.gz</span><br><span class="line"><span class="comment"># 进入解压后的 mpich 文件夹</span></span><br><span class="line"><span class="built_in">cd</span> mpich-3.4.3/</span><br><span class="line"><span class="comment"># mpich 安装配置</span></span><br><span class="line">./configure --enable-shared=yes</span><br></pre></td></tr></table></figure></div>
-<p>在上一步最后安装配置后，可能出现以下问题：</p>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">The default ch4 device could not detect a preferred network</span><br><span class="line">library. Supported options are ofi (libfabric) and ucx:</span><br><span class="line">    --with-device=ch4:ofi or --with-device=ch4:ucx</span><br><span class="line">Configure will use an embedded copy of libfabric or ucx <span class="keyword">if</span> one is</span><br><span class="line">not found <span class="keyword">in</span> the user environment. An installation can be specified</span><br><span class="line">by adding</span><br><span class="line">    --with-libfabric=&lt;path/to/install&gt; or --with-ucx=&lt;path/to/install&gt;</span><br><span class="line">to the configuration.</span><br><span class="line">The previous MPICH default device (ch3) is also available and</span><br><span class="line">supported with option:</span><br><span class="line">    --with-device=ch3</span><br></pre></td></tr></table></figure></div>
-<p>使用以下命令重新进行安装配置</p>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./configure --with-device=ch4:ofi --enable-shared=yes</span><br></pre></td></tr></table></figure></div>
-<p>完成上述配置后，最后显示<code>Configuration completed</code>即说明配置完成。</p>
-<p>然后继续键入以下命令</p>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">make</span><br><span class="line">sudo make install</span><br></pre></td></tr></table></figure></div>
-<p>对文件进行 make 编译后，之后的操作出现错误需要重新输入命令的时候，建议先回到<code>mpich-3.3.4</code>文件夹进行<code>make clean-all</code>和<code>make</code>，删除之前的错误编译文件，防止出现其他问题。</p>
-<h2 id="环境变量添加">环境变量添加</h2>
-<p>然后在<code>~/.bashrc</code>文件中添加路径，终端中输入<code>sudo gedit ~/.bashrc</code>，然后在文件末尾中添加以下内容。</p>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> PATH=/usr/<span class="built_in">local</span>/bin:<span class="variable">$PATH</span></span><br><span class="line"><span class="built_in">export</span> LD_LIBRARY_PATH=/usr/<span class="built_in">local</span>/lib:<span class="variable">$LD_LIBRARY_PATH</span></span><br></pre></td></tr></table></figure></div>
-<p>然后更新环境变量，使修改后的环境变量生效。</p>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.bashrc</span><br></pre></td></tr></table></figure></div>
-<h2 id="lammps安装">lammps安装</h2>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 下载文件</span></span><br><span class="line">wget https://download.lammps.org/tars/lammps-stable.tar.gz</span><br><span class="line"><span class="comment"># 解压文件</span></span><br><span class="line">tar -xvf lammps-stable.tar.gz</span><br><span class="line"><span class="comment"># 进入解压后的文件夹</span></span><br><span class="line"><span class="built_in">cd</span> lammps-29Sep2021/</span><br><span class="line"><span class="comment"># 创建 build 目录</span></span><br><span class="line">mkdir build</span><br><span class="line"><span class="comment"># 进入 build 文件夹</span></span><br><span class="line"><span class="built_in">cd</span> build</span><br><span class="line"><span class="comment"># 编译安装</span></span><br><span class="line">cmake ../cmake</span><br><span class="line">make</span><br><span class="line">sudo make install</span><br><span class="line"><span class="comment"># 返回上级目录</span></span><br><span class="line"><span class="built_in">cd</span> ..</span><br></pre></td></tr></table></figure></div>
-<p>以下进行测试</p>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 进入lammps文件夹中的 deposit 文件夹</span></span><br><span class="line"><span class="built_in">cd</span> examples/deposit</span><br><span class="line"><span class="comment"># 运行</span></span><br><span class="line">mpirun -n 2 lmp &lt; in.deposit.atom</span><br></pre></td></tr></table></figure></div>
- 
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install build-essential</span><br><span class="line"><span class="meta">#</span><span class="bash"> 基于cmake安装lammps</span></span><br><span class="line">sudo apt-get install cmake</span><br><span class="line"><span class="meta">#</span><span class="bash"> 安装fortran编译器</span></span><br><span class="line">sudo apt-get install gfortran</span><br><span class="line"><span class="meta">#</span><span class="bash"> 安装自己熟悉的文本编辑器vim, vi, emacs等</span></span><br><span class="line">sudo apt-get install vim</span><br><span class="line">sudo apt-get install libssl-dev</span><br><span class="line"><span class="meta">#</span><span class="bash"> 更新已安装的所有包</span></span><br><span class="line">sudo apt update &amp;&amp; sudo apt upgrade</span><br></pre></td></tr></table></figure> 
+      <a class="article-more-link" href="/2022/01/18/Lammps%E5%AE%89%E8%A3%85/"
+        >阅读全文</a
+      >
+       
       <!-- reward -->
       
     </div>
@@ -786,78 +786,6 @@
 <p>作用：整型变量表示的是<code>整数类型</code>的数据。</p>
 <p>C++ 中能够表示整型的类型有以下几种方式，区别在于所占的内存空间不同：</p> 
       <a class="article-more-link" href="/2022/01/08/C-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-2-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"
-        >阅读全文</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/" rel="tag">C++</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-C-学习笔记-1-基础知识"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2022/01/07/C-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-1-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"
-    >C++学习笔记(1)--基础知识</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2022/01/07/C-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-1-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" class="article-date">
-  <time datetime="2022-01-07T12:47:01.000Z" itemprop="datePublished">2022-01-07</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/C/">C++</a> / <a class="article-category-link" href="/categories/C/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <blockquote>
-<blockquote>
-<p>本教程基于<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1et411b73Z?">B站视频教程</a></p>
-</blockquote>
-</blockquote>
-<p>学习期间，因为自己电脑安装有 Visual Studio Code，故直接在 VSCode 中配置了 C++ 环境，所以作者使用软件与视频软件不同，还是推荐 Microsoft Visual Studio，望周知。</p>
-<h2 id="第一个C-程序">第一个C++程序</h2>
-<p>编写一个 C++ 程序一共分为4个步骤：</p>
-<ul>
-<li>创建项目</li>
-<li>创建文件</li>
-<li>编写代码</li>
-<li>运行程序</li>
-</ul>
-<h3 id="1-创建项目">1.创建项目</h3>
-<p>视频中使用 Microsoft Visual Studio 软件创建新的空项目。</p> 
-      <a class="article-more-link" href="/2022/01/07/C-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-1-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"
         >阅读全文</a
       >
        

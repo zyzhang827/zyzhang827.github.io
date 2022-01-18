@@ -2650,6 +2650,7 @@ $$</p>
     <content><![CDATA[<h2 id="基础包安装">基础包安装</h2>
 <p>检查一些需要安装的包是否存在并且为最新版本。打开终端<code>ctrl+alt+t</code>，输入以下命令</p>
 <div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 安装适用 C++ 的编译器</span></span><br><span class="line">sudo apt install g++</span><br><span class="line"><span class="comment"># 安装 cmake</span></span><br><span class="line">sudo apt install cmake</span><br><span class="line"><span class="comment"># 安装 python 的头文件和静态库</span></span><br><span class="line">sudo apt install python-dev</span><br><span class="line"><span class="comment"># 查找已安装包的更新，并进行更新</span></span><br><span class="line">sudo apt update &amp;&amp; sudo apt upgrade</span><br></pre></td></tr></table></figure></div>
+<span id="more"></span>
 <h2 id="下载-KMCLib">下载 KMCLib</h2>
 <p><s>首先直接从 github 上拉取 KMCLib 的仓库进行下载，但是由于国内访问 github 存在网络慢甚至连接失败的问题，所以我将 github 上的仓库直接 Fork 到了国内网站 gitee 上，不懂得“魔法上网”或者无法访问 github 的，推荐采取方法二。</s></p>
 <p>开源的<code>KMCLib</code>源码中有许多错误，直接采用下面两种方法下载后需要再进行修改。如果对于<code>C++</code>和<code>python</code>有一定的了解，可以采用下面的方式一或者方式二下载后，<strong>自行对源码进行修改</strong>。</p>
@@ -2715,6 +2716,7 @@ $$</p>
     <content><![CDATA[<h2 id="基础安装包">基础安装包</h2>
 <p>打开电脑终端<code>ctrl+alt+t</code>，依次键入以下命令，<code>#</code>后的文字为注释部分</p>
 <div class="highlight-wrap" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">sudo apt-get install build-essential</span><br><span class="line"><span class="meta">#</span><span class="bash"> 基于cmake安装lammps</span></span><br><span class="line">sudo apt-get install cmake</span><br><span class="line"><span class="meta">#</span><span class="bash"> 安装fortran编译器</span></span><br><span class="line">sudo apt-get install gfortran</span><br><span class="line"><span class="meta">#</span><span class="bash"> 安装自己熟悉的文本编辑器vim, vi, emacs等</span></span><br><span class="line">sudo apt-get install vim</span><br><span class="line">sudo apt-get install libssl-dev</span><br><span class="line"><span class="meta">#</span><span class="bash"> 更新已安装的所有包</span></span><br><span class="line">sudo apt update &amp;&amp; sudo apt upgrade</span><br></pre></td></tr></table></figure></div>
+<span id="more"></span>
 <h2 id="mpich安装">mpich安装</h2>
 <p>可以根据自己的需要，自行选择实现 MPI 的包，这里以 mpich 为例。</p>
 <p>打开电脑终端，依次输入以下命令</p>
@@ -4118,6 +4120,47 @@ $$</p>
       <tags>
         <tag>Python</tag>
         <tag>爬虫</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>浏览器插件和脚本</title>
+    <url>/2022/01/18/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%8F%92%E4%BB%B6%E6%8E%A8%E8%8D%90/</url>
+    <content><![CDATA[<h2 id="Tampermonkey">Tampermonkey</h2>
+<h3 id="安装扩展">安装扩展</h3>
+<h4 id="Chrome浏览器安装">Chrome浏览器安装</h4>
+<p>由于 Chrome 浏览器自带的插件商店，国内用户需要“魔法上网”才能进去，所以这里我直接提供了 Tampermonkey 插件的下载链接。</p>
+<div class="highlight-wrap" data-rel="Markdown"><figure class="iseeu highlight markdown"><table><tr><td class="code"><pre><span class="line">https://zyzhang.lanzouw.com/ilYXtyyaehe 		[Z827]</span><br></pre></td></tr></table></figure></div>
+<p>首先打开 Chrome 浏览器，点击右上角的三个点的标志，找到更多工具中的扩展选项，进入。</p>
+<span id="more"></span>
+<ol>
+<li>直接将下载好的<code>.crx</code>文件拖入扩展程序界面安装</li>
+<li>如果 1 中的方法报错，尝试将<code>.crx</code>文件后缀改为<code>.zip</code>压缩包，然后解压，在扩展程序界面点击<code>加载已解压的扩展程序</code>，然后选择刚才解压好的整个文件夹，进行安装。</li>
+</ol>
+<h4 id="Edge安装">Edge安装</h4>
+<p>直接打开 <a href="https://microsoftedge.microsoft.com/addons/Microsoft-Edge-Extensions-Home?hl=zh-CN">Edge 外接程序</a>官网，搜索框输入<code>Tampermonkey</code>进行安装。</p>
+<h4 id="Firefox安装">Firefox安装</h4>
+<p>打开 Firefox 浏览器，按快捷键<code>Ctrl+Shift+A</code>进入<code>扩展和主题选项</code>，在页面最下方找到<code>寻找更多附加组件</code>，然后进行<code>Tampermonkey</code>的搜索安装。</p>
+<h3 id="脚本安装">脚本安装</h3>
+<p>在上一步安装过<code>Tampermonkey</code>之后，在浏览器工具栏找到<code>Tampermonkey</code>的图标，点击，然后选择获取新脚本，点击进入<a href="https://greasyfork.org/zh-CN">Greasy Fork 官网</a>，然后在搜索框中寻找自己想要的脚本安装即可。</p>
+<p>脚本其实就是别人将某些网站上的一些特定的操作写成了 js 代码，然后将代码封装成了脚本，使得不懂代码的人可以直接使用脚本达到某些特定的目的。</p>
+<p>下面推荐几个自己在用的脚本。</p>
+<h4 id="知网PDF下载助手">知网PDF下载助手</h4>
+<p>许多学生会用到知网去搜索论文，但是比较烦人的一个地方是它把一些论文的下载格式进行了限制，只能够下载官方<code>CAJ阅读器</code>进行<code>.caj</code>文件的阅读。</p>
+<p>这时候这个脚本的作用就体现出来了，当你打开知网之后，搜索论文，你会发现之前不能够直接下载<code>.pdf</code>格式的论文多出了几个按钮，其中有<code>PDF整本下载</code>、<code>目录下载</code>等，操作非常简单，直接点击即可下载。</p>
+<p>脚本的缺点就是下载后的<code>.pdf</code>文件是没有目录的，对目录没有需求的可以不用关心这个问题了就，对目录有强迫需求的，可以通过脚本的目录复制按钮，然后下载 PdgCntEditor 软件制作目录，具体操作脚本说明里都有，这里就不再赘述了。</p>
+<h4 id="Github增强-高速下载">Github增强-高速下载</h4>
+<p>这个脚本主要的作用就是当我们在浏览 Github 时候，由于网络问题，本来网站已经是时不时的不能进入了，我们想要下载 Github 上的一些源代码，速度更是非常慢，而这个软件可以帮我们提供几个其他的下载链接，速度还是可以接受的。当然， Github 上的一些源代码也可以使用 Fork 的形式，将其克隆到国内的 Gitee 上，然后再进行下载也是可以的。</p>
+<h4 id="Wenku-Doc-Downloader">Wenku Doc Downloader</h4>
+<p>这个可以帮助我们下载百度文库、豆丁网、爱问共享资料、得力文档、道客巴巴、360doc 图书馆的文档资料。但是，缺点就是它的下载只能是 pdf 或者图片压缩包，也就是说类似截图扫描出来的一样，只能当作临时使用。另外，脚本作者在脚本说明中还提到了另外一个叫做文库下载器的脚本，也是可以解析百度文库的资料然后进行下载。</p>
+<h4 id="其他">其他</h4>
+<p>除了上述提到的脚本，还有许多实现各种功能的脚本，CSDN 和知乎去除登陆提示，各大视频网站 VIP 视频解析等等。还可以根据自己所访问网站进行脚本的搜索，查找适用于某个网站的脚本。</p>
+<h4 id=""></h4>
+]]></content>
+      <categories>
+        <category>软件</category>
+      </categories>
+      <tags>
+        <tag>插件</tag>
       </tags>
   </entry>
 </search>
