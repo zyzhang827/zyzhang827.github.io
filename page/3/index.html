@@ -177,7 +177,7 @@
     
     
     <article
-  id="post-爬虫学习笔记-7-动态加载数据处理"
+  id="post-C-学习笔记-1-基础知识"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -188,8 +188,8 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2022/02/14/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-7-%E5%8A%A8%E6%80%81%E5%8A%A0%E8%BD%BD%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/"
-    >爬虫学习笔记(7)--动态加载数据处理</a> 
+  <a class="article-title" href="/2022/01/07/C-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-1-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"
+    >C++学习笔记(1)--基础知识</a> 
 </h2>
  
 
@@ -197,418 +197,11 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2022/02/14/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-7-%E5%8A%A8%E6%80%81%E5%8A%A0%E8%BD%BD%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/" class="article-date">
-  <time datetime="2022-02-14T07:37:05.000Z" itemprop="datePublished">2022-02-14</time>
+      <a href="/2022/01/07/C-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-1-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" class="article-date">
+  <time datetime="2022-01-07T12:47:01.000Z" itemprop="datePublished">2022-01-07</time>
 </a> 
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Python/">Python</a> / <a class="article-category-link" href="/categories/Python/%E7%88%AC%E8%99%AB/">爬虫</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h2 id="1-selenium-简介">1. selenium 简介</h2>
-<ul>
-<li>
-<p>问题：<code>selenium</code>模块和爬虫之间具有怎样的关联？</p>
-<ul>
-<li>便捷地获取网站中动态加载的数据</li>
-</ul>
-</li>
-<li>
-<p>便捷实现模拟登录</p>
-</li>
-<li>
-<p>什么是<code>selenium</code>模块？</p>
-<p>基于浏览器自动化的一个模块。</p>
-</li>
-</ul> 
-      <a class="article-more-link" href="/2022/02/14/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-7-%E5%8A%A8%E6%80%81%E5%8A%A0%E8%BD%BD%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/"
-        >阅读全文</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%88%AC%E8%99%AB/" rel="tag">爬虫</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-爬虫学习笔记-6-高性能异步爬虫"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2022/02/14/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-6-%E9%AB%98%E6%80%A7%E8%83%BD%E5%BC%82%E6%AD%A5%E7%88%AC%E8%99%AB/"
-    >爬虫学习笔记(6)--高性能异步爬虫</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2022/02/14/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-6-%E9%AB%98%E6%80%A7%E8%83%BD%E5%BC%82%E6%AD%A5%E7%88%AC%E8%99%AB/" class="article-date">
-  <time datetime="2022-02-14T07:36:13.000Z" itemprop="datePublished">2022-02-14</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Python/">Python</a> / <a class="article-category-link" href="/categories/Python/%E7%88%AC%E8%99%AB/">爬虫</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h2 id="1-异步爬虫概述">1. 异步爬虫概述</h2>
-<ul>
-<li>同步：不同程序单元为了完成某个任务，在执行过程中需靠某种通信方式以协调一致，称这些程序单元是同步执行的。 例如购物系统中更新商品库存，需要用 “行锁” 作为通信信号，让不同的更新请求强制排队顺序执行，那更新库存的操作是同步的。 简言之，同步意味着有序。</li>
-<li>异步：为完成某个任务，不同程序单元之间过程中无需通信协调，也能完成任务的方式，不相关的程序单元之间可以是异步的。 例如，爬虫下载网页。调度程序调用下载程序后，即可调度其他任务，而无需与该下载任务保持通信以协调行为。不同网页的下载、保存等操作都是无关的，也无需相互通知协调。这些异步操作的完成时刻并不确定。 简言之，异步意味着无序。</li>
-<li>目的：在爬虫中使用异步实现高性能的数据爬取操作。</li>
-</ul> 
-      <a class="article-more-link" href="/2022/02/14/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-6-%E9%AB%98%E6%80%A7%E8%83%BD%E5%BC%82%E6%AD%A5%E7%88%AC%E8%99%AB/"
-        >阅读全文</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%88%AC%E8%99%AB/" rel="tag">爬虫</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-爬虫学习笔记-5-requests-模块高级"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2022/02/14/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-5-requests-%E6%A8%A1%E5%9D%97%E9%AB%98%E7%BA%A7/"
-    >爬虫学习笔记(5)--requests 模块高级</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2022/02/14/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-5-requests-%E6%A8%A1%E5%9D%97%E9%AB%98%E7%BA%A7/" class="article-date">
-  <time datetime="2022-02-14T07:35:36.000Z" itemprop="datePublished">2022-02-14</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Python/">Python</a> / <a class="article-category-link" href="/categories/Python/%E7%88%AC%E8%99%AB/">爬虫</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h2 id="1-模拟登录实现流程梳理">1. 模拟登录实现流程梳理</h2>
-<p>模拟登录：爬取基于某些用户的用户信息。</p>
-<p>需求：对人人网进行模拟登录</p>
-<ul>
-<li>点击登录按钮后会发起一个post请求</li>
-<li>post请求中会携带登陆之前录入的相关的登录信息（用户名、密码、验证码…）</li>
-<li>验证码：每次请求都会动态变化</li>
-</ul> 
-      <a class="article-more-link" href="/2022/02/14/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-5-requests-%E6%A8%A1%E5%9D%97%E9%AB%98%E7%BA%A7/"
-        >阅读全文</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%88%AC%E8%99%AB/" rel="tag">爬虫</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-爬虫学习笔记-4-验证码"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2022/02/14/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-4-%E9%AA%8C%E8%AF%81%E7%A0%81/"
-    >爬虫学习笔记(4)--验证码</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2022/02/14/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-4-%E9%AA%8C%E8%AF%81%E7%A0%81/" class="article-date">
-  <time datetime="2022-02-14T07:35:01.000Z" itemprop="datePublished">2022-02-14</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Python/">Python</a> / <a class="article-category-link" href="/categories/Python/%E7%88%AC%E8%99%AB/">爬虫</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h2 id="1-验证码识别简介">1. 验证码识别简介</h2>
-<p>验证码和爬虫之间的爱恨情仇：</p>
-<ul>
-<li>反爬机制：验证码。识别验证码图片中的数据，用于模拟登录操作。</li>
-</ul>
-<p>识别验证码的操作：</p>
-<ul>
-<li>人工肉眼识别（不推荐）</li>
-<li>第三方自动识别（推荐）</li>
-</ul> 
-      <a class="article-more-link" href="/2022/02/14/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-4-%E9%AA%8C%E8%AF%81%E7%A0%81/"
-        >阅读全文</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%88%AC%E8%99%AB/" rel="tag">爬虫</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-爬虫学习笔记-3-数据解析"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2022/02/14/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-3-%E6%95%B0%E6%8D%AE%E8%A7%A3%E6%9E%90/"
-    >爬虫学习笔记(3)--数据解析</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2022/02/14/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-3-%E6%95%B0%E6%8D%AE%E8%A7%A3%E6%9E%90/" class="article-date">
-  <time datetime="2022-02-14T07:34:34.000Z" itemprop="datePublished">2022-02-14</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Python/">Python</a> / <a class="article-category-link" href="/categories/Python/%E7%88%AC%E8%99%AB/">爬虫</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h2 id="1-数据解析概述">1. 数据解析概述</h2>
-<ul>
-<li>聚焦爬虫：爬取页面中指定的页面内容。
-<ul>
-<li>编码流程：1. 指定URL → 2. 发起请求 → 3. 获取响应数据 → 4. 数据解析 → 5. 持久化存储</li>
-</ul>
-</li>
-<li>数据解析分类：
-<ul>
-<li>正则表达式</li>
-<li><code>bs4</code> 解析</li>
-<li><code>xpath</code> 解析（重点）</li>
-</ul>
-</li>
-<li>数据解析原理概述：解析的局部的文本内容都会在标签对应的属性中进行存储。
-<ul>
-<li>进行指定标签的定位</li>
-<li>标签或者标签对应的属性中存储的数据值进行提取（解析）</li>
-</ul>
-</li>
-</ul> 
-      <a class="article-more-link" href="/2022/02/14/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-3-%E6%95%B0%E6%8D%AE%E8%A7%A3%E6%9E%90/"
-        >阅读全文</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%88%AC%E8%99%AB/" rel="tag">爬虫</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-爬虫学习笔记-2-requests-模块基础"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2022/02/14/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-2-requests-%E6%A8%A1%E5%9D%97%E5%9F%BA%E7%A1%80/"
-    >爬虫学习笔记(2)--requests 模块基础</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2022/02/14/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-2-requests-%E6%A8%A1%E5%9D%97%E5%9F%BA%E7%A1%80/" class="article-date">
-  <time datetime="2022-02-14T07:30:59.000Z" itemprop="datePublished">2022-02-14</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Python/">Python</a> / <a class="article-category-link" href="/categories/Python/%E7%88%AC%E8%99%AB/">爬虫</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h2 id="1-requests-第一血">1. requests 第一血</h2>
-<p>requests 模块：Python 中原生的一款基于网络请求的模块，功能非常强大，简单便捷，效率极高。</p>
-<p>作用：模拟浏览器发请求。</p>
-<p>如何使用：（requests 模块的编码流程）</p>
-<ul>
-<li>指定 url</li>
-<li>发起请求</li>
-<li>获取响应数据</li>
-<li>持久化存储</li>
-</ul> 
-      <a class="article-more-link" href="/2022/02/14/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-2-requests-%E6%A8%A1%E5%9D%97%E5%9F%BA%E7%A1%80/"
-        >阅读全文</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%88%AC%E8%99%AB/" rel="tag">爬虫</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-爬虫学习笔记-1-基础简介"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2022/02/14/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-1-%E5%9F%BA%E7%A1%80%E7%AE%80%E4%BB%8B/"
-    >爬虫学习笔记(1)--基础简介</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2022/02/14/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-1-%E5%9F%BA%E7%A1%80%E7%AE%80%E4%BB%8B/" class="article-date">
-  <time datetime="2022-02-14T07:27:03.000Z" itemprop="datePublished">2022-02-14</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Python/">Python</a> / <a class="article-category-link" href="/categories/Python/%E7%88%AC%E8%99%AB/">爬虫</a>
+    <a class="article-category-link" href="/categories/C/">C++</a> / <a class="article-category-link" href="/categories/C/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a>
   </div>
    
     </div>
@@ -616,29 +209,22 @@
     <div class="article-entry" itemprop="articleBody">
        
   <blockquote>
-<p>ZY.Zhang</p>
-<p>本文档基于<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Yh411o7Sz?p=1">B站视频教程</a></p>
+<blockquote>
+<p>本教程基于<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1et411b73Z?">B站视频教程</a></p>
 </blockquote>
-<h2 id="1-爬虫简介">1. 爬虫简介</h2>
-<p>什么是爬虫：通过编写程序，模拟浏览器上网，然后让其去互联网上抓取数据的过程。</p>
-<h2 id="2-爬虫合法性探究">2. 爬虫合法性探究</h2>
-<p>爬虫究竟是合法还是违法的？</p>
+</blockquote>
+<p>学习期间，因为自己电脑安装有 Visual Studio Code，故直接在 VSCode 中配置了 C++ 环境，所以作者使用软件与视频软件不同，还是推荐 Microsoft Visual Studio，望周知。</p>
+<h2 id="第一个C-程序">第一个C++程序</h2>
+<p>编写一个 C++ 程序一共分为4个步骤：</p>
 <ul>
-<li>在法律中是不被禁止的</li>
-<li>具有违法风险</li>
-<li>善意爬虫 &amp; 恶意爬虫</li>
+<li>创建项目</li>
+<li>创建文件</li>
+<li>编写代码</li>
+<li>运行程序</li>
 </ul>
-<p>爬虫带来的风险可以体现在如下两个方面：</p>
-<ol>
-<li>爬虫干扰了被访问网站的正常运营</li>
-<li>爬虫抓取了受到法律保护的特定类型的数据或信息</li>
-</ol>
-<p>如何在编写使用的过程中避免进入局子的厄运？</p>
-<ul>
-<li>时常优化自己的程序，避免干扰被访问网站的正常运行</li>
-<li>在使用，传播爬取到的数据时，审查抓取到的内容，如果发现了涉及到用户隐私或者商业机密等敏感内容，需要及时停止爬取或者传播。</li>
-</ul> 
-      <a class="article-more-link" href="/2022/02/14/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-1-%E5%9F%BA%E7%A1%80%E7%AE%80%E4%BB%8B/"
+<h3 id="1-创建项目">1.创建项目</h3>
+<p>视频中使用 Microsoft Visual Studio 软件创建新的空项目。</p> 
+      <a class="article-more-link" href="/2022/01/07/C-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-1-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"
         >阅读全文</a
       >
        
@@ -651,7 +237,7 @@
     
     <footer class="article-footer">
        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%88%AC%E8%99%AB/" rel="tag">爬虫</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/" rel="tag">C++</a></li></ul>
 
     </footer>
   </div>
@@ -663,7 +249,7 @@
 
     
     <article
-  id="post-飞鸟集"
+  id="post-装系统神器-Ventoy"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -674,8 +260,8 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2022/01/18/%E9%A3%9E%E9%B8%9F%E9%9B%86/"
-    >飞鸟集</a> 
+  <a class="article-title" href="/2022/01/07/%E8%A3%85%E7%B3%BB%E7%BB%9F%E7%A5%9E%E5%99%A8-Ventoy/"
+    >装系统神器--Ventoy</a> 
 </h2>
  
 
@@ -683,71 +269,8 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2022/01/18/%E9%A3%9E%E9%B8%9F%E9%9B%86/" class="article-date">
-  <time datetime="2022-01-18T13:25:26.000Z" itemprop="datePublished">2022-01-18</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E9%B8%A1%E6%B1%A4/">鸡汤</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p>🟩 What you are you do not see, what you see is your shadow.<br>
-🟪 你无法看到自己, 你看到的是你认为的自己.</p>
-<p>🟨 I cannot choose the best. The best chooses me.<br>
-🟥 我做不到选择最好的, 是最好的选择了我.</p>
-<p>🟦 Let him only see the thorns who has eyes to see the rose.<br>
-🟧 让那些盯着玫瑰花的人啊, 多看看玫瑰的刺吧.</p>
-<p>⬛ “Who drives me forward like fate?” “The Myself striding on my back.”<br>
-🟫 “是谁像命运一样催我向前?” “是我自己一直在我后面.”</p>
-<p>⬜ Power takes as ingratitude the writhings of its victims.<br>
-🟪 在强权看来, 牺牲品的痛苦是不知好歹.</p>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%96%87%E5%8C%96/" rel="tag">文化</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AF%97%E8%AF%8D/" rel="tag">诗词</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-浏览器插件推荐"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2022/01/18/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%8F%92%E4%BB%B6%E6%8E%A8%E8%8D%90/"
-    >浏览器插件和脚本</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2022/01/18/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%8F%92%E4%BB%B6%E6%8E%A8%E8%8D%90/" class="article-date">
-  <time datetime="2022-01-18T12:24:40.000Z" itemprop="datePublished">2022-01-18</time>
+      <a href="/2022/01/07/%E8%A3%85%E7%B3%BB%E7%BB%9F%E7%A5%9E%E5%99%A8-Ventoy/" class="article-date">
+  <time datetime="2022-01-07T11:43:10.000Z" itemprop="datePublished">2022-01-07</time>
 </a> 
   <div class="article-category">
     <a class="article-category-link" href="/categories/%E8%BD%AF%E4%BB%B6/">软件</a>
@@ -757,13 +280,9 @@
       
     <div class="article-entry" itemprop="articleBody">
        
-  <h2 id="Tampermonkey">Tampermonkey</h2>
-<h3 id="安装扩展">安装扩展</h3>
-<h4 id="Chrome浏览器安装">Chrome浏览器安装</h4>
-<p>由于 Chrome 浏览器自带的插件商店，国内用户需要“魔法上网”才能进去，所以这里我直接提供了 Tampermonkey 插件的下载链接。</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://zyzhang.lanzouw.com/ilYXtyyaehe 		[Z827]</span><br></pre></td></tr></table></figure>
-<p>首先打开 Chrome 浏览器，点击右上角的三个点的标志，找到更多工具中的扩展选项，进入。</p> 
-      <a class="article-more-link" href="/2022/01/18/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%8F%92%E4%BB%B6%E6%8E%A8%E8%8D%90/"
+  <h2 id="介绍">介绍</h2>
+<p>Ventoy 是国人自己开发的 ISO 启动引导程序软件，其主要的功能就是可以通过 Ventoy 存储系统的 ISO 镜像文件，然后对电脑进行系统重装。</p> 
+      <a class="article-more-link" href="/2022/01/07/%E8%A3%85%E7%B3%BB%E7%BB%9F%E7%A5%9E%E5%99%A8-Ventoy/"
         >阅读全文</a
       >
        
@@ -776,7 +295,7 @@
     
     <footer class="article-footer">
        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%8F%92%E4%BB%B6/" rel="tag">插件</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ventoy/" rel="tag">ventoy</a></li></ul>
 
     </footer>
   </div>
@@ -788,7 +307,7 @@
 
     
     <article
-  id="post-KMCLib安装"
+  id="post-Materials-Studios安装教程"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -799,8 +318,8 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2022/01/18/KMCLib%E5%AE%89%E8%A3%85/"
-    >KMCLib安装</a> 
+  <a class="article-title" href="/2022/01/06/Materials-Studios%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/"
+    >Materials Studio安装教程</a> 
 </h2>
  
 
@@ -808,21 +327,29 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2022/01/18/KMCLib%E5%AE%89%E8%A3%85/" class="article-date">
-  <time datetime="2022-01-18T11:46:57.000Z" itemprop="datePublished">2022-01-18</time>
+      <a href="/2022/01/06/Materials-Studios%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/" class="article-date">
+  <time datetime="2022-01-06T06:05:49.000Z" itemprop="datePublished">2022-01-06</time>
 </a> 
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Molecular-Dynamics/">Molecular Dynamics</a> / <a class="article-category-link" href="/categories/Molecular-Dynamics/KMCLib/">KMCLib</a>
+    <a class="article-category-link" href="/categories/Molecular-Dynamics/">Molecular Dynamics</a> / <a class="article-category-link" href="/categories/Molecular-Dynamics/Materials-Studio/">Materials Studio</a>
   </div>
    
     </div>
       
     <div class="article-entry" itemprop="articleBody">
        
-  <h2 id="基础包安装">基础包安装</h2>
-<p>检查一些需要安装的包是否存在并且为最新版本。打开终端<code>ctrl+alt+t</code>，输入以下命令</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 安装适用 C++ 的编译器</span></span><br><span class="line">sudo apt install g++</span><br><span class="line"><span class="comment"># 安装 cmake</span></span><br><span class="line">sudo apt install cmake</span><br><span class="line"><span class="comment"># 安装 python 的头文件和静态库</span></span><br><span class="line">sudo apt install python-dev</span><br><span class="line"><span class="comment"># 查找已安装包的更新，并进行更新</span></span><br><span class="line">sudo apt update &amp;&amp; sudo apt upgrade</span><br></pre></td></tr></table></figure> 
-      <a class="article-more-link" href="/2022/01/18/KMCLib%E5%AE%89%E8%A3%85/"
+  <h1>Materials Studio安装教程</h1>
+<h2 id="修改-lic文件">修改.lic文件</h2>
+<ol>
+<li>
+<p>电脑桌面使用快捷键<code>Win+R</code>打开运行，输入<code>cmd</code>，回车。然后在命令行窗口输入<code>hostname</code>回车，出现计算机名，将其复制备用。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Microsoft Windows [版本 10.0.22000.376]</span><br><span class="line">(c) Microsoft Corporation。保留所有权利。</span><br><span class="line"></span><br><span class="line">C:\Users\dell&gt;hostname</span><br><span class="line">DESKTOP-XXXXXXX</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>找到<code>MS.zip</code>压缩包内的<code>msi2018.lic</code>文件，右键选择”写字板“打开，将第一行中的<code>DESKTOP-HVJ2DIM</code>替换为你刚才复制的自己的计算机名，保存后关闭文件。</p>
+</li>
+</ol> 
+      <a class="article-more-link" href="/2022/01/06/Materials-Studios%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/"
         >阅读全文</a
       >
        
@@ -835,7 +362,425 @@
     
     <footer class="article-footer">
        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/" rel="tag">C++</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/KMCLib/" rel="tag">KMCLib</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MD/" rel="tag">MD</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/" rel="tag">Python</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MD/" rel="tag">MD</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Materials-Studio/" rel="tag">Materials Studio</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-博客搭建-3-Github部署"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2021/12/29/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-3-Github%E9%83%A8%E7%BD%B2/"
+    >博客搭建(3)---Github部署</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/12/29/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-3-Github%E9%83%A8%E7%BD%B2/" class="article-date">
+  <time datetime="2021-12-29T10:21:49.000Z" itemprop="datePublished">2021-12-29</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">博客搭建</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h2 id="背景">背景</h2>
+<p>有了前边的一系列配置，我们已经可以在本地端口访问到我们自己的博客主页了，但是想要发布到互联网上，让其他人可以访问，还需要对它进行部署。</p>
+<p>因为我们的个人博客仅仅需要的功能比较简单，无非是一些文章记录，所以部署在提供静态网页托管服务的网站上，这样就省去了购买云服务器，购买域名、ip 等这些繁杂的步骤，更重要的是免费。</p>
+<p>提供静态网页托管服务的平台有很多，<code>Github</code>最为方便出名，但是由于其服务器不在国内，国内可能出现速度慢的情况，所以还有备用选择<code>Gitee</code>。 
+      <a class="article-more-link" href="/2021/12/29/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-3-Github%E9%83%A8%E7%BD%B2/"
+        >阅读全文</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/github/" rel="tag">github</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-博客搭建(2)"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2021/12/28/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA(2)/"
+    >博客搭建(2)---主题配置遗留问题</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/12/28/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA(2)/" class="article-date">
+  <time datetime="2021-12-28T13:31:23.000Z" itemprop="datePublished">2021-12-28</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">博客搭建</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h2 id="分类、标签、关于我">分类、标签、关于我</h2>
+<p>如果是跟着第一节的搭建教程完全搭建下来的话，最后，你会发现虽然整体的博客框架有了，但是或多或少还存在着一些小 Bug，比如，点击侧边栏的<code>分类、标签、关于我</code>这些会报错，显示无法 Get。</p>
+<h3 id="解决方法">解决方法</h3>
+<p>其实出现这些问题也不算是 Bug，<code>Ayer</code>主题的作者已经在说明文档中给出了。</p>
+<ul>
+<li>
+<p>首先在博客根目录右键<code>Git Bash Here</code>，键入以下命令。</p> 
+      <a class="article-more-link" href="/2021/12/28/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA(2)/"
+        >阅读全文</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ayer/" rel="tag">ayer</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%BE%8E%E5%8C%96/" rel="tag">美化</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-About-Me"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2021/12/28/About-Me/"
+    >About Me</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/12/28/About-Me/" class="article-date">
+  <time datetime="2021-12-28T11:41:14.000Z" itemprop="datePublished">2021-12-28</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <blockquote>
+<p>A student, live in Ji’nan, China.</p>
+</blockquote> 
+      <a class="article-more-link" href="/2021/12/28/About-Me/"
+        >阅读全文</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-博客搭建-1-Hexo框架安装"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2021/12/28/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-1-Hexo%E6%A1%86%E6%9E%B6%E5%AE%89%E8%A3%85/"
+    >博客搭建(1)---Hexo框架安装</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/12/28/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-1-Hexo%E6%A1%86%E6%9E%B6%E5%AE%89%E8%A3%85/" class="article-date">
+  <time datetime="2021-12-28T08:13:10.000Z" itemprop="datePublished">2021-12-28</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">博客搭建</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h2 id="一、Hexo框架介绍">一、Hexo框架介绍</h2>
+<h2 id=""></h2>
+<p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。 
+      <a class="article-more-link" href="/2021/12/28/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-1-Hexo%E6%A1%86%E6%9E%B6%E5%AE%89%E8%A3%85/"
+        >阅读全文</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ayer/" rel="tag">ayer</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%BE%8E%E5%8C%96/" rel="tag">美化</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-不宠无惊过一生"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2021/12/28/%E4%B8%8D%E5%AE%A0%E6%97%A0%E6%83%8A%E8%BF%87%E4%B8%80%E7%94%9F/"
+    >不宠无惊过一生</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/12/28/%E4%B8%8D%E5%AE%A0%E6%97%A0%E6%83%8A%E8%BF%87%E4%B8%80%E7%94%9F/" class="article-date">
+  <time datetime="2021-12-28T07:37:20.000Z" itemprop="datePublished">2021-12-28</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E9%B8%A1%E6%B1%A4/">鸡汤</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>不乱于心，不困于情。不畏将来，不念过往。如此，安好。</p>
+<p>深谋若谷，深交若水。深明大义，深悉小节。已然，静舒。</p> 
+      <a class="article-more-link" href="/2021/12/28/%E4%B8%8D%E5%AE%A0%E6%97%A0%E6%83%8A%E8%BF%87%E4%B8%80%E7%94%9F/"
+        >阅读全文</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%B8%B0%E5%AD%90%E6%81%BA/" rel="tag">丰子恺</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%96%87%E5%8C%96/" rel="tag">文化</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AF%97%E8%AF%8D/" rel="tag">诗词</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-Python-学习笔记-18-案例实操"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2021/02/23/Python-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-18-%E6%A1%88%E4%BE%8B%E5%AE%9E%E6%93%8D/"
+    >Python 学习笔记(18)--案例实操</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/02/23/Python-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-18-%E6%A1%88%E4%BE%8B%E5%AE%9E%E6%93%8D/" class="article-date">
+  <time datetime="2021-02-23T08:13:23.000Z" itemprop="datePublished">2021-02-23</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Python/">Python</a> / <a class="article-category-link" href="/categories/Python/%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/">基础语法</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h2 id="1-案例一">1. 案例一</h2>
+<h3 id="（1）向文件输出“奋斗成就更好的你”">（1）向文件输出“奋斗成就更好的你”</h3>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Task1 使用print方式进行输出</span></span><br><span class="line">fp = <span class="built_in">open</span>(<span class="string">&#x27;F:/test.txt&#x27;</span>,<span class="string">&#x27;w&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;奋斗成就更好的你&#x27;</span>,file = fp)</span><br><span class="line">fp.close()</span><br><span class="line"></span><br><span class="line"><span class="comment"># Task1 使用文件读写操作</span></span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;F:/test1.txt&#x27;</span>,<span class="string">&#x27;w&#x27;</span>) <span class="keyword">as</span> file:</span><br><span class="line">    file.write(<span class="string">&#x27;奋斗成就更好的你&#x27;</span>)</span><br></pre></td></tr></table></figure> 
+      <a class="article-more-link" href="/2021/02/23/Python-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-18-%E6%A1%88%E4%BE%8B%E5%AE%9E%E6%93%8D/"
+        >阅读全文</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/" rel="tag">Python</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-Python-学习笔记-17-学生信息管理示例"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2021/02/23/Python-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-17-%E5%AD%A6%E7%94%9F%E4%BF%A1%E6%81%AF%E7%AE%A1%E7%90%86%E7%A4%BA%E4%BE%8B/"
+    >Python 学习笔记(17)--学生信息管理示例</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/02/23/Python-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-17-%E5%AD%A6%E7%94%9F%E4%BF%A1%E6%81%AF%E7%AE%A1%E7%90%86%E7%A4%BA%E4%BE%8B/" class="article-date">
+  <time datetime="2021-02-23T08:12:56.000Z" itemprop="datePublished">2021-02-23</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Python/">Python</a> / <a class="article-category-link" href="/categories/Python/%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/">基础语法</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h2 id="1-需求分析">1. 需求分析</h2>
+<p><em>学生管理系统应具备的功能：</em></p>
+<ul>
+<li>添加学生及成绩信息</li>
+<li>将学生信息保存到文件中</li>
+<li>修改和删除学生信息</li>
+<li>查询学生信息</li>
+<li>根据学生成绩进行排序</li>
+<li>统计学生的总分</li>
+</ul> 
+      <a class="article-more-link" href="/2021/02/23/Python-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-17-%E5%AD%A6%E7%94%9F%E4%BF%A1%E6%81%AF%E7%AE%A1%E7%90%86%E7%A4%BA%E4%BE%8B/"
+        >阅读全文</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/" rel="tag">Python</a></li></ul>
 
     </footer>
   </div>
