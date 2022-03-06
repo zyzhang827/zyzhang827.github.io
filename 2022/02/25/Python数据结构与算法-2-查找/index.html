@@ -11,7 +11,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>飞鸟集 |  一方天地</title>
+      <title>Python数据结构与算法(2)--查找 |  一方天地</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -65,7 +65,7 @@
     <main class="content on">
       <section class="outer">
   <article
-  id="post-飞鸟集"
+  id="post-Python数据结构与算法-2-查找"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -76,7 +76,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  飞鸟集
+  Python数据结构与算法(2)--查找
 </h1>
  
 
@@ -84,11 +84,11 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2022/01/18/%E9%A3%9E%E9%B8%9F%E9%9B%86/" class="article-date">
-  <time datetime="2022-01-18T13:25:26.000Z" itemprop="datePublished">2022-01-18</time>
+      <a href="/2022/02/25/Python%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-2-%E6%9F%A5%E6%89%BE/" class="article-date">
+  <time datetime="2022-02-25T12:31:41.000Z" itemprop="datePublished">2022-02-25</time>
 </a> 
   <div class="article-category">
-    <a class="article-category-link" href="/categories/%E9%B8%A1%E6%B1%A4/">鸡汤</a>
+    <a class="article-category-link" href="/categories/Python/">Python</a> / <a class="article-category-link" href="/categories/Python/Algorithm/">Algorithm</a>
   </div>
   
 <div class="word_count">
@@ -96,7 +96,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">147</span>
+            <span class="post-count">473</span>
         </span>
     </span>
 
@@ -105,29 +105,42 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> 阅读时长≈</span>
-            <span class="post-count">1 分钟</span>
+            <span class="post-count">2 分钟</span>
         </span>
     </span>
 </div>
  
     </div>
       
+    <div class="tocbot"></div>
+
 
 
 
   
     <div class="article-entry" itemprop="articleBody">
        
-  <p>🟩 What you are you do not see, what you see is your shadow.<br>
-🟪 你无法看到自己, 你看到的是你认为的自己.</p>
-<p>🟨 I cannot choose the best. The best chooses me.<br>
-🟥 我做不到选择最好的, 是最好的选择了我.</p>
-<p>🟦 Let him only see the thorns who has eyes to see the rose.<br>
-🟧 让那些盯着玫瑰花的人啊, 多看看玫瑰的刺吧.</p>
-<p>⬛ “Who drives me forward like fate?” “The Myself striding on my back.”<br>
-🟫 “是谁像命运一样催我向前?” “是我自己一直在我后面.”</p>
-<p>⬜ Power takes as ingratitude the writhings of its victims.<br>
-🟪 在强权看来, 牺牲品的痛苦是不知好歹.</p>
+  <h2 id="列表查找">列表查找</h2>
+<h3 id="概念">概念</h3>
+<p><strong>查找</strong>：在一些数据元素中，通过一定的方法找出与给定关键字相同的数据元素的过程</p>
+<p><strong>列表查找</strong>：(线性表查找)从列表中查找指定元素</p>
+<ul>
+<li>输入：列表、待查找元素</li>
+<li>输出：元素下标(未找到元素时一般返回 None 或者 -1)</li>
+</ul>
+<p>内置列表查找函数：index()</p>
+<h3 id="顺序查找-Linear-Search">顺序查找(Linear Search)</h3>
+<p><strong>顺序查找</strong>：也叫线性查找，从列表第一个元素开始，顺序进行搜索，直到找到元素或者搜索到列表的最后一个元素为止。</p>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">linear_search</span>(<span class="params">li, val</span>):</span></span><br><span class="line">    <span class="keyword">for</span> index, value <span class="keyword">in</span> <span class="built_in">enumerate</span>(li):</span><br><span class="line">        <span class="keyword">if</span> value == val:</span><br><span class="line">            <span class="keyword">return</span> index</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">None</span></span><br></pre></td></tr></table></figure></div>
+<h3 id="二分查找-Binary-Search">二分查找(Binary Search)</h3>
+<p><strong>二分查找</strong>：又叫折半查找，从有序列表的初识候选区<code>li[0:n]</code>开始，通过对待查找的值与候选区中间值的比较，可以使候选区减少一半。</p>
+<p><img src="https://gitee.com/zyzhang98/typora-images/raw/master/Images/20220228-093129.png" alt="image-20220228093038223"></p>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">binary_search</span>(<span class="params">li, val</span>):</span></span><br><span class="line">    left = <span class="number">0</span></span><br><span class="line">    right = <span class="built_in">len</span>(li) - <span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span> left &lt;= right:		<span class="comment"># 候选区有值</span></span><br><span class="line">        mid = (left + right) // <span class="number">2</span></span><br><span class="line">        <span class="keyword">if</span> li[mid] == val:</span><br><span class="line">            <span class="keyword">return</span> mid</span><br><span class="line">        <span class="keyword">elif</span> li[mid] &gt; val:		<span class="comment"># 待查找的值在 mid 左侧</span></span><br><span class="line">            right = mid - <span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>:					<span class="comment"># 待查找的值在 mid 右侧</span></span><br><span class="line">            left = mid + <span class="number">1</span></span><br><span class="line">	<span class="keyword">else</span>：</span><br><span class="line">    	<span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line">li = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>]</span><br><span class="line"><span class="built_in">print</span>(binary_search(li, <span class="number">3</span>))</span><br></pre></td></tr></table></figure></div>
+<p>时间复杂度：<code>O(logn)</code></p>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># cal_time.py</span></span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">cal_time</span>(<span class="params">func</span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">wrapper</span>(<span class="params">*args, **kwargs</span>):</span></span><br><span class="line">        t1 = time.time()</span><br><span class="line">        result = func(*args, **kwargs)</span><br><span class="line">        t2 = time.time()</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;%s running time: %s secs.&quot;</span> % (func.__name__, t2 - t1))</span><br><span class="line">        <span class="keyword">return</span> result</span><br><span class="line">    <span class="keyword">return</span> wrapper</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 将上述两个 py 文件放在一个文件夹中</span></span><br><span class="line"><span class="keyword">from</span> cal_time <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line"><span class="meta">@cal_time</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">linear_search</span>(<span class="params">li, val</span>):</span></span><br><span class="line">    <span class="keyword">for</span> index, value <span class="keyword">in</span> <span class="built_in">enumerate</span>(li):</span><br><span class="line">        <span class="keyword">if</span> value == val:</span><br><span class="line">            <span class="keyword">return</span> index</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line"></span><br><span class="line"><span class="meta">@cal_time    </span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">binary_search</span>(<span class="params">li, val</span>):</span></span><br><span class="line">    left = <span class="number">0</span></span><br><span class="line">    right = <span class="built_in">len</span>(li) - <span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span> left &lt;= right:		<span class="comment"># 候选区有值</span></span><br><span class="line">        mid = (left + right) // <span class="number">2</span></span><br><span class="line">        <span class="keyword">if</span> li[mid] == val:</span><br><span class="line">            <span class="keyword">return</span> mid</span><br><span class="line">        <span class="keyword">elif</span> li[mid] &gt; val:		<span class="comment"># 待查找的值在 mid 左侧</span></span><br><span class="line">            right = mid - <span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>:					<span class="comment"># 待查找的值在 mid 右侧</span></span><br><span class="line">            left = mid + <span class="number">1</span></span><br><span class="line">	<span class="keyword">else</span>：</span><br><span class="line">    	<span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line">li = <span class="built_in">list</span>(<span class="built_in">range</span>(<span class="number">10000</span>))</span><br><span class="line">linear_search(li, <span class="number">3890</span>)</span><br><span class="line">binary_search(li, <span class="number">3890</span>)</span><br></pre></td></tr></table></figure></div>
+<h3 id="index">index()</h3>
+<p>内置列表查找函数<code>index()</code>是线性查找。</p>
  
       <!-- reward -->
       
@@ -192,12 +205,12 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2022/01/18/%E9%A3%9E%E9%B8%9F%E9%9B%86/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2022/02/25/Python%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-2-%E6%9F%A5%E6%89%BE/" alt="微信分享二维码">
     </div>
 </div>
 
 <div id="share-mask"></div>  
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%96%87%E5%8C%96/" rel="tag">文化</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AF%97%E8%AF%8D/" rel="tag">诗词</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a></li></ul>
 
     </footer>
   </div>
@@ -205,19 +218,19 @@
    
   <nav class="article-nav">
     
-      <a href="/2022/02/14/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-1-%E5%9F%BA%E7%A1%80%E7%AE%80%E4%BB%8B/" class="article-nav-link">
+      <a href="/2022/02/28/Python%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-3-%E6%8E%92%E5%BA%8F/" class="article-nav-link">
         <strong class="article-nav-caption">上一篇</strong>
         <div class="article-nav-title">
           
-            爬虫学习笔记(1)--基础简介
+            Python数据结构与算法(3)--排序
           
         </div>
       </a>
     
     
-      <a href="/2022/01/18/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%8F%92%E4%BB%B6%E5%92%8C%E8%84%9A%E6%9C%AC/" class="article-nav-link">
+      <a href="/2022/02/24/Python%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95(1)/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">浏览器插件和脚本</div>
+        <div class="article-nav-title">Python数据结构与算法(1)--复杂度及递归</div>
       </a>
     
   </nav>
