@@ -90,6 +90,46 @@
       </tags>
   </entry>
   <entry>
+    <title>Materials Studio安装教程</title>
+    <url>/2022/01/06/Materials-Studios%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</url>
+    <content><![CDATA[<h1>Materials Studio安装教程</h1>
+<h2 id="软件安装包">软件安装包</h2>
+<p><a href="https://www.123pan.com/s/XHVA-IEQ5d">123云盘下载</a></p>
+<p>提取码z827`</p>
+<h2 id="修改-lic文件">修改.lic文件</h2>
+<ol>
+<li>
+<p>电脑桌面使用快捷键<code>Win+R</code>打开运行，输入<code>cmd</code>，回车。然后在命令行窗口输入<code>hostname</code>回车，出现计算机名，将其复制备用。</p>
+<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">Microsoft Windows [版本 10.0.22000.376]</span><br><span class="line">(c) Microsoft Corporation。保留所有权利。</span><br><span class="line"></span><br><span class="line">C:\Users\dell&gt;hostname</span><br><span class="line">DESKTOP-XXXXXXX</span><br></pre></td></tr></table></figure></div>
+</li>
+<li>
+<p>找到<code>MS.zip</code>压缩包内的<code>msi2018.lic</code>文件，右键选择”写字板“打开，将第一行中的<code>DESKTOP-HVJ2DIM</code>替换为你刚才复制的自己的计算机名，保存后关闭文件。</p>
+</li>
+</ol>
+<span id="more"></span>
+<h2 id="安装MS软件">安装MS软件</h2>
+<p>将<code>MS.zip</code>压缩包内的<code>MaterialsStudio2018.rar</code>解压，然后进入解压后的<code>MaterialsStudio2018</code>文件夹，找到<code>setup.exe</code>文件，双击进行安装，安装位置选择默认即可，无需进行改动，直到安装结束显示Finsh，关闭即可。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zyzhang827/filesimage@main/images/image-20220106142453557.png" alt=""><img src="https://cdn.jsdelivr.net/gh/zyzhang827/filesimage@main/images/image-20220106142527139.png" alt=""></p>
+<h2 id="lic文件复制">.lic文件复制</h2>
+<p>64位的 Windows 操作系统，将之前修改过的<code>msi2018.lic</code>文件复制到以下爱三个文件夹中.</p>
+<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">C:\Program Files (x86)\BIOVIA\LicensePack\Licenses</span><br><span class="line">C:\Program Files (x86)\BIOVIA\LicensePack\share\data</span><br><span class="line">C:\Program Files (x86)\BIOVIA\LicensePack\win32\bin</span><br></pre></td></tr></table></figure></div>
+<h2 id="安装注册信息">安装注册信息</h2>
+<p>使用快捷键<code>Win+Q</code>打开系统搜索框，输入<code>License Administrator 2018</code>，然后选中右键”以管理员身份运行“。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zyzhang827/filesimage@main/images/image-20220106143734050.png" alt=""></p>
+<p>打开左侧的<code>Install License</code>，点击右侧的<code>Browser</code>，找到<code>C:\Program Files (x86)\BIOVIA\LicensePack\Licenses</code>里的<code>msi2018.lic</code>文件，单击打开，然后点击<code>License Administrtor 2018</code>中下方的<code>Install</code>，出现<code>Checkout succeeded...</code>证明安装成功，可以使用<code>MS2018</code>软件了。</p>
+<h2 id="打开软件">打开软件</h2>
+<p>Windows开始菜单找到<code>Materials Studio 2018</code>打开软件即可。</p>
+]]></content>
+      <categories>
+        <category>Molecular Dynamics</category>
+        <category>Materials Studio</category>
+      </categories>
+      <tags>
+        <tag>MD</tag>
+        <tag>Materials Studio</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>博客搭建(3)---Github部署</title>
     <url>/2021/12/29/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-3-Github%E9%83%A8%E7%BD%B2/</url>
     <content><![CDATA[<h2 id="背景">背景</h2>
@@ -163,43 +203,33 @@
       </tags>
   </entry>
   <entry>
-    <title>Materials Studio安装教程</title>
-    <url>/2022/01/06/Materials-Studios%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</url>
-    <content><![CDATA[<h1>Materials Studio安装教程</h1>
-<h2 id="软件安装包">软件安装包</h2>
-<p><a href="https://www.123pan.com/s/XHVA-IEQ5d">123云盘下载</a></p>
-<p>提取码z827`</p>
-<h2 id="修改-lic文件">修改.lic文件</h2>
-<ol>
-<li>
-<p>电脑桌面使用快捷键<code>Win+R</code>打开运行，输入<code>cmd</code>，回车。然后在命令行窗口输入<code>hostname</code>回车，出现计算机名，将其复制备用。</p>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">Microsoft Windows [版本 10.0.22000.376]</span><br><span class="line">(c) Microsoft Corporation。保留所有权利。</span><br><span class="line"></span><br><span class="line">C:\Users\dell&gt;hostname</span><br><span class="line">DESKTOP-XXXXXXX</span><br></pre></td></tr></table></figure></div>
-</li>
-<li>
-<p>找到<code>MS.zip</code>压缩包内的<code>msi2018.lic</code>文件，右键选择”写字板“打开，将第一行中的<code>DESKTOP-HVJ2DIM</code>替换为你刚才复制的自己的计算机名，保存后关闭文件。</p>
-</li>
-</ol>
+    <title>装系统神器--Ventoy</title>
+    <url>/2022/01/07/%E8%A3%85%E7%B3%BB%E7%BB%9F%E7%A5%9E%E5%99%A8-Ventoy/</url>
+    <content><![CDATA[<h2 id="介绍">介绍</h2>
+<p>Ventoy 是国人自己开发的 ISO 启动引导程序软件，其主要的功能就是可以通过 Ventoy 存储系统的 ISO 镜像文件，然后对电脑进行系统重装。</p>
 <span id="more"></span>
-<h2 id="安装MS软件">安装MS软件</h2>
-<p>将<code>MS.zip</code>压缩包内的<code>MaterialsStudio2018.rar</code>解压，然后进入解压后的<code>MaterialsStudio2018</code>文件夹，找到<code>setup.exe</code>文件，双击进行安装，安装位置选择默认即可，无需进行改动，直到安装结束显示Finsh，关闭即可。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/zyzhang827/filesimage@main/images/image-20220106142453557.png" alt=""><img src="https://cdn.jsdelivr.net/gh/zyzhang827/filesimage@main/images/image-20220106142527139.png" alt=""></p>
-<h2 id="lic文件复制">.lic文件复制</h2>
-<p>64位的 Windows 操作系统，将之前修改过的<code>msi2018.lic</code>文件复制到以下爱三个文件夹中.</p>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">C:\Program Files (x86)\BIOVIA\LicensePack\Licenses</span><br><span class="line">C:\Program Files (x86)\BIOVIA\LicensePack\share\data</span><br><span class="line">C:\Program Files (x86)\BIOVIA\LicensePack\win32\bin</span><br></pre></td></tr></table></figure></div>
-<h2 id="安装注册信息">安装注册信息</h2>
-<p>使用快捷键<code>Win+Q</code>打开系统搜索框，输入<code>License Administrator 2018</code>，然后选中右键”以管理员身份运行“。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/zyzhang827/filesimage@main/images/image-20220106143734050.png" alt=""></p>
-<p>打开左侧的<code>Install License</code>，点击右侧的<code>Browser</code>，找到<code>C:\Program Files (x86)\BIOVIA\LicensePack\Licenses</code>里的<code>msi2018.lic</code>文件，单击打开，然后点击<code>License Administrtor 2018</code>中下方的<code>Install</code>，出现<code>Checkout succeeded...</code>证明安装成功，可以使用<code>MS2018</code>软件了。</p>
-<h2 id="打开软件">打开软件</h2>
-<p>Windows开始菜单找到<code>Materials Studio 2018</code>打开软件即可。</p>
+<h2 id="优势">优势</h2>
+<p>选择 Ventoy 的原因有很多：</p>
+<ul>
+<li>首先，由于是国人自己开发的，所以界面为中文，简单方便；</li>
+<li>支持包括 Windows、WinPE、Ubuntu、Deepin 等多种系统的安装；</li>
+<li>无差别支持 Legacy BIOS 和 UEFI 两种模式；</li>
+<li>支持 MBR 和 GPT 分区格式；</li>
+<li>镜像文件可以与其他文件共存，即装机 U 盘仍然可以作为普通 U 盘使用；</li>
+</ul>
+<h2 id="使用教程">使用教程</h2>
+<p>去<a href="https://www.ventoy.net/en/download.html">Ventoy官网</a>下载<code>Windows</code>版本的 Ventoy 安装包，解压缩之后得到一个<code>Ventoy2Disk.exe</code>文件，然后插入一个干净的 U 盘，打开<code>Ventoy2Disk.exe</code>，主界面选择自己刚才插入的 U 盘的盘符，然后点击<code>Install</code>即可。</p>
+<p>安装完成后，进入 U 盘，然后直接将自己下载好的系统镜像文件放入其中即可，推荐下载系统镜像文件网址<a href="https://next.itellyou.cn/">itellyou</a>.</p>
+<h2 id="重装系统教程">重装系统教程</h2>
+<p>将制作好的 Ventoy 启动盘插入电脑，然后重启计算机，按热键进入 BIOS Setup 模式，将其中的 SecureBoot 关闭；</p>
+<p>然后重新启动计算机，按热键进入 BIOS 界面，在 UEFI OPTIONS 中选择自己的 U 盘进行启动，启动后，选择自己想要安装的系统的镜像文件，一路回车即可。</p>
+<p>上述中所涉及到的热键，各型号的电脑互有差异，一般在重启界面会有提示按键，再不清楚的可以自行按照自己的电脑型号进行百度。</p>
 ]]></content>
       <categories>
-        <category>Molecular Dynamics</category>
-        <category>Materials Studio</category>
+        <category>软件</category>
       </categories>
       <tags>
-        <tag>MD</tag>
-        <tag>Materials Studio</tag>
+        <tag>ventoy</tag>
       </tags>
   </entry>
   <entry>
@@ -374,36 +404,6 @@
       </categories>
       <tags>
         <tag>C++</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>装系统神器--Ventoy</title>
-    <url>/2022/01/07/%E8%A3%85%E7%B3%BB%E7%BB%9F%E7%A5%9E%E5%99%A8-Ventoy/</url>
-    <content><![CDATA[<h2 id="介绍">介绍</h2>
-<p>Ventoy 是国人自己开发的 ISO 启动引导程序软件，其主要的功能就是可以通过 Ventoy 存储系统的 ISO 镜像文件，然后对电脑进行系统重装。</p>
-<span id="more"></span>
-<h2 id="优势">优势</h2>
-<p>选择 Ventoy 的原因有很多：</p>
-<ul>
-<li>首先，由于是国人自己开发的，所以界面为中文，简单方便；</li>
-<li>支持包括 Windows、WinPE、Ubuntu、Deepin 等多种系统的安装；</li>
-<li>无差别支持 Legacy BIOS 和 UEFI 两种模式；</li>
-<li>支持 MBR 和 GPT 分区格式；</li>
-<li>镜像文件可以与其他文件共存，即装机 U 盘仍然可以作为普通 U 盘使用；</li>
-</ul>
-<h2 id="使用教程">使用教程</h2>
-<p>去<a href="https://www.ventoy.net/en/download.html">Ventoy官网</a>下载<code>Windows</code>版本的 Ventoy 安装包，解压缩之后得到一个<code>Ventoy2Disk.exe</code>文件，然后插入一个干净的 U 盘，打开<code>Ventoy2Disk.exe</code>，主界面选择自己刚才插入的 U 盘的盘符，然后点击<code>Install</code>即可。</p>
-<p>安装完成后，进入 U 盘，然后直接将自己下载好的系统镜像文件放入其中即可，推荐下载系统镜像文件网址<a href="https://next.itellyou.cn/">itellyou</a>.</p>
-<h2 id="重装系统教程">重装系统教程</h2>
-<p>将制作好的 Ventoy 启动盘插入电脑，然后重启计算机，按热键进入 BIOS Setup 模式，将其中的 SecureBoot 关闭；</p>
-<p>然后重新启动计算机，按热键进入 BIOS 界面，在 UEFI OPTIONS 中选择自己的 U 盘进行启动，启动后，选择自己想要安装的系统的镜像文件，一路回车即可。</p>
-<p>上述中所涉及到的热键，各型号的电脑互有差异，一般在重启界面会有提示按键，再不清楚的可以自行按照自己的电脑型号进行百度。</p>
-]]></content>
-      <categories>
-        <category>软件</category>
-      </categories>
-      <tags>
-        <tag>ventoy</tag>
       </tags>
   </entry>
   <entry>
@@ -1418,6 +1418,28 @@
       </tags>
   </entry>
   <entry>
+    <title>飞鸟集</title>
+    <url>/2022/01/18/%E9%A3%9E%E9%B8%9F%E9%9B%86/</url>
+    <content><![CDATA[<p>🟩 What you are you do not see, what you see is your shadow.<br>
+🟪 你无法看到自己, 你看到的是你认为的自己.</p>
+<p>🟨 I cannot choose the best. The best chooses me.<br>
+🟥 我做不到选择最好的, 是最好的选择了我.</p>
+<p>🟦 Let him only see the thorns who has eyes to see the rose.<br>
+🟧 让那些盯着玫瑰花的人啊, 多看看玫瑰的刺吧.</p>
+<p>⬛ “Who drives me forward like fate?” “The Myself striding on my back.”<br>
+🟫 “是谁像命运一样催我向前?” “是我自己一直在我后面.”</p>
+<p>⬜ Power takes as ingratitude the writhings of its victims.<br>
+🟪 在强权看来, 牺牲品的痛苦是不知好歹.</p>
+]]></content>
+      <categories>
+        <category>鸡汤</category>
+      </categories>
+      <tags>
+        <tag>文化</tag>
+        <tag>诗词</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>浏览器插件和脚本</title>
     <url>/2022/01/18/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%8F%92%E4%BB%B6%E5%92%8C%E8%84%9A%E6%9C%AC/</url>
     <content><![CDATA[<h2 id="Tampermonkey">Tampermonkey</h2>
@@ -1494,28 +1516,6 @@
         <category>Python</category>
         <category>基础语法</category>
       </categories>
-  </entry>
-  <entry>
-    <title>飞鸟集</title>
-    <url>/2022/01/18/%E9%A3%9E%E9%B8%9F%E9%9B%86/</url>
-    <content><![CDATA[<p>🟩 What you are you do not see, what you see is your shadow.<br>
-🟪 你无法看到自己, 你看到的是你认为的自己.</p>
-<p>🟨 I cannot choose the best. The best chooses me.<br>
-🟥 我做不到选择最好的, 是最好的选择了我.</p>
-<p>🟦 Let him only see the thorns who has eyes to see the rose.<br>
-🟧 让那些盯着玫瑰花的人啊, 多看看玫瑰的刺吧.</p>
-<p>⬛ “Who drives me forward like fate?” “The Myself striding on my back.”<br>
-🟫 “是谁像命运一样催我向前?” “是我自己一直在我后面.”</p>
-<p>⬜ Power takes as ingratitude the writhings of its victims.<br>
-🟪 在强权看来, 牺牲品的痛苦是不知好歹.</p>
-]]></content>
-      <categories>
-        <category>鸡汤</category>
-      </categories>
-      <tags>
-        <tag>文化</tag>
-        <tag>诗词</tag>
-      </tags>
   </entry>
   <entry>
     <title>Python 学习笔记(10)--字符串</title>
@@ -1803,6 +1803,74 @@ $$</p>
       </tags>
   </entry>
   <entry>
+    <title>Python 学习笔记(13)--类、对象</title>
+    <url>/2021/02/23/Python-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-13-%E7%B1%BB%E3%80%81%E5%AF%B9%E8%B1%A1/</url>
+    <content><![CDATA[<h2 id="1-两大编程思想">1. 两大编程思想</h2>
+<table >
+    <tr>
+        <td style="text-align:center"> </td>
+        <td style="text-align:center">面向过程</td>
+        <td style="text-align:center">面向对象</td>
+    </tr>
+    <tr>
+        <td> 区别 </td>
+        <td>事物比较简单，可以用线性的思维去解决</td>
+        <td>事物比较复杂，使用简单的线性思维无法解决</td>
+    </tr>
+    <tr>  
+        <td>共同点</td>       
+        <th colspan="2">面向过程和面向对象都是解决实际问题的一种思维方式
+        </th>     
+    </tr> 
+     <tr>  
+        <td></td>       
+        <th class="AutoNewline" colspan="2">二者相辅相成，并不是对立的；
+            解决复杂问题，通过面向对象方式便于我们从宏观上把握事物之间复杂的关系、方便我们分析整个系统；
+            具体到微观操作，仍然使用面向过程方式来处理。
+        </th>     
+    </tr>  
+</table>
+<span id="more"></span>
+<h2 id="2-类和对象的创建">2. 类和对象的创建</h2>
+<p><em>类</em>是多个类似事物组成的群体的统称。能够帮助我们快速理解和判断事物的性质。</p>
+<p>*对象：*不同数据类型属于不同的类，像100、99、520都是int类之下包含的相似的不同个例，这些个例专业术语称为实例或者对象。</p>
+<h3 id="（1）类的创建">（1）类的创建</h3>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;Student类名由一个或多个单词组成，每个单词的首字母大写，其余小写&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="comment"># Python中一切皆对象，Student是对象吗？内存由开空间吗？</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">id</span>(Student))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(Student))</span><br><span class="line"><span class="built_in">print</span>(Student)</span><br></pre></td></tr></table></figure></div>
+<p><em>类的组成：</em></p>
+<ul>
+<li>类属性</li>
+<li>实例方法</li>
+<li>静态方法</li>
+<li>类方法</li>
+</ul>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span>:</span></span><br><span class="line">    native_pace = <span class="string">&#x27;吉林&#x27;</span>					<span class="comment"># 直接写在类里的变量，称为类属性</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> *<span class="title">init</span>*(<span class="params">self,name,age</span>):</span></span><br><span class="line">        self.name = name				 <span class="comment"># self,name称为实体属性，进行了一个赋值的操作，将局部变量name的值赋给实体属性</span></span><br><span class="line">        self.age = age</span><br><span class="line">   </span><br><span class="line">	<span class="comment"># 实例方法</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">eat</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;学生在吃饭...&#x27;</span>)</span><br><span class="line">    <span class="comment"># 静态方法</span></span><br><span class="line"><span class="meta">    @staticmethod</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">method</span>():</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;我使用了staticmethod进行修饰，所以我是静态方法&#x27;</span>)</span><br><span class="line">    <span class="comment"># 类方法</span></span><br><span class="line"><span class="meta">    @classmethod</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">cm</span>(<span class="params">cls</span>):</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;我是类方法，因为我使用了classmethod进行修饰&#x27;</span>)</span><br><span class="line">        </span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;在类之外定义的称为函数，在类之内定义的称为方法</span></span><br><span class="line"><span class="string">def drink();		#函数</span></span><br><span class="line"><span class="string">	print(&#x27;喝水&#x27;)</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure></div>
+<h3 id="（2）对象的创建">（2）对象的创建</h3>
+<blockquote>
+<p>对象的创建又称为类的实例化：实例名 = 类名（）</p>
+</blockquote>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span>:</span></span><br><span class="line">    native_pace = <span class="string">&#x27;吉林&#x27;</span>					  <span class="comment"># 直接写在类里的变量，称为类属性</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> *<span class="title">init</span>*(<span class="params">self,name,age</span>):</span></span><br><span class="line">        self.name = name					<span class="comment"># self,name称为实体属性，进行了一个赋值的操作，将局部变量name的值赋给实体属性</span></span><br><span class="line">        self.age = age</span><br><span class="line">   </span><br><span class="line">	<span class="comment"># 实例方法</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">eat</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;学生在吃饭...&#x27;</span>)</span><br><span class="line">    <span class="comment"># 静态方法</span></span><br><span class="line"><span class="meta">    @staticmethod</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">method</span>():</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;我使用了staticmethod进行修饰，所以我是静态方法&#x27;</span>)</span><br><span class="line">    <span class="comment"># 类方法</span></span><br><span class="line"><span class="meta">    @classmethod</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">cm</span>(<span class="params">cls</span>):</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;我是类方法，因为我使用了classmethod进行修饰&#x27;</span>)</span><br><span class="line">        </span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;在类之外定义的称为函数，在类之内定义的称为方法</span></span><br><span class="line"><span class="string">def drink();		#函数</span></span><br><span class="line"><span class="string">	print(&#x27;喝水&#x27;)</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建Student类的对象</span></span><br><span class="line">stu1 = Student(<span class="string">&#x27;张三&#x27;</span>，<span class="number">20</span>)</span><br><span class="line">stu1.eat()									<span class="comment"># 对象名.方法名()</span></span><br><span class="line"><span class="built_in">print</span>(stu1.name)</span><br><span class="line"><span class="built_in">print</span>(stu1.age)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;---------------------------&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">id</span>(stu1))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(stu1))</span><br><span class="line"><span class="built_in">print</span>(stu1)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;---------------------------&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">id</span>(Student))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(Student))</span><br><span class="line"><span class="built_in">print</span>(Student)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;--------------------------&#x27;</span>)</span><br><span class="line">Student.eat(stu1)							<span class="comment"># 类名.方法名(类的对象)		与stu1.eat()一样，都是调用Student中的eat方法</span></span><br></pre></td></tr></table></figure></div>
+<h2 id="3-类属性、类方法、静态方法">3. 类属性、类方法、静态方法</h2>
+<ul>
+<li>*类属性：*类中方法外的变量称为类属性，被该类的所有对象所共享。</li>
+<li>*类方法：*使用@classmethod修饰的方法，使用类名直接访问的方法。</li>
+<li>*静态方法：*使用@staticmethod修饰的方法，使用类名直接访问的方法。</li>
+</ul>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span>:</span></span><br><span class="line">    native_pace = <span class="string">&#x27;吉林&#x27;</span>					   <span class="comment"># 直接写在类里的变量，称为类属性</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> *<span class="title">init</span>*(<span class="params">self,name,age</span>):</span>		    <span class="comment"># 初始化方法</span></span><br><span class="line">        self.name = name					<span class="comment"># self,name称为实体属性，进行了一个赋值的操作，将局部变量name的值赋给实体属性</span></span><br><span class="line">        self.age = age</span><br><span class="line">   </span><br><span class="line">	<span class="comment"># 实例方法</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">eat</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;学生在吃饭...&#x27;</span>)</span><br><span class="line">        </span><br><span class="line">    <span class="comment"># 静态方法</span></span><br><span class="line"><span class="meta">    @staticmethod</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">method</span>():</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;我使用了staticmethod进行修饰，所以我是静态方法&#x27;</span>)</span><br><span class="line">        </span><br><span class="line">    <span class="comment"># 类方法</span></span><br><span class="line"><span class="meta">    @classmethod</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">cm</span>(<span class="params">cls</span>):</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;我是类方法，因为我使用了classmethod进行修饰&#x27;</span>)</span><br><span class="line"></span><br><span class="line">        </span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;------------类属性的使用方法---------------&#x27;</span>)      </span><br><span class="line"><span class="built_in">print</span>(Student.native_pace)</span><br><span class="line">stu1 = Student(<span class="string">&#x27;张三&#x27;</span>,<span class="number">20</span>)</span><br><span class="line">stu2 = Student(<span class="string">&#x27;李四&#x27;</span>,<span class="number">30</span>)</span><br><span class="line"><span class="built_in">print</span>(stu1.native_pace)</span><br><span class="line"><span class="built_in">print</span>(stu2.native_pace)</span><br><span class="line">Student.native_pace = <span class="string">&#x27;天津&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(stu1.native_pace)</span><br><span class="line"><span class="built_in">print</span>(stu2.native_pace)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;------------类方法的使用方式--------------&#x27;</span>)</span><br><span class="line">Student.cm()</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;-----------静态方法的使用方式----------------&#x27;</span>)</span><br><span class="line">Student.method()</span><br></pre></td></tr></table></figure></div>
+<h2 id="4-动态绑定属性和方法">4. 动态绑定属性和方法</h2>
+<blockquote>
+<p>Python是动态语言，在创建对象后，可以动态地绑定属性和方法。</p>
+</blockquote>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> *<span class="title">init</span>*(<span class="params">self,name,age</span>):</span></span><br><span class="line">        self.name = name</span><br><span class="line">        self.age = age</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">eat</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="built_in">print</span>(self.name + <span class="string">&#x27;在吃饭&#x27;</span>)</span><br><span class="line">        </span><br><span class="line">stu1 = Student(<span class="string">&#x27;张三&#x27;</span>,<span class="number">20</span>)</span><br><span class="line">stu2 = Student(<span class="string">&#x27;李四&#x27;</span>,<span class="number">30</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">id</span>(stu1))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">id</span>(stu2))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;---------只给李四添加一个性别---------------&#x27;</span>)</span><br><span class="line">stu2.gender = <span class="string">&#x27;女&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(stu1.name,stu1.age)					<span class="comment"># 如果添加stu1.gender会抛出AttributeError</span></span><br><span class="line"><span class="built_in">print</span>(stu2.name,stu2.age,stu2.gender)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;-------------------------&#x27;</span>)</span><br><span class="line">stu1.eat()</span><br><span class="line">stu2.eat()</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">show</span>():</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;定义在类之外地，称为函数&#x27;</span>)</span><br><span class="line">stu1.show = show</span><br><span class="line">stu1.show</span><br><span class="line"><span class="comment"># stu2.show		因为stu2并没有绑定show方法</span></span><br></pre></td></tr></table></figure></div>
+]]></content>
+      <categories>
+        <category>Python</category>
+        <category>基础语法</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Python 学习笔记(14)--对象方法</title>
     <url>/2021/02/23/Python-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-14-%E5%AF%B9%E8%B1%A1%E6%96%B9%E6%B3%95/</url>
     <content><![CDATA[<p><em>面向对象的三大特征：</em></p>
@@ -1880,74 +1948,6 @@ $$</p>
 <p>*深拷贝：*使用copy模块的deepcopy函数，递归拷贝对象中包含的子对象，源对象和拷贝对象所有的子对象也不相同。</p>
 <div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">CPU</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Disk</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Computer</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> *<span class="title">init</span>*(<span class="params">self,cpu,disk</span>):</span></span><br><span class="line">        self.cpu = cpu</span><br><span class="line">        self.disk = disk</span><br><span class="line">        </span><br><span class="line"><span class="comment"># (1)变量的赋值</span></span><br><span class="line">cpu1 = CPU()</span><br><span class="line">cpu2 = cpu1</span><br><span class="line"><span class="built_in">print</span>(cpu1,<span class="built_in">id</span>(cpu1))</span><br><span class="line"><span class="built_in">print</span>(cpu2,<span class="built_in">id</span>(cpu2))</span><br><span class="line"><span class="comment"># (2)类的浅拷贝</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;-------------------&#x27;</span>)</span><br><span class="line">disk = Disk()					<span class="comment"># 创建一个硬盘类的对象</span></span><br><span class="line">computer = Computer(cpu1,disk)	<span class="comment"># 创建一个计算机类的对象</span></span><br><span class="line"><span class="comment"># 浅拷贝</span></span><br><span class="line"><span class="keyword">import</span> copy</span><br><span class="line">computer2 = copy.copy(computer)</span><br><span class="line"><span class="built_in">print</span>(disk)</span><br><span class="line"><span class="built_in">print</span>(computer,computer.cpu,computer.disk)</span><br><span class="line"><span class="built_in">print</span>(computer2,computer2.cpu,computer2.disk)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;---------------------&#x27;</span>)</span><br><span class="line"><span class="comment"># 深拷贝</span></span><br><span class="line">computer3 = copy.deepcopy(computer)</span><br><span class="line"><span class="built_in">print</span>(computer,computer.cpu,computer.disk)</span><br><span class="line"><span class="built_in">print</span>(computer3,computer3.cpu,computer3.disk)</span><br></pre></td></tr></table></figure></div>
 <p><img src="https://cdn.jsdelivr.net/gh/zyzhang827/filesimage@main/images/2022/01/05/c8cdab97bbe478d97bb8e13c1fb7f298-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-3dd12c.png" alt="面向对象"></p>
-]]></content>
-      <categories>
-        <category>Python</category>
-        <category>基础语法</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python 学习笔记(13)--类、对象</title>
-    <url>/2021/02/23/Python-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-13-%E7%B1%BB%E3%80%81%E5%AF%B9%E8%B1%A1/</url>
-    <content><![CDATA[<h2 id="1-两大编程思想">1. 两大编程思想</h2>
-<table >
-    <tr>
-        <td style="text-align:center"> </td>
-        <td style="text-align:center">面向过程</td>
-        <td style="text-align:center">面向对象</td>
-    </tr>
-    <tr>
-        <td> 区别 </td>
-        <td>事物比较简单，可以用线性的思维去解决</td>
-        <td>事物比较复杂，使用简单的线性思维无法解决</td>
-    </tr>
-    <tr>  
-        <td>共同点</td>       
-        <th colspan="2">面向过程和面向对象都是解决实际问题的一种思维方式
-        </th>     
-    </tr> 
-     <tr>  
-        <td></td>       
-        <th class="AutoNewline" colspan="2">二者相辅相成，并不是对立的；
-            解决复杂问题，通过面向对象方式便于我们从宏观上把握事物之间复杂的关系、方便我们分析整个系统；
-            具体到微观操作，仍然使用面向过程方式来处理。
-        </th>     
-    </tr>  
-</table>
-<span id="more"></span>
-<h2 id="2-类和对象的创建">2. 类和对象的创建</h2>
-<p><em>类</em>是多个类似事物组成的群体的统称。能够帮助我们快速理解和判断事物的性质。</p>
-<p>*对象：*不同数据类型属于不同的类，像100、99、520都是int类之下包含的相似的不同个例，这些个例专业术语称为实例或者对象。</p>
-<h3 id="（1）类的创建">（1）类的创建</h3>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;Student类名由一个或多个单词组成，每个单词的首字母大写，其余小写&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="comment"># Python中一切皆对象，Student是对象吗？内存由开空间吗？</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">id</span>(Student))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(Student))</span><br><span class="line"><span class="built_in">print</span>(Student)</span><br></pre></td></tr></table></figure></div>
-<p><em>类的组成：</em></p>
-<ul>
-<li>类属性</li>
-<li>实例方法</li>
-<li>静态方法</li>
-<li>类方法</li>
-</ul>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span>:</span></span><br><span class="line">    native_pace = <span class="string">&#x27;吉林&#x27;</span>					<span class="comment"># 直接写在类里的变量，称为类属性</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> *<span class="title">init</span>*(<span class="params">self,name,age</span>):</span></span><br><span class="line">        self.name = name				 <span class="comment"># self,name称为实体属性，进行了一个赋值的操作，将局部变量name的值赋给实体属性</span></span><br><span class="line">        self.age = age</span><br><span class="line">   </span><br><span class="line">	<span class="comment"># 实例方法</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">eat</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;学生在吃饭...&#x27;</span>)</span><br><span class="line">    <span class="comment"># 静态方法</span></span><br><span class="line"><span class="meta">    @staticmethod</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">method</span>():</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;我使用了staticmethod进行修饰，所以我是静态方法&#x27;</span>)</span><br><span class="line">    <span class="comment"># 类方法</span></span><br><span class="line"><span class="meta">    @classmethod</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">cm</span>(<span class="params">cls</span>):</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;我是类方法，因为我使用了classmethod进行修饰&#x27;</span>)</span><br><span class="line">        </span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;在类之外定义的称为函数，在类之内定义的称为方法</span></span><br><span class="line"><span class="string">def drink();		#函数</span></span><br><span class="line"><span class="string">	print(&#x27;喝水&#x27;)</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure></div>
-<h3 id="（2）对象的创建">（2）对象的创建</h3>
-<blockquote>
-<p>对象的创建又称为类的实例化：实例名 = 类名（）</p>
-</blockquote>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span>:</span></span><br><span class="line">    native_pace = <span class="string">&#x27;吉林&#x27;</span>					  <span class="comment"># 直接写在类里的变量，称为类属性</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> *<span class="title">init</span>*(<span class="params">self,name,age</span>):</span></span><br><span class="line">        self.name = name					<span class="comment"># self,name称为实体属性，进行了一个赋值的操作，将局部变量name的值赋给实体属性</span></span><br><span class="line">        self.age = age</span><br><span class="line">   </span><br><span class="line">	<span class="comment"># 实例方法</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">eat</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;学生在吃饭...&#x27;</span>)</span><br><span class="line">    <span class="comment"># 静态方法</span></span><br><span class="line"><span class="meta">    @staticmethod</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">method</span>():</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;我使用了staticmethod进行修饰，所以我是静态方法&#x27;</span>)</span><br><span class="line">    <span class="comment"># 类方法</span></span><br><span class="line"><span class="meta">    @classmethod</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">cm</span>(<span class="params">cls</span>):</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;我是类方法，因为我使用了classmethod进行修饰&#x27;</span>)</span><br><span class="line">        </span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;在类之外定义的称为函数，在类之内定义的称为方法</span></span><br><span class="line"><span class="string">def drink();		#函数</span></span><br><span class="line"><span class="string">	print(&#x27;喝水&#x27;)</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建Student类的对象</span></span><br><span class="line">stu1 = Student(<span class="string">&#x27;张三&#x27;</span>，<span class="number">20</span>)</span><br><span class="line">stu1.eat()									<span class="comment"># 对象名.方法名()</span></span><br><span class="line"><span class="built_in">print</span>(stu1.name)</span><br><span class="line"><span class="built_in">print</span>(stu1.age)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;---------------------------&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">id</span>(stu1))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(stu1))</span><br><span class="line"><span class="built_in">print</span>(stu1)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;---------------------------&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">id</span>(Student))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(Student))</span><br><span class="line"><span class="built_in">print</span>(Student)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;--------------------------&#x27;</span>)</span><br><span class="line">Student.eat(stu1)							<span class="comment"># 类名.方法名(类的对象)		与stu1.eat()一样，都是调用Student中的eat方法</span></span><br></pre></td></tr></table></figure></div>
-<h2 id="3-类属性、类方法、静态方法">3. 类属性、类方法、静态方法</h2>
-<ul>
-<li>*类属性：*类中方法外的变量称为类属性，被该类的所有对象所共享。</li>
-<li>*类方法：*使用@classmethod修饰的方法，使用类名直接访问的方法。</li>
-<li>*静态方法：*使用@staticmethod修饰的方法，使用类名直接访问的方法。</li>
-</ul>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span>:</span></span><br><span class="line">    native_pace = <span class="string">&#x27;吉林&#x27;</span>					   <span class="comment"># 直接写在类里的变量，称为类属性</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> *<span class="title">init</span>*(<span class="params">self,name,age</span>):</span>		    <span class="comment"># 初始化方法</span></span><br><span class="line">        self.name = name					<span class="comment"># self,name称为实体属性，进行了一个赋值的操作，将局部变量name的值赋给实体属性</span></span><br><span class="line">        self.age = age</span><br><span class="line">   </span><br><span class="line">	<span class="comment"># 实例方法</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">eat</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;学生在吃饭...&#x27;</span>)</span><br><span class="line">        </span><br><span class="line">    <span class="comment"># 静态方法</span></span><br><span class="line"><span class="meta">    @staticmethod</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">method</span>():</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;我使用了staticmethod进行修饰，所以我是静态方法&#x27;</span>)</span><br><span class="line">        </span><br><span class="line">    <span class="comment"># 类方法</span></span><br><span class="line"><span class="meta">    @classmethod</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">cm</span>(<span class="params">cls</span>):</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;我是类方法，因为我使用了classmethod进行修饰&#x27;</span>)</span><br><span class="line"></span><br><span class="line">        </span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;------------类属性的使用方法---------------&#x27;</span>)      </span><br><span class="line"><span class="built_in">print</span>(Student.native_pace)</span><br><span class="line">stu1 = Student(<span class="string">&#x27;张三&#x27;</span>,<span class="number">20</span>)</span><br><span class="line">stu2 = Student(<span class="string">&#x27;李四&#x27;</span>,<span class="number">30</span>)</span><br><span class="line"><span class="built_in">print</span>(stu1.native_pace)</span><br><span class="line"><span class="built_in">print</span>(stu2.native_pace)</span><br><span class="line">Student.native_pace = <span class="string">&#x27;天津&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(stu1.native_pace)</span><br><span class="line"><span class="built_in">print</span>(stu2.native_pace)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;------------类方法的使用方式--------------&#x27;</span>)</span><br><span class="line">Student.cm()</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;-----------静态方法的使用方式----------------&#x27;</span>)</span><br><span class="line">Student.method()</span><br></pre></td></tr></table></figure></div>
-<h2 id="4-动态绑定属性和方法">4. 动态绑定属性和方法</h2>
-<blockquote>
-<p>Python是动态语言，在创建对象后，可以动态地绑定属性和方法。</p>
-</blockquote>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> *<span class="title">init</span>*(<span class="params">self,name,age</span>):</span></span><br><span class="line">        self.name = name</span><br><span class="line">        self.age = age</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">eat</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="built_in">print</span>(self.name + <span class="string">&#x27;在吃饭&#x27;</span>)</span><br><span class="line">        </span><br><span class="line">stu1 = Student(<span class="string">&#x27;张三&#x27;</span>,<span class="number">20</span>)</span><br><span class="line">stu2 = Student(<span class="string">&#x27;李四&#x27;</span>,<span class="number">30</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">id</span>(stu1))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">id</span>(stu2))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;---------只给李四添加一个性别---------------&#x27;</span>)</span><br><span class="line">stu2.gender = <span class="string">&#x27;女&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(stu1.name,stu1.age)					<span class="comment"># 如果添加stu1.gender会抛出AttributeError</span></span><br><span class="line"><span class="built_in">print</span>(stu2.name,stu2.age,stu2.gender)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;-------------------------&#x27;</span>)</span><br><span class="line">stu1.eat()</span><br><span class="line">stu2.eat()</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">show</span>():</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;定义在类之外地，称为函数&#x27;</span>)</span><br><span class="line">stu1.show = show</span><br><span class="line">stu1.show</span><br><span class="line"><span class="comment"># stu2.show		因为stu2并没有绑定show方法</span></span><br></pre></td></tr></table></figure></div>
 ]]></content>
       <categories>
         <category>Python</category>
@@ -2678,58 +2678,6 @@ $$</p>
       </tags>
   </entry>
   <entry>
-    <title>Python 学习笔记(5)--结构</title>
-    <url>/2021/02/23/Python-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-5-%E7%BB%93%E6%9E%84/</url>
-    <content><![CDATA[<h2 id="1-程序的组织结构">1. 程序的组织结构</h2>
-<p>任何简单或复杂的算法都可以由顺序结构、选择结构和循环结构这三种基本结构组合而成。</p>
-<h2 id="2-顺序结构">2. 顺序结构</h2>
-<p>程序从上到下顺序地执行代码，中间没有任何地判断和跳转，直到程序结束。</p>
-<blockquote>
-<p>程序开始 → 代码1 → 代码2 → … → 代码N → 程序结果</p>
-</blockquote>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;&#x27;把大象装冰箱一共分几步&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;-------程序开始--------&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;1.把冰箱门打开&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;2.把大象放到冰箱里&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;3.把冰箱门关上&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;------程序结束---------&#x27;</span>)</span><br></pre></td></tr></table></figure></div>
-<span id="more"></span>
-<h2 id="3-对象的布尔值">3. 对象的布尔值</h2>
-<p>Python一切皆对象，所有对象都有一个布尔值，获取对象地布尔值使用内置函数<code>bool()</code></p>
-<p>以下对象地布尔值为<code>False</code></p>
-<ul>
-<li>False</li>
-<li>数值0</li>
-<li>None</li>
-<li>空字符串</li>
-<li>空列表</li>
-<li>空元组</li>
-<li>空字典</li>
-<li>空集合</li>
-</ul>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 测试对象地布尔值</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;----------布尔值均为False---------&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">bool</span>(<span class="literal">False</span>))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">bool</span>(<span class="number">0</span>))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">bool</span>(<span class="number">0</span>,<span class="number">0</span>))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">bool</span>(<span class="literal">None</span>))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">bool</span>(<span class="string">&#x27;&#x27;</span>))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">bool</span>(<span class="string">&quot;&quot;</span>))  </span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">bool</span>([]))      			<span class="comment"># 空列表</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">bool</span>(<span class="built_in">list</span>()))  			<span class="comment"># 空列表</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">bool</span>(()))      			<span class="comment"># 空元组</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">bool</span>(<span class="built_in">tuple</span>())) 			<span class="comment"># 空元组</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">bool</span>(&#123;&#125;))      			<span class="comment"># 空字典</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">bool</span>(<span class="built_in">dict</span>())) 		 	<span class="comment"># 空字典</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">bool</span>(<span class="built_in">set</span>()))   			<span class="comment"># 空集合</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;------------布尔值为True-------------&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">bool</span>(<span class="number">18</span>))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">bool</span>(<span class="literal">True</span>))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">bool</span>(<span class="string">&#x27;helloworld&#x27;</span>))</span><br></pre></td></tr></table></figure></div>
-<h2 id="4-选择结构">4. 选择结构</h2>
-<p>程序根据判断条件地布尔值选择性地执行部分代码，明确地让计算机知道在什么条件下该去做什么。</p>
-<h3 id="（1）单分支if结构">（1）单分支<code>if</code>结构</h3>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">money = <span class="number">1000</span>							 <span class="comment"># 余额</span></span><br><span class="line">s = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&#x27;请输入取款金额：&#x27;</span>))			<span class="comment"># 取款金额</span></span><br><span class="line"><span class="comment"># 判断余额是否充足</span></span><br><span class="line"><span class="keyword">if</span> money &gt;= s:</span><br><span class="line">  money = money - s</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&#x27;取款成功，余额为：&#x27;</span>,money)</span><br></pre></td></tr></table></figure></div>
-<h3 id="（2）双分支if-else结构">（2）双分支<code>if...else</code>结构</h3>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;&#x27;从键盘录入一个整数，编写程序使计算机判断奇偶 &#x27;&#x27;&#x27;</span></span><br><span class="line">num = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&#x27;请输入一个整数：&#x27;</span>))</span><br><span class="line"><span class="keyword">if</span> num % <span class="number">2</span> == <span class="number">0</span>:</span><br><span class="line">  <span class="built_in">print</span>(num,<span class="string">&#x27;是偶数&#x27;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">  <span class="built_in">print</span>(num,<span class="string">&#x27;是奇数&#x27;</span>)</span><br></pre></td></tr></table></figure></div>
-<h3 id="（3）多分支if-elif-else结构">（3）多分支<code>if...elif...else</code>结构</h3>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;&#x27;多分支结构，多选一执行</span></span><br><span class="line"><span class="string">  从键盘录入一个整数成绩</span></span><br><span class="line"><span class="string">    90-100  A</span></span><br><span class="line"><span class="string">    80-89   B</span></span><br><span class="line"><span class="string">    70-79  C</span></span><br><span class="line"><span class="string">    60-69  D</span></span><br><span class="line"><span class="string">    0-59  E</span></span><br><span class="line"><span class="string">    小于0或大于100 为非法数据（不是成绩的有效范围）</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line">score = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&#x27;请输入一个成绩：&#x27;</span>))</span><br><span class="line"><span class="comment"># 判断</span></span><br><span class="line"><span class="keyword">if</span> score &gt;= <span class="number">90</span> <span class="keyword">and</span> score &lt;= <span class="number">100</span>:    <span class="comment"># Python语句独有特点也可写作 if 90 &lt;= score &lt;= 100: </span></span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&#x27;A级&#x27;</span>)</span><br><span class="line"><span class="keyword">elif</span> score &gt;= <span class="number">80</span> <span class="keyword">and</span> score &lt;= <span class="number">89</span>:</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&#x27;B级&#x27;</span>)</span><br><span class="line"><span class="keyword">elif</span> score &gt;= <span class="number">70</span> <span class="keyword">and</span> score &lt;= <span class="number">79</span>:</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&#x27;C级&#x27;</span>)</span><br><span class="line"><span class="keyword">elif</span> score &gt;= <span class="number">60</span> <span class="keyword">and</span> score &lt;= <span class="number">69</span>:</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&#x27;D级&#x27;</span>)</span><br><span class="line"><span class="keyword">elif</span> score &gt;= <span class="number">50</span> <span class="keyword">and</span> score &lt;= <span class="number">59</span>:</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&#x27;E级&#x27;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&#x27;对不起，成绩有误，不在成绩的有效范围&#x27;</span>)</span><br></pre></td></tr></table></figure></div>
-<h3 id="（4）if语句的嵌套">（4）if语句的嵌套</h3>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;&#x27;会员    &gt;= 200   8折</span></span><br><span class="line"><span class="string">          &gt;= 100    9折</span></span><br><span class="line"><span class="string">          不打折</span></span><br><span class="line"><span class="string">  非会员   &gt;=200     9.5折</span></span><br><span class="line"><span class="string">          不打折&#x27;&#x27;&#x27;</span></span><br><span class="line">answer = <span class="built_in">input</span>(<span class="string">&#x27;您是会员吗？y/n \n&#x27;</span>)</span><br><span class="line">money = <span class="built_in">float</span>(<span class="built_in">input</span>(<span class="string">&#x27;请输入您的购物金额：&#x27;</span>))</span><br><span class="line"><span class="comment">#外层判断是否是会员</span></span><br><span class="line"><span class="keyword">if</span> answer == <span class="string">&#x27;y&#x27;</span>:   <span class="comment">#会员</span></span><br><span class="line">  <span class="keyword">if</span> money &gt;= <span class="number">200</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;打8折，付款金额为：&#x27;</span>,money*<span class="number">0.8</span>,<span class="string">&#x27;元&#x27;</span>)</span><br><span class="line">  <span class="keyword">elif</span> money &gt;= <span class="number">100</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;打9折，付款金额为：&#x27;</span>,money*<span class="number">0.9</span>,<span class="string">&#x27;元&#x27;</span>)</span><br><span class="line">  <span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;不打折，付款金额为：&#x27;</span>,money,<span class="string">&#x27;元&#x27;</span>)</span><br><span class="line"><span class="keyword">else</span>:              <span class="comment">#非会员</span></span><br><span class="line">  <span class="keyword">if</span> money &gt;= <span class="number">200</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;打9.5折，付款金额为：&#x27;</span>,money*<span class="number">0.95</span>,<span class="string">&#x27;元&#x27;</span>)</span><br><span class="line">  <span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;不打折，付款金额为：&#x27;</span>,money,<span class="string">&#x27;元&#x27;</span>)</span><br></pre></td></tr></table></figure></div>
-<h3 id="（5）条件表达式">（5）条件表达式</h3>
-<p><em>条件表达式</em>是<code>if...else</code>的简写，语法结构为：<code>x if 判断条件 else y</code></p>
-<p>运算规则：如果判断条件的布尔值为True，条件表达式的返回值为x，否则条件表达式的返回值为False。</p>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;&#x27;从键盘录入两个整数，比较两个整数的大小&#x27;&#x27;&#x27;</span></span><br><span class="line">num_a = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&#x27;请输入第一个整数：&#x27;</span>))</span><br><span class="line">num_b = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&#x27;请输入第二个整数：&#x27;</span>))</span><br><span class="line"><span class="comment">#比较大小</span></span><br><span class="line"><span class="keyword">if</span> num_a &gt;= num_b:</span><br><span class="line">  <span class="built_in">print</span>(num_a,<span class="string">&#x27;大于等于&#x27;</span>,num_b)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">  <span class="built_in">print</span>(num_a,<span class="string">&#x27;小于&#x27;</span>,num_b)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;---------使用条件表达式进行比较-------------&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(( <span class="built_in">str</span>(num_a) + <span class="string">&#x27;大于等于&#x27;</span> + <span class="built_in">str</span>(num_b))  <span class="keyword">if</span> num_a&gt;=num_b <span class="keyword">else</span> <span class="built_in">str</span>(num_a)+<span class="string">&#x27;小于&#x27;</span>+<span class="built_in">str</span>(num_b))</span><br></pre></td></tr></table></figure></div>
-<h2 id="5-pass空语句">5. pass空语句</h2>
-<p>语句什么都不做，只是一个占位符，用在语法上需要语句的地方。</p>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#pass语句</span></span><br><span class="line">answer = <span class="built_in">input</span>(‘您是会员吗？y/n’)</span><br><span class="line"><span class="keyword">if</span> answer == <span class="string">&#x27;y&#x27;</span>:</span><br><span class="line">  <span class="keyword">pass</span></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">  <span class="keyword">pass</span></span><br></pre></td></tr></table></figure></div>
-]]></content>
-      <categories>
-        <category>Python</category>
-        <category>基础语法</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Python 学习笔记(6)--循环及嵌套</title>
     <url>/2021/02/23/Python-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-6-%E5%BE%AA%E7%8E%AF%E5%8F%8A%E5%B5%8C%E5%A5%97/</url>
     <content><![CDATA[<h2 id="1-range-函数的使用">1. range()函数的使用</h2>
@@ -2783,6 +2731,58 @@ range 类型的优点：不管 range 对象表示的整数序列有多长，所�
 <p><em>二重循环中的break和continue用于控制本层循环。</em></p>
 <p><img src="https://cdn.jsdelivr.net/gh/zyzhang827/filesimage@main/images/2022/01/05/e27097e833ec6dd9a7236b79c48217b8-%E4%BA%8C%E9%87%8D%E5%BE%AA%E7%8E%AF-c106fa.png" alt="二重循环"></p>
 <div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;&#x27;流程控制语句break与continue在二重循环中的使用&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">5</span>):     					<span class="comment"># 外层循环执行5次</span></span><br><span class="line">  <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>，<span class="number">11</span>):</span><br><span class="line">    <span class="keyword">if</span> j%<span class="number">2</span> == <span class="number">0</span>:</span><br><span class="line">      <span class="keyword">break</span></span><br><span class="line">      <span class="comment">#continue</span></span><br><span class="line">    <span class="built_in">print</span>(j)</span><br><span class="line">    <span class="comment">#print(j,end = &#x27;\t&#x27;)</span></span><br><span class="line">  <span class="comment">#print()</span></span><br></pre></td></tr></table></figure></div>
+]]></content>
+      <categories>
+        <category>Python</category>
+        <category>基础语法</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python 学习笔记(5)--结构</title>
+    <url>/2021/02/23/Python-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-5-%E7%BB%93%E6%9E%84/</url>
+    <content><![CDATA[<h2 id="1-程序的组织结构">1. 程序的组织结构</h2>
+<p>任何简单或复杂的算法都可以由顺序结构、选择结构和循环结构这三种基本结构组合而成。</p>
+<h2 id="2-顺序结构">2. 顺序结构</h2>
+<p>程序从上到下顺序地执行代码，中间没有任何地判断和跳转，直到程序结束。</p>
+<blockquote>
+<p>程序开始 → 代码1 → 代码2 → … → 代码N → 程序结果</p>
+</blockquote>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;&#x27;把大象装冰箱一共分几步&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;-------程序开始--------&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;1.把冰箱门打开&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;2.把大象放到冰箱里&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;3.把冰箱门关上&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;------程序结束---------&#x27;</span>)</span><br></pre></td></tr></table></figure></div>
+<span id="more"></span>
+<h2 id="3-对象的布尔值">3. 对象的布尔值</h2>
+<p>Python一切皆对象，所有对象都有一个布尔值，获取对象地布尔值使用内置函数<code>bool()</code></p>
+<p>以下对象地布尔值为<code>False</code></p>
+<ul>
+<li>False</li>
+<li>数值0</li>
+<li>None</li>
+<li>空字符串</li>
+<li>空列表</li>
+<li>空元组</li>
+<li>空字典</li>
+<li>空集合</li>
+</ul>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 测试对象地布尔值</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;----------布尔值均为False---------&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">bool</span>(<span class="literal">False</span>))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">bool</span>(<span class="number">0</span>))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">bool</span>(<span class="number">0</span>,<span class="number">0</span>))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">bool</span>(<span class="literal">None</span>))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">bool</span>(<span class="string">&#x27;&#x27;</span>))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">bool</span>(<span class="string">&quot;&quot;</span>))  </span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">bool</span>([]))      			<span class="comment"># 空列表</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">bool</span>(<span class="built_in">list</span>()))  			<span class="comment"># 空列表</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">bool</span>(()))      			<span class="comment"># 空元组</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">bool</span>(<span class="built_in">tuple</span>())) 			<span class="comment"># 空元组</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">bool</span>(&#123;&#125;))      			<span class="comment"># 空字典</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">bool</span>(<span class="built_in">dict</span>())) 		 	<span class="comment"># 空字典</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">bool</span>(<span class="built_in">set</span>()))   			<span class="comment"># 空集合</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;------------布尔值为True-------------&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">bool</span>(<span class="number">18</span>))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">bool</span>(<span class="literal">True</span>))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">bool</span>(<span class="string">&#x27;helloworld&#x27;</span>))</span><br></pre></td></tr></table></figure></div>
+<h2 id="4-选择结构">4. 选择结构</h2>
+<p>程序根据判断条件地布尔值选择性地执行部分代码，明确地让计算机知道在什么条件下该去做什么。</p>
+<h3 id="（1）单分支if结构">（1）单分支<code>if</code>结构</h3>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">money = <span class="number">1000</span>							 <span class="comment"># 余额</span></span><br><span class="line">s = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&#x27;请输入取款金额：&#x27;</span>))			<span class="comment"># 取款金额</span></span><br><span class="line"><span class="comment"># 判断余额是否充足</span></span><br><span class="line"><span class="keyword">if</span> money &gt;= s:</span><br><span class="line">  money = money - s</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&#x27;取款成功，余额为：&#x27;</span>,money)</span><br></pre></td></tr></table></figure></div>
+<h3 id="（2）双分支if-else结构">（2）双分支<code>if...else</code>结构</h3>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;&#x27;从键盘录入一个整数，编写程序使计算机判断奇偶 &#x27;&#x27;&#x27;</span></span><br><span class="line">num = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&#x27;请输入一个整数：&#x27;</span>))</span><br><span class="line"><span class="keyword">if</span> num % <span class="number">2</span> == <span class="number">0</span>:</span><br><span class="line">  <span class="built_in">print</span>(num,<span class="string">&#x27;是偶数&#x27;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">  <span class="built_in">print</span>(num,<span class="string">&#x27;是奇数&#x27;</span>)</span><br></pre></td></tr></table></figure></div>
+<h3 id="（3）多分支if-elif-else结构">（3）多分支<code>if...elif...else</code>结构</h3>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;&#x27;多分支结构，多选一执行</span></span><br><span class="line"><span class="string">  从键盘录入一个整数成绩</span></span><br><span class="line"><span class="string">    90-100  A</span></span><br><span class="line"><span class="string">    80-89   B</span></span><br><span class="line"><span class="string">    70-79  C</span></span><br><span class="line"><span class="string">    60-69  D</span></span><br><span class="line"><span class="string">    0-59  E</span></span><br><span class="line"><span class="string">    小于0或大于100 为非法数据（不是成绩的有效范围）</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line">score = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&#x27;请输入一个成绩：&#x27;</span>))</span><br><span class="line"><span class="comment"># 判断</span></span><br><span class="line"><span class="keyword">if</span> score &gt;= <span class="number">90</span> <span class="keyword">and</span> score &lt;= <span class="number">100</span>:    <span class="comment"># Python语句独有特点也可写作 if 90 &lt;= score &lt;= 100: </span></span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&#x27;A级&#x27;</span>)</span><br><span class="line"><span class="keyword">elif</span> score &gt;= <span class="number">80</span> <span class="keyword">and</span> score &lt;= <span class="number">89</span>:</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&#x27;B级&#x27;</span>)</span><br><span class="line"><span class="keyword">elif</span> score &gt;= <span class="number">70</span> <span class="keyword">and</span> score &lt;= <span class="number">79</span>:</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&#x27;C级&#x27;</span>)</span><br><span class="line"><span class="keyword">elif</span> score &gt;= <span class="number">60</span> <span class="keyword">and</span> score &lt;= <span class="number">69</span>:</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&#x27;D级&#x27;</span>)</span><br><span class="line"><span class="keyword">elif</span> score &gt;= <span class="number">50</span> <span class="keyword">and</span> score &lt;= <span class="number">59</span>:</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&#x27;E级&#x27;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&#x27;对不起，成绩有误，不在成绩的有效范围&#x27;</span>)</span><br></pre></td></tr></table></figure></div>
+<h3 id="（4）if语句的嵌套">（4）if语句的嵌套</h3>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;&#x27;会员    &gt;= 200   8折</span></span><br><span class="line"><span class="string">          &gt;= 100    9折</span></span><br><span class="line"><span class="string">          不打折</span></span><br><span class="line"><span class="string">  非会员   &gt;=200     9.5折</span></span><br><span class="line"><span class="string">          不打折&#x27;&#x27;&#x27;</span></span><br><span class="line">answer = <span class="built_in">input</span>(<span class="string">&#x27;您是会员吗？y/n \n&#x27;</span>)</span><br><span class="line">money = <span class="built_in">float</span>(<span class="built_in">input</span>(<span class="string">&#x27;请输入您的购物金额：&#x27;</span>))</span><br><span class="line"><span class="comment">#外层判断是否是会员</span></span><br><span class="line"><span class="keyword">if</span> answer == <span class="string">&#x27;y&#x27;</span>:   <span class="comment">#会员</span></span><br><span class="line">  <span class="keyword">if</span> money &gt;= <span class="number">200</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;打8折，付款金额为：&#x27;</span>,money*<span class="number">0.8</span>,<span class="string">&#x27;元&#x27;</span>)</span><br><span class="line">  <span class="keyword">elif</span> money &gt;= <span class="number">100</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;打9折，付款金额为：&#x27;</span>,money*<span class="number">0.9</span>,<span class="string">&#x27;元&#x27;</span>)</span><br><span class="line">  <span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;不打折，付款金额为：&#x27;</span>,money,<span class="string">&#x27;元&#x27;</span>)</span><br><span class="line"><span class="keyword">else</span>:              <span class="comment">#非会员</span></span><br><span class="line">  <span class="keyword">if</span> money &gt;= <span class="number">200</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;打9.5折，付款金额为：&#x27;</span>,money*<span class="number">0.95</span>,<span class="string">&#x27;元&#x27;</span>)</span><br><span class="line">  <span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;不打折，付款金额为：&#x27;</span>,money,<span class="string">&#x27;元&#x27;</span>)</span><br></pre></td></tr></table></figure></div>
+<h3 id="（5）条件表达式">（5）条件表达式</h3>
+<p><em>条件表达式</em>是<code>if...else</code>的简写，语法结构为：<code>x if 判断条件 else y</code></p>
+<p>运算规则：如果判断条件的布尔值为True，条件表达式的返回值为x，否则条件表达式的返回值为False。</p>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;&#x27;从键盘录入两个整数，比较两个整数的大小&#x27;&#x27;&#x27;</span></span><br><span class="line">num_a = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&#x27;请输入第一个整数：&#x27;</span>))</span><br><span class="line">num_b = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&#x27;请输入第二个整数：&#x27;</span>))</span><br><span class="line"><span class="comment">#比较大小</span></span><br><span class="line"><span class="keyword">if</span> num_a &gt;= num_b:</span><br><span class="line">  <span class="built_in">print</span>(num_a,<span class="string">&#x27;大于等于&#x27;</span>,num_b)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">  <span class="built_in">print</span>(num_a,<span class="string">&#x27;小于&#x27;</span>,num_b)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;---------使用条件表达式进行比较-------------&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(( <span class="built_in">str</span>(num_a) + <span class="string">&#x27;大于等于&#x27;</span> + <span class="built_in">str</span>(num_b))  <span class="keyword">if</span> num_a&gt;=num_b <span class="keyword">else</span> <span class="built_in">str</span>(num_a)+<span class="string">&#x27;小于&#x27;</span>+<span class="built_in">str</span>(num_b))</span><br></pre></td></tr></table></figure></div>
+<h2 id="5-pass空语句">5. pass空语句</h2>
+<p>语句什么都不做，只是一个占位符，用在语法上需要语句的地方。</p>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#pass语句</span></span><br><span class="line">answer = <span class="built_in">input</span>(‘您是会员吗？y/n’)</span><br><span class="line"><span class="keyword">if</span> answer == <span class="string">&#x27;y&#x27;</span>:</span><br><span class="line">  <span class="keyword">pass</span></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">  <span class="keyword">pass</span></span><br></pre></td></tr></table></figure></div>
 ]]></content>
       <categories>
         <category>Python</category>
@@ -3026,78 +3026,6 @@ range 类型的优点：不管 range 对象表示的整数序列有多长，所�
       </categories>
       <tags>
         <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>爬虫学习笔记(2)--requests 模块基础</title>
-    <url>/2022/02/14/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-2-requests-%E6%A8%A1%E5%9D%97%E5%9F%BA%E7%A1%80/</url>
-    <content><![CDATA[<h2 id="1-requests-第一血">1. requests 第一血</h2>
-<p>requests 模块：Python 中原生的一款基于网络请求的模块，功能非常强大，简单便捷，效率极高。</p>
-<p>作用：模拟浏览器发请求。</p>
-<p>如何使用：（requests 模块的编码流程）</p>
-<ul>
-<li>指定 url</li>
-<li>发起请求</li>
-<li>获取响应数据</li>
-<li>持久化存储</li>
-</ul>
-<span id="more"></span>
-<p>环境的安装：<code>pip install requests</code></p>
-<p>实战编码：</p>
-<ul>
-<li>需求：爬取搜狗首页的数据</li>
-</ul>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    <span class="comment"># step1 指定url</span></span><br><span class="line">    url = <span class="string">&#x27;https://www.sogou.com/&#x27;</span></span><br><span class="line">    <span class="comment"># step2 发起请求</span></span><br><span class="line">    <span class="comment"># get方法会返回一个响应对象</span></span><br><span class="line">    response = requests.get(url = url)</span><br><span class="line">    <span class="comment"># step3 获取响应数据，text返回的是字符串形式的响应数据</span></span><br><span class="line">    page_text = response.text</span><br><span class="line">    <span class="built_in">print</span>(page_text)</span><br><span class="line">    <span class="comment"># step4 持久化存储</span></span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;./sogou.html&#x27;</span>,<span class="string">&#x27;w&#x27;</span>,encoding = <span class="string">&#x27;utf-8&#x27;</span>) <span class="keyword">as</span> fp:</span><br><span class="line">        fp.write(page_text)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;爬取数据结束！&#x27;</span>)</span><br></pre></td></tr></table></figure></div>
-<h2 id="2-requests-巩固深入案例介绍">2. requests 巩固深入案例介绍</h2>
-<h3 id="（1）简易网页采集器">（1）简易网页采集器</h3>
-<ul>
-<li>UA 检测</li>
-<li>UA 伪装</li>
-</ul>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># UA：User-Agent请求载体的身份标识</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;UA检测：门户网站的服务器会监测对应请求的载体身份标识，</span></span><br><span class="line"><span class="string">如果检测到请求载体身份标识是某一款浏览器,说明该请求时一个正常的请求；</span></span><br><span class="line"><span class="string">但是，如果检测到请求的载体身份不是基于某一款浏览器的，则表示该请求为不正常请求（爬虫）,</span></span><br><span class="line"><span class="string">则服务器很有可能拒绝该次请求&#x27;&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># UA伪装：让爬虫对应的请求载体身份标识伪装成某一款浏览器，躲过UA检测</span></span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    <span class="comment"># UA伪装：将对应的User-Agent封装到一个字典中</span></span><br><span class="line">    headers = &#123;</span><br><span class="line">    <span class="string">&#x27;User-Agent&#x27;</span>:<span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment"># step1 指定url query</span></span><br><span class="line">    url = <span class="string">&#x27;https://www.sogou.com/web&#x27;</span></span><br><span class="line">    <span class="comment"># 处理url携带的参数 封装到字典中</span></span><br><span class="line">    kw = <span class="built_in">input</span>(<span class="string">&#x27;Enter a word:&#x27;</span>)</span><br><span class="line">    param =&#123;</span><br><span class="line">        <span class="string">&#x27;query&#x27;</span>:kw</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment"># step2 对指定的url发起请求，对应的url是携带参数的，并且处理过程中处理了参数</span></span><br><span class="line">    response = requests.get(url = url,params = param,headers = headers)</span><br><span class="line">    <span class="comment"># step3</span></span><br><span class="line">    page_text = response.text</span><br><span class="line">    <span class="comment"># step4</span></span><br><span class="line">    fileName = kw + <span class="string">&#x27;.html&#x27;</span></span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(fileName,<span class="string">&#x27;w&#x27;</span>,encoding =<span class="string">&#x27;utf-8&#x27;</span>) <span class="keyword">as</span> fp:</span><br><span class="line">        fp.write(page_text)</span><br><span class="line">    <span class="built_in">print</span>(fileName,<span class="string">&#x27;保存成功！！&#x27;</span>)</span><br></pre></td></tr></table></figure></div>
-<h3 id="（2）破解百度翻译">（2）破解百度翻译</h3>
-<ul>
-<li>post 请求（携带了参数）</li>
-<li>响应数据是一组 json 数据</li>
-</ul>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    <span class="comment"># step1 指定URL</span></span><br><span class="line">    post_url = <span class="string">&#x27;https://fanyi.baidu.com/sug&#x27;</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment"># step2 进行UA伪装</span></span><br><span class="line">    headers = &#123;</span><br><span class="line">    <span class="string">&#x27;User-Agent&#x27;</span>:<span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># step3 post请求参数处理（同get请求类似）</span></span><br><span class="line">    word = <span class="built_in">input</span>(<span class="string">&#x27;Enter a word:\n&#x27;</span>)</span><br><span class="line">    data = &#123;</span><br><span class="line">        <span class="string">&#x27;kw&#x27;</span>:word</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># step4 请求发送</span></span><br><span class="line">    response = requests.post(url = post_url,data = data,headers = headers)</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># step5 获取响应数据:json()方法返回的是obj  (如果确认响应数据是json类型--&gt;通过Content-Type分辨，才可以直接用json方法)</span></span><br><span class="line">    dict_obj = response.json()</span><br><span class="line">    <span class="built_in">print</span>(dict_obj)</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># step6 持久化存储</span></span><br><span class="line">    fileName = word + <span class="string">&#x27;.json&#x27;</span></span><br><span class="line">    fp = <span class="built_in">open</span>(fileName,<span class="string">&#x27;w&#x27;</span>,encoding=<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line">    json.dump(dict_obj,fp = fp,ensure_ascii = <span class="literal">False</span>)</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;Over!&#x27;</span>)</span><br></pre></td></tr></table></figure></div>
-<h3 id="（3）豆瓣电影">（3）豆瓣电影</h3>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    url = <span class="string">&#x27;https://movie.douban.com/j/chart/top_list&#x27;</span></span><br><span class="line">    param = &#123;</span><br><span class="line">        <span class="string">&#x27;type&#x27;</span>:<span class="string">&#x27;24&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;interval_id&#x27;</span>:<span class="string">&#x27;100:90&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;action&#x27;</span>:<span class="string">&#x27;&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;start&#x27;</span>:<span class="string">&#x27;0&#x27;</span>,	<span class="comment"># 从库中的第几部电影去取</span></span><br><span class="line">        <span class="string">&#x27;limit&#x27;</span>:<span class="string">&#x27;20&#x27;</span>	<span class="comment"># 一次取出的个数</span></span><br><span class="line">    &#125;</span><br><span class="line">    headers = &#123;</span><br><span class="line">    <span class="string">&#x27;User-Agent&#x27;</span>:<span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">    response = requests.get(url = url,params = param,headers = headers)</span><br><span class="line">    list_data = response.json()</span><br><span class="line">    fp = <span class="built_in">open</span>(<span class="string">&#x27;./douban.json&#x27;</span>,<span class="string">&#x27;w&#x27;</span>,encoding = <span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line">    json.dump(list_data,fp = fp,ensure_ascii = <span class="literal">False</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;Over!&#x27;</span>)</span><br></pre></td></tr></table></figure></div>
-<h2 id="3-作业—肯德基餐厅查询">3. 作业—肯德基餐厅查询</h2>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    post_url = <span class="string">&#x27;https://www.kfc.com.cn/kfccda/ashx/GetStoreList.ashx?op=keyword&#x27;</span></span><br><span class="line">    keyword = <span class="built_in">input</span>(<span class="string">&#x27;请输入要查询的城市：&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    data =&#123;</span><br><span class="line">        <span class="string">&#x27;cname&#x27;</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;pid&#x27;</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;keyword&#x27;</span>: keyword,</span><br><span class="line">        <span class="string">&#x27;pageindex&#x27;</span>: <span class="string">&#x27;1&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;pageSize&#x27;</span>: <span class="string">&#x27;10&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">    headers = &#123;</span><br><span class="line">    <span class="string">&#x27;User-Agent&#x27;</span>:<span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">    response = requests.post(url = post_url, data = data, headers = headers)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 持久化存储</span></span><br><span class="line">    <span class="comment"># page_text = response.text</span></span><br><span class="line">    <span class="comment"># fileName = keyword + &#x27;.html&#x27;</span></span><br><span class="line">    <span class="comment"># with open(fileName, &#x27;w&#x27;, encoding= &#x27;utf-8&#x27;) as fp:</span></span><br><span class="line">    <span class="comment">#     fp.write(page_text)</span></span><br><span class="line">    <span class="comment"># print(fileName, &#x27;Over!&#x27;)</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 直接打印出来</span></span><br><span class="line">    page = response.json()</span><br><span class="line">    <span class="keyword">for</span> <span class="built_in">dict</span> <span class="keyword">in</span> page[<span class="string">&#x27;Table1&#x27;</span>]:</span><br><span class="line">        StoreName = <span class="built_in">dict</span>[<span class="string">&#x27;storeName&#x27;</span>]</span><br><span class="line">        address = <span class="built_in">dict</span>[<span class="string">&#x27;addressDetail&#x27;</span>]</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;StoreName:&#x27;</span> + StoreName, <span class="string">&#x27;address:&#x27;</span> + address + <span class="string">&#x27;\n&#x27;</span>)</span><br></pre></td></tr></table></figure></div>
-<h2 id="4-综合练习—药监总局">4. 综合练习—药监总局</h2>
-<ul>
-<li>
-<p>爬取国家药品监督管理总局中基于中华人民共和国化妆品生产许可证相关数据（<a href="http://scxk.nmpa.gov.cn:81/xk/%EF%BC%89">http://scxk.nmpa.gov.cn:81/xk/）</a></p>
-</li>
-<li>
-<p>动态加载数据：首页中对应的企业信息是通过 <code>ajax</code> 动态请求到的</p>
-</li>
-<li>
-<p>通过对详情页 url 的观察发现：</p>
-<ul>
-<li>url 的域名都是一样的，只有携带的参数（id）不一样</li>
-<li>id 值可以从首页对应的 <code>ajax</code> 请求到的 <code>json</code> 串中获取</li>
-<li>域名和 id 值拼接出一个完整的企业对应的详情页的 url</li>
-</ul>
-</li>
-<li>
-<p>详情页的企业详情数据也是动态加载出来的！！！</p>
-<ul>
-<li>观察后发现，所有 <code>post</code> 请求的 url 都是一样的，只有参数 id 值不同</li>
-<li>如果我们可以批量获取多家企业的id后，就可以就 id 和 url 形成一个完整的详情页对应详情数据的 <code>ajax</code> 请求的 url</li>
-</ul>
-</li>
-</ul>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    headers = &#123;</span><br><span class="line">        <span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">    id_list = []  							<span class="comment"># 存储企业的id</span></span><br><span class="line">    all_data_list = []  					<span class="comment"># 存储企业所有的详情数据</span></span><br><span class="line">    <span class="comment"># 批量获取不同企业的id值</span></span><br><span class="line">    url = <span class="string">&#x27;http://scxk.nmpa.gov.cn:81/xk/itownet/portalAction.do?method=getXkzsList&#x27;</span></span><br><span class="line">    <span class="comment"># 参数的封装</span></span><br><span class="line">    <span class="keyword">for</span> page <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="number">11</span>):</span><br><span class="line">        page = <span class="built_in">str</span>(page)</span><br><span class="line">        data = &#123;</span><br><span class="line">            <span class="string">&#x27;on&#x27;</span>: <span class="string">&#x27;true&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;page&#x27;</span>: page,</span><br><span class="line">            <span class="string">&#x27;pageSize&#x27;</span>: <span class="string">&#x27;15&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;productName&#x27;</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;conditionType&#x27;</span>: <span class="string">&#x27;1&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;applyname&#x27;</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;applysn&#x27;</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">        &#125;</span><br><span class="line">    json_ids = requests.post(url=url, headers=headers, data=data).json()</span><br><span class="line">    <span class="comment"># 从 json_ids 字典中拿到 list 对应的 value 值，对 value 值列表进行遍历</span></span><br><span class="line">    <span class="keyword">for</span> dic <span class="keyword">in</span> json_ids[<span class="string">&#x27;list&#x27;</span>]:</span><br><span class="line">        id_list.append(dic[<span class="string">&#x27;ID&#x27;</span>])</span><br><span class="line">    <span class="comment"># print(id_list,&#x27;\n&#x27;)</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 获取企业详情数据,也是动态加载出来的，携带一个参数 id，其值可以通过前一步生成的 id列表提取</span></span><br><span class="line">    post_url = <span class="string">&#x27;http://scxk.nmpa.gov.cn:81/xk/itownet/portalAction.do?method=getXkzsById&#x27;</span></span><br><span class="line">    <span class="keyword">for</span> <span class="built_in">id</span> <span class="keyword">in</span> id_list:</span><br><span class="line">        data = &#123;</span><br><span class="line">        <span class="string">&#x27;id&#x27;</span>: <span class="built_in">id</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        json_detail = requests.post(url=post_url, data=data, headers=headers).json()</span><br><span class="line">        <span class="comment">#print(json_detail, &#x27;-------------END----------&#x27;)</span></span><br><span class="line">        all_data_list.append(json_detail )</span><br><span class="line">        all_data_list.append(<span class="string">&#x27;---------------------------------------------------------&#x27;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 持久化存储all_data_list</span></span><br><span class="line">    fp = <span class="built_in">open</span>(<span class="string">&#x27;./allData.json&#x27;</span>, <span class="string">&#x27;w&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line">    json.dump(all_data_list, fp=fp, ensure_ascii=<span class="literal">False</span>, indent= <span class="literal">True</span>)  <span class="comment"># indent 自动排版</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;Over!&#x27;</span>)</span><br></pre></td></tr></table></figure></div>
-]]></content>
-      <categories>
-        <category>Python</category>
-        <category>爬虫</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>爬虫</tag>
       </tags>
   </entry>
   <entry>
@@ -3479,6 +3407,78 @@ range 类型的优点：不管 range 对象表示的整数序列有多长，所�
 <div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 需求：解析出所有城市名称  https://www.aqistudy.cn/historydata/</span></span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">from</span> lxml <span class="keyword">import</span> etree</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27;headers = &#123;</span></span><br><span class="line"><span class="string">    &#x27;User-Agent&#x27;:&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36&#x27;</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">    url = &#x27;https://www.aqistudy.cn/historydata/&#x27;</span></span><br><span class="line"><span class="string">    page_text = requests.get(url=url,headers=headers).text</span></span><br><span class="line"><span class="string">    tree = etree.HTML(page_text)</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    #数据解析</span></span><br><span class="line"><span class="string">    hot_li_list = tree.xpath(&#x27;//div[@class=&quot;bottom&quot;]/ul/li&#x27;)</span></span><br><span class="line"><span class="string">    all_city_names = []</span></span><br><span class="line"><span class="string">    #解析热门城市名字</span></span><br><span class="line"><span class="string">    for li in hot_li_list:</span></span><br><span class="line"><span class="string">        hot_city_names = li.xpath(&#x27;./a/text()&#x27;)[0]</span></span><br><span class="line"><span class="string">        all_city_names.append(hot_city_names)</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    #解析全部城市名字：</span></span><br><span class="line"><span class="string">    city_names_list = tree.xpath(&#x27;.//div[@class=&quot;bottom&quot;]/ul/div[2]/li&#x27;)</span></span><br><span class="line"><span class="string">    for li in city_names_list:</span></span><br><span class="line"><span class="string">        city_name = li.xpath(&#x27;./a/text()&#x27;)[0]</span></span><br><span class="line"><span class="string">        all_city_names.append(city_name)</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    print(all_city_names,len(all_city_names))&#x27;&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 第二种方法，一起解析</span></span><br><span class="line"></span><br><span class="line">    headers = &#123;</span><br><span class="line"><span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">    url = <span class="string">&#x27;https://www.aqistudy.cn/historydata/&#x27;</span></span><br><span class="line">    page_text = requests.get(url=url, headers=headers).text</span><br><span class="line"></span><br><span class="line">    tree = etree.HTML(page_text)</span><br><span class="line">    <span class="comment"># 数据解析  解析到热门城市和全部城市对应的a标签</span></span><br><span class="line">    <span class="comment"># 热门城市标签层级div/ul/li/a</span></span><br><span class="line">    <span class="comment"># 全部城市标签层级div/ul/div[2]/li/a</span></span><br><span class="line">    a_list = tree.xpath(<span class="string">&#x27;//div[@class=&quot;bottom&quot;]/ul/li/a | //div[@class=&quot;bottom&quot;]/ul/div[2]/li/a &#x27;</span>)</span><br><span class="line">    all_city_names = []</span><br><span class="line">    <span class="keyword">for</span> a <span class="keyword">in</span> a_list:</span><br><span class="line">        a_name = a.xpath(<span class="string">&#x27;./text()&#x27;</span>)[<span class="number">0</span>]</span><br><span class="line">        all_city_names.append(a_name)</span><br><span class="line">    <span class="built_in">print</span>(all_city_names, <span class="built_in">len</span>(all_city_names))</span><br></pre></td></tr></table></figure></div>
 <h2 id="10-xpath-作业—爬取站长素材中免费简历模板">10. xpath 作业—爬取站长素材中免费简历模板</h2>
 <div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 爬取站长素材中免费的简历模板  https://sc.chinaz.com/jianli/free.html</span></span><br><span class="line"><span class="comment"># 代码参考：https://blog.csdn.net/nanke_nk/article/details/108966854</span></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">from</span> lxml <span class="keyword">import</span> etree</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> os.path.exists(<span class="string">&#x27;./jianli&#x27;</span>):</span><br><span class="line">        os.mkdir(<span class="string">&#x27;./jianli&#x27;</span>)</span><br><span class="line">    headers = &#123;</span><br><span class="line">        <span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">    url = <span class="string">&#x27;https://sc.chinaz.com/jianli/free_%d.html&#x27;</span></span><br><span class="line">    page = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&#x27;您一共想要爬取多少页：&#x27;</span>))</span><br><span class="line">    <span class="keyword">for</span> pageNum <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, page):</span><br><span class="line">        <span class="keyword">if</span> pageNum == <span class="number">1</span>:</span><br><span class="line">            new_url = <span class="string">&#x27;https://sc.chinaz.com/jianli/free.html&#x27;</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            new_url = <span class="built_in">format</span>(url%pageNum)</span><br><span class="line">        page_text = requests.get(url = new_url, headers = headers).text</span><br><span class="line">        tree = etree.HTML(page_text)</span><br><span class="line">        url_div_list = tree.xpath(<span class="string">&#x27;//*[@id=&quot;container&quot;]/div&#x27;</span>)</span><br><span class="line">        <span class="keyword">for</span> detail_url <span class="keyword">in</span> url_div_list:</span><br><span class="line">            detail_url = <span class="string">&#x27;https:&#x27;</span> + detail_url.xpath(<span class="string">&#x27;./a/@href&#x27;</span>)[<span class="number">0</span>]</span><br><span class="line"></span><br><span class="line">            detail_page_text = requests.get(url = detail_url, headers =headers).text</span><br><span class="line">            tree = etree.HTML(detail_page_text)</span><br><span class="line">            name = tree.xpath(<span class="string">&#x27;//h1/text()&#x27;</span>)[<span class="number">0</span>].encode(<span class="string">&#x27;iso-8859-1&#x27;</span>).decode(<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line">            download_url = tree.xpath(<span class="string">&#x27;//*[@id=&quot;down&quot;]/div[2]/ul/li[1]/a/@href&#x27;</span>)[<span class="number">0</span>]</span><br><span class="line">            file_path = <span class="string">&#x27;jianli/&#x27;</span> + name + <span class="string">&#x27;.rar&#x27;</span></span><br><span class="line">            download_content = requests.get(url = download_url, headers = headers).content</span><br><span class="line">            <span class="keyword">with</span> <span class="built_in">open</span>(file_path, <span class="string">&#x27;wb&#x27;</span>) <span class="keyword">as</span> fp:</span><br><span class="line">                fp.write(download_content)</span><br><span class="line">            <span class="built_in">print</span>(name, <span class="string">&#x27;下载完成&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;-------------------------------OVER!---------------------------------------&#x27;</span>)</span><br></pre></td></tr></table></figure></div>
+]]></content>
+      <categories>
+        <category>Python</category>
+        <category>爬虫</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>爬虫</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>爬虫学习笔记(2)--requests 模块基础</title>
+    <url>/2022/02/14/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-2-requests-%E6%A8%A1%E5%9D%97%E5%9F%BA%E7%A1%80/</url>
+    <content><![CDATA[<h2 id="1-requests-第一血">1. requests 第一血</h2>
+<p>requests 模块：Python 中原生的一款基于网络请求的模块，功能非常强大，简单便捷，效率极高。</p>
+<p>作用：模拟浏览器发请求。</p>
+<p>如何使用：（requests 模块的编码流程）</p>
+<ul>
+<li>指定 url</li>
+<li>发起请求</li>
+<li>获取响应数据</li>
+<li>持久化存储</li>
+</ul>
+<span id="more"></span>
+<p>环境的安装：<code>pip install requests</code></p>
+<p>实战编码：</p>
+<ul>
+<li>需求：爬取搜狗首页的数据</li>
+</ul>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    <span class="comment"># step1 指定url</span></span><br><span class="line">    url = <span class="string">&#x27;https://www.sogou.com/&#x27;</span></span><br><span class="line">    <span class="comment"># step2 发起请求</span></span><br><span class="line">    <span class="comment"># get方法会返回一个响应对象</span></span><br><span class="line">    response = requests.get(url = url)</span><br><span class="line">    <span class="comment"># step3 获取响应数据，text返回的是字符串形式的响应数据</span></span><br><span class="line">    page_text = response.text</span><br><span class="line">    <span class="built_in">print</span>(page_text)</span><br><span class="line">    <span class="comment"># step4 持久化存储</span></span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;./sogou.html&#x27;</span>,<span class="string">&#x27;w&#x27;</span>,encoding = <span class="string">&#x27;utf-8&#x27;</span>) <span class="keyword">as</span> fp:</span><br><span class="line">        fp.write(page_text)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;爬取数据结束！&#x27;</span>)</span><br></pre></td></tr></table></figure></div>
+<h2 id="2-requests-巩固深入案例介绍">2. requests 巩固深入案例介绍</h2>
+<h3 id="（1）简易网页采集器">（1）简易网页采集器</h3>
+<ul>
+<li>UA 检测</li>
+<li>UA 伪装</li>
+</ul>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># UA：User-Agent请求载体的身份标识</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;UA检测：门户网站的服务器会监测对应请求的载体身份标识，</span></span><br><span class="line"><span class="string">如果检测到请求载体身份标识是某一款浏览器,说明该请求时一个正常的请求；</span></span><br><span class="line"><span class="string">但是，如果检测到请求的载体身份不是基于某一款浏览器的，则表示该请求为不正常请求（爬虫）,</span></span><br><span class="line"><span class="string">则服务器很有可能拒绝该次请求&#x27;&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># UA伪装：让爬虫对应的请求载体身份标识伪装成某一款浏览器，躲过UA检测</span></span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    <span class="comment"># UA伪装：将对应的User-Agent封装到一个字典中</span></span><br><span class="line">    headers = &#123;</span><br><span class="line">    <span class="string">&#x27;User-Agent&#x27;</span>:<span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment"># step1 指定url query</span></span><br><span class="line">    url = <span class="string">&#x27;https://www.sogou.com/web&#x27;</span></span><br><span class="line">    <span class="comment"># 处理url携带的参数 封装到字典中</span></span><br><span class="line">    kw = <span class="built_in">input</span>(<span class="string">&#x27;Enter a word:&#x27;</span>)</span><br><span class="line">    param =&#123;</span><br><span class="line">        <span class="string">&#x27;query&#x27;</span>:kw</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment"># step2 对指定的url发起请求，对应的url是携带参数的，并且处理过程中处理了参数</span></span><br><span class="line">    response = requests.get(url = url,params = param,headers = headers)</span><br><span class="line">    <span class="comment"># step3</span></span><br><span class="line">    page_text = response.text</span><br><span class="line">    <span class="comment"># step4</span></span><br><span class="line">    fileName = kw + <span class="string">&#x27;.html&#x27;</span></span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(fileName,<span class="string">&#x27;w&#x27;</span>,encoding =<span class="string">&#x27;utf-8&#x27;</span>) <span class="keyword">as</span> fp:</span><br><span class="line">        fp.write(page_text)</span><br><span class="line">    <span class="built_in">print</span>(fileName,<span class="string">&#x27;保存成功！！&#x27;</span>)</span><br></pre></td></tr></table></figure></div>
+<h3 id="（2）破解百度翻译">（2）破解百度翻译</h3>
+<ul>
+<li>post 请求（携带了参数）</li>
+<li>响应数据是一组 json 数据</li>
+</ul>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    <span class="comment"># step1 指定URL</span></span><br><span class="line">    post_url = <span class="string">&#x27;https://fanyi.baidu.com/sug&#x27;</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment"># step2 进行UA伪装</span></span><br><span class="line">    headers = &#123;</span><br><span class="line">    <span class="string">&#x27;User-Agent&#x27;</span>:<span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># step3 post请求参数处理（同get请求类似）</span></span><br><span class="line">    word = <span class="built_in">input</span>(<span class="string">&#x27;Enter a word:\n&#x27;</span>)</span><br><span class="line">    data = &#123;</span><br><span class="line">        <span class="string">&#x27;kw&#x27;</span>:word</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># step4 请求发送</span></span><br><span class="line">    response = requests.post(url = post_url,data = data,headers = headers)</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># step5 获取响应数据:json()方法返回的是obj  (如果确认响应数据是json类型--&gt;通过Content-Type分辨，才可以直接用json方法)</span></span><br><span class="line">    dict_obj = response.json()</span><br><span class="line">    <span class="built_in">print</span>(dict_obj)</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># step6 持久化存储</span></span><br><span class="line">    fileName = word + <span class="string">&#x27;.json&#x27;</span></span><br><span class="line">    fp = <span class="built_in">open</span>(fileName,<span class="string">&#x27;w&#x27;</span>,encoding=<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line">    json.dump(dict_obj,fp = fp,ensure_ascii = <span class="literal">False</span>)</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;Over!&#x27;</span>)</span><br></pre></td></tr></table></figure></div>
+<h3 id="（3）豆瓣电影">（3）豆瓣电影</h3>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    url = <span class="string">&#x27;https://movie.douban.com/j/chart/top_list&#x27;</span></span><br><span class="line">    param = &#123;</span><br><span class="line">        <span class="string">&#x27;type&#x27;</span>:<span class="string">&#x27;24&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;interval_id&#x27;</span>:<span class="string">&#x27;100:90&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;action&#x27;</span>:<span class="string">&#x27;&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;start&#x27;</span>:<span class="string">&#x27;0&#x27;</span>,	<span class="comment"># 从库中的第几部电影去取</span></span><br><span class="line">        <span class="string">&#x27;limit&#x27;</span>:<span class="string">&#x27;20&#x27;</span>	<span class="comment"># 一次取出的个数</span></span><br><span class="line">    &#125;</span><br><span class="line">    headers = &#123;</span><br><span class="line">    <span class="string">&#x27;User-Agent&#x27;</span>:<span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">    response = requests.get(url = url,params = param,headers = headers)</span><br><span class="line">    list_data = response.json()</span><br><span class="line">    fp = <span class="built_in">open</span>(<span class="string">&#x27;./douban.json&#x27;</span>,<span class="string">&#x27;w&#x27;</span>,encoding = <span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line">    json.dump(list_data,fp = fp,ensure_ascii = <span class="literal">False</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;Over!&#x27;</span>)</span><br></pre></td></tr></table></figure></div>
+<h2 id="3-作业—肯德基餐厅查询">3. 作业—肯德基餐厅查询</h2>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    post_url = <span class="string">&#x27;https://www.kfc.com.cn/kfccda/ashx/GetStoreList.ashx?op=keyword&#x27;</span></span><br><span class="line">    keyword = <span class="built_in">input</span>(<span class="string">&#x27;请输入要查询的城市：&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    data =&#123;</span><br><span class="line">        <span class="string">&#x27;cname&#x27;</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;pid&#x27;</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;keyword&#x27;</span>: keyword,</span><br><span class="line">        <span class="string">&#x27;pageindex&#x27;</span>: <span class="string">&#x27;1&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;pageSize&#x27;</span>: <span class="string">&#x27;10&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">    headers = &#123;</span><br><span class="line">    <span class="string">&#x27;User-Agent&#x27;</span>:<span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">    response = requests.post(url = post_url, data = data, headers = headers)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 持久化存储</span></span><br><span class="line">    <span class="comment"># page_text = response.text</span></span><br><span class="line">    <span class="comment"># fileName = keyword + &#x27;.html&#x27;</span></span><br><span class="line">    <span class="comment"># with open(fileName, &#x27;w&#x27;, encoding= &#x27;utf-8&#x27;) as fp:</span></span><br><span class="line">    <span class="comment">#     fp.write(page_text)</span></span><br><span class="line">    <span class="comment"># print(fileName, &#x27;Over!&#x27;)</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 直接打印出来</span></span><br><span class="line">    page = response.json()</span><br><span class="line">    <span class="keyword">for</span> <span class="built_in">dict</span> <span class="keyword">in</span> page[<span class="string">&#x27;Table1&#x27;</span>]:</span><br><span class="line">        StoreName = <span class="built_in">dict</span>[<span class="string">&#x27;storeName&#x27;</span>]</span><br><span class="line">        address = <span class="built_in">dict</span>[<span class="string">&#x27;addressDetail&#x27;</span>]</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;StoreName:&#x27;</span> + StoreName, <span class="string">&#x27;address:&#x27;</span> + address + <span class="string">&#x27;\n&#x27;</span>)</span><br></pre></td></tr></table></figure></div>
+<h2 id="4-综合练习—药监总局">4. 综合练习—药监总局</h2>
+<ul>
+<li>
+<p>爬取国家药品监督管理总局中基于中华人民共和国化妆品生产许可证相关数据（<a href="http://scxk.nmpa.gov.cn:81/xk/%EF%BC%89">http://scxk.nmpa.gov.cn:81/xk/）</a></p>
+</li>
+<li>
+<p>动态加载数据：首页中对应的企业信息是通过 <code>ajax</code> 动态请求到的</p>
+</li>
+<li>
+<p>通过对详情页 url 的观察发现：</p>
+<ul>
+<li>url 的域名都是一样的，只有携带的参数（id）不一样</li>
+<li>id 值可以从首页对应的 <code>ajax</code> 请求到的 <code>json</code> 串中获取</li>
+<li>域名和 id 值拼接出一个完整的企业对应的详情页的 url</li>
+</ul>
+</li>
+<li>
+<p>详情页的企业详情数据也是动态加载出来的！！！</p>
+<ul>
+<li>观察后发现，所有 <code>post</code> 请求的 url 都是一样的，只有参数 id 值不同</li>
+<li>如果我们可以批量获取多家企业的id后，就可以就 id 和 url 形成一个完整的详情页对应详情数据的 <code>ajax</code> 请求的 url</li>
+</ul>
+</li>
+</ul>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    headers = &#123;</span><br><span class="line">        <span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">    id_list = []  							<span class="comment"># 存储企业的id</span></span><br><span class="line">    all_data_list = []  					<span class="comment"># 存储企业所有的详情数据</span></span><br><span class="line">    <span class="comment"># 批量获取不同企业的id值</span></span><br><span class="line">    url = <span class="string">&#x27;http://scxk.nmpa.gov.cn:81/xk/itownet/portalAction.do?method=getXkzsList&#x27;</span></span><br><span class="line">    <span class="comment"># 参数的封装</span></span><br><span class="line">    <span class="keyword">for</span> page <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="number">11</span>):</span><br><span class="line">        page = <span class="built_in">str</span>(page)</span><br><span class="line">        data = &#123;</span><br><span class="line">            <span class="string">&#x27;on&#x27;</span>: <span class="string">&#x27;true&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;page&#x27;</span>: page,</span><br><span class="line">            <span class="string">&#x27;pageSize&#x27;</span>: <span class="string">&#x27;15&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;productName&#x27;</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;conditionType&#x27;</span>: <span class="string">&#x27;1&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;applyname&#x27;</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;applysn&#x27;</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">        &#125;</span><br><span class="line">    json_ids = requests.post(url=url, headers=headers, data=data).json()</span><br><span class="line">    <span class="comment"># 从 json_ids 字典中拿到 list 对应的 value 值，对 value 值列表进行遍历</span></span><br><span class="line">    <span class="keyword">for</span> dic <span class="keyword">in</span> json_ids[<span class="string">&#x27;list&#x27;</span>]:</span><br><span class="line">        id_list.append(dic[<span class="string">&#x27;ID&#x27;</span>])</span><br><span class="line">    <span class="comment"># print(id_list,&#x27;\n&#x27;)</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 获取企业详情数据,也是动态加载出来的，携带一个参数 id，其值可以通过前一步生成的 id列表提取</span></span><br><span class="line">    post_url = <span class="string">&#x27;http://scxk.nmpa.gov.cn:81/xk/itownet/portalAction.do?method=getXkzsById&#x27;</span></span><br><span class="line">    <span class="keyword">for</span> <span class="built_in">id</span> <span class="keyword">in</span> id_list:</span><br><span class="line">        data = &#123;</span><br><span class="line">        <span class="string">&#x27;id&#x27;</span>: <span class="built_in">id</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        json_detail = requests.post(url=post_url, data=data, headers=headers).json()</span><br><span class="line">        <span class="comment">#print(json_detail, &#x27;-------------END----------&#x27;)</span></span><br><span class="line">        all_data_list.append(json_detail )</span><br><span class="line">        all_data_list.append(<span class="string">&#x27;---------------------------------------------------------&#x27;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 持久化存储all_data_list</span></span><br><span class="line">    fp = <span class="built_in">open</span>(<span class="string">&#x27;./allData.json&#x27;</span>, <span class="string">&#x27;w&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line">    json.dump(all_data_list, fp=fp, ensure_ascii=<span class="literal">False</span>, indent= <span class="literal">True</span>)  <span class="comment"># indent 自动排版</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;Over!&#x27;</span>)</span><br></pre></td></tr></table></figure></div>
 ]]></content>
       <categories>
         <category>Python</category>
@@ -4462,6 +4462,97 @@ $$</p>
       </tags>
   </entry>
   <entry>
+    <title>某度网盘文件下载</title>
+    <url>/2022/03/06/%E6%9F%90%E5%BA%A6%E7%BD%91%E7%9B%98%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD/</url>
+    <content><![CDATA[<h2 id="1-背景">1.背景</h2>
+<p>天下苦某度网盘限速久矣！</p>
+<span id="more"></span>
+<h2 id="2-准备">2.准备</h2>
+<h3 id="2-1-脚本准备">2.1 脚本准备</h3>
+<p>首先你需要阅读另一篇文章<a href="https://zyzhang98.gitee.io/2022/01/18/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%8F%92%E4%BB%B6%E6%8E%A8%E8%8D%90/">浏览器插件和脚本</a>，需要了解插件和脚本的安装和使用。</p>
+<p>然后前往 <a href="https://greasyfork.org/">Greasy Fork</a> 官网，搜索<code>百度网盘简易下载助手</code>，或者直接点击访问<a href="https://greasyfork.org/zh-CN/scripts/418182-%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98%E7%AE%80%E6%98%93%E4%B8%8B%E8%BD%BD%E5%8A%A9%E6%89%8B-%E7%9B%B4%E9%93%BE%E4%B8%8B%E8%BD%BD%E5%A4%8D%E6%B4%BB%E7%89%88">百度网盘简易下载助手(直链下载复活版)</a>.点击安装即可。</p>
+<blockquote>
+<p>使用过程中，不涉及收费，但是可能需要关注公众号，以获取验证码，介意者请另寻他法。</p>
+</blockquote>
+<h3 id="2-2-软件准备">2.2 软件准备</h3>
+<p>需要准备的一个小软件就是 IDM。但是 IDM 正版是需要收费的，所以我们选择破解版，点击蓝色字体即可跳转至下载链接<a href="https://www.ghxi.com/pcidm.html">Internet Download Manager 6.40.8 绿色特别版</a>，在最下方有下载地址，如果需要密码访问，请输入<code>ghfreedown</code>。</p>
+<p>下载过程中，记得将电脑所有的杀毒软件以及防火墙关闭，因为软件安装包中含有破解程序，故可能会报毒。</p>
+<p>下载完成后，点击<code>绿化与卸载.exe</code>选择绿化，然后打开程序文件夹<code>Bin</code>中的<code>IDMan.exe</code>即为主应用程序。界面如下：</p>
+<p><img src="https://gitee.com/zyzhang98/typoraofimages/raw/master/Images/image-20220307085702627.png" alt="image-20220307085702627"></p>
+<p>第一次安装，默认按钮的样式可能与我的不同，但功能一致，点击菜单栏的<code>查看/工具栏</code>可以对样式进行更换。</p>
+<p>使用 IDM 之前，我们需要一些特殊的设置：</p>
+<ul>
+<li>
+<p>打开<code>选项/常规设置</code>，接管浏览器中的勾选记得勾选自己的浏览器类型，一般默认即可。</p>
+</li>
+<li>
+<p><code>选项/文件类型</code>中，<code>自动开始下载以下类型文件</code>的输入框中，缺少一些常见的格式，我们可以进行填充，将其替换掉。</p>
+<div class="highlight-wrap" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">3GP 7Z AAC ACE AI AIF ALZ APK APP ARC ARJ ASF AVI BH BIN BR BUNDLE BZ BZ2 CDA CSV DIF DLL DMG DOC DOCX EGG EPS EXE FLV GZ GZIP IMG IPA ISO ISZ JAR KEXT LHA LZ LZH LZMA M4A M4V MDB MID MKV MOV MP3 MP4 MPA MPE MPEG MPG MSI MSU MUI OGG OGV PDF PKG PPT PPTX PSD PST PUB QT R0* R1* RA RAR RM RMVB RTF SEA SIT SITX SLDM SLDX TAR TBZ TBZ2 TGZ TIF TIFF TLZ TXZ UDF VOB VSD VSDM VSDX VSS VSSM VST VSTM VSTX WAR WAV WBK WIM WKS WMA WMD WMS WMV WMZ WP5 WPD WPS XLS XLSX XPS XZ Z ZIP ZIPX ZPAQ ZSTD</span><br></pre></td></tr></table></figure></div>
+</li>
+<li>
+<p><code>选项/下载</code>中，最后一个输入框<code>手动添加下载任务时使用的用户代理(UA)</code>处更换为以下内容</p>
+<div class="highlight-wrap" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">netdisk;7.0.3.2;PC;PC-Windows;10.0.17763</span><br></pre></td></tr></table></figure></div>
+</li>
+<li>
+<p><code>选项/连接</code>中，连接类型选择<code>较高速率连接：</code>，默认最大连接数选择<code>4</code></p>
+</li>
+</ul>
+<p>其他设置保持默认即可。</p>
+<p>这里只介绍配合插件下载网盘文件，IDM 其他下载小技巧，感兴趣的可以自行发掘。</p>
+<h2 id="3-使用效果">3.使用效果</h2>
+<p>首先登陆自己网页版的某度网盘，前边脚本安装成功的话，会多出一个<code>简易下载助手</code>的红色按钮。</p>
+<p><img src="https://gitee.com/zyzhang98/typoraofimages/raw/master/Images/image-20220307085758912.png" alt="image-20220307085758912"></p>
+<p>并且，右上角可以看到，我的账号并没有开通任何会员的。</p>
+<p>接下来，选中某一个文件，然后点击<code>简易下载助手</code>，然后点击<code>点击获取直链</code>，第一次使用可能需要关注公众号，成功获取直链就会出现以下界面。</p>
+<p><img src="https://gitee.com/zyzhang98/typoraofimages/raw/master/Images/image-20220307085922938.png" alt="image-20220307085922938"></p>
+<p>然后点击<code>复制直链地址</code>，打开 IDM ,找到<code>新建任务</code>，将链接 粘贴进去，点击确定就可以了。</p>
+<p><img src="https://gitee.com/zyzhang98/typoraofimages/raw/master/Images/image-20220307090006517.png" alt="image-20220307090006517"></p>
+<p>想限我速？</p>
+<h2 id="特殊说明">特殊说明</h2>
+<ul>
+<li>
+<p>脚本的作者也提到了，也许哪天脚本就会挂掉，所以希望大家多关注 Greasy Fork 上此脚本的更新状况，并且一些存在的问题，作者也会在脚本的详情页说明</p>
+</li>
+<li>
+<p>类似的脚本有很多，但是每个脚本的接口不同，所获取的直链的地址也不同，所以下载速度也不一样，大家也可以自行发掘速度更好的脚本</p>
+</li>
+<li>
+<p>本文通过特殊途径可以使用 IDM，但希望大家有能力的可以多多支持正版 <a href="https://www.internetdownloadmanager.cn/buy">Internet Download Manager Buy</a></p>
+</li>
+<li>
+<p>本文所涉及的所有软件均来自网络，严禁任何形式的商用！！</p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>软件</category>
+      </categories>
+      <tags>
+        <tag>插件</tag>
+        <tag>百度网盘</tag>
+        <tag>IDM</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>不宠无惊过一生</title>
+    <url>/2021/12/28/%E4%B8%8D%E5%AE%A0%E6%97%A0%E6%83%8A%E8%BF%87%E4%B8%80%E7%94%9F/</url>
+    <content><![CDATA[<p>不乱于心，不困于情。不畏将来，不念过往。如此，安好。</p>
+<p>深谋若谷，深交若水。深明大义，深悉小节。已然，静舒。</p>
+<span id="more"></span>
+<p>善宽以怀，善感以恩。善博以浪，善精以业。这般，最佳。</p>
+<p>勿感于时，勿伤于怀。勿耽美色，勿沉虚妄。从今，进取。</p>
+<p>无愧于天，无愧于地。无怍于人，无惧于鬼。这样，人生。</p>
+]]></content>
+      <categories>
+        <category>鸡汤</category>
+      </categories>
+      <tags>
+        <tag>文化</tag>
+        <tag>诗词</tag>
+        <tag>丰子恺</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Python数据结构与算法(3)--排序</title>
     <url>/2022/02/28/Python%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-3-%E6%8E%92%E5%BA%8F/</url>
     <content><![CDATA[<h2 id="列表排序">列表排序</h2>
@@ -4528,97 +4619,6 @@ $$</p>
       <tags>
         <tag>Python</tag>
         <tag>算法</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>某度网盘文件下载</title>
-    <url>/2022/03/06/%E6%9F%90%E5%BA%A6%E7%BD%91%E7%9B%98%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD/</url>
-    <content><![CDATA[<h2 id="1-背景">1.背景</h2>
-<p>天下苦某度网盘限速久矣！</p>
-<span id="more"></span>
-<h2 id="2-准备">2.准备</h2>
-<h3 id="2-1-脚本准备">2.1 脚本准备</h3>
-<p>首先你需要阅读另一篇文章<a href="https://zyzhang98.gitee.io/2022/01/18/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%8F%92%E4%BB%B6%E6%8E%A8%E8%8D%90/">浏览器插件和脚本</a>，需要了解插件和脚本的安装和使用。</p>
-<p>然后前往 <a href="https://greasyfork.org/">Greasy Fork</a> 官网，搜索<code>百度网盘简易下载助手</code>，或者直接点击访问<a href="https://greasyfork.org/zh-CN/scripts/418182-%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98%E7%AE%80%E6%98%93%E4%B8%8B%E8%BD%BD%E5%8A%A9%E6%89%8B-%E7%9B%B4%E9%93%BE%E4%B8%8B%E8%BD%BD%E5%A4%8D%E6%B4%BB%E7%89%88">百度网盘简易下载助手(直链下载复活版)</a>.点击安装即可。</p>
-<blockquote>
-<p>使用过程中，不涉及收费，但是可能需要关注公众号，以获取验证码，介意者请另寻他法。</p>
-</blockquote>
-<h3 id="2-2-软件准备">2.2 软件准备</h3>
-<p>需要准备的一个小软件就是 IDM。但是 IDM 正版是需要收费的，所以我们选择破解版，点击蓝色字体即可跳转至下载链接<a href="https://www.ghxi.com/pcidm.html">Internet Download Manager 6.40.8 绿色特别版</a>，在最下方有下载地址，如果需要密码访问，请输入<code>ghfreedown</code>。</p>
-<p>下载过程中，记得将电脑所有的杀毒软件以及防火墙关闭，因为软件安装包中含有破解程序，故可能会报毒。</p>
-<p>下载完成后，点击<code>绿化与卸载.exe</code>选择绿化，然后打开程序文件夹<code>Bin</code>中的<code>IDMan.exe</code>即为主应用程序。界面如下：</p>
-<p><img src="http://gitee.com/zyzhang98/typoraofimages/raw/master/Images/20220306-210439.png" alt="image-20220306201140551"></p>
-<p>第一次安装，默认按钮的样式可能与我的不同，但功能一致，点击菜单栏的<code>查看/工具栏</code>可以对样式进行更换。</p>
-<p>使用 IDM 之前，我们需要一些特殊的设置：</p>
-<ul>
-<li>
-<p>打开<code>选项/常规设置</code>，接管浏览器中的勾选记得勾选自己的浏览器类型，一般默认即可。</p>
-</li>
-<li>
-<p><code>选项/文件类型</code>中，<code>自动开始下载以下类型文件</code>的输入框中，缺少一些常见的格式，我们可以进行填充，将其替换掉。</p>
-<div class="highlight-wrap" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">3GP 7Z AAC ACE AI AIF ALZ APK APP ARC ARJ ASF AVI BH BIN BR BUNDLE BZ BZ2 CDA CSV DIF DLL DMG DOC DOCX EGG EPS EXE FLV GZ GZIP IMG IPA ISO ISZ JAR KEXT LHA LZ LZH LZMA M4A M4V MDB MID MKV MOV MP3 MP4 MPA MPE MPEG MPG MSI MSU MUI OGG OGV PDF PKG PPT PPTX PSD PST PUB QT R0* R1* RA RAR RM RMVB RTF SEA SIT SITX SLDM SLDX TAR TBZ TBZ2 TGZ TIF TIFF TLZ TXZ UDF VOB VSD VSDM VSDX VSS VSSM VST VSTM VSTX WAR WAV WBK WIM WKS WMA WMD WMS WMV WMZ WP5 WPD WPS XLS XLSX XPS XZ Z ZIP ZIPX ZPAQ ZSTD</span><br></pre></td></tr></table></figure></div>
-</li>
-<li>
-<p><code>选项/下载</code>中，最后一个输入框<code>手动添加下载任务时使用的用户代理(UA)</code>处更换为以下内容</p>
-<div class="highlight-wrap" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">netdisk;7.0.3.2;PC;PC-Windows;10.0.17763</span><br></pre></td></tr></table></figure></div>
-</li>
-<li>
-<p><code>选项/连接</code>中，连接类型选择<code>较高速率连接：</code>，默认最大连接数选择<code>4</code></p>
-</li>
-</ul>
-<p>其他设置保持默认即可。</p>
-<p>这里只介绍配合插件下载网盘文件，IDM 其他下载小技巧，感兴趣的可以自行发掘。</p>
-<h2 id="3-使用效果">3.使用效果</h2>
-<p>首先登陆自己网页版的某度网盘，前边脚本安装成功的话，会多出一个<code>简易下载助手</code>的红色按钮。</p>
-<p><img src="http://gitee.com/zyzhang98/typoraofimages/raw/master/Images/20220306-210647.png" alt="image-20220306210647102"></p>
-<p>并且，右上角可以看到，我的账号并没有开通任何会员的。</p>
-<p>接下来，选中某一个文件，然后点击<code>简易下载助手</code>，然后点击<code>点击获取直链</code>，第一次使用可能需要关注公众号，成功获取直链就会出现以下界面。</p>
-<p><img src="http://gitee.com/zyzhang98/typoraofimages/raw/master/Images/20220306-210741.png" alt="image-20220306210740446"></p>
-<p>然后点击<code>复制直链地址</code>，打开 IDM ,找到<code>新建任务</code>，将链接 粘贴进去，点击确定就可以了。</p>
-<p><img src="http://gitee.com/zyzhang98/typoraofimages/raw/master/Images/20220306-210805.png" alt="image-20220306210805063"></p>
-<p>想限我速？</p>
-<h2 id="特殊说明">特殊说明</h2>
-<ul>
-<li>
-<p>脚本的作者也提到了，也许哪天脚本就会挂掉，所以希望大家多关注 Greasy Fork 上此脚本的更新状况，并且一些存在的问题，作者也会在脚本的详情页说明</p>
-</li>
-<li>
-<p>类似的脚本有很多，但是每个脚本的接口不同，所获取的直链的地址也不同，所以下载速度也不一样，大家也可以自行发掘速度更好的脚本</p>
-</li>
-<li>
-<p>本文通过特殊途径可以使用 IDM，但希望大家有能力的可以多多支持正版 <a href="https://www.internetdownloadmanager.cn/buy">Internet Download Manager Buy</a></p>
-</li>
-<li>
-<p>本文所涉及的所有软件均来自网络，严禁任何形式的商用！！</p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>软件</category>
-      </categories>
-      <tags>
-        <tag>插件</tag>
-        <tag>百度网盘</tag>
-        <tag>IDM</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>不宠无惊过一生</title>
-    <url>/2021/12/28/%E4%B8%8D%E5%AE%A0%E6%97%A0%E6%83%8A%E8%BF%87%E4%B8%80%E7%94%9F/</url>
-    <content><![CDATA[<p>不乱于心，不困于情。不畏将来，不念过往。如此，安好。</p>
-<p>深谋若谷，深交若水。深明大义，深悉小节。已然，静舒。</p>
-<span id="more"></span>
-<p>善宽以怀，善感以恩。善博以浪，善精以业。这般，最佳。</p>
-<p>勿感于时，勿伤于怀。勿耽美色，勿沉虚妄。从今，进取。</p>
-<p>无愧于天，无愧于地。无怍于人，无惧于鬼。这样，人生。</p>
-]]></content>
-      <categories>
-        <category>鸡汤</category>
-      </categories>
-      <tags>
-        <tag>文化</tag>
-        <tag>诗词</tag>
-        <tag>丰子恺</tag>
       </tags>
   </entry>
   <entry>
