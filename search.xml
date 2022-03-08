@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>About Me</title>
+    <url>/2021/12/28/About-Me/</url>
+    <content><![CDATA[<blockquote>
+<p>A student, live in Ji’nan, China.</p>
+</blockquote>
+<span id="more"></span>
+<h4 id="姓名：ZYZhang">姓名：ZYZhang</h4>
+<h4 id="性别：男">性别：男</h4>
+<h4 id="现居：济南">现居：济南</h4>
+<h4 id="职业：学校打工仔">职业：学校打工仔</h4>
+<h4 id="Github：ZYZhang">Github：<a href="https://github.com/zyzhang827">ZYZhang</a></h4>
+<h4 id="Gitee：ZYZhang">Gitee：<a href="https://gitee.com/zyzhang98">ZYZhang</a></h4>
+<h4 id="QQ：1194749361">QQ：1194749361</h4>
+]]></content>
+  </entry>
+  <entry>
     <title>博客搭建(2)---主题配置遗留问题</title>
     <url>/2021/12/28/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA(2)/</url>
     <content><![CDATA[<h2 id="分类、标签、关于我">分类、标签、关于我</h2>
@@ -72,22 +88,6 @@
         <tag>ayer</tag>
         <tag>美化</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>About Me</title>
-    <url>/2021/12/28/About-Me/</url>
-    <content><![CDATA[<blockquote>
-<p>A student, live in Ji’nan, China.</p>
-</blockquote>
-<span id="more"></span>
-<h4 id="姓名：ZYZhang">姓名：ZYZhang</h4>
-<h4 id="性别：男">性别：男</h4>
-<h4 id="现居：济南">现居：济南</h4>
-<h4 id="职业：学校打工仔">职业：学校打工仔</h4>
-<h4 id="Github：ZYZhang">Github：<a href="https://github.com/zyzhang827">ZYZhang</a></h4>
-<h4 id="Gitee：ZYZhang">Gitee：<a href="https://gitee.com/zyzhang98">ZYZhang</a></h4>
-<h4 id="QQ：1194749361">QQ：1194749361</h4>
-]]></content>
   </entry>
   <entry>
     <title>博客搭建(3)---Github部署</title>
@@ -377,6 +377,36 @@
       </tags>
   </entry>
   <entry>
+    <title>装系统神器--Ventoy</title>
+    <url>/2022/01/07/%E8%A3%85%E7%B3%BB%E7%BB%9F%E7%A5%9E%E5%99%A8-Ventoy/</url>
+    <content><![CDATA[<h2 id="介绍">介绍</h2>
+<p>Ventoy 是国人自己开发的 ISO 启动引导程序软件，其主要的功能就是可以通过 Ventoy 存储系统的 ISO 镜像文件，然后对电脑进行系统重装。</p>
+<span id="more"></span>
+<h2 id="优势">优势</h2>
+<p>选择 Ventoy 的原因有很多：</p>
+<ul>
+<li>首先，由于是国人自己开发的，所以界面为中文，简单方便；</li>
+<li>支持包括 Windows、WinPE、Ubuntu、Deepin 等多种系统的安装；</li>
+<li>无差别支持 Legacy BIOS 和 UEFI 两种模式；</li>
+<li>支持 MBR 和 GPT 分区格式；</li>
+<li>镜像文件可以与其他文件共存，即装机 U 盘仍然可以作为普通 U 盘使用；</li>
+</ul>
+<h2 id="使用教程">使用教程</h2>
+<p>去<a href="https://www.ventoy.net/en/download.html">Ventoy官网</a>下载<code>Windows</code>版本的 Ventoy 安装包，解压缩之后得到一个<code>Ventoy2Disk.exe</code>文件，然后插入一个干净的 U 盘，打开<code>Ventoy2Disk.exe</code>，主界面选择自己刚才插入的 U 盘的盘符，然后点击<code>Install</code>即可。</p>
+<p>安装完成后，进入 U 盘，然后直接将自己下载好的系统镜像文件放入其中即可，推荐下载系统镜像文件网址<a href="https://next.itellyou.cn/">itellyou</a>.</p>
+<h2 id="重装系统教程">重装系统教程</h2>
+<p>将制作好的 Ventoy 启动盘插入电脑，然后重启计算机，按热键进入 BIOS Setup 模式，将其中的 SecureBoot 关闭；</p>
+<p>然后重新启动计算机，按热键进入 BIOS 界面，在 UEFI OPTIONS 中选择自己的 U 盘进行启动，启动后，选择自己想要安装的系统的镜像文件，一路回车即可。</p>
+<p>上述中所涉及到的热键，各型号的电脑互有差异，一般在重启界面会有提示按键，再不清楚的可以自行按照自己的电脑型号进行百度。</p>
+]]></content>
+      <categories>
+        <category>软件</category>
+      </categories>
+      <tags>
+        <tag>ventoy</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>C++学习笔记(2)--数据类型</title>
     <url>/2022/01/08/C-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-2-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</url>
     <content><![CDATA[<p>C++ 规定在创建一个变量或者常量的时候，必须要指定出相应的数据类型，否则无法给变量分配内存。</p>
@@ -559,36 +589,6 @@
       </categories>
       <tags>
         <tag>C++</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>装系统神器--Ventoy</title>
-    <url>/2022/01/07/%E8%A3%85%E7%B3%BB%E7%BB%9F%E7%A5%9E%E5%99%A8-Ventoy/</url>
-    <content><![CDATA[<h2 id="介绍">介绍</h2>
-<p>Ventoy 是国人自己开发的 ISO 启动引导程序软件，其主要的功能就是可以通过 Ventoy 存储系统的 ISO 镜像文件，然后对电脑进行系统重装。</p>
-<span id="more"></span>
-<h2 id="优势">优势</h2>
-<p>选择 Ventoy 的原因有很多：</p>
-<ul>
-<li>首先，由于是国人自己开发的，所以界面为中文，简单方便；</li>
-<li>支持包括 Windows、WinPE、Ubuntu、Deepin 等多种系统的安装；</li>
-<li>无差别支持 Legacy BIOS 和 UEFI 两种模式；</li>
-<li>支持 MBR 和 GPT 分区格式；</li>
-<li>镜像文件可以与其他文件共存，即装机 U 盘仍然可以作为普通 U 盘使用；</li>
-</ul>
-<h2 id="使用教程">使用教程</h2>
-<p>去<a href="https://www.ventoy.net/en/download.html">Ventoy官网</a>下载<code>Windows</code>版本的 Ventoy 安装包，解压缩之后得到一个<code>Ventoy2Disk.exe</code>文件，然后插入一个干净的 U 盘，打开<code>Ventoy2Disk.exe</code>，主界面选择自己刚才插入的 U 盘的盘符，然后点击<code>Install</code>即可。</p>
-<p>安装完成后，进入 U 盘，然后直接将自己下载好的系统镜像文件放入其中即可，推荐下载系统镜像文件网址<a href="https://next.itellyou.cn/">itellyou</a>.</p>
-<h2 id="重装系统教程">重装系统教程</h2>
-<p>将制作好的 Ventoy 启动盘插入电脑，然后重启计算机，按热键进入 BIOS Setup 模式，将其中的 SecureBoot 关闭；</p>
-<p>然后重新启动计算机，按热键进入 BIOS 界面，在 UEFI OPTIONS 中选择自己的 U 盘进行启动，启动后，选择自己想要安装的系统的镜像文件，一路回车即可。</p>
-<p>上述中所涉及到的热键，各型号的电脑互有差异，一般在重启界面会有提示按键，再不清楚的可以自行按照自己的电脑型号进行百度。</p>
-]]></content>
-      <categories>
-        <category>软件</category>
-      </categories>
-      <tags>
-        <tag>ventoy</tag>
       </tags>
   </entry>
   <entry>
@@ -855,6 +855,112 @@
       </tags>
   </entry>
   <entry>
+    <title>C++学习笔记(5)--数组</title>
+    <url>/2022/01/11/C-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-5-%E6%95%B0%E7%BB%84/</url>
+    <content><![CDATA[<h2 id="概述">概述</h2>
+<p>所谓数组，就是一个集合，里面存放了相同类型的数据元素。</p>
+<p>特点：</p>
+<ul>
+<li>数组中的每个数据元素都是<strong>相同的数据类型</strong></li>
+<li>数组是由<strong>连续的内存位置</strong>组成的</li>
+</ul>
+<span id="more"></span>
+<h2 id="一维数组">一维数组</h2>
+<h3 id="定义方式">定义方式</h3>
+<p>一维数组定义的三种方式：</p>
+<ol>
+<li><code>数据类型 数组名[ 数组长度 ];</code></li>
+<li><code>数据类型 数组名[ 数组长度 ] = &#123; 值1, 值2... &#125;;</code></li>
+<li><code>数据类型 数组名[ ] = &#123; 值1, 值2... &#125;;</code></li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/zyzhang827/filesimage@main/images/image-20220111163328884.png" alt=""></p>
+<div class="highlight-wrap" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 第一种定义方式</span></span><br><span class="line">    <span class="keyword">int</span> arr[<span class="number">5</span>];</span><br><span class="line">    arr[<span class="number">0</span>] = <span class="number">10</span>;</span><br><span class="line">    arr[<span class="number">1</span>] = <span class="number">20</span>;</span><br><span class="line">    arr[<span class="number">2</span>] = <span class="number">30</span>;</span><br><span class="line">    arr[<span class="number">3</span>] = <span class="number">40</span>;</span><br><span class="line">    arr[<span class="number">4</span>] = <span class="number">50</span>;</span><br><span class="line">    <span class="comment">// 访问数组元素</span></span><br><span class="line">    cout &lt;&lt; arr[<span class="number">0</span>] &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; arr[<span class="number">1</span>] &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; arr[<span class="number">2</span>] &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; arr[<span class="number">3</span>] &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; arr[<span class="number">4</span>] &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 第二种定义方式</span></span><br><span class="line">    <span class="comment">// 如果初始化数据时，没有全部填写，会用来 0 来填补数据</span></span><br><span class="line">    <span class="keyword">int</span> arr2[<span class="number">5</span>] = &#123;<span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>, <span class="number">40</span>, <span class="number">50</span>&#125;;</span><br><span class="line">    cout &lt;&lt; arr2[<span class="number">0</span>] &lt;&lt; endl;</span><br><span class="line">    <span class="comment">// 利用循环输出数组中的元素</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        cout &lt;&lt; arr2[i] &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 第三种定义方式</span></span><br><span class="line">    <span class="comment">// 定义数组的时候，必须有初识长度</span></span><br><span class="line">    <span class="keyword">int</span> arr3[] = &#123;<span class="number">90</span>, <span class="number">80</span>, <span class="number">70</span>, <span class="number">60</span>, <span class="number">50</span>, <span class="number">40</span>, <span class="number">30</span>, <span class="number">20</span>, <span class="number">10</span>&#125;;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">9</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        cout &lt;&lt; arr3[i] &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<h3 id="数组名">数组名</h3>
+<p>一维数组名称的用途：</p>
+<ol>
+<li>可以统计整个数组在内存中的长度</li>
+<li>可以获取数组在内存中的首地址</li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/zyzhang827/filesimage@main/images/image-20220111165153400.png" alt=""></p>
+<div class="highlight-wrap" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 数组名</span></span><br><span class="line">    <span class="comment">// 用途 1</span></span><br><span class="line">    <span class="keyword">int</span> arr[<span class="number">10</span>] = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span>&#125;;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;整个数组占用内存空间为：&quot;</span> &lt;&lt; <span class="built_in"><span class="keyword">sizeof</span></span>(arr) &lt;&lt; endl;</span><br><span class="line">    <span class="comment">// 结果 40，每个int占4个字节，一共十个</span></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;每个元素占用内存空间为：&quot;</span> &lt;&lt; <span class="built_in"><span class="keyword">sizeof</span></span>(arr[<span class="number">0</span>]) &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;数组中元素个数为：&quot;</span> &lt;&lt; <span class="built_in"><span class="keyword">sizeof</span></span>(arr)/<span class="built_in"><span class="keyword">sizeof</span></span>(arr[<span class="number">0</span>]) &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 用途 2</span></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;数组的首地址为：&quot;</span> &lt;&lt; arr &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;数组的首地址为：&quot;</span> &lt;&lt; <span class="built_in"><span class="keyword">int</span></span>(arr) &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;数组中第一个元素的地址：&quot;</span> &lt;&lt; <span class="built_in"><span class="keyword">int</span></span>(&amp;arr[<span class="number">0</span>]) &lt;&lt; endl; </span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;数组中第二个元素的地址：&quot;</span> &lt;&lt; <span class="built_in"><span class="keyword">int</span></span>(&amp;arr[<span class="number">1</span>]) &lt;&lt; endl; </span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 数组名是一个常量，不可以用来赋值的操作</span></span><br><span class="line">    <span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<p>案例：五只小猪称体重。在一个数组中记录了五只小猪的体重，找出并打印最重的小猪体重。</p>
+<div class="highlight-wrap" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 1.创建五只小猪的体重</span></span><br><span class="line">    <span class="keyword">int</span> arr[<span class="number">5</span>] = &#123;<span class="number">300</span>, <span class="number">350</span>, <span class="number">200</span>, <span class="number">400</span>, <span class="number">250</span>&#125;;</span><br><span class="line">    <span class="comment">// 2.从数组中找出最大值</span></span><br><span class="line">    <span class="keyword">int</span> max = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// 如果访问的数组中的元素比我认定的最大值要大，那么更新最大值</span></span><br><span class="line">        <span class="keyword">if</span> (arr[i] &gt; max)</span><br><span class="line">        &#123;</span><br><span class="line">            max = arr[i];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 3.打印最大值</span></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;最重的小猪体重为：&quot;</span> &lt;&lt; max &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<p>案例：数组元素逆置。声明一个含有5个元素的数组，并且将元素逆置。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zyzhang827/filesimage@main/images/image-20220111171338568.png" alt=""></p>
+<div class="highlight-wrap" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 实现数组元素的逆置</span></span><br><span class="line">    <span class="comment">// 1. 创建数组</span></span><br><span class="line">    <span class="keyword">int</span> arr[<span class="number">5</span>] = &#123;<span class="number">1</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">5</span>, <span class="number">4</span>&#125;;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;数组逆置前：&quot;</span> &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        cout &lt;&lt; arr[i] &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 2. 实现逆置</span></span><br><span class="line">    <span class="comment">// 2.1 记录起始下标的位置</span></span><br><span class="line">    <span class="comment">// 2.2 记录结束下标的位置</span></span><br><span class="line">    <span class="comment">// 2.3 起始下标和结束下标的元素互换</span></span><br><span class="line">    <span class="comment">// 2.4 起始位置++  结束位置--</span></span><br><span class="line">    <span class="comment">// 2.5 循环执行2.1操作，直到起始位置 &gt;= 结束位置</span></span><br><span class="line">    <span class="keyword">int</span> start = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> end = <span class="built_in"><span class="keyword">sizeof</span></span>(arr)/<span class="built_in"><span class="keyword">sizeof</span></span>(arr[<span class="number">0</span>]) - <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (start &lt; end)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// 实现元素互换</span></span><br><span class="line">        <span class="keyword">int</span> temp = arr[start];</span><br><span class="line">        arr[start] = arr[end];</span><br><span class="line">        arr[end] = temp;</span><br><span class="line">        <span class="comment">// 下标更新</span></span><br><span class="line">        start++;</span><br><span class="line">        end--;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 3. 打印逆置后的数组</span></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;数组元素逆置后：&quot;</span> &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        cout &lt;&lt; arr[i] &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<h3 id="冒泡排序">冒泡排序</h3>
+<p>**作用：**最常用的排序算法，对数组内的元素进行排序</p>
+<ol>
+<li>比较相邻的元素，如果第一个比第二个大，就交换他们两个；</li>
+<li>对每一个相邻的元素做同样的操作，执行完毕后，找到第一个最大值；</li>
+<li>重复以上步骤，每次比较次数 -1，直到不需要比较为止。</li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/zyzhang827/filesimage@main/images/image-20220111182547837.png" alt=""></p>
+<div class="highlight-wrap" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 冒泡排序实现升序降序</span></span><br><span class="line">    <span class="keyword">int</span> arr[<span class="number">9</span>] = &#123;<span class="number">4</span>, <span class="number">2</span>, <span class="number">8</span>, <span class="number">0</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">1</span>, <span class="number">3</span>, <span class="number">9</span>&#125;;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;排序前：&quot;</span> &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">9</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        cout &lt;&lt; arr[i] &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; endl;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 开始冒泡排序   总共排序的轮数为 元素个数-1</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">9</span><span class="number">-1</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// 内层循环对比   次数= 元素个数-当前轮数-1</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; <span class="number">9</span> - i <span class="number">-1</span>; j++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">// 如果第一个数字比第二个数字大，交换两个数字</span></span><br><span class="line">            <span class="keyword">if</span> (arr[j] &gt; arr[j+<span class="number">1</span>])</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">int</span> temp = arr[j];</span><br><span class="line">                arr[j] = arr[j+<span class="number">1</span>];</span><br><span class="line">                arr[j+<span class="number">1</span>] = temp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 排序后的结果</span></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;排序后的结果：&quot;</span> &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<h2 id="二维数组">二维数组</h2>
+<h2 id=""></h2>
+<p>二维数组就是在一维数组之上，多加一个维度。</p>
+<h3 id="定义方式-v2">定义方式</h3>
+<p>二维数组一般有四种定义方式：</p>
+<ol>
+<li><code>数据类型 数组名[ 行数 ][ 列数 ];</code></li>
+<li><code>数据类型 数组名[ 行数 ][ 列数 ] = &#123; &#123;数据1, 数据2&#125;, &#123;数据3, 数据4&#125;&#125;；</code>(推荐使用，提高代码的可读性)</li>
+<li><code>数据类型 数组名[ 行数 ][ 列数 ] = &#123; 数据1, 数据2, 数据3, 数据4&#125;;</code></li>
+<li><code>数据类型 数组名[ ][ 列数 ] = &#123; 数据1, 数据2, 数据3, 数据4&#125;;</code></li>
+</ol>
+<div class="highlight-wrap" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 二维数组定义方式</span></span><br><span class="line">    <span class="comment">// 1. </span></span><br><span class="line">    <span class="keyword">int</span> arr[<span class="number">2</span>][<span class="number">3</span>];</span><br><span class="line">    arr[<span class="number">0</span>][<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">    arr[<span class="number">0</span>][<span class="number">1</span>] = <span class="number">2</span>;</span><br><span class="line">    arr[<span class="number">0</span>][<span class="number">2</span>] = <span class="number">3</span>;</span><br><span class="line">    arr[<span class="number">1</span>][<span class="number">0</span>] = <span class="number">4</span>;</span><br><span class="line">    arr[<span class="number">1</span>][<span class="number">1</span>] = <span class="number">5</span>;</span><br><span class="line">    arr[<span class="number">1</span>][<span class="number">2</span>] = <span class="number">6</span>;</span><br><span class="line">    <span class="comment">// cout &lt;&lt; arr[0][0] &lt;&lt; endl;</span></span><br><span class="line">    <span class="comment">// cout &lt;&lt; arr[0][1] &lt;&lt; endl;</span></span><br><span class="line">    <span class="comment">// cout &lt;&lt; arr[0][2] &lt;&lt; endl;</span></span><br><span class="line">    <span class="comment">// cout &lt;&lt; arr[1][0] &lt;&lt; endl;</span></span><br><span class="line">    <span class="comment">// cout &lt;&lt; arr[1][1] &lt;&lt; endl;</span></span><br><span class="line">    <span class="comment">// cout &lt;&lt; arr[1][2] &lt;&lt; endl;</span></span><br><span class="line">    <span class="comment">// 外层循环打印行数，内层循环打印列数</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">2</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; <span class="number">3</span>; j++)</span><br><span class="line">        &#123;</span><br><span class="line">            cout &lt;&lt; arr[i][j] &lt;&lt; endl;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-wrap" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 2.</span></span><br><span class="line"><span class="keyword">int</span> arr2[<span class="number">2</span>][<span class="number">3</span>] = </span><br><span class="line">&#123;</span><br><span class="line">    &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>&#125;,</span><br><span class="line">    &#123;<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>&#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">2</span>; i++)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; <span class="number">3</span>; j++)</span><br><span class="line">    &#123;</span><br><span class="line">        cout &lt;&lt; arr2[i][j] &lt;&lt; <span class="string">&quot; &quot;</span> ;</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-wrap" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 3.</span></span><br><span class="line"><span class="keyword">int</span> arr3[<span class="number">2</span>][<span class="number">3</span>] = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>&#125;;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">2</span>; i++)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; <span class="number">3</span>; j++)</span><br><span class="line">    &#123;</span><br><span class="line">        cout &lt;&lt; arr3[i][j] &lt;&lt; <span class="string">&quot; &quot;</span> ;</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-wrap" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 4.</span></span><br><span class="line"><span class="keyword">int</span> arr4[][<span class="number">3</span>] = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>&#125;;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">2</span>; i++)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; <span class="number">3</span>; j++)</span><br><span class="line">    &#123;</span><br><span class="line">        cout &lt;&lt; arr4[i][j] &lt;&lt; <span class="string">&quot; &quot;</span> ;</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<h3 id="二维数组数组名">二维数组数组名</h3>
+<ul>
+<li>查看二维数组所占内存空间</li>
+<li>获取二维数组首地址</li>
+</ul>
+<div class="highlight-wrap" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 二维数组名称用途</span></span><br><span class="line">    <span class="comment">// 1. 可以查看占用内存空间大小</span></span><br><span class="line">    <span class="keyword">int</span> arr[<span class="number">2</span>][<span class="number">3</span>] = </span><br><span class="line">    &#123;</span><br><span class="line">        &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>&#125;,</span><br><span class="line">        &#123;<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>&#125;,</span><br><span class="line">    &#125;;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;二维数组占用内存空间为：&quot;</span> &lt;&lt; <span class="built_in"><span class="keyword">sizeof</span></span>(arr) &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;二维数组第一行占用的内存为：&quot;</span> &lt;&lt; <span class="built_in"><span class="keyword">sizeof</span></span>(arr[<span class="number">0</span>]) &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;二维数组第一个元素占用内存为：&quot;</span> &lt;&lt; <span class="built_in"><span class="keyword">sizeof</span></span>(arr[<span class="number">0</span>][<span class="number">0</span>]) &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;二维数组的行数为：&quot;</span> &lt;&lt; <span class="built_in"><span class="keyword">sizeof</span></span>(arr)/<span class="built_in"><span class="keyword">sizeof</span></span>(arr[<span class="number">0</span>]) &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;二维数组的列数为：&quot;</span> &lt;&lt; <span class="built_in"><span class="keyword">sizeof</span></span>(arr[<span class="number">0</span>]) / <span class="built_in"><span class="keyword">sizeof</span></span>(arr[<span class="number">0</span>][<span class="number">0</span>]) &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 2. 可以查看二维数组的首地址</span></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;二维数组的首地址为：&quot;</span> &lt;&lt; <span class="built_in"><span class="keyword">int</span></span>(arr) &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;二维数组的首地址为：&quot;</span> &lt;&lt; arr &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;二维数组第一行的首地址为：&quot;</span> &lt;&lt; arr[<span class="number">0</span>] &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;二维数组第一行的首地址为：&quot;</span> &lt;&lt; <span class="built_in"><span class="keyword">int</span></span>(arr[<span class="number">0</span>]) &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;二维数组的第二行的首地址为：&quot;</span> &lt;&lt; <span class="built_in"><span class="keyword">int</span></span>(arr[<span class="number">1</span>]) &lt;&lt; endl;</span><br><span class="line">    <span class="comment">// 具体元素的首地址要交 取址符 &amp;</span></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;二维数组第一个元素的首地址为：&quot;</span> &lt;&lt; <span class="built_in"><span class="keyword">int</span></span>(&amp;arr[<span class="number">0</span>][<span class="number">0</span>]) &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<h3 id="二维数组应用案例">二维数组应用案例</h3>
+<p>考试成绩统计案例：有三名同学(张三、李四、王五)，在一次考试中的成绩分别如下表，请分别输出三名同学的总成绩</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>语文</th>
+<th>数学</th>
+<th>英语</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>张三</td>
+<td>100</td>
+<td>100</td>
+<td>100</td>
+</tr>
+<tr>
+<td>李四</td>
+<td>90</td>
+<td>50</td>
+<td>100</td>
+</tr>
+<tr>
+<td>王五</td>
+<td>60</td>
+<td>70</td>
+<td>80</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-wrap" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 1. 创建二维数组</span></span><br><span class="line">    <span class="keyword">int</span> scores[<span class="number">3</span>][<span class="number">3</span>]=</span><br><span class="line">    &#123;</span><br><span class="line">        &#123;<span class="number">100</span>, <span class="number">100</span>, <span class="number">100</span>&#125;,</span><br><span class="line">        &#123;<span class="number">90</span>, <span class="number">50</span>, <span class="number">100</span>&#125;,</span><br><span class="line">        &#123;<span class="number">60</span>, <span class="number">70</span>, <span class="number">80</span>&#125;</span><br><span class="line">    &#125;;</span><br><span class="line">    string names[<span class="number">3</span>] = &#123;<span class="string">&quot;张三&quot;</span>, <span class="string">&quot;李四&quot;</span>, <span class="string">&quot;王五&quot;</span>&#125;;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; <span class="number">3</span>; j++)</span><br><span class="line">        &#123;</span><br><span class="line">            sum += scores[i][j];</span><br><span class="line">            <span class="comment">//cout &lt;&lt; scores[i][j] &lt;&lt; &quot; &quot;;</span></span><br><span class="line">        &#125;</span><br><span class="line">        cout &lt;&lt; names[i] &lt;&lt; <span class="string">&quot;的总分为：&quot;</span> &lt;&lt; sum &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 2. 统计每个人的总和分数</span></span><br><span class="line">    <span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+]]></content>
+      <categories>
+        <category>C++</category>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>C++学习笔记(4)--流程结构</title>
     <url>/2022/01/11/C-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-4-%E6%B5%81%E7%A8%8B%E7%BB%93%E6%9E%84/</url>
     <content><![CDATA[<h2 id="程序流程结构">程序流程结构</h2>
@@ -967,112 +1073,6 @@
 <p>语法：<code>goto 标记;</code></p>
 <p>解释：如果标记的名称存在，执行到<code>goto</code>语句时，会跳转到标记的位置</p>
 <div class="highlight-wrap" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;1&quot;</span> &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">goto</span> FLAG;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;2&quot;</span> &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;3&quot;</span> &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;4&quot;</span> &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    FLAG:</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;5&quot;</span> &lt;&lt; endl;</span><br><span class="line">    <span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
-]]></content>
-      <categories>
-        <category>C++</category>
-        <category>学习笔记</category>
-      </categories>
-      <tags>
-        <tag>C++</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>C++学习笔记(5)--数组</title>
-    <url>/2022/01/11/C-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-5-%E6%95%B0%E7%BB%84/</url>
-    <content><![CDATA[<h2 id="概述">概述</h2>
-<p>所谓数组，就是一个集合，里面存放了相同类型的数据元素。</p>
-<p>特点：</p>
-<ul>
-<li>数组中的每个数据元素都是<strong>相同的数据类型</strong></li>
-<li>数组是由<strong>连续的内存位置</strong>组成的</li>
-</ul>
-<span id="more"></span>
-<h2 id="一维数组">一维数组</h2>
-<h3 id="定义方式">定义方式</h3>
-<p>一维数组定义的三种方式：</p>
-<ol>
-<li><code>数据类型 数组名[ 数组长度 ];</code></li>
-<li><code>数据类型 数组名[ 数组长度 ] = &#123; 值1, 值2... &#125;;</code></li>
-<li><code>数据类型 数组名[ ] = &#123; 值1, 值2... &#125;;</code></li>
-</ol>
-<p><img src="https://cdn.jsdelivr.net/gh/zyzhang827/filesimage@main/images/image-20220111163328884.png" alt=""></p>
-<div class="highlight-wrap" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 第一种定义方式</span></span><br><span class="line">    <span class="keyword">int</span> arr[<span class="number">5</span>];</span><br><span class="line">    arr[<span class="number">0</span>] = <span class="number">10</span>;</span><br><span class="line">    arr[<span class="number">1</span>] = <span class="number">20</span>;</span><br><span class="line">    arr[<span class="number">2</span>] = <span class="number">30</span>;</span><br><span class="line">    arr[<span class="number">3</span>] = <span class="number">40</span>;</span><br><span class="line">    arr[<span class="number">4</span>] = <span class="number">50</span>;</span><br><span class="line">    <span class="comment">// 访问数组元素</span></span><br><span class="line">    cout &lt;&lt; arr[<span class="number">0</span>] &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; arr[<span class="number">1</span>] &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; arr[<span class="number">2</span>] &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; arr[<span class="number">3</span>] &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; arr[<span class="number">4</span>] &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 第二种定义方式</span></span><br><span class="line">    <span class="comment">// 如果初始化数据时，没有全部填写，会用来 0 来填补数据</span></span><br><span class="line">    <span class="keyword">int</span> arr2[<span class="number">5</span>] = &#123;<span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>, <span class="number">40</span>, <span class="number">50</span>&#125;;</span><br><span class="line">    cout &lt;&lt; arr2[<span class="number">0</span>] &lt;&lt; endl;</span><br><span class="line">    <span class="comment">// 利用循环输出数组中的元素</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        cout &lt;&lt; arr2[i] &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 第三种定义方式</span></span><br><span class="line">    <span class="comment">// 定义数组的时候，必须有初识长度</span></span><br><span class="line">    <span class="keyword">int</span> arr3[] = &#123;<span class="number">90</span>, <span class="number">80</span>, <span class="number">70</span>, <span class="number">60</span>, <span class="number">50</span>, <span class="number">40</span>, <span class="number">30</span>, <span class="number">20</span>, <span class="number">10</span>&#125;;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">9</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        cout &lt;&lt; arr3[i] &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
-<h3 id="数组名">数组名</h3>
-<p>一维数组名称的用途：</p>
-<ol>
-<li>可以统计整个数组在内存中的长度</li>
-<li>可以获取数组在内存中的首地址</li>
-</ol>
-<p><img src="https://cdn.jsdelivr.net/gh/zyzhang827/filesimage@main/images/image-20220111165153400.png" alt=""></p>
-<div class="highlight-wrap" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 数组名</span></span><br><span class="line">    <span class="comment">// 用途 1</span></span><br><span class="line">    <span class="keyword">int</span> arr[<span class="number">10</span>] = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span>&#125;;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;整个数组占用内存空间为：&quot;</span> &lt;&lt; <span class="built_in"><span class="keyword">sizeof</span></span>(arr) &lt;&lt; endl;</span><br><span class="line">    <span class="comment">// 结果 40，每个int占4个字节，一共十个</span></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;每个元素占用内存空间为：&quot;</span> &lt;&lt; <span class="built_in"><span class="keyword">sizeof</span></span>(arr[<span class="number">0</span>]) &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;数组中元素个数为：&quot;</span> &lt;&lt; <span class="built_in"><span class="keyword">sizeof</span></span>(arr)/<span class="built_in"><span class="keyword">sizeof</span></span>(arr[<span class="number">0</span>]) &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 用途 2</span></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;数组的首地址为：&quot;</span> &lt;&lt; arr &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;数组的首地址为：&quot;</span> &lt;&lt; <span class="built_in"><span class="keyword">int</span></span>(arr) &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;数组中第一个元素的地址：&quot;</span> &lt;&lt; <span class="built_in"><span class="keyword">int</span></span>(&amp;arr[<span class="number">0</span>]) &lt;&lt; endl; </span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;数组中第二个元素的地址：&quot;</span> &lt;&lt; <span class="built_in"><span class="keyword">int</span></span>(&amp;arr[<span class="number">1</span>]) &lt;&lt; endl; </span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 数组名是一个常量，不可以用来赋值的操作</span></span><br><span class="line">    <span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
-<p>案例：五只小猪称体重。在一个数组中记录了五只小猪的体重，找出并打印最重的小猪体重。</p>
-<div class="highlight-wrap" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 1.创建五只小猪的体重</span></span><br><span class="line">    <span class="keyword">int</span> arr[<span class="number">5</span>] = &#123;<span class="number">300</span>, <span class="number">350</span>, <span class="number">200</span>, <span class="number">400</span>, <span class="number">250</span>&#125;;</span><br><span class="line">    <span class="comment">// 2.从数组中找出最大值</span></span><br><span class="line">    <span class="keyword">int</span> max = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// 如果访问的数组中的元素比我认定的最大值要大，那么更新最大值</span></span><br><span class="line">        <span class="keyword">if</span> (arr[i] &gt; max)</span><br><span class="line">        &#123;</span><br><span class="line">            max = arr[i];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 3.打印最大值</span></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;最重的小猪体重为：&quot;</span> &lt;&lt; max &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
-<p>案例：数组元素逆置。声明一个含有5个元素的数组，并且将元素逆置。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/zyzhang827/filesimage@main/images/image-20220111171338568.png" alt=""></p>
-<div class="highlight-wrap" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 实现数组元素的逆置</span></span><br><span class="line">    <span class="comment">// 1. 创建数组</span></span><br><span class="line">    <span class="keyword">int</span> arr[<span class="number">5</span>] = &#123;<span class="number">1</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">5</span>, <span class="number">4</span>&#125;;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;数组逆置前：&quot;</span> &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        cout &lt;&lt; arr[i] &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 2. 实现逆置</span></span><br><span class="line">    <span class="comment">// 2.1 记录起始下标的位置</span></span><br><span class="line">    <span class="comment">// 2.2 记录结束下标的位置</span></span><br><span class="line">    <span class="comment">// 2.3 起始下标和结束下标的元素互换</span></span><br><span class="line">    <span class="comment">// 2.4 起始位置++  结束位置--</span></span><br><span class="line">    <span class="comment">// 2.5 循环执行2.1操作，直到起始位置 &gt;= 结束位置</span></span><br><span class="line">    <span class="keyword">int</span> start = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> end = <span class="built_in"><span class="keyword">sizeof</span></span>(arr)/<span class="built_in"><span class="keyword">sizeof</span></span>(arr[<span class="number">0</span>]) - <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (start &lt; end)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// 实现元素互换</span></span><br><span class="line">        <span class="keyword">int</span> temp = arr[start];</span><br><span class="line">        arr[start] = arr[end];</span><br><span class="line">        arr[end] = temp;</span><br><span class="line">        <span class="comment">// 下标更新</span></span><br><span class="line">        start++;</span><br><span class="line">        end--;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 3. 打印逆置后的数组</span></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;数组元素逆置后：&quot;</span> &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        cout &lt;&lt; arr[i] &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
-<h3 id="冒泡排序">冒泡排序</h3>
-<p>**作用：**最常用的排序算法，对数组内的元素进行排序</p>
-<ol>
-<li>比较相邻的元素，如果第一个比第二个大，就交换他们两个；</li>
-<li>对每一个相邻的元素做同样的操作，执行完毕后，找到第一个最大值；</li>
-<li>重复以上步骤，每次比较次数 -1，直到不需要比较为止。</li>
-</ol>
-<p><img src="https://cdn.jsdelivr.net/gh/zyzhang827/filesimage@main/images/image-20220111182547837.png" alt=""></p>
-<div class="highlight-wrap" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 冒泡排序实现升序降序</span></span><br><span class="line">    <span class="keyword">int</span> arr[<span class="number">9</span>] = &#123;<span class="number">4</span>, <span class="number">2</span>, <span class="number">8</span>, <span class="number">0</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">1</span>, <span class="number">3</span>, <span class="number">9</span>&#125;;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;排序前：&quot;</span> &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">9</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        cout &lt;&lt; arr[i] &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; endl;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 开始冒泡排序   总共排序的轮数为 元素个数-1</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">9</span><span class="number">-1</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// 内层循环对比   次数= 元素个数-当前轮数-1</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; <span class="number">9</span> - i <span class="number">-1</span>; j++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">// 如果第一个数字比第二个数字大，交换两个数字</span></span><br><span class="line">            <span class="keyword">if</span> (arr[j] &gt; arr[j+<span class="number">1</span>])</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">int</span> temp = arr[j];</span><br><span class="line">                arr[j] = arr[j+<span class="number">1</span>];</span><br><span class="line">                arr[j+<span class="number">1</span>] = temp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 排序后的结果</span></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;排序后的结果：&quot;</span> &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
-<h2 id="二维数组">二维数组</h2>
-<h2 id=""></h2>
-<p>二维数组就是在一维数组之上，多加一个维度。</p>
-<h3 id="定义方式-v2">定义方式</h3>
-<p>二维数组一般有四种定义方式：</p>
-<ol>
-<li><code>数据类型 数组名[ 行数 ][ 列数 ];</code></li>
-<li><code>数据类型 数组名[ 行数 ][ 列数 ] = &#123; &#123;数据1, 数据2&#125;, &#123;数据3, 数据4&#125;&#125;；</code>(推荐使用，提高代码的可读性)</li>
-<li><code>数据类型 数组名[ 行数 ][ 列数 ] = &#123; 数据1, 数据2, 数据3, 数据4&#125;;</code></li>
-<li><code>数据类型 数组名[ ][ 列数 ] = &#123; 数据1, 数据2, 数据3, 数据4&#125;;</code></li>
-</ol>
-<div class="highlight-wrap" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 二维数组定义方式</span></span><br><span class="line">    <span class="comment">// 1. </span></span><br><span class="line">    <span class="keyword">int</span> arr[<span class="number">2</span>][<span class="number">3</span>];</span><br><span class="line">    arr[<span class="number">0</span>][<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">    arr[<span class="number">0</span>][<span class="number">1</span>] = <span class="number">2</span>;</span><br><span class="line">    arr[<span class="number">0</span>][<span class="number">2</span>] = <span class="number">3</span>;</span><br><span class="line">    arr[<span class="number">1</span>][<span class="number">0</span>] = <span class="number">4</span>;</span><br><span class="line">    arr[<span class="number">1</span>][<span class="number">1</span>] = <span class="number">5</span>;</span><br><span class="line">    arr[<span class="number">1</span>][<span class="number">2</span>] = <span class="number">6</span>;</span><br><span class="line">    <span class="comment">// cout &lt;&lt; arr[0][0] &lt;&lt; endl;</span></span><br><span class="line">    <span class="comment">// cout &lt;&lt; arr[0][1] &lt;&lt; endl;</span></span><br><span class="line">    <span class="comment">// cout &lt;&lt; arr[0][2] &lt;&lt; endl;</span></span><br><span class="line">    <span class="comment">// cout &lt;&lt; arr[1][0] &lt;&lt; endl;</span></span><br><span class="line">    <span class="comment">// cout &lt;&lt; arr[1][1] &lt;&lt; endl;</span></span><br><span class="line">    <span class="comment">// cout &lt;&lt; arr[1][2] &lt;&lt; endl;</span></span><br><span class="line">    <span class="comment">// 外层循环打印行数，内层循环打印列数</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">2</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; <span class="number">3</span>; j++)</span><br><span class="line">        &#123;</span><br><span class="line">            cout &lt;&lt; arr[i][j] &lt;&lt; endl;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
-<div class="highlight-wrap" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 2.</span></span><br><span class="line"><span class="keyword">int</span> arr2[<span class="number">2</span>][<span class="number">3</span>] = </span><br><span class="line">&#123;</span><br><span class="line">    &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>&#125;,</span><br><span class="line">    &#123;<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>&#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">2</span>; i++)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; <span class="number">3</span>; j++)</span><br><span class="line">    &#123;</span><br><span class="line">        cout &lt;&lt; arr2[i][j] &lt;&lt; <span class="string">&quot; &quot;</span> ;</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
-<div class="highlight-wrap" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 3.</span></span><br><span class="line"><span class="keyword">int</span> arr3[<span class="number">2</span>][<span class="number">3</span>] = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>&#125;;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">2</span>; i++)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; <span class="number">3</span>; j++)</span><br><span class="line">    &#123;</span><br><span class="line">        cout &lt;&lt; arr3[i][j] &lt;&lt; <span class="string">&quot; &quot;</span> ;</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
-<div class="highlight-wrap" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 4.</span></span><br><span class="line"><span class="keyword">int</span> arr4[][<span class="number">3</span>] = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>&#125;;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">2</span>; i++)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; <span class="number">3</span>; j++)</span><br><span class="line">    &#123;</span><br><span class="line">        cout &lt;&lt; arr4[i][j] &lt;&lt; <span class="string">&quot; &quot;</span> ;</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
-<h3 id="二维数组数组名">二维数组数组名</h3>
-<ul>
-<li>查看二维数组所占内存空间</li>
-<li>获取二维数组首地址</li>
-</ul>
-<div class="highlight-wrap" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 二维数组名称用途</span></span><br><span class="line">    <span class="comment">// 1. 可以查看占用内存空间大小</span></span><br><span class="line">    <span class="keyword">int</span> arr[<span class="number">2</span>][<span class="number">3</span>] = </span><br><span class="line">    &#123;</span><br><span class="line">        &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>&#125;,</span><br><span class="line">        &#123;<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>&#125;,</span><br><span class="line">    &#125;;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;二维数组占用内存空间为：&quot;</span> &lt;&lt; <span class="built_in"><span class="keyword">sizeof</span></span>(arr) &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;二维数组第一行占用的内存为：&quot;</span> &lt;&lt; <span class="built_in"><span class="keyword">sizeof</span></span>(arr[<span class="number">0</span>]) &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;二维数组第一个元素占用内存为：&quot;</span> &lt;&lt; <span class="built_in"><span class="keyword">sizeof</span></span>(arr[<span class="number">0</span>][<span class="number">0</span>]) &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;二维数组的行数为：&quot;</span> &lt;&lt; <span class="built_in"><span class="keyword">sizeof</span></span>(arr)/<span class="built_in"><span class="keyword">sizeof</span></span>(arr[<span class="number">0</span>]) &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;二维数组的列数为：&quot;</span> &lt;&lt; <span class="built_in"><span class="keyword">sizeof</span></span>(arr[<span class="number">0</span>]) / <span class="built_in"><span class="keyword">sizeof</span></span>(arr[<span class="number">0</span>][<span class="number">0</span>]) &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 2. 可以查看二维数组的首地址</span></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;二维数组的首地址为：&quot;</span> &lt;&lt; <span class="built_in"><span class="keyword">int</span></span>(arr) &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;二维数组的首地址为：&quot;</span> &lt;&lt; arr &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;二维数组第一行的首地址为：&quot;</span> &lt;&lt; arr[<span class="number">0</span>] &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;二维数组第一行的首地址为：&quot;</span> &lt;&lt; <span class="built_in"><span class="keyword">int</span></span>(arr[<span class="number">0</span>]) &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;二维数组的第二行的首地址为：&quot;</span> &lt;&lt; <span class="built_in"><span class="keyword">int</span></span>(arr[<span class="number">1</span>]) &lt;&lt; endl;</span><br><span class="line">    <span class="comment">// 具体元素的首地址要交 取址符 &amp;</span></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;二维数组第一个元素的首地址为：&quot;</span> &lt;&lt; <span class="built_in"><span class="keyword">int</span></span>(&amp;arr[<span class="number">0</span>][<span class="number">0</span>]) &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
-<h3 id="二维数组应用案例">二维数组应用案例</h3>
-<p>考试成绩统计案例：有三名同学(张三、李四、王五)，在一次考试中的成绩分别如下表，请分别输出三名同学的总成绩</p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th>语文</th>
-<th>数学</th>
-<th>英语</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>张三</td>
-<td>100</td>
-<td>100</td>
-<td>100</td>
-</tr>
-<tr>
-<td>李四</td>
-<td>90</td>
-<td>50</td>
-<td>100</td>
-</tr>
-<tr>
-<td>王五</td>
-<td>60</td>
-<td>70</td>
-<td>80</td>
-</tr>
-</tbody>
-</table>
-<div class="highlight-wrap" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 1. 创建二维数组</span></span><br><span class="line">    <span class="keyword">int</span> scores[<span class="number">3</span>][<span class="number">3</span>]=</span><br><span class="line">    &#123;</span><br><span class="line">        &#123;<span class="number">100</span>, <span class="number">100</span>, <span class="number">100</span>&#125;,</span><br><span class="line">        &#123;<span class="number">90</span>, <span class="number">50</span>, <span class="number">100</span>&#125;,</span><br><span class="line">        &#123;<span class="number">60</span>, <span class="number">70</span>, <span class="number">80</span>&#125;</span><br><span class="line">    &#125;;</span><br><span class="line">    string names[<span class="number">3</span>] = &#123;<span class="string">&quot;张三&quot;</span>, <span class="string">&quot;李四&quot;</span>, <span class="string">&quot;王五&quot;</span>&#125;;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; <span class="number">3</span>; j++)</span><br><span class="line">        &#123;</span><br><span class="line">            sum += scores[i][j];</span><br><span class="line">            <span class="comment">//cout &lt;&lt; scores[i][j] &lt;&lt; &quot; &quot;;</span></span><br><span class="line">        &#125;</span><br><span class="line">        cout &lt;&lt; names[i] &lt;&lt; <span class="string">&quot;的总分为：&quot;</span> &lt;&lt; sum &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 2. 统计每个人的总和分数</span></span><br><span class="line">    <span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
 ]]></content>
       <categories>
         <category>C++</category>
@@ -2930,100 +2930,6 @@ range 类型的优点：不管 range 对象表示的整数序列有多长，所�
       </tags>
   </entry>
   <entry>
-    <title>爬虫学习笔记(1)--基础简介</title>
-    <url>/2022/02/14/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-1-%E5%9F%BA%E7%A1%80%E7%AE%80%E4%BB%8B/</url>
-    <content><![CDATA[<blockquote>
-<p>ZY.Zhang</p>
-<p>本文档基于<a href="https://www.bilibili.com/video/BV1Yh411o7Sz?p=1">B站视频教程</a></p>
-</blockquote>
-<h2 id="1-爬虫简介">1. 爬虫简介</h2>
-<p>什么是爬虫：通过编写程序，模拟浏览器上网，然后让其去互联网上抓取数据的过程。</p>
-<h2 id="2-爬虫合法性探究">2. 爬虫合法性探究</h2>
-<p>爬虫究竟是合法还是违法的？</p>
-<ul>
-<li>在法律中是不被禁止的</li>
-<li>具有违法风险</li>
-<li>善意爬虫 &amp; 恶意爬虫</li>
-</ul>
-<p>爬虫带来的风险可以体现在如下两个方面：</p>
-<ol>
-<li>爬虫干扰了被访问网站的正常运营</li>
-<li>爬虫抓取了受到法律保护的特定类型的数据或信息</li>
-</ol>
-<p>如何在编写使用的过程中避免进入局子的厄运？</p>
-<ul>
-<li>时常优化自己的程序，避免干扰被访问网站的正常运行</li>
-<li>在使用，传播爬取到的数据时，审查抓取到的内容，如果发现了涉及到用户隐私或者商业机密等敏感内容，需要及时停止爬取或者传播。</li>
-</ul>
-<span id="more"></span>
-<h2 id="3-爬虫初试深入">3. 爬虫初试深入</h2>
-<p>爬虫在使用场景中的分类：</p>
-<ul>
-<li>
-<p>通用爬虫：抓取系统的重要组成部分。抓取的是一整张页面数据。</p>
-</li>
-<li>
-<p>聚焦爬虫：是建立在通用爬虫的基础之上。抓取的是页面中特定的局部内容。</p>
-</li>
-<li>
-<p>增量式爬虫：监测网站中数据更新的情况。只会抓取网站中最新更新出来的数据。</p>
-</li>
-</ul>
-<p>爬虫的矛与盾：</p>
-<ul>
-<li>
-<p>反爬机制：门户网站，可以通过制定相应的策略或者技术手段，防止爬虫程序进行网站数据的爬取。</p>
-</li>
-<li>
-<p>反反爬策略：爬虫程序，可以通过制定相关的策略或者技术手段，破解门户网站中具备的反爬机制，从而可以获取门户网站中相关的数据。</p>
-</li>
-</ul>
-<p>robots.txt 协议：君子协议。规定了网站中那些数据可以被爬虫爬取，那些数据不允许被爬取。</p>
-<p>例如：<a href="https://www.tabao.com/robots.txt">www.tabao.com/robots.txt</a></p>
-<h2 id="4-http-https-协议">4. http&amp;https 协议</h2>
-<h3 id="（1）http-协议">（1）http 协议</h3>
-<p>概念：就是服务器和客户端进行数据交互的一种形式。</p>
-<p>常用请求头信息：</p>
-<ul>
-<li>User-Agent：请求载体的身份标识</li>
-<li>Connection：请求完毕后，是断开连接还是保持连接</li>
-</ul>
-<p>常用响应头信息：</p>
-<ul>
-<li>Content-Type：服务器响应回客户端的数据类型</li>
-</ul>
-<h3 id="（2）https-协议">（2）https 协议</h3>
-<p>概念：安全的超文本传输协议</p>
-<h3 id="（3）加密方式">（3）加密方式</h3>
-<ul>
-<li>
-<p>对称秘钥加密</p>
-<p><img src="https://cdn.jsdelivr.net/gh/zyzhang827/filesimage@main/images/2022/01/05/ea6ba70193f76fcf28fb396f0fdd6af0-%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86-7541dc.png" alt="对称加密"></p>
-</li>
-<li>
-<p>非对称秘钥加密</p>
-<p>存在缺点：第一个是如何保证接收端向发送端发出公开秘钥的时候，发送端确保收到的是预先要发送的，而不会被挟持，只要是发送秘钥，就有可能有被挟持的风险；第二个是非对称秘钥加密方式效率比较低，处理起来更为复杂，通信过程中使用就有一定的效率问题而影响通信速度。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/zyzhang827/filesimage@main/images/2022/01/05/f6d4e5688c777ef4bc782697570a1fd6-%E9%9D%9E%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86-7eb72d.png" alt="非对称加密"></p>
-</li>
-<li>
-<p>证书秘钥加密：</p>
-<ul>
-<li>服务器的开发者携带公开密钥，向数字证书认证机构提出公开密钥的申请，数字证书认证机构在认清申请者的身份审核通过以后，会对开发者申请的公开密钥做数字签名，然后分配这个已签名的公开密钥，并将密钥放在证书里面，绑定在一起；</li>
-<li>服务器将这份数字证书发送给客户端，因为客户端也认可证书机构，客户端可以通过数字证书中的数字签名来验证公钥的真伪，来确保服务器传过来的公开密钥是真实的。一般情况下，证书的数字签名是很难被伪造的，这取决于认证机构的公信力。一旦确认信息无误之后，客户端就会通过公钥对报文进行加密发送，服务器接收到以后用自己的私钥进行解密。</li>
-</ul>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>Python</category>
-        <category>爬虫</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>爬虫</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Python 学习笔记(9)--元组、集合</title>
     <url>/2021/02/23/Python-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-9-%E5%85%83%E7%BB%84%E3%80%81%E9%9B%86%E5%90%88/</url>
     <content><![CDATA[<h2 id="1-元组">1. 元组</h2>
@@ -3123,6 +3029,100 @@ range 类型的优点：不管 range 对象表示的整数序列有多长，所�
       </tags>
   </entry>
   <entry>
+    <title>爬虫学习笔记(1)--基础简介</title>
+    <url>/2022/02/14/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-1-%E5%9F%BA%E7%A1%80%E7%AE%80%E4%BB%8B/</url>
+    <content><![CDATA[<blockquote>
+<p>ZY.Zhang</p>
+<p>本文档基于<a href="https://www.bilibili.com/video/BV1Yh411o7Sz?p=1">B站视频教程</a></p>
+</blockquote>
+<h2 id="1-爬虫简介">1. 爬虫简介</h2>
+<p>什么是爬虫：通过编写程序，模拟浏览器上网，然后让其去互联网上抓取数据的过程。</p>
+<h2 id="2-爬虫合法性探究">2. 爬虫合法性探究</h2>
+<p>爬虫究竟是合法还是违法的？</p>
+<ul>
+<li>在法律中是不被禁止的</li>
+<li>具有违法风险</li>
+<li>善意爬虫 &amp; 恶意爬虫</li>
+</ul>
+<p>爬虫带来的风险可以体现在如下两个方面：</p>
+<ol>
+<li>爬虫干扰了被访问网站的正常运营</li>
+<li>爬虫抓取了受到法律保护的特定类型的数据或信息</li>
+</ol>
+<p>如何在编写使用的过程中避免进入局子的厄运？</p>
+<ul>
+<li>时常优化自己的程序，避免干扰被访问网站的正常运行</li>
+<li>在使用，传播爬取到的数据时，审查抓取到的内容，如果发现了涉及到用户隐私或者商业机密等敏感内容，需要及时停止爬取或者传播。</li>
+</ul>
+<span id="more"></span>
+<h2 id="3-爬虫初试深入">3. 爬虫初试深入</h2>
+<p>爬虫在使用场景中的分类：</p>
+<ul>
+<li>
+<p>通用爬虫：抓取系统的重要组成部分。抓取的是一整张页面数据。</p>
+</li>
+<li>
+<p>聚焦爬虫：是建立在通用爬虫的基础之上。抓取的是页面中特定的局部内容。</p>
+</li>
+<li>
+<p>增量式爬虫：监测网站中数据更新的情况。只会抓取网站中最新更新出来的数据。</p>
+</li>
+</ul>
+<p>爬虫的矛与盾：</p>
+<ul>
+<li>
+<p>反爬机制：门户网站，可以通过制定相应的策略或者技术手段，防止爬虫程序进行网站数据的爬取。</p>
+</li>
+<li>
+<p>反反爬策略：爬虫程序，可以通过制定相关的策略或者技术手段，破解门户网站中具备的反爬机制，从而可以获取门户网站中相关的数据。</p>
+</li>
+</ul>
+<p>robots.txt 协议：君子协议。规定了网站中那些数据可以被爬虫爬取，那些数据不允许被爬取。</p>
+<p>例如：<a href="https://www.tabao.com/robots.txt">www.tabao.com/robots.txt</a></p>
+<h2 id="4-http-https-协议">4. http&amp;https 协议</h2>
+<h3 id="（1）http-协议">（1）http 协议</h3>
+<p>概念：就是服务器和客户端进行数据交互的一种形式。</p>
+<p>常用请求头信息：</p>
+<ul>
+<li>User-Agent：请求载体的身份标识</li>
+<li>Connection：请求完毕后，是断开连接还是保持连接</li>
+</ul>
+<p>常用响应头信息：</p>
+<ul>
+<li>Content-Type：服务器响应回客户端的数据类型</li>
+</ul>
+<h3 id="（2）https-协议">（2）https 协议</h3>
+<p>概念：安全的超文本传输协议</p>
+<h3 id="（3）加密方式">（3）加密方式</h3>
+<ul>
+<li>
+<p>对称秘钥加密</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zyzhang827/filesimage@main/images/2022/01/05/ea6ba70193f76fcf28fb396f0fdd6af0-%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86-7541dc.png" alt="对称加密"></p>
+</li>
+<li>
+<p>非对称秘钥加密</p>
+<p>存在缺点：第一个是如何保证接收端向发送端发出公开秘钥的时候，发送端确保收到的是预先要发送的，而不会被挟持，只要是发送秘钥，就有可能有被挟持的风险；第二个是非对称秘钥加密方式效率比较低，处理起来更为复杂，通信过程中使用就有一定的效率问题而影响通信速度。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zyzhang827/filesimage@main/images/2022/01/05/f6d4e5688c777ef4bc782697570a1fd6-%E9%9D%9E%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86-7eb72d.png" alt="非对称加密"></p>
+</li>
+<li>
+<p>证书秘钥加密：</p>
+<ul>
+<li>服务器的开发者携带公开密钥，向数字证书认证机构提出公开密钥的申请，数字证书认证机构在认清申请者的身份审核通过以后，会对开发者申请的公开密钥做数字签名，然后分配这个已签名的公开密钥，并将密钥放在证书里面，绑定在一起；</li>
+<li>服务器将这份数字证书发送给客户端，因为客户端也认可证书机构，客户端可以通过数字证书中的数字签名来验证公钥的真伪，来确保服务器传过来的公开密钥是真实的。一般情况下，证书的数字签名是很难被伪造的，这取决于认证机构的公信力。一旦确认信息无误之后，客户端就会通过公钥对报文进行加密发送，服务器接收到以后用自己的私钥进行解密。</li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Python</category>
+        <category>爬虫</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>爬虫</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>爬虫学习笔记(2)--requests 模块基础</title>
     <url>/2022/02/14/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-2-requests-%E6%A8%A1%E5%9D%97%E5%9F%BA%E7%A1%80/</url>
     <content><![CDATA[<h2 id="1-requests-第一血">1. requests 第一血</h2>
@@ -3184,6 +3184,87 @@ range 类型的优点：不管 range 对象表示的整数序列有多长，所�
 </li>
 </ul>
 <div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    headers = &#123;</span><br><span class="line">        <span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">    id_list = []  							<span class="comment"># 存储企业的id</span></span><br><span class="line">    all_data_list = []  					<span class="comment"># 存储企业所有的详情数据</span></span><br><span class="line">    <span class="comment"># 批量获取不同企业的id值</span></span><br><span class="line">    url = <span class="string">&#x27;http://scxk.nmpa.gov.cn:81/xk/itownet/portalAction.do?method=getXkzsList&#x27;</span></span><br><span class="line">    <span class="comment"># 参数的封装</span></span><br><span class="line">    <span class="keyword">for</span> page <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="number">11</span>):</span><br><span class="line">        page = <span class="built_in">str</span>(page)</span><br><span class="line">        data = &#123;</span><br><span class="line">            <span class="string">&#x27;on&#x27;</span>: <span class="string">&#x27;true&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;page&#x27;</span>: page,</span><br><span class="line">            <span class="string">&#x27;pageSize&#x27;</span>: <span class="string">&#x27;15&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;productName&#x27;</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;conditionType&#x27;</span>: <span class="string">&#x27;1&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;applyname&#x27;</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;applysn&#x27;</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">        &#125;</span><br><span class="line">    json_ids = requests.post(url=url, headers=headers, data=data).json()</span><br><span class="line">    <span class="comment"># 从 json_ids 字典中拿到 list 对应的 value 值，对 value 值列表进行遍历</span></span><br><span class="line">    <span class="keyword">for</span> dic <span class="keyword">in</span> json_ids[<span class="string">&#x27;list&#x27;</span>]:</span><br><span class="line">        id_list.append(dic[<span class="string">&#x27;ID&#x27;</span>])</span><br><span class="line">    <span class="comment"># print(id_list,&#x27;\n&#x27;)</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 获取企业详情数据,也是动态加载出来的，携带一个参数 id，其值可以通过前一步生成的 id列表提取</span></span><br><span class="line">    post_url = <span class="string">&#x27;http://scxk.nmpa.gov.cn:81/xk/itownet/portalAction.do?method=getXkzsById&#x27;</span></span><br><span class="line">    <span class="keyword">for</span> <span class="built_in">id</span> <span class="keyword">in</span> id_list:</span><br><span class="line">        data = &#123;</span><br><span class="line">        <span class="string">&#x27;id&#x27;</span>: <span class="built_in">id</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        json_detail = requests.post(url=post_url, data=data, headers=headers).json()</span><br><span class="line">        <span class="comment">#print(json_detail, &#x27;-------------END----------&#x27;)</span></span><br><span class="line">        all_data_list.append(json_detail )</span><br><span class="line">        all_data_list.append(<span class="string">&#x27;---------------------------------------------------------&#x27;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 持久化存储all_data_list</span></span><br><span class="line">    fp = <span class="built_in">open</span>(<span class="string">&#x27;./allData.json&#x27;</span>, <span class="string">&#x27;w&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line">    json.dump(all_data_list, fp=fp, ensure_ascii=<span class="literal">False</span>, indent= <span class="literal">True</span>)  <span class="comment"># indent 自动排版</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;Over!&#x27;</span>)</span><br></pre></td></tr></table></figure></div>
+]]></content>
+      <categories>
+        <category>Python</category>
+        <category>爬虫</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>爬虫</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>爬虫学习笔记(4)--验证码</title>
+    <url>/2022/02/14/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-4-%E9%AA%8C%E8%AF%81%E7%A0%81/</url>
+    <content><![CDATA[<h2 id="1-验证码识别简介">1. 验证码识别简介</h2>
+<p>验证码和爬虫之间的爱恨情仇：</p>
+<ul>
+<li>反爬机制：验证码。识别验证码图片中的数据，用于模拟登录操作。</li>
+</ul>
+<p>识别验证码的操作：</p>
+<ul>
+<li>人工肉眼识别（不推荐）</li>
+<li>第三方自动识别（推荐）</li>
+</ul>
+<span id="more"></span>
+<h2 id="2-云打码使用流程">2. 云打码使用流程</h2>
+<!--作者学习期间，该平台已经挂掉，故而使用超级鹰进行代替。同类打码平台可以自行百度选择-->
+<ul>
+<li>注册：用户中心身份</li>
+<li>登录：用户中心身份
+<ul>
+<li>查询余额，题分是否足够（第一次使用，绑定微信即可免费获赠1000题分；非首次使用，建议小额充值，1元即可）</li>
+<li>创建软件 ID —— 用户中心左下角</li>
+<li>下载示例代码 —— 开发文档</li>
+</ul>
+</li>
+</ul>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python</span></span><br><span class="line"><span class="comment"># coding:utf-8</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> lxml <span class="keyword">import</span> etree</span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">from</span> hashlib <span class="keyword">import</span> md5</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Chaojiying_Client</span>(<span class="params"><span class="built_in">object</span></span>):</span></span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, username, password, soft_id</span>):</span></span><br><span class="line">		self.username = username</span><br><span class="line">		password =  password.encode(<span class="string">&#x27;utf8&#x27;</span>)</span><br><span class="line">		self.password = md5(password).hexdigest()</span><br><span class="line">		self.soft_id = soft_id</span><br><span class="line">		self.base_params = &#123;</span><br><span class="line">			<span class="string">&#x27;user&#x27;</span>: self.username,</span><br><span class="line">			<span class="string">&#x27;pass2&#x27;</span>: self.password,</span><br><span class="line">			<span class="string">&#x27;softid&#x27;</span>: self.soft_id,</span><br><span class="line">		&#125;</span><br><span class="line">		self.headers = &#123;</span><br><span class="line">			<span class="string">&#x27;Connection&#x27;</span>: <span class="string">&#x27;Keep-Alive&#x27;</span>,</span><br><span class="line">			<span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0)&#x27;</span>,</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">PostPic</span>(<span class="params">self, im, codetype</span>):</span></span><br><span class="line">		<span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">		im: 图片字节</span></span><br><span class="line"><span class="string">		codetype: 题目类型 参考 http://www.chaojiying.com/price.html</span></span><br><span class="line"><span class="string">		&quot;&quot;&quot;</span></span><br><span class="line">		params = &#123;</span><br><span class="line">			<span class="string">&#x27;codetype&#x27;</span>: codetype,</span><br><span class="line">		&#125;</span><br><span class="line">		params.update(self.base_params)</span><br><span class="line">		files = &#123;<span class="string">&#x27;userfile&#x27;</span>: (<span class="string">&#x27;ccc.jpg&#x27;</span>, im)&#125;</span><br><span class="line">		r = requests.post(<span class="string">&#x27;http://upload.chaojiying.net/Upload/Processing.php&#x27;</span>, data=params, files=files, headers=self.headers)</span><br><span class="line">		<span class="keyword">return</span> r.json()</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">ReportError</span>(<span class="params">self, im_id</span>):</span></span><br><span class="line">		<span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">		im_id:报错题目的图片ID</span></span><br><span class="line"><span class="string">		&quot;&quot;&quot;</span></span><br><span class="line">		params = &#123;</span><br><span class="line">			<span class="string">&#x27;id&#x27;</span>: im_id,</span><br><span class="line">		&#125;</span><br><span class="line">		params.update(self.base_params)</span><br><span class="line">		r = requests.post(<span class="string">&#x27;http://upload.chaojiying.net/Upload/ReportError.php&#x27;</span>, data=params, headers=self.headers)</span><br><span class="line">		<span class="keyword">return</span> r.json()</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">tranformImgCode</span>(<span class="params">imgPath,imgType</span>):</span></span><br><span class="line">	chaojiying = Chaojiying_Client(<span class="string">&#x27;此处是账户&#x27;</span>, <span class="string">&#x27;此处是密码&#x27;</span>, <span class="string">&#x27;此处是软件ID&#x27;</span>)	<span class="comment">#用户中心&gt;&gt;软件ID 生成一个替换 </span></span><br><span class="line">	im = <span class="built_in">open</span>(imgPath, <span class="string">&#x27;rb&#x27;</span>).read()	</span><br><span class="line">	<span class="keyword">return</span> chaojiying.PostPic(im,imgType)[<span class="string">&#x27;pic_str&#x27;</span>]	<span class="comment">#1902 验证码类型  官方网站&gt;&gt;价格体系 3.4+版 </span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(tranformImgCode(<span class="string">&#x27;./a.jpg&#x27;</span>,<span class="number">1902</span>))</span><br></pre></td></tr></table></figure></div>
+<h2 id="3-古诗文网验证码识别">3. 古诗文网验证码识别</h2>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#### 将本部分代码复制到上一节代码之后，因为要调用上述封装的tranformImgCode方法</span></span><br><span class="line"></span><br><span class="line">session = requests.Session()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 识别验证码图下载</span></span><br><span class="line">headers = &#123;</span><br><span class="line"><span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line">url = <span class="string">&#x27;https://so.gushiwen.cn/user/login.aspx?from=http://so.gushiwen.cn/user/collect.aspx&#x27;</span></span><br><span class="line">page_text = session.get(url=url, headers=headers).text</span><br><span class="line"><span class="comment"># 解析验证码图片的地址</span></span><br><span class="line">tree = etree.HTML(page_text)</span><br><span class="line">img_src = <span class="string">&#x27;https://so.gushiwen.org&#x27;</span> + tree.xpath(<span class="string">&#x27;//*[@id=&quot;imgCode&quot;]/@src&#x27;</span>)[<span class="number">0</span>]</span><br><span class="line"><span class="comment"># 将验证码图片保存本地</span></span><br><span class="line">img_data = session.get(img_src, headers=headers).content</span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;./code.jpg&#x27;</span>, <span class="string">&#x27;wb&#x27;</span>) <span class="keyword">as</span> fp:</span><br><span class="line">	fp.write(img_data)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 识别验证码</span></span><br><span class="line">code_text = tranformImgCode(<span class="string">&#x27;./code.jpg&#x27;</span>, <span class="number">1902</span>)</span><br><span class="line"><span class="built_in">print</span>(code_text)</span><br><span class="line">login_url = <span class="string">&#x27;https://so.gushiwen.cn/user/login.aspx?from=http%3a%2f%2fso.gushiwen.cn%2fuser%2fcollect.aspx&#x27;</span></span><br><span class="line">data = &#123;</span><br><span class="line">	<span class="string">&#x27;__VIEWSTATE&#x27;</span>: <span class="string">&#x27;f1ECt6+6MPtdTZMJtYOYS/7ww2d/DPy9t8JQcIt1QuOneLTbNQuYqPcCjZNbDAbfb9vj3k6f0M7EKTf0YqElM1k1A5ELwyTvUzBii+9LDRBbIMmc/jb0DJPsYfI=&#x27;</span>,</span><br><span class="line">	<span class="string">&#x27;__VIEWSTATEGENERATOR&#x27;</span>: <span class="string">&#x27;C93BE1AE&#x27;</span>,</span><br><span class="line">	<span class="string">&#x27;from&#x27;</span>: <span class="string">&#x27;http://so.gushiwen.cn/user/collect.aspx&#x27;</span>,</span><br><span class="line">	<span class="string">&#x27;email&#x27;</span>: <span class="string">&#x27;账号&#x27;</span>,</span><br><span class="line">	<span class="string">&#x27;pwd&#x27;</span>: <span class="string">&#x27;密码&#x27;</span>,</span><br><span class="line">	<span class="string">&#x27;code&#x27;</span>: code_text,  <span class="comment"># 动态变化</span></span><br><span class="line">	<span class="string">&#x27;denglu&#x27;</span>: <span class="string">&#x27;登录&#x27;</span>,</span><br><span class="line">	&#125;</span><br><span class="line"><span class="comment"># 对点击登录按钮发起请求</span></span><br><span class="line">page_text_login = session.post(url=login_url, headers=headers, data=data).text</span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;./gushiwen.html&#x27;</span>, <span class="string">&#x27;w&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>) <span class="keyword">as</span> fp:</span><br><span class="line">	fp.write(page_text_login)</span><br></pre></td></tr></table></figure></div>
+<ul>
+<li>
+<p>在请求参数中如果看到了一组乱序的请求参数，最好去验证这组请求参数是否为动态变化</p>
+<ul>
+<li>处理：
+<ul>
+<li>方式1：常规来讲一般动态变化的请求参数会被隐藏在前台页面中，那么我们就要去前台页面源码中寻找；</li>
+<li>方式2：如果前台页面没有的话，我们就可以基于抓包工具进行全局搜索。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>基于百度AI实现的爬虫给功能：</p>
+<ul>
+<li>图像识别</li>
+<li>语音识别&amp;合成</li>
+<li>自然语言处理</li>
+</ul>
+</li>
+<li>
+<p>使用流程：</p>
+<ul>
+<li>
+<p>点击控制台进行登录</p>
+</li>
+<li>
+<p>选择想要实现的功能</p>
+</li>
+<li>
+<p>实现功能下创建一个 app</p>
+</li>
+<li>
+<p>选择对应的 pythonSDK 文档进行代码实现</p>
+<blockquote>
+<p>需求：<a href="https://duanziwang.com/">https://duanziwang.com/</a></p>
+<p>讲段子王中的段子内容爬取到本地，然后基于语音合成为mp3的音频文件，然后自己搭建一个web服务器，线上实时播放音频文件。</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
 ]]></content>
       <categories>
         <category>Python</category>
@@ -3479,87 +3560,6 @@ range 类型的优点：不管 range 对象表示的整数序列有多长，所�
 <div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 需求：解析出所有城市名称  https://www.aqistudy.cn/historydata/</span></span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">from</span> lxml <span class="keyword">import</span> etree</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27;headers = &#123;</span></span><br><span class="line"><span class="string">    &#x27;User-Agent&#x27;:&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36&#x27;</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">    url = &#x27;https://www.aqistudy.cn/historydata/&#x27;</span></span><br><span class="line"><span class="string">    page_text = requests.get(url=url,headers=headers).text</span></span><br><span class="line"><span class="string">    tree = etree.HTML(page_text)</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    #数据解析</span></span><br><span class="line"><span class="string">    hot_li_list = tree.xpath(&#x27;//div[@class=&quot;bottom&quot;]/ul/li&#x27;)</span></span><br><span class="line"><span class="string">    all_city_names = []</span></span><br><span class="line"><span class="string">    #解析热门城市名字</span></span><br><span class="line"><span class="string">    for li in hot_li_list:</span></span><br><span class="line"><span class="string">        hot_city_names = li.xpath(&#x27;./a/text()&#x27;)[0]</span></span><br><span class="line"><span class="string">        all_city_names.append(hot_city_names)</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    #解析全部城市名字：</span></span><br><span class="line"><span class="string">    city_names_list = tree.xpath(&#x27;.//div[@class=&quot;bottom&quot;]/ul/div[2]/li&#x27;)</span></span><br><span class="line"><span class="string">    for li in city_names_list:</span></span><br><span class="line"><span class="string">        city_name = li.xpath(&#x27;./a/text()&#x27;)[0]</span></span><br><span class="line"><span class="string">        all_city_names.append(city_name)</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    print(all_city_names,len(all_city_names))&#x27;&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 第二种方法，一起解析</span></span><br><span class="line"></span><br><span class="line">    headers = &#123;</span><br><span class="line"><span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">    url = <span class="string">&#x27;https://www.aqistudy.cn/historydata/&#x27;</span></span><br><span class="line">    page_text = requests.get(url=url, headers=headers).text</span><br><span class="line"></span><br><span class="line">    tree = etree.HTML(page_text)</span><br><span class="line">    <span class="comment"># 数据解析  解析到热门城市和全部城市对应的a标签</span></span><br><span class="line">    <span class="comment"># 热门城市标签层级div/ul/li/a</span></span><br><span class="line">    <span class="comment"># 全部城市标签层级div/ul/div[2]/li/a</span></span><br><span class="line">    a_list = tree.xpath(<span class="string">&#x27;//div[@class=&quot;bottom&quot;]/ul/li/a | //div[@class=&quot;bottom&quot;]/ul/div[2]/li/a &#x27;</span>)</span><br><span class="line">    all_city_names = []</span><br><span class="line">    <span class="keyword">for</span> a <span class="keyword">in</span> a_list:</span><br><span class="line">        a_name = a.xpath(<span class="string">&#x27;./text()&#x27;</span>)[<span class="number">0</span>]</span><br><span class="line">        all_city_names.append(a_name)</span><br><span class="line">    <span class="built_in">print</span>(all_city_names, <span class="built_in">len</span>(all_city_names))</span><br></pre></td></tr></table></figure></div>
 <h2 id="10-xpath-作业—爬取站长素材中免费简历模板">10. xpath 作业—爬取站长素材中免费简历模板</h2>
 <div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 爬取站长素材中免费的简历模板  https://sc.chinaz.com/jianli/free.html</span></span><br><span class="line"><span class="comment"># 代码参考：https://blog.csdn.net/nanke_nk/article/details/108966854</span></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">from</span> lxml <span class="keyword">import</span> etree</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> os.path.exists(<span class="string">&#x27;./jianli&#x27;</span>):</span><br><span class="line">        os.mkdir(<span class="string">&#x27;./jianli&#x27;</span>)</span><br><span class="line">    headers = &#123;</span><br><span class="line">        <span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">    url = <span class="string">&#x27;https://sc.chinaz.com/jianli/free_%d.html&#x27;</span></span><br><span class="line">    page = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&#x27;您一共想要爬取多少页：&#x27;</span>))</span><br><span class="line">    <span class="keyword">for</span> pageNum <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, page):</span><br><span class="line">        <span class="keyword">if</span> pageNum == <span class="number">1</span>:</span><br><span class="line">            new_url = <span class="string">&#x27;https://sc.chinaz.com/jianli/free.html&#x27;</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            new_url = <span class="built_in">format</span>(url%pageNum)</span><br><span class="line">        page_text = requests.get(url = new_url, headers = headers).text</span><br><span class="line">        tree = etree.HTML(page_text)</span><br><span class="line">        url_div_list = tree.xpath(<span class="string">&#x27;//*[@id=&quot;container&quot;]/div&#x27;</span>)</span><br><span class="line">        <span class="keyword">for</span> detail_url <span class="keyword">in</span> url_div_list:</span><br><span class="line">            detail_url = <span class="string">&#x27;https:&#x27;</span> + detail_url.xpath(<span class="string">&#x27;./a/@href&#x27;</span>)[<span class="number">0</span>]</span><br><span class="line"></span><br><span class="line">            detail_page_text = requests.get(url = detail_url, headers =headers).text</span><br><span class="line">            tree = etree.HTML(detail_page_text)</span><br><span class="line">            name = tree.xpath(<span class="string">&#x27;//h1/text()&#x27;</span>)[<span class="number">0</span>].encode(<span class="string">&#x27;iso-8859-1&#x27;</span>).decode(<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line">            download_url = tree.xpath(<span class="string">&#x27;//*[@id=&quot;down&quot;]/div[2]/ul/li[1]/a/@href&#x27;</span>)[<span class="number">0</span>]</span><br><span class="line">            file_path = <span class="string">&#x27;jianli/&#x27;</span> + name + <span class="string">&#x27;.rar&#x27;</span></span><br><span class="line">            download_content = requests.get(url = download_url, headers = headers).content</span><br><span class="line">            <span class="keyword">with</span> <span class="built_in">open</span>(file_path, <span class="string">&#x27;wb&#x27;</span>) <span class="keyword">as</span> fp:</span><br><span class="line">                fp.write(download_content)</span><br><span class="line">            <span class="built_in">print</span>(name, <span class="string">&#x27;下载完成&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;-------------------------------OVER!---------------------------------------&#x27;</span>)</span><br></pre></td></tr></table></figure></div>
-]]></content>
-      <categories>
-        <category>Python</category>
-        <category>爬虫</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>爬虫</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>爬虫学习笔记(4)--验证码</title>
-    <url>/2022/02/14/%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-4-%E9%AA%8C%E8%AF%81%E7%A0%81/</url>
-    <content><![CDATA[<h2 id="1-验证码识别简介">1. 验证码识别简介</h2>
-<p>验证码和爬虫之间的爱恨情仇：</p>
-<ul>
-<li>反爬机制：验证码。识别验证码图片中的数据，用于模拟登录操作。</li>
-</ul>
-<p>识别验证码的操作：</p>
-<ul>
-<li>人工肉眼识别（不推荐）</li>
-<li>第三方自动识别（推荐）</li>
-</ul>
-<span id="more"></span>
-<h2 id="2-云打码使用流程">2. 云打码使用流程</h2>
-<!--作者学习期间，该平台已经挂掉，故而使用超级鹰进行代替。同类打码平台可以自行百度选择-->
-<ul>
-<li>注册：用户中心身份</li>
-<li>登录：用户中心身份
-<ul>
-<li>查询余额，题分是否足够（第一次使用，绑定微信即可免费获赠1000题分；非首次使用，建议小额充值，1元即可）</li>
-<li>创建软件 ID —— 用户中心左下角</li>
-<li>下载示例代码 —— 开发文档</li>
-</ul>
-</li>
-</ul>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python</span></span><br><span class="line"><span class="comment"># coding:utf-8</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> lxml <span class="keyword">import</span> etree</span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">from</span> hashlib <span class="keyword">import</span> md5</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Chaojiying_Client</span>(<span class="params"><span class="built_in">object</span></span>):</span></span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, username, password, soft_id</span>):</span></span><br><span class="line">		self.username = username</span><br><span class="line">		password =  password.encode(<span class="string">&#x27;utf8&#x27;</span>)</span><br><span class="line">		self.password = md5(password).hexdigest()</span><br><span class="line">		self.soft_id = soft_id</span><br><span class="line">		self.base_params = &#123;</span><br><span class="line">			<span class="string">&#x27;user&#x27;</span>: self.username,</span><br><span class="line">			<span class="string">&#x27;pass2&#x27;</span>: self.password,</span><br><span class="line">			<span class="string">&#x27;softid&#x27;</span>: self.soft_id,</span><br><span class="line">		&#125;</span><br><span class="line">		self.headers = &#123;</span><br><span class="line">			<span class="string">&#x27;Connection&#x27;</span>: <span class="string">&#x27;Keep-Alive&#x27;</span>,</span><br><span class="line">			<span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0)&#x27;</span>,</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">PostPic</span>(<span class="params">self, im, codetype</span>):</span></span><br><span class="line">		<span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">		im: 图片字节</span></span><br><span class="line"><span class="string">		codetype: 题目类型 参考 http://www.chaojiying.com/price.html</span></span><br><span class="line"><span class="string">		&quot;&quot;&quot;</span></span><br><span class="line">		params = &#123;</span><br><span class="line">			<span class="string">&#x27;codetype&#x27;</span>: codetype,</span><br><span class="line">		&#125;</span><br><span class="line">		params.update(self.base_params)</span><br><span class="line">		files = &#123;<span class="string">&#x27;userfile&#x27;</span>: (<span class="string">&#x27;ccc.jpg&#x27;</span>, im)&#125;</span><br><span class="line">		r = requests.post(<span class="string">&#x27;http://upload.chaojiying.net/Upload/Processing.php&#x27;</span>, data=params, files=files, headers=self.headers)</span><br><span class="line">		<span class="keyword">return</span> r.json()</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">ReportError</span>(<span class="params">self, im_id</span>):</span></span><br><span class="line">		<span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">		im_id:报错题目的图片ID</span></span><br><span class="line"><span class="string">		&quot;&quot;&quot;</span></span><br><span class="line">		params = &#123;</span><br><span class="line">			<span class="string">&#x27;id&#x27;</span>: im_id,</span><br><span class="line">		&#125;</span><br><span class="line">		params.update(self.base_params)</span><br><span class="line">		r = requests.post(<span class="string">&#x27;http://upload.chaojiying.net/Upload/ReportError.php&#x27;</span>, data=params, headers=self.headers)</span><br><span class="line">		<span class="keyword">return</span> r.json()</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">tranformImgCode</span>(<span class="params">imgPath,imgType</span>):</span></span><br><span class="line">	chaojiying = Chaojiying_Client(<span class="string">&#x27;此处是账户&#x27;</span>, <span class="string">&#x27;此处是密码&#x27;</span>, <span class="string">&#x27;此处是软件ID&#x27;</span>)	<span class="comment">#用户中心&gt;&gt;软件ID 生成一个替换 </span></span><br><span class="line">	im = <span class="built_in">open</span>(imgPath, <span class="string">&#x27;rb&#x27;</span>).read()	</span><br><span class="line">	<span class="keyword">return</span> chaojiying.PostPic(im,imgType)[<span class="string">&#x27;pic_str&#x27;</span>]	<span class="comment">#1902 验证码类型  官方网站&gt;&gt;价格体系 3.4+版 </span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(tranformImgCode(<span class="string">&#x27;./a.jpg&#x27;</span>,<span class="number">1902</span>))</span><br></pre></td></tr></table></figure></div>
-<h2 id="3-古诗文网验证码识别">3. 古诗文网验证码识别</h2>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#### 将本部分代码复制到上一节代码之后，因为要调用上述封装的tranformImgCode方法</span></span><br><span class="line"></span><br><span class="line">session = requests.Session()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 识别验证码图下载</span></span><br><span class="line">headers = &#123;</span><br><span class="line"><span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line">url = <span class="string">&#x27;https://so.gushiwen.cn/user/login.aspx?from=http://so.gushiwen.cn/user/collect.aspx&#x27;</span></span><br><span class="line">page_text = session.get(url=url, headers=headers).text</span><br><span class="line"><span class="comment"># 解析验证码图片的地址</span></span><br><span class="line">tree = etree.HTML(page_text)</span><br><span class="line">img_src = <span class="string">&#x27;https://so.gushiwen.org&#x27;</span> + tree.xpath(<span class="string">&#x27;//*[@id=&quot;imgCode&quot;]/@src&#x27;</span>)[<span class="number">0</span>]</span><br><span class="line"><span class="comment"># 将验证码图片保存本地</span></span><br><span class="line">img_data = session.get(img_src, headers=headers).content</span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;./code.jpg&#x27;</span>, <span class="string">&#x27;wb&#x27;</span>) <span class="keyword">as</span> fp:</span><br><span class="line">	fp.write(img_data)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 识别验证码</span></span><br><span class="line">code_text = tranformImgCode(<span class="string">&#x27;./code.jpg&#x27;</span>, <span class="number">1902</span>)</span><br><span class="line"><span class="built_in">print</span>(code_text)</span><br><span class="line">login_url = <span class="string">&#x27;https://so.gushiwen.cn/user/login.aspx?from=http%3a%2f%2fso.gushiwen.cn%2fuser%2fcollect.aspx&#x27;</span></span><br><span class="line">data = &#123;</span><br><span class="line">	<span class="string">&#x27;__VIEWSTATE&#x27;</span>: <span class="string">&#x27;f1ECt6+6MPtdTZMJtYOYS/7ww2d/DPy9t8JQcIt1QuOneLTbNQuYqPcCjZNbDAbfb9vj3k6f0M7EKTf0YqElM1k1A5ELwyTvUzBii+9LDRBbIMmc/jb0DJPsYfI=&#x27;</span>,</span><br><span class="line">	<span class="string">&#x27;__VIEWSTATEGENERATOR&#x27;</span>: <span class="string">&#x27;C93BE1AE&#x27;</span>,</span><br><span class="line">	<span class="string">&#x27;from&#x27;</span>: <span class="string">&#x27;http://so.gushiwen.cn/user/collect.aspx&#x27;</span>,</span><br><span class="line">	<span class="string">&#x27;email&#x27;</span>: <span class="string">&#x27;账号&#x27;</span>,</span><br><span class="line">	<span class="string">&#x27;pwd&#x27;</span>: <span class="string">&#x27;密码&#x27;</span>,</span><br><span class="line">	<span class="string">&#x27;code&#x27;</span>: code_text,  <span class="comment"># 动态变化</span></span><br><span class="line">	<span class="string">&#x27;denglu&#x27;</span>: <span class="string">&#x27;登录&#x27;</span>,</span><br><span class="line">	&#125;</span><br><span class="line"><span class="comment"># 对点击登录按钮发起请求</span></span><br><span class="line">page_text_login = session.post(url=login_url, headers=headers, data=data).text</span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;./gushiwen.html&#x27;</span>, <span class="string">&#x27;w&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>) <span class="keyword">as</span> fp:</span><br><span class="line">	fp.write(page_text_login)</span><br></pre></td></tr></table></figure></div>
-<ul>
-<li>
-<p>在请求参数中如果看到了一组乱序的请求参数，最好去验证这组请求参数是否为动态变化</p>
-<ul>
-<li>处理：
-<ul>
-<li>方式1：常规来讲一般动态变化的请求参数会被隐藏在前台页面中，那么我们就要去前台页面源码中寻找；</li>
-<li>方式2：如果前台页面没有的话，我们就可以基于抓包工具进行全局搜索。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p>基于百度AI实现的爬虫给功能：</p>
-<ul>
-<li>图像识别</li>
-<li>语音识别&amp;合成</li>
-<li>自然语言处理</li>
-</ul>
-</li>
-<li>
-<p>使用流程：</p>
-<ul>
-<li>
-<p>点击控制台进行登录</p>
-</li>
-<li>
-<p>选择想要实现的功能</p>
-</li>
-<li>
-<p>实现功能下创建一个 app</p>
-</li>
-<li>
-<p>选择对应的 pythonSDK 文档进行代码实现</p>
-<blockquote>
-<p>需求：<a href="https://duanziwang.com/">https://duanziwang.com/</a></p>
-<p>讲段子王中的段子内容爬取到本地，然后基于语音合成为mp3的音频文件，然后自己搭建一个web服务器，线上实时播放音频文件。</p>
-</blockquote>
-</li>
-</ul>
-</li>
-</ul>
 ]]></content>
       <categories>
         <category>Python</category>
