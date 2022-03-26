@@ -1417,6 +1417,28 @@
       </tags>
   </entry>
   <entry>
+    <title>飞鸟集</title>
+    <url>/posts/2f2ba896/</url>
+    <content><![CDATA[<p>🟩 What you are you do not see, what you see is your shadow.<br>
+🟪 你无法看到自己, 你看到的是你认为的自己.</p>
+<p>🟨 I cannot choose the best. The best chooses me.<br>
+🟥 我做不到选择最好的, 是最好的选择了我.</p>
+<p>🟦 Let him only see the thorns who has eyes to see the rose.<br>
+🟧 让那些盯着玫瑰花的人啊, 多看看玫瑰的刺吧.</p>
+<p>⬛ “Who drives me forward like fate?” “The Myself striding on my back.”<br>
+🟫 “是谁像命运一样催我向前?” “是我自己一直在我后面.”</p>
+<p>⬜ Power takes as ingratitude the writhings of its victims.<br>
+🟪 在强权看来, 牺牲品的痛苦是不知好歹.</p>
+]]></content>
+      <categories>
+        <category>鸡汤</category>
+      </categories>
+      <tags>
+        <tag>文化</tag>
+        <tag>诗词</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>浏览器插件和脚本</title>
     <url>/posts/2e4158e/</url>
     <content><![CDATA[<h2 id="Tampermonkey">Tampermonkey</h2>
@@ -1466,28 +1488,6 @@
       </categories>
       <tags>
         <tag>插件</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>飞鸟集</title>
-    <url>/posts/2f2ba896/</url>
-    <content><![CDATA[<p>🟩 What you are you do not see, what you see is your shadow.<br>
-🟪 你无法看到自己, 你看到的是你认为的自己.</p>
-<p>🟨 I cannot choose the best. The best chooses me.<br>
-🟥 我做不到选择最好的, 是最好的选择了我.</p>
-<p>🟦 Let him only see the thorns who has eyes to see the rose.<br>
-🟧 让那些盯着玫瑰花的人啊, 多看看玫瑰的刺吧.</p>
-<p>⬛ “Who drives me forward like fate?” “The Myself striding on my back.”<br>
-🟫 “是谁像命运一样催我向前?” “是我自己一直在我后面.”</p>
-<p>⬜ Power takes as ingratitude the writhings of its victims.<br>
-🟪 在强权看来, 牺牲品的痛苦是不知好歹.</p>
-]]></content>
-      <categories>
-        <category>鸡汤</category>
-      </categories>
-      <tags>
-        <tag>文化</tag>
-        <tag>诗词</tag>
       </tags>
   </entry>
   <entry>
@@ -3489,87 +3489,6 @@ range 类型的优点：不管 range 对象表示的整数序列有多长，所�
       </tags>
   </entry>
   <entry>
-    <title>爬虫学习笔记(4)--验证码</title>
-    <url>/posts/814742/</url>
-    <content><![CDATA[<h2 id="1-验证码识别简介">1. 验证码识别简介</h2>
-<p>验证码和爬虫之间的爱恨情仇：</p>
-<ul>
-<li>反爬机制：验证码。识别验证码图片中的数据，用于模拟登录操作。</li>
-</ul>
-<p>识别验证码的操作：</p>
-<ul>
-<li>人工肉眼识别（不推荐）</li>
-<li>第三方自动识别（推荐）</li>
-</ul>
-<span id="more"></span>
-<h2 id="2-云打码使用流程">2. 云打码使用流程</h2>
-<!--作者学习期间，该平台已经挂掉，故而使用超级鹰进行代替。同类打码平台可以自行百度选择-->
-<ul>
-<li>注册：用户中心身份</li>
-<li>登录：用户中心身份
-<ul>
-<li>查询余额，题分是否足够（第一次使用，绑定微信即可免费获赠1000题分；非首次使用，建议小额充值，1元即可）</li>
-<li>创建软件 ID —— 用户中心左下角</li>
-<li>下载示例代码 —— 开发文档</li>
-</ul>
-</li>
-</ul>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python</span></span><br><span class="line"><span class="comment"># coding:utf-8</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> lxml <span class="keyword">import</span> etree</span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">from</span> hashlib <span class="keyword">import</span> md5</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Chaojiying_Client</span>(<span class="params"><span class="built_in">object</span></span>):</span></span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, username, password, soft_id</span>):</span></span><br><span class="line">		self.username = username</span><br><span class="line">		password =  password.encode(<span class="string">&#x27;utf8&#x27;</span>)</span><br><span class="line">		self.password = md5(password).hexdigest()</span><br><span class="line">		self.soft_id = soft_id</span><br><span class="line">		self.base_params = &#123;</span><br><span class="line">			<span class="string">&#x27;user&#x27;</span>: self.username,</span><br><span class="line">			<span class="string">&#x27;pass2&#x27;</span>: self.password,</span><br><span class="line">			<span class="string">&#x27;softid&#x27;</span>: self.soft_id,</span><br><span class="line">		&#125;</span><br><span class="line">		self.headers = &#123;</span><br><span class="line">			<span class="string">&#x27;Connection&#x27;</span>: <span class="string">&#x27;Keep-Alive&#x27;</span>,</span><br><span class="line">			<span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0)&#x27;</span>,</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">PostPic</span>(<span class="params">self, im, codetype</span>):</span></span><br><span class="line">		<span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">		im: 图片字节</span></span><br><span class="line"><span class="string">		codetype: 题目类型 参考 http://www.chaojiying.com/price.html</span></span><br><span class="line"><span class="string">		&quot;&quot;&quot;</span></span><br><span class="line">		params = &#123;</span><br><span class="line">			<span class="string">&#x27;codetype&#x27;</span>: codetype,</span><br><span class="line">		&#125;</span><br><span class="line">		params.update(self.base_params)</span><br><span class="line">		files = &#123;<span class="string">&#x27;userfile&#x27;</span>: (<span class="string">&#x27;ccc.jpg&#x27;</span>, im)&#125;</span><br><span class="line">		r = requests.post(<span class="string">&#x27;http://upload.chaojiying.net/Upload/Processing.php&#x27;</span>, data=params, files=files, headers=self.headers)</span><br><span class="line">		<span class="keyword">return</span> r.json()</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">ReportError</span>(<span class="params">self, im_id</span>):</span></span><br><span class="line">		<span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">		im_id:报错题目的图片ID</span></span><br><span class="line"><span class="string">		&quot;&quot;&quot;</span></span><br><span class="line">		params = &#123;</span><br><span class="line">			<span class="string">&#x27;id&#x27;</span>: im_id,</span><br><span class="line">		&#125;</span><br><span class="line">		params.update(self.base_params)</span><br><span class="line">		r = requests.post(<span class="string">&#x27;http://upload.chaojiying.net/Upload/ReportError.php&#x27;</span>, data=params, headers=self.headers)</span><br><span class="line">		<span class="keyword">return</span> r.json()</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">tranformImgCode</span>(<span class="params">imgPath,imgType</span>):</span></span><br><span class="line">	chaojiying = Chaojiying_Client(<span class="string">&#x27;此处是账户&#x27;</span>, <span class="string">&#x27;此处是密码&#x27;</span>, <span class="string">&#x27;此处是软件ID&#x27;</span>)	<span class="comment">#用户中心&gt;&gt;软件ID 生成一个替换 </span></span><br><span class="line">	im = <span class="built_in">open</span>(imgPath, <span class="string">&#x27;rb&#x27;</span>).read()	</span><br><span class="line">	<span class="keyword">return</span> chaojiying.PostPic(im,imgType)[<span class="string">&#x27;pic_str&#x27;</span>]	<span class="comment">#1902 验证码类型  官方网站&gt;&gt;价格体系 3.4+版 </span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(tranformImgCode(<span class="string">&#x27;./a.jpg&#x27;</span>,<span class="number">1902</span>))</span><br></pre></td></tr></table></figure></div>
-<h2 id="3-古诗文网验证码识别">3. 古诗文网验证码识别</h2>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#### 将本部分代码复制到上一节代码之后，因为要调用上述封装的tranformImgCode方法</span></span><br><span class="line"></span><br><span class="line">session = requests.Session()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 识别验证码图下载</span></span><br><span class="line">headers = &#123;</span><br><span class="line"><span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line">url = <span class="string">&#x27;https://so.gushiwen.cn/user/login.aspx?from=http://so.gushiwen.cn/user/collect.aspx&#x27;</span></span><br><span class="line">page_text = session.get(url=url, headers=headers).text</span><br><span class="line"><span class="comment"># 解析验证码图片的地址</span></span><br><span class="line">tree = etree.HTML(page_text)</span><br><span class="line">img_src = <span class="string">&#x27;https://so.gushiwen.org&#x27;</span> + tree.xpath(<span class="string">&#x27;//*[@id=&quot;imgCode&quot;]/@src&#x27;</span>)[<span class="number">0</span>]</span><br><span class="line"><span class="comment"># 将验证码图片保存本地</span></span><br><span class="line">img_data = session.get(img_src, headers=headers).content</span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;./code.jpg&#x27;</span>, <span class="string">&#x27;wb&#x27;</span>) <span class="keyword">as</span> fp:</span><br><span class="line">	fp.write(img_data)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 识别验证码</span></span><br><span class="line">code_text = tranformImgCode(<span class="string">&#x27;./code.jpg&#x27;</span>, <span class="number">1902</span>)</span><br><span class="line"><span class="built_in">print</span>(code_text)</span><br><span class="line">login_url = <span class="string">&#x27;https://so.gushiwen.cn/user/login.aspx?from=http%3a%2f%2fso.gushiwen.cn%2fuser%2fcollect.aspx&#x27;</span></span><br><span class="line">data = &#123;</span><br><span class="line">	<span class="string">&#x27;__VIEWSTATE&#x27;</span>: <span class="string">&#x27;f1ECt6+6MPtdTZMJtYOYS/7ww2d/DPy9t8JQcIt1QuOneLTbNQuYqPcCjZNbDAbfb9vj3k6f0M7EKTf0YqElM1k1A5ELwyTvUzBii+9LDRBbIMmc/jb0DJPsYfI=&#x27;</span>,</span><br><span class="line">	<span class="string">&#x27;__VIEWSTATEGENERATOR&#x27;</span>: <span class="string">&#x27;C93BE1AE&#x27;</span>,</span><br><span class="line">	<span class="string">&#x27;from&#x27;</span>: <span class="string">&#x27;http://so.gushiwen.cn/user/collect.aspx&#x27;</span>,</span><br><span class="line">	<span class="string">&#x27;email&#x27;</span>: <span class="string">&#x27;账号&#x27;</span>,</span><br><span class="line">	<span class="string">&#x27;pwd&#x27;</span>: <span class="string">&#x27;密码&#x27;</span>,</span><br><span class="line">	<span class="string">&#x27;code&#x27;</span>: code_text,  <span class="comment"># 动态变化</span></span><br><span class="line">	<span class="string">&#x27;denglu&#x27;</span>: <span class="string">&#x27;登录&#x27;</span>,</span><br><span class="line">	&#125;</span><br><span class="line"><span class="comment"># 对点击登录按钮发起请求</span></span><br><span class="line">page_text_login = session.post(url=login_url, headers=headers, data=data).text</span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;./gushiwen.html&#x27;</span>, <span class="string">&#x27;w&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>) <span class="keyword">as</span> fp:</span><br><span class="line">	fp.write(page_text_login)</span><br></pre></td></tr></table></figure></div>
-<ul>
-<li>
-<p>在请求参数中如果看到了一组乱序的请求参数，最好去验证这组请求参数是否为动态变化</p>
-<ul>
-<li>处理：
-<ul>
-<li>方式1：常规来讲一般动态变化的请求参数会被隐藏在前台页面中，那么我们就要去前台页面源码中寻找；</li>
-<li>方式2：如果前台页面没有的话，我们就可以基于抓包工具进行全局搜索。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p>基于百度AI实现的爬虫给功能：</p>
-<ul>
-<li>图像识别</li>
-<li>语音识别&amp;合成</li>
-<li>自然语言处理</li>
-</ul>
-</li>
-<li>
-<p>使用流程：</p>
-<ul>
-<li>
-<p>点击控制台进行登录</p>
-</li>
-<li>
-<p>选择想要实现的功能</p>
-</li>
-<li>
-<p>实现功能下创建一个 app</p>
-</li>
-<li>
-<p>选择对应的 pythonSDK 文档进行代码实现</p>
-<blockquote>
-<p>需求：<a href="https://duanziwang.com/">https://duanziwang.com/</a></p>
-<p>讲段子王中的段子内容爬取到本地，然后基于语音合成为mp3的音频文件，然后自己搭建一个web服务器，线上实时播放音频文件。</p>
-</blockquote>
-</li>
-</ul>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>Python</category>
-        <category>爬虫</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>爬虫</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>爬虫学习笔记(5)--requests 模块高级</title>
     <url>/posts/7b6c8a34/</url>
     <content><![CDATA[<h2 id="1-模拟登录实现流程梳理">1. 模拟登录实现流程梳理</h2>
@@ -3644,6 +3563,87 @@ range 类型的优点：不管 range 对象表示的整数序列有多长，所�
 </ul>
 <h2 id="5-代理在爬虫中的应用">5. 代理在爬虫中的应用</h2>
 <div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line">url = <span class="string">&#x27;http://www.baidu.com/s?wd=ip&#x27;</span></span><br><span class="line">headers = &#123;</span><br><span class="line">    <span class="string">&#x27;User-Agent&#x27;</span>:<span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">page_text = requests.get(url = url, headers = headers, proxies = &#123;<span class="string">&quot;http&quot;</span>: <span class="string">&quot;http://124.205.155.153:9090&quot;</span>&#125;).text</span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;ip.html&#x27;</span>, <span class="string">&#x27;w&#x27;</span>, encoding = <span class="string">&#x27;utf-8&#x27;</span>) <span class="keyword">as</span> fp:</span><br><span class="line">    fp.write(page_text)</span><br></pre></td></tr></table></figure></div>
+]]></content>
+      <categories>
+        <category>Python</category>
+        <category>爬虫</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>爬虫</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>爬虫学习笔记(4)--验证码</title>
+    <url>/posts/814742/</url>
+    <content><![CDATA[<h2 id="1-验证码识别简介">1. 验证码识别简介</h2>
+<p>验证码和爬虫之间的爱恨情仇：</p>
+<ul>
+<li>反爬机制：验证码。识别验证码图片中的数据，用于模拟登录操作。</li>
+</ul>
+<p>识别验证码的操作：</p>
+<ul>
+<li>人工肉眼识别（不推荐）</li>
+<li>第三方自动识别（推荐）</li>
+</ul>
+<span id="more"></span>
+<h2 id="2-云打码使用流程">2. 云打码使用流程</h2>
+<!--作者学习期间，该平台已经挂掉，故而使用超级鹰进行代替。同类打码平台可以自行百度选择-->
+<ul>
+<li>注册：用户中心身份</li>
+<li>登录：用户中心身份
+<ul>
+<li>查询余额，题分是否足够（第一次使用，绑定微信即可免费获赠1000题分；非首次使用，建议小额充值，1元即可）</li>
+<li>创建软件 ID —— 用户中心左下角</li>
+<li>下载示例代码 —— 开发文档</li>
+</ul>
+</li>
+</ul>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python</span></span><br><span class="line"><span class="comment"># coding:utf-8</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> lxml <span class="keyword">import</span> etree</span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">from</span> hashlib <span class="keyword">import</span> md5</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Chaojiying_Client</span>(<span class="params"><span class="built_in">object</span></span>):</span></span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, username, password, soft_id</span>):</span></span><br><span class="line">		self.username = username</span><br><span class="line">		password =  password.encode(<span class="string">&#x27;utf8&#x27;</span>)</span><br><span class="line">		self.password = md5(password).hexdigest()</span><br><span class="line">		self.soft_id = soft_id</span><br><span class="line">		self.base_params = &#123;</span><br><span class="line">			<span class="string">&#x27;user&#x27;</span>: self.username,</span><br><span class="line">			<span class="string">&#x27;pass2&#x27;</span>: self.password,</span><br><span class="line">			<span class="string">&#x27;softid&#x27;</span>: self.soft_id,</span><br><span class="line">		&#125;</span><br><span class="line">		self.headers = &#123;</span><br><span class="line">			<span class="string">&#x27;Connection&#x27;</span>: <span class="string">&#x27;Keep-Alive&#x27;</span>,</span><br><span class="line">			<span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0)&#x27;</span>,</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">PostPic</span>(<span class="params">self, im, codetype</span>):</span></span><br><span class="line">		<span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">		im: 图片字节</span></span><br><span class="line"><span class="string">		codetype: 题目类型 参考 http://www.chaojiying.com/price.html</span></span><br><span class="line"><span class="string">		&quot;&quot;&quot;</span></span><br><span class="line">		params = &#123;</span><br><span class="line">			<span class="string">&#x27;codetype&#x27;</span>: codetype,</span><br><span class="line">		&#125;</span><br><span class="line">		params.update(self.base_params)</span><br><span class="line">		files = &#123;<span class="string">&#x27;userfile&#x27;</span>: (<span class="string">&#x27;ccc.jpg&#x27;</span>, im)&#125;</span><br><span class="line">		r = requests.post(<span class="string">&#x27;http://upload.chaojiying.net/Upload/Processing.php&#x27;</span>, data=params, files=files, headers=self.headers)</span><br><span class="line">		<span class="keyword">return</span> r.json()</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">ReportError</span>(<span class="params">self, im_id</span>):</span></span><br><span class="line">		<span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">		im_id:报错题目的图片ID</span></span><br><span class="line"><span class="string">		&quot;&quot;&quot;</span></span><br><span class="line">		params = &#123;</span><br><span class="line">			<span class="string">&#x27;id&#x27;</span>: im_id,</span><br><span class="line">		&#125;</span><br><span class="line">		params.update(self.base_params)</span><br><span class="line">		r = requests.post(<span class="string">&#x27;http://upload.chaojiying.net/Upload/ReportError.php&#x27;</span>, data=params, headers=self.headers)</span><br><span class="line">		<span class="keyword">return</span> r.json()</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">tranformImgCode</span>(<span class="params">imgPath,imgType</span>):</span></span><br><span class="line">	chaojiying = Chaojiying_Client(<span class="string">&#x27;此处是账户&#x27;</span>, <span class="string">&#x27;此处是密码&#x27;</span>, <span class="string">&#x27;此处是软件ID&#x27;</span>)	<span class="comment">#用户中心&gt;&gt;软件ID 生成一个替换 </span></span><br><span class="line">	im = <span class="built_in">open</span>(imgPath, <span class="string">&#x27;rb&#x27;</span>).read()	</span><br><span class="line">	<span class="keyword">return</span> chaojiying.PostPic(im,imgType)[<span class="string">&#x27;pic_str&#x27;</span>]	<span class="comment">#1902 验证码类型  官方网站&gt;&gt;价格体系 3.4+版 </span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(tranformImgCode(<span class="string">&#x27;./a.jpg&#x27;</span>,<span class="number">1902</span>))</span><br></pre></td></tr></table></figure></div>
+<h2 id="3-古诗文网验证码识别">3. 古诗文网验证码识别</h2>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#### 将本部分代码复制到上一节代码之后，因为要调用上述封装的tranformImgCode方法</span></span><br><span class="line"></span><br><span class="line">session = requests.Session()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 识别验证码图下载</span></span><br><span class="line">headers = &#123;</span><br><span class="line"><span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line">url = <span class="string">&#x27;https://so.gushiwen.cn/user/login.aspx?from=http://so.gushiwen.cn/user/collect.aspx&#x27;</span></span><br><span class="line">page_text = session.get(url=url, headers=headers).text</span><br><span class="line"><span class="comment"># 解析验证码图片的地址</span></span><br><span class="line">tree = etree.HTML(page_text)</span><br><span class="line">img_src = <span class="string">&#x27;https://so.gushiwen.org&#x27;</span> + tree.xpath(<span class="string">&#x27;//*[@id=&quot;imgCode&quot;]/@src&#x27;</span>)[<span class="number">0</span>]</span><br><span class="line"><span class="comment"># 将验证码图片保存本地</span></span><br><span class="line">img_data = session.get(img_src, headers=headers).content</span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;./code.jpg&#x27;</span>, <span class="string">&#x27;wb&#x27;</span>) <span class="keyword">as</span> fp:</span><br><span class="line">	fp.write(img_data)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 识别验证码</span></span><br><span class="line">code_text = tranformImgCode(<span class="string">&#x27;./code.jpg&#x27;</span>, <span class="number">1902</span>)</span><br><span class="line"><span class="built_in">print</span>(code_text)</span><br><span class="line">login_url = <span class="string">&#x27;https://so.gushiwen.cn/user/login.aspx?from=http%3a%2f%2fso.gushiwen.cn%2fuser%2fcollect.aspx&#x27;</span></span><br><span class="line">data = &#123;</span><br><span class="line">	<span class="string">&#x27;__VIEWSTATE&#x27;</span>: <span class="string">&#x27;f1ECt6+6MPtdTZMJtYOYS/7ww2d/DPy9t8JQcIt1QuOneLTbNQuYqPcCjZNbDAbfb9vj3k6f0M7EKTf0YqElM1k1A5ELwyTvUzBii+9LDRBbIMmc/jb0DJPsYfI=&#x27;</span>,</span><br><span class="line">	<span class="string">&#x27;__VIEWSTATEGENERATOR&#x27;</span>: <span class="string">&#x27;C93BE1AE&#x27;</span>,</span><br><span class="line">	<span class="string">&#x27;from&#x27;</span>: <span class="string">&#x27;http://so.gushiwen.cn/user/collect.aspx&#x27;</span>,</span><br><span class="line">	<span class="string">&#x27;email&#x27;</span>: <span class="string">&#x27;账号&#x27;</span>,</span><br><span class="line">	<span class="string">&#x27;pwd&#x27;</span>: <span class="string">&#x27;密码&#x27;</span>,</span><br><span class="line">	<span class="string">&#x27;code&#x27;</span>: code_text,  <span class="comment"># 动态变化</span></span><br><span class="line">	<span class="string">&#x27;denglu&#x27;</span>: <span class="string">&#x27;登录&#x27;</span>,</span><br><span class="line">	&#125;</span><br><span class="line"><span class="comment"># 对点击登录按钮发起请求</span></span><br><span class="line">page_text_login = session.post(url=login_url, headers=headers, data=data).text</span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;./gushiwen.html&#x27;</span>, <span class="string">&#x27;w&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>) <span class="keyword">as</span> fp:</span><br><span class="line">	fp.write(page_text_login)</span><br></pre></td></tr></table></figure></div>
+<ul>
+<li>
+<p>在请求参数中如果看到了一组乱序的请求参数，最好去验证这组请求参数是否为动态变化</p>
+<ul>
+<li>处理：
+<ul>
+<li>方式1：常规来讲一般动态变化的请求参数会被隐藏在前台页面中，那么我们就要去前台页面源码中寻找；</li>
+<li>方式2：如果前台页面没有的话，我们就可以基于抓包工具进行全局搜索。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>基于百度AI实现的爬虫给功能：</p>
+<ul>
+<li>图像识别</li>
+<li>语音识别&amp;合成</li>
+<li>自然语言处理</li>
+</ul>
+</li>
+<li>
+<p>使用流程：</p>
+<ul>
+<li>
+<p>点击控制台进行登录</p>
+</li>
+<li>
+<p>选择想要实现的功能</p>
+</li>
+<li>
+<p>实现功能下创建一个 app</p>
+</li>
+<li>
+<p>选择对应的 pythonSDK 文档进行代码实现</p>
+<blockquote>
+<p>需求：<a href="https://duanziwang.com/">https://duanziwang.com/</a></p>
+<p>讲段子王中的段子内容爬取到本地，然后基于语音合成为mp3的音频文件，然后自己搭建一个web服务器，线上实时播放音频文件。</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
 ]]></content>
       <categories>
         <category>Python</category>
@@ -4202,6 +4202,109 @@ range 类型的优点：不管 range 对象表示的整数序列有多长，所�
       </tags>
   </entry>
   <entry>
+    <title>Python数据结构与算法(1)--复杂度及递归</title>
+    <url>/posts/5fc41c76/</url>
+    <content><![CDATA[<blockquote>
+<p>本文档基于<a href="https://www.bilibili.com/video/av332150111?from=search&amp;seid=6537256928008332308&amp;spm_id_from=333.337.0.0">B站视频课程</a></p>
+</blockquote>
+<h2 id="算法概念">算法概念</h2>
+<p><strong>算法（Algorithm）</strong>：一个计算过程，解决问题的办法</p>
+<p><strong>Niklaus Wirth</strong> ：“程序 = 数据结构 + 算法“</p>
+<h2 id="时间复杂度">时间复杂度</h2>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 1</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Hello World&quot;</span>)</span><br><span class="line"><span class="comment"># 2 </span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Hello World&quot;</span>)</span><br><span class="line"><span class="comment"># 3</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;Hello World&quot;</span>)        </span><br><span class="line"><span class="comment"># 4</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">        <span class="keyword">for</span> k <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&quot;Hello World&quot;</span>)</span><br></pre></td></tr></table></figure></div>
+<span id="more"></span>
+<h3 id="算法运行的快慢">算法运行的快慢</h3>
+<p>如何体现算法运行的快慢？</p>
+<p>不能够使用<strong>时间</strong>来体现算法运行的快慢，因为程序在不同的设备上运行时间也会不同，并且程序中的 n 不同，也会影响程序的运行。所以选择时间复杂度来体现算法运行的快慢。</p>
+<p>用时间复杂度来评估算法运行效率，以上述四段代码为例：</p>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 1</span></span><br><span class="line">O(<span class="number">1</span>)</span><br><span class="line"><span class="comment"># 2</span></span><br><span class="line">O(n)</span><br><span class="line"><span class="comment"># 3</span></span><br><span class="line">O(n²)</span><br><span class="line"><span class="comment"># 4</span></span><br><span class="line">O(n³)</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 时间复杂度为 O(1)，并不是 O(3)；类似生活中回答几秒，而不是几个一秒;</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Hello World&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Hello Python&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Hello Algorithm&quot;</span>)</span><br><span class="line"><span class="comment"># 时间复杂度为 O(n²)。并不是 O(n²+n)；类似生活中回答睡觉大概几个小时，而不是具体精确到分钟秒的精度;</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Hello World&quot;</span>)</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;Hello World&quot;</span>)</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 记时间复杂度为 O(log₂N) 或者 O(logN)</span></span><br><span class="line"><span class="comment"># 只要循环出现问题规格折半的时候，复杂度式子中会出现 logN</span></span><br><span class="line"><span class="keyword">while</span> n &gt; <span class="number">1</span>:</span><br><span class="line">    <span class="built_in">print</span>(n)    </span><br><span class="line">    n = n // <span class="number">2</span></span><br></pre></td></tr></table></figure></div>
+<h3 id="小结">小结</h3>
+<ol>
+<li>
+<p>时间复杂度是用来估计算法运行时间的一个式子(单位)；</p>
+</li>
+<li>
+<p><strong>一般来说</strong>，时间复杂度高的算法比时间复杂度低的算法慢；</p>
+</li>
+<li>
+<p>常见的时间复杂度(按效率排序)</p>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">O(<span class="number">1</span>) &lt; O(logn) &lt; O(n) &lt; O(nlogn) &lt; O(n²) &lt; O(n²logn) &lt; O(n³)</span><br></pre></td></tr></table></figure></div>
+</li>
+<li>
+<p>复杂问题的时间复杂度</p>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">O(n!)	O(<span class="number">2</span>ⁿ)	O(nⁿ)  ...</span><br></pre></td></tr></table></figure></div>
+</li>
+</ol>
+<h3 id="快速判断算法复杂度">快速判断算法复杂度</h3>
+<p>并不是针对所有算法都适用，适用于大多数简单情况。</p>
+<ul>
+<li>确定问题规格 n</li>
+<li>循环减半过程 logn</li>
+<li>k 层关于 n 的循环  n<sup>k</sup></li>
+</ul>
+<p>对于更加复杂的情况，则要根据算法执行过程进行判断。</p>
+<h2 id="空间复杂度">空间复杂度</h2>
+<p><strong>空间复杂度</strong>：用来评估算法内存占用大小的式子</p>
+<p>空间复杂度的表示方式与时间复杂度完全一样：</p>
+<ul>
+<li>算法使用了几个变量 O(1)</li>
+<li>算法使用了长度为 n 的一维列表  O(n)</li>
+<li>算法使用了 m 行 n 列的二维列表  O(mn)</li>
+</ul>
+<p>空间换时间：例如分布式程序。</p>
+<h2 id="复习：递归">复习：递归</h2>
+<p>递归的两个特点：</p>
+<ul>
+<li>调用自身</li>
+<li>结束条件</li>
+</ul>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># func1 不合法，没有结束条件</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func1</span>(<span class="params">x</span>):</span></span><br><span class="line">    <span class="built_in">print</span>(x)</span><br><span class="line">    func1(x-<span class="number">1</span>)</span><br><span class="line"><span class="comment"># func2 不合法，没有结束条件</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func2</span>(<span class="params">x</span>):</span></span><br><span class="line">    <span class="keyword">if</span> x &gt; <span class="number">0</span>:</span><br><span class="line">        <span class="built_in">print</span>(x)</span><br><span class="line">        func2(x+<span class="number">1</span>)</span><br><span class="line"><span class="comment"># func3 合法</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func3</span>(<span class="params">x</span>):</span></span><br><span class="line">    <span class="keyword">if</span> x &gt; <span class="number">0</span>:</span><br><span class="line">        <span class="built_in">print</span>(x)</span><br><span class="line">        func3(x-<span class="number">1</span>)</span><br><span class="line"><span class="comment"># func4 合法</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func4</span>(<span class="params">x</span>):</span></span><br><span class="line">    <span class="keyword">if</span> x &gt; <span class="number">0</span>:</span><br><span class="line">        func4(x-<span class="number">1</span>)</span><br><span class="line">        <span class="built_in">print</span>(x)</span><br></pre></td></tr></table></figure></div>
+<h2 id="汉诺塔问题">汉诺塔问题</h2>
+<p><img src="https://gitee.com/zyzhang98/typoraofimages/raw/master/Images/image-20220307090340059.png" alt="汉诺塔问题"></p>
+<ul>
+<li>大梵天创造世界的时候做了三根金刚石柱子，在一根柱子上从上往下按照大小顺序摞着64片黄金圆盘。</li>
+<li>大梵天命令婆罗门把圆盘从下面开始按大小顺序重新摆放在另一根柱子上。</li>
+<li>在小圆盘上不能放大圆盘，在三根柱子之间一次只能移动一个圆盘。</li>
+<li>64根柱子移动完毕之日，就是世界毁灭之时。</li>
+</ul>
+<h3 id="分析">分析</h3>
+<p>当 n=2 时：</p>
+<ol>
+<li>把小圆盘从 A 移动到 B</li>
+<li>把大圆盘从 A 移动到 C</li>
+<li>把小圆盘从 B 移动到 C</li>
+</ol>
+<p>当 n 个盘时(上面 n-1 个盘子看成一个整体，最下面一个盘子为一个整体)</p>
+<ol>
+<li>把 n-1 个圆盘从 A 经过 C 移动到 B (原问题的 -1 次的递归问题)</li>
+<li>把第 n 个圆盘从 A 移动到 C (因为仅一个盘子，仅一次移动即可)</li>
+<li>把 n-1 个圆盘从 B 经过 A 移动到 C</li>
+</ol>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hanoi</span>(<span class="params">n, a, b, c</span>):</span>							<span class="comment"># 把n个圆盘从a经过b移动到c</span></span><br><span class="line">    <span class="keyword">if</span> n&gt;<span class="number">0</span>:</span><br><span class="line">        hanoi(n-<span class="number">1</span>, a, c, b)						<span class="comment"># 把n-1个圆盘从a经过c移动到b</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;moving from %s to %s&quot;</span> % (a, c))  <span class="comment"># 把第n个圆盘从a移动到c</span></span><br><span class="line">        hanoi(n-<span class="number">1</span>, b, a, c)						<span class="comment"># 把n-1个圆盘从b经过a移动到c</span></span><br><span class="line">hanoi(<span class="number">3</span>, <span class="string">&quot;A&quot;</span>, <span class="string">&quot;B&quot;</span>, <span class="string">&quot;C&quot;</span>)        </span><br></pre></td></tr></table></figure></div>
+<ul>
+<li>
+<p>汉诺塔移动次数的递推式：<br>
+$$<br>
+H(n) = 2H(n-1) + 1<br>
+$$</p>
+</li>
+<li>
+<p>假设婆罗门每秒钟搬运一个盘子，则总共需要 5800 亿年。</p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Python</category>
+        <category>Algorithm</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>算法</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>爬虫学习笔记(9)--异步编程 补充</title>
     <url>/posts/6654cc58/</url>
     <content><![CDATA[<p>为什么要讲？</p>
@@ -4348,109 +4451,6 @@ range 类型的优点：不管 range 对象表示的整数序列有多长，所�
 <div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 将上述两个 py 文件放在一个文件夹中</span></span><br><span class="line"><span class="keyword">from</span> cal_time <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line"><span class="meta">@cal_time</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">linear_search</span>(<span class="params">li, val</span>):</span></span><br><span class="line">    <span class="keyword">for</span> index, value <span class="keyword">in</span> <span class="built_in">enumerate</span>(li):</span><br><span class="line">        <span class="keyword">if</span> value == val:</span><br><span class="line">            <span class="keyword">return</span> index</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line"></span><br><span class="line"><span class="meta">@cal_time    </span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">binary_search</span>(<span class="params">li, val</span>):</span></span><br><span class="line">    left = <span class="number">0</span></span><br><span class="line">    right = <span class="built_in">len</span>(li) - <span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span> left &lt;= right:		<span class="comment"># 候选区有值</span></span><br><span class="line">        mid = (left + right) // <span class="number">2</span></span><br><span class="line">        <span class="keyword">if</span> li[mid] == val:</span><br><span class="line">            <span class="keyword">return</span> mid</span><br><span class="line">        <span class="keyword">elif</span> li[mid] &gt; val:		<span class="comment"># 待查找的值在 mid 左侧</span></span><br><span class="line">            right = mid - <span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>:					<span class="comment"># 待查找的值在 mid 右侧</span></span><br><span class="line">            left = mid + <span class="number">1</span></span><br><span class="line">	<span class="keyword">else</span>：</span><br><span class="line">    	<span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line">li = <span class="built_in">list</span>(<span class="built_in">range</span>(<span class="number">10000</span>))</span><br><span class="line">linear_search(li, <span class="number">3890</span>)</span><br><span class="line">binary_search(li, <span class="number">3890</span>)</span><br></pre></td></tr></table></figure></div>
 <h3 id="index">index()</h3>
 <p>内置列表查找函数<code>index()</code>是线性查找。</p>
-]]></content>
-      <categories>
-        <category>Python</category>
-        <category>Algorithm</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>算法</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python数据结构与算法(1)--复杂度及递归</title>
-    <url>/posts/5fc41c76/</url>
-    <content><![CDATA[<blockquote>
-<p>本文档基于<a href="https://www.bilibili.com/video/av332150111?from=search&amp;seid=6537256928008332308&amp;spm_id_from=333.337.0.0">B站视频课程</a></p>
-</blockquote>
-<h2 id="算法概念">算法概念</h2>
-<p><strong>算法（Algorithm）</strong>：一个计算过程，解决问题的办法</p>
-<p><strong>Niklaus Wirth</strong> ：“程序 = 数据结构 + 算法“</p>
-<h2 id="时间复杂度">时间复杂度</h2>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 1</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Hello World&quot;</span>)</span><br><span class="line"><span class="comment"># 2 </span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Hello World&quot;</span>)</span><br><span class="line"><span class="comment"># 3</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;Hello World&quot;</span>)        </span><br><span class="line"><span class="comment"># 4</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">        <span class="keyword">for</span> k <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&quot;Hello World&quot;</span>)</span><br></pre></td></tr></table></figure></div>
-<span id="more"></span>
-<h3 id="算法运行的快慢">算法运行的快慢</h3>
-<p>如何体现算法运行的快慢？</p>
-<p>不能够使用<strong>时间</strong>来体现算法运行的快慢，因为程序在不同的设备上运行时间也会不同，并且程序中的 n 不同，也会影响程序的运行。所以选择时间复杂度来体现算法运行的快慢。</p>
-<p>用时间复杂度来评估算法运行效率，以上述四段代码为例：</p>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 1</span></span><br><span class="line">O(<span class="number">1</span>)</span><br><span class="line"><span class="comment"># 2</span></span><br><span class="line">O(n)</span><br><span class="line"><span class="comment"># 3</span></span><br><span class="line">O(n²)</span><br><span class="line"><span class="comment"># 4</span></span><br><span class="line">O(n³)</span><br></pre></td></tr></table></figure></div>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 时间复杂度为 O(1)，并不是 O(3)；类似生活中回答几秒，而不是几个一秒;</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Hello World&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Hello Python&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Hello Algorithm&quot;</span>)</span><br><span class="line"><span class="comment"># 时间复杂度为 O(n²)。并不是 O(n²+n)；类似生活中回答睡觉大概几个小时，而不是具体精确到分钟秒的精度;</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Hello World&quot;</span>)</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;Hello World&quot;</span>)</span><br></pre></td></tr></table></figure></div>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 记时间复杂度为 O(log₂N) 或者 O(logN)</span></span><br><span class="line"><span class="comment"># 只要循环出现问题规格折半的时候，复杂度式子中会出现 logN</span></span><br><span class="line"><span class="keyword">while</span> n &gt; <span class="number">1</span>:</span><br><span class="line">    <span class="built_in">print</span>(n)    </span><br><span class="line">    n = n // <span class="number">2</span></span><br></pre></td></tr></table></figure></div>
-<h3 id="小结">小结</h3>
-<ol>
-<li>
-<p>时间复杂度是用来估计算法运行时间的一个式子(单位)；</p>
-</li>
-<li>
-<p><strong>一般来说</strong>，时间复杂度高的算法比时间复杂度低的算法慢；</p>
-</li>
-<li>
-<p>常见的时间复杂度(按效率排序)</p>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">O(<span class="number">1</span>) &lt; O(logn) &lt; O(n) &lt; O(nlogn) &lt; O(n²) &lt; O(n²logn) &lt; O(n³)</span><br></pre></td></tr></table></figure></div>
-</li>
-<li>
-<p>复杂问题的时间复杂度</p>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">O(n!)	O(<span class="number">2</span>ⁿ)	O(nⁿ)  ...</span><br></pre></td></tr></table></figure></div>
-</li>
-</ol>
-<h3 id="快速判断算法复杂度">快速判断算法复杂度</h3>
-<p>并不是针对所有算法都适用，适用于大多数简单情况。</p>
-<ul>
-<li>确定问题规格 n</li>
-<li>循环减半过程 logn</li>
-<li>k 层关于 n 的循环  n<sup>k</sup></li>
-</ul>
-<p>对于更加复杂的情况，则要根据算法执行过程进行判断。</p>
-<h2 id="空间复杂度">空间复杂度</h2>
-<p><strong>空间复杂度</strong>：用来评估算法内存占用大小的式子</p>
-<p>空间复杂度的表示方式与时间复杂度完全一样：</p>
-<ul>
-<li>算法使用了几个变量 O(1)</li>
-<li>算法使用了长度为 n 的一维列表  O(n)</li>
-<li>算法使用了 m 行 n 列的二维列表  O(mn)</li>
-</ul>
-<p>空间换时间：例如分布式程序。</p>
-<h2 id="复习：递归">复习：递归</h2>
-<p>递归的两个特点：</p>
-<ul>
-<li>调用自身</li>
-<li>结束条件</li>
-</ul>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># func1 不合法，没有结束条件</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func1</span>(<span class="params">x</span>):</span></span><br><span class="line">    <span class="built_in">print</span>(x)</span><br><span class="line">    func1(x-<span class="number">1</span>)</span><br><span class="line"><span class="comment"># func2 不合法，没有结束条件</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func2</span>(<span class="params">x</span>):</span></span><br><span class="line">    <span class="keyword">if</span> x &gt; <span class="number">0</span>:</span><br><span class="line">        <span class="built_in">print</span>(x)</span><br><span class="line">        func2(x+<span class="number">1</span>)</span><br><span class="line"><span class="comment"># func3 合法</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func3</span>(<span class="params">x</span>):</span></span><br><span class="line">    <span class="keyword">if</span> x &gt; <span class="number">0</span>:</span><br><span class="line">        <span class="built_in">print</span>(x)</span><br><span class="line">        func3(x-<span class="number">1</span>)</span><br><span class="line"><span class="comment"># func4 合法</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func4</span>(<span class="params">x</span>):</span></span><br><span class="line">    <span class="keyword">if</span> x &gt; <span class="number">0</span>:</span><br><span class="line">        func4(x-<span class="number">1</span>)</span><br><span class="line">        <span class="built_in">print</span>(x)</span><br></pre></td></tr></table></figure></div>
-<h2 id="汉诺塔问题">汉诺塔问题</h2>
-<p><img src="https://gitee.com/zyzhang98/typoraofimages/raw/master/Images/image-20220307090340059.png" alt="汉诺塔问题"></p>
-<ul>
-<li>大梵天创造世界的时候做了三根金刚石柱子，在一根柱子上从上往下按照大小顺序摞着64片黄金圆盘。</li>
-<li>大梵天命令婆罗门把圆盘从下面开始按大小顺序重新摆放在另一根柱子上。</li>
-<li>在小圆盘上不能放大圆盘，在三根柱子之间一次只能移动一个圆盘。</li>
-<li>64根柱子移动完毕之日，就是世界毁灭之时。</li>
-</ul>
-<h3 id="分析">分析</h3>
-<p>当 n=2 时：</p>
-<ol>
-<li>把小圆盘从 A 移动到 B</li>
-<li>把大圆盘从 A 移动到 C</li>
-<li>把小圆盘从 B 移动到 C</li>
-</ol>
-<p>当 n 个盘时(上面 n-1 个盘子看成一个整体，最下面一个盘子为一个整体)</p>
-<ol>
-<li>把 n-1 个圆盘从 A 经过 C 移动到 B (原问题的 -1 次的递归问题)</li>
-<li>把第 n 个圆盘从 A 移动到 C (因为仅一个盘子，仅一次移动即可)</li>
-<li>把 n-1 个圆盘从 B 经过 A 移动到 C</li>
-</ol>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hanoi</span>(<span class="params">n, a, b, c</span>):</span>							<span class="comment"># 把n个圆盘从a经过b移动到c</span></span><br><span class="line">    <span class="keyword">if</span> n&gt;<span class="number">0</span>:</span><br><span class="line">        hanoi(n-<span class="number">1</span>, a, c, b)						<span class="comment"># 把n-1个圆盘从a经过c移动到b</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;moving from %s to %s&quot;</span> % (a, c))  <span class="comment"># 把第n个圆盘从a移动到c</span></span><br><span class="line">        hanoi(n-<span class="number">1</span>, b, a, c)						<span class="comment"># 把n-1个圆盘从b经过a移动到c</span></span><br><span class="line">hanoi(<span class="number">3</span>, <span class="string">&quot;A&quot;</span>, <span class="string">&quot;B&quot;</span>, <span class="string">&quot;C&quot;</span>)        </span><br></pre></td></tr></table></figure></div>
-<ul>
-<li>
-<p>汉诺塔移动次数的递推式：<br>
-$$<br>
-H(n) = 2H(n-1) + 1<br>
-$$</p>
-</li>
-<li>
-<p>假设婆罗门每秒钟搬运一个盘子，则总共需要 5800 亿年。</p>
-</li>
-</ul>
 ]]></content>
       <categories>
         <category>Python</category>
