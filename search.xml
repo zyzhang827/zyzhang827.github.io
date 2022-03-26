@@ -90,46 +90,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Materials Studio安装教程</title>
-    <url>/posts/1c974571/</url>
-    <content><![CDATA[<h1>Materials Studio安装教程</h1>
-<h2 id="软件安装包">软件安装包</h2>
-<p><a href="https://www.123pan.com/s/XHVA-IEQ5d">123云盘下载</a></p>
-<p>提取码z827`</p>
-<h2 id="修改-lic文件">修改.lic文件</h2>
-<ol>
-<li>
-<p>电脑桌面使用快捷键<code>Win+R</code>打开运行，输入<code>cmd</code>，回车。然后在命令行窗口输入<code>hostname</code>回车，出现计算机名，将其复制备用。</p>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">Microsoft Windows [版本 10.0.22000.376]</span><br><span class="line">(c) Microsoft Corporation。保留所有权利。</span><br><span class="line"></span><br><span class="line">C:\Users\dell&gt;hostname</span><br><span class="line">DESKTOP-XXXXXXX</span><br></pre></td></tr></table></figure></div>
-</li>
-<li>
-<p>找到<code>MS.zip</code>压缩包内的<code>msi2018.lic</code>文件，右键选择”写字板“打开，将第一行中的<code>DESKTOP-HVJ2DIM</code>替换为你刚才复制的自己的计算机名，保存后关闭文件。</p>
-</li>
-</ol>
-<span id="more"></span>
-<h2 id="安装MS软件">安装MS软件</h2>
-<p>将<code>MS.zip</code>压缩包内的<code>MaterialsStudio2018.rar</code>解压，然后进入解压后的<code>MaterialsStudio2018</code>文件夹，找到<code>setup.exe</code>文件，双击进行安装，安装位置选择默认即可，无需进行改动，直到安装结束显示Finsh，关闭即可。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/zyzhang827/filesimage@main/images/image-20220106142453557.png" alt=""><img src="https://cdn.jsdelivr.net/gh/zyzhang827/filesimage@main/images/image-20220106142527139.png" alt=""></p>
-<h2 id="lic文件复制">.lic文件复制</h2>
-<p>64位的 Windows 操作系统，将之前修改过的<code>msi2018.lic</code>文件复制到以下爱三个文件夹中.</p>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">C:\Program Files (x86)\BIOVIA\LicensePack\Licenses</span><br><span class="line">C:\Program Files (x86)\BIOVIA\LicensePack\share\data</span><br><span class="line">C:\Program Files (x86)\BIOVIA\LicensePack\win32\bin</span><br></pre></td></tr></table></figure></div>
-<h2 id="安装注册信息">安装注册信息</h2>
-<p>使用快捷键<code>Win+Q</code>打开系统搜索框，输入<code>License Administrator 2018</code>，然后选中右键”以管理员身份运行“。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/zyzhang827/filesimage@main/images/image-20220106143734050.png" alt=""></p>
-<p>打开左侧的<code>Install License</code>，点击右侧的<code>Browser</code>，找到<code>C:\Program Files (x86)\BIOVIA\LicensePack\Licenses</code>里的<code>msi2018.lic</code>文件，单击打开，然后点击<code>License Administrtor 2018</code>中下方的<code>Install</code>，出现<code>Checkout succeeded...</code>证明安装成功，可以使用<code>MS2018</code>软件了。</p>
-<h2 id="打开软件">打开软件</h2>
-<p>Windows开始菜单找到<code>Materials Studio 2018</code>打开软件即可。</p>
-]]></content>
-      <categories>
-        <category>Molecular Dynamics</category>
-        <category>Materials Studio</category>
-      </categories>
-      <tags>
-        <tag>MD</tag>
-        <tag>Materials Studio</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>博客搭建(3)---Github部署</title>
     <url>/posts/b74c03aa/</url>
     <content><![CDATA[<h2 id="背景">背景</h2>
@@ -200,6 +160,46 @@
       <tags>
         <tag>hexo</tag>
         <tag>github</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Materials Studio安装教程</title>
+    <url>/posts/1c974571/</url>
+    <content><![CDATA[<h1>Materials Studio安装教程</h1>
+<h2 id="软件安装包">软件安装包</h2>
+<p><a href="https://www.123pan.com/s/XHVA-IEQ5d">123云盘下载</a></p>
+<p>提取码z827`</p>
+<h2 id="修改-lic文件">修改.lic文件</h2>
+<ol>
+<li>
+<p>电脑桌面使用快捷键<code>Win+R</code>打开运行，输入<code>cmd</code>，回车。然后在命令行窗口输入<code>hostname</code>回车，出现计算机名，将其复制备用。</p>
+<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">Microsoft Windows [版本 10.0.22000.376]</span><br><span class="line">(c) Microsoft Corporation。保留所有权利。</span><br><span class="line"></span><br><span class="line">C:\Users\dell&gt;hostname</span><br><span class="line">DESKTOP-XXXXXXX</span><br></pre></td></tr></table></figure></div>
+</li>
+<li>
+<p>找到<code>MS.zip</code>压缩包内的<code>msi2018.lic</code>文件，右键选择”写字板“打开，将第一行中的<code>DESKTOP-HVJ2DIM</code>替换为你刚才复制的自己的计算机名，保存后关闭文件。</p>
+</li>
+</ol>
+<span id="more"></span>
+<h2 id="安装MS软件">安装MS软件</h2>
+<p>将<code>MS.zip</code>压缩包内的<code>MaterialsStudio2018.rar</code>解压，然后进入解压后的<code>MaterialsStudio2018</code>文件夹，找到<code>setup.exe</code>文件，双击进行安装，安装位置选择默认即可，无需进行改动，直到安装结束显示Finsh，关闭即可。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zyzhang827/filesimage@main/images/image-20220106142453557.png" alt=""><img src="https://cdn.jsdelivr.net/gh/zyzhang827/filesimage@main/images/image-20220106142527139.png" alt=""></p>
+<h2 id="lic文件复制">.lic文件复制</h2>
+<p>64位的 Windows 操作系统，将之前修改过的<code>msi2018.lic</code>文件复制到以下爱三个文件夹中.</p>
+<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">C:\Program Files (x86)\BIOVIA\LicensePack\Licenses</span><br><span class="line">C:\Program Files (x86)\BIOVIA\LicensePack\share\data</span><br><span class="line">C:\Program Files (x86)\BIOVIA\LicensePack\win32\bin</span><br></pre></td></tr></table></figure></div>
+<h2 id="安装注册信息">安装注册信息</h2>
+<p>使用快捷键<code>Win+Q</code>打开系统搜索框，输入<code>License Administrator 2018</code>，然后选中右键”以管理员身份运行“。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zyzhang827/filesimage@main/images/image-20220106143734050.png" alt=""></p>
+<p>打开左侧的<code>Install License</code>，点击右侧的<code>Browser</code>，找到<code>C:\Program Files (x86)\BIOVIA\LicensePack\Licenses</code>里的<code>msi2018.lic</code>文件，单击打开，然后点击<code>License Administrtor 2018</code>中下方的<code>Install</code>，出现<code>Checkout succeeded...</code>证明安装成功，可以使用<code>MS2018</code>软件了。</p>
+<h2 id="打开软件">打开软件</h2>
+<p>Windows开始菜单找到<code>Materials Studio 2018</code>打开软件即可。</p>
+]]></content>
+      <categories>
+        <category>Molecular Dynamics</category>
+        <category>Materials Studio</category>
+      </categories>
+      <tags>
+        <tag>MD</tag>
+        <tag>Materials Studio</tag>
       </tags>
   </entry>
   <entry>
@@ -1215,6 +1215,72 @@
       </tags>
   </entry>
   <entry>
+    <title>KMCLib安装</title>
+    <url>/posts/1f98607f/</url>
+    <content><![CDATA[<h2 id="基础包安装">基础包安装</h2>
+<p>检查一些需要安装的包是否存在并且为最新版本。打开终端<code>ctrl+alt+t</code>，输入以下命令</p>
+<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 安装适用 C++ 的编译器</span></span><br><span class="line">sudo apt install g++</span><br><span class="line"><span class="comment"># 安装 cmake</span></span><br><span class="line">sudo apt install cmake</span><br><span class="line"><span class="comment"># 安装 python 的头文件和静态库</span></span><br><span class="line">sudo apt install python-dev</span><br><span class="line"><span class="comment"># 查找已安装包的更新，并进行更新</span></span><br><span class="line">sudo apt update &amp;&amp; sudo apt upgrade</span><br></pre></td></tr></table></figure></div>
+<span id="more"></span>
+<h2 id="下载-KMCLib">下载 KMCLib</h2>
+<p><s>首先直接从 github 上拉取 KMCLib 的仓库进行下载，但是由于国内访问 github 存在网络慢甚至连接失败的问题，所以我将 github 上的仓库直接 Fork 到了国内网站 gitee 上，不懂得“魔法上网”或者无法访问 github 的，推荐采取方法二。</s></p>
+<p>开源的<code>KMCLib</code>源码中有许多错误，直接采用下面两种方法下载后需要再进行修改。如果对于<code>C++</code>和<code>python</code>有一定的了解，可以采用下面的方式一或者方式二下载后，<strong>自行对源码进行修改</strong>。</p>
+<p>对于没有编程基础，不想自己动手修改的，可以自己选择方法三中提供的蓝奏云盘链接下载，其中的代码包括源码部分以及截至到 2020-12-30 <code>74780ff</code>的所有 <code>Commits</code>部分。</p>
+<div class="highlight-wrap" data-rel="Markdown"><figure class="iseeu highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="section"># 方法一</span></span><br><span class="line">git clone https://github.com/leetmaa/KMCLib.git</span><br><span class="line"><span class="section"># 方法二</span></span><br><span class="line">git clone https://gitee.com/zyzhang98/KMCLib.git</span><br><span class="line"><span class="section"># 蓝奏云链接</span></span><br><span class="line">https://zyzhang.lanzouw.com/ivKVWyxxgbc    【Z827】</span><br></pre></td></tr></table></figure></div>
+<h2 id="修改python默认版本">修改python默认版本</h2>
+<p><code>KMCLib</code>源码中 Python 部分最初是由 Python2.x 编写的，但是上边蓝奏云链接里的版本经过多次<code>Commits</code>之后，已经实现了对 python3.x 语法的兼容。考虑个人最初接触的是 Python3 ，所以这里将 Ubuntu 系统的默认版本设置为 Python3.x。</p>
+<p>最新版的 Ubuntu 中已经内置了 Python2 和 Python3 双版本，只需要进行简单的设置即可更改默认调用的 Python 版本。</p>
+<p>打开终端，输入以下命令</p>
+<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 查看自己电脑中所有 Python 版本及路径</span></span><br><span class="line">ls /usr/bin/python*</span><br><span class="line"><span class="comment"># 查看自己电脑默认的 Python 版本</span></span><br><span class="line">python --version</span><br></pre></td></tr></table></figure></div>
+<p>我的电脑是<code>Ubuntu 20.04.3 LTS</code>版本系统，经过运行上述代码后，可以看到系统中有<code>Python2.7</code>和<code>Python3.8</code>双版本，且默认为<code>Python2.7</code>版本。</p>
+<ol>
+<li>
+<p>系统级修改默认 Python 版本</p>
+<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 列出所有可用的 Python 替代版本</span></span><br><span class="line">sudo update-alternatives --list python</span><br></pre></td></tr></table></figure></div>
+<p>如果运行上述代码报错<code>no alternatives for python</code>，请先运行以下代码(注意如果路径与我不同，要将其中 Python2/3 修改为自己的路径)</p>
+<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">sudo update-alternatives --install /usr/bin/python python /usr/bin/python2.7 1</span><br><span class="line">sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.8 2</span><br></pre></td></tr></table></figure></div>
+<p>然后重新运行列出所有版本的代码和设置代码。</p>
+<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 列出所有可用版本</span></span><br><span class="line">sudo update-alternatives --list python</span><br><span class="line"><span class="comment"># 输入序号切换可用版本</span></span><br><span class="line">sudo update-alternatives --config python</span><br></pre></td></tr></table></figure></div>
+</li>
+<li>
+<p>基于个人用户修改默认 Python 版本</p>
+<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">sudo gedit ~/.bashrc</span><br></pre></td></tr></table></figure></div>
+<p>在<code>~/.bashrc</code>文件最后添加<code>alias python='/usr/bin/python3.8'</code></p>
+<p>然后打开终端运行</p>
+<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.bashrc</span><br><span class="line">python --version</span><br></pre></td></tr></table></figure></div>
+</li>
+</ol>
+<h2 id="添加环境变量">添加环境变量</h2>
+<p>我下载后的<code>KMCLib</code>文件夹路径设置为<code>/home/&lt;用户名&gt;/KMCLib</code>，其中<code>KMCLib</code>文件夹下存在<code>c++</code>,<code>manual</code>,<code>python</code>三个子文件夹。</p>
+<p>添加环境变量</p>
+<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">sudo gedit ~/.bashrc</span><br></pre></td></tr></table></figure></div>
+<p>在<code>~/.bashrc</code>文件末尾添加以下内容</p>
+<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">export</span> CPLUS_INCLUDE_PATH=/usr/include/python3.8:<span class="variable">$&#123;CPLUS_INCLUDE_PATH&#125;</span></span><br><span class="line"><span class="comment"># 如果全部是按照以下步骤进行配置，只需要将用户名部分改为自己的正式路径即可</span></span><br><span class="line"><span class="built_in">export</span> PYTHONPATH=/home/你自己用户名/KMCLib/python/src:<span class="variable">$&#123;PYTHONPATH&#125;</span></span><br></pre></td></tr></table></figure></div>
+<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 终端更新 ~/.bashrc 文件</span></span><br><span class="line"><span class="built_in">source</span> ~/.bashrc</span><br></pre></td></tr></table></figure></div>
+<h2 id="安装Swig">安装Swig</h2>
+<p>swig 主要是为了将 C++ 程序封装在 Python 环境中，前端为 Python，后端为 C++。可以简单理解为包装盒是 Python，包装盒里装的是 C++。Swig 的作用就是为了能够将 C++ 装进 Python 包装盒里。</p>
+<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/</span><br><span class="line">sudo apt install swig</span><br></pre></td></tr></table></figure></div>
+<h2 id="安装外部依赖">安装外部依赖</h2>
+<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 进入 externals 文件夹</span></span><br><span class="line"><span class="built_in">cd</span> KMCLib/c++/externals</span><br><span class="line"><span class="comment"># 配置 C 和 C++ 编译器</span></span><br><span class="line">CXX=g++ CC=gcc make</span><br></pre></td></tr></table></figure></div>
+<h2 id="安装-KMCLib-测试包和后端文件">安装 KMCLib 测试包和后端文件</h2>
+<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> KMCLib/c++</span><br><span class="line"><span class="comment"># 创建 build 文件夹</span></span><br><span class="line">mkdir build</span><br><span class="line"><span class="comment"># 进入新创建的文件夹</span></span><br><span class="line"><span class="built_in">cd</span> build</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 串行版本安装</span></span><br><span class="line">cmake ..</span><br><span class="line"><span class="comment"># 并行版本安装(仅安装串行即可0)</span></span><br><span class="line">cmake-DMP=g++..</span><br></pre></td></tr></table></figure></div>
+<h2 id="编译test文件">编译test文件</h2>
+<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /KMCLib/c++/build</span><br><span class="line">make test.x</span><br><span class="line">./unittest/test.x</span><br><span class="line">make install</span><br></pre></td></tr></table></figure></div>
+<h2 id="示例运行">示例运行</h2>
+<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> KMCLib/python/unittest/</span><br><span class="line">python3 utest.py</span><br></pre></td></tr></table></figure></div>
+]]></content>
+      <categories>
+        <category>Molecular Dynamics</category>
+        <category>KMCLib</category>
+      </categories>
+      <tags>
+        <tag>MD</tag>
+        <tag>C++</tag>
+        <tag>KMCLib</tag>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>C++学习笔记(8)--结构体</title>
     <url>/posts/c91b60d1/</url>
     <content><![CDATA[<h2 id="结构体基本概念">结构体基本概念</h2>
@@ -1314,72 +1380,6 @@
       </tags>
   </entry>
   <entry>
-    <title>KMCLib安装</title>
-    <url>/posts/1f98607f/</url>
-    <content><![CDATA[<h2 id="基础包安装">基础包安装</h2>
-<p>检查一些需要安装的包是否存在并且为最新版本。打开终端<code>ctrl+alt+t</code>，输入以下命令</p>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 安装适用 C++ 的编译器</span></span><br><span class="line">sudo apt install g++</span><br><span class="line"><span class="comment"># 安装 cmake</span></span><br><span class="line">sudo apt install cmake</span><br><span class="line"><span class="comment"># 安装 python 的头文件和静态库</span></span><br><span class="line">sudo apt install python-dev</span><br><span class="line"><span class="comment"># 查找已安装包的更新，并进行更新</span></span><br><span class="line">sudo apt update &amp;&amp; sudo apt upgrade</span><br></pre></td></tr></table></figure></div>
-<span id="more"></span>
-<h2 id="下载-KMCLib">下载 KMCLib</h2>
-<p><s>首先直接从 github 上拉取 KMCLib 的仓库进行下载，但是由于国内访问 github 存在网络慢甚至连接失败的问题，所以我将 github 上的仓库直接 Fork 到了国内网站 gitee 上，不懂得“魔法上网”或者无法访问 github 的，推荐采取方法二。</s></p>
-<p>开源的<code>KMCLib</code>源码中有许多错误，直接采用下面两种方法下载后需要再进行修改。如果对于<code>C++</code>和<code>python</code>有一定的了解，可以采用下面的方式一或者方式二下载后，<strong>自行对源码进行修改</strong>。</p>
-<p>对于没有编程基础，不想自己动手修改的，可以自己选择方法三中提供的蓝奏云盘链接下载，其中的代码包括源码部分以及截至到 2020-12-30 <code>74780ff</code>的所有 <code>Commits</code>部分。</p>
-<div class="highlight-wrap" data-rel="Markdown"><figure class="iseeu highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="section"># 方法一</span></span><br><span class="line">git clone https://github.com/leetmaa/KMCLib.git</span><br><span class="line"><span class="section"># 方法二</span></span><br><span class="line">git clone https://gitee.com/zyzhang98/KMCLib.git</span><br><span class="line"><span class="section"># 蓝奏云链接</span></span><br><span class="line">https://zyzhang.lanzouw.com/ivKVWyxxgbc    【Z827】</span><br></pre></td></tr></table></figure></div>
-<h2 id="修改python默认版本">修改python默认版本</h2>
-<p><code>KMCLib</code>源码中 Python 部分最初是由 Python2.x 编写的，但是上边蓝奏云链接里的版本经过多次<code>Commits</code>之后，已经实现了对 python3.x 语法的兼容。考虑个人最初接触的是 Python3 ，所以这里将 Ubuntu 系统的默认版本设置为 Python3.x。</p>
-<p>最新版的 Ubuntu 中已经内置了 Python2 和 Python3 双版本，只需要进行简单的设置即可更改默认调用的 Python 版本。</p>
-<p>打开终端，输入以下命令</p>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 查看自己电脑中所有 Python 版本及路径</span></span><br><span class="line">ls /usr/bin/python*</span><br><span class="line"><span class="comment"># 查看自己电脑默认的 Python 版本</span></span><br><span class="line">python --version</span><br></pre></td></tr></table></figure></div>
-<p>我的电脑是<code>Ubuntu 20.04.3 LTS</code>版本系统，经过运行上述代码后，可以看到系统中有<code>Python2.7</code>和<code>Python3.8</code>双版本，且默认为<code>Python2.7</code>版本。</p>
-<ol>
-<li>
-<p>系统级修改默认 Python 版本</p>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 列出所有可用的 Python 替代版本</span></span><br><span class="line">sudo update-alternatives --list python</span><br></pre></td></tr></table></figure></div>
-<p>如果运行上述代码报错<code>no alternatives for python</code>，请先运行以下代码(注意如果路径与我不同，要将其中 Python2/3 修改为自己的路径)</p>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">sudo update-alternatives --install /usr/bin/python python /usr/bin/python2.7 1</span><br><span class="line">sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.8 2</span><br></pre></td></tr></table></figure></div>
-<p>然后重新运行列出所有版本的代码和设置代码。</p>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 列出所有可用版本</span></span><br><span class="line">sudo update-alternatives --list python</span><br><span class="line"><span class="comment"># 输入序号切换可用版本</span></span><br><span class="line">sudo update-alternatives --config python</span><br></pre></td></tr></table></figure></div>
-</li>
-<li>
-<p>基于个人用户修改默认 Python 版本</p>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">sudo gedit ~/.bashrc</span><br></pre></td></tr></table></figure></div>
-<p>在<code>~/.bashrc</code>文件最后添加<code>alias python='/usr/bin/python3.8'</code></p>
-<p>然后打开终端运行</p>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.bashrc</span><br><span class="line">python --version</span><br></pre></td></tr></table></figure></div>
-</li>
-</ol>
-<h2 id="添加环境变量">添加环境变量</h2>
-<p>我下载后的<code>KMCLib</code>文件夹路径设置为<code>/home/&lt;用户名&gt;/KMCLib</code>，其中<code>KMCLib</code>文件夹下存在<code>c++</code>,<code>manual</code>,<code>python</code>三个子文件夹。</p>
-<p>添加环境变量</p>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">sudo gedit ~/.bashrc</span><br></pre></td></tr></table></figure></div>
-<p>在<code>~/.bashrc</code>文件末尾添加以下内容</p>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">export</span> CPLUS_INCLUDE_PATH=/usr/include/python3.8:<span class="variable">$&#123;CPLUS_INCLUDE_PATH&#125;</span></span><br><span class="line"><span class="comment"># 如果全部是按照以下步骤进行配置，只需要将用户名部分改为自己的正式路径即可</span></span><br><span class="line"><span class="built_in">export</span> PYTHONPATH=/home/你自己用户名/KMCLib/python/src:<span class="variable">$&#123;PYTHONPATH&#125;</span></span><br></pre></td></tr></table></figure></div>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 终端更新 ~/.bashrc 文件</span></span><br><span class="line"><span class="built_in">source</span> ~/.bashrc</span><br></pre></td></tr></table></figure></div>
-<h2 id="安装Swig">安装Swig</h2>
-<p>swig 主要是为了将 C++ 程序封装在 Python 环境中，前端为 Python，后端为 C++。可以简单理解为包装盒是 Python，包装盒里装的是 C++。Swig 的作用就是为了能够将 C++ 装进 Python 包装盒里。</p>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/</span><br><span class="line">sudo apt install swig</span><br></pre></td></tr></table></figure></div>
-<h2 id="安装外部依赖">安装外部依赖</h2>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 进入 externals 文件夹</span></span><br><span class="line"><span class="built_in">cd</span> KMCLib/c++/externals</span><br><span class="line"><span class="comment"># 配置 C 和 C++ 编译器</span></span><br><span class="line">CXX=g++ CC=gcc make</span><br></pre></td></tr></table></figure></div>
-<h2 id="安装-KMCLib-测试包和后端文件">安装 KMCLib 测试包和后端文件</h2>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> KMCLib/c++</span><br><span class="line"><span class="comment"># 创建 build 文件夹</span></span><br><span class="line">mkdir build</span><br><span class="line"><span class="comment"># 进入新创建的文件夹</span></span><br><span class="line"><span class="built_in">cd</span> build</span><br></pre></td></tr></table></figure></div>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 串行版本安装</span></span><br><span class="line">cmake ..</span><br><span class="line"><span class="comment"># 并行版本安装(仅安装串行即可0)</span></span><br><span class="line">cmake-DMP=g++..</span><br></pre></td></tr></table></figure></div>
-<h2 id="编译test文件">编译test文件</h2>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /KMCLib/c++/build</span><br><span class="line">make test.x</span><br><span class="line">./unittest/test.x</span><br><span class="line">make install</span><br></pre></td></tr></table></figure></div>
-<h2 id="示例运行">示例运行</h2>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> KMCLib/python/unittest/</span><br><span class="line">python3 utest.py</span><br></pre></td></tr></table></figure></div>
-]]></content>
-      <categories>
-        <category>Molecular Dynamics</category>
-        <category>KMCLib</category>
-      </categories>
-      <tags>
-        <tag>MD</tag>
-        <tag>C++</tag>
-        <tag>KMCLib</tag>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Lammps安装</title>
     <url>/posts/81c58c19/</url>
     <content><![CDATA[<h2 id="基础安装包">基础安装包</h2>
@@ -1470,6 +1470,28 @@
       </tags>
   </entry>
   <entry>
+    <title>飞鸟集</title>
+    <url>/posts/2f2ba896/</url>
+    <content><![CDATA[<p>🟩 What you are you do not see, what you see is your shadow.<br>
+🟪 你无法看到自己, 你看到的是你认为的自己.</p>
+<p>🟨 I cannot choose the best. The best chooses me.<br>
+🟥 我做不到选择最好的, 是最好的选择了我.</p>
+<p>🟦 Let him only see the thorns who has eyes to see the rose.<br>
+🟧 让那些盯着玫瑰花的人啊, 多看看玫瑰的刺吧.</p>
+<p>⬛ “Who drives me forward like fate?” “The Myself striding on my back.”<br>
+🟫 “是谁像命运一样催我向前?” “是我自己一直在我后面.”</p>
+<p>⬜ Power takes as ingratitude the writhings of its victims.<br>
+🟪 在强权看来, 牺牲品的痛苦是不知好歹.</p>
+]]></content>
+      <categories>
+        <category>鸡汤</category>
+      </categories>
+      <tags>
+        <tag>文化</tag>
+        <tag>诗词</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Python 学习笔记(1)--print()函数</title>
     <url>/posts/79e6c2f2/</url>
     <content><![CDATA[<blockquote>
@@ -1494,28 +1516,6 @@
         <category>Python</category>
         <category>基础语法</category>
       </categories>
-  </entry>
-  <entry>
-    <title>飞鸟集</title>
-    <url>/posts/2f2ba896/</url>
-    <content><![CDATA[<p>🟩 What you are you do not see, what you see is your shadow.<br>
-🟪 你无法看到自己, 你看到的是你认为的自己.</p>
-<p>🟨 I cannot choose the best. The best chooses me.<br>
-🟥 我做不到选择最好的, 是最好的选择了我.</p>
-<p>🟦 Let him only see the thorns who has eyes to see the rose.<br>
-🟧 让那些盯着玫瑰花的人啊, 多看看玫瑰的刺吧.</p>
-<p>⬛ “Who drives me forward like fate?” “The Myself striding on my back.”<br>
-🟫 “是谁像命运一样催我向前?” “是我自己一直在我后面.”</p>
-<p>⬜ Power takes as ingratitude the writhings of its victims.<br>
-🟪 在强权看来, 牺牲品的痛苦是不知好歹.</p>
-]]></content>
-      <categories>
-        <category>鸡汤</category>
-      </categories>
-      <tags>
-        <tag>文化</tag>
-        <tag>诗词</tag>
-      </tags>
   </entry>
   <entry>
     <title>Python 学习笔记(10)--字符串</title>
@@ -1871,93 +1871,6 @@ $$</p>
       </tags>
   </entry>
   <entry>
-    <title>Python 学习笔记(14)--对象方法</title>
-    <url>/posts/c5fc2304/</url>
-    <content><![CDATA[<p><em>面向对象的三大特征：</em></p>
-<ul>
-<li>封装：提高程序的安全性。（1）将数据（属性）和行为（方法）包装到类对象中，在方法内部对属性进行操作，在类对象的外部调用方法。这样，无需关心方法内部的具体实现细节，从而隔离了复杂度；（2）在Python中没有专门的修饰符用于属性的私有，如果该属性不希望在类对象外部被访问，前边使用两个“*”；</li>
-<li>继承：提高代码的复用性；</li>
-<li>多态：提高程序的可扩展性和可维护性。</li>
-</ul>
-<span id="more"></span>
-<h2 id="1-封装">1. 封装</h2>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Car</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> *<span class="title">init</span>*(<span class="params">self,brand</span>):</span></span><br><span class="line">        self.brand = brand</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">start</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;汽车已启动...&#x27;</span>)</span><br><span class="line">        </span><br><span class="line">car = Car(<span class="string">&#x27;宝马X5&#x27;</span>)</span><br><span class="line">car.start()</span><br><span class="line"><span class="built_in">print</span>(car,brand)</span><br></pre></td></tr></table></figure></div>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> *<span class="title">init</span>*(<span class="params">self,name,age</span>):</span></span><br><span class="line">        self.name = name	</span><br><span class="line">        self.*age = age 			<span class="comment"># 年龄age不希望在类的外部被使用，所以加了两个“_”</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">show</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="built_in">print</span>(self.name,self.*age)</span><br><span class="line"></span><br><span class="line">stu = Student(<span class="string">&#x27;张三&#x27;</span>,<span class="number">20</span>)</span><br><span class="line">stu.show()</span><br><span class="line"><span class="comment"># 在类的外部使用name与age</span></span><br><span class="line"><span class="built_in">print</span>(stu.name)</span><br><span class="line"><span class="comment"># print(stu.*age)</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">dir</span>(stu))</span><br><span class="line"><span class="built_in">print</span>(stu._Student*age)			<span class="comment"># 在类的外部可以通过	_Student*age	进行访问</span></span><br></pre></td></tr></table></figure></div>
-<h2 id="2-继承">2. 继承</h2>
-<p>*继承的特点：*如果一个类没有继承任何类，则默认继承object；Python支持多继承；定义子类时，必须在其构造函数中调用父类的构造函数。</p>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 语法结构</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> 子类类名(<span class="params">父类<span class="number">1</span>，父类<span class="number">2.</span>..</span>):</span></span><br><span class="line">    <span class="keyword">pass</span></span><br></pre></td></tr></table></figure></div>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span>(<span class="params"><span class="built_in">object</span></span>):</span>				<span class="comment"># Person继承object类</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> *<span class="title">init</span>*(<span class="params">self,anme,age</span>):</span></span><br><span class="line">        self.name = name</span><br><span class="line">        self.age = age</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">info</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="built_in">print</span>(self.name,self.age)</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span>(<span class="params">Person</span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> *<span class="title">init</span>*(<span class="params">self,name,age,stu_no</span>):</span></span><br><span class="line">        <span class="built_in">super</span>().*init*(name,age)</span><br><span class="line">        self.stu_no = stu_no</span><br><span class="line">        </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Teacher</span>(<span class="params">Person</span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> *<span class="title">init</span>*(<span class="params">self,name,age,teachofyear</span>):</span></span><br><span class="line">        <span class="built_in">super</span>().*init*(name,age)</span><br><span class="line">        self.teachofyear = teachofyear</span><br><span class="line">       </span><br><span class="line">stu = Student(<span class="string">&#x27;张三&#x27;</span>,<span class="number">20</span>,<span class="string">&#x27;1001&#x27;</span>)</span><br><span class="line">teacher = Teacher(<span class="string">&#x27;李四&#x27;</span>，<span class="number">34</span>，<span class="number">10</span>)</span><br><span class="line"></span><br><span class="line">stu.info()</span><br><span class="line">teacher.info()</span><br></pre></td></tr></table></figure></div>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span>(<span class="params"><span class="built_in">object</span></span>):</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span>(<span class="params"><span class="built_in">object</span></span>):</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">C</span>(<span class="params">A,B</span>):</span>						<span class="comment"># Python支持多继承</span></span><br><span class="line">    <span class="keyword">pass</span></span><br></pre></td></tr></table></figure></div>
-<h2 id="3-方法重写">3. 方法重写</h2>
-<ul>
-<li>如果子类对继承自父类的某个属性或方法不满意，可以在子类中对其（方法体）进行重新编写。</li>
-<li>子类重写后的方法中可以通过<code>super().xxx()</code>调用父类中被重写的方法。</li>
-</ul>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span>(<span class="params"><span class="built_in">object</span></span>):</span>				<span class="comment">#Person继承object类</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> *<span class="title">init</span>*(<span class="params">self,anme,age</span>):</span></span><br><span class="line">        self.name = name</span><br><span class="line">        self.age = age</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">info</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="built_in">print</span>(self.name,self.age)</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span>(<span class="params">Person</span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> *<span class="title">init</span>*(<span class="params">self,name,age,stu_no</span>):</span></span><br><span class="line">        <span class="built_in">super</span>().*init*(name,age)</span><br><span class="line">        self.stu_no = stu_no</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">info</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="built_in">super</span>().info()</span><br><span class="line">        <span class="built_in">print</span>(self.stu_no)</span><br><span class="line">        </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Teacher</span>(<span class="params">Person</span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> *<span class="title">init</span>*(<span class="params">self,name,age,teachofyear</span>):</span></span><br><span class="line">        <span class="built_in">super</span>().*init*(name,age)</span><br><span class="line">        self.teachofyear = teachofyear</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">info</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="built_in">super</span>().info()</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;教龄&#x27;</span>,self.teachofyear)</span><br><span class="line">       </span><br><span class="line">stu = Student(<span class="string">&#x27;张三&#x27;</span>,<span class="number">20</span>,<span class="string">&#x27;1001&#x27;</span>)</span><br><span class="line">teacher = Teacher(<span class="string">&#x27;李四&#x27;</span>，<span class="number">34</span>，<span class="number">10</span>)</span><br><span class="line"></span><br><span class="line">stu.info()</span><br><span class="line">teacher.info()</span><br></pre></td></tr></table></figure></div>
-<h2 id="4-object类">4. object类</h2>
-<ul>
-<li>object类是所有类的父类，因此所有类都有object类的属性和方法。</li>
-<li>内置函数dir()可以查看指定对象所有属性。</li>
-<li>Object有一个_str_()方法，用于返回一个对于“对象的描述”，对应于内置函数str()经常用于print()方法，帮助我们查看对象的信息，所以我们经常会对_str_()进行重写。</li>
-</ul>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span>:</span></span><br><span class="line">   <span class="function"><span class="keyword">def</span> *<span class="title">init</span>*(<span class="params">self,name,age</span>):</span></span><br><span class="line">    self.name = name</span><br><span class="line">    self.age = age</span><br><span class="line">   <span class="function"><span class="keyword">def</span> *<span class="title">str</span>*(<span class="params">self</span>):</span></span><br><span class="line">    <span class="keyword">return</span> <span class="string">&#x27;我的名字是&#123;0&#125;，今年&#123;1&#125;岁。&#x27;</span>.<span class="built_in">format</span>(self.name,self,age)</span><br><span class="line">stu = Student(<span class="string">&#x27;张三&#x27;</span>,<span class="number">20</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">dir</span>(stu))</span><br><span class="line"><span class="built_in">print</span>(stu)						<span class="comment"># 默认调用*str*()方法</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(stu))</span><br></pre></td></tr></table></figure></div>
-<h2 id="5-多态">5. 多态</h2>
-<p>简单地说，多态就是“具有多种形态”，它指的是：即便不知道一个变量所引用地对象到底是什么类型，仍然可以通过这个变量调用方法，在运行过程中根据变量所用对象的类型，动态决定调用哪个对象中的方法。</p>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Animal</span>(<span class="params"><span class="built_in">object</span></span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">eat</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;动物会吃&#x27;</span>)</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Dog</span>(<span class="params">Animal</span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">eat</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;狗吃骨头...&#x27;</span>)</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Cat</span>(<span class="params">Animal</span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">eat</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;猫吃鱼...&#x27;</span>)</span><br><span class="line">        </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">eat</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;人吃五谷杂粮&#x27;</span>)</span><br><span class="line">        </span><br><span class="line"><span class="comment"># 定义一个函数</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun</span>(<span class="params">obj</span>):</span></span><br><span class="line">    obj.eat()</span><br><span class="line"><span class="comment"># 开始调用函数</span></span><br><span class="line">fun(Cat())</span><br><span class="line">fun(Dog())</span><br><span class="line">fun(Animal())</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;-----------------------&#x27;</span>)</span><br><span class="line">fun(Person())</span><br></pre></td></tr></table></figure></div>
-<p><em>静态语言和动态语言关于多态的区别：</em></p>
-<ul>
-<li>静态语言实现多态的三个必要条件：继承，方法重写，父类引用指向子类对象，例如Java。</li>
-<li>动态语言的多态崇尚“鸭子类型”。当看到一只鸟走起来像鸭子、游泳起来像鸭子，那么这只鸟就可以被称为鸭子。在鸭子类型中，不需要关心对象是什么类型，到底是不是鸭子，只关心对象的行为。</li>
-</ul>
-<h2 id="6-特殊方法和特殊属性">6. 特殊方法和特殊属性</h2>
-<table>
-    <tr>
-        <td > &nbsp </td>
-        <td style="text-align:center">  名称  </td>
-        <td style="text-align:center">  描述  </td>
-    </tr>
-    <tr>
-        <td style="text-align:center"> 特殊属性 </td>
-        <td style="text-align:center">*dict()*</td>
-        <td >获得类对象或者实例对象所绑定的所有属性和方法的字典</td>
-    </tr>
-    <tr>       
-        <th style="text-align:center" rowspan="4"> 特殊方法 </th>
-        <td style="text-align:center">*len*()</td>
-        <td >通过重写*len*()方法，让内置函数len()的参数可以是自定义类型</td>
-    </tr> 
-     <tr>  
-        <td style="text-align:center">*add*()</td> 
-        <td >通过重写*add*()方法，可以使用自定义对象具有“+”功能</td>
-    </tr>  
-    <tr>  
-        <td style="text-align:center">*new*()</td> 
-        <td >用于创建对象</td>
-    </tr> 
-    <tr>  
-        <td style="text-align:center">*init*()</td> 
-        <td >对创建的对象进行初始化</td>
-    </tr> 
-</table>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;&#x27;特殊属性&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">dir</span>(<span class="built_in">object</span>))</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">C</span>(<span class="params">A,B</span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> *<span class="title">init</span>*(<span class="params">self,name,age</span>):</span></span><br><span class="line">        self.name = name</span><br><span class="line">        self.age = age</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">D</span>(<span class="params">A</span>):</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"><span class="comment"># 创建C类的对象</span></span><br><span class="line">x = C(<span class="string">&#x27;Jack&#x27;</span>,<span class="number">20</span>)			<span class="comment"># x是C类型的一个实例对象</span></span><br><span class="line"><span class="built_in">print</span>(x.*<span class="built_in">dict</span>*)			<span class="comment"># 实例对象的属性字典</span></span><br><span class="line"><span class="built_in">print</span>(C.*<span class="built_in">dict</span>*)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;-------------------------&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(x.*<span class="class"><span class="keyword">class</span>*)			# 输出对象所属的类</span></span><br><span class="line"><span class="class"><span class="title">print</span>(<span class="params">C.*bases*</span>)			# 输出<span class="title">C</span>类的父类类型的元素</span></span><br><span class="line"><span class="class"><span class="title">print</span>(<span class="params">C.*base*</span>)			# 输出类的基类</span></span><br><span class="line"><span class="class"><span class="title">print</span>(<span class="params">C.*mro*</span>)			# 类的层次结构</span></span><br><span class="line"><span class="class"><span class="title">print</span>(<span class="params">A.*subclasses*(<span class="params"></span>)</span>)	# 输出<span class="title">A</span>的子类</span></span><br></pre></td></tr></table></figure></div>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;&#x27;特殊方法&#x27;&#x27;&#x27;</span></span><br><span class="line">a = <span class="number">20</span></span><br><span class="line">b = <span class="number">100</span></span><br><span class="line">c = a+b						<span class="comment"># 两个int类型的对象相加操作</span></span><br><span class="line">d = a.*add*(b)</span><br><span class="line"><span class="built_in">print</span>(c)</span><br><span class="line"><span class="built_in">print</span>(d)</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> *<span class="title">init</span>*(<span class="params">self,name</span>):</span></span><br><span class="line">        self.name = name</span><br><span class="line">    <span class="function"><span class="keyword">def</span> *<span class="title">add</span>*(<span class="params">self,other</span>):</span></span><br><span class="line">        <span class="keyword">return</span> self.name + other.name</span><br><span class="line">    <span class="function"><span class="keyword">def</span> *<span class="title">len</span>*(<span class="params">self</span>):</span></span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">len</span>(self.name)</span><br><span class="line">stu1 = Student(<span class="string">&#x27;Jack&#x27;</span>)</span><br><span class="line">stu2 = Student(<span class="string">&#x27;李四&#x27;</span>)</span><br><span class="line"></span><br><span class="line">s = stu1 + stu2				<span class="comment"># 实现了两个对象的加法运算（因为在Student类中，编写了*add*(）特殊的方法</span></span><br><span class="line"><span class="built_in">print</span>(s)</span><br><span class="line">s = stu1.*add*(stu2)</span><br><span class="line"><span class="built_in">print</span>(s)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;----------------------------&#x27;</span>)</span><br><span class="line">lst = [<span class="number">11</span>,<span class="number">22</span>,<span class="number">33</span>,<span class="number">44</span>]</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">len</span>(lst))</span><br><span class="line"><span class="built_in">print</span>(lst.*<span class="built_in">len</span>*())</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">len</span>(stu1))</span><br></pre></td></tr></table></figure></div>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;&#x27;*new*()和*init*()&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span>(<span class="params"><span class="built_in">object</span></span>):</span></span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> *<span class="title">new</span>*(<span class="params">cls,*args,*kwargs</span>):</span>			<span class="comment"># 9360</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;*new*()被调用执行了，cls的id值为&#123;0&#125;&#x27;</span>.<span class="built_in">format</span>(<span class="built_in">id</span>(cls)))</span><br><span class="line">        obj = <span class="built_in">super</span>().*new*(cls)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;创建的对象的id值为&#123;0&#125;&#x27;</span>.<span class="built_in">format</span>(<span class="built_in">id</span>(obj)))				<span class="comment">#7104</span></span><br><span class="line">        <span class="keyword">return</span> obj</span><br><span class="line">	<span class="function"><span class="keyword">def</span> *<span class="title">init</span>*(<span class="params">self,name,age</span>):</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;*init*被调用了，self的id值为：&#123;0&#125;&#x27;</span>.<span class="built_in">format</span>(<span class="built_in">id</span>(self)))			<span class="comment">#7104</span></span><br><span class="line">        self.name = name</span><br><span class="line">        self.age = age</span><br><span class="line">        </span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;object这个类对象的id为：&#123;0&#125;&#x27;</span>.<span class="built_in">format</span>(<span class="built_in">id</span>(<span class="built_in">object</span>)))		<span class="comment">#3232</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;Person这个类对象的id为：&#123;0&#125;&#x27;</span>.<span class="built_in">format</span>(<span class="built_in">id</span>(Person)))		<span class="comment">#9360</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建Person类的实例对象</span></span><br><span class="line">p1 = Person(<span class="string">&#x27;张三&#x27;</span>,<span class="number">20</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;p1这个Person类的实例对象的id为：&#123;0&#125;&#x27;</span>.<span class="built_in">format</span>(<span class="built_in">id</span>(p1)))		<span class="comment">#7104</span></span><br></pre></td></tr></table></figure></div>
-<h2 id="7-类的浅拷贝与深拷贝">7. 类的浅拷贝与深拷贝</h2>
-<p>*变量的赋值操作：*只是形成两个变量，实际上还是指向同一个对象。</p>
-<p>*浅拷贝：*Python拷贝一般都是浅拷贝，拷贝时，对象包含的子对象内容不拷贝。因此，源对象与拷贝对象会引用同一个子对象。</p>
-<p>*深拷贝：*使用copy模块的deepcopy函数，递归拷贝对象中包含的子对象，源对象和拷贝对象所有的子对象也不相同。</p>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">CPU</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Disk</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Computer</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> *<span class="title">init</span>*(<span class="params">self,cpu,disk</span>):</span></span><br><span class="line">        self.cpu = cpu</span><br><span class="line">        self.disk = disk</span><br><span class="line">        </span><br><span class="line"><span class="comment"># (1)变量的赋值</span></span><br><span class="line">cpu1 = CPU()</span><br><span class="line">cpu2 = cpu1</span><br><span class="line"><span class="built_in">print</span>(cpu1,<span class="built_in">id</span>(cpu1))</span><br><span class="line"><span class="built_in">print</span>(cpu2,<span class="built_in">id</span>(cpu2))</span><br><span class="line"><span class="comment"># (2)类的浅拷贝</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;-------------------&#x27;</span>)</span><br><span class="line">disk = Disk()					<span class="comment"># 创建一个硬盘类的对象</span></span><br><span class="line">computer = Computer(cpu1,disk)	<span class="comment"># 创建一个计算机类的对象</span></span><br><span class="line"><span class="comment"># 浅拷贝</span></span><br><span class="line"><span class="keyword">import</span> copy</span><br><span class="line">computer2 = copy.copy(computer)</span><br><span class="line"><span class="built_in">print</span>(disk)</span><br><span class="line"><span class="built_in">print</span>(computer,computer.cpu,computer.disk)</span><br><span class="line"><span class="built_in">print</span>(computer2,computer2.cpu,computer2.disk)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;---------------------&#x27;</span>)</span><br><span class="line"><span class="comment"># 深拷贝</span></span><br><span class="line">computer3 = copy.deepcopy(computer)</span><br><span class="line"><span class="built_in">print</span>(computer,computer.cpu,computer.disk)</span><br><span class="line"><span class="built_in">print</span>(computer3,computer3.cpu,computer3.disk)</span><br></pre></td></tr></table></figure></div>
-<p><img src="https://cdn.jsdelivr.net/gh/zyzhang827/filesimage@main/images/2022/01/05/c8cdab97bbe478d97bb8e13c1fb7f298-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-3dd12c.png" alt="面向对象"></p>
-]]></content>
-      <categories>
-        <category>Python</category>
-        <category>基础语法</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Python 学习笔记(15)--模块、包</title>
     <url>/posts/58b01302/</url>
     <content><![CDATA[<h2 id="1-什么叫模块？">1. 什么叫模块？</h2>
@@ -2046,6 +1959,93 @@ $$</p>
 <h2 id="6-第三方模块的安装及使用">6. 第三方模块的安装及使用</h2>
 <div class="highlight-wrap" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">#DOS</span><br><span class="line">pip install schedule</span><br><span class="line">python</span><br><span class="line">import schedule</span><br></pre></td></tr></table></figure></div>
 <div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> schedule</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">job</span>():</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;哈哈-----&#x27;</span>)</span><br><span class="line">    </span><br><span class="line">schedule.every(<span class="number">3</span>).seconds.do(job)</span><br><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">    schedule.run_pending()</span><br><span class="line">    time.sleep(<span class="number">1</span>)</span><br></pre></td></tr></table></figure></div>
+]]></content>
+      <categories>
+        <category>Python</category>
+        <category>基础语法</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python 学习笔记(14)--对象方法</title>
+    <url>/posts/c5fc2304/</url>
+    <content><![CDATA[<p><em>面向对象的三大特征：</em></p>
+<ul>
+<li>封装：提高程序的安全性。（1）将数据（属性）和行为（方法）包装到类对象中，在方法内部对属性进行操作，在类对象的外部调用方法。这样，无需关心方法内部的具体实现细节，从而隔离了复杂度；（2）在Python中没有专门的修饰符用于属性的私有，如果该属性不希望在类对象外部被访问，前边使用两个“*”；</li>
+<li>继承：提高代码的复用性；</li>
+<li>多态：提高程序的可扩展性和可维护性。</li>
+</ul>
+<span id="more"></span>
+<h2 id="1-封装">1. 封装</h2>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Car</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> *<span class="title">init</span>*(<span class="params">self,brand</span>):</span></span><br><span class="line">        self.brand = brand</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">start</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;汽车已启动...&#x27;</span>)</span><br><span class="line">        </span><br><span class="line">car = Car(<span class="string">&#x27;宝马X5&#x27;</span>)</span><br><span class="line">car.start()</span><br><span class="line"><span class="built_in">print</span>(car,brand)</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> *<span class="title">init</span>*(<span class="params">self,name,age</span>):</span></span><br><span class="line">        self.name = name	</span><br><span class="line">        self.*age = age 			<span class="comment"># 年龄age不希望在类的外部被使用，所以加了两个“_”</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">show</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="built_in">print</span>(self.name,self.*age)</span><br><span class="line"></span><br><span class="line">stu = Student(<span class="string">&#x27;张三&#x27;</span>,<span class="number">20</span>)</span><br><span class="line">stu.show()</span><br><span class="line"><span class="comment"># 在类的外部使用name与age</span></span><br><span class="line"><span class="built_in">print</span>(stu.name)</span><br><span class="line"><span class="comment"># print(stu.*age)</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">dir</span>(stu))</span><br><span class="line"><span class="built_in">print</span>(stu._Student*age)			<span class="comment"># 在类的外部可以通过	_Student*age	进行访问</span></span><br></pre></td></tr></table></figure></div>
+<h2 id="2-继承">2. 继承</h2>
+<p>*继承的特点：*如果一个类没有继承任何类，则默认继承object；Python支持多继承；定义子类时，必须在其构造函数中调用父类的构造函数。</p>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 语法结构</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> 子类类名(<span class="params">父类<span class="number">1</span>，父类<span class="number">2.</span>..</span>):</span></span><br><span class="line">    <span class="keyword">pass</span></span><br></pre></td></tr></table></figure></div>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span>(<span class="params"><span class="built_in">object</span></span>):</span>				<span class="comment"># Person继承object类</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> *<span class="title">init</span>*(<span class="params">self,anme,age</span>):</span></span><br><span class="line">        self.name = name</span><br><span class="line">        self.age = age</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">info</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="built_in">print</span>(self.name,self.age)</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span>(<span class="params">Person</span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> *<span class="title">init</span>*(<span class="params">self,name,age,stu_no</span>):</span></span><br><span class="line">        <span class="built_in">super</span>().*init*(name,age)</span><br><span class="line">        self.stu_no = stu_no</span><br><span class="line">        </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Teacher</span>(<span class="params">Person</span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> *<span class="title">init</span>*(<span class="params">self,name,age,teachofyear</span>):</span></span><br><span class="line">        <span class="built_in">super</span>().*init*(name,age)</span><br><span class="line">        self.teachofyear = teachofyear</span><br><span class="line">       </span><br><span class="line">stu = Student(<span class="string">&#x27;张三&#x27;</span>,<span class="number">20</span>,<span class="string">&#x27;1001&#x27;</span>)</span><br><span class="line">teacher = Teacher(<span class="string">&#x27;李四&#x27;</span>，<span class="number">34</span>，<span class="number">10</span>)</span><br><span class="line"></span><br><span class="line">stu.info()</span><br><span class="line">teacher.info()</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span>(<span class="params"><span class="built_in">object</span></span>):</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span>(<span class="params"><span class="built_in">object</span></span>):</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">C</span>(<span class="params">A,B</span>):</span>						<span class="comment"># Python支持多继承</span></span><br><span class="line">    <span class="keyword">pass</span></span><br></pre></td></tr></table></figure></div>
+<h2 id="3-方法重写">3. 方法重写</h2>
+<ul>
+<li>如果子类对继承自父类的某个属性或方法不满意，可以在子类中对其（方法体）进行重新编写。</li>
+<li>子类重写后的方法中可以通过<code>super().xxx()</code>调用父类中被重写的方法。</li>
+</ul>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span>(<span class="params"><span class="built_in">object</span></span>):</span>				<span class="comment">#Person继承object类</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> *<span class="title">init</span>*(<span class="params">self,anme,age</span>):</span></span><br><span class="line">        self.name = name</span><br><span class="line">        self.age = age</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">info</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="built_in">print</span>(self.name,self.age)</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span>(<span class="params">Person</span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> *<span class="title">init</span>*(<span class="params">self,name,age,stu_no</span>):</span></span><br><span class="line">        <span class="built_in">super</span>().*init*(name,age)</span><br><span class="line">        self.stu_no = stu_no</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">info</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="built_in">super</span>().info()</span><br><span class="line">        <span class="built_in">print</span>(self.stu_no)</span><br><span class="line">        </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Teacher</span>(<span class="params">Person</span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> *<span class="title">init</span>*(<span class="params">self,name,age,teachofyear</span>):</span></span><br><span class="line">        <span class="built_in">super</span>().*init*(name,age)</span><br><span class="line">        self.teachofyear = teachofyear</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">info</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="built_in">super</span>().info()</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;教龄&#x27;</span>,self.teachofyear)</span><br><span class="line">       </span><br><span class="line">stu = Student(<span class="string">&#x27;张三&#x27;</span>,<span class="number">20</span>,<span class="string">&#x27;1001&#x27;</span>)</span><br><span class="line">teacher = Teacher(<span class="string">&#x27;李四&#x27;</span>，<span class="number">34</span>，<span class="number">10</span>)</span><br><span class="line"></span><br><span class="line">stu.info()</span><br><span class="line">teacher.info()</span><br></pre></td></tr></table></figure></div>
+<h2 id="4-object类">4. object类</h2>
+<ul>
+<li>object类是所有类的父类，因此所有类都有object类的属性和方法。</li>
+<li>内置函数dir()可以查看指定对象所有属性。</li>
+<li>Object有一个_str_()方法，用于返回一个对于“对象的描述”，对应于内置函数str()经常用于print()方法，帮助我们查看对象的信息，所以我们经常会对_str_()进行重写。</li>
+</ul>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span>:</span></span><br><span class="line">   <span class="function"><span class="keyword">def</span> *<span class="title">init</span>*(<span class="params">self,name,age</span>):</span></span><br><span class="line">    self.name = name</span><br><span class="line">    self.age = age</span><br><span class="line">   <span class="function"><span class="keyword">def</span> *<span class="title">str</span>*(<span class="params">self</span>):</span></span><br><span class="line">    <span class="keyword">return</span> <span class="string">&#x27;我的名字是&#123;0&#125;，今年&#123;1&#125;岁。&#x27;</span>.<span class="built_in">format</span>(self.name,self,age)</span><br><span class="line">stu = Student(<span class="string">&#x27;张三&#x27;</span>,<span class="number">20</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">dir</span>(stu))</span><br><span class="line"><span class="built_in">print</span>(stu)						<span class="comment"># 默认调用*str*()方法</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(stu))</span><br></pre></td></tr></table></figure></div>
+<h2 id="5-多态">5. 多态</h2>
+<p>简单地说，多态就是“具有多种形态”，它指的是：即便不知道一个变量所引用地对象到底是什么类型，仍然可以通过这个变量调用方法，在运行过程中根据变量所用对象的类型，动态决定调用哪个对象中的方法。</p>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Animal</span>(<span class="params"><span class="built_in">object</span></span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">eat</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;动物会吃&#x27;</span>)</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Dog</span>(<span class="params">Animal</span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">eat</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;狗吃骨头...&#x27;</span>)</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Cat</span>(<span class="params">Animal</span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">eat</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;猫吃鱼...&#x27;</span>)</span><br><span class="line">        </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">eat</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;人吃五谷杂粮&#x27;</span>)</span><br><span class="line">        </span><br><span class="line"><span class="comment"># 定义一个函数</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun</span>(<span class="params">obj</span>):</span></span><br><span class="line">    obj.eat()</span><br><span class="line"><span class="comment"># 开始调用函数</span></span><br><span class="line">fun(Cat())</span><br><span class="line">fun(Dog())</span><br><span class="line">fun(Animal())</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;-----------------------&#x27;</span>)</span><br><span class="line">fun(Person())</span><br></pre></td></tr></table></figure></div>
+<p><em>静态语言和动态语言关于多态的区别：</em></p>
+<ul>
+<li>静态语言实现多态的三个必要条件：继承，方法重写，父类引用指向子类对象，例如Java。</li>
+<li>动态语言的多态崇尚“鸭子类型”。当看到一只鸟走起来像鸭子、游泳起来像鸭子，那么这只鸟就可以被称为鸭子。在鸭子类型中，不需要关心对象是什么类型，到底是不是鸭子，只关心对象的行为。</li>
+</ul>
+<h2 id="6-特殊方法和特殊属性">6. 特殊方法和特殊属性</h2>
+<table>
+    <tr>
+        <td > &nbsp </td>
+        <td style="text-align:center">  名称  </td>
+        <td style="text-align:center">  描述  </td>
+    </tr>
+    <tr>
+        <td style="text-align:center"> 特殊属性 </td>
+        <td style="text-align:center">*dict()*</td>
+        <td >获得类对象或者实例对象所绑定的所有属性和方法的字典</td>
+    </tr>
+    <tr>       
+        <th style="text-align:center" rowspan="4"> 特殊方法 </th>
+        <td style="text-align:center">*len*()</td>
+        <td >通过重写*len*()方法，让内置函数len()的参数可以是自定义类型</td>
+    </tr> 
+     <tr>  
+        <td style="text-align:center">*add*()</td> 
+        <td >通过重写*add*()方法，可以使用自定义对象具有“+”功能</td>
+    </tr>  
+    <tr>  
+        <td style="text-align:center">*new*()</td> 
+        <td >用于创建对象</td>
+    </tr> 
+    <tr>  
+        <td style="text-align:center">*init*()</td> 
+        <td >对创建的对象进行初始化</td>
+    </tr> 
+</table>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;&#x27;特殊属性&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">dir</span>(<span class="built_in">object</span>))</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">C</span>(<span class="params">A,B</span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> *<span class="title">init</span>*(<span class="params">self,name,age</span>):</span></span><br><span class="line">        self.name = name</span><br><span class="line">        self.age = age</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">D</span>(<span class="params">A</span>):</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"><span class="comment"># 创建C类的对象</span></span><br><span class="line">x = C(<span class="string">&#x27;Jack&#x27;</span>,<span class="number">20</span>)			<span class="comment"># x是C类型的一个实例对象</span></span><br><span class="line"><span class="built_in">print</span>(x.*<span class="built_in">dict</span>*)			<span class="comment"># 实例对象的属性字典</span></span><br><span class="line"><span class="built_in">print</span>(C.*<span class="built_in">dict</span>*)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;-------------------------&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(x.*<span class="class"><span class="keyword">class</span>*)			# 输出对象所属的类</span></span><br><span class="line"><span class="class"><span class="title">print</span>(<span class="params">C.*bases*</span>)			# 输出<span class="title">C</span>类的父类类型的元素</span></span><br><span class="line"><span class="class"><span class="title">print</span>(<span class="params">C.*base*</span>)			# 输出类的基类</span></span><br><span class="line"><span class="class"><span class="title">print</span>(<span class="params">C.*mro*</span>)			# 类的层次结构</span></span><br><span class="line"><span class="class"><span class="title">print</span>(<span class="params">A.*subclasses*(<span class="params"></span>)</span>)	# 输出<span class="title">A</span>的子类</span></span><br></pre></td></tr></table></figure></div>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;&#x27;特殊方法&#x27;&#x27;&#x27;</span></span><br><span class="line">a = <span class="number">20</span></span><br><span class="line">b = <span class="number">100</span></span><br><span class="line">c = a+b						<span class="comment"># 两个int类型的对象相加操作</span></span><br><span class="line">d = a.*add*(b)</span><br><span class="line"><span class="built_in">print</span>(c)</span><br><span class="line"><span class="built_in">print</span>(d)</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> *<span class="title">init</span>*(<span class="params">self,name</span>):</span></span><br><span class="line">        self.name = name</span><br><span class="line">    <span class="function"><span class="keyword">def</span> *<span class="title">add</span>*(<span class="params">self,other</span>):</span></span><br><span class="line">        <span class="keyword">return</span> self.name + other.name</span><br><span class="line">    <span class="function"><span class="keyword">def</span> *<span class="title">len</span>*(<span class="params">self</span>):</span></span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">len</span>(self.name)</span><br><span class="line">stu1 = Student(<span class="string">&#x27;Jack&#x27;</span>)</span><br><span class="line">stu2 = Student(<span class="string">&#x27;李四&#x27;</span>)</span><br><span class="line"></span><br><span class="line">s = stu1 + stu2				<span class="comment"># 实现了两个对象的加法运算（因为在Student类中，编写了*add*(）特殊的方法</span></span><br><span class="line"><span class="built_in">print</span>(s)</span><br><span class="line">s = stu1.*add*(stu2)</span><br><span class="line"><span class="built_in">print</span>(s)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;----------------------------&#x27;</span>)</span><br><span class="line">lst = [<span class="number">11</span>,<span class="number">22</span>,<span class="number">33</span>,<span class="number">44</span>]</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">len</span>(lst))</span><br><span class="line"><span class="built_in">print</span>(lst.*<span class="built_in">len</span>*())</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">len</span>(stu1))</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;&#x27;*new*()和*init*()&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span>(<span class="params"><span class="built_in">object</span></span>):</span></span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> *<span class="title">new</span>*(<span class="params">cls,*args,*kwargs</span>):</span>			<span class="comment"># 9360</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;*new*()被调用执行了，cls的id值为&#123;0&#125;&#x27;</span>.<span class="built_in">format</span>(<span class="built_in">id</span>(cls)))</span><br><span class="line">        obj = <span class="built_in">super</span>().*new*(cls)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;创建的对象的id值为&#123;0&#125;&#x27;</span>.<span class="built_in">format</span>(<span class="built_in">id</span>(obj)))				<span class="comment">#7104</span></span><br><span class="line">        <span class="keyword">return</span> obj</span><br><span class="line">	<span class="function"><span class="keyword">def</span> *<span class="title">init</span>*(<span class="params">self,name,age</span>):</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;*init*被调用了，self的id值为：&#123;0&#125;&#x27;</span>.<span class="built_in">format</span>(<span class="built_in">id</span>(self)))			<span class="comment">#7104</span></span><br><span class="line">        self.name = name</span><br><span class="line">        self.age = age</span><br><span class="line">        </span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;object这个类对象的id为：&#123;0&#125;&#x27;</span>.<span class="built_in">format</span>(<span class="built_in">id</span>(<span class="built_in">object</span>)))		<span class="comment">#3232</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;Person这个类对象的id为：&#123;0&#125;&#x27;</span>.<span class="built_in">format</span>(<span class="built_in">id</span>(Person)))		<span class="comment">#9360</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建Person类的实例对象</span></span><br><span class="line">p1 = Person(<span class="string">&#x27;张三&#x27;</span>,<span class="number">20</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;p1这个Person类的实例对象的id为：&#123;0&#125;&#x27;</span>.<span class="built_in">format</span>(<span class="built_in">id</span>(p1)))		<span class="comment">#7104</span></span><br></pre></td></tr></table></figure></div>
+<h2 id="7-类的浅拷贝与深拷贝">7. 类的浅拷贝与深拷贝</h2>
+<p>*变量的赋值操作：*只是形成两个变量，实际上还是指向同一个对象。</p>
+<p>*浅拷贝：*Python拷贝一般都是浅拷贝，拷贝时，对象包含的子对象内容不拷贝。因此，源对象与拷贝对象会引用同一个子对象。</p>
+<p>*深拷贝：*使用copy模块的deepcopy函数，递归拷贝对象中包含的子对象，源对象和拷贝对象所有的子对象也不相同。</p>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">CPU</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Disk</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Computer</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> *<span class="title">init</span>*(<span class="params">self,cpu,disk</span>):</span></span><br><span class="line">        self.cpu = cpu</span><br><span class="line">        self.disk = disk</span><br><span class="line">        </span><br><span class="line"><span class="comment"># (1)变量的赋值</span></span><br><span class="line">cpu1 = CPU()</span><br><span class="line">cpu2 = cpu1</span><br><span class="line"><span class="built_in">print</span>(cpu1,<span class="built_in">id</span>(cpu1))</span><br><span class="line"><span class="built_in">print</span>(cpu2,<span class="built_in">id</span>(cpu2))</span><br><span class="line"><span class="comment"># (2)类的浅拷贝</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;-------------------&#x27;</span>)</span><br><span class="line">disk = Disk()					<span class="comment"># 创建一个硬盘类的对象</span></span><br><span class="line">computer = Computer(cpu1,disk)	<span class="comment"># 创建一个计算机类的对象</span></span><br><span class="line"><span class="comment"># 浅拷贝</span></span><br><span class="line"><span class="keyword">import</span> copy</span><br><span class="line">computer2 = copy.copy(computer)</span><br><span class="line"><span class="built_in">print</span>(disk)</span><br><span class="line"><span class="built_in">print</span>(computer,computer.cpu,computer.disk)</span><br><span class="line"><span class="built_in">print</span>(computer2,computer2.cpu,computer2.disk)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;---------------------&#x27;</span>)</span><br><span class="line"><span class="comment"># 深拷贝</span></span><br><span class="line">computer3 = copy.deepcopy(computer)</span><br><span class="line"><span class="built_in">print</span>(computer,computer.cpu,computer.disk)</span><br><span class="line"><span class="built_in">print</span>(computer3,computer3.cpu,computer3.disk)</span><br></pre></td></tr></table></figure></div>
+<p><img src="https://cdn.jsdelivr.net/gh/zyzhang827/filesimage@main/images/2022/01/05/c8cdab97bbe478d97bb8e13c1fb7f298-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-3dd12c.png" alt="面向对象"></p>
 ]]></content>
       <categories>
         <category>Python</category>
@@ -4550,7 +4550,7 @@ $$</p>
 <p>或者直接点击本文下载链接进行下载。<a href="https://zyzhang.lanzouw.com/iyD75014ekaf">IDM 下载</a>，密码:<code>sdu827</code></p>
 <p>下载过程中，记得将电脑所有的杀毒软件以及防火墙关闭，因为软件安装包中含有破解程序，故可能会报毒。</p>
 <p>下载完成后，点击<code>绿化与卸载.exe</code>选择绿化，然后打开程序文件夹<code>Bin</code>中的<code>IDMan.exe</code>即为主应用程序。界面如下：</p>
-<p><img src="http://gitee.com/zyzhang98/typoraofimages/raw/master/Images/20220326-141329.png" alt="image-20220326141328372"></p>
+<p><img src="https://gitee.com/zyzhang98/typoraofimages/raw/master/Images/2022/03/26/20220326-141329.png" alt="image-20220326141328372"></p>
 <p>第一次安装，默认按钮的样式可能与我的不同，但功能一致，点击菜单栏的<code>查看/工具栏</code>可以对样式进行更换。</p>
 <p>使用 IDM 之前，我们需要一些特殊的设置：</p>
 <ul>
