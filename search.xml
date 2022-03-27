@@ -163,6 +163,76 @@
       </tags>
   </entry>
   <entry>
+    <title>Materials Studio安装教程</title>
+    <url>/posts/1c974571/</url>
+    <content><![CDATA[<h1>Materials Studio安装教程</h1>
+<h2 id="软件安装包">软件安装包</h2>
+<p><a href="https://www.123pan.com/s/XHVA-IEQ5d">123云盘下载</a></p>
+<p>提取码z827`</p>
+<h2 id="修改-lic文件">修改.lic文件</h2>
+<ol>
+<li>
+<p>电脑桌面使用快捷键<code>Win+R</code>打开运行，输入<code>cmd</code>，回车。然后在命令行窗口输入<code>hostname</code>回车，出现计算机名，将其复制备用。</p>
+<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">Microsoft Windows [版本 10.0.22000.376]</span><br><span class="line">(c) Microsoft Corporation。保留所有权利。</span><br><span class="line"></span><br><span class="line">C:\Users\dell&gt;hostname</span><br><span class="line">DESKTOP-XXXXXXX</span><br></pre></td></tr></table></figure></div>
+</li>
+<li>
+<p>找到<code>MS.zip</code>压缩包内的<code>msi2018.lic</code>文件，右键选择”写字板“打开，将第一行中的<code>DESKTOP-HVJ2DIM</code>替换为你刚才复制的自己的计算机名，保存后关闭文件。</p>
+</li>
+</ol>
+<span id="more"></span>
+<h2 id="安装MS软件">安装MS软件</h2>
+<p>将<code>MS.zip</code>压缩包内的<code>MaterialsStudio2018.rar</code>解压，然后进入解压后的<code>MaterialsStudio2018</code>文件夹，找到<code>setup.exe</code>文件，双击进行安装，安装位置选择默认即可，无需进行改动，直到安装结束显示Finsh，关闭即可。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zyzhang827/filesimage@main/images/image-20220106142453557.png" alt=""><img src="https://cdn.jsdelivr.net/gh/zyzhang827/filesimage@main/images/image-20220106142527139.png" alt=""></p>
+<h2 id="lic文件复制">.lic文件复制</h2>
+<p>64位的 Windows 操作系统，将之前修改过的<code>msi2018.lic</code>文件复制到以下爱三个文件夹中.</p>
+<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">C:\Program Files (x86)\BIOVIA\LicensePack\Licenses</span><br><span class="line">C:\Program Files (x86)\BIOVIA\LicensePack\share\data</span><br><span class="line">C:\Program Files (x86)\BIOVIA\LicensePack\win32\bin</span><br></pre></td></tr></table></figure></div>
+<h2 id="安装注册信息">安装注册信息</h2>
+<p>使用快捷键<code>Win+Q</code>打开系统搜索框，输入<code>License Administrator 2018</code>，然后选中右键”以管理员身份运行“。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zyzhang827/filesimage@main/images/image-20220106143734050.png" alt=""></p>
+<p>打开左侧的<code>Install License</code>，点击右侧的<code>Browser</code>，找到<code>C:\Program Files (x86)\BIOVIA\LicensePack\Licenses</code>里的<code>msi2018.lic</code>文件，单击打开，然后点击<code>License Administrtor 2018</code>中下方的<code>Install</code>，出现<code>Checkout succeeded...</code>证明安装成功，可以使用<code>MS2018</code>软件了。</p>
+<h2 id="打开软件">打开软件</h2>
+<p>Windows开始菜单找到<code>Materials Studio 2018</code>打开软件即可。</p>
+]]></content>
+      <categories>
+        <category>Molecular Dynamics</category>
+        <category>Materials Studio</category>
+      </categories>
+      <tags>
+        <tag>MD</tag>
+        <tag>Materials Studio</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>装系统神器--Ventoy</title>
+    <url>/posts/274e9706/</url>
+    <content><![CDATA[<h2 id="介绍">介绍</h2>
+<p>Ventoy 是国人自己开发的 ISO 启动引导程序软件，其主要的功能就是可以通过 Ventoy 存储系统的 ISO 镜像文件，然后对电脑进行系统重装。</p>
+<span id="more"></span>
+<h2 id="优势">优势</h2>
+<p>选择 Ventoy 的原因有很多：</p>
+<ul>
+<li>首先，由于是国人自己开发的，所以界面为中文，简单方便；</li>
+<li>支持包括 Windows、WinPE、Ubuntu、Deepin 等多种系统的安装；</li>
+<li>无差别支持 Legacy BIOS 和 UEFI 两种模式；</li>
+<li>支持 MBR 和 GPT 分区格式；</li>
+<li>镜像文件可以与其他文件共存，即装机 U 盘仍然可以作为普通 U 盘使用；</li>
+</ul>
+<h2 id="使用教程">使用教程</h2>
+<p>去<a href="https://www.ventoy.net/en/download.html">Ventoy官网</a>下载<code>Windows</code>版本的 Ventoy 安装包，解压缩之后得到一个<code>Ventoy2Disk.exe</code>文件，然后插入一个干净的 U 盘，打开<code>Ventoy2Disk.exe</code>，主界面选择自己刚才插入的 U 盘的盘符，然后点击<code>Install</code>即可。</p>
+<p>安装完成后，进入 U 盘，然后直接将自己下载好的系统镜像文件放入其中即可，推荐下载系统镜像文件网址<a href="https://next.itellyou.cn/">itellyou</a>.</p>
+<h2 id="重装系统教程">重装系统教程</h2>
+<p>将制作好的 Ventoy 启动盘插入电脑，然后重启计算机，按热键进入 BIOS Setup 模式，将其中的 SecureBoot 关闭；</p>
+<p>然后重新启动计算机，按热键进入 BIOS 界面，在 UEFI OPTIONS 中选择自己的 U 盘进行启动，启动后，选择自己想要安装的系统的镜像文件，一路回车即可。</p>
+<p>上述中所涉及到的热键，各型号的电脑互有差异，一般在重启界面会有提示按键，再不清楚的可以自行按照自己的电脑型号进行百度。</p>
+]]></content>
+      <categories>
+        <category>软件</category>
+      </categories>
+      <tags>
+        <tag>ventoy</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>C++学习笔记(1)--基础知识</title>
     <url>/posts/f566bf84/</url>
     <content><![CDATA[<blockquote>
@@ -337,73 +407,188 @@
       </tags>
   </entry>
   <entry>
-    <title>装系统神器--Ventoy</title>
-    <url>/posts/274e9706/</url>
-    <content><![CDATA[<h2 id="介绍">介绍</h2>
-<p>Ventoy 是国人自己开发的 ISO 启动引导程序软件，其主要的功能就是可以通过 Ventoy 存储系统的 ISO 镜像文件，然后对电脑进行系统重装。</p>
+    <title>C++学习笔记(2)--数据类型</title>
+    <url>/posts/69e69c5/</url>
+    <content><![CDATA[<p>C++ 规定在创建一个变量或者常量的时候，必须要指定出相应的数据类型，否则无法给变量分配内存。</p>
+<h2 id="整型">整型</h2>
+<p>作用：整型变量表示的是<code>整数类型</code>的数据。</p>
+<p>C++ 中能够表示整型的类型有以下几种方式，区别在于所占的内存空间不同：</p>
 <span id="more"></span>
-<h2 id="优势">优势</h2>
-<p>选择 Ventoy 的原因有很多：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">数据类型</th>
+<th>占用空间</th>
+<th style="text-align:center">取值范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">short（短整型）</td>
+<td>2 字节</td>
+<td style="text-align:center">(-2^15 ~ 2^15 -1)</td>
+</tr>
+<tr>
+<td style="text-align:center">int（整型）</td>
+<td>4 字节</td>
+<td style="text-align:center">(-2^31 ~ 2^31 -1)</td>
+</tr>
+<tr>
+<td style="text-align:center">long（长整型）</td>
+<td>Windows/Linux(32位) 4 字节、Linux(64位) 8 字节</td>
+<td style="text-align:center">(-2^31 ~ 2^31 -1)</td>
+</tr>
+<tr>
+<td style="text-align:center">long long（长长整型）</td>
+<td>8 字节</td>
+<td style="text-align:center">(-2^63 ~ 2^63 -1)</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-wrap" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 短整型(-32768 ~ 32767)</span></span><br><span class="line">    <span class="keyword">short</span> num1 = <span class="number">10</span>;</span><br><span class="line">    <span class="comment">// 整型</span></span><br><span class="line">    <span class="keyword">int</span> num2 = <span class="number">10</span>;</span><br><span class="line">    <span class="comment">// 长整型</span></span><br><span class="line">    <span class="keyword">long</span> num3 = <span class="number">10</span>;</span><br><span class="line">    <span class="comment">// 长长整型</span></span><br><span class="line">    <span class="keyword">long</span> <span class="keyword">long</span> num4 = <span class="number">10</span>;</span><br><span class="line">    </span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;num1 = &quot;</span> &lt;&lt; num1 &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;num2 = &quot;</span> &lt;&lt; num2 &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;num3 = &quot;</span> &lt;&lt; num3 &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;num4 = &quot;</span> &lt;&lt; num4 &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<h2 id="sizeof关键字">sizeof关键字</h2>
+<p>作用：利用<code>sizeof</code>关键字统计数据类型所占内存的大小</p>
+<p>语法：<code>sizeof(数据类型 / 变量)</code></p>
+<div class="highlight-wrap" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 整型： short(2) int(4) long(4) long long(8)</span></span><br><span class="line">    <span class="comment">// 可以利用sizeof求出数据类型占用内存的大小</span></span><br><span class="line">    <span class="comment">// 语法： sizeof(数据类型 / 变量)    </span></span><br><span class="line">    <span class="keyword">short</span> num1 = <span class="number">10</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;short占用的内存空间为：&quot;</span> &lt;&lt; <span class="built_in"><span class="keyword">sizeof</span></span>(<span class="keyword">short</span>) &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;short占用的内存空间为：&quot;</span> &lt;&lt; <span class="built_in"><span class="keyword">sizeof</span></span>(num1) &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> num2 = <span class="number">10</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;int占用的内存空间为：&quot;</span> &lt;&lt; <span class="built_in"><span class="keyword">sizeof</span></span>(<span class="keyword">int</span>) &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;int占用的内存空间为：&quot;</span> &lt;&lt; <span class="built_in"><span class="keyword">sizeof</span></span>(<span class="keyword">int</span>) &lt;&lt; endl;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">long</span> num3 = <span class="number">10</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;long占用的内存空间为：&quot;</span> &lt;&lt; <span class="built_in"><span class="keyword">sizeof</span></span>(<span class="keyword">long</span>) &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;long占用的内存空间为：&quot;</span> &lt;&lt; <span class="built_in"><span class="keyword">sizeof</span></span>(<span class="keyword">long</span>) &lt;&lt; endl;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">long</span> <span class="keyword">long</span> num4 = <span class="number">10</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;long long占用的内存空间为：&quot;</span> &lt;&lt; <span class="built_in"><span class="keyword">sizeof</span></span>(<span class="keyword">long</span> <span class="keyword">long</span>) &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;long long占用的内存空间为：&quot;</span> &lt;&lt; <span class="built_in"><span class="keyword">sizeof</span></span>(<span class="keyword">long</span> <span class="keyword">long</span>) &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 整型大小比较</span></span><br><span class="line">    <span class="comment">// short &lt; int &lt;= long &lt;= long long</span></span><br><span class="line"></span><br><span class="line">    <span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<h2 id="实型（浮点型）">实型（浮点型）</h2>
+<p>作用：用于表示小数</p>
+<p>分为两种：</p>
 <ul>
-<li>首先，由于是国人自己开发的，所以界面为中文，简单方便；</li>
-<li>支持包括 Windows、WinPE、Ubuntu、Deepin 等多种系统的安装；</li>
-<li>无差别支持 Legacy BIOS 和 UEFI 两种模式；</li>
-<li>支持 MBR 和 GPT 分区格式；</li>
-<li>镜像文件可以与其他文件共存，即装机 U 盘仍然可以作为普通 U 盘使用；</li>
+<li>单精度<code>float</code></li>
+<li>双精度<code>double</code></li>
 </ul>
-<h2 id="使用教程">使用教程</h2>
-<p>去<a href="https://www.ventoy.net/en/download.html">Ventoy官网</a>下载<code>Windows</code>版本的 Ventoy 安装包，解压缩之后得到一个<code>Ventoy2Disk.exe</code>文件，然后插入一个干净的 U 盘，打开<code>Ventoy2Disk.exe</code>，主界面选择自己刚才插入的 U 盘的盘符，然后点击<code>Install</code>即可。</p>
-<p>安装完成后，进入 U 盘，然后直接将自己下载好的系统镜像文件放入其中即可，推荐下载系统镜像文件网址<a href="https://next.itellyou.cn/">itellyou</a>.</p>
-<h2 id="重装系统教程">重装系统教程</h2>
-<p>将制作好的 Ventoy 启动盘插入电脑，然后重启计算机，按热键进入 BIOS Setup 模式，将其中的 SecureBoot 关闭；</p>
-<p>然后重新启动计算机，按热键进入 BIOS 界面，在 UEFI OPTIONS 中选择自己的 U 盘进行启动，启动后，选择自己想要安装的系统的镜像文件，一路回车即可。</p>
-<p>上述中所涉及到的热键，各型号的电脑互有差异，一般在重启界面会有提示按键，再不清楚的可以自行按照自己的电脑型号进行百度。</p>
+<table>
+<thead>
+<tr>
+<th>数据类型</th>
+<th>占用空间</th>
+<th>有效数字范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>float</td>
+<td>4 字节</td>
+<td>7 位有效数字</td>
+</tr>
+<tr>
+<td>double</td>
+<td>8 字节</td>
+<td>15 ~ 16位有效数字</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-wrap" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">   <span class="keyword">float</span> f1 = <span class="number">3.14f</span>;         <span class="comment">// (一般默认是双精度)</span></span><br><span class="line">   cout &lt;&lt; <span class="string">&quot;f1 = &quot;</span> &lt;&lt; f1 &lt;&lt; endl;</span><br><span class="line">   </span><br><span class="line">   <span class="keyword">double</span> d1 = <span class="number">3.1415926</span>;    <span class="comment">// (默认小数有效数字 6 位)</span></span><br><span class="line">   cout &lt;&lt; <span class="string">&quot;d1 = &quot;</span> &lt;&lt; d1 &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">   <span class="comment">// 统计 float 和 double 占用内存空间大小 4 和 8</span></span><br><span class="line">   cout &lt;&lt; <span class="string">&quot;float 占用内存空间为： &quot;</span> &lt;&lt; <span class="built_in"><span class="keyword">sizeof</span></span>(<span class="keyword">float</span>) &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">   cout &lt;&lt; <span class="string">&quot;double 占用内存空间为：&quot;</span> &lt;&lt; <span class="built_in"><span class="keyword">sizeof</span></span>(<span class="keyword">double</span>) &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">   <span class="comment">// 科学计数法表示小数</span></span><br><span class="line">   <span class="keyword">float</span> f2 = <span class="number">3e2</span>; <span class="comment">// 3 * 10^2</span></span><br><span class="line">   cout &lt;&lt; <span class="string">&quot;f2 = &quot;</span> &lt;&lt; f2 &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">   <span class="keyword">float</span> f3 = <span class="number">3e-2</span>; <span class="comment">//3 * 0.1^2</span></span><br><span class="line">   cout &lt;&lt; <span class="string">&quot;f3 = &quot;</span> &lt;&lt; f3 &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">   <span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">   <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<h2 id="字符型">字符型</h2>
+<p>作用：字符型变量用于显示单个字符</p>
+<p>语法：<code>char ch = 'a';</code></p>
+<p>注意：</p>
+<ul>
+<li>在显示字符型变量时，用单引号将字符括起来，不要用双引号</li>
+<li>单引号内只能有一个字符，不可以是字符串</li>
+</ul>
+<p>C 和 C++ 中字符型变量只占用一个字节。</p>
+<p>字符型变量并不是把字符本身放到内存中存储，而是将对应的 ASCII 编码放入到存储单元中。</p>
+<div class="highlight-wrap" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">char</span> ch = <span class="string">&#x27;a&#x27;</span>;</span><br><span class="line">    cout &lt;&lt; ch &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;char字符型变量所占内存：&quot;</span> &lt;&lt; <span class="built_in"><span class="keyword">sizeof</span></span>(<span class="keyword">char</span>) &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    cout &lt;&lt; (<span class="keyword">int</span>)ch &lt;&lt; endl;    <span class="comment">// a -&gt; 97  ;  A -&gt; 65</span></span><br><span class="line">    <span class="comment">// ch = &quot;abcde&quot;; 错误，不可以用双引号</span></span><br><span class="line">    <span class="comment">// ch = &#x27;abcde&#x27;; 错误，单引号内只能有一个字符</span></span><br><span class="line">    <span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<h2 id="转义字符">转义字符</h2>
+<p>作用：用于表示一些不能显示出来的 ASCII 字符。</p>
+<p>现阶段我们常用的转移字符有：<code>\n  \\  \t</code></p>
+<table>
+<thead>
+<tr>
+<th>转义字符</th>
+<th>含义</th>
+<th>ASCII 码值(十进制)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>\a</td>
+<td>警报</td>
+<td>007</td>
+</tr>
+<tr>
+<td>\b</td>
+<td>退格(BS)，将当前位置移到前一列</td>
+<td>008</td>
+</tr>
+<tr>
+<td>\f</td>
+<td>换页(FF)，将当前位置移到下页开头</td>
+<td>012</td>
+</tr>
+<tr>
+<td>\n</td>
+<td>换行(LF)，将当前位置移到下一行开头</td>
+<td>010</td>
+</tr>
+<tr>
+<td>\r</td>
+<td>回车(CR)，将当前位置移到本行开头</td>
+<td>013</td>
+</tr>
+<tr>
+<td>\t</td>
+<td>水平制表(HT)，跳到下一个TAB位置</td>
+<td>009</td>
+</tr>
+<tr>
+<td>\v</td>
+<td>垂直制表(VT)</td>
+<td>011</td>
+</tr>
+<tr>
+<td>\\</td>
+<td>代表一个反斜线字符&quot;\\&quot;</td>
+<td>092</td>
+</tr>
+<tr>
+<td>\’</td>
+<td>代表一个单引号字符</td>
+<td>039</td>
+</tr>
+<tr>
+<td>\&quot;</td>
+<td>代表一个双引号字符</td>
+<td>034</td>
+</tr>
+<tr>
+<td>?</td>
+<td>代表一个问号</td>
+<td>063</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-wrap" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 转义字符</span></span><br><span class="line">    <span class="comment">// 换行符 \n</span></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;hello world\n&quot;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 反斜杠 \</span></span><br><span class="line"><span class="comment">    cout &lt;&lt; &quot;\\&quot; &lt;&lt; endl;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 水平制表符 \t(主要就是对齐的效果，整齐的输出后边的内容)</span></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;aaa\thello world&quot;</span> &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;aaaa\thello world&quot;</span> &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;aaaaa\thello world&quot;</span> &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<h2 id="字符串型">字符串型</h2>
+<p>作用：用于表示一串字符。</p>
+<p>两种风格：</p>
+<ul>
+<li>C 风格字符串：<code>char 变量名[] = &quot;字符串值&quot;</code></li>
+<li>C++ 风格字符串：<code>string 变量名 = &quot;字符串值&quot;</code></li>
+</ul>
+<div class="highlight-wrap" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span> <span class="comment">// 新版本不需要此头文件仍然可以正常运行</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// C 风格的字符串</span></span><br><span class="line">    <span class="comment">// 注意 1. char str1[]</span></span><br><span class="line">    <span class="comment">// 注意 2. 等号后面用双引号，包含起来字符串</span></span><br><span class="line">    <span class="keyword">char</span> str1[] = <span class="string">&quot;hello world&quot;</span>;</span><br><span class="line">    cout &lt;&lt; str1 &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// C++ 风格字符串</span></span><br><span class="line">    string str2 = <span class="string">&quot;hello world&quot;</span>;</span><br><span class="line">    cout &lt;&lt; str2 &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<h2 id="布尔类型bool">布尔类型bool</h2>
+<p>作用：布尔数据类型代表真或假的值。</p>
+<p>bool 类型只有两个值：</p>
+<ul>
+<li>true – 真(本质是1)</li>
+<li>false – 假(本质是0)</li>
+</ul>
+<p>bool 数据类型占1个字节大小。</p>
+<div class="highlight-wrap" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 1. 创建 bool 数据类型</span></span><br><span class="line">    <span class="keyword">bool</span> flag = <span class="literal">true</span>;</span><br><span class="line">    cout &lt;&lt; flag &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    flag = <span class="literal">false</span>;</span><br><span class="line">    cout &lt;&lt; flag &lt;&lt; endl;</span><br><span class="line">    <span class="comment">// 本质上 1代表真 0代表假</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 2. 查看 bool 类型所占的内存空间</span></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;size of bool = &quot;</span> &lt;&lt; <span class="built_in"><span class="keyword">sizeof</span></span>(flag) &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<h2 id="数据的输入">数据的输入</h2>
+<p>作用：用于从键盘获取数据。</p>
+<p>关键字：<code>cin</code></p>
+<p>语法：<code>cin &gt;&gt; 变量</code></p>
+<div class="highlight-wrap" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 1.整型</span></span><br><span class="line">    <span class="keyword">int</span> a = <span class="number">0</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;请给整型变量a赋值:&quot;</span> &lt;&lt; endl;</span><br><span class="line">    cin &gt;&gt; a;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;整型变量a = &quot;</span> &lt;&lt; a &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 2. 浮点型</span></span><br><span class="line">    <span class="keyword">float</span> f = <span class="number">3.14</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;请给浮点型变量f赋值：&quot;</span> &lt;&lt; endl;</span><br><span class="line">    cin &gt;&gt; f;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;浮点型变量f = &quot;</span> &lt;&lt; f &lt;&lt; endl;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 3.字符</span></span><br><span class="line">    <span class="keyword">char</span> ch = <span class="string">&#x27;a&#x27;</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;请给字符变量ch赋值：&quot;</span> &lt;&lt; endl;</span><br><span class="line">    cin &gt;&gt; ch;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;字符型变量ch = &quot;</span> &lt;&lt; ch &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 4.字符串型</span></span><br><span class="line">    string str = <span class="string">&quot;hello&quot;</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;请给字符串str赋值：&quot;</span> &lt;&lt; endl;</span><br><span class="line">    cin &gt;&gt; str;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;字符串型变量str = &quot;</span> &lt;&lt; str &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 5. 布尔类型</span></span><br><span class="line">    <span class="keyword">bool</span> flag = <span class="literal">false</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;请给布尔类型flag赋值：&quot;</span> &lt;&lt; endl;</span><br><span class="line">    cin &gt;&gt; flag;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;布尔类型flag = &quot;</span> &lt;&lt; flag &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> EXIT_SUCCESS;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
 ]]></content>
       <categories>
-        <category>软件</category>
+        <category>C++</category>
+        <category>学习笔记</category>
       </categories>
       <tags>
-        <tag>ventoy</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Materials Studio安装教程</title>
-    <url>/posts/1c974571/</url>
-    <content><![CDATA[<h1>Materials Studio安装教程</h1>
-<h2 id="软件安装包">软件安装包</h2>
-<p><a href="https://www.123pan.com/s/XHVA-IEQ5d">123云盘下载</a></p>
-<p>提取码z827`</p>
-<h2 id="修改-lic文件">修改.lic文件</h2>
-<ol>
-<li>
-<p>电脑桌面使用快捷键<code>Win+R</code>打开运行，输入<code>cmd</code>，回车。然后在命令行窗口输入<code>hostname</code>回车，出现计算机名，将其复制备用。</p>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">Microsoft Windows [版本 10.0.22000.376]</span><br><span class="line">(c) Microsoft Corporation。保留所有权利。</span><br><span class="line"></span><br><span class="line">C:\Users\dell&gt;hostname</span><br><span class="line">DESKTOP-XXXXXXX</span><br></pre></td></tr></table></figure></div>
-</li>
-<li>
-<p>找到<code>MS.zip</code>压缩包内的<code>msi2018.lic</code>文件，右键选择”写字板“打开，将第一行中的<code>DESKTOP-HVJ2DIM</code>替换为你刚才复制的自己的计算机名，保存后关闭文件。</p>
-</li>
-</ol>
-<span id="more"></span>
-<h2 id="安装MS软件">安装MS软件</h2>
-<p>将<code>MS.zip</code>压缩包内的<code>MaterialsStudio2018.rar</code>解压，然后进入解压后的<code>MaterialsStudio2018</code>文件夹，找到<code>setup.exe</code>文件，双击进行安装，安装位置选择默认即可，无需进行改动，直到安装结束显示Finsh，关闭即可。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/zyzhang827/filesimage@main/images/image-20220106142453557.png" alt=""><img src="https://cdn.jsdelivr.net/gh/zyzhang827/filesimage@main/images/image-20220106142527139.png" alt=""></p>
-<h2 id="lic文件复制">.lic文件复制</h2>
-<p>64位的 Windows 操作系统，将之前修改过的<code>msi2018.lic</code>文件复制到以下爱三个文件夹中.</p>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">C:\Program Files (x86)\BIOVIA\LicensePack\Licenses</span><br><span class="line">C:\Program Files (x86)\BIOVIA\LicensePack\share\data</span><br><span class="line">C:\Program Files (x86)\BIOVIA\LicensePack\win32\bin</span><br></pre></td></tr></table></figure></div>
-<h2 id="安装注册信息">安装注册信息</h2>
-<p>使用快捷键<code>Win+Q</code>打开系统搜索框，输入<code>License Administrator 2018</code>，然后选中右键”以管理员身份运行“。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/zyzhang827/filesimage@main/images/image-20220106143734050.png" alt=""></p>
-<p>打开左侧的<code>Install License</code>，点击右侧的<code>Browser</code>，找到<code>C:\Program Files (x86)\BIOVIA\LicensePack\Licenses</code>里的<code>msi2018.lic</code>文件，单击打开，然后点击<code>License Administrtor 2018</code>中下方的<code>Install</code>，出现<code>Checkout succeeded...</code>证明安装成功，可以使用<code>MS2018</code>软件了。</p>
-<h2 id="打开软件">打开软件</h2>
-<p>Windows开始菜单找到<code>Materials Studio 2018</code>打开软件即可。</p>
-]]></content>
-      <categories>
-        <category>Molecular Dynamics</category>
-        <category>Materials Studio</category>
-      </categories>
-      <tags>
-        <tag>MD</tag>
-        <tag>Materials Studio</tag>
+        <tag>C++</tag>
       </tags>
   </entry>
   <entry>
@@ -660,191 +845,6 @@
 </tbody>
 </table>
 <div class="highlight-wrap" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 逻辑 非    C++ 中除了 0 都为真</span></span><br><span class="line">    <span class="keyword">int</span> a = <span class="number">10</span>;</span><br><span class="line">    cout &lt;&lt; !a &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; !!a &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 逻辑 与</span></span><br><span class="line">    <span class="keyword">int</span> b = <span class="number">10</span>;</span><br><span class="line">    cout &lt;&lt; (a &amp;&amp; b) &lt;&lt; endl;</span><br><span class="line">    a = <span class="number">0</span>;</span><br><span class="line">    b = <span class="number">10</span>;</span><br><span class="line">    cout &lt;&lt; (a &amp;&amp; b) &lt;&lt; endl;</span><br><span class="line">    a = <span class="number">0</span>;</span><br><span class="line">    b = <span class="number">0</span>;</span><br><span class="line">    cout &lt;&lt; (a &amp;&amp; b) &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 逻辑 或</span></span><br><span class="line">    <span class="keyword">int</span> c = <span class="number">10</span>;</span><br><span class="line">    <span class="keyword">int</span> d = <span class="number">10</span>;</span><br><span class="line">    cout &lt;&lt; (c || d) &lt;&lt; endl;</span><br><span class="line">    c = <span class="number">0</span>;</span><br><span class="line">    d = <span class="number">10</span>;</span><br><span class="line">    cout &lt;&lt; (c || d) &lt;&lt; endl;</span><br><span class="line">    c = <span class="number">0</span>;</span><br><span class="line">    d = <span class="number">0</span>;</span><br><span class="line">    cout &lt;&lt; (c || d) &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
-]]></content>
-      <categories>
-        <category>C++</category>
-        <category>学习笔记</category>
-      </categories>
-      <tags>
-        <tag>C++</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>C++学习笔记(2)--数据类型</title>
-    <url>/posts/69e69c5/</url>
-    <content><![CDATA[<p>C++ 规定在创建一个变量或者常量的时候，必须要指定出相应的数据类型，否则无法给变量分配内存。</p>
-<h2 id="整型">整型</h2>
-<p>作用：整型变量表示的是<code>整数类型</code>的数据。</p>
-<p>C++ 中能够表示整型的类型有以下几种方式，区别在于所占的内存空间不同：</p>
-<span id="more"></span>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">数据类型</th>
-<th>占用空间</th>
-<th style="text-align:center">取值范围</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">short（短整型）</td>
-<td>2 字节</td>
-<td style="text-align:center">(-2^15 ~ 2^15 -1)</td>
-</tr>
-<tr>
-<td style="text-align:center">int（整型）</td>
-<td>4 字节</td>
-<td style="text-align:center">(-2^31 ~ 2^31 -1)</td>
-</tr>
-<tr>
-<td style="text-align:center">long（长整型）</td>
-<td>Windows/Linux(32位) 4 字节、Linux(64位) 8 字节</td>
-<td style="text-align:center">(-2^31 ~ 2^31 -1)</td>
-</tr>
-<tr>
-<td style="text-align:center">long long（长长整型）</td>
-<td>8 字节</td>
-<td style="text-align:center">(-2^63 ~ 2^63 -1)</td>
-</tr>
-</tbody>
-</table>
-<div class="highlight-wrap" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 短整型(-32768 ~ 32767)</span></span><br><span class="line">    <span class="keyword">short</span> num1 = <span class="number">10</span>;</span><br><span class="line">    <span class="comment">// 整型</span></span><br><span class="line">    <span class="keyword">int</span> num2 = <span class="number">10</span>;</span><br><span class="line">    <span class="comment">// 长整型</span></span><br><span class="line">    <span class="keyword">long</span> num3 = <span class="number">10</span>;</span><br><span class="line">    <span class="comment">// 长长整型</span></span><br><span class="line">    <span class="keyword">long</span> <span class="keyword">long</span> num4 = <span class="number">10</span>;</span><br><span class="line">    </span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;num1 = &quot;</span> &lt;&lt; num1 &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;num2 = &quot;</span> &lt;&lt; num2 &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;num3 = &quot;</span> &lt;&lt; num3 &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;num4 = &quot;</span> &lt;&lt; num4 &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
-<h2 id="sizeof关键字">sizeof关键字</h2>
-<p>作用：利用<code>sizeof</code>关键字统计数据类型所占内存的大小</p>
-<p>语法：<code>sizeof(数据类型 / 变量)</code></p>
-<div class="highlight-wrap" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 整型： short(2) int(4) long(4) long long(8)</span></span><br><span class="line">    <span class="comment">// 可以利用sizeof求出数据类型占用内存的大小</span></span><br><span class="line">    <span class="comment">// 语法： sizeof(数据类型 / 变量)    </span></span><br><span class="line">    <span class="keyword">short</span> num1 = <span class="number">10</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;short占用的内存空间为：&quot;</span> &lt;&lt; <span class="built_in"><span class="keyword">sizeof</span></span>(<span class="keyword">short</span>) &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;short占用的内存空间为：&quot;</span> &lt;&lt; <span class="built_in"><span class="keyword">sizeof</span></span>(num1) &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> num2 = <span class="number">10</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;int占用的内存空间为：&quot;</span> &lt;&lt; <span class="built_in"><span class="keyword">sizeof</span></span>(<span class="keyword">int</span>) &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;int占用的内存空间为：&quot;</span> &lt;&lt; <span class="built_in"><span class="keyword">sizeof</span></span>(<span class="keyword">int</span>) &lt;&lt; endl;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">long</span> num3 = <span class="number">10</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;long占用的内存空间为：&quot;</span> &lt;&lt; <span class="built_in"><span class="keyword">sizeof</span></span>(<span class="keyword">long</span>) &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;long占用的内存空间为：&quot;</span> &lt;&lt; <span class="built_in"><span class="keyword">sizeof</span></span>(<span class="keyword">long</span>) &lt;&lt; endl;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">long</span> <span class="keyword">long</span> num4 = <span class="number">10</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;long long占用的内存空间为：&quot;</span> &lt;&lt; <span class="built_in"><span class="keyword">sizeof</span></span>(<span class="keyword">long</span> <span class="keyword">long</span>) &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;long long占用的内存空间为：&quot;</span> &lt;&lt; <span class="built_in"><span class="keyword">sizeof</span></span>(<span class="keyword">long</span> <span class="keyword">long</span>) &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 整型大小比较</span></span><br><span class="line">    <span class="comment">// short &lt; int &lt;= long &lt;= long long</span></span><br><span class="line"></span><br><span class="line">    <span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
-<h2 id="实型（浮点型）">实型（浮点型）</h2>
-<p>作用：用于表示小数</p>
-<p>分为两种：</p>
-<ul>
-<li>单精度<code>float</code></li>
-<li>双精度<code>double</code></li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>数据类型</th>
-<th>占用空间</th>
-<th>有效数字范围</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>float</td>
-<td>4 字节</td>
-<td>7 位有效数字</td>
-</tr>
-<tr>
-<td>double</td>
-<td>8 字节</td>
-<td>15 ~ 16位有效数字</td>
-</tr>
-</tbody>
-</table>
-<div class="highlight-wrap" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">   <span class="keyword">float</span> f1 = <span class="number">3.14f</span>;         <span class="comment">// (一般默认是双精度)</span></span><br><span class="line">   cout &lt;&lt; <span class="string">&quot;f1 = &quot;</span> &lt;&lt; f1 &lt;&lt; endl;</span><br><span class="line">   </span><br><span class="line">   <span class="keyword">double</span> d1 = <span class="number">3.1415926</span>;    <span class="comment">// (默认小数有效数字 6 位)</span></span><br><span class="line">   cout &lt;&lt; <span class="string">&quot;d1 = &quot;</span> &lt;&lt; d1 &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">   <span class="comment">// 统计 float 和 double 占用内存空间大小 4 和 8</span></span><br><span class="line">   cout &lt;&lt; <span class="string">&quot;float 占用内存空间为： &quot;</span> &lt;&lt; <span class="built_in"><span class="keyword">sizeof</span></span>(<span class="keyword">float</span>) &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">   cout &lt;&lt; <span class="string">&quot;double 占用内存空间为：&quot;</span> &lt;&lt; <span class="built_in"><span class="keyword">sizeof</span></span>(<span class="keyword">double</span>) &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">   <span class="comment">// 科学计数法表示小数</span></span><br><span class="line">   <span class="keyword">float</span> f2 = <span class="number">3e2</span>; <span class="comment">// 3 * 10^2</span></span><br><span class="line">   cout &lt;&lt; <span class="string">&quot;f2 = &quot;</span> &lt;&lt; f2 &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">   <span class="keyword">float</span> f3 = <span class="number">3e-2</span>; <span class="comment">//3 * 0.1^2</span></span><br><span class="line">   cout &lt;&lt; <span class="string">&quot;f3 = &quot;</span> &lt;&lt; f3 &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">   <span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">   <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
-<h2 id="字符型">字符型</h2>
-<p>作用：字符型变量用于显示单个字符</p>
-<p>语法：<code>char ch = 'a';</code></p>
-<p>注意：</p>
-<ul>
-<li>在显示字符型变量时，用单引号将字符括起来，不要用双引号</li>
-<li>单引号内只能有一个字符，不可以是字符串</li>
-</ul>
-<p>C 和 C++ 中字符型变量只占用一个字节。</p>
-<p>字符型变量并不是把字符本身放到内存中存储，而是将对应的 ASCII 编码放入到存储单元中。</p>
-<div class="highlight-wrap" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">char</span> ch = <span class="string">&#x27;a&#x27;</span>;</span><br><span class="line">    cout &lt;&lt; ch &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;char字符型变量所占内存：&quot;</span> &lt;&lt; <span class="built_in"><span class="keyword">sizeof</span></span>(<span class="keyword">char</span>) &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    cout &lt;&lt; (<span class="keyword">int</span>)ch &lt;&lt; endl;    <span class="comment">// a -&gt; 97  ;  A -&gt; 65</span></span><br><span class="line">    <span class="comment">// ch = &quot;abcde&quot;; 错误，不可以用双引号</span></span><br><span class="line">    <span class="comment">// ch = &#x27;abcde&#x27;; 错误，单引号内只能有一个字符</span></span><br><span class="line">    <span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
-<h2 id="转义字符">转义字符</h2>
-<p>作用：用于表示一些不能显示出来的 ASCII 字符。</p>
-<p>现阶段我们常用的转移字符有：<code>\n  \\  \t</code></p>
-<table>
-<thead>
-<tr>
-<th>转义字符</th>
-<th>含义</th>
-<th>ASCII 码值(十进制)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>\a</td>
-<td>警报</td>
-<td>007</td>
-</tr>
-<tr>
-<td>\b</td>
-<td>退格(BS)，将当前位置移到前一列</td>
-<td>008</td>
-</tr>
-<tr>
-<td>\f</td>
-<td>换页(FF)，将当前位置移到下页开头</td>
-<td>012</td>
-</tr>
-<tr>
-<td>\n</td>
-<td>换行(LF)，将当前位置移到下一行开头</td>
-<td>010</td>
-</tr>
-<tr>
-<td>\r</td>
-<td>回车(CR)，将当前位置移到本行开头</td>
-<td>013</td>
-</tr>
-<tr>
-<td>\t</td>
-<td>水平制表(HT)，跳到下一个TAB位置</td>
-<td>009</td>
-</tr>
-<tr>
-<td>\v</td>
-<td>垂直制表(VT)</td>
-<td>011</td>
-</tr>
-<tr>
-<td>\\</td>
-<td>代表一个反斜线字符&quot;\\&quot;</td>
-<td>092</td>
-</tr>
-<tr>
-<td>\’</td>
-<td>代表一个单引号字符</td>
-<td>039</td>
-</tr>
-<tr>
-<td>\&quot;</td>
-<td>代表一个双引号字符</td>
-<td>034</td>
-</tr>
-<tr>
-<td>?</td>
-<td>代表一个问号</td>
-<td>063</td>
-</tr>
-</tbody>
-</table>
-<div class="highlight-wrap" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 转义字符</span></span><br><span class="line">    <span class="comment">// 换行符 \n</span></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;hello world\n&quot;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 反斜杠 \</span></span><br><span class="line"><span class="comment">    cout &lt;&lt; &quot;\\&quot; &lt;&lt; endl;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 水平制表符 \t(主要就是对齐的效果，整齐的输出后边的内容)</span></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;aaa\thello world&quot;</span> &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;aaaa\thello world&quot;</span> &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;aaaaa\thello world&quot;</span> &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
-<h2 id="字符串型">字符串型</h2>
-<p>作用：用于表示一串字符。</p>
-<p>两种风格：</p>
-<ul>
-<li>C 风格字符串：<code>char 变量名[] = &quot;字符串值&quot;</code></li>
-<li>C++ 风格字符串：<code>string 变量名 = &quot;字符串值&quot;</code></li>
-</ul>
-<div class="highlight-wrap" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span> <span class="comment">// 新版本不需要此头文件仍然可以正常运行</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// C 风格的字符串</span></span><br><span class="line">    <span class="comment">// 注意 1. char str1[]</span></span><br><span class="line">    <span class="comment">// 注意 2. 等号后面用双引号，包含起来字符串</span></span><br><span class="line">    <span class="keyword">char</span> str1[] = <span class="string">&quot;hello world&quot;</span>;</span><br><span class="line">    cout &lt;&lt; str1 &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// C++ 风格字符串</span></span><br><span class="line">    string str2 = <span class="string">&quot;hello world&quot;</span>;</span><br><span class="line">    cout &lt;&lt; str2 &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
-<h2 id="布尔类型bool">布尔类型bool</h2>
-<p>作用：布尔数据类型代表真或假的值。</p>
-<p>bool 类型只有两个值：</p>
-<ul>
-<li>true – 真(本质是1)</li>
-<li>false – 假(本质是0)</li>
-</ul>
-<p>bool 数据类型占1个字节大小。</p>
-<div class="highlight-wrap" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 1. 创建 bool 数据类型</span></span><br><span class="line">    <span class="keyword">bool</span> flag = <span class="literal">true</span>;</span><br><span class="line">    cout &lt;&lt; flag &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    flag = <span class="literal">false</span>;</span><br><span class="line">    cout &lt;&lt; flag &lt;&lt; endl;</span><br><span class="line">    <span class="comment">// 本质上 1代表真 0代表假</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 2. 查看 bool 类型所占的内存空间</span></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;size of bool = &quot;</span> &lt;&lt; <span class="built_in"><span class="keyword">sizeof</span></span>(flag) &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
-<h2 id="数据的输入">数据的输入</h2>
-<p>作用：用于从键盘获取数据。</p>
-<p>关键字：<code>cin</code></p>
-<p>语法：<code>cin &gt;&gt; 变量</code></p>
-<div class="highlight-wrap" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 1.整型</span></span><br><span class="line">    <span class="keyword">int</span> a = <span class="number">0</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;请给整型变量a赋值:&quot;</span> &lt;&lt; endl;</span><br><span class="line">    cin &gt;&gt; a;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;整型变量a = &quot;</span> &lt;&lt; a &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 2. 浮点型</span></span><br><span class="line">    <span class="keyword">float</span> f = <span class="number">3.14</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;请给浮点型变量f赋值：&quot;</span> &lt;&lt; endl;</span><br><span class="line">    cin &gt;&gt; f;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;浮点型变量f = &quot;</span> &lt;&lt; f &lt;&lt; endl;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 3.字符</span></span><br><span class="line">    <span class="keyword">char</span> ch = <span class="string">&#x27;a&#x27;</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;请给字符变量ch赋值：&quot;</span> &lt;&lt; endl;</span><br><span class="line">    cin &gt;&gt; ch;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;字符型变量ch = &quot;</span> &lt;&lt; ch &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 4.字符串型</span></span><br><span class="line">    string str = <span class="string">&quot;hello&quot;</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;请给字符串str赋值：&quot;</span> &lt;&lt; endl;</span><br><span class="line">    cin &gt;&gt; str;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;字符串型变量str = &quot;</span> &lt;&lt; str &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 5. 布尔类型</span></span><br><span class="line">    <span class="keyword">bool</span> flag = <span class="literal">false</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;请给布尔类型flag赋值：&quot;</span> &lt;&lt; endl;</span><br><span class="line">    cin &gt;&gt; flag;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;布尔类型flag = &quot;</span> &lt;&lt; flag &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> EXIT_SUCCESS;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
 ]]></content>
       <categories>
         <category>C++</category>
@@ -1372,8 +1372,8 @@
         <category>KMCLib</category>
       </categories>
       <tags>
-        <tag>C++</tag>
         <tag>MD</tag>
+        <tag>C++</tag>
         <tag>KMCLib</tag>
         <tag>Python</tag>
       </tags>
@@ -2629,54 +2629,6 @@ $$</p>
       </tags>
   </entry>
   <entry>
-    <title>Python 学习笔记(4)--运算符</title>
-    <url>/posts/7699b75/</url>
-    <content><![CDATA[<h2 id="1-Python的输入函数input">1. Python的输入函数input()</h2>
-<p><code>input()</code>函数的基本使用：<code>present=input('大圣想要什么礼物呢？')</code></p>
-<p>其中<code>present</code>是变量，<code>=</code>是赋值运算符，将输入函数的结果赋值给变量<code>present</code>，<code>input</code>函数是一个输入函数，需要输入回答。</p>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 输入函数input</span></span><br><span class="line">present = <span class="built_in">input</span>(<span class="string">&#x27;大圣想要什么礼物呢？&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(present,<span class="built_in">type</span>(present))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 要求从键盘录入两个整数，计算两个整数的和</span></span><br><span class="line">a = <span class="built_in">input</span>(<span class="string">&#x27;请输入一个加数：&#x27;</span>)</span><br><span class="line">a = <span class="built_in">int</span>(a)</span><br><span class="line">b = <span class="built_in">input</span>(<span class="string">&#x27;请输入另一个加数：&#x27;</span>)</span><br><span class="line">b = <span class="built_in">int</span>(b)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(a),<span class="built_in">type</span>(b))</span><br><span class="line"><span class="built_in">print</span>(a+b)   				<span class="comment"># 对str类型的两个量进行连接,对int类型的两个量进行计算</span></span><br></pre></td></tr></table></figure></div>
-<span id="more"></span>
-<h2 id="2-Python中的运算符">2. Python中的运算符</h2>
-<p>算术运算符（标准算术运算符，取余运算符，幂运算符）</p>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="number">1</span>+<span class="number">1</span>)     <span class="comment"># 加法运算</span></span><br><span class="line"><span class="built_in">print</span>(<span class="number">1</span>-<span class="number">1</span>)     <span class="comment"># 减法运算</span></span><br><span class="line"><span class="built_in">print</span>(<span class="number">2</span>*<span class="number">4</span>)     <span class="comment"># 乘法运算</span></span><br><span class="line"><span class="built_in">print</span>(<span class="number">11</span>/<span class="number">2</span>)    <span class="comment"># 除法运算</span></span><br><span class="line"><span class="built_in">print</span>(<span class="number">11</span>//<span class="number">2</span>)   <span class="comment"># 整除运算</span></span><br><span class="line"><span class="built_in">print</span>(<span class="number">11</span>%<span class="number">2</span>)    <span class="comment"># 取余运算</span></span><br><span class="line"><span class="built_in">print</span>(<span class="number">2</span>*<span class="number">3</span>)    <span class="comment"># 幂运算，2的3次方</span></span><br><span class="line"><span class="comment"># 一正一负整除运算  向下取整</span></span><br><span class="line"><span class="built_in">print</span>(<span class="number">9</span>//<span class="number">4</span>)     <span class="comment">#2</span></span><br><span class="line"><span class="built_in">print</span>(-<span class="number">9</span>//-<span class="number">4</span>)   <span class="comment">#2</span></span><br><span class="line"><span class="built_in">print</span>(<span class="number">9</span>//-<span class="number">4</span>)    <span class="comment">#-3</span></span><br><span class="line"><span class="built_in">print</span>(-<span class="number">9</span>//<span class="number">4</span>)    <span class="comment">#-3</span></span><br><span class="line"><span class="comment"># 一正一负取余运算  公式:余数=被除数-除数*商</span></span><br><span class="line"><span class="built_in">print</span>(<span class="number">9</span>%-<span class="number">4</span>)     <span class="comment"># 9-(-4)*(-3)=-3</span></span><br><span class="line"><span class="built_in">print</span>(-<span class="number">9</span>%<span class="number">4</span>)     <span class="comment"># -9-4*(-3)=3</span></span><br></pre></td></tr></table></figure></div>
-<p>赋值运算符<code>=</code></p>
-<ul>
-<li>执行顺序：从右到左</li>
-<li>支持链式赋值，<code>a = b = c = 20</code></li>
-<li>支持参数赋值， <code>+=</code> <code>-=</code> <code>*=</code> <code>/=</code> <code>//=</code> <code>%=</code></li>
-<li>支持系列解包赋值，<code>a,b,c = 20,30,40</code></li>
-</ul>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 赋值运算符</span></span><br><span class="line">i = <span class="number">3</span>+<span class="number">4</span></span><br><span class="line"><span class="built_in">print</span>(i)  				<span class="comment"># 运算顺序从右到左</span></span><br><span class="line">a = b = c = <span class="number">20</span> 			<span class="comment"># 链式赋值</span></span><br><span class="line"><span class="built_in">print</span>(a,<span class="built_in">id</span>(a))</span><br><span class="line"><span class="built_in">print</span>(b,<span class="built_in">id</span>(b))</span><br><span class="line"><span class="built_in">print</span>(c,<span class="built_in">id</span>(c))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;---支持参数赋值---&#x27;</span>)</span><br><span class="line">a = <span class="number">20</span></span><br><span class="line">a += <span class="number">30</span>  				<span class="comment"># 相当于a=a+30</span></span><br><span class="line"><span class="built_in">print</span>(a)</span><br><span class="line">a -= <span class="number">10</span></span><br><span class="line"><span class="built_in">print</span>(a)</span><br><span class="line">a *= <span class="number">2</span></span><br><span class="line"><span class="built_in">print</span>(a)   				<span class="comment"># int类型</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(a))</span><br><span class="line">a /= <span class="number">3</span></span><br><span class="line"><span class="built_in">print</span>(a)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(a))  		<span class="comment"># float</span></span><br><span class="line">a //= <span class="number">2</span></span><br><span class="line"><span class="built_in">print</span>(a)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(a))</span><br><span class="line">a %= <span class="number">3</span></span><br><span class="line"><span class="built_in">print</span>(a)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;---解包赋值---&#x27;</span>)</span><br><span class="line">a,b,c = <span class="number">20</span>,<span class="number">30</span>,<span class="number">40</span></span><br><span class="line"><span class="built_in">print</span>(a,b,c)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;---交换两个变量的值---&#x27;</span><span class="string">&#x27;)</span></span><br><span class="line"><span class="string">a,b = 10,20</span></span><br><span class="line"><span class="string">print(&#x27;</span>交换之前：<span class="string">&#x27;,a,b)</span></span><br><span class="line"><span class="string">a,b = b,a #交换</span></span><br><span class="line"><span class="string">print(&#x27;</span>交换之后：<span class="string">&#x27;,a,b)</span></span><br></pre></td></tr></table></figure></div>
-<h2 id="3-比较运算符">3. 比较运算符</h2>
-<p><em>比较运算符</em>对变量或表达式的结果进行大小、真假等比较。</p>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">a,b = <span class="number">10</span>,<span class="number">20</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;a&gt;b吗？&#x27;</span>,a&gt;b)   			<span class="comment"># False</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;a&lt;b吗？&#x27;</span>,a&lt;b)   			<span class="comment"># True</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;a&lt;=b吗？&#x27;</span>,a&lt;=b)  			<span class="comment"># True</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;a&gt;=b吗？&#x27;</span>,a&gt;=b)  			<span class="comment"># False</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;a==b吗？&#x27;</span>,a==b)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;a!=b吗？&#x27;</span>,a!=b)</span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;一个 = 称为赋值运算符， == 称为比较运算符</span></span><br><span class="line"><span class="string">  一个变量由三部分组成，标识(id)，类型(type)，值(value)</span></span><br><span class="line"><span class="string">  == 比较的是值还是标识呢？  答案是比较的是值</span></span><br><span class="line"><span class="string">  比较对象的标识使用 is</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line">a = <span class="number">10</span></span><br><span class="line">b = <span class="number">10</span></span><br><span class="line"><span class="built_in">print</span>(a==b)   					<span class="comment"># True  说明a与b的value相等</span></span><br><span class="line"><span class="built_in">print</span>(a <span class="keyword">is</span> b) 					<span class="comment"># True  说明a与b的id标识相等</span></span><br><span class="line"></span><br><span class="line">lst1=[<span class="number">11</span>,<span class="number">22</span>,<span class="number">33</span>,<span class="number">44</span>]</span><br><span class="line">lst2=[<span class="number">11</span>,<span class="number">22</span>,<span class="number">33</span>,<span class="number">44</span>]</span><br><span class="line"><span class="built_in">print</span>(lst1 == lst2) 			<span class="comment"># value   --True</span></span><br><span class="line"><span class="built_in">print</span>(lst1 <span class="keyword">is</span> lst2)  			<span class="comment"># id      --False</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">id</span>(lst1))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">id</span>(lst2))</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(a <span class="keyword">is</span> <span class="keyword">not</span> b)        		<span class="comment"># False</span></span><br><span class="line"><span class="built_in">print</span>(lst1 <span class="keyword">is</span> <span class="keyword">not</span> lst2)  		<span class="comment"># True</span></span><br></pre></td></tr></table></figure></div>
-<h2 id="4-布尔运算符">4. 布尔运算符</h2>
-<p><em>布尔运算符</em>对于布尔值之间的运算。<code>and</code>,<code>or</code>,<code>not</code>,<code>in</code>,<code>not in</code></p>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 布尔运算符</span></span><br><span class="line">a,b = <span class="number">1</span>,<span class="number">2</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;----and----&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(a==<span class="number">1</span> <span class="keyword">and</span> b==<span class="number">2</span>)  				<span class="comment"># True and True  --&gt;True</span></span><br><span class="line"><span class="built_in">print</span>(a==<span class="number">1</span> <span class="keyword">and</span> b&lt;<span class="number">2</span>)   				<span class="comment"># True and False  --&gt;False</span></span><br><span class="line"><span class="built_in">print</span>(a!=<span class="number">1</span> <span class="keyword">and</span> b==<span class="number">2</span>)  				<span class="comment"># False and True  --&gt;False</span></span><br><span class="line"><span class="built_in">print</span>(a!=<span class="number">1</span> <span class="keyword">and</span> b!=<span class="number">2</span>)  				<span class="comment"># False and False --&gt;False</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;----or----&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(a==<span class="number">1</span> <span class="keyword">or</span> b==<span class="number">2</span>)</span><br><span class="line"><span class="built_in">print</span>(a==<span class="number">1</span> <span class="keyword">or</span> b&lt;<span class="number">2</span>)</span><br><span class="line"><span class="built_in">print</span>(a!=<span class="number">1</span> <span class="keyword">or</span> b==<span class="number">2</span>)</span><br><span class="line"><span class="built_in">print</span>(a!=<span class="number">1</span> <span class="keyword">or</span> b!=<span class="number">2</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;----not-----&#x27;</span>)</span><br><span class="line">f = <span class="literal">True</span></span><br><span class="line">f2 = <span class="literal">False</span></span><br><span class="line"><span class="built_in">print</span>(<span class="keyword">not</span> f)</span><br><span class="line"><span class="built_in">print</span>(<span class="keyword">not</span> f2)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;----in与not in------&#x27;</span>)</span><br><span class="line">s = <span class="string">&#x27;helloworld&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;w&#x27;</span> <span class="keyword">in</span> s)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;k&#x27;</span> <span class="keyword">in</span> s)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;w&#x27;</span> <span class="keyword">not</span> <span class="keyword">in</span> s)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;k&#x27;</span> <span class="keyword">not</span> <span class="keyword">in</span> s)</span><br></pre></td></tr></table></figure></div>
-<h2 id="5-位运算符">5. 位运算符</h2>
-<p><em>位运算符</em>将数据转换成二进制进行计算。</p>
-<ul>
-<li>位与<code>&amp;</code>：对应数位都是1，结果数位才是1，否则为0</li>
-<li>位或<code>|</code>：对应数位都是0，结果数位才是0，否则为1</li>
-<li>左移位<code>&lt;&lt;</code>：高位溢出舍弃，低位补0</li>
-<li>右移位<code>&gt;&gt;</code>：低位溢出舍弃，高位补0</li>
-</ul>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="number">4</span> &amp; <span class="number">8</span>)  				<span class="comment"># 按位与</span></span><br><span class="line"><span class="built_in">print</span>(<span class="number">4</span> | <span class="number">8</span>)  				<span class="comment"># 按位或</span></span><br><span class="line"><span class="built_in">print</span>(<span class="number">4</span> &lt;&lt; <span class="number">1</span>) 				<span class="comment"># 向左移动1位置</span></span><br><span class="line"><span class="built_in">print</span>(<span class="number">4</span> &lt;&lt; <span class="number">2</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="number">4</span> &gt;&gt; <span class="number">1</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="number">4</span> &gt;&gt; <span class="number">2</span>)</span><br></pre></td></tr></table></figure></div>
-<h2 id="6-Python中的运算符优先级">6. Python中的运算符优先级</h2>
-<p><code>*</code> <code>*,/,//,%</code> <code>+,-</code> <code>&lt;&lt;,&gt;&gt;</code> <code>&amp;</code> <code>|</code> <code>&gt;,&lt;,&gt;=,&lt;=,==,!=</code> <code>and</code> <code>or</code> <code>=</code></p>
-<blockquote>
-<p>算术 → 位 → 比较（True False）→ 布尔 → 赋值=</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Python</category>
-        <category>基础语法</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Python 学习笔记(5)--结构</title>
     <url>/posts/bbce055/</url>
     <content><![CDATA[<h2 id="1-程序的组织结构">1. 程序的组织结构</h2>
@@ -2719,6 +2671,54 @@ $$</p>
 <h2 id="5-pass空语句">5. pass空语句</h2>
 <p>语句什么都不做，只是一个占位符，用在语法上需要语句的地方。</p>
 <div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#pass语句</span></span><br><span class="line">answer = <span class="built_in">input</span>(‘您是会员吗？y/n’)</span><br><span class="line"><span class="keyword">if</span> answer == <span class="string">&#x27;y&#x27;</span>:</span><br><span class="line">  <span class="keyword">pass</span></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">  <span class="keyword">pass</span></span><br></pre></td></tr></table></figure></div>
+]]></content>
+      <categories>
+        <category>Python</category>
+        <category>基础语法</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python 学习笔记(4)--运算符</title>
+    <url>/posts/7699b75/</url>
+    <content><![CDATA[<h2 id="1-Python的输入函数input">1. Python的输入函数input()</h2>
+<p><code>input()</code>函数的基本使用：<code>present=input('大圣想要什么礼物呢？')</code></p>
+<p>其中<code>present</code>是变量，<code>=</code>是赋值运算符，将输入函数的结果赋值给变量<code>present</code>，<code>input</code>函数是一个输入函数，需要输入回答。</p>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 输入函数input</span></span><br><span class="line">present = <span class="built_in">input</span>(<span class="string">&#x27;大圣想要什么礼物呢？&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(present,<span class="built_in">type</span>(present))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 要求从键盘录入两个整数，计算两个整数的和</span></span><br><span class="line">a = <span class="built_in">input</span>(<span class="string">&#x27;请输入一个加数：&#x27;</span>)</span><br><span class="line">a = <span class="built_in">int</span>(a)</span><br><span class="line">b = <span class="built_in">input</span>(<span class="string">&#x27;请输入另一个加数：&#x27;</span>)</span><br><span class="line">b = <span class="built_in">int</span>(b)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(a),<span class="built_in">type</span>(b))</span><br><span class="line"><span class="built_in">print</span>(a+b)   				<span class="comment"># 对str类型的两个量进行连接,对int类型的两个量进行计算</span></span><br></pre></td></tr></table></figure></div>
+<span id="more"></span>
+<h2 id="2-Python中的运算符">2. Python中的运算符</h2>
+<p>算术运算符（标准算术运算符，取余运算符，幂运算符）</p>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="number">1</span>+<span class="number">1</span>)     <span class="comment"># 加法运算</span></span><br><span class="line"><span class="built_in">print</span>(<span class="number">1</span>-<span class="number">1</span>)     <span class="comment"># 减法运算</span></span><br><span class="line"><span class="built_in">print</span>(<span class="number">2</span>*<span class="number">4</span>)     <span class="comment"># 乘法运算</span></span><br><span class="line"><span class="built_in">print</span>(<span class="number">11</span>/<span class="number">2</span>)    <span class="comment"># 除法运算</span></span><br><span class="line"><span class="built_in">print</span>(<span class="number">11</span>//<span class="number">2</span>)   <span class="comment"># 整除运算</span></span><br><span class="line"><span class="built_in">print</span>(<span class="number">11</span>%<span class="number">2</span>)    <span class="comment"># 取余运算</span></span><br><span class="line"><span class="built_in">print</span>(<span class="number">2</span>*<span class="number">3</span>)    <span class="comment"># 幂运算，2的3次方</span></span><br><span class="line"><span class="comment"># 一正一负整除运算  向下取整</span></span><br><span class="line"><span class="built_in">print</span>(<span class="number">9</span>//<span class="number">4</span>)     <span class="comment">#2</span></span><br><span class="line"><span class="built_in">print</span>(-<span class="number">9</span>//-<span class="number">4</span>)   <span class="comment">#2</span></span><br><span class="line"><span class="built_in">print</span>(<span class="number">9</span>//-<span class="number">4</span>)    <span class="comment">#-3</span></span><br><span class="line"><span class="built_in">print</span>(-<span class="number">9</span>//<span class="number">4</span>)    <span class="comment">#-3</span></span><br><span class="line"><span class="comment"># 一正一负取余运算  公式:余数=被除数-除数*商</span></span><br><span class="line"><span class="built_in">print</span>(<span class="number">9</span>%-<span class="number">4</span>)     <span class="comment"># 9-(-4)*(-3)=-3</span></span><br><span class="line"><span class="built_in">print</span>(-<span class="number">9</span>%<span class="number">4</span>)     <span class="comment"># -9-4*(-3)=3</span></span><br></pre></td></tr></table></figure></div>
+<p>赋值运算符<code>=</code></p>
+<ul>
+<li>执行顺序：从右到左</li>
+<li>支持链式赋值，<code>a = b = c = 20</code></li>
+<li>支持参数赋值， <code>+=</code> <code>-=</code> <code>*=</code> <code>/=</code> <code>//=</code> <code>%=</code></li>
+<li>支持系列解包赋值，<code>a,b,c = 20,30,40</code></li>
+</ul>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 赋值运算符</span></span><br><span class="line">i = <span class="number">3</span>+<span class="number">4</span></span><br><span class="line"><span class="built_in">print</span>(i)  				<span class="comment"># 运算顺序从右到左</span></span><br><span class="line">a = b = c = <span class="number">20</span> 			<span class="comment"># 链式赋值</span></span><br><span class="line"><span class="built_in">print</span>(a,<span class="built_in">id</span>(a))</span><br><span class="line"><span class="built_in">print</span>(b,<span class="built_in">id</span>(b))</span><br><span class="line"><span class="built_in">print</span>(c,<span class="built_in">id</span>(c))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;---支持参数赋值---&#x27;</span>)</span><br><span class="line">a = <span class="number">20</span></span><br><span class="line">a += <span class="number">30</span>  				<span class="comment"># 相当于a=a+30</span></span><br><span class="line"><span class="built_in">print</span>(a)</span><br><span class="line">a -= <span class="number">10</span></span><br><span class="line"><span class="built_in">print</span>(a)</span><br><span class="line">a *= <span class="number">2</span></span><br><span class="line"><span class="built_in">print</span>(a)   				<span class="comment"># int类型</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(a))</span><br><span class="line">a /= <span class="number">3</span></span><br><span class="line"><span class="built_in">print</span>(a)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(a))  		<span class="comment"># float</span></span><br><span class="line">a //= <span class="number">2</span></span><br><span class="line"><span class="built_in">print</span>(a)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(a))</span><br><span class="line">a %= <span class="number">3</span></span><br><span class="line"><span class="built_in">print</span>(a)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;---解包赋值---&#x27;</span>)</span><br><span class="line">a,b,c = <span class="number">20</span>,<span class="number">30</span>,<span class="number">40</span></span><br><span class="line"><span class="built_in">print</span>(a,b,c)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;---交换两个变量的值---&#x27;</span><span class="string">&#x27;)</span></span><br><span class="line"><span class="string">a,b = 10,20</span></span><br><span class="line"><span class="string">print(&#x27;</span>交换之前：<span class="string">&#x27;,a,b)</span></span><br><span class="line"><span class="string">a,b = b,a #交换</span></span><br><span class="line"><span class="string">print(&#x27;</span>交换之后：<span class="string">&#x27;,a,b)</span></span><br></pre></td></tr></table></figure></div>
+<h2 id="3-比较运算符">3. 比较运算符</h2>
+<p><em>比较运算符</em>对变量或表达式的结果进行大小、真假等比较。</p>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">a,b = <span class="number">10</span>,<span class="number">20</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;a&gt;b吗？&#x27;</span>,a&gt;b)   			<span class="comment"># False</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;a&lt;b吗？&#x27;</span>,a&lt;b)   			<span class="comment"># True</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;a&lt;=b吗？&#x27;</span>,a&lt;=b)  			<span class="comment"># True</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;a&gt;=b吗？&#x27;</span>,a&gt;=b)  			<span class="comment"># False</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;a==b吗？&#x27;</span>,a==b)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;a!=b吗？&#x27;</span>,a!=b)</span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;一个 = 称为赋值运算符， == 称为比较运算符</span></span><br><span class="line"><span class="string">  一个变量由三部分组成，标识(id)，类型(type)，值(value)</span></span><br><span class="line"><span class="string">  == 比较的是值还是标识呢？  答案是比较的是值</span></span><br><span class="line"><span class="string">  比较对象的标识使用 is</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line">a = <span class="number">10</span></span><br><span class="line">b = <span class="number">10</span></span><br><span class="line"><span class="built_in">print</span>(a==b)   					<span class="comment"># True  说明a与b的value相等</span></span><br><span class="line"><span class="built_in">print</span>(a <span class="keyword">is</span> b) 					<span class="comment"># True  说明a与b的id标识相等</span></span><br><span class="line"></span><br><span class="line">lst1=[<span class="number">11</span>,<span class="number">22</span>,<span class="number">33</span>,<span class="number">44</span>]</span><br><span class="line">lst2=[<span class="number">11</span>,<span class="number">22</span>,<span class="number">33</span>,<span class="number">44</span>]</span><br><span class="line"><span class="built_in">print</span>(lst1 == lst2) 			<span class="comment"># value   --True</span></span><br><span class="line"><span class="built_in">print</span>(lst1 <span class="keyword">is</span> lst2)  			<span class="comment"># id      --False</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">id</span>(lst1))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">id</span>(lst2))</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(a <span class="keyword">is</span> <span class="keyword">not</span> b)        		<span class="comment"># False</span></span><br><span class="line"><span class="built_in">print</span>(lst1 <span class="keyword">is</span> <span class="keyword">not</span> lst2)  		<span class="comment"># True</span></span><br></pre></td></tr></table></figure></div>
+<h2 id="4-布尔运算符">4. 布尔运算符</h2>
+<p><em>布尔运算符</em>对于布尔值之间的运算。<code>and</code>,<code>or</code>,<code>not</code>,<code>in</code>,<code>not in</code></p>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 布尔运算符</span></span><br><span class="line">a,b = <span class="number">1</span>,<span class="number">2</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;----and----&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(a==<span class="number">1</span> <span class="keyword">and</span> b==<span class="number">2</span>)  				<span class="comment"># True and True  --&gt;True</span></span><br><span class="line"><span class="built_in">print</span>(a==<span class="number">1</span> <span class="keyword">and</span> b&lt;<span class="number">2</span>)   				<span class="comment"># True and False  --&gt;False</span></span><br><span class="line"><span class="built_in">print</span>(a!=<span class="number">1</span> <span class="keyword">and</span> b==<span class="number">2</span>)  				<span class="comment"># False and True  --&gt;False</span></span><br><span class="line"><span class="built_in">print</span>(a!=<span class="number">1</span> <span class="keyword">and</span> b!=<span class="number">2</span>)  				<span class="comment"># False and False --&gt;False</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;----or----&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(a==<span class="number">1</span> <span class="keyword">or</span> b==<span class="number">2</span>)</span><br><span class="line"><span class="built_in">print</span>(a==<span class="number">1</span> <span class="keyword">or</span> b&lt;<span class="number">2</span>)</span><br><span class="line"><span class="built_in">print</span>(a!=<span class="number">1</span> <span class="keyword">or</span> b==<span class="number">2</span>)</span><br><span class="line"><span class="built_in">print</span>(a!=<span class="number">1</span> <span class="keyword">or</span> b!=<span class="number">2</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;----not-----&#x27;</span>)</span><br><span class="line">f = <span class="literal">True</span></span><br><span class="line">f2 = <span class="literal">False</span></span><br><span class="line"><span class="built_in">print</span>(<span class="keyword">not</span> f)</span><br><span class="line"><span class="built_in">print</span>(<span class="keyword">not</span> f2)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;----in与not in------&#x27;</span>)</span><br><span class="line">s = <span class="string">&#x27;helloworld&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;w&#x27;</span> <span class="keyword">in</span> s)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;k&#x27;</span> <span class="keyword">in</span> s)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;w&#x27;</span> <span class="keyword">not</span> <span class="keyword">in</span> s)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;k&#x27;</span> <span class="keyword">not</span> <span class="keyword">in</span> s)</span><br></pre></td></tr></table></figure></div>
+<h2 id="5-位运算符">5. 位运算符</h2>
+<p><em>位运算符</em>将数据转换成二进制进行计算。</p>
+<ul>
+<li>位与<code>&amp;</code>：对应数位都是1，结果数位才是1，否则为0</li>
+<li>位或<code>|</code>：对应数位都是0，结果数位才是0，否则为1</li>
+<li>左移位<code>&lt;&lt;</code>：高位溢出舍弃，低位补0</li>
+<li>右移位<code>&gt;&gt;</code>：低位溢出舍弃，高位补0</li>
+</ul>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="number">4</span> &amp; <span class="number">8</span>)  				<span class="comment"># 按位与</span></span><br><span class="line"><span class="built_in">print</span>(<span class="number">4</span> | <span class="number">8</span>)  				<span class="comment"># 按位或</span></span><br><span class="line"><span class="built_in">print</span>(<span class="number">4</span> &lt;&lt; <span class="number">1</span>) 				<span class="comment"># 向左移动1位置</span></span><br><span class="line"><span class="built_in">print</span>(<span class="number">4</span> &lt;&lt; <span class="number">2</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="number">4</span> &gt;&gt; <span class="number">1</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="number">4</span> &gt;&gt; <span class="number">2</span>)</span><br></pre></td></tr></table></figure></div>
+<h2 id="6-Python中的运算符优先级">6. Python中的运算符优先级</h2>
+<p><code>*</code> <code>*,/,//,%</code> <code>+,-</code> <code>&lt;&lt;,&gt;&gt;</code> <code>&amp;</code> <code>|</code> <code>&gt;,&lt;,&gt;=,&lt;=,==,!=</code> <code>and</code> <code>or</code> <code>=</code></p>
+<blockquote>
+<p>算术 → 位 → 比较（True False）→ 布尔 → 赋值=</p>
+</blockquote>
 ]]></content>
       <categories>
         <category>Python</category>
@@ -3028,6 +3028,253 @@ range 类型的优点：不管 range 对象表示的整数序列有多长，所�
       </tags>
   </entry>
   <entry>
+    <title>爬虫学习笔记(2)--requests 模块基础</title>
+    <url>/posts/9058b1e5/</url>
+    <content><![CDATA[<h2 id="1-requests-第一血">1. requests 第一血</h2>
+<p>requests 模块：Python 中原生的一款基于网络请求的模块，功能非常强大，简单便捷，效率极高。</p>
+<p>作用：模拟浏览器发请求。</p>
+<p>如何使用：（requests 模块的编码流程）</p>
+<ul>
+<li>指定 url</li>
+<li>发起请求</li>
+<li>获取响应数据</li>
+<li>持久化存储</li>
+</ul>
+<span id="more"></span>
+<p>环境的安装：<code>pip install requests</code></p>
+<p>实战编码：</p>
+<ul>
+<li>需求：爬取搜狗首页的数据</li>
+</ul>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    <span class="comment"># step1 指定url</span></span><br><span class="line">    url = <span class="string">&#x27;https://www.sogou.com/&#x27;</span></span><br><span class="line">    <span class="comment"># step2 发起请求</span></span><br><span class="line">    <span class="comment"># get方法会返回一个响应对象</span></span><br><span class="line">    response = requests.get(url = url)</span><br><span class="line">    <span class="comment"># step3 获取响应数据，text返回的是字符串形式的响应数据</span></span><br><span class="line">    page_text = response.text</span><br><span class="line">    <span class="built_in">print</span>(page_text)</span><br><span class="line">    <span class="comment"># step4 持久化存储</span></span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;./sogou.html&#x27;</span>,<span class="string">&#x27;w&#x27;</span>,encoding = <span class="string">&#x27;utf-8&#x27;</span>) <span class="keyword">as</span> fp:</span><br><span class="line">        fp.write(page_text)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;爬取数据结束！&#x27;</span>)</span><br></pre></td></tr></table></figure></div>
+<h2 id="2-requests-巩固深入案例介绍">2. requests 巩固深入案例介绍</h2>
+<h3 id="（1）简易网页采集器">（1）简易网页采集器</h3>
+<ul>
+<li>UA 检测</li>
+<li>UA 伪装</li>
+</ul>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># UA：User-Agent请求载体的身份标识</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;UA检测：门户网站的服务器会监测对应请求的载体身份标识，</span></span><br><span class="line"><span class="string">如果检测到请求载体身份标识是某一款浏览器,说明该请求时一个正常的请求；</span></span><br><span class="line"><span class="string">但是，如果检测到请求的载体身份不是基于某一款浏览器的，则表示该请求为不正常请求（爬虫）,</span></span><br><span class="line"><span class="string">则服务器很有可能拒绝该次请求&#x27;&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># UA伪装：让爬虫对应的请求载体身份标识伪装成某一款浏览器，躲过UA检测</span></span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    <span class="comment"># UA伪装：将对应的User-Agent封装到一个字典中</span></span><br><span class="line">    headers = &#123;</span><br><span class="line">    <span class="string">&#x27;User-Agent&#x27;</span>:<span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment"># step1 指定url query</span></span><br><span class="line">    url = <span class="string">&#x27;https://www.sogou.com/web&#x27;</span></span><br><span class="line">    <span class="comment"># 处理url携带的参数 封装到字典中</span></span><br><span class="line">    kw = <span class="built_in">input</span>(<span class="string">&#x27;Enter a word:&#x27;</span>)</span><br><span class="line">    param =&#123;</span><br><span class="line">        <span class="string">&#x27;query&#x27;</span>:kw</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment"># step2 对指定的url发起请求，对应的url是携带参数的，并且处理过程中处理了参数</span></span><br><span class="line">    response = requests.get(url = url,params = param,headers = headers)</span><br><span class="line">    <span class="comment"># step3</span></span><br><span class="line">    page_text = response.text</span><br><span class="line">    <span class="comment"># step4</span></span><br><span class="line">    fileName = kw + <span class="string">&#x27;.html&#x27;</span></span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(fileName,<span class="string">&#x27;w&#x27;</span>,encoding =<span class="string">&#x27;utf-8&#x27;</span>) <span class="keyword">as</span> fp:</span><br><span class="line">        fp.write(page_text)</span><br><span class="line">    <span class="built_in">print</span>(fileName,<span class="string">&#x27;保存成功！！&#x27;</span>)</span><br></pre></td></tr></table></figure></div>
+<h3 id="（2）破解百度翻译">（2）破解百度翻译</h3>
+<ul>
+<li>post 请求（携带了参数）</li>
+<li>响应数据是一组 json 数据</li>
+</ul>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    <span class="comment"># step1 指定URL</span></span><br><span class="line">    post_url = <span class="string">&#x27;https://fanyi.baidu.com/sug&#x27;</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment"># step2 进行UA伪装</span></span><br><span class="line">    headers = &#123;</span><br><span class="line">    <span class="string">&#x27;User-Agent&#x27;</span>:<span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># step3 post请求参数处理（同get请求类似）</span></span><br><span class="line">    word = <span class="built_in">input</span>(<span class="string">&#x27;Enter a word:\n&#x27;</span>)</span><br><span class="line">    data = &#123;</span><br><span class="line">        <span class="string">&#x27;kw&#x27;</span>:word</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># step4 请求发送</span></span><br><span class="line">    response = requests.post(url = post_url,data = data,headers = headers)</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># step5 获取响应数据:json()方法返回的是obj  (如果确认响应数据是json类型--&gt;通过Content-Type分辨，才可以直接用json方法)</span></span><br><span class="line">    dict_obj = response.json()</span><br><span class="line">    <span class="built_in">print</span>(dict_obj)</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># step6 持久化存储</span></span><br><span class="line">    fileName = word + <span class="string">&#x27;.json&#x27;</span></span><br><span class="line">    fp = <span class="built_in">open</span>(fileName,<span class="string">&#x27;w&#x27;</span>,encoding=<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line">    json.dump(dict_obj,fp = fp,ensure_ascii = <span class="literal">False</span>)</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;Over!&#x27;</span>)</span><br></pre></td></tr></table></figure></div>
+<h3 id="（3）豆瓣电影">（3）豆瓣电影</h3>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    url = <span class="string">&#x27;https://movie.douban.com/j/chart/top_list&#x27;</span></span><br><span class="line">    param = &#123;</span><br><span class="line">        <span class="string">&#x27;type&#x27;</span>:<span class="string">&#x27;24&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;interval_id&#x27;</span>:<span class="string">&#x27;100:90&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;action&#x27;</span>:<span class="string">&#x27;&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;start&#x27;</span>:<span class="string">&#x27;0&#x27;</span>,	<span class="comment"># 从库中的第几部电影去取</span></span><br><span class="line">        <span class="string">&#x27;limit&#x27;</span>:<span class="string">&#x27;20&#x27;</span>	<span class="comment"># 一次取出的个数</span></span><br><span class="line">    &#125;</span><br><span class="line">    headers = &#123;</span><br><span class="line">    <span class="string">&#x27;User-Agent&#x27;</span>:<span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">    response = requests.get(url = url,params = param,headers = headers)</span><br><span class="line">    list_data = response.json()</span><br><span class="line">    fp = <span class="built_in">open</span>(<span class="string">&#x27;./douban.json&#x27;</span>,<span class="string">&#x27;w&#x27;</span>,encoding = <span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line">    json.dump(list_data,fp = fp,ensure_ascii = <span class="literal">False</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;Over!&#x27;</span>)</span><br></pre></td></tr></table></figure></div>
+<h2 id="3-作业—肯德基餐厅查询">3. 作业—肯德基餐厅查询</h2>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    post_url = <span class="string">&#x27;https://www.kfc.com.cn/kfccda/ashx/GetStoreList.ashx?op=keyword&#x27;</span></span><br><span class="line">    keyword = <span class="built_in">input</span>(<span class="string">&#x27;请输入要查询的城市：&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    data =&#123;</span><br><span class="line">        <span class="string">&#x27;cname&#x27;</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;pid&#x27;</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;keyword&#x27;</span>: keyword,</span><br><span class="line">        <span class="string">&#x27;pageindex&#x27;</span>: <span class="string">&#x27;1&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;pageSize&#x27;</span>: <span class="string">&#x27;10&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">    headers = &#123;</span><br><span class="line">    <span class="string">&#x27;User-Agent&#x27;</span>:<span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">    response = requests.post(url = post_url, data = data, headers = headers)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 持久化存储</span></span><br><span class="line">    <span class="comment"># page_text = response.text</span></span><br><span class="line">    <span class="comment"># fileName = keyword + &#x27;.html&#x27;</span></span><br><span class="line">    <span class="comment"># with open(fileName, &#x27;w&#x27;, encoding= &#x27;utf-8&#x27;) as fp:</span></span><br><span class="line">    <span class="comment">#     fp.write(page_text)</span></span><br><span class="line">    <span class="comment"># print(fileName, &#x27;Over!&#x27;)</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 直接打印出来</span></span><br><span class="line">    page = response.json()</span><br><span class="line">    <span class="keyword">for</span> <span class="built_in">dict</span> <span class="keyword">in</span> page[<span class="string">&#x27;Table1&#x27;</span>]:</span><br><span class="line">        StoreName = <span class="built_in">dict</span>[<span class="string">&#x27;storeName&#x27;</span>]</span><br><span class="line">        address = <span class="built_in">dict</span>[<span class="string">&#x27;addressDetail&#x27;</span>]</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;StoreName:&#x27;</span> + StoreName, <span class="string">&#x27;address:&#x27;</span> + address + <span class="string">&#x27;\n&#x27;</span>)</span><br></pre></td></tr></table></figure></div>
+<h2 id="4-综合练习—药监总局">4. 综合练习—药监总局</h2>
+<ul>
+<li>
+<p>爬取国家药品监督管理总局中基于中华人民共和国化妆品生产许可证相关数据（<a href="http://scxk.nmpa.gov.cn:81/xk/%EF%BC%89">http://scxk.nmpa.gov.cn:81/xk/）</a></p>
+</li>
+<li>
+<p>动态加载数据：首页中对应的企业信息是通过 <code>ajax</code> 动态请求到的</p>
+</li>
+<li>
+<p>通过对详情页 url 的观察发现：</p>
+<ul>
+<li>url 的域名都是一样的，只有携带的参数（id）不一样</li>
+<li>id 值可以从首页对应的 <code>ajax</code> 请求到的 <code>json</code> 串中获取</li>
+<li>域名和 id 值拼接出一个完整的企业对应的详情页的 url</li>
+</ul>
+</li>
+<li>
+<p>详情页的企业详情数据也是动态加载出来的！！！</p>
+<ul>
+<li>观察后发现，所有 <code>post</code> 请求的 url 都是一样的，只有参数 id 值不同</li>
+<li>如果我们可以批量获取多家企业的id后，就可以就 id 和 url 形成一个完整的详情页对应详情数据的 <code>ajax</code> 请求的 url</li>
+</ul>
+</li>
+</ul>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    headers = &#123;</span><br><span class="line">        <span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">    id_list = []  							<span class="comment"># 存储企业的id</span></span><br><span class="line">    all_data_list = []  					<span class="comment"># 存储企业所有的详情数据</span></span><br><span class="line">    <span class="comment"># 批量获取不同企业的id值</span></span><br><span class="line">    url = <span class="string">&#x27;http://scxk.nmpa.gov.cn:81/xk/itownet/portalAction.do?method=getXkzsList&#x27;</span></span><br><span class="line">    <span class="comment"># 参数的封装</span></span><br><span class="line">    <span class="keyword">for</span> page <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="number">11</span>):</span><br><span class="line">        page = <span class="built_in">str</span>(page)</span><br><span class="line">        data = &#123;</span><br><span class="line">            <span class="string">&#x27;on&#x27;</span>: <span class="string">&#x27;true&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;page&#x27;</span>: page,</span><br><span class="line">            <span class="string">&#x27;pageSize&#x27;</span>: <span class="string">&#x27;15&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;productName&#x27;</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;conditionType&#x27;</span>: <span class="string">&#x27;1&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;applyname&#x27;</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;applysn&#x27;</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">        &#125;</span><br><span class="line">    json_ids = requests.post(url=url, headers=headers, data=data).json()</span><br><span class="line">    <span class="comment"># 从 json_ids 字典中拿到 list 对应的 value 值，对 value 值列表进行遍历</span></span><br><span class="line">    <span class="keyword">for</span> dic <span class="keyword">in</span> json_ids[<span class="string">&#x27;list&#x27;</span>]:</span><br><span class="line">        id_list.append(dic[<span class="string">&#x27;ID&#x27;</span>])</span><br><span class="line">    <span class="comment"># print(id_list,&#x27;\n&#x27;)</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 获取企业详情数据,也是动态加载出来的，携带一个参数 id，其值可以通过前一步生成的 id列表提取</span></span><br><span class="line">    post_url = <span class="string">&#x27;http://scxk.nmpa.gov.cn:81/xk/itownet/portalAction.do?method=getXkzsById&#x27;</span></span><br><span class="line">    <span class="keyword">for</span> <span class="built_in">id</span> <span class="keyword">in</span> id_list:</span><br><span class="line">        data = &#123;</span><br><span class="line">        <span class="string">&#x27;id&#x27;</span>: <span class="built_in">id</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        json_detail = requests.post(url=post_url, data=data, headers=headers).json()</span><br><span class="line">        <span class="comment">#print(json_detail, &#x27;-------------END----------&#x27;)</span></span><br><span class="line">        all_data_list.append(json_detail )</span><br><span class="line">        all_data_list.append(<span class="string">&#x27;---------------------------------------------------------&#x27;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 持久化存储all_data_list</span></span><br><span class="line">    fp = <span class="built_in">open</span>(<span class="string">&#x27;./allData.json&#x27;</span>, <span class="string">&#x27;w&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line">    json.dump(all_data_list, fp=fp, ensure_ascii=<span class="literal">False</span>, indent= <span class="literal">True</span>)  <span class="comment"># indent 自动排版</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;Over!&#x27;</span>)</span><br></pre></td></tr></table></figure></div>
+]]></content>
+      <categories>
+        <category>Python</category>
+        <category>爬虫</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>爬虫</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>爬虫学习笔记(1)--基础简介</title>
+    <url>/posts/5223358a/</url>
+    <content><![CDATA[<blockquote>
+<p>ZY.Zhang</p>
+<p>本文档基于<a href="https://www.bilibili.com/video/BV1Yh411o7Sz?p=1">B站视频教程</a></p>
+</blockquote>
+<h2 id="1-爬虫简介">1. 爬虫简介</h2>
+<p>什么是爬虫：通过编写程序，模拟浏览器上网，然后让其去互联网上抓取数据的过程。</p>
+<h2 id="2-爬虫合法性探究">2. 爬虫合法性探究</h2>
+<p>爬虫究竟是合法还是违法的？</p>
+<ul>
+<li>在法律中是不被禁止的</li>
+<li>具有违法风险</li>
+<li>善意爬虫 &amp; 恶意爬虫</li>
+</ul>
+<p>爬虫带来的风险可以体现在如下两个方面：</p>
+<ol>
+<li>爬虫干扰了被访问网站的正常运营</li>
+<li>爬虫抓取了受到法律保护的特定类型的数据或信息</li>
+</ol>
+<p>如何在编写使用的过程中避免进入局子的厄运？</p>
+<ul>
+<li>时常优化自己的程序，避免干扰被访问网站的正常运行</li>
+<li>在使用，传播爬取到的数据时，审查抓取到的内容，如果发现了涉及到用户隐私或者商业机密等敏感内容，需要及时停止爬取或者传播。</li>
+</ul>
+<span id="more"></span>
+<h2 id="3-爬虫初试深入">3. 爬虫初试深入</h2>
+<p>爬虫在使用场景中的分类：</p>
+<ul>
+<li>
+<p>通用爬虫：抓取系统的重要组成部分。抓取的是一整张页面数据。</p>
+</li>
+<li>
+<p>聚焦爬虫：是建立在通用爬虫的基础之上。抓取的是页面中特定的局部内容。</p>
+</li>
+<li>
+<p>增量式爬虫：监测网站中数据更新的情况。只会抓取网站中最新更新出来的数据。</p>
+</li>
+</ul>
+<p>爬虫的矛与盾：</p>
+<ul>
+<li>
+<p>反爬机制：门户网站，可以通过制定相应的策略或者技术手段，防止爬虫程序进行网站数据的爬取。</p>
+</li>
+<li>
+<p>反反爬策略：爬虫程序，可以通过制定相关的策略或者技术手段，破解门户网站中具备的反爬机制，从而可以获取门户网站中相关的数据。</p>
+</li>
+</ul>
+<p>robots.txt 协议：君子协议。规定了网站中那些数据可以被爬虫爬取，那些数据不允许被爬取。</p>
+<p>例如：<a href="https://www.tabao.com/robots.txt">www.tabao.com/robots.txt</a></p>
+<h2 id="4-http-https-协议">4. http&amp;https 协议</h2>
+<h3 id="（1）http-协议">（1）http 协议</h3>
+<p>概念：就是服务器和客户端进行数据交互的一种形式。</p>
+<p>常用请求头信息：</p>
+<ul>
+<li>User-Agent：请求载体的身份标识</li>
+<li>Connection：请求完毕后，是断开连接还是保持连接</li>
+</ul>
+<p>常用响应头信息：</p>
+<ul>
+<li>Content-Type：服务器响应回客户端的数据类型</li>
+</ul>
+<h3 id="（2）https-协议">（2）https 协议</h3>
+<p>概念：安全的超文本传输协议</p>
+<h3 id="（3）加密方式">（3）加密方式</h3>
+<ul>
+<li>
+<p>对称秘钥加密</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zyzhang827/filesimage@main/images/2022/01/05/ea6ba70193f76fcf28fb396f0fdd6af0-%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86-7541dc.png" alt="对称加密"></p>
+</li>
+<li>
+<p>非对称秘钥加密</p>
+<p>存在缺点：第一个是如何保证接收端向发送端发出公开秘钥的时候，发送端确保收到的是预先要发送的，而不会被挟持，只要是发送秘钥，就有可能有被挟持的风险；第二个是非对称秘钥加密方式效率比较低，处理起来更为复杂，通信过程中使用就有一定的效率问题而影响通信速度。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zyzhang827/filesimage@main/images/2022/01/05/f6d4e5688c777ef4bc782697570a1fd6-%E9%9D%9E%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86-7eb72d.png" alt="非对称加密"></p>
+</li>
+<li>
+<p>证书秘钥加密：</p>
+<ul>
+<li>服务器的开发者携带公开密钥，向数字证书认证机构提出公开密钥的申请，数字证书认证机构在认清申请者的身份审核通过以后，会对开发者申请的公开密钥做数字签名，然后分配这个已签名的公开密钥，并将密钥放在证书里面，绑定在一起；</li>
+<li>服务器将这份数字证书发送给客户端，因为客户端也认可证书机构，客户端可以通过数字证书中的数字签名来验证公钥的真伪，来确保服务器传过来的公开密钥是真实的。一般情况下，证书的数字签名是很难被伪造的，这取决于认证机构的公信力。一旦确认信息无误之后，客户端就会通过公钥对报文进行加密发送，服务器接收到以后用自己的私钥进行解密。</li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Python</category>
+        <category>爬虫</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>爬虫</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>爬虫学习笔记(4)--验证码</title>
+    <url>/posts/814742/</url>
+    <content><![CDATA[<h2 id="1-验证码识别简介">1. 验证码识别简介</h2>
+<p>验证码和爬虫之间的爱恨情仇：</p>
+<ul>
+<li>反爬机制：验证码。识别验证码图片中的数据，用于模拟登录操作。</li>
+</ul>
+<p>识别验证码的操作：</p>
+<ul>
+<li>人工肉眼识别（不推荐）</li>
+<li>第三方自动识别（推荐）</li>
+</ul>
+<span id="more"></span>
+<h2 id="2-云打码使用流程">2. 云打码使用流程</h2>
+<!--作者学习期间，该平台已经挂掉，故而使用超级鹰进行代替。同类打码平台可以自行百度选择-->
+<ul>
+<li>注册：用户中心身份</li>
+<li>登录：用户中心身份
+<ul>
+<li>查询余额，题分是否足够（第一次使用，绑定微信即可免费获赠1000题分；非首次使用，建议小额充值，1元即可）</li>
+<li>创建软件 ID —— 用户中心左下角</li>
+<li>下载示例代码 —— 开发文档</li>
+</ul>
+</li>
+</ul>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python</span></span><br><span class="line"><span class="comment"># coding:utf-8</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> lxml <span class="keyword">import</span> etree</span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">from</span> hashlib <span class="keyword">import</span> md5</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Chaojiying_Client</span>(<span class="params"><span class="built_in">object</span></span>):</span></span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, username, password, soft_id</span>):</span></span><br><span class="line">		self.username = username</span><br><span class="line">		password =  password.encode(<span class="string">&#x27;utf8&#x27;</span>)</span><br><span class="line">		self.password = md5(password).hexdigest()</span><br><span class="line">		self.soft_id = soft_id</span><br><span class="line">		self.base_params = &#123;</span><br><span class="line">			<span class="string">&#x27;user&#x27;</span>: self.username,</span><br><span class="line">			<span class="string">&#x27;pass2&#x27;</span>: self.password,</span><br><span class="line">			<span class="string">&#x27;softid&#x27;</span>: self.soft_id,</span><br><span class="line">		&#125;</span><br><span class="line">		self.headers = &#123;</span><br><span class="line">			<span class="string">&#x27;Connection&#x27;</span>: <span class="string">&#x27;Keep-Alive&#x27;</span>,</span><br><span class="line">			<span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0)&#x27;</span>,</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">PostPic</span>(<span class="params">self, im, codetype</span>):</span></span><br><span class="line">		<span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">		im: 图片字节</span></span><br><span class="line"><span class="string">		codetype: 题目类型 参考 http://www.chaojiying.com/price.html</span></span><br><span class="line"><span class="string">		&quot;&quot;&quot;</span></span><br><span class="line">		params = &#123;</span><br><span class="line">			<span class="string">&#x27;codetype&#x27;</span>: codetype,</span><br><span class="line">		&#125;</span><br><span class="line">		params.update(self.base_params)</span><br><span class="line">		files = &#123;<span class="string">&#x27;userfile&#x27;</span>: (<span class="string">&#x27;ccc.jpg&#x27;</span>, im)&#125;</span><br><span class="line">		r = requests.post(<span class="string">&#x27;http://upload.chaojiying.net/Upload/Processing.php&#x27;</span>, data=params, files=files, headers=self.headers)</span><br><span class="line">		<span class="keyword">return</span> r.json()</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">ReportError</span>(<span class="params">self, im_id</span>):</span></span><br><span class="line">		<span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">		im_id:报错题目的图片ID</span></span><br><span class="line"><span class="string">		&quot;&quot;&quot;</span></span><br><span class="line">		params = &#123;</span><br><span class="line">			<span class="string">&#x27;id&#x27;</span>: im_id,</span><br><span class="line">		&#125;</span><br><span class="line">		params.update(self.base_params)</span><br><span class="line">		r = requests.post(<span class="string">&#x27;http://upload.chaojiying.net/Upload/ReportError.php&#x27;</span>, data=params, headers=self.headers)</span><br><span class="line">		<span class="keyword">return</span> r.json()</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">tranformImgCode</span>(<span class="params">imgPath,imgType</span>):</span></span><br><span class="line">	chaojiying = Chaojiying_Client(<span class="string">&#x27;此处是账户&#x27;</span>, <span class="string">&#x27;此处是密码&#x27;</span>, <span class="string">&#x27;此处是软件ID&#x27;</span>)	<span class="comment">#用户中心&gt;&gt;软件ID 生成一个替换 </span></span><br><span class="line">	im = <span class="built_in">open</span>(imgPath, <span class="string">&#x27;rb&#x27;</span>).read()	</span><br><span class="line">	<span class="keyword">return</span> chaojiying.PostPic(im,imgType)[<span class="string">&#x27;pic_str&#x27;</span>]	<span class="comment">#1902 验证码类型  官方网站&gt;&gt;价格体系 3.4+版 </span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(tranformImgCode(<span class="string">&#x27;./a.jpg&#x27;</span>,<span class="number">1902</span>))</span><br></pre></td></tr></table></figure></div>
+<h2 id="3-古诗文网验证码识别">3. 古诗文网验证码识别</h2>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#### 将本部分代码复制到上一节代码之后，因为要调用上述封装的tranformImgCode方法</span></span><br><span class="line"></span><br><span class="line">session = requests.Session()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 识别验证码图下载</span></span><br><span class="line">headers = &#123;</span><br><span class="line"><span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line">url = <span class="string">&#x27;https://so.gushiwen.cn/user/login.aspx?from=http://so.gushiwen.cn/user/collect.aspx&#x27;</span></span><br><span class="line">page_text = session.get(url=url, headers=headers).text</span><br><span class="line"><span class="comment"># 解析验证码图片的地址</span></span><br><span class="line">tree = etree.HTML(page_text)</span><br><span class="line">img_src = <span class="string">&#x27;https://so.gushiwen.org&#x27;</span> + tree.xpath(<span class="string">&#x27;//*[@id=&quot;imgCode&quot;]/@src&#x27;</span>)[<span class="number">0</span>]</span><br><span class="line"><span class="comment"># 将验证码图片保存本地</span></span><br><span class="line">img_data = session.get(img_src, headers=headers).content</span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;./code.jpg&#x27;</span>, <span class="string">&#x27;wb&#x27;</span>) <span class="keyword">as</span> fp:</span><br><span class="line">	fp.write(img_data)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 识别验证码</span></span><br><span class="line">code_text = tranformImgCode(<span class="string">&#x27;./code.jpg&#x27;</span>, <span class="number">1902</span>)</span><br><span class="line"><span class="built_in">print</span>(code_text)</span><br><span class="line">login_url = <span class="string">&#x27;https://so.gushiwen.cn/user/login.aspx?from=http%3a%2f%2fso.gushiwen.cn%2fuser%2fcollect.aspx&#x27;</span></span><br><span class="line">data = &#123;</span><br><span class="line">	<span class="string">&#x27;__VIEWSTATE&#x27;</span>: <span class="string">&#x27;f1ECt6+6MPtdTZMJtYOYS/7ww2d/DPy9t8JQcIt1QuOneLTbNQuYqPcCjZNbDAbfb9vj3k6f0M7EKTf0YqElM1k1A5ELwyTvUzBii+9LDRBbIMmc/jb0DJPsYfI=&#x27;</span>,</span><br><span class="line">	<span class="string">&#x27;__VIEWSTATEGENERATOR&#x27;</span>: <span class="string">&#x27;C93BE1AE&#x27;</span>,</span><br><span class="line">	<span class="string">&#x27;from&#x27;</span>: <span class="string">&#x27;http://so.gushiwen.cn/user/collect.aspx&#x27;</span>,</span><br><span class="line">	<span class="string">&#x27;email&#x27;</span>: <span class="string">&#x27;账号&#x27;</span>,</span><br><span class="line">	<span class="string">&#x27;pwd&#x27;</span>: <span class="string">&#x27;密码&#x27;</span>,</span><br><span class="line">	<span class="string">&#x27;code&#x27;</span>: code_text,  <span class="comment"># 动态变化</span></span><br><span class="line">	<span class="string">&#x27;denglu&#x27;</span>: <span class="string">&#x27;登录&#x27;</span>,</span><br><span class="line">	&#125;</span><br><span class="line"><span class="comment"># 对点击登录按钮发起请求</span></span><br><span class="line">page_text_login = session.post(url=login_url, headers=headers, data=data).text</span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;./gushiwen.html&#x27;</span>, <span class="string">&#x27;w&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>) <span class="keyword">as</span> fp:</span><br><span class="line">	fp.write(page_text_login)</span><br></pre></td></tr></table></figure></div>
+<ul>
+<li>
+<p>在请求参数中如果看到了一组乱序的请求参数，最好去验证这组请求参数是否为动态变化</p>
+<ul>
+<li>处理：
+<ul>
+<li>方式1：常规来讲一般动态变化的请求参数会被隐藏在前台页面中，那么我们就要去前台页面源码中寻找；</li>
+<li>方式2：如果前台页面没有的话，我们就可以基于抓包工具进行全局搜索。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>基于百度AI实现的爬虫给功能：</p>
+<ul>
+<li>图像识别</li>
+<li>语音识别&amp;合成</li>
+<li>自然语言处理</li>
+</ul>
+</li>
+<li>
+<p>使用流程：</p>
+<ul>
+<li>
+<p>点击控制台进行登录</p>
+</li>
+<li>
+<p>选择想要实现的功能</p>
+</li>
+<li>
+<p>实现功能下创建一个 app</p>
+</li>
+<li>
+<p>选择对应的 pythonSDK 文档进行代码实现</p>
+<blockquote>
+<p>需求：<a href="https://duanziwang.com/">https://duanziwang.com/</a></p>
+<p>讲段子王中的段子内容爬取到本地，然后基于语音合成为mp3的音频文件，然后自己搭建一个web服务器，线上实时播放音频文件。</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Python</category>
+        <category>爬虫</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>爬虫</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>爬虫学习笔记(3)--数据解析</title>
     <url>/posts/5e6336de/</url>
     <content><![CDATA[<h2 id="1-数据解析概述">1. 数据解析概述</h2>
@@ -3323,253 +3570,6 @@ range 类型的优点：不管 range 对象表示的整数序列有多长，所�
       </tags>
   </entry>
   <entry>
-    <title>爬虫学习笔记(1)--基础简介</title>
-    <url>/posts/5223358a/</url>
-    <content><![CDATA[<blockquote>
-<p>ZY.Zhang</p>
-<p>本文档基于<a href="https://www.bilibili.com/video/BV1Yh411o7Sz?p=1">B站视频教程</a></p>
-</blockquote>
-<h2 id="1-爬虫简介">1. 爬虫简介</h2>
-<p>什么是爬虫：通过编写程序，模拟浏览器上网，然后让其去互联网上抓取数据的过程。</p>
-<h2 id="2-爬虫合法性探究">2. 爬虫合法性探究</h2>
-<p>爬虫究竟是合法还是违法的？</p>
-<ul>
-<li>在法律中是不被禁止的</li>
-<li>具有违法风险</li>
-<li>善意爬虫 &amp; 恶意爬虫</li>
-</ul>
-<p>爬虫带来的风险可以体现在如下两个方面：</p>
-<ol>
-<li>爬虫干扰了被访问网站的正常运营</li>
-<li>爬虫抓取了受到法律保护的特定类型的数据或信息</li>
-</ol>
-<p>如何在编写使用的过程中避免进入局子的厄运？</p>
-<ul>
-<li>时常优化自己的程序，避免干扰被访问网站的正常运行</li>
-<li>在使用，传播爬取到的数据时，审查抓取到的内容，如果发现了涉及到用户隐私或者商业机密等敏感内容，需要及时停止爬取或者传播。</li>
-</ul>
-<span id="more"></span>
-<h2 id="3-爬虫初试深入">3. 爬虫初试深入</h2>
-<p>爬虫在使用场景中的分类：</p>
-<ul>
-<li>
-<p>通用爬虫：抓取系统的重要组成部分。抓取的是一整张页面数据。</p>
-</li>
-<li>
-<p>聚焦爬虫：是建立在通用爬虫的基础之上。抓取的是页面中特定的局部内容。</p>
-</li>
-<li>
-<p>增量式爬虫：监测网站中数据更新的情况。只会抓取网站中最新更新出来的数据。</p>
-</li>
-</ul>
-<p>爬虫的矛与盾：</p>
-<ul>
-<li>
-<p>反爬机制：门户网站，可以通过制定相应的策略或者技术手段，防止爬虫程序进行网站数据的爬取。</p>
-</li>
-<li>
-<p>反反爬策略：爬虫程序，可以通过制定相关的策略或者技术手段，破解门户网站中具备的反爬机制，从而可以获取门户网站中相关的数据。</p>
-</li>
-</ul>
-<p>robots.txt 协议：君子协议。规定了网站中那些数据可以被爬虫爬取，那些数据不允许被爬取。</p>
-<p>例如：<a href="https://www.tabao.com/robots.txt">www.tabao.com/robots.txt</a></p>
-<h2 id="4-http-https-协议">4. http&amp;https 协议</h2>
-<h3 id="（1）http-协议">（1）http 协议</h3>
-<p>概念：就是服务器和客户端进行数据交互的一种形式。</p>
-<p>常用请求头信息：</p>
-<ul>
-<li>User-Agent：请求载体的身份标识</li>
-<li>Connection：请求完毕后，是断开连接还是保持连接</li>
-</ul>
-<p>常用响应头信息：</p>
-<ul>
-<li>Content-Type：服务器响应回客户端的数据类型</li>
-</ul>
-<h3 id="（2）https-协议">（2）https 协议</h3>
-<p>概念：安全的超文本传输协议</p>
-<h3 id="（3）加密方式">（3）加密方式</h3>
-<ul>
-<li>
-<p>对称秘钥加密</p>
-<p><img src="https://cdn.jsdelivr.net/gh/zyzhang827/filesimage@main/images/2022/01/05/ea6ba70193f76fcf28fb396f0fdd6af0-%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86-7541dc.png" alt="对称加密"></p>
-</li>
-<li>
-<p>非对称秘钥加密</p>
-<p>存在缺点：第一个是如何保证接收端向发送端发出公开秘钥的时候，发送端确保收到的是预先要发送的，而不会被挟持，只要是发送秘钥，就有可能有被挟持的风险；第二个是非对称秘钥加密方式效率比较低，处理起来更为复杂，通信过程中使用就有一定的效率问题而影响通信速度。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/zyzhang827/filesimage@main/images/2022/01/05/f6d4e5688c777ef4bc782697570a1fd6-%E9%9D%9E%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86-7eb72d.png" alt="非对称加密"></p>
-</li>
-<li>
-<p>证书秘钥加密：</p>
-<ul>
-<li>服务器的开发者携带公开密钥，向数字证书认证机构提出公开密钥的申请，数字证书认证机构在认清申请者的身份审核通过以后，会对开发者申请的公开密钥做数字签名，然后分配这个已签名的公开密钥，并将密钥放在证书里面，绑定在一起；</li>
-<li>服务器将这份数字证书发送给客户端，因为客户端也认可证书机构，客户端可以通过数字证书中的数字签名来验证公钥的真伪，来确保服务器传过来的公开密钥是真实的。一般情况下，证书的数字签名是很难被伪造的，这取决于认证机构的公信力。一旦确认信息无误之后，客户端就会通过公钥对报文进行加密发送，服务器接收到以后用自己的私钥进行解密。</li>
-</ul>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>Python</category>
-        <category>爬虫</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>爬虫</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>爬虫学习笔记(2)--requests 模块基础</title>
-    <url>/posts/9058b1e5/</url>
-    <content><![CDATA[<h2 id="1-requests-第一血">1. requests 第一血</h2>
-<p>requests 模块：Python 中原生的一款基于网络请求的模块，功能非常强大，简单便捷，效率极高。</p>
-<p>作用：模拟浏览器发请求。</p>
-<p>如何使用：（requests 模块的编码流程）</p>
-<ul>
-<li>指定 url</li>
-<li>发起请求</li>
-<li>获取响应数据</li>
-<li>持久化存储</li>
-</ul>
-<span id="more"></span>
-<p>环境的安装：<code>pip install requests</code></p>
-<p>实战编码：</p>
-<ul>
-<li>需求：爬取搜狗首页的数据</li>
-</ul>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    <span class="comment"># step1 指定url</span></span><br><span class="line">    url = <span class="string">&#x27;https://www.sogou.com/&#x27;</span></span><br><span class="line">    <span class="comment"># step2 发起请求</span></span><br><span class="line">    <span class="comment"># get方法会返回一个响应对象</span></span><br><span class="line">    response = requests.get(url = url)</span><br><span class="line">    <span class="comment"># step3 获取响应数据，text返回的是字符串形式的响应数据</span></span><br><span class="line">    page_text = response.text</span><br><span class="line">    <span class="built_in">print</span>(page_text)</span><br><span class="line">    <span class="comment"># step4 持久化存储</span></span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;./sogou.html&#x27;</span>,<span class="string">&#x27;w&#x27;</span>,encoding = <span class="string">&#x27;utf-8&#x27;</span>) <span class="keyword">as</span> fp:</span><br><span class="line">        fp.write(page_text)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;爬取数据结束！&#x27;</span>)</span><br></pre></td></tr></table></figure></div>
-<h2 id="2-requests-巩固深入案例介绍">2. requests 巩固深入案例介绍</h2>
-<h3 id="（1）简易网页采集器">（1）简易网页采集器</h3>
-<ul>
-<li>UA 检测</li>
-<li>UA 伪装</li>
-</ul>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># UA：User-Agent请求载体的身份标识</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;UA检测：门户网站的服务器会监测对应请求的载体身份标识，</span></span><br><span class="line"><span class="string">如果检测到请求载体身份标识是某一款浏览器,说明该请求时一个正常的请求；</span></span><br><span class="line"><span class="string">但是，如果检测到请求的载体身份不是基于某一款浏览器的，则表示该请求为不正常请求（爬虫）,</span></span><br><span class="line"><span class="string">则服务器很有可能拒绝该次请求&#x27;&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># UA伪装：让爬虫对应的请求载体身份标识伪装成某一款浏览器，躲过UA检测</span></span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    <span class="comment"># UA伪装：将对应的User-Agent封装到一个字典中</span></span><br><span class="line">    headers = &#123;</span><br><span class="line">    <span class="string">&#x27;User-Agent&#x27;</span>:<span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment"># step1 指定url query</span></span><br><span class="line">    url = <span class="string">&#x27;https://www.sogou.com/web&#x27;</span></span><br><span class="line">    <span class="comment"># 处理url携带的参数 封装到字典中</span></span><br><span class="line">    kw = <span class="built_in">input</span>(<span class="string">&#x27;Enter a word:&#x27;</span>)</span><br><span class="line">    param =&#123;</span><br><span class="line">        <span class="string">&#x27;query&#x27;</span>:kw</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment"># step2 对指定的url发起请求，对应的url是携带参数的，并且处理过程中处理了参数</span></span><br><span class="line">    response = requests.get(url = url,params = param,headers = headers)</span><br><span class="line">    <span class="comment"># step3</span></span><br><span class="line">    page_text = response.text</span><br><span class="line">    <span class="comment"># step4</span></span><br><span class="line">    fileName = kw + <span class="string">&#x27;.html&#x27;</span></span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(fileName,<span class="string">&#x27;w&#x27;</span>,encoding =<span class="string">&#x27;utf-8&#x27;</span>) <span class="keyword">as</span> fp:</span><br><span class="line">        fp.write(page_text)</span><br><span class="line">    <span class="built_in">print</span>(fileName,<span class="string">&#x27;保存成功！！&#x27;</span>)</span><br></pre></td></tr></table></figure></div>
-<h3 id="（2）破解百度翻译">（2）破解百度翻译</h3>
-<ul>
-<li>post 请求（携带了参数）</li>
-<li>响应数据是一组 json 数据</li>
-</ul>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    <span class="comment"># step1 指定URL</span></span><br><span class="line">    post_url = <span class="string">&#x27;https://fanyi.baidu.com/sug&#x27;</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment"># step2 进行UA伪装</span></span><br><span class="line">    headers = &#123;</span><br><span class="line">    <span class="string">&#x27;User-Agent&#x27;</span>:<span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># step3 post请求参数处理（同get请求类似）</span></span><br><span class="line">    word = <span class="built_in">input</span>(<span class="string">&#x27;Enter a word:\n&#x27;</span>)</span><br><span class="line">    data = &#123;</span><br><span class="line">        <span class="string">&#x27;kw&#x27;</span>:word</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># step4 请求发送</span></span><br><span class="line">    response = requests.post(url = post_url,data = data,headers = headers)</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># step5 获取响应数据:json()方法返回的是obj  (如果确认响应数据是json类型--&gt;通过Content-Type分辨，才可以直接用json方法)</span></span><br><span class="line">    dict_obj = response.json()</span><br><span class="line">    <span class="built_in">print</span>(dict_obj)</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># step6 持久化存储</span></span><br><span class="line">    fileName = word + <span class="string">&#x27;.json&#x27;</span></span><br><span class="line">    fp = <span class="built_in">open</span>(fileName,<span class="string">&#x27;w&#x27;</span>,encoding=<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line">    json.dump(dict_obj,fp = fp,ensure_ascii = <span class="literal">False</span>)</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;Over!&#x27;</span>)</span><br></pre></td></tr></table></figure></div>
-<h3 id="（3）豆瓣电影">（3）豆瓣电影</h3>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    url = <span class="string">&#x27;https://movie.douban.com/j/chart/top_list&#x27;</span></span><br><span class="line">    param = &#123;</span><br><span class="line">        <span class="string">&#x27;type&#x27;</span>:<span class="string">&#x27;24&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;interval_id&#x27;</span>:<span class="string">&#x27;100:90&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;action&#x27;</span>:<span class="string">&#x27;&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;start&#x27;</span>:<span class="string">&#x27;0&#x27;</span>,	<span class="comment"># 从库中的第几部电影去取</span></span><br><span class="line">        <span class="string">&#x27;limit&#x27;</span>:<span class="string">&#x27;20&#x27;</span>	<span class="comment"># 一次取出的个数</span></span><br><span class="line">    &#125;</span><br><span class="line">    headers = &#123;</span><br><span class="line">    <span class="string">&#x27;User-Agent&#x27;</span>:<span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">    response = requests.get(url = url,params = param,headers = headers)</span><br><span class="line">    list_data = response.json()</span><br><span class="line">    fp = <span class="built_in">open</span>(<span class="string">&#x27;./douban.json&#x27;</span>,<span class="string">&#x27;w&#x27;</span>,encoding = <span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line">    json.dump(list_data,fp = fp,ensure_ascii = <span class="literal">False</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;Over!&#x27;</span>)</span><br></pre></td></tr></table></figure></div>
-<h2 id="3-作业—肯德基餐厅查询">3. 作业—肯德基餐厅查询</h2>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    post_url = <span class="string">&#x27;https://www.kfc.com.cn/kfccda/ashx/GetStoreList.ashx?op=keyword&#x27;</span></span><br><span class="line">    keyword = <span class="built_in">input</span>(<span class="string">&#x27;请输入要查询的城市：&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    data =&#123;</span><br><span class="line">        <span class="string">&#x27;cname&#x27;</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;pid&#x27;</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;keyword&#x27;</span>: keyword,</span><br><span class="line">        <span class="string">&#x27;pageindex&#x27;</span>: <span class="string">&#x27;1&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;pageSize&#x27;</span>: <span class="string">&#x27;10&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">    headers = &#123;</span><br><span class="line">    <span class="string">&#x27;User-Agent&#x27;</span>:<span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">    response = requests.post(url = post_url, data = data, headers = headers)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 持久化存储</span></span><br><span class="line">    <span class="comment"># page_text = response.text</span></span><br><span class="line">    <span class="comment"># fileName = keyword + &#x27;.html&#x27;</span></span><br><span class="line">    <span class="comment"># with open(fileName, &#x27;w&#x27;, encoding= &#x27;utf-8&#x27;) as fp:</span></span><br><span class="line">    <span class="comment">#     fp.write(page_text)</span></span><br><span class="line">    <span class="comment"># print(fileName, &#x27;Over!&#x27;)</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 直接打印出来</span></span><br><span class="line">    page = response.json()</span><br><span class="line">    <span class="keyword">for</span> <span class="built_in">dict</span> <span class="keyword">in</span> page[<span class="string">&#x27;Table1&#x27;</span>]:</span><br><span class="line">        StoreName = <span class="built_in">dict</span>[<span class="string">&#x27;storeName&#x27;</span>]</span><br><span class="line">        address = <span class="built_in">dict</span>[<span class="string">&#x27;addressDetail&#x27;</span>]</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;StoreName:&#x27;</span> + StoreName, <span class="string">&#x27;address:&#x27;</span> + address + <span class="string">&#x27;\n&#x27;</span>)</span><br></pre></td></tr></table></figure></div>
-<h2 id="4-综合练习—药监总局">4. 综合练习—药监总局</h2>
-<ul>
-<li>
-<p>爬取国家药品监督管理总局中基于中华人民共和国化妆品生产许可证相关数据（<a href="http://scxk.nmpa.gov.cn:81/xk/%EF%BC%89">http://scxk.nmpa.gov.cn:81/xk/）</a></p>
-</li>
-<li>
-<p>动态加载数据：首页中对应的企业信息是通过 <code>ajax</code> 动态请求到的</p>
-</li>
-<li>
-<p>通过对详情页 url 的观察发现：</p>
-<ul>
-<li>url 的域名都是一样的，只有携带的参数（id）不一样</li>
-<li>id 值可以从首页对应的 <code>ajax</code> 请求到的 <code>json</code> 串中获取</li>
-<li>域名和 id 值拼接出一个完整的企业对应的详情页的 url</li>
-</ul>
-</li>
-<li>
-<p>详情页的企业详情数据也是动态加载出来的！！！</p>
-<ul>
-<li>观察后发现，所有 <code>post</code> 请求的 url 都是一样的，只有参数 id 值不同</li>
-<li>如果我们可以批量获取多家企业的id后，就可以就 id 和 url 形成一个完整的详情页对应详情数据的 <code>ajax</code> 请求的 url</li>
-</ul>
-</li>
-</ul>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    headers = &#123;</span><br><span class="line">        <span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">    id_list = []  							<span class="comment"># 存储企业的id</span></span><br><span class="line">    all_data_list = []  					<span class="comment"># 存储企业所有的详情数据</span></span><br><span class="line">    <span class="comment"># 批量获取不同企业的id值</span></span><br><span class="line">    url = <span class="string">&#x27;http://scxk.nmpa.gov.cn:81/xk/itownet/portalAction.do?method=getXkzsList&#x27;</span></span><br><span class="line">    <span class="comment"># 参数的封装</span></span><br><span class="line">    <span class="keyword">for</span> page <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="number">11</span>):</span><br><span class="line">        page = <span class="built_in">str</span>(page)</span><br><span class="line">        data = &#123;</span><br><span class="line">            <span class="string">&#x27;on&#x27;</span>: <span class="string">&#x27;true&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;page&#x27;</span>: page,</span><br><span class="line">            <span class="string">&#x27;pageSize&#x27;</span>: <span class="string">&#x27;15&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;productName&#x27;</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;conditionType&#x27;</span>: <span class="string">&#x27;1&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;applyname&#x27;</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;applysn&#x27;</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">        &#125;</span><br><span class="line">    json_ids = requests.post(url=url, headers=headers, data=data).json()</span><br><span class="line">    <span class="comment"># 从 json_ids 字典中拿到 list 对应的 value 值，对 value 值列表进行遍历</span></span><br><span class="line">    <span class="keyword">for</span> dic <span class="keyword">in</span> json_ids[<span class="string">&#x27;list&#x27;</span>]:</span><br><span class="line">        id_list.append(dic[<span class="string">&#x27;ID&#x27;</span>])</span><br><span class="line">    <span class="comment"># print(id_list,&#x27;\n&#x27;)</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 获取企业详情数据,也是动态加载出来的，携带一个参数 id，其值可以通过前一步生成的 id列表提取</span></span><br><span class="line">    post_url = <span class="string">&#x27;http://scxk.nmpa.gov.cn:81/xk/itownet/portalAction.do?method=getXkzsById&#x27;</span></span><br><span class="line">    <span class="keyword">for</span> <span class="built_in">id</span> <span class="keyword">in</span> id_list:</span><br><span class="line">        data = &#123;</span><br><span class="line">        <span class="string">&#x27;id&#x27;</span>: <span class="built_in">id</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        json_detail = requests.post(url=post_url, data=data, headers=headers).json()</span><br><span class="line">        <span class="comment">#print(json_detail, &#x27;-------------END----------&#x27;)</span></span><br><span class="line">        all_data_list.append(json_detail )</span><br><span class="line">        all_data_list.append(<span class="string">&#x27;---------------------------------------------------------&#x27;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 持久化存储all_data_list</span></span><br><span class="line">    fp = <span class="built_in">open</span>(<span class="string">&#x27;./allData.json&#x27;</span>, <span class="string">&#x27;w&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line">    json.dump(all_data_list, fp=fp, ensure_ascii=<span class="literal">False</span>, indent= <span class="literal">True</span>)  <span class="comment"># indent 自动排版</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;Over!&#x27;</span>)</span><br></pre></td></tr></table></figure></div>
-]]></content>
-      <categories>
-        <category>Python</category>
-        <category>爬虫</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>爬虫</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>爬虫学习笔记(4)--验证码</title>
-    <url>/posts/814742/</url>
-    <content><![CDATA[<h2 id="1-验证码识别简介">1. 验证码识别简介</h2>
-<p>验证码和爬虫之间的爱恨情仇：</p>
-<ul>
-<li>反爬机制：验证码。识别验证码图片中的数据，用于模拟登录操作。</li>
-</ul>
-<p>识别验证码的操作：</p>
-<ul>
-<li>人工肉眼识别（不推荐）</li>
-<li>第三方自动识别（推荐）</li>
-</ul>
-<span id="more"></span>
-<h2 id="2-云打码使用流程">2. 云打码使用流程</h2>
-<!--作者学习期间，该平台已经挂掉，故而使用超级鹰进行代替。同类打码平台可以自行百度选择-->
-<ul>
-<li>注册：用户中心身份</li>
-<li>登录：用户中心身份
-<ul>
-<li>查询余额，题分是否足够（第一次使用，绑定微信即可免费获赠1000题分；非首次使用，建议小额充值，1元即可）</li>
-<li>创建软件 ID —— 用户中心左下角</li>
-<li>下载示例代码 —— 开发文档</li>
-</ul>
-</li>
-</ul>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python</span></span><br><span class="line"><span class="comment"># coding:utf-8</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> lxml <span class="keyword">import</span> etree</span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">from</span> hashlib <span class="keyword">import</span> md5</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Chaojiying_Client</span>(<span class="params"><span class="built_in">object</span></span>):</span></span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, username, password, soft_id</span>):</span></span><br><span class="line">		self.username = username</span><br><span class="line">		password =  password.encode(<span class="string">&#x27;utf8&#x27;</span>)</span><br><span class="line">		self.password = md5(password).hexdigest()</span><br><span class="line">		self.soft_id = soft_id</span><br><span class="line">		self.base_params = &#123;</span><br><span class="line">			<span class="string">&#x27;user&#x27;</span>: self.username,</span><br><span class="line">			<span class="string">&#x27;pass2&#x27;</span>: self.password,</span><br><span class="line">			<span class="string">&#x27;softid&#x27;</span>: self.soft_id,</span><br><span class="line">		&#125;</span><br><span class="line">		self.headers = &#123;</span><br><span class="line">			<span class="string">&#x27;Connection&#x27;</span>: <span class="string">&#x27;Keep-Alive&#x27;</span>,</span><br><span class="line">			<span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0)&#x27;</span>,</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">PostPic</span>(<span class="params">self, im, codetype</span>):</span></span><br><span class="line">		<span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">		im: 图片字节</span></span><br><span class="line"><span class="string">		codetype: 题目类型 参考 http://www.chaojiying.com/price.html</span></span><br><span class="line"><span class="string">		&quot;&quot;&quot;</span></span><br><span class="line">		params = &#123;</span><br><span class="line">			<span class="string">&#x27;codetype&#x27;</span>: codetype,</span><br><span class="line">		&#125;</span><br><span class="line">		params.update(self.base_params)</span><br><span class="line">		files = &#123;<span class="string">&#x27;userfile&#x27;</span>: (<span class="string">&#x27;ccc.jpg&#x27;</span>, im)&#125;</span><br><span class="line">		r = requests.post(<span class="string">&#x27;http://upload.chaojiying.net/Upload/Processing.php&#x27;</span>, data=params, files=files, headers=self.headers)</span><br><span class="line">		<span class="keyword">return</span> r.json()</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">ReportError</span>(<span class="params">self, im_id</span>):</span></span><br><span class="line">		<span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">		im_id:报错题目的图片ID</span></span><br><span class="line"><span class="string">		&quot;&quot;&quot;</span></span><br><span class="line">		params = &#123;</span><br><span class="line">			<span class="string">&#x27;id&#x27;</span>: im_id,</span><br><span class="line">		&#125;</span><br><span class="line">		params.update(self.base_params)</span><br><span class="line">		r = requests.post(<span class="string">&#x27;http://upload.chaojiying.net/Upload/ReportError.php&#x27;</span>, data=params, headers=self.headers)</span><br><span class="line">		<span class="keyword">return</span> r.json()</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">tranformImgCode</span>(<span class="params">imgPath,imgType</span>):</span></span><br><span class="line">	chaojiying = Chaojiying_Client(<span class="string">&#x27;此处是账户&#x27;</span>, <span class="string">&#x27;此处是密码&#x27;</span>, <span class="string">&#x27;此处是软件ID&#x27;</span>)	<span class="comment">#用户中心&gt;&gt;软件ID 生成一个替换 </span></span><br><span class="line">	im = <span class="built_in">open</span>(imgPath, <span class="string">&#x27;rb&#x27;</span>).read()	</span><br><span class="line">	<span class="keyword">return</span> chaojiying.PostPic(im,imgType)[<span class="string">&#x27;pic_str&#x27;</span>]	<span class="comment">#1902 验证码类型  官方网站&gt;&gt;价格体系 3.4+版 </span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(tranformImgCode(<span class="string">&#x27;./a.jpg&#x27;</span>,<span class="number">1902</span>))</span><br></pre></td></tr></table></figure></div>
-<h2 id="3-古诗文网验证码识别">3. 古诗文网验证码识别</h2>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#### 将本部分代码复制到上一节代码之后，因为要调用上述封装的tranformImgCode方法</span></span><br><span class="line"></span><br><span class="line">session = requests.Session()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 识别验证码图下载</span></span><br><span class="line">headers = &#123;</span><br><span class="line"><span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line">url = <span class="string">&#x27;https://so.gushiwen.cn/user/login.aspx?from=http://so.gushiwen.cn/user/collect.aspx&#x27;</span></span><br><span class="line">page_text = session.get(url=url, headers=headers).text</span><br><span class="line"><span class="comment"># 解析验证码图片的地址</span></span><br><span class="line">tree = etree.HTML(page_text)</span><br><span class="line">img_src = <span class="string">&#x27;https://so.gushiwen.org&#x27;</span> + tree.xpath(<span class="string">&#x27;//*[@id=&quot;imgCode&quot;]/@src&#x27;</span>)[<span class="number">0</span>]</span><br><span class="line"><span class="comment"># 将验证码图片保存本地</span></span><br><span class="line">img_data = session.get(img_src, headers=headers).content</span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;./code.jpg&#x27;</span>, <span class="string">&#x27;wb&#x27;</span>) <span class="keyword">as</span> fp:</span><br><span class="line">	fp.write(img_data)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 识别验证码</span></span><br><span class="line">code_text = tranformImgCode(<span class="string">&#x27;./code.jpg&#x27;</span>, <span class="number">1902</span>)</span><br><span class="line"><span class="built_in">print</span>(code_text)</span><br><span class="line">login_url = <span class="string">&#x27;https://so.gushiwen.cn/user/login.aspx?from=http%3a%2f%2fso.gushiwen.cn%2fuser%2fcollect.aspx&#x27;</span></span><br><span class="line">data = &#123;</span><br><span class="line">	<span class="string">&#x27;__VIEWSTATE&#x27;</span>: <span class="string">&#x27;f1ECt6+6MPtdTZMJtYOYS/7ww2d/DPy9t8JQcIt1QuOneLTbNQuYqPcCjZNbDAbfb9vj3k6f0M7EKTf0YqElM1k1A5ELwyTvUzBii+9LDRBbIMmc/jb0DJPsYfI=&#x27;</span>,</span><br><span class="line">	<span class="string">&#x27;__VIEWSTATEGENERATOR&#x27;</span>: <span class="string">&#x27;C93BE1AE&#x27;</span>,</span><br><span class="line">	<span class="string">&#x27;from&#x27;</span>: <span class="string">&#x27;http://so.gushiwen.cn/user/collect.aspx&#x27;</span>,</span><br><span class="line">	<span class="string">&#x27;email&#x27;</span>: <span class="string">&#x27;账号&#x27;</span>,</span><br><span class="line">	<span class="string">&#x27;pwd&#x27;</span>: <span class="string">&#x27;密码&#x27;</span>,</span><br><span class="line">	<span class="string">&#x27;code&#x27;</span>: code_text,  <span class="comment"># 动态变化</span></span><br><span class="line">	<span class="string">&#x27;denglu&#x27;</span>: <span class="string">&#x27;登录&#x27;</span>,</span><br><span class="line">	&#125;</span><br><span class="line"><span class="comment"># 对点击登录按钮发起请求</span></span><br><span class="line">page_text_login = session.post(url=login_url, headers=headers, data=data).text</span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;./gushiwen.html&#x27;</span>, <span class="string">&#x27;w&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>) <span class="keyword">as</span> fp:</span><br><span class="line">	fp.write(page_text_login)</span><br></pre></td></tr></table></figure></div>
-<ul>
-<li>
-<p>在请求参数中如果看到了一组乱序的请求参数，最好去验证这组请求参数是否为动态变化</p>
-<ul>
-<li>处理：
-<ul>
-<li>方式1：常规来讲一般动态变化的请求参数会被隐藏在前台页面中，那么我们就要去前台页面源码中寻找；</li>
-<li>方式2：如果前台页面没有的话，我们就可以基于抓包工具进行全局搜索。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p>基于百度AI实现的爬虫给功能：</p>
-<ul>
-<li>图像识别</li>
-<li>语音识别&amp;合成</li>
-<li>自然语言处理</li>
-</ul>
-</li>
-<li>
-<p>使用流程：</p>
-<ul>
-<li>
-<p>点击控制台进行登录</p>
-</li>
-<li>
-<p>选择想要实现的功能</p>
-</li>
-<li>
-<p>实现功能下创建一个 app</p>
-</li>
-<li>
-<p>选择对应的 pythonSDK 文档进行代码实现</p>
-<blockquote>
-<p>需求：<a href="https://duanziwang.com/">https://duanziwang.com/</a></p>
-<p>讲段子王中的段子内容爬取到本地，然后基于语音合成为mp3的音频文件，然后自己搭建一个web服务器，线上实时播放音频文件。</p>
-</blockquote>
-</li>
-</ul>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>Python</category>
-        <category>爬虫</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>爬虫</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>爬虫学习笔记(5)--requests 模块高级</title>
     <url>/posts/7b6c8a34/</url>
     <content><![CDATA[<h2 id="1-模拟登录实现流程梳理">1. 模拟登录实现流程梳理</h2>
@@ -3818,6 +3818,109 @@ range 类型的优点：不管 range 对象表示的整数序列有多长，所�
       <tags>
         <tag>Python</tag>
         <tag>爬虫</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python数据结构与算法(1)--复杂度及递归</title>
+    <url>/posts/5fc41c76/</url>
+    <content><![CDATA[<blockquote>
+<p>本文档基于<a href="https://www.bilibili.com/video/av332150111?from=search&amp;seid=6537256928008332308&amp;spm_id_from=333.337.0.0">B站视频课程</a></p>
+</blockquote>
+<h2 id="算法概念">算法概念</h2>
+<p><strong>算法（Algorithm）</strong>：一个计算过程，解决问题的办法</p>
+<p><strong>Niklaus Wirth</strong> ：“程序 = 数据结构 + 算法“</p>
+<h2 id="时间复杂度">时间复杂度</h2>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 1</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Hello World&quot;</span>)</span><br><span class="line"><span class="comment"># 2 </span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Hello World&quot;</span>)</span><br><span class="line"><span class="comment"># 3</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;Hello World&quot;</span>)        </span><br><span class="line"><span class="comment"># 4</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">        <span class="keyword">for</span> k <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&quot;Hello World&quot;</span>)</span><br></pre></td></tr></table></figure></div>
+<span id="more"></span>
+<h3 id="算法运行的快慢">算法运行的快慢</h3>
+<p>如何体现算法运行的快慢？</p>
+<p>不能够使用<strong>时间</strong>来体现算法运行的快慢，因为程序在不同的设备上运行时间也会不同，并且程序中的 n 不同，也会影响程序的运行。所以选择时间复杂度来体现算法运行的快慢。</p>
+<p>用时间复杂度来评估算法运行效率，以上述四段代码为例：</p>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 1</span></span><br><span class="line">O(<span class="number">1</span>)</span><br><span class="line"><span class="comment"># 2</span></span><br><span class="line">O(n)</span><br><span class="line"><span class="comment"># 3</span></span><br><span class="line">O(n²)</span><br><span class="line"><span class="comment"># 4</span></span><br><span class="line">O(n³)</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 时间复杂度为 O(1)，并不是 O(3)；类似生活中回答几秒，而不是几个一秒;</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Hello World&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Hello Python&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Hello Algorithm&quot;</span>)</span><br><span class="line"><span class="comment"># 时间复杂度为 O(n²)。并不是 O(n²+n)；类似生活中回答睡觉大概几个小时，而不是具体精确到分钟秒的精度;</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Hello World&quot;</span>)</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;Hello World&quot;</span>)</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 记时间复杂度为 O(log₂N) 或者 O(logN)</span></span><br><span class="line"><span class="comment"># 只要循环出现问题规格折半的时候，复杂度式子中会出现 logN</span></span><br><span class="line"><span class="keyword">while</span> n &gt; <span class="number">1</span>:</span><br><span class="line">    <span class="built_in">print</span>(n)    </span><br><span class="line">    n = n // <span class="number">2</span></span><br></pre></td></tr></table></figure></div>
+<h3 id="小结">小结</h3>
+<ol>
+<li>
+<p>时间复杂度是用来估计算法运行时间的一个式子(单位)；</p>
+</li>
+<li>
+<p><strong>一般来说</strong>，时间复杂度高的算法比时间复杂度低的算法慢；</p>
+</li>
+<li>
+<p>常见的时间复杂度(按效率排序)</p>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">O(<span class="number">1</span>) &lt; O(logn) &lt; O(n) &lt; O(nlogn) &lt; O(n²) &lt; O(n²logn) &lt; O(n³)</span><br></pre></td></tr></table></figure></div>
+</li>
+<li>
+<p>复杂问题的时间复杂度</p>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">O(n!)	O(<span class="number">2</span>ⁿ)	O(nⁿ)  ...</span><br></pre></td></tr></table></figure></div>
+</li>
+</ol>
+<h3 id="快速判断算法复杂度">快速判断算法复杂度</h3>
+<p>并不是针对所有算法都适用，适用于大多数简单情况。</p>
+<ul>
+<li>确定问题规格 n</li>
+<li>循环减半过程 logn</li>
+<li>k 层关于 n 的循环  n<sup>k</sup></li>
+</ul>
+<p>对于更加复杂的情况，则要根据算法执行过程进行判断。</p>
+<h2 id="空间复杂度">空间复杂度</h2>
+<p><strong>空间复杂度</strong>：用来评估算法内存占用大小的式子</p>
+<p>空间复杂度的表示方式与时间复杂度完全一样：</p>
+<ul>
+<li>算法使用了几个变量 O(1)</li>
+<li>算法使用了长度为 n 的一维列表  O(n)</li>
+<li>算法使用了 m 行 n 列的二维列表  O(mn)</li>
+</ul>
+<p>空间换时间：例如分布式程序。</p>
+<h2 id="复习：递归">复习：递归</h2>
+<p>递归的两个特点：</p>
+<ul>
+<li>调用自身</li>
+<li>结束条件</li>
+</ul>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># func1 不合法，没有结束条件</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func1</span>(<span class="params">x</span>):</span></span><br><span class="line">    <span class="built_in">print</span>(x)</span><br><span class="line">    func1(x-<span class="number">1</span>)</span><br><span class="line"><span class="comment"># func2 不合法，没有结束条件</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func2</span>(<span class="params">x</span>):</span></span><br><span class="line">    <span class="keyword">if</span> x &gt; <span class="number">0</span>:</span><br><span class="line">        <span class="built_in">print</span>(x)</span><br><span class="line">        func2(x+<span class="number">1</span>)</span><br><span class="line"><span class="comment"># func3 合法</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func3</span>(<span class="params">x</span>):</span></span><br><span class="line">    <span class="keyword">if</span> x &gt; <span class="number">0</span>:</span><br><span class="line">        <span class="built_in">print</span>(x)</span><br><span class="line">        func3(x-<span class="number">1</span>)</span><br><span class="line"><span class="comment"># func4 合法</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func4</span>(<span class="params">x</span>):</span></span><br><span class="line">    <span class="keyword">if</span> x &gt; <span class="number">0</span>:</span><br><span class="line">        func4(x-<span class="number">1</span>)</span><br><span class="line">        <span class="built_in">print</span>(x)</span><br></pre></td></tr></table></figure></div>
+<h2 id="汉诺塔问题">汉诺塔问题</h2>
+<p><img src="https://gitee.com/zyzhang98/typoraofimages/raw/master/Images/image-20220307090340059.png" alt="汉诺塔问题"></p>
+<ul>
+<li>大梵天创造世界的时候做了三根金刚石柱子，在一根柱子上从上往下按照大小顺序摞着64片黄金圆盘。</li>
+<li>大梵天命令婆罗门把圆盘从下面开始按大小顺序重新摆放在另一根柱子上。</li>
+<li>在小圆盘上不能放大圆盘，在三根柱子之间一次只能移动一个圆盘。</li>
+<li>64根柱子移动完毕之日，就是世界毁灭之时。</li>
+</ul>
+<h3 id="分析">分析</h3>
+<p>当 n=2 时：</p>
+<ol>
+<li>把小圆盘从 A 移动到 B</li>
+<li>把大圆盘从 A 移动到 C</li>
+<li>把小圆盘从 B 移动到 C</li>
+</ol>
+<p>当 n 个盘时(上面 n-1 个盘子看成一个整体，最下面一个盘子为一个整体)</p>
+<ol>
+<li>把 n-1 个圆盘从 A 经过 C 移动到 B (原问题的 -1 次的递归问题)</li>
+<li>把第 n 个圆盘从 A 移动到 C (因为仅一个盘子，仅一次移动即可)</li>
+<li>把 n-1 个圆盘从 B 经过 A 移动到 C</li>
+</ol>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hanoi</span>(<span class="params">n, a, b, c</span>):</span>							<span class="comment"># 把n个圆盘从a经过b移动到c</span></span><br><span class="line">    <span class="keyword">if</span> n&gt;<span class="number">0</span>:</span><br><span class="line">        hanoi(n-<span class="number">1</span>, a, c, b)						<span class="comment"># 把n-1个圆盘从a经过c移动到b</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;moving from %s to %s&quot;</span> % (a, c))  <span class="comment"># 把第n个圆盘从a移动到c</span></span><br><span class="line">        hanoi(n-<span class="number">1</span>, b, a, c)						<span class="comment"># 把n-1个圆盘从b经过a移动到c</span></span><br><span class="line">hanoi(<span class="number">3</span>, <span class="string">&quot;A&quot;</span>, <span class="string">&quot;B&quot;</span>, <span class="string">&quot;C&quot;</span>)        </span><br></pre></td></tr></table></figure></div>
+<ul>
+<li>
+<p>汉诺塔移动次数的递推式：<br>
+$$<br>
+H(n) = 2H(n-1) + 1<br>
+$$</p>
+</li>
+<li>
+<p>假设婆罗门每秒钟搬运一个盘子，则总共需要 5800 亿年。</p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Python</category>
+        <category>Algorithm</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>算法</tag>
       </tags>
   </entry>
   <entry>
@@ -4324,109 +4427,6 @@ range 类型的优点：不管 range 对象表示的整数序列有多长，所�
       </tags>
   </entry>
   <entry>
-    <title>Python数据结构与算法(1)--复杂度及递归</title>
-    <url>/posts/5fc41c76/</url>
-    <content><![CDATA[<blockquote>
-<p>本文档基于<a href="https://www.bilibili.com/video/av332150111?from=search&amp;seid=6537256928008332308&amp;spm_id_from=333.337.0.0">B站视频课程</a></p>
-</blockquote>
-<h2 id="算法概念">算法概念</h2>
-<p><strong>算法（Algorithm）</strong>：一个计算过程，解决问题的办法</p>
-<p><strong>Niklaus Wirth</strong> ：“程序 = 数据结构 + 算法“</p>
-<h2 id="时间复杂度">时间复杂度</h2>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 1</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Hello World&quot;</span>)</span><br><span class="line"><span class="comment"># 2 </span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Hello World&quot;</span>)</span><br><span class="line"><span class="comment"># 3</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;Hello World&quot;</span>)        </span><br><span class="line"><span class="comment"># 4</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">        <span class="keyword">for</span> k <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&quot;Hello World&quot;</span>)</span><br></pre></td></tr></table></figure></div>
-<span id="more"></span>
-<h3 id="算法运行的快慢">算法运行的快慢</h3>
-<p>如何体现算法运行的快慢？</p>
-<p>不能够使用<strong>时间</strong>来体现算法运行的快慢，因为程序在不同的设备上运行时间也会不同，并且程序中的 n 不同，也会影响程序的运行。所以选择时间复杂度来体现算法运行的快慢。</p>
-<p>用时间复杂度来评估算法运行效率，以上述四段代码为例：</p>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 1</span></span><br><span class="line">O(<span class="number">1</span>)</span><br><span class="line"><span class="comment"># 2</span></span><br><span class="line">O(n)</span><br><span class="line"><span class="comment"># 3</span></span><br><span class="line">O(n²)</span><br><span class="line"><span class="comment"># 4</span></span><br><span class="line">O(n³)</span><br></pre></td></tr></table></figure></div>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 时间复杂度为 O(1)，并不是 O(3)；类似生活中回答几秒，而不是几个一秒;</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Hello World&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Hello Python&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Hello Algorithm&quot;</span>)</span><br><span class="line"><span class="comment"># 时间复杂度为 O(n²)。并不是 O(n²+n)；类似生活中回答睡觉大概几个小时，而不是具体精确到分钟秒的精度;</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Hello World&quot;</span>)</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;Hello World&quot;</span>)</span><br></pre></td></tr></table></figure></div>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 记时间复杂度为 O(log₂N) 或者 O(logN)</span></span><br><span class="line"><span class="comment"># 只要循环出现问题规格折半的时候，复杂度式子中会出现 logN</span></span><br><span class="line"><span class="keyword">while</span> n &gt; <span class="number">1</span>:</span><br><span class="line">    <span class="built_in">print</span>(n)    </span><br><span class="line">    n = n // <span class="number">2</span></span><br></pre></td></tr></table></figure></div>
-<h3 id="小结">小结</h3>
-<ol>
-<li>
-<p>时间复杂度是用来估计算法运行时间的一个式子(单位)；</p>
-</li>
-<li>
-<p><strong>一般来说</strong>，时间复杂度高的算法比时间复杂度低的算法慢；</p>
-</li>
-<li>
-<p>常见的时间复杂度(按效率排序)</p>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">O(<span class="number">1</span>) &lt; O(logn) &lt; O(n) &lt; O(nlogn) &lt; O(n²) &lt; O(n²logn) &lt; O(n³)</span><br></pre></td></tr></table></figure></div>
-</li>
-<li>
-<p>复杂问题的时间复杂度</p>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">O(n!)	O(<span class="number">2</span>ⁿ)	O(nⁿ)  ...</span><br></pre></td></tr></table></figure></div>
-</li>
-</ol>
-<h3 id="快速判断算法复杂度">快速判断算法复杂度</h3>
-<p>并不是针对所有算法都适用，适用于大多数简单情况。</p>
-<ul>
-<li>确定问题规格 n</li>
-<li>循环减半过程 logn</li>
-<li>k 层关于 n 的循环  n<sup>k</sup></li>
-</ul>
-<p>对于更加复杂的情况，则要根据算法执行过程进行判断。</p>
-<h2 id="空间复杂度">空间复杂度</h2>
-<p><strong>空间复杂度</strong>：用来评估算法内存占用大小的式子</p>
-<p>空间复杂度的表示方式与时间复杂度完全一样：</p>
-<ul>
-<li>算法使用了几个变量 O(1)</li>
-<li>算法使用了长度为 n 的一维列表  O(n)</li>
-<li>算法使用了 m 行 n 列的二维列表  O(mn)</li>
-</ul>
-<p>空间换时间：例如分布式程序。</p>
-<h2 id="复习：递归">复习：递归</h2>
-<p>递归的两个特点：</p>
-<ul>
-<li>调用自身</li>
-<li>结束条件</li>
-</ul>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># func1 不合法，没有结束条件</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func1</span>(<span class="params">x</span>):</span></span><br><span class="line">    <span class="built_in">print</span>(x)</span><br><span class="line">    func1(x-<span class="number">1</span>)</span><br><span class="line"><span class="comment"># func2 不合法，没有结束条件</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func2</span>(<span class="params">x</span>):</span></span><br><span class="line">    <span class="keyword">if</span> x &gt; <span class="number">0</span>:</span><br><span class="line">        <span class="built_in">print</span>(x)</span><br><span class="line">        func2(x+<span class="number">1</span>)</span><br><span class="line"><span class="comment"># func3 合法</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func3</span>(<span class="params">x</span>):</span></span><br><span class="line">    <span class="keyword">if</span> x &gt; <span class="number">0</span>:</span><br><span class="line">        <span class="built_in">print</span>(x)</span><br><span class="line">        func3(x-<span class="number">1</span>)</span><br><span class="line"><span class="comment"># func4 合法</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func4</span>(<span class="params">x</span>):</span></span><br><span class="line">    <span class="keyword">if</span> x &gt; <span class="number">0</span>:</span><br><span class="line">        func4(x-<span class="number">1</span>)</span><br><span class="line">        <span class="built_in">print</span>(x)</span><br></pre></td></tr></table></figure></div>
-<h2 id="汉诺塔问题">汉诺塔问题</h2>
-<p><img src="https://gitee.com/zyzhang98/typoraofimages/raw/master/Images/image-20220307090340059.png" alt="汉诺塔问题"></p>
-<ul>
-<li>大梵天创造世界的时候做了三根金刚石柱子，在一根柱子上从上往下按照大小顺序摞着64片黄金圆盘。</li>
-<li>大梵天命令婆罗门把圆盘从下面开始按大小顺序重新摆放在另一根柱子上。</li>
-<li>在小圆盘上不能放大圆盘，在三根柱子之间一次只能移动一个圆盘。</li>
-<li>64根柱子移动完毕之日，就是世界毁灭之时。</li>
-</ul>
-<h3 id="分析">分析</h3>
-<p>当 n=2 时：</p>
-<ol>
-<li>把小圆盘从 A 移动到 B</li>
-<li>把大圆盘从 A 移动到 C</li>
-<li>把小圆盘从 B 移动到 C</li>
-</ol>
-<p>当 n 个盘时(上面 n-1 个盘子看成一个整体，最下面一个盘子为一个整体)</p>
-<ol>
-<li>把 n-1 个圆盘从 A 经过 C 移动到 B (原问题的 -1 次的递归问题)</li>
-<li>把第 n 个圆盘从 A 移动到 C (因为仅一个盘子，仅一次移动即可)</li>
-<li>把 n-1 个圆盘从 B 经过 A 移动到 C</li>
-</ol>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hanoi</span>(<span class="params">n, a, b, c</span>):</span>							<span class="comment"># 把n个圆盘从a经过b移动到c</span></span><br><span class="line">    <span class="keyword">if</span> n&gt;<span class="number">0</span>:</span><br><span class="line">        hanoi(n-<span class="number">1</span>, a, c, b)						<span class="comment"># 把n-1个圆盘从a经过c移动到b</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;moving from %s to %s&quot;</span> % (a, c))  <span class="comment"># 把第n个圆盘从a移动到c</span></span><br><span class="line">        hanoi(n-<span class="number">1</span>, b, a, c)						<span class="comment"># 把n-1个圆盘从b经过a移动到c</span></span><br><span class="line">hanoi(<span class="number">3</span>, <span class="string">&quot;A&quot;</span>, <span class="string">&quot;B&quot;</span>, <span class="string">&quot;C&quot;</span>)        </span><br></pre></td></tr></table></figure></div>
-<ul>
-<li>
-<p>汉诺塔移动次数的递推式：<br>
-$$<br>
-H(n) = 2H(n-1) + 1<br>
-$$</p>
-</li>
-<li>
-<p>假设婆罗门每秒钟搬运一个盘子，则总共需要 5800 亿年。</p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>Python</category>
-        <category>Algorithm</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>算法</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Python数据结构与算法(2)--查找</title>
     <url>/posts/20a79595/</url>
     <content><![CDATA[<h2 id="列表查找">列表查找</h2>
@@ -4545,7 +4545,7 @@ $$</p>
 <p>使用过程中，不涉及收费，但是可能需要关注公众号，以获取验证码，介意者请另寻他法。</p>
 </blockquote>
 <h3 id="2-2-软件准备">2.2 软件准备</h3>
-<p>需要准备的一个小软件就是 IDM。但是 IDM 正版是需要收费的，所以我们选择破解版，点击蓝色字体即可跳转至下载链接<a href="https://www.ghxi.com/pcidm.html">Internet Download Manager 6.40.8 绿色特别版</a>，在最下方有下载地址，如果需要密码访问，请输入<code>ghfreedown</code>。</p>
+<p>需要准备的一个小软件就是 IDM。但是 IDM 正版是需要收费的，所以我们选择破解版，点击蓝色字体即可跳转至下载链接<a href="https://www.ghxi.com/pcidm.html">Internet Download Manager 6.40.8 绿色特别版</a>，在最下方有下载地址，如果需要密码访问，请输入<code>ghfreedown</code></p>
 <p>或者直接点击本文下载链接进行下载。<a href="https://zyzhang.lanzouw.com/iyD75014ekaf">IDM 下载</a>，密码:<code>sdu827</code></p>
 <p>下载过程中，记得将电脑所有的杀毒软件以及防火墙关闭，因为软件安装包中含有破解程序，故可能会报毒。</p>
 <p>下载完成后，点击<code>绿化与卸载.exe</code>选择绿化，然后打开程序文件夹<code>Bin</code>中的<code>IDMan.exe</code>即为主应用程序。界面如下：</p>
@@ -4605,6 +4605,25 @@ $$</p>
         <tag>插件</tag>
         <tag>百度网盘</tag>
         <tag>IDM</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>不宠无惊过一生</title>
+    <url>/posts/cf8b4b16/</url>
+    <content><![CDATA[<p>不乱于心，不困于情。不畏将来，不念过往。如此，安好。</p>
+<p>深谋若谷，深交若水。深明大义，深悉小节。已然，静舒。</p>
+<span id="more"></span>
+<p>善宽以怀，善感以恩。善博以浪，善精以业。这般，最佳。</p>
+<p>勿感于时，勿伤于怀。勿耽美色，勿沉虚妄。从今，进取。</p>
+<p>无愧于天，无愧于地。无怍于人，无惧于鬼。这样，人生。</p>
+]]></content>
+      <categories>
+        <category>鸡汤</category>
+      </categories>
+      <tags>
+        <tag>文化</tag>
+        <tag>诗词</tag>
+        <tag>丰子恺</tag>
       </tags>
   </entry>
   <entry>
@@ -4761,25 +4780,6 @@ $$</p>
         <tag>hexo</tag>
         <tag>ayer</tag>
         <tag>美化</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>不宠无惊过一生</title>
-    <url>/posts/cf8b4b16/</url>
-    <content><![CDATA[<p>不乱于心，不困于情。不畏将来，不念过往。如此，安好。</p>
-<p>深谋若谷，深交若水。深明大义，深悉小节。已然，静舒。</p>
-<span id="more"></span>
-<p>善宽以怀，善感以恩。善博以浪，善精以业。这般，最佳。</p>
-<p>勿感于时，勿伤于怀。勿耽美色，勿沉虚妄。从今，进取。</p>
-<p>无愧于天，无愧于地。无怍于人，无惧于鬼。这样，人生。</p>
-]]></content>
-      <categories>
-        <category>鸡汤</category>
-      </categories>
-      <tags>
-        <tag>文化</tag>
-        <tag>诗词</tag>
-        <tag>丰子恺</tag>
       </tags>
   </entry>
 </search>
