@@ -1083,6 +1083,69 @@
       </tags>
   </entry>
   <entry>
+    <title>C++学习笔记(7)--指针</title>
+    <url>/posts/8f57cf62/</url>
+    <content><![CDATA[<h2 id="指针的基本概念">指针的基本概念</h2>
+<p><strong>指针的作用</strong>：可以通过指针间接访问内存</p>
+<ul>
+<li>内存编号是从0开始记录的，一般用十六进制数字表示</li>
+<li>可以利用指针变量保存地址</li>
+</ul>
+<span id="more"></span>
+<h2 id="指针变量的定义和使用">指针变量的定义和使用</h2>
+<p>指针变量定义的语法：<code>数据类型 * p </code></p>
+<p><img src="https://cdn.jsdelivr.net/gh/zyzhang827/filesimage@main/images/image-20220112111637478.png" alt=""></p>
+<div class="highlight-wrap" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 1. 定义指针</span></span><br><span class="line">    <span class="keyword">int</span> a = <span class="number">10</span>;</span><br><span class="line">    <span class="comment">// 指针定义的语法： 数据类型 * 指针变量名</span></span><br><span class="line">    <span class="keyword">int</span> * p;</span><br><span class="line">    <span class="comment">// 让指针记录变量 a 的地址</span></span><br><span class="line">    p = &amp;a;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;a 的地址为：&quot;</span> &lt;&lt; &amp;a &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;指针 p 为：&quot;</span> &lt;&lt; p &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 2. 使用指针</span></span><br><span class="line">    <span class="comment">// 可以通过解引用的方式来找到指针指向的内存</span></span><br><span class="line">    <span class="comment">// 指针前加 * 代表解引用，也就是找到指针指向的内存中的数据</span></span><br><span class="line">    *p = <span class="number">1000</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;a = &quot;</span> &lt;&lt; a &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;*p = &quot;</span> &lt;&lt; *p &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<h2 id="指针所占内存空间">指针所占内存空间</h2>
+<div class="highlight-wrap" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a = <span class="number">10</span>;</span><br><span class="line">    <span class="comment">// int *p;</span></span><br><span class="line">    <span class="comment">// p = &amp;a;</span></span><br><span class="line">    <span class="keyword">int</span> *p = &amp;a;</span><br><span class="line"></span><br><span class="line">    cout &lt;&lt; *p &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="built_in"><span class="keyword">sizeof</span></span>(p) &lt;&lt; endl;</span><br><span class="line">    <span class="comment">// 默认 win32 编译情况下都是 4 个字节大小</span></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;sizeof(int *) = &quot;</span> &lt;&lt;  <span class="built_in"><span class="keyword">sizeof</span></span>(<span class="keyword">int</span> *) &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;sizeof(char *) = &quot;</span> &lt;&lt; <span class="built_in"><span class="keyword">sizeof</span></span>(<span class="keyword">char</span> *) &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;sizeof(float *) = &quot;</span> &lt;&lt; <span class="built_in"><span class="keyword">sizeof</span></span>(<span class="keyword">float</span> *) &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;sizeof(double *) = &quot;</span> &lt;&lt; <span class="built_in"><span class="keyword">sizeof</span></span>(<span class="keyword">double</span> *) &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<h2 id="空指针和野指针">空指针和野指针</h2>
+<p><strong>空指针</strong>：指针变量指向内存中编号为 0 的空间</p>
+<p><strong>用途</strong>：初始化指针变量</p>
+<p><strong>注意</strong>：空指针指向的内存是不可以访问的</p>
+<div class="highlight-wrap" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 空指针 用于给指针变量进行初始化 </span></span><br><span class="line">    <span class="keyword">int</span> * p = <span class="literal">NULL</span>;</span><br><span class="line">    <span class="comment">//* p = 100;   空指针是不可以访问的！因为0 ~ 255为系统占用内存，不允许用户访问</span></span><br><span class="line">    <span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<p><strong>野指针</strong>：指针变量指向非法的内存空间</p>
+<div class="highlight-wrap" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 野指针在程序中应该尽量避免</span></span><br><span class="line">    <span class="comment">// 指针变量 p 指向内存地址编号为 0x1100 的空间</span></span><br><span class="line">    <span class="keyword">int</span> * p = (<span class="keyword">int</span> *)<span class="number">0x1100</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 访问野指针报错</span></span><br><span class="line">    <span class="comment">// cout &lt;&lt; *p &lt;&lt; endl;</span></span><br><span class="line"></span><br><span class="line">    <span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<h2 id="const修饰指针">const修饰指针</h2>
+<p>const 修饰指针有三种情况</p>
+<ol>
+<li>const 修饰指针	常量指针
+<ul>
+<li><code>const int * p = &amp; a;</code>：指针的指向可以修改，但是指针指向的值不可修改</li>
+</ul>
+</li>
+<li>const 修饰常量    指针常量
+<ul>
+<li><code>int * const p = &amp; a;</code>：指针的指向不可以修改，但是指针指向的值可以修改</li>
+</ul>
+</li>
+<li>const 修饰指针和常量
+<ul>
+<li><code>const int * const p = &amp; a;</code>：指针指向和指针指向的值都不可以修改</li>
+</ul>
+</li>
+</ol>
+<div class="highlight-wrap" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// const 修饰指针   常量指针</span></span><br><span class="line">    <span class="keyword">int</span> a = <span class="number">10</span>;</span><br><span class="line">    <span class="keyword">int</span> b = <span class="number">10</span>;</span><br><span class="line">    <span class="keyword">const</span> <span class="keyword">int</span> * p = &amp;a;</span><br><span class="line">    p = &amp;b;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// const 修饰常量   指针常量</span></span><br><span class="line">    <span class="keyword">int</span> * <span class="keyword">const</span> p2 = &amp;a;</span><br><span class="line">    * p2 = <span class="number">100</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// const 修饰指针和常量</span></span><br><span class="line">    <span class="keyword">const</span> <span class="keyword">int</span> * <span class="keyword">const</span> p3 = &amp;a;</span><br><span class="line">    <span class="comment">// p3 = &amp;b;   错误</span></span><br><span class="line">    <span class="comment">// * p3 = 100;  错误</span></span><br><span class="line"></span><br><span class="line">    <span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<h2 id="指针和数组">指针和数组</h2>
+<p><strong>作用</strong>：利用指针访问数组中的元素</p>
+<div class="highlight-wrap" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 利用指针访问数组中的元素</span></span><br><span class="line">    <span class="keyword">int</span> arr[<span class="number">10</span>] = &#123; <span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">10</span>&#125;;</span><br><span class="line">    <span class="keyword">int</span> * p = arr;</span><br><span class="line"></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;第一个元素：&quot;</span> &lt;&lt; arr[<span class="number">0</span>] &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;指针访问第一个元素：&quot;</span> &lt;&lt; *p &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// 利用指针遍历数组</span></span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;利用指针访问第&quot;</span> &lt;&lt; i+<span class="number">1</span> &lt;&lt; <span class="string">&quot;个元素：&quot;</span> &lt;&lt; *p &lt;&lt; endl;</span><br><span class="line">        p++;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<h2 id="指针和函数">指针和函数</h2>
+<p><strong>作用</strong>：利用指针作函数参数，可以修改实参的值</p>
+<div class="highlight-wrap" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">swap1</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> temp = a;</span><br><span class="line">    a = b;</span><br><span class="line">    b = temp;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;swap1 a = &quot;</span> &lt;&lt; a &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;swap1 b = &quot;</span> &lt;&lt; b &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">swap2</span><span class="params">(<span class="keyword">int</span> *p1, <span class="keyword">int</span> *p2)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> temp = *p1;</span><br><span class="line">    *p1 = *p2;</span><br><span class="line">    *p2 = temp;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 指针和函数</span></span><br><span class="line">    <span class="comment">// 值传递 </span></span><br><span class="line">    <span class="keyword">int</span> a = <span class="number">10</span>;</span><br><span class="line">    <span class="keyword">int</span> b = <span class="number">20</span>;</span><br><span class="line">    <span class="built_in">swap1</span>(a, b);</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;a = &quot;</span> &lt;&lt; a &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;b = &quot;</span> &lt;&lt; b &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 地址传递</span></span><br><span class="line">    <span class="comment">// 可以修饰实参</span></span><br><span class="line">    <span class="built_in">swap2</span>(&amp;a, &amp;b);</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;a2 = &quot;</span> &lt;&lt; a &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;b2 = &quot;</span> &lt;&lt; b &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<h2 id="指针、数组、函数">指针、数组、函数</h2>
+<h2 id=""></h2>
+<p>案例：封装一个函数，利用冒泡排序实现对整型数组的升序降序</p>
+<p>例如数组<code>int arr[10] = &#123;4,3,6,9,1,2,10,8,7,5&#125;;</code></p>
+<div class="highlight-wrap" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 冒泡排序  参数：数组首地址  数组长度</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">bubbleSort</span><span class="params">(<span class="keyword">int</span> * arr, <span class="keyword">int</span> len)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; len<span class="number">-1</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; len<span class="number">-1</span>-i; j++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">// 如果 j&gt;j+1 的值就交换数字</span></span><br><span class="line">            <span class="keyword">if</span> (arr[j] &gt; arr[j+<span class="number">1</span>])</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">int</span> temp = arr[j];</span><br><span class="line">                arr[j] = arr[j+<span class="number">1</span>];</span><br><span class="line">                arr[j+<span class="number">1</span>] = temp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 打印数组</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">printArray</span><span class="params">(<span class="keyword">int</span> *arr, <span class="keyword">int</span> len)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; len; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        cout &lt;&lt; arr[i] &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 1. 创建一个数组</span></span><br><span class="line">    <span class="keyword">int</span> arr[<span class="number">10</span>] = &#123; <span class="number">4</span>,<span class="number">3</span>,<span class="number">6</span>,<span class="number">9</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">10</span>,<span class="number">8</span>,<span class="number">7</span>,<span class="number">5</span> &#125;;</span><br><span class="line">    <span class="comment">// 数组长度</span></span><br><span class="line">    <span class="keyword">int</span> len = <span class="built_in"><span class="keyword">sizeof</span></span>(arr) / <span class="built_in"><span class="keyword">sizeof</span></span>(arr[<span class="number">0</span>]);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 2. 创建一个函数实现冒泡排序</span></span><br><span class="line">    <span class="built_in">bubbleSort</span>(arr, len);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 3. 打印排序后的数组</span></span><br><span class="line">    <span class="built_in">printArray</span>(arr, len);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+]]></content>
+      <categories>
+        <category>C++</category>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>C++学习笔记(6)--函数</title>
     <url>/posts/62589642/</url>
     <content><![CDATA[<h2 id="概述">概述</h2>
@@ -1142,69 +1205,6 @@
 <div class="highlight-wrap" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// swap.h 文件</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="comment">// 实现两个数字交换的函数的声明</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// swap.cpp 文件</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&quot;swap.h&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> temp = a;</span><br><span class="line">    a = b;</span><br><span class="line">    b = temp;</span><br><span class="line">    </span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;a = &quot;</span> &lt;&lt; a &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;b = &quot;</span> &lt;&lt; b &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// main 主函数文件</span></span><br><span class="line"><span class="comment">// 函数的分文件编写</span></span><br><span class="line"><span class="comment">// 实现两个数字交换的函数</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a = <span class="number">10</span>;</span><br><span class="line">    <span class="keyword">int</span> b = <span class="number">20</span>;</span><br><span class="line">    <span class="built_in">swap</span>(a, b);</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
 <p><code>Visual Studio</code>可以直接按照视频方法运文件。</p>
 <p><code>VSCode</code>中推荐使用<code>C/C++ Project Generator</code>管理项目文件。</p>
-]]></content>
-      <categories>
-        <category>C++</category>
-        <category>学习笔记</category>
-      </categories>
-      <tags>
-        <tag>C++</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>C++学习笔记(7)--指针</title>
-    <url>/posts/8f57cf62/</url>
-    <content><![CDATA[<h2 id="指针的基本概念">指针的基本概念</h2>
-<p><strong>指针的作用</strong>：可以通过指针间接访问内存</p>
-<ul>
-<li>内存编号是从0开始记录的，一般用十六进制数字表示</li>
-<li>可以利用指针变量保存地址</li>
-</ul>
-<span id="more"></span>
-<h2 id="指针变量的定义和使用">指针变量的定义和使用</h2>
-<p>指针变量定义的语法：<code>数据类型 * p </code></p>
-<p><img src="https://cdn.jsdelivr.net/gh/zyzhang827/filesimage@main/images/image-20220112111637478.png" alt=""></p>
-<div class="highlight-wrap" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 1. 定义指针</span></span><br><span class="line">    <span class="keyword">int</span> a = <span class="number">10</span>;</span><br><span class="line">    <span class="comment">// 指针定义的语法： 数据类型 * 指针变量名</span></span><br><span class="line">    <span class="keyword">int</span> * p;</span><br><span class="line">    <span class="comment">// 让指针记录变量 a 的地址</span></span><br><span class="line">    p = &amp;a;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;a 的地址为：&quot;</span> &lt;&lt; &amp;a &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;指针 p 为：&quot;</span> &lt;&lt; p &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 2. 使用指针</span></span><br><span class="line">    <span class="comment">// 可以通过解引用的方式来找到指针指向的内存</span></span><br><span class="line">    <span class="comment">// 指针前加 * 代表解引用，也就是找到指针指向的内存中的数据</span></span><br><span class="line">    *p = <span class="number">1000</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;a = &quot;</span> &lt;&lt; a &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;*p = &quot;</span> &lt;&lt; *p &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
-<h2 id="指针所占内存空间">指针所占内存空间</h2>
-<div class="highlight-wrap" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a = <span class="number">10</span>;</span><br><span class="line">    <span class="comment">// int *p;</span></span><br><span class="line">    <span class="comment">// p = &amp;a;</span></span><br><span class="line">    <span class="keyword">int</span> *p = &amp;a;</span><br><span class="line"></span><br><span class="line">    cout &lt;&lt; *p &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="built_in"><span class="keyword">sizeof</span></span>(p) &lt;&lt; endl;</span><br><span class="line">    <span class="comment">// 默认 win32 编译情况下都是 4 个字节大小</span></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;sizeof(int *) = &quot;</span> &lt;&lt;  <span class="built_in"><span class="keyword">sizeof</span></span>(<span class="keyword">int</span> *) &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;sizeof(char *) = &quot;</span> &lt;&lt; <span class="built_in"><span class="keyword">sizeof</span></span>(<span class="keyword">char</span> *) &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;sizeof(float *) = &quot;</span> &lt;&lt; <span class="built_in"><span class="keyword">sizeof</span></span>(<span class="keyword">float</span> *) &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;sizeof(double *) = &quot;</span> &lt;&lt; <span class="built_in"><span class="keyword">sizeof</span></span>(<span class="keyword">double</span> *) &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
-<h2 id="空指针和野指针">空指针和野指针</h2>
-<p><strong>空指针</strong>：指针变量指向内存中编号为 0 的空间</p>
-<p><strong>用途</strong>：初始化指针变量</p>
-<p><strong>注意</strong>：空指针指向的内存是不可以访问的</p>
-<div class="highlight-wrap" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 空指针 用于给指针变量进行初始化 </span></span><br><span class="line">    <span class="keyword">int</span> * p = <span class="literal">NULL</span>;</span><br><span class="line">    <span class="comment">//* p = 100;   空指针是不可以访问的！因为0 ~ 255为系统占用内存，不允许用户访问</span></span><br><span class="line">    <span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
-<p><strong>野指针</strong>：指针变量指向非法的内存空间</p>
-<div class="highlight-wrap" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 野指针在程序中应该尽量避免</span></span><br><span class="line">    <span class="comment">// 指针变量 p 指向内存地址编号为 0x1100 的空间</span></span><br><span class="line">    <span class="keyword">int</span> * p = (<span class="keyword">int</span> *)<span class="number">0x1100</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 访问野指针报错</span></span><br><span class="line">    <span class="comment">// cout &lt;&lt; *p &lt;&lt; endl;</span></span><br><span class="line"></span><br><span class="line">    <span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
-<h2 id="const修饰指针">const修饰指针</h2>
-<p>const 修饰指针有三种情况</p>
-<ol>
-<li>const 修饰指针	常量指针
-<ul>
-<li><code>const int * p = &amp; a;</code>：指针的指向可以修改，但是指针指向的值不可修改</li>
-</ul>
-</li>
-<li>const 修饰常量    指针常量
-<ul>
-<li><code>int * const p = &amp; a;</code>：指针的指向不可以修改，但是指针指向的值可以修改</li>
-</ul>
-</li>
-<li>const 修饰指针和常量
-<ul>
-<li><code>const int * const p = &amp; a;</code>：指针指向和指针指向的值都不可以修改</li>
-</ul>
-</li>
-</ol>
-<div class="highlight-wrap" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// const 修饰指针   常量指针</span></span><br><span class="line">    <span class="keyword">int</span> a = <span class="number">10</span>;</span><br><span class="line">    <span class="keyword">int</span> b = <span class="number">10</span>;</span><br><span class="line">    <span class="keyword">const</span> <span class="keyword">int</span> * p = &amp;a;</span><br><span class="line">    p = &amp;b;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// const 修饰常量   指针常量</span></span><br><span class="line">    <span class="keyword">int</span> * <span class="keyword">const</span> p2 = &amp;a;</span><br><span class="line">    * p2 = <span class="number">100</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// const 修饰指针和常量</span></span><br><span class="line">    <span class="keyword">const</span> <span class="keyword">int</span> * <span class="keyword">const</span> p3 = &amp;a;</span><br><span class="line">    <span class="comment">// p3 = &amp;b;   错误</span></span><br><span class="line">    <span class="comment">// * p3 = 100;  错误</span></span><br><span class="line"></span><br><span class="line">    <span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
-<h2 id="指针和数组">指针和数组</h2>
-<p><strong>作用</strong>：利用指针访问数组中的元素</p>
-<div class="highlight-wrap" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 利用指针访问数组中的元素</span></span><br><span class="line">    <span class="keyword">int</span> arr[<span class="number">10</span>] = &#123; <span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">10</span>&#125;;</span><br><span class="line">    <span class="keyword">int</span> * p = arr;</span><br><span class="line"></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;第一个元素：&quot;</span> &lt;&lt; arr[<span class="number">0</span>] &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;指针访问第一个元素：&quot;</span> &lt;&lt; *p &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// 利用指针遍历数组</span></span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;利用指针访问第&quot;</span> &lt;&lt; i+<span class="number">1</span> &lt;&lt; <span class="string">&quot;个元素：&quot;</span> &lt;&lt; *p &lt;&lt; endl;</span><br><span class="line">        p++;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
-<h2 id="指针和函数">指针和函数</h2>
-<p><strong>作用</strong>：利用指针作函数参数，可以修改实参的值</p>
-<div class="highlight-wrap" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">swap1</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> temp = a;</span><br><span class="line">    a = b;</span><br><span class="line">    b = temp;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;swap1 a = &quot;</span> &lt;&lt; a &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;swap1 b = &quot;</span> &lt;&lt; b &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">swap2</span><span class="params">(<span class="keyword">int</span> *p1, <span class="keyword">int</span> *p2)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> temp = *p1;</span><br><span class="line">    *p1 = *p2;</span><br><span class="line">    *p2 = temp;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 指针和函数</span></span><br><span class="line">    <span class="comment">// 值传递 </span></span><br><span class="line">    <span class="keyword">int</span> a = <span class="number">10</span>;</span><br><span class="line">    <span class="keyword">int</span> b = <span class="number">20</span>;</span><br><span class="line">    <span class="built_in">swap1</span>(a, b);</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;a = &quot;</span> &lt;&lt; a &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;b = &quot;</span> &lt;&lt; b &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 地址传递</span></span><br><span class="line">    <span class="comment">// 可以修饰实参</span></span><br><span class="line">    <span class="built_in">swap2</span>(&amp;a, &amp;b);</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;a2 = &quot;</span> &lt;&lt; a &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;b2 = &quot;</span> &lt;&lt; b &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
-<h2 id="指针、数组、函数">指针、数组、函数</h2>
-<h2 id=""></h2>
-<p>案例：封装一个函数，利用冒泡排序实现对整型数组的升序降序</p>
-<p>例如数组<code>int arr[10] = &#123;4,3,6,9,1,2,10,8,7,5&#125;;</code></p>
-<div class="highlight-wrap" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 冒泡排序  参数：数组首地址  数组长度</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">bubbleSort</span><span class="params">(<span class="keyword">int</span> * arr, <span class="keyword">int</span> len)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; len<span class="number">-1</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; len<span class="number">-1</span>-i; j++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">// 如果 j&gt;j+1 的值就交换数字</span></span><br><span class="line">            <span class="keyword">if</span> (arr[j] &gt; arr[j+<span class="number">1</span>])</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">int</span> temp = arr[j];</span><br><span class="line">                arr[j] = arr[j+<span class="number">1</span>];</span><br><span class="line">                arr[j+<span class="number">1</span>] = temp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 打印数组</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">printArray</span><span class="params">(<span class="keyword">int</span> *arr, <span class="keyword">int</span> len)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; len; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        cout &lt;&lt; arr[i] &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 1. 创建一个数组</span></span><br><span class="line">    <span class="keyword">int</span> arr[<span class="number">10</span>] = &#123; <span class="number">4</span>,<span class="number">3</span>,<span class="number">6</span>,<span class="number">9</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">10</span>,<span class="number">8</span>,<span class="number">7</span>,<span class="number">5</span> &#125;;</span><br><span class="line">    <span class="comment">// 数组长度</span></span><br><span class="line">    <span class="keyword">int</span> len = <span class="built_in"><span class="keyword">sizeof</span></span>(arr) / <span class="built_in"><span class="keyword">sizeof</span></span>(arr[<span class="number">0</span>]);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 2. 创建一个函数实现冒泡排序</span></span><br><span class="line">    <span class="built_in">bubbleSort</span>(arr, len);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 3. 打印排序后的数组</span></span><br><span class="line">    <span class="built_in">printArray</span>(arr, len);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
 ]]></content>
       <categories>
         <category>C++</category>
@@ -2405,25 +2405,6 @@ $$</p>
       </tags>
   </entry>
   <entry>
-    <title>Python 学习笔记(2)--转义字符</title>
-    <url>/posts/a3158c16/</url>
-    <content><![CDATA[<h2 id="1-转义字符">1. 转义字符</h2>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;hello \n world&#x27;</span>) 		 	<span class="comment"># \ +转义功能的首字母 n--newline的首字母表示换行</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;hello \t world&#x27;</span>) 		 	<span class="comment"># \t 水平制表符，一组4个空格的位置</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;helloooo \t world&#x27;</span>) </span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;hello \r world&#x27;</span>) 			<span class="comment"># \r 回车把hello覆盖</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;hello \b world&#x27;</span>) 			<span class="comment"># \b 退一个格将o退没了</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;http:\\\\www.baidu.com&#x27;</span>) 	<span class="comment"># \\输出一个\，\\\\输出2个\</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;  老师说：\’大家好\‘  &#x27;</span>)</span><br></pre></td></tr></table></figure></div>
-<span id="more"></span>
-<h2 id="2-原字符">2. 原字符</h2>
-<p>不希望字符串中的转义字符起作用，字符串前加上<code>r</code>或者<code>R</code></p>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">r&#x27;hello \n world&#x27;</span>)</span><br></pre></td></tr></table></figure></div>
-<p><u>注意事项</u>：最后一个字符不能是反斜杠\，但是是两个\\可以。</p>
-]]></content>
-      <categories>
-        <category>Python</category>
-        <category>基础语法</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Python 学习笔记(18)--案例实操</title>
     <url>/posts/3816cdcc/</url>
     <content><![CDATA[<h2 id="1-案例一">1. 案例一</h2>
@@ -2524,6 +2505,25 @@ $$</p>
 <div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">show_info</span>():</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;输入提示数字，执行相应的操作：0.退出  1.查看登录日志&#x27;</span>)</span><br><span class="line">    </span><br><span class="line"><span class="comment"># 记录日志</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">write_logininfo</span>(<span class="params">username</span>):</span></span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;log.txt&#x27;</span>,<span class="string">&#x27;a&#x27;</span>) <span class="keyword">as</span> file:</span><br><span class="line">        s = <span class="string">f&#x27;用户名<span class="subst">&#123;username&#125;</span>，登录时间：<span class="subst">&#123;time.strftime(<span class="string">&quot;%Y-%m-%d %H:%M:%S&quot;</span>,time.localtime(time.time()))&#125;</span>&#x27;</span></span><br><span class="line">        file.write(s)</span><br><span class="line">        file.write(<span class="string">&#x27;\n&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 读取日志</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">read_logininfo</span>():</span></span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;log.txt&#x27;</span>,<span class="string">&#x27;r&#x27;</span>) <span class="keyword">as</span> file:</span><br><span class="line">        <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">            line = file.readlin()</span><br><span class="line">            <span class="keyword">if</span> line == <span class="string">&#x27;&#x27;</span>:</span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">               <span class="built_in">print</span>(line,end = <span class="string">&#x27;&#x27;</span>) </span><br><span class="line">                        </span><br><span class="line"><span class="keyword">if</span> *name* == <span class="string">&#x27;*main*&#x27;</span>:</span><br><span class="line">    username = <span class="built_in">input</span>(<span class="string">&#x27;请输入用户名：&#x27;</span>)</span><br><span class="line">    pwd = <span class="built_in">input</span>(<span class="string">&#x27;请输入密码：&#x27;</span>)</span><br><span class="line">    <span class="keyword">if</span> <span class="string">&#x27;admin&#x27;</span> == username <span class="keyword">and</span> <span class="string">&#x27;admin&#x27;</span> == pwd:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;登录成功！&#x27;</span>)</span><br><span class="line">        write_logininfo(username)</span><br><span class="line">        show_info()</span><br><span class="line">        num = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&#x27;请输入操作数字&#x27;</span>))</span><br><span class="line">        <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">            <span class="keyword">if</span> num == <span class="number">0</span>:</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">&#x27;退出成功&#x27;</span>)</span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">            <span class="keyword">elif</span> num == <span class="number">1</span>:</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">&#x27;查看登录日志&#x27;</span>)</span><br><span class="line">                read_logininfo()</span><br><span class="line">                num = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&#x27;输入操作数字：&#x27;</span>))</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">&#x27;您输入的数字有误&#x27;</span>)</span><br><span class="line">                show_info()</span><br><span class="line">                num = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&#x27;输入操作数字：&#x27;</span>))</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;对不起，用户名和密码不正确！&#x27;</span>)</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">print</span>(time.time())</span><br><span class="line">    <span class="built_in">print</span>(time.localtime(time.time()))</span><br><span class="line">    <span class="built_in">print</span>(time.strftime(<span class="string">&#x27;%Y-%m-%d %H:%M:%S&#x27;</span>,time.localtime(time.time()))</span><br></pre></td></tr></table></figure></div>
 <h3 id="（2）模拟淘宝客服的自动回复">（2）模拟淘宝客服的自动回复</h3>
 <div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;&#x27;replay.txt文档</span></span><br><span class="line"><span class="string">订单|如果您有任何订单问题，可以登录淘宝账号，点击“我的订单”，查看订单详情</span></span><br><span class="line"><span class="string">物流|如果您有任何物流问题，可以登录淘宝账号，点击“我的订单”，查看商品系统</span></span><br><span class="line"><span class="string">账户|如果您有任何账号问题，可以联系淘宝客服，电话：XXXX-XXXXXX</span></span><br><span class="line"><span class="string">支付|如果您有任何支付问题，可以联系支付宝客服，QQ：XXXXXXXXX</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">find_answer</span>(<span class="params">question</span>):</span></span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;replay.txt&#x27;</span>,<span class="string">&#x27;r&#x27;</span>,encoding = <span class="string">&#x27;gbk&#x27;</span>) <span class="keyword">as</span> file:</span><br><span class="line">        <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">            line = file.readline()</span><br><span class="line">            <span class="keyword">if</span> <span class="keyword">not</span> line:		<span class="comment"># if line ==&#x27;&#x27;到文件末尾退出</span></span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">            <span class="comment"># 字符串的分隔</span></span><br><span class="line">            keyword = line.split(<span class="string">&#x27;|&#x27;</span>)[<span class="number">0</span>]</span><br><span class="line">            reply = line.split(<span class="string">&#x27;|&#x27;</span>)[<span class="number">1</span>]</span><br><span class="line">            <span class="keyword">if</span> keyword <span class="keyword">in</span> question:</span><br><span class="line">                <span class="keyword">return</span> reply</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> *name* == <span class="string">&#x27;*main*&#x27;</span>:</span><br><span class="line">    question = <span class="built_in">input</span>(<span class="string">&#x27;Hi，您好，小蜜在此等主任很久了，有什么烦恼快和小蜜说吧&#x27;</span>)</span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        <span class="keyword">if</span> question == <span class="string">&#x27;bye&#x27;</span>:</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">        <span class="comment"># 开始在文件中查找</span></span><br><span class="line">        replay = find_answer(question)</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> replay:		<span class="comment"># 如果回复的是False，not False则为True</span></span><br><span class="line">            question = <span class="built_in">input</span>(<span class="string">&#x27;小蜜不知道你在说什么，您可以问一些关于订单、物流、账户、支付等问题（退出请输入bye）&#x27;</span>)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="built_in">print</span>(replay)</span><br><span class="line">            question = <span class="built_in">input</span>(<span class="string">&#x27;小主，您还可以问一些关于订单、物流、账户、支付等问题（退出请输入bye&#x27;</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;小主再见&#x27;</span>)</span><br></pre></td></tr></table></figure></div>
+]]></content>
+      <categories>
+        <category>Python</category>
+        <category>基础语法</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python 学习笔记(2)--转义字符</title>
+    <url>/posts/a3158c16/</url>
+    <content><![CDATA[<h2 id="1-转义字符">1. 转义字符</h2>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;hello \n world&#x27;</span>) 		 	<span class="comment"># \ +转义功能的首字母 n--newline的首字母表示换行</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;hello \t world&#x27;</span>) 		 	<span class="comment"># \t 水平制表符，一组4个空格的位置</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;helloooo \t world&#x27;</span>) </span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;hello \r world&#x27;</span>) 			<span class="comment"># \r 回车把hello覆盖</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;hello \b world&#x27;</span>) 			<span class="comment"># \b 退一个格将o退没了</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;http:\\\\www.baidu.com&#x27;</span>) 	<span class="comment"># \\输出一个\，\\\\输出2个\</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;  老师说：\’大家好\‘  &#x27;</span>)</span><br></pre></td></tr></table></figure></div>
+<span id="more"></span>
+<h2 id="2-原字符">2. 原字符</h2>
+<p>不希望字符串中的转义字符起作用，字符串前加上<code>r</code>或者<code>R</code></p>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">r&#x27;hello \n world&#x27;</span>)</span><br></pre></td></tr></table></figure></div>
+<p><u>注意事项</u>：最后一个字符不能是反斜杠\，但是是两个\\可以。</p>
 ]]></content>
       <categories>
         <category>Python</category>
@@ -2878,57 +2878,6 @@ range 类型的优点：不管 range 对象表示的整数序列有多长，所�
       </tags>
   </entry>
   <entry>
-    <title>Python 学习笔记(8)--字典</title>
-    <url>/posts/575736df/</url>
-    <content><![CDATA[<p>什么是<em>字典</em>？Python内置的数据结构之一，与列表一样是一个可变序列；以键值对的方式存储数据，字典是一个无序的序列。</p>
-<p><code>scores = &#123;'张三':100,'李四':98,'王五':45&#125;</code></p>
-<p><em>字典的实现原理</em>：字典的实现原理与查字典类似，查字典是先根据部首或拼音查找对应的页码，Python中的字典是根据key查找Value所在的位置。</p>
-<span id="more"></span>
-<h2 id="1-创建字典">1. 创建字典</h2>
-<ul>
-<li>使用花括号：<code>scores=&#123;'张三':100,'李四':98,'王五':45&#125;</code></li>
-<li>使用dict内置函数：<code>dict(name='jack',age =20)</code></li>
-</ul>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;&#x27;使用&#123;&#125;创建字典&#x27;&#x27;&#x27;</span></span><br><span class="line">scores = &#123;<span class="string">&#x27;张三&#x27;</span>:<span class="number">100</span>,<span class="string">&#x27;李四&#x27;</span>:<span class="number">98</span>,<span class="string">&#x27;王五&#x27;</span>:<span class="number">45</span>&#125;</span><br><span class="line"><span class="built_in">print</span>(scores)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(scores))</span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;使用内置函数dict&#x27;&#x27;&#x27;</span></span><br><span class="line">student = <span class="built_in">dict</span>(name=<span class="string">&#x27;jack&#x27;</span>,age=<span class="number">20</span>)</span><br><span class="line"><span class="built_in">print</span>(student)</span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;空字典&#x27;&#x27;&#x27;</span></span><br><span class="line">d = &#123;&#125;</span><br><span class="line"><span class="built_in">print</span>(d)</span><br></pre></td></tr></table></figure></div>
-<h2 id="2-字典中元素的获取">2. 字典中元素的获取</h2>
-<p>[]取值与使用get()取值的区别：</p>
-<ul>
-<li>[]如果字典中不存在指定的key，抛出keyError异常</li>
-<li><code>get()</code>方法取值，如果字典中不存在指定的key，并不会抛出KeyError而是返回None，可以通过参数设置默认的Value，以便指定的key不存在时返回</li>
-</ul>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;&#x27;获取字典中的值&#x27;&#x27;&#x27;</span></span><br><span class="line">scores = &#123;<span class="string">&#x27;张三&#x27;</span>:<span class="number">100</span>,<span class="string">&#x27;李四&#x27;</span>:<span class="number">98</span>,<span class="string">&#x27;王五&#x27;</span>:<span class="number">45</span>&#125;</span><br><span class="line"><span class="string">&#x27;&#x27;&#x27; 第一种方式，使用[]&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(scores[<span class="string">&#x27;张三&#x27;</span>])</span><br><span class="line"><span class="built_in">print</span>(scores[<span class="string">&#x27;陈六&#x27;</span>])         				<span class="comment"># KeyError</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;第二种方式 使用get&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(scores,get(<span class="string">&#x27;张三&#x27;</span>))</span><br><span class="line"><span class="built_in">print</span>(scores,get(<span class="string">&#x27;陈六&#x27;</span>))     				<span class="comment"># None</span></span><br><span class="line"><span class="built_in">print</span>(scores,get(<span class="string">&#x27;麻七&#x27;</span>,<span class="number">99</span>))  				<span class="comment"># 99是在查找麻七对应的value不存在时，提供的一个返回值</span></span><br></pre></td></tr></table></figure></div>
-<h2 id="3-字典的常用操作">3. 字典的常用操作</h2>
-<ul>
-<li>key的判断：<code>in</code>和<code>not in</code></li>
-<li>字典元素的删除del</li>
-<li>字典元素的新增</li>
-</ul>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;&#x27;key的判断&#x27;&#x27;&#x27;</span></span><br><span class="line">scores = &#123;<span class="string">&#x27;张三&#x27;</span>:<span class="number">100</span>,<span class="string">&#x27;李四&#x27;</span>:<span class="number">98</span>,<span class="string">&#x27;王五&#x27;</span>:<span class="number">45</span>&#125;</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;张三&#x27;</span> <span class="keyword">in</span> scores)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;张三&#x27;</span> <span class="keyword">not</span> <span class="keyword">in</span> scores)</span><br><span class="line"></span><br><span class="line"><span class="keyword">del</span> scores[<span class="string">&#x27;张三&#x27;</span>]    				<span class="comment"># 删除指定的key-value对</span></span><br><span class="line"><span class="comment">#scores.clear()      				 # 清空字典元素</span></span><br><span class="line"><span class="built_in">print</span>(scores)</span><br><span class="line">scores[<span class="string">&#x27;陈六&#x27;</span>] = <span class="number">98</span>   				<span class="comment"># 新增元素</span></span><br><span class="line"><span class="built_in">print</span>(scores)</span><br><span class="line">scores[<span class="string">&#x27;陈六&#x27;</span>] = <span class="number">100</span>  				<span class="comment"># 修改元素</span></span><br><span class="line"><span class="built_in">print</span>(scores)</span><br></pre></td></tr></table></figure></div>
-<p>获取字典视图的三个方法：<code>keys</code>、<code>values</code>、<code>items</code></p>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">scores = &#123;<span class="string">&#x27;张三&#x27;</span>:<span class="number">100</span>,<span class="string">&#x27;李四&#x27;</span>:<span class="number">98</span>,<span class="string">&#x27;王五&#x27;</span>:<span class="number">45</span>&#125;</span><br><span class="line"><span class="comment"># 获取所有的key</span></span><br><span class="line">keys = scores.keys()</span><br><span class="line"><span class="built_in">print</span>(keys)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(keys))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">list</span>(keys))  				<span class="comment"># 将所有的key组成的视图转成列表</span></span><br><span class="line"><span class="comment"># 获取所有的Value</span></span><br><span class="line">values = scores.values()</span><br><span class="line"><span class="built_in">print</span>(values)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(values))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">list</span>(values))</span><br><span class="line"><span class="comment"># 获取所有的key-value对</span></span><br><span class="line">items = scores.items()</span><br><span class="line"><span class="built_in">print</span>(items)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">list</span>(items))   			<span class="comment"># 转换之后的列表元素为元组</span></span><br></pre></td></tr></table></figure></div>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 字典元素的遍历</span></span><br><span class="line">scores = &#123;<span class="string">&#x27;张三&#x27;</span>:<span class="number">100</span>,<span class="string">&#x27;李四&#x27;</span>:<span class="number">98</span>,<span class="string">&#x27;王五&#x27;</span>:<span class="number">45</span>&#125;</span><br><span class="line"><span class="keyword">for</span> item <span class="keyword">in</span> scores:</span><br><span class="line">  <span class="built_in">print</span>(item,scores[item],scores.get(item))</span><br></pre></td></tr></table></figure></div>
-<h2 id="4-字典的特点">4. 字典的特点</h2>
-<ul>
-<li>字典中的所有元素都是一个<code>key-value</code>对，key不允许重复，value可以重复</li>
-<li>字典中的元素是无序的</li>
-<li>字典中的key必须是不可变对象</li>
-<li>字典也可以根据需要动态地伸缩</li>
-<li>字典会浪费较大地内存，是一个使用空间换时间地数据结构</li>
-</ul>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">d = &#123;<span class="string">&#x27;name&#x27;</span>:<span class="string">&#x27;张三&#x27;</span>,<span class="string">&#x27;name&#x27;</span>:<span class="string">&#x27;李四&#x27;</span>&#125;</span><br><span class="line"><span class="built_in">print</span>(d)</span><br><span class="line"></span><br><span class="line">d = &#123;<span class="string">&#x27;name&#x27;</span>:<span class="string">&#x27;张三&#x27;</span>,<span class="string">&#x27;nikename&#x27;</span>:<span class="string">&#x27;张三&#x27;</span>&#125;</span><br><span class="line"><span class="built_in">print</span>(d)</span><br></pre></td></tr></table></figure></div>
-<h2 id="5-字典生成式">5. 字典生成式</h2>
-<p>内置函数<code>zip()</code>:用于将可迭代对象作为参数，将对象中对应地元素打包成一个元组，然后返回由这些元组组成的列表</p>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">items = [<span class="string">&#x27;Fruits&#x27;</span>,<span class="string">&#x27;Books&#x27;</span>,<span class="string">&#x27;Others&#x27;</span>]</span><br><span class="line">prices = [<span class="number">96</span>,<span class="number">78</span>,<span class="number">85</span>,<span class="number">100</span>,<span class="number">120</span>]</span><br><span class="line">d = &#123;item.upper():prices  <span class="keyword">for</span> item,prices <span class="keyword">in</span> <span class="built_in">zip</span>(items,prices)&#125;</span><br><span class="line"><span class="built_in">print</span>(d)</span><br></pre></td></tr></table></figure></div>
-]]></content>
-      <categories>
-        <category>Python</category>
-        <category>基础语法</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Python 学习笔记(9)--元组、集合</title>
     <url>/posts/3c20665e/</url>
     <content><![CDATA[<h2 id="1-元组">1. 元组</h2>
@@ -3018,6 +2967,57 @@ range 类型的优点：不管 range 对象表示的整数序列有多长，所�
 </tr>
 </tbody>
 </table>
+]]></content>
+      <categories>
+        <category>Python</category>
+        <category>基础语法</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python 学习笔记(8)--字典</title>
+    <url>/posts/575736df/</url>
+    <content><![CDATA[<p>什么是<em>字典</em>？Python内置的数据结构之一，与列表一样是一个可变序列；以键值对的方式存储数据，字典是一个无序的序列。</p>
+<p><code>scores = &#123;'张三':100,'李四':98,'王五':45&#125;</code></p>
+<p><em>字典的实现原理</em>：字典的实现原理与查字典类似，查字典是先根据部首或拼音查找对应的页码，Python中的字典是根据key查找Value所在的位置。</p>
+<span id="more"></span>
+<h2 id="1-创建字典">1. 创建字典</h2>
+<ul>
+<li>使用花括号：<code>scores=&#123;'张三':100,'李四':98,'王五':45&#125;</code></li>
+<li>使用dict内置函数：<code>dict(name='jack',age =20)</code></li>
+</ul>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;&#x27;使用&#123;&#125;创建字典&#x27;&#x27;&#x27;</span></span><br><span class="line">scores = &#123;<span class="string">&#x27;张三&#x27;</span>:<span class="number">100</span>,<span class="string">&#x27;李四&#x27;</span>:<span class="number">98</span>,<span class="string">&#x27;王五&#x27;</span>:<span class="number">45</span>&#125;</span><br><span class="line"><span class="built_in">print</span>(scores)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(scores))</span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;使用内置函数dict&#x27;&#x27;&#x27;</span></span><br><span class="line">student = <span class="built_in">dict</span>(name=<span class="string">&#x27;jack&#x27;</span>,age=<span class="number">20</span>)</span><br><span class="line"><span class="built_in">print</span>(student)</span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;空字典&#x27;&#x27;&#x27;</span></span><br><span class="line">d = &#123;&#125;</span><br><span class="line"><span class="built_in">print</span>(d)</span><br></pre></td></tr></table></figure></div>
+<h2 id="2-字典中元素的获取">2. 字典中元素的获取</h2>
+<p>[]取值与使用get()取值的区别：</p>
+<ul>
+<li>[]如果字典中不存在指定的key，抛出keyError异常</li>
+<li><code>get()</code>方法取值，如果字典中不存在指定的key，并不会抛出KeyError而是返回None，可以通过参数设置默认的Value，以便指定的key不存在时返回</li>
+</ul>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;&#x27;获取字典中的值&#x27;&#x27;&#x27;</span></span><br><span class="line">scores = &#123;<span class="string">&#x27;张三&#x27;</span>:<span class="number">100</span>,<span class="string">&#x27;李四&#x27;</span>:<span class="number">98</span>,<span class="string">&#x27;王五&#x27;</span>:<span class="number">45</span>&#125;</span><br><span class="line"><span class="string">&#x27;&#x27;&#x27; 第一种方式，使用[]&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(scores[<span class="string">&#x27;张三&#x27;</span>])</span><br><span class="line"><span class="built_in">print</span>(scores[<span class="string">&#x27;陈六&#x27;</span>])         				<span class="comment"># KeyError</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;第二种方式 使用get&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(scores,get(<span class="string">&#x27;张三&#x27;</span>))</span><br><span class="line"><span class="built_in">print</span>(scores,get(<span class="string">&#x27;陈六&#x27;</span>))     				<span class="comment"># None</span></span><br><span class="line"><span class="built_in">print</span>(scores,get(<span class="string">&#x27;麻七&#x27;</span>,<span class="number">99</span>))  				<span class="comment"># 99是在查找麻七对应的value不存在时，提供的一个返回值</span></span><br></pre></td></tr></table></figure></div>
+<h2 id="3-字典的常用操作">3. 字典的常用操作</h2>
+<ul>
+<li>key的判断：<code>in</code>和<code>not in</code></li>
+<li>字典元素的删除del</li>
+<li>字典元素的新增</li>
+</ul>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;&#x27;key的判断&#x27;&#x27;&#x27;</span></span><br><span class="line">scores = &#123;<span class="string">&#x27;张三&#x27;</span>:<span class="number">100</span>,<span class="string">&#x27;李四&#x27;</span>:<span class="number">98</span>,<span class="string">&#x27;王五&#x27;</span>:<span class="number">45</span>&#125;</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;张三&#x27;</span> <span class="keyword">in</span> scores)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;张三&#x27;</span> <span class="keyword">not</span> <span class="keyword">in</span> scores)</span><br><span class="line"></span><br><span class="line"><span class="keyword">del</span> scores[<span class="string">&#x27;张三&#x27;</span>]    				<span class="comment"># 删除指定的key-value对</span></span><br><span class="line"><span class="comment">#scores.clear()      				 # 清空字典元素</span></span><br><span class="line"><span class="built_in">print</span>(scores)</span><br><span class="line">scores[<span class="string">&#x27;陈六&#x27;</span>] = <span class="number">98</span>   				<span class="comment"># 新增元素</span></span><br><span class="line"><span class="built_in">print</span>(scores)</span><br><span class="line">scores[<span class="string">&#x27;陈六&#x27;</span>] = <span class="number">100</span>  				<span class="comment"># 修改元素</span></span><br><span class="line"><span class="built_in">print</span>(scores)</span><br></pre></td></tr></table></figure></div>
+<p>获取字典视图的三个方法：<code>keys</code>、<code>values</code>、<code>items</code></p>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">scores = &#123;<span class="string">&#x27;张三&#x27;</span>:<span class="number">100</span>,<span class="string">&#x27;李四&#x27;</span>:<span class="number">98</span>,<span class="string">&#x27;王五&#x27;</span>:<span class="number">45</span>&#125;</span><br><span class="line"><span class="comment"># 获取所有的key</span></span><br><span class="line">keys = scores.keys()</span><br><span class="line"><span class="built_in">print</span>(keys)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(keys))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">list</span>(keys))  				<span class="comment"># 将所有的key组成的视图转成列表</span></span><br><span class="line"><span class="comment"># 获取所有的Value</span></span><br><span class="line">values = scores.values()</span><br><span class="line"><span class="built_in">print</span>(values)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(values))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">list</span>(values))</span><br><span class="line"><span class="comment"># 获取所有的key-value对</span></span><br><span class="line">items = scores.items()</span><br><span class="line"><span class="built_in">print</span>(items)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">list</span>(items))   			<span class="comment"># 转换之后的列表元素为元组</span></span><br></pre></td></tr></table></figure></div>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 字典元素的遍历</span></span><br><span class="line">scores = &#123;<span class="string">&#x27;张三&#x27;</span>:<span class="number">100</span>,<span class="string">&#x27;李四&#x27;</span>:<span class="number">98</span>,<span class="string">&#x27;王五&#x27;</span>:<span class="number">45</span>&#125;</span><br><span class="line"><span class="keyword">for</span> item <span class="keyword">in</span> scores:</span><br><span class="line">  <span class="built_in">print</span>(item,scores[item],scores.get(item))</span><br></pre></td></tr></table></figure></div>
+<h2 id="4-字典的特点">4. 字典的特点</h2>
+<ul>
+<li>字典中的所有元素都是一个<code>key-value</code>对，key不允许重复，value可以重复</li>
+<li>字典中的元素是无序的</li>
+<li>字典中的key必须是不可变对象</li>
+<li>字典也可以根据需要动态地伸缩</li>
+<li>字典会浪费较大地内存，是一个使用空间换时间地数据结构</li>
+</ul>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">d = &#123;<span class="string">&#x27;name&#x27;</span>:<span class="string">&#x27;张三&#x27;</span>,<span class="string">&#x27;name&#x27;</span>:<span class="string">&#x27;李四&#x27;</span>&#125;</span><br><span class="line"><span class="built_in">print</span>(d)</span><br><span class="line"></span><br><span class="line">d = &#123;<span class="string">&#x27;name&#x27;</span>:<span class="string">&#x27;张三&#x27;</span>,<span class="string">&#x27;nikename&#x27;</span>:<span class="string">&#x27;张三&#x27;</span>&#125;</span><br><span class="line"><span class="built_in">print</span>(d)</span><br></pre></td></tr></table></figure></div>
+<h2 id="5-字典生成式">5. 字典生成式</h2>
+<p>内置函数<code>zip()</code>:用于将可迭代对象作为参数，将对象中对应地元素打包成一个元组，然后返回由这些元组组成的列表</p>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">items = [<span class="string">&#x27;Fruits&#x27;</span>,<span class="string">&#x27;Books&#x27;</span>,<span class="string">&#x27;Others&#x27;</span>]</span><br><span class="line">prices = [<span class="number">96</span>,<span class="number">78</span>,<span class="number">85</span>,<span class="number">100</span>,<span class="number">120</span>]</span><br><span class="line">d = &#123;item.upper():prices  <span class="keyword">for</span> item,prices <span class="keyword">in</span> <span class="built_in">zip</span>(items,prices)&#125;</span><br><span class="line"><span class="built_in">print</span>(d)</span><br></pre></td></tr></table></figure></div>
 ]]></content>
       <categories>
         <category>Python</category>
@@ -4202,6 +4202,109 @@ range 类型的优点：不管 range 对象表示的整数序列有多长，所�
       </tags>
   </entry>
   <entry>
+    <title>Python数据结构与算法(1)--复杂度及递归</title>
+    <url>/posts/5fc41c76/</url>
+    <content><![CDATA[<blockquote>
+<p>本文档基于<a href="https://www.bilibili.com/video/av332150111?from=search&amp;seid=6537256928008332308&amp;spm_id_from=333.337.0.0">B站视频课程</a></p>
+</blockquote>
+<h2 id="算法概念">算法概念</h2>
+<p><strong>算法（Algorithm）</strong>：一个计算过程，解决问题的办法</p>
+<p><strong>Niklaus Wirth</strong> ：“程序 = 数据结构 + 算法“</p>
+<h2 id="时间复杂度">时间复杂度</h2>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 1</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Hello World&quot;</span>)</span><br><span class="line"><span class="comment"># 2 </span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Hello World&quot;</span>)</span><br><span class="line"><span class="comment"># 3</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;Hello World&quot;</span>)        </span><br><span class="line"><span class="comment"># 4</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">        <span class="keyword">for</span> k <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&quot;Hello World&quot;</span>)</span><br></pre></td></tr></table></figure></div>
+<span id="more"></span>
+<h3 id="算法运行的快慢">算法运行的快慢</h3>
+<p>如何体现算法运行的快慢？</p>
+<p>不能够使用<strong>时间</strong>来体现算法运行的快慢，因为程序在不同的设备上运行时间也会不同，并且程序中的 n 不同，也会影响程序的运行。所以选择时间复杂度来体现算法运行的快慢。</p>
+<p>用时间复杂度来评估算法运行效率，以上述四段代码为例：</p>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 1</span></span><br><span class="line">O(<span class="number">1</span>)</span><br><span class="line"><span class="comment"># 2</span></span><br><span class="line">O(n)</span><br><span class="line"><span class="comment"># 3</span></span><br><span class="line">O(n²)</span><br><span class="line"><span class="comment"># 4</span></span><br><span class="line">O(n³)</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 时间复杂度为 O(1)，并不是 O(3)；类似生活中回答几秒，而不是几个一秒;</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Hello World&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Hello Python&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Hello Algorithm&quot;</span>)</span><br><span class="line"><span class="comment"># 时间复杂度为 O(n²)。并不是 O(n²+n)；类似生活中回答睡觉大概几个小时，而不是具体精确到分钟秒的精度;</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Hello World&quot;</span>)</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;Hello World&quot;</span>)</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 记时间复杂度为 O(log₂N) 或者 O(logN)</span></span><br><span class="line"><span class="comment"># 只要循环出现问题规格折半的时候，复杂度式子中会出现 logN</span></span><br><span class="line"><span class="keyword">while</span> n &gt; <span class="number">1</span>:</span><br><span class="line">    <span class="built_in">print</span>(n)    </span><br><span class="line">    n = n // <span class="number">2</span></span><br></pre></td></tr></table></figure></div>
+<h3 id="小结">小结</h3>
+<ol>
+<li>
+<p>时间复杂度是用来估计算法运行时间的一个式子(单位)；</p>
+</li>
+<li>
+<p><strong>一般来说</strong>，时间复杂度高的算法比时间复杂度低的算法慢；</p>
+</li>
+<li>
+<p>常见的时间复杂度(按效率排序)</p>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">O(<span class="number">1</span>) &lt; O(logn) &lt; O(n) &lt; O(nlogn) &lt; O(n²) &lt; O(n²logn) &lt; O(n³)</span><br></pre></td></tr></table></figure></div>
+</li>
+<li>
+<p>复杂问题的时间复杂度</p>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">O(n!)	O(<span class="number">2</span>ⁿ)	O(nⁿ)  ...</span><br></pre></td></tr></table></figure></div>
+</li>
+</ol>
+<h3 id="快速判断算法复杂度">快速判断算法复杂度</h3>
+<p>并不是针对所有算法都适用，适用于大多数简单情况。</p>
+<ul>
+<li>确定问题规格 n</li>
+<li>循环减半过程 logn</li>
+<li>k 层关于 n 的循环  n<sup>k</sup></li>
+</ul>
+<p>对于更加复杂的情况，则要根据算法执行过程进行判断。</p>
+<h2 id="空间复杂度">空间复杂度</h2>
+<p><strong>空间复杂度</strong>：用来评估算法内存占用大小的式子</p>
+<p>空间复杂度的表示方式与时间复杂度完全一样：</p>
+<ul>
+<li>算法使用了几个变量 O(1)</li>
+<li>算法使用了长度为 n 的一维列表  O(n)</li>
+<li>算法使用了 m 行 n 列的二维列表  O(mn)</li>
+</ul>
+<p>空间换时间：例如分布式程序。</p>
+<h2 id="复习：递归">复习：递归</h2>
+<p>递归的两个特点：</p>
+<ul>
+<li>调用自身</li>
+<li>结束条件</li>
+</ul>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># func1 不合法，没有结束条件</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func1</span>(<span class="params">x</span>):</span></span><br><span class="line">    <span class="built_in">print</span>(x)</span><br><span class="line">    func1(x-<span class="number">1</span>)</span><br><span class="line"><span class="comment"># func2 不合法，没有结束条件</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func2</span>(<span class="params">x</span>):</span></span><br><span class="line">    <span class="keyword">if</span> x &gt; <span class="number">0</span>:</span><br><span class="line">        <span class="built_in">print</span>(x)</span><br><span class="line">        func2(x+<span class="number">1</span>)</span><br><span class="line"><span class="comment"># func3 合法</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func3</span>(<span class="params">x</span>):</span></span><br><span class="line">    <span class="keyword">if</span> x &gt; <span class="number">0</span>:</span><br><span class="line">        <span class="built_in">print</span>(x)</span><br><span class="line">        func3(x-<span class="number">1</span>)</span><br><span class="line"><span class="comment"># func4 合法</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func4</span>(<span class="params">x</span>):</span></span><br><span class="line">    <span class="keyword">if</span> x &gt; <span class="number">0</span>:</span><br><span class="line">        func4(x-<span class="number">1</span>)</span><br><span class="line">        <span class="built_in">print</span>(x)</span><br></pre></td></tr></table></figure></div>
+<h2 id="汉诺塔问题">汉诺塔问题</h2>
+<p><img src="https://gitee.com/zyzhang98/typoraofimages/raw/master/Images/image-20220307090340059.png" alt="汉诺塔问题"></p>
+<ul>
+<li>大梵天创造世界的时候做了三根金刚石柱子，在一根柱子上从上往下按照大小顺序摞着64片黄金圆盘。</li>
+<li>大梵天命令婆罗门把圆盘从下面开始按大小顺序重新摆放在另一根柱子上。</li>
+<li>在小圆盘上不能放大圆盘，在三根柱子之间一次只能移动一个圆盘。</li>
+<li>64根柱子移动完毕之日，就是世界毁灭之时。</li>
+</ul>
+<h3 id="分析">分析</h3>
+<p>当 n=2 时：</p>
+<ol>
+<li>把小圆盘从 A 移动到 B</li>
+<li>把大圆盘从 A 移动到 C</li>
+<li>把小圆盘从 B 移动到 C</li>
+</ol>
+<p>当 n 个盘时(上面 n-1 个盘子看成一个整体，最下面一个盘子为一个整体)</p>
+<ol>
+<li>把 n-1 个圆盘从 A 经过 C 移动到 B (原问题的 -1 次的递归问题)</li>
+<li>把第 n 个圆盘从 A 移动到 C (因为仅一个盘子，仅一次移动即可)</li>
+<li>把 n-1 个圆盘从 B 经过 A 移动到 C</li>
+</ol>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hanoi</span>(<span class="params">n, a, b, c</span>):</span>							<span class="comment"># 把n个圆盘从a经过b移动到c</span></span><br><span class="line">    <span class="keyword">if</span> n&gt;<span class="number">0</span>:</span><br><span class="line">        hanoi(n-<span class="number">1</span>, a, c, b)						<span class="comment"># 把n-1个圆盘从a经过c移动到b</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;moving from %s to %s&quot;</span> % (a, c))  <span class="comment"># 把第n个圆盘从a移动到c</span></span><br><span class="line">        hanoi(n-<span class="number">1</span>, b, a, c)						<span class="comment"># 把n-1个圆盘从b经过a移动到c</span></span><br><span class="line">hanoi(<span class="number">3</span>, <span class="string">&quot;A&quot;</span>, <span class="string">&quot;B&quot;</span>, <span class="string">&quot;C&quot;</span>)        </span><br></pre></td></tr></table></figure></div>
+<ul>
+<li>
+<p>汉诺塔移动次数的递推式：<br>
+$$<br>
+H(n) = 2H(n-1) + 1<br>
+$$</p>
+</li>
+<li>
+<p>假设婆罗门每秒钟搬运一个盘子，则总共需要 5800 亿年。</p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Python</category>
+        <category>Algorithm</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>算法</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>爬虫学习笔记(9)--异步编程 补充</title>
     <url>/posts/6654cc58/</url>
     <content><![CDATA[<p>为什么要讲？</p>
@@ -4321,109 +4424,6 @@ range 类型的优点：不管 range 对象表示的整数序列有多长，所�
       <tags>
         <tag>Python</tag>
         <tag>爬虫</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python数据结构与算法(1)--复杂度及递归</title>
-    <url>/posts/5fc41c76/</url>
-    <content><![CDATA[<blockquote>
-<p>本文档基于<a href="https://www.bilibili.com/video/av332150111?from=search&amp;seid=6537256928008332308&amp;spm_id_from=333.337.0.0">B站视频课程</a></p>
-</blockquote>
-<h2 id="算法概念">算法概念</h2>
-<p><strong>算法（Algorithm）</strong>：一个计算过程，解决问题的办法</p>
-<p><strong>Niklaus Wirth</strong> ：“程序 = 数据结构 + 算法“</p>
-<h2 id="时间复杂度">时间复杂度</h2>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 1</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Hello World&quot;</span>)</span><br><span class="line"><span class="comment"># 2 </span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Hello World&quot;</span>)</span><br><span class="line"><span class="comment"># 3</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;Hello World&quot;</span>)        </span><br><span class="line"><span class="comment"># 4</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">        <span class="keyword">for</span> k <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&quot;Hello World&quot;</span>)</span><br></pre></td></tr></table></figure></div>
-<span id="more"></span>
-<h3 id="算法运行的快慢">算法运行的快慢</h3>
-<p>如何体现算法运行的快慢？</p>
-<p>不能够使用<strong>时间</strong>来体现算法运行的快慢，因为程序在不同的设备上运行时间也会不同，并且程序中的 n 不同，也会影响程序的运行。所以选择时间复杂度来体现算法运行的快慢。</p>
-<p>用时间复杂度来评估算法运行效率，以上述四段代码为例：</p>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 1</span></span><br><span class="line">O(<span class="number">1</span>)</span><br><span class="line"><span class="comment"># 2</span></span><br><span class="line">O(n)</span><br><span class="line"><span class="comment"># 3</span></span><br><span class="line">O(n²)</span><br><span class="line"><span class="comment"># 4</span></span><br><span class="line">O(n³)</span><br></pre></td></tr></table></figure></div>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 时间复杂度为 O(1)，并不是 O(3)；类似生活中回答几秒，而不是几个一秒;</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Hello World&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Hello Python&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Hello Algorithm&quot;</span>)</span><br><span class="line"><span class="comment"># 时间复杂度为 O(n²)。并不是 O(n²+n)；类似生活中回答睡觉大概几个小时，而不是具体精确到分钟秒的精度;</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Hello World&quot;</span>)</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;Hello World&quot;</span>)</span><br></pre></td></tr></table></figure></div>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 记时间复杂度为 O(log₂N) 或者 O(logN)</span></span><br><span class="line"><span class="comment"># 只要循环出现问题规格折半的时候，复杂度式子中会出现 logN</span></span><br><span class="line"><span class="keyword">while</span> n &gt; <span class="number">1</span>:</span><br><span class="line">    <span class="built_in">print</span>(n)    </span><br><span class="line">    n = n // <span class="number">2</span></span><br></pre></td></tr></table></figure></div>
-<h3 id="小结">小结</h3>
-<ol>
-<li>
-<p>时间复杂度是用来估计算法运行时间的一个式子(单位)；</p>
-</li>
-<li>
-<p><strong>一般来说</strong>，时间复杂度高的算法比时间复杂度低的算法慢；</p>
-</li>
-<li>
-<p>常见的时间复杂度(按效率排序)</p>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">O(<span class="number">1</span>) &lt; O(logn) &lt; O(n) &lt; O(nlogn) &lt; O(n²) &lt; O(n²logn) &lt; O(n³)</span><br></pre></td></tr></table></figure></div>
-</li>
-<li>
-<p>复杂问题的时间复杂度</p>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">O(n!)	O(<span class="number">2</span>ⁿ)	O(nⁿ)  ...</span><br></pre></td></tr></table></figure></div>
-</li>
-</ol>
-<h3 id="快速判断算法复杂度">快速判断算法复杂度</h3>
-<p>并不是针对所有算法都适用，适用于大多数简单情况。</p>
-<ul>
-<li>确定问题规格 n</li>
-<li>循环减半过程 logn</li>
-<li>k 层关于 n 的循环  n<sup>k</sup></li>
-</ul>
-<p>对于更加复杂的情况，则要根据算法执行过程进行判断。</p>
-<h2 id="空间复杂度">空间复杂度</h2>
-<p><strong>空间复杂度</strong>：用来评估算法内存占用大小的式子</p>
-<p>空间复杂度的表示方式与时间复杂度完全一样：</p>
-<ul>
-<li>算法使用了几个变量 O(1)</li>
-<li>算法使用了长度为 n 的一维列表  O(n)</li>
-<li>算法使用了 m 行 n 列的二维列表  O(mn)</li>
-</ul>
-<p>空间换时间：例如分布式程序。</p>
-<h2 id="复习：递归">复习：递归</h2>
-<p>递归的两个特点：</p>
-<ul>
-<li>调用自身</li>
-<li>结束条件</li>
-</ul>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># func1 不合法，没有结束条件</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func1</span>(<span class="params">x</span>):</span></span><br><span class="line">    <span class="built_in">print</span>(x)</span><br><span class="line">    func1(x-<span class="number">1</span>)</span><br><span class="line"><span class="comment"># func2 不合法，没有结束条件</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func2</span>(<span class="params">x</span>):</span></span><br><span class="line">    <span class="keyword">if</span> x &gt; <span class="number">0</span>:</span><br><span class="line">        <span class="built_in">print</span>(x)</span><br><span class="line">        func2(x+<span class="number">1</span>)</span><br><span class="line"><span class="comment"># func3 合法</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func3</span>(<span class="params">x</span>):</span></span><br><span class="line">    <span class="keyword">if</span> x &gt; <span class="number">0</span>:</span><br><span class="line">        <span class="built_in">print</span>(x)</span><br><span class="line">        func3(x-<span class="number">1</span>)</span><br><span class="line"><span class="comment"># func4 合法</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func4</span>(<span class="params">x</span>):</span></span><br><span class="line">    <span class="keyword">if</span> x &gt; <span class="number">0</span>:</span><br><span class="line">        func4(x-<span class="number">1</span>)</span><br><span class="line">        <span class="built_in">print</span>(x)</span><br></pre></td></tr></table></figure></div>
-<h2 id="汉诺塔问题">汉诺塔问题</h2>
-<p><img src="https://gitee.com/zyzhang98/typoraofimages/raw/master/Images/image-20220307090340059.png" alt="汉诺塔问题"></p>
-<ul>
-<li>大梵天创造世界的时候做了三根金刚石柱子，在一根柱子上从上往下按照大小顺序摞着64片黄金圆盘。</li>
-<li>大梵天命令婆罗门把圆盘从下面开始按大小顺序重新摆放在另一根柱子上。</li>
-<li>在小圆盘上不能放大圆盘，在三根柱子之间一次只能移动一个圆盘。</li>
-<li>64根柱子移动完毕之日，就是世界毁灭之时。</li>
-</ul>
-<h3 id="分析">分析</h3>
-<p>当 n=2 时：</p>
-<ol>
-<li>把小圆盘从 A 移动到 B</li>
-<li>把大圆盘从 A 移动到 C</li>
-<li>把小圆盘从 B 移动到 C</li>
-</ol>
-<p>当 n 个盘时(上面 n-1 个盘子看成一个整体，最下面一个盘子为一个整体)</p>
-<ol>
-<li>把 n-1 个圆盘从 A 经过 C 移动到 B (原问题的 -1 次的递归问题)</li>
-<li>把第 n 个圆盘从 A 移动到 C (因为仅一个盘子，仅一次移动即可)</li>
-<li>把 n-1 个圆盘从 B 经过 A 移动到 C</li>
-</ol>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hanoi</span>(<span class="params">n, a, b, c</span>):</span>							<span class="comment"># 把n个圆盘从a经过b移动到c</span></span><br><span class="line">    <span class="keyword">if</span> n&gt;<span class="number">0</span>:</span><br><span class="line">        hanoi(n-<span class="number">1</span>, a, c, b)						<span class="comment"># 把n-1个圆盘从a经过c移动到b</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;moving from %s to %s&quot;</span> % (a, c))  <span class="comment"># 把第n个圆盘从a移动到c</span></span><br><span class="line">        hanoi(n-<span class="number">1</span>, b, a, c)						<span class="comment"># 把n-1个圆盘从b经过a移动到c</span></span><br><span class="line">hanoi(<span class="number">3</span>, <span class="string">&quot;A&quot;</span>, <span class="string">&quot;B&quot;</span>, <span class="string">&quot;C&quot;</span>)        </span><br></pre></td></tr></table></figure></div>
-<ul>
-<li>
-<p>汉诺塔移动次数的递推式：<br>
-$$<br>
-H(n) = 2H(n-1) + 1<br>
-$$</p>
-</li>
-<li>
-<p>假设婆罗门每秒钟搬运一个盘子，则总共需要 5800 亿年。</p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>Python</category>
-        <category>Algorithm</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>算法</tag>
       </tags>
   </entry>
   <entry>
@@ -4549,7 +4549,7 @@ $$</p>
 <p>或者直接点击本文下载链接进行下载。<a href="https://zyzhang.lanzouw.com/iyD75014ekaf">IDM 下载</a>，密码:<code>sdu827</code></p>
 <p>下载过程中，记得将电脑所有的杀毒软件以及防火墙关闭，因为软件安装包中含有破解程序，故可能会报毒。</p>
 <p>下载完成后，点击<code>绿化与卸载.exe</code>选择绿化，然后打开程序文件夹<code>Bin</code>中的<code>IDMan.exe</code>即为主应用程序。界面如下：</p>
-<p><img src="https://gitee.com/zyzhang98/typoraofimages/raw/master/Images/20220326164417.png" alt="image-20220326164416865"></p>
+<p><img src="https://gitee.com/zyzhang98/typoraofimages/raw/master/Images/20220327155559.png" alt="image-20220327155558579"></p>
 <p>第一次安装，默认按钮的样式可能与我的不同，但功能一致，点击菜单栏的<code>查看/工具栏</code>可以对样式进行更换。</p>
 <p>使用 IDM 之前，我们需要一些特殊的设置：</p>
 <ul>
