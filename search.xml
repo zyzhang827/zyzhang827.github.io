@@ -1417,6 +1417,28 @@
       </tags>
   </entry>
   <entry>
+    <title>飞鸟集</title>
+    <url>/posts/2f2ba896/</url>
+    <content><![CDATA[<p>🟩 What you are you do not see, what you see is your shadow.<br>
+🟪 你无法看到自己, 你看到的是你认为的自己.</p>
+<p>🟨 I cannot choose the best. The best chooses me.<br>
+🟥 我做不到选择最好的, 是最好的选择了我.</p>
+<p>🟦 Let him only see the thorns who has eyes to see the rose.<br>
+🟧 让那些盯着玫瑰花的人啊, 多看看玫瑰的刺吧.</p>
+<p>⬛ “Who drives me forward like fate?” “The Myself striding on my back.”<br>
+🟫 “是谁像命运一样催我向前?” “是我自己一直在我后面.”</p>
+<p>⬜ Power takes as ingratitude the writhings of its victims.<br>
+🟪 在强权看来, 牺牲品的痛苦是不知好歹.</p>
+]]></content>
+      <categories>
+        <category>鸡汤</category>
+      </categories>
+      <tags>
+        <tag>文化</tag>
+        <tag>诗词</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>浏览器插件和脚本</title>
     <url>/posts/2e4158e/</url>
     <content><![CDATA[<h2 id="Tampermonkey">Tampermonkey</h2>
@@ -1469,28 +1491,6 @@
       </tags>
   </entry>
   <entry>
-    <title>飞鸟集</title>
-    <url>/posts/2f2ba896/</url>
-    <content><![CDATA[<p>🟩 What you are you do not see, what you see is your shadow.<br>
-🟪 你无法看到自己, 你看到的是你认为的自己.</p>
-<p>🟨 I cannot choose the best. The best chooses me.<br>
-🟥 我做不到选择最好的, 是最好的选择了我.</p>
-<p>🟦 Let him only see the thorns who has eyes to see the rose.<br>
-🟧 让那些盯着玫瑰花的人啊, 多看看玫瑰的刺吧.</p>
-<p>⬛ “Who drives me forward like fate?” “The Myself striding on my back.”<br>
-🟫 “是谁像命运一样催我向前?” “是我自己一直在我后面.”</p>
-<p>⬜ Power takes as ingratitude the writhings of its victims.<br>
-🟪 在强权看来, 牺牲品的痛苦是不知好歹.</p>
-]]></content>
-      <categories>
-        <category>鸡汤</category>
-      </categories>
-      <tags>
-        <tag>文化</tag>
-        <tag>诗词</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Python 学习笔记(1)--print()函数</title>
     <url>/posts/79e6c2f2/</url>
     <content><![CDATA[<blockquote>
@@ -1515,65 +1515,6 @@
         <category>Python</category>
         <category>基础语法</category>
       </categories>
-  </entry>
-  <entry>
-    <title>Python 学习笔记(11)--函数</title>
-    <url>/posts/59bac53/</url>
-    <content><![CDATA[<h2 id="1-函数的创建和调用">1. 函数的创建和调用</h2>
-<p>*什么是函数？*函数就是执行特定任务和完成特定功能的一段代码。</p>
-<p>*为什么需要函数？*复用代码；隐藏实现细节；提高可维护性；提高可读性便于调试。</p>
-<p><em>函数的创建</em>	<code>def 	函数名（[输入参数]）：函数体	[return  xxx]</code></p>
-<p><em>函数的调用</em>	<code>函数名([实际参数])</code></p>
-<span id="more"></span>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">calc</span>(<span class="params">a,b</span>):</span>			<span class="comment"># a,b称为形式参数，简称形参，形参位置在函数的定义处</span></span><br><span class="line">	c = a + b		</span><br><span class="line">    <span class="keyword">return</span> c</span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;位置实参传递&#x27;&#x27;&#x27;</span></span><br><span class="line">result = calc(<span class="number">10</span>,<span class="number">20</span>) 	<span class="comment"># 10，20实际参数，简称实参，位置在函数的调用处</span></span><br><span class="line"><span class="built_in">print</span>(result)</span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;关键字实参传递&#x27;&#x27;&#x27;</span></span><br><span class="line">res = calc(b = <span class="number">10</span>,a = <span class="number">20</span>)</span><br><span class="line"><span class="built_in">print</span>(res)</span><br></pre></td></tr></table></figure></div>
-<h2 id="2-函数调用的参数传递">2. 函数调用的参数传递</h2>
-<ul>
-<li>位置实参：根据形参对应的位置进行实参传递</li>
-<li>关键字实参：根据形参名称进行实参传递</li>
-</ul>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun</span>(<span class="params">arg1,arg2</span>):</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;arg1&#x27;</span>,arg1)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;arg2&#x27;</span>,arg2)</span><br><span class="line">    arg1 = <span class="number">100</span></span><br><span class="line">    arg2.append(<span class="number">10</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;arg1&#x27;</span>,arg1)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;arg2&#x27;</span>,arg2)</span><br><span class="line">    <span class="comment"># return</span></span><br><span class="line">n1 = <span class="number">11</span></span><br><span class="line">n2 = [<span class="number">22</span>,<span class="number">33</span>,<span class="number">44</span>]</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;n1&#x27;</span>,n1)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;n2&#x27;</span>,n2)</span><br><span class="line">fun(n1,n2)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;n1&#x27;</span>,n1)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;n2&#x27;</span>,n2)</span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;在函数的调用过程中，进行参数的传递，</span></span><br><span class="line"><span class="string">如果是不可变对象，在函数体的修改不会影响实参的值，arg1修改为100，不会影响n1的值</span></span><br><span class="line"><span class="string">如果是可变对象，在函数体内的修改会影响实参的值，arg2的修改.append(10)，会影响到n2的值&#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure></div>
-<p>*函数的返回值：*函数返回多个值时，结果为元组。</p>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="built_in">bool</span>(<span class="number">0</span>))				<span class="comment"># False 零的布尔值为False</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">bool</span>(<span class="number">1</span>))				<span class="comment"># True 非零整数布尔值为True</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun</span>(<span class="params">num</span>):</span></span><br><span class="line">    odd = []				<span class="comment"># 存奇数</span></span><br><span class="line">    even = []				<span class="comment"># 存偶数</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> num:</span><br><span class="line">        <span class="keyword">if</span> i % <span class="number">2</span>:</span><br><span class="line">            odd.append(i)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            even.append(i)</span><br><span class="line">    <span class="keyword">return</span> odd,even</span><br><span class="line"><span class="comment"># 函数的调用</span></span><br><span class="line">lst = [<span class="number">10</span>,<span class="number">29</span>,<span class="number">34</span>,<span class="number">23</span>,<span class="number">44</span>,<span class="number">53</span>,<span class="number">55</span>]</span><br><span class="line"><span class="built_in">print</span>(fun(lst))</span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;函数的返回值</span></span><br><span class="line"><span class="string">1.如果函数没有返回值（函数执行完毕后，不需要给调用处提供数据） return可以不写</span></span><br><span class="line"><span class="string">2.函数的返回值，如果是1个，直接返回类型</span></span><br><span class="line"><span class="string">3.函数的返回值，如果是多个，返回结果为元组&#x27;&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun1</span>():</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;hello&#x27;</span>)</span><br><span class="line">    <span class="comment"># return    </span></span><br><span class="line">fun1()</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun2</span>():</span></span><br><span class="line">   <span class="keyword">return</span> <span class="string">&#x27;hello&#x27;</span></span><br><span class="line">res = fun2()</span><br><span class="line"><span class="built_in">print</span>(res)</span><br><span class="line">    </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun3</span>():</span></span><br><span class="line">    <span class="keyword">return</span> <span class="string">&#x27;hello&#x27;</span>,<span class="string">&#x27;world&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(fun3())</span><br><span class="line">    </span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;函数在定义时，是否需要返回值，视情况而定&#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure></div>
-<h2 id="3-函数的参数定义">3. 函数的参数定义</h2>
-<h3 id="（1）函数定义默认值参数">（1）函数定义默认值参数</h3>
-<p>函数定义时，给形参设置默认值，只有与默认值不符的时候才需要传递实参。</p>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun</span>(<span class="params">a,b = <span class="number">10</span></span>):</span>    			<span class="comment"># b默认值参数</span></span><br><span class="line">    <span class="built_in">print</span>(a,b)</span><br><span class="line"><span class="comment"># 函数的调用</span></span><br><span class="line">fun(<span class="number">100</span>)</span><br><span class="line">fun(<span class="number">20</span>,<span class="number">30</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># def print(self, *args, sep=&#x27;&#x27;, end=&#x27;\n&#x27;,file=None):</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;hello&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;world&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;hello&#x27;</span>,end = <span class="string">&#x27;\t&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;world&#x27;</span>)</span><br></pre></td></tr></table></figure></div>
-<h3 id="（2）个数可变的位置参数">（2）个数可变的位置参数</h3>
-<p>定义函数时，可能无法事先确定传递的位置实参的个数时，使用可变的位置参数；使用*定义个数可变的位置形参；结果为一个元组。</p>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun</span>(<span class="params">*args</span>):</span>					<span class="comment"># 函数定义时 可变的位置参数</span></span><br><span class="line">    <span class="built_in">print</span>(args)</span><br><span class="line">    <span class="built_in">print</span>(args[<span class="number">0</span>])</span><br><span class="line">    </span><br><span class="line">fun(<span class="number">10</span>)</span><br><span class="line">fun(<span class="number">10</span>,<span class="number">30</span>)</span><br><span class="line">fun(<span class="number">30</span>,<span class="number">405</span>,<span class="number">50</span>)</span><br></pre></td></tr></table></figure></div>
-<h3 id="（3）个数可变的关键字形参">（3）个数可变的关键字形参</h3>
-<p>定义函数时，无法事先确定传递的关键字实参的个数时，使用可变的关键字形参；使用*定义个数可变的关键字形参；结果为一个字典。</p>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun1</span>(<span class="params">*args</span>):</span></span><br><span class="line">    <span class="built_in">print</span>(args)</span><br><span class="line">    </span><br><span class="line">fun1(a = <span class="number">10</span>)</span><br><span class="line">fun1(a = <span class="number">20</span>,b=<span class="number">30</span>,c=<span class="number">40</span>)</span><br><span class="line"></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;def fun2(*args,*a):</span></span><br><span class="line"><span class="string">	pass</span></span><br><span class="line"><span class="string">	代码运行，程序报错，个数可变的位置参数，只能是一个</span></span><br><span class="line"><span class="string">	def fun3(*args,*args):</span></span><br><span class="line"><span class="string">		pass</span></span><br><span class="line"><span class="string">	代码运行，程序报错，个数可变的关键字参数，只能是一个&#x27;&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun2</span>(<span class="params">*args1,*args2</span>):</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;def fun3(*args1,*args2):</span></span><br><span class="line"><span class="string">	pass</span></span><br><span class="line"><span class="string">	在一个函数的定义过程中，既有个数可变的位置形参，也有个数可变的关键字形参，要求，个数可变的位置形参放在个数可变的关键字形参之前&#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure></div>
-<h3 id="（4）函数的参数总结">（4）函数的参数总结</h3>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun</span>(<span class="params">a,b,c</span>):</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;a = &#x27;</span>,a)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;b = &#x27;</span>,b)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;c = &#x27;</span>,c)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 函数的调用</span></span><br><span class="line">fun(<span class="number">10</span>,<span class="number">20</span>,<span class="number">30</span>)					<span class="comment"># 函数调用时的参数传递，称为位置传参</span></span><br><span class="line">lst = [<span class="number">11</span>,<span class="number">22</span>,<span class="number">33</span>]</span><br><span class="line">fun(*lst)						<span class="comment"># 在函数调用时，将列表中的每个元素都转换成位置实参传入</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;----------------&#x27;</span>)</span><br><span class="line">fun(a=<span class="number">100</span>,c=<span class="number">300</span>,b=<span class="number">200</span>)			<span class="comment"># 函数的调用，关键字实参</span></span><br><span class="line">dic = &#123;<span class="string">&#x27;a&#x27;</span>:<span class="number">111</span>,<span class="string">&#x27;b&#x27;</span>:<span class="number">222</span>,<span class="string">&#x27;c&#x27;</span>:<span class="number">333</span>&#125;</span><br><span class="line">fun(*dic)						<span class="comment"># 函数调用时，将字典中的键值对都转换成关键字实参传入</span></span><br></pre></td></tr></table></figure></div>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun</span>(<span class="params">a,b=<span class="number">10</span></span>):</span>				<span class="comment"># b是在函数的定义处，所以是形参，而且进行了赋值，所以是默认值形参</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;a=&#x27;</span>,a)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;b=&#x27;</span>,b)</span><br><span class="line">    </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun2</span>(<span class="params">*args</span>):</span>				<span class="comment"># 个数可变的位置形参</span></span><br><span class="line">	<span class="built_in">print</span>(args)</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun3</span>(<span class="params">*args2</span>):</span>				<span class="comment"># 个数可变的关键字形参</span></span><br><span class="line">    <span class="built_in">print</span>(args2)</span><br><span class="line">   </span><br><span class="line">fun2(<span class="number">10</span>,<span class="number">20</span>,<span class="number">30</span>,<span class="number">40</span>)</span><br><span class="line">fun3(a=<span class="number">11</span>,b=<span class="number">22</span>,c=<span class="number">33</span>,d=<span class="number">44</span>,e=<span class="number">55</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun4</span>(<span class="params">a,b,c,d</span>):</span>	</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;a=&#x27;</span>,a)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;b=&#x27;</span>,b)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;c=&#x27;</span>,c)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;d=&#x27;</span>,d)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 调用fun4函数</span></span><br><span class="line">fun4(<span class="number">10</span>,<span class="number">20</span>,<span class="number">30</span>,<span class="number">40</span>)				<span class="comment"># 位置实参传递</span></span><br><span class="line">fun4(a=<span class="number">10</span>,b=<span class="number">20</span>,c=<span class="number">30</span>,d=<span class="number">40</span>)		<span class="comment"># 关键字实参传递</span></span><br><span class="line">fun4(<span class="number">10</span>,<span class="number">20</span>,c=<span class="number">30</span>,d=<span class="number">40</span>)			<span class="comment"># 前两个参数，采用位置实参传递，后两个参数采用关键字实参传递</span></span><br><span class="line"></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;需求：c，d只能采用关键字实参传递&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="comment"># def fun4(a,b,*,c,d):	从*之后的参数，在函数调用时，只能采用关键字参数传递	</span></span><br></pre></td></tr></table></figure></div>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;&#x27;函数定义时的形参的顺序问题&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun5</span>(<span class="params">a,b,*,c,d,*args</span>):</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun6</span>(<span class="params">*args,*args2</span>):</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun7</span>(<span class="params">a,b=<span class="number">10</span>,*args,*args2</span>):</span></span><br><span class="line">    <span class="keyword">pass</span></span><br></pre></td></tr></table></figure></div>
-<h2 id="4-变量的作用域">4. 变量的作用域</h2>
-<p><em>变量的作用域：<em>程序代码能访问该变量的区域。根据变量的有效范围可以分为</em>局部变量、全局变量。</em></p>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun</span>(<span class="params">a,b</span>):</span></span><br><span class="line">    c = a+b						<span class="comment"># c是局部变量，因为是在函数体内进行定义的；a，b为函数的形参，作用范围也是函数内部，相当于局部变量</span></span><br><span class="line">    <span class="built_in">print</span>(c)</span><br><span class="line"><span class="comment"># print(c)	，因为a，c超出了起作用的范围（超出了作用域）</span></span><br><span class="line"><span class="comment"># print(a)</span></span><br><span class="line"></span><br><span class="line">name =<span class="string">&#x27;杨老师&#x27;</span>					  <span class="comment"># name作用范围为函数的内部和外部都可以使用，全局变量</span></span><br><span class="line"><span class="built_in">print</span>(name)</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun2</span>():</span></span><br><span class="line">    <span class="built_in">print</span>(name)</span><br><span class="line"><span class="comment"># 调用函数</span></span><br><span class="line">fun2()</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun3</span>():</span></span><br><span class="line">    <span class="keyword">global</span> age					<span class="comment"># 函数内部定义的变量，局部变量；局部变量使用global声明之后，这个变量实际上就变成了全局变量</span></span><br><span class="line">    age = <span class="number">20</span></span><br><span class="line">    <span class="built_in">print</span>(age)</span><br><span class="line">fun3()</span><br><span class="line"><span class="built_in">print</span>(age)</span><br></pre></td></tr></table></figure></div>
-<h2 id="5-递归函数">5. 递归函数</h2>
-<p><em>什么是递归函数？</em></p>
-<p>如果在一个函数的函数体内调用了该函数本身，这个函数就称为递归函数.</p>
-<p><em>递归函数的组成部分：</em></p>
-<p>递归调用条件与递归终止条件.</p>
-<p><em>递归的调用过程：</em></p>
-<p>每递归调用一次函数，都会在栈内存分配一个栈帧；每执行完一次函数，都会释放相应的空间.</p>
-<p><em>递归的优缺点：</em></p>
-<p>优点是思路和代码简单；缺点是占用内存多，效率低下.</p>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;&#x27;使用递归计算阶乘&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fac</span>(<span class="params">n</span>):</span></span><br><span class="line">    <span class="keyword">if</span> n == <span class="number">1</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        res = n*fac(n-<span class="number">1</span>)</span><br><span class="line">        <span class="keyword">return</span> res</span><br><span class="line">    </span><br><span class="line"><span class="built_in">print</span>(fac(<span class="number">6</span>))</span><br></pre></td></tr></table></figure></div>
-<h2 id="6-斐波那契数列">6. 斐波那契数列</h2>
-<p>$$<br>
-F_{n}=F_{n - 1}+F_{n-2}<br>
-$$</p>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fib</span>(<span class="params">n</span>):</span></span><br><span class="line">    <span class="keyword">if</span> n == <span class="number">1</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">    <span class="keyword">elif</span> n == <span class="number">2</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> fib(n-<span class="number">1</span>) + fib(n-<span class="number">2</span>)</span><br><span class="line">    </span><br><span class="line"><span class="comment"># 斐波那契数列第六位</span></span><br><span class="line"><span class="built_in">print</span>(fib(<span class="number">6</span>))</span><br><span class="line"><span class="comment"># 斐波那契数列前六位(循环操作用列表)</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="number">7</span>):</span><br><span class="line">    <span class="built_in">print</span>(fib(i))</span><br></pre></td></tr></table></figure></div>
-]]></content>
-      <categories>
-        <category>Python</category>
-        <category>基础语法</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-      </tags>
   </entry>
   <entry>
     <title>Python 学习笔记(10)--字符串</title>
@@ -1683,6 +1624,65 @@ $$</p>
 <li>解码：将bytes类型的数据转换成字符串类型</li>
 </ul>
 <div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">s = <span class="string">&#x27;天涯共此时&#x27;</span></span><br><span class="line"><span class="comment"># 编码</span></span><br><span class="line"><span class="built_in">print</span>(s.encode(encoding = <span class="string">&#x27;GBK&#x27;</span>))		<span class="comment"># GBK编码格式中，一个中文占两个字节</span></span><br><span class="line"><span class="built_in">print</span>(s.encode(encoding = <span class="string">&#x27;UTF-8&#x27;</span>))		<span class="comment"># UTF-8中，一个中文占三个字节</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 解码</span></span><br><span class="line">byte = s.encode(encoding = <span class="string">&#x27;GBK&#x27;</span>)		<span class="comment"># 编码</span></span><br><span class="line"><span class="built_in">print</span>(byte.decode(encoding = <span class="string">&#x27;GBK&#x27;</span>))	<span class="comment"># 解码   byte代表的就是一个二进制数据（字节类型的数据）</span></span><br><span class="line"></span><br><span class="line">byte = s.encode(encoding = <span class="string">&#x27;UTF-8&#x27;</span>)		<span class="comment"># 编码</span></span><br><span class="line"><span class="built_in">print</span>(byte.decode(encoding = <span class="string">&#x27;UTF-8&#x27;</span>))</span><br></pre></td></tr></table></figure></div>
+]]></content>
+      <categories>
+        <category>Python</category>
+        <category>基础语法</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python 学习笔记(11)--函数</title>
+    <url>/posts/59bac53/</url>
+    <content><![CDATA[<h2 id="1-函数的创建和调用">1. 函数的创建和调用</h2>
+<p>*什么是函数？*函数就是执行特定任务和完成特定功能的一段代码。</p>
+<p>*为什么需要函数？*复用代码；隐藏实现细节；提高可维护性；提高可读性便于调试。</p>
+<p><em>函数的创建</em>	<code>def 	函数名（[输入参数]）：函数体	[return  xxx]</code></p>
+<p><em>函数的调用</em>	<code>函数名([实际参数])</code></p>
+<span id="more"></span>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">calc</span>(<span class="params">a,b</span>):</span>			<span class="comment"># a,b称为形式参数，简称形参，形参位置在函数的定义处</span></span><br><span class="line">	c = a + b		</span><br><span class="line">    <span class="keyword">return</span> c</span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;位置实参传递&#x27;&#x27;&#x27;</span></span><br><span class="line">result = calc(<span class="number">10</span>,<span class="number">20</span>) 	<span class="comment"># 10，20实际参数，简称实参，位置在函数的调用处</span></span><br><span class="line"><span class="built_in">print</span>(result)</span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;关键字实参传递&#x27;&#x27;&#x27;</span></span><br><span class="line">res = calc(b = <span class="number">10</span>,a = <span class="number">20</span>)</span><br><span class="line"><span class="built_in">print</span>(res)</span><br></pre></td></tr></table></figure></div>
+<h2 id="2-函数调用的参数传递">2. 函数调用的参数传递</h2>
+<ul>
+<li>位置实参：根据形参对应的位置进行实参传递</li>
+<li>关键字实参：根据形参名称进行实参传递</li>
+</ul>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun</span>(<span class="params">arg1,arg2</span>):</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;arg1&#x27;</span>,arg1)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;arg2&#x27;</span>,arg2)</span><br><span class="line">    arg1 = <span class="number">100</span></span><br><span class="line">    arg2.append(<span class="number">10</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;arg1&#x27;</span>,arg1)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;arg2&#x27;</span>,arg2)</span><br><span class="line">    <span class="comment"># return</span></span><br><span class="line">n1 = <span class="number">11</span></span><br><span class="line">n2 = [<span class="number">22</span>,<span class="number">33</span>,<span class="number">44</span>]</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;n1&#x27;</span>,n1)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;n2&#x27;</span>,n2)</span><br><span class="line">fun(n1,n2)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;n1&#x27;</span>,n1)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;n2&#x27;</span>,n2)</span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;在函数的调用过程中，进行参数的传递，</span></span><br><span class="line"><span class="string">如果是不可变对象，在函数体的修改不会影响实参的值，arg1修改为100，不会影响n1的值</span></span><br><span class="line"><span class="string">如果是可变对象，在函数体内的修改会影响实参的值，arg2的修改.append(10)，会影响到n2的值&#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure></div>
+<p>*函数的返回值：*函数返回多个值时，结果为元组。</p>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="built_in">bool</span>(<span class="number">0</span>))				<span class="comment"># False 零的布尔值为False</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">bool</span>(<span class="number">1</span>))				<span class="comment"># True 非零整数布尔值为True</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun</span>(<span class="params">num</span>):</span></span><br><span class="line">    odd = []				<span class="comment"># 存奇数</span></span><br><span class="line">    even = []				<span class="comment"># 存偶数</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> num:</span><br><span class="line">        <span class="keyword">if</span> i % <span class="number">2</span>:</span><br><span class="line">            odd.append(i)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            even.append(i)</span><br><span class="line">    <span class="keyword">return</span> odd,even</span><br><span class="line"><span class="comment"># 函数的调用</span></span><br><span class="line">lst = [<span class="number">10</span>,<span class="number">29</span>,<span class="number">34</span>,<span class="number">23</span>,<span class="number">44</span>,<span class="number">53</span>,<span class="number">55</span>]</span><br><span class="line"><span class="built_in">print</span>(fun(lst))</span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;函数的返回值</span></span><br><span class="line"><span class="string">1.如果函数没有返回值（函数执行完毕后，不需要给调用处提供数据） return可以不写</span></span><br><span class="line"><span class="string">2.函数的返回值，如果是1个，直接返回类型</span></span><br><span class="line"><span class="string">3.函数的返回值，如果是多个，返回结果为元组&#x27;&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun1</span>():</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;hello&#x27;</span>)</span><br><span class="line">    <span class="comment"># return    </span></span><br><span class="line">fun1()</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun2</span>():</span></span><br><span class="line">   <span class="keyword">return</span> <span class="string">&#x27;hello&#x27;</span></span><br><span class="line">res = fun2()</span><br><span class="line"><span class="built_in">print</span>(res)</span><br><span class="line">    </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun3</span>():</span></span><br><span class="line">    <span class="keyword">return</span> <span class="string">&#x27;hello&#x27;</span>,<span class="string">&#x27;world&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(fun3())</span><br><span class="line">    </span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;函数在定义时，是否需要返回值，视情况而定&#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure></div>
+<h2 id="3-函数的参数定义">3. 函数的参数定义</h2>
+<h3 id="（1）函数定义默认值参数">（1）函数定义默认值参数</h3>
+<p>函数定义时，给形参设置默认值，只有与默认值不符的时候才需要传递实参。</p>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun</span>(<span class="params">a,b = <span class="number">10</span></span>):</span>    			<span class="comment"># b默认值参数</span></span><br><span class="line">    <span class="built_in">print</span>(a,b)</span><br><span class="line"><span class="comment"># 函数的调用</span></span><br><span class="line">fun(<span class="number">100</span>)</span><br><span class="line">fun(<span class="number">20</span>,<span class="number">30</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># def print(self, *args, sep=&#x27;&#x27;, end=&#x27;\n&#x27;,file=None):</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;hello&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;world&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;hello&#x27;</span>,end = <span class="string">&#x27;\t&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;world&#x27;</span>)</span><br></pre></td></tr></table></figure></div>
+<h3 id="（2）个数可变的位置参数">（2）个数可变的位置参数</h3>
+<p>定义函数时，可能无法事先确定传递的位置实参的个数时，使用可变的位置参数；使用*定义个数可变的位置形参；结果为一个元组。</p>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun</span>(<span class="params">*args</span>):</span>					<span class="comment"># 函数定义时 可变的位置参数</span></span><br><span class="line">    <span class="built_in">print</span>(args)</span><br><span class="line">    <span class="built_in">print</span>(args[<span class="number">0</span>])</span><br><span class="line">    </span><br><span class="line">fun(<span class="number">10</span>)</span><br><span class="line">fun(<span class="number">10</span>,<span class="number">30</span>)</span><br><span class="line">fun(<span class="number">30</span>,<span class="number">405</span>,<span class="number">50</span>)</span><br></pre></td></tr></table></figure></div>
+<h3 id="（3）个数可变的关键字形参">（3）个数可变的关键字形参</h3>
+<p>定义函数时，无法事先确定传递的关键字实参的个数时，使用可变的关键字形参；使用*定义个数可变的关键字形参；结果为一个字典。</p>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun1</span>(<span class="params">*args</span>):</span></span><br><span class="line">    <span class="built_in">print</span>(args)</span><br><span class="line">    </span><br><span class="line">fun1(a = <span class="number">10</span>)</span><br><span class="line">fun1(a = <span class="number">20</span>,b=<span class="number">30</span>,c=<span class="number">40</span>)</span><br><span class="line"></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;def fun2(*args,*a):</span></span><br><span class="line"><span class="string">	pass</span></span><br><span class="line"><span class="string">	代码运行，程序报错，个数可变的位置参数，只能是一个</span></span><br><span class="line"><span class="string">	def fun3(*args,*args):</span></span><br><span class="line"><span class="string">		pass</span></span><br><span class="line"><span class="string">	代码运行，程序报错，个数可变的关键字参数，只能是一个&#x27;&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun2</span>(<span class="params">*args1,*args2</span>):</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;def fun3(*args1,*args2):</span></span><br><span class="line"><span class="string">	pass</span></span><br><span class="line"><span class="string">	在一个函数的定义过程中，既有个数可变的位置形参，也有个数可变的关键字形参，要求，个数可变的位置形参放在个数可变的关键字形参之前&#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure></div>
+<h3 id="（4）函数的参数总结">（4）函数的参数总结</h3>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun</span>(<span class="params">a,b,c</span>):</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;a = &#x27;</span>,a)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;b = &#x27;</span>,b)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;c = &#x27;</span>,c)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 函数的调用</span></span><br><span class="line">fun(<span class="number">10</span>,<span class="number">20</span>,<span class="number">30</span>)					<span class="comment"># 函数调用时的参数传递，称为位置传参</span></span><br><span class="line">lst = [<span class="number">11</span>,<span class="number">22</span>,<span class="number">33</span>]</span><br><span class="line">fun(*lst)						<span class="comment"># 在函数调用时，将列表中的每个元素都转换成位置实参传入</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;----------------&#x27;</span>)</span><br><span class="line">fun(a=<span class="number">100</span>,c=<span class="number">300</span>,b=<span class="number">200</span>)			<span class="comment"># 函数的调用，关键字实参</span></span><br><span class="line">dic = &#123;<span class="string">&#x27;a&#x27;</span>:<span class="number">111</span>,<span class="string">&#x27;b&#x27;</span>:<span class="number">222</span>,<span class="string">&#x27;c&#x27;</span>:<span class="number">333</span>&#125;</span><br><span class="line">fun(*dic)						<span class="comment"># 函数调用时，将字典中的键值对都转换成关键字实参传入</span></span><br></pre></td></tr></table></figure></div>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun</span>(<span class="params">a,b=<span class="number">10</span></span>):</span>				<span class="comment"># b是在函数的定义处，所以是形参，而且进行了赋值，所以是默认值形参</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;a=&#x27;</span>,a)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;b=&#x27;</span>,b)</span><br><span class="line">    </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun2</span>(<span class="params">*args</span>):</span>				<span class="comment"># 个数可变的位置形参</span></span><br><span class="line">	<span class="built_in">print</span>(args)</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun3</span>(<span class="params">*args2</span>):</span>				<span class="comment"># 个数可变的关键字形参</span></span><br><span class="line">    <span class="built_in">print</span>(args2)</span><br><span class="line">   </span><br><span class="line">fun2(<span class="number">10</span>,<span class="number">20</span>,<span class="number">30</span>,<span class="number">40</span>)</span><br><span class="line">fun3(a=<span class="number">11</span>,b=<span class="number">22</span>,c=<span class="number">33</span>,d=<span class="number">44</span>,e=<span class="number">55</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun4</span>(<span class="params">a,b,c,d</span>):</span>	</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;a=&#x27;</span>,a)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;b=&#x27;</span>,b)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;c=&#x27;</span>,c)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;d=&#x27;</span>,d)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 调用fun4函数</span></span><br><span class="line">fun4(<span class="number">10</span>,<span class="number">20</span>,<span class="number">30</span>,<span class="number">40</span>)				<span class="comment"># 位置实参传递</span></span><br><span class="line">fun4(a=<span class="number">10</span>,b=<span class="number">20</span>,c=<span class="number">30</span>,d=<span class="number">40</span>)		<span class="comment"># 关键字实参传递</span></span><br><span class="line">fun4(<span class="number">10</span>,<span class="number">20</span>,c=<span class="number">30</span>,d=<span class="number">40</span>)			<span class="comment"># 前两个参数，采用位置实参传递，后两个参数采用关键字实参传递</span></span><br><span class="line"></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;需求：c，d只能采用关键字实参传递&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="comment"># def fun4(a,b,*,c,d):	从*之后的参数，在函数调用时，只能采用关键字参数传递	</span></span><br></pre></td></tr></table></figure></div>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;&#x27;函数定义时的形参的顺序问题&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun5</span>(<span class="params">a,b,*,c,d,*args</span>):</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun6</span>(<span class="params">*args,*args2</span>):</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun7</span>(<span class="params">a,b=<span class="number">10</span>,*args,*args2</span>):</span></span><br><span class="line">    <span class="keyword">pass</span></span><br></pre></td></tr></table></figure></div>
+<h2 id="4-变量的作用域">4. 变量的作用域</h2>
+<p><em>变量的作用域：<em>程序代码能访问该变量的区域。根据变量的有效范围可以分为</em>局部变量、全局变量。</em></p>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun</span>(<span class="params">a,b</span>):</span></span><br><span class="line">    c = a+b						<span class="comment"># c是局部变量，因为是在函数体内进行定义的；a，b为函数的形参，作用范围也是函数内部，相当于局部变量</span></span><br><span class="line">    <span class="built_in">print</span>(c)</span><br><span class="line"><span class="comment"># print(c)	，因为a，c超出了起作用的范围（超出了作用域）</span></span><br><span class="line"><span class="comment"># print(a)</span></span><br><span class="line"></span><br><span class="line">name =<span class="string">&#x27;杨老师&#x27;</span>					  <span class="comment"># name作用范围为函数的内部和外部都可以使用，全局变量</span></span><br><span class="line"><span class="built_in">print</span>(name)</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun2</span>():</span></span><br><span class="line">    <span class="built_in">print</span>(name)</span><br><span class="line"><span class="comment"># 调用函数</span></span><br><span class="line">fun2()</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun3</span>():</span></span><br><span class="line">    <span class="keyword">global</span> age					<span class="comment"># 函数内部定义的变量，局部变量；局部变量使用global声明之后，这个变量实际上就变成了全局变量</span></span><br><span class="line">    age = <span class="number">20</span></span><br><span class="line">    <span class="built_in">print</span>(age)</span><br><span class="line">fun3()</span><br><span class="line"><span class="built_in">print</span>(age)</span><br></pre></td></tr></table></figure></div>
+<h2 id="5-递归函数">5. 递归函数</h2>
+<p><em>什么是递归函数？</em></p>
+<p>如果在一个函数的函数体内调用了该函数本身，这个函数就称为递归函数.</p>
+<p><em>递归函数的组成部分：</em></p>
+<p>递归调用条件与递归终止条件.</p>
+<p><em>递归的调用过程：</em></p>
+<p>每递归调用一次函数，都会在栈内存分配一个栈帧；每执行完一次函数，都会释放相应的空间.</p>
+<p><em>递归的优缺点：</em></p>
+<p>优点是思路和代码简单；缺点是占用内存多，效率低下.</p>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;&#x27;使用递归计算阶乘&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fac</span>(<span class="params">n</span>):</span></span><br><span class="line">    <span class="keyword">if</span> n == <span class="number">1</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        res = n*fac(n-<span class="number">1</span>)</span><br><span class="line">        <span class="keyword">return</span> res</span><br><span class="line">    </span><br><span class="line"><span class="built_in">print</span>(fac(<span class="number">6</span>))</span><br></pre></td></tr></table></figure></div>
+<h2 id="6-斐波那契数列">6. 斐波那契数列</h2>
+<p>$$<br>
+F_{n}=F_{n - 1}+F_{n-2}<br>
+$$</p>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fib</span>(<span class="params">n</span>):</span></span><br><span class="line">    <span class="keyword">if</span> n == <span class="number">1</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">    <span class="keyword">elif</span> n == <span class="number">2</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> fib(n-<span class="number">1</span>) + fib(n-<span class="number">2</span>)</span><br><span class="line">    </span><br><span class="line"><span class="comment"># 斐波那契数列第六位</span></span><br><span class="line"><span class="built_in">print</span>(fib(<span class="number">6</span>))</span><br><span class="line"><span class="comment"># 斐波那契数列前六位(循环操作用列表)</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="number">7</span>):</span><br><span class="line">    <span class="built_in">print</span>(fib(i))</span><br></pre></td></tr></table></figure></div>
 ]]></content>
       <categories>
         <category>Python</category>
@@ -2405,6 +2405,25 @@ $$</p>
       </tags>
   </entry>
   <entry>
+    <title>Python 学习笔记(2)--转义字符</title>
+    <url>/posts/a3158c16/</url>
+    <content><![CDATA[<h2 id="1-转义字符">1. 转义字符</h2>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;hello \n world&#x27;</span>) 		 	<span class="comment"># \ +转义功能的首字母 n--newline的首字母表示换行</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;hello \t world&#x27;</span>) 		 	<span class="comment"># \t 水平制表符，一组4个空格的位置</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;helloooo \t world&#x27;</span>) </span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;hello \r world&#x27;</span>) 			<span class="comment"># \r 回车把hello覆盖</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;hello \b world&#x27;</span>) 			<span class="comment"># \b 退一个格将o退没了</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;http:\\\\www.baidu.com&#x27;</span>) 	<span class="comment"># \\输出一个\，\\\\输出2个\</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;  老师说：\’大家好\‘  &#x27;</span>)</span><br></pre></td></tr></table></figure></div>
+<span id="more"></span>
+<h2 id="2-原字符">2. 原字符</h2>
+<p>不希望字符串中的转义字符起作用，字符串前加上<code>r</code>或者<code>R</code></p>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">r&#x27;hello \n world&#x27;</span>)</span><br></pre></td></tr></table></figure></div>
+<p><u>注意事项</u>：最后一个字符不能是反斜杠\，但是是两个\\可以。</p>
+]]></content>
+      <categories>
+        <category>Python</category>
+        <category>基础语法</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Python 学习笔记(18)--案例实操</title>
     <url>/posts/3816cdcc/</url>
     <content><![CDATA[<h2 id="1-案例一">1. 案例一</h2>
@@ -2515,25 +2534,6 @@ $$</p>
       </tags>
   </entry>
   <entry>
-    <title>Python 学习笔记(2)--转义字符</title>
-    <url>/posts/a3158c16/</url>
-    <content><![CDATA[<h2 id="1-转义字符">1. 转义字符</h2>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;hello \n world&#x27;</span>) 		 	<span class="comment"># \ +转义功能的首字母 n--newline的首字母表示换行</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;hello \t world&#x27;</span>) 		 	<span class="comment"># \t 水平制表符，一组4个空格的位置</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;helloooo \t world&#x27;</span>) </span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;hello \r world&#x27;</span>) 			<span class="comment"># \r 回车把hello覆盖</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;hello \b world&#x27;</span>) 			<span class="comment"># \b 退一个格将o退没了</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;http:\\\\www.baidu.com&#x27;</span>) 	<span class="comment"># \\输出一个\，\\\\输出2个\</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;  老师说：\’大家好\‘  &#x27;</span>)</span><br></pre></td></tr></table></figure></div>
-<span id="more"></span>
-<h2 id="2-原字符">2. 原字符</h2>
-<p>不希望字符串中的转义字符起作用，字符串前加上<code>r</code>或者<code>R</code></p>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">r&#x27;hello \n world&#x27;</span>)</span><br></pre></td></tr></table></figure></div>
-<p><u>注意事项</u>：最后一个字符不能是反斜杠\，但是是两个\\可以。</p>
-]]></content>
-      <categories>
-        <category>Python</category>
-        <category>基础语法</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Python 学习笔记(3)--变量、数据类型、标识符</title>
     <url>/posts/98705640/</url>
     <content><![CDATA[<h2 id="1-二进制与字符编码">1. 二进制与字符编码</h2>
@@ -2619,58 +2619,6 @@ $$</p>
 <li>中文编码声明注释：在文件开头加上中文声明注释，用以指定源码文件的编码格式。（Python3基本用不到）</li>
 </ul>
 <div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 输入功能（单行注释）</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;hello&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;嘿嘿，</span></span><br><span class="line"><span class="string">我是多行注释&#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure></div>
-]]></content>
-      <categories>
-        <category>Python</category>
-        <category>基础语法</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python 学习笔记(5)--结构</title>
-    <url>/posts/bbce055/</url>
-    <content><![CDATA[<h2 id="1-程序的组织结构">1. 程序的组织结构</h2>
-<p>任何简单或复杂的算法都可以由顺序结构、选择结构和循环结构这三种基本结构组合而成。</p>
-<h2 id="2-顺序结构">2. 顺序结构</h2>
-<p>程序从上到下顺序地执行代码，中间没有任何地判断和跳转，直到程序结束。</p>
-<blockquote>
-<p>程序开始 → 代码1 → 代码2 → … → 代码N → 程序结果</p>
-</blockquote>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;&#x27;把大象装冰箱一共分几步&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;-------程序开始--------&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;1.把冰箱门打开&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;2.把大象放到冰箱里&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;3.把冰箱门关上&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;------程序结束---------&#x27;</span>)</span><br></pre></td></tr></table></figure></div>
-<span id="more"></span>
-<h2 id="3-对象的布尔值">3. 对象的布尔值</h2>
-<p>Python一切皆对象，所有对象都有一个布尔值，获取对象地布尔值使用内置函数<code>bool()</code></p>
-<p>以下对象地布尔值为<code>False</code></p>
-<ul>
-<li>False</li>
-<li>数值0</li>
-<li>None</li>
-<li>空字符串</li>
-<li>空列表</li>
-<li>空元组</li>
-<li>空字典</li>
-<li>空集合</li>
-</ul>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 测试对象地布尔值</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;----------布尔值均为False---------&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">bool</span>(<span class="literal">False</span>))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">bool</span>(<span class="number">0</span>))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">bool</span>(<span class="number">0</span>,<span class="number">0</span>))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">bool</span>(<span class="literal">None</span>))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">bool</span>(<span class="string">&#x27;&#x27;</span>))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">bool</span>(<span class="string">&quot;&quot;</span>))  </span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">bool</span>([]))      			<span class="comment"># 空列表</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">bool</span>(<span class="built_in">list</span>()))  			<span class="comment"># 空列表</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">bool</span>(()))      			<span class="comment"># 空元组</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">bool</span>(<span class="built_in">tuple</span>())) 			<span class="comment"># 空元组</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">bool</span>(&#123;&#125;))      			<span class="comment"># 空字典</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">bool</span>(<span class="built_in">dict</span>())) 		 	<span class="comment"># 空字典</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">bool</span>(<span class="built_in">set</span>()))   			<span class="comment"># 空集合</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;------------布尔值为True-------------&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">bool</span>(<span class="number">18</span>))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">bool</span>(<span class="literal">True</span>))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">bool</span>(<span class="string">&#x27;helloworld&#x27;</span>))</span><br></pre></td></tr></table></figure></div>
-<h2 id="4-选择结构">4. 选择结构</h2>
-<p>程序根据判断条件地布尔值选择性地执行部分代码，明确地让计算机知道在什么条件下该去做什么。</p>
-<h3 id="（1）单分支if结构">（1）单分支<code>if</code>结构</h3>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">money = <span class="number">1000</span>							 <span class="comment"># 余额</span></span><br><span class="line">s = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&#x27;请输入取款金额：&#x27;</span>))			<span class="comment"># 取款金额</span></span><br><span class="line"><span class="comment"># 判断余额是否充足</span></span><br><span class="line"><span class="keyword">if</span> money &gt;= s:</span><br><span class="line">  money = money - s</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&#x27;取款成功，余额为：&#x27;</span>,money)</span><br></pre></td></tr></table></figure></div>
-<h3 id="（2）双分支if-else结构">（2）双分支<code>if...else</code>结构</h3>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;&#x27;从键盘录入一个整数，编写程序使计算机判断奇偶 &#x27;&#x27;&#x27;</span></span><br><span class="line">num = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&#x27;请输入一个整数：&#x27;</span>))</span><br><span class="line"><span class="keyword">if</span> num % <span class="number">2</span> == <span class="number">0</span>:</span><br><span class="line">  <span class="built_in">print</span>(num,<span class="string">&#x27;是偶数&#x27;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">  <span class="built_in">print</span>(num,<span class="string">&#x27;是奇数&#x27;</span>)</span><br></pre></td></tr></table></figure></div>
-<h3 id="（3）多分支if-elif-else结构">（3）多分支<code>if...elif...else</code>结构</h3>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;&#x27;多分支结构，多选一执行</span></span><br><span class="line"><span class="string">  从键盘录入一个整数成绩</span></span><br><span class="line"><span class="string">    90-100  A</span></span><br><span class="line"><span class="string">    80-89   B</span></span><br><span class="line"><span class="string">    70-79  C</span></span><br><span class="line"><span class="string">    60-69  D</span></span><br><span class="line"><span class="string">    0-59  E</span></span><br><span class="line"><span class="string">    小于0或大于100 为非法数据（不是成绩的有效范围）</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line">score = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&#x27;请输入一个成绩：&#x27;</span>))</span><br><span class="line"><span class="comment"># 判断</span></span><br><span class="line"><span class="keyword">if</span> score &gt;= <span class="number">90</span> <span class="keyword">and</span> score &lt;= <span class="number">100</span>:    <span class="comment"># Python语句独有特点也可写作 if 90 &lt;= score &lt;= 100: </span></span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&#x27;A级&#x27;</span>)</span><br><span class="line"><span class="keyword">elif</span> score &gt;= <span class="number">80</span> <span class="keyword">and</span> score &lt;= <span class="number">89</span>:</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&#x27;B级&#x27;</span>)</span><br><span class="line"><span class="keyword">elif</span> score &gt;= <span class="number">70</span> <span class="keyword">and</span> score &lt;= <span class="number">79</span>:</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&#x27;C级&#x27;</span>)</span><br><span class="line"><span class="keyword">elif</span> score &gt;= <span class="number">60</span> <span class="keyword">and</span> score &lt;= <span class="number">69</span>:</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&#x27;D级&#x27;</span>)</span><br><span class="line"><span class="keyword">elif</span> score &gt;= <span class="number">50</span> <span class="keyword">and</span> score &lt;= <span class="number">59</span>:</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&#x27;E级&#x27;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&#x27;对不起，成绩有误，不在成绩的有效范围&#x27;</span>)</span><br></pre></td></tr></table></figure></div>
-<h3 id="（4）if语句的嵌套">（4）if语句的嵌套</h3>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;&#x27;会员    &gt;= 200   8折</span></span><br><span class="line"><span class="string">          &gt;= 100    9折</span></span><br><span class="line"><span class="string">          不打折</span></span><br><span class="line"><span class="string">  非会员   &gt;=200     9.5折</span></span><br><span class="line"><span class="string">          不打折&#x27;&#x27;&#x27;</span></span><br><span class="line">answer = <span class="built_in">input</span>(<span class="string">&#x27;您是会员吗？y/n \n&#x27;</span>)</span><br><span class="line">money = <span class="built_in">float</span>(<span class="built_in">input</span>(<span class="string">&#x27;请输入您的购物金额：&#x27;</span>))</span><br><span class="line"><span class="comment">#外层判断是否是会员</span></span><br><span class="line"><span class="keyword">if</span> answer == <span class="string">&#x27;y&#x27;</span>:   <span class="comment">#会员</span></span><br><span class="line">  <span class="keyword">if</span> money &gt;= <span class="number">200</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;打8折，付款金额为：&#x27;</span>,money*<span class="number">0.8</span>,<span class="string">&#x27;元&#x27;</span>)</span><br><span class="line">  <span class="keyword">elif</span> money &gt;= <span class="number">100</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;打9折，付款金额为：&#x27;</span>,money*<span class="number">0.9</span>,<span class="string">&#x27;元&#x27;</span>)</span><br><span class="line">  <span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;不打折，付款金额为：&#x27;</span>,money,<span class="string">&#x27;元&#x27;</span>)</span><br><span class="line"><span class="keyword">else</span>:              <span class="comment">#非会员</span></span><br><span class="line">  <span class="keyword">if</span> money &gt;= <span class="number">200</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;打9.5折，付款金额为：&#x27;</span>,money*<span class="number">0.95</span>,<span class="string">&#x27;元&#x27;</span>)</span><br><span class="line">  <span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;不打折，付款金额为：&#x27;</span>,money,<span class="string">&#x27;元&#x27;</span>)</span><br></pre></td></tr></table></figure></div>
-<h3 id="（5）条件表达式">（5）条件表达式</h3>
-<p><em>条件表达式</em>是<code>if...else</code>的简写，语法结构为：<code>x if 判断条件 else y</code></p>
-<p>运算规则：如果判断条件的布尔值为True，条件表达式的返回值为x，否则条件表达式的返回值为False。</p>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;&#x27;从键盘录入两个整数，比较两个整数的大小&#x27;&#x27;&#x27;</span></span><br><span class="line">num_a = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&#x27;请输入第一个整数：&#x27;</span>))</span><br><span class="line">num_b = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&#x27;请输入第二个整数：&#x27;</span>))</span><br><span class="line"><span class="comment">#比较大小</span></span><br><span class="line"><span class="keyword">if</span> num_a &gt;= num_b:</span><br><span class="line">  <span class="built_in">print</span>(num_a,<span class="string">&#x27;大于等于&#x27;</span>,num_b)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">  <span class="built_in">print</span>(num_a,<span class="string">&#x27;小于&#x27;</span>,num_b)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;---------使用条件表达式进行比较-------------&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(( <span class="built_in">str</span>(num_a) + <span class="string">&#x27;大于等于&#x27;</span> + <span class="built_in">str</span>(num_b))  <span class="keyword">if</span> num_a&gt;=num_b <span class="keyword">else</span> <span class="built_in">str</span>(num_a)+<span class="string">&#x27;小于&#x27;</span>+<span class="built_in">str</span>(num_b))</span><br></pre></td></tr></table></figure></div>
-<h2 id="5-pass空语句">5. pass空语句</h2>
-<p>语句什么都不做，只是一个占位符，用在语法上需要语句的地方。</p>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#pass语句</span></span><br><span class="line">answer = <span class="built_in">input</span>(‘您是会员吗？y/n’)</span><br><span class="line"><span class="keyword">if</span> answer == <span class="string">&#x27;y&#x27;</span>:</span><br><span class="line">  <span class="keyword">pass</span></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">  <span class="keyword">pass</span></span><br></pre></td></tr></table></figure></div>
 ]]></content>
       <categories>
         <category>Python</category>
@@ -2782,6 +2730,58 @@ range 类型的优点：不管 range 对象表示的整数序列有多长，所�
 <p><em>二重循环中的break和continue用于控制本层循环。</em></p>
 <p><img src="https://cdn.jsdelivr.net/gh/zyzhang827/filesimage@main/images/2022/01/05/e27097e833ec6dd9a7236b79c48217b8-%E4%BA%8C%E9%87%8D%E5%BE%AA%E7%8E%AF-c106fa.png" alt="二重循环"></p>
 <div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;&#x27;流程控制语句break与continue在二重循环中的使用&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">5</span>):     					<span class="comment"># 外层循环执行5次</span></span><br><span class="line">  <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>，<span class="number">11</span>):</span><br><span class="line">    <span class="keyword">if</span> j%<span class="number">2</span> == <span class="number">0</span>:</span><br><span class="line">      <span class="keyword">break</span></span><br><span class="line">      <span class="comment">#continue</span></span><br><span class="line">    <span class="built_in">print</span>(j)</span><br><span class="line">    <span class="comment">#print(j,end = &#x27;\t&#x27;)</span></span><br><span class="line">  <span class="comment">#print()</span></span><br></pre></td></tr></table></figure></div>
+]]></content>
+      <categories>
+        <category>Python</category>
+        <category>基础语法</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python 学习笔记(5)--结构</title>
+    <url>/posts/bbce055/</url>
+    <content><![CDATA[<h2 id="1-程序的组织结构">1. 程序的组织结构</h2>
+<p>任何简单或复杂的算法都可以由顺序结构、选择结构和循环结构这三种基本结构组合而成。</p>
+<h2 id="2-顺序结构">2. 顺序结构</h2>
+<p>程序从上到下顺序地执行代码，中间没有任何地判断和跳转，直到程序结束。</p>
+<blockquote>
+<p>程序开始 → 代码1 → 代码2 → … → 代码N → 程序结果</p>
+</blockquote>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;&#x27;把大象装冰箱一共分几步&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;-------程序开始--------&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;1.把冰箱门打开&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;2.把大象放到冰箱里&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;3.把冰箱门关上&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;------程序结束---------&#x27;</span>)</span><br></pre></td></tr></table></figure></div>
+<span id="more"></span>
+<h2 id="3-对象的布尔值">3. 对象的布尔值</h2>
+<p>Python一切皆对象，所有对象都有一个布尔值，获取对象地布尔值使用内置函数<code>bool()</code></p>
+<p>以下对象地布尔值为<code>False</code></p>
+<ul>
+<li>False</li>
+<li>数值0</li>
+<li>None</li>
+<li>空字符串</li>
+<li>空列表</li>
+<li>空元组</li>
+<li>空字典</li>
+<li>空集合</li>
+</ul>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 测试对象地布尔值</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;----------布尔值均为False---------&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">bool</span>(<span class="literal">False</span>))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">bool</span>(<span class="number">0</span>))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">bool</span>(<span class="number">0</span>,<span class="number">0</span>))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">bool</span>(<span class="literal">None</span>))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">bool</span>(<span class="string">&#x27;&#x27;</span>))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">bool</span>(<span class="string">&quot;&quot;</span>))  </span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">bool</span>([]))      			<span class="comment"># 空列表</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">bool</span>(<span class="built_in">list</span>()))  			<span class="comment"># 空列表</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">bool</span>(()))      			<span class="comment"># 空元组</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">bool</span>(<span class="built_in">tuple</span>())) 			<span class="comment"># 空元组</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">bool</span>(&#123;&#125;))      			<span class="comment"># 空字典</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">bool</span>(<span class="built_in">dict</span>())) 		 	<span class="comment"># 空字典</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">bool</span>(<span class="built_in">set</span>()))   			<span class="comment"># 空集合</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;------------布尔值为True-------------&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">bool</span>(<span class="number">18</span>))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">bool</span>(<span class="literal">True</span>))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">bool</span>(<span class="string">&#x27;helloworld&#x27;</span>))</span><br></pre></td></tr></table></figure></div>
+<h2 id="4-选择结构">4. 选择结构</h2>
+<p>程序根据判断条件地布尔值选择性地执行部分代码，明确地让计算机知道在什么条件下该去做什么。</p>
+<h3 id="（1）单分支if结构">（1）单分支<code>if</code>结构</h3>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">money = <span class="number">1000</span>							 <span class="comment"># 余额</span></span><br><span class="line">s = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&#x27;请输入取款金额：&#x27;</span>))			<span class="comment"># 取款金额</span></span><br><span class="line"><span class="comment"># 判断余额是否充足</span></span><br><span class="line"><span class="keyword">if</span> money &gt;= s:</span><br><span class="line">  money = money - s</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&#x27;取款成功，余额为：&#x27;</span>,money)</span><br></pre></td></tr></table></figure></div>
+<h3 id="（2）双分支if-else结构">（2）双分支<code>if...else</code>结构</h3>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;&#x27;从键盘录入一个整数，编写程序使计算机判断奇偶 &#x27;&#x27;&#x27;</span></span><br><span class="line">num = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&#x27;请输入一个整数：&#x27;</span>))</span><br><span class="line"><span class="keyword">if</span> num % <span class="number">2</span> == <span class="number">0</span>:</span><br><span class="line">  <span class="built_in">print</span>(num,<span class="string">&#x27;是偶数&#x27;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">  <span class="built_in">print</span>(num,<span class="string">&#x27;是奇数&#x27;</span>)</span><br></pre></td></tr></table></figure></div>
+<h3 id="（3）多分支if-elif-else结构">（3）多分支<code>if...elif...else</code>结构</h3>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;&#x27;多分支结构，多选一执行</span></span><br><span class="line"><span class="string">  从键盘录入一个整数成绩</span></span><br><span class="line"><span class="string">    90-100  A</span></span><br><span class="line"><span class="string">    80-89   B</span></span><br><span class="line"><span class="string">    70-79  C</span></span><br><span class="line"><span class="string">    60-69  D</span></span><br><span class="line"><span class="string">    0-59  E</span></span><br><span class="line"><span class="string">    小于0或大于100 为非法数据（不是成绩的有效范围）</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line">score = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&#x27;请输入一个成绩：&#x27;</span>))</span><br><span class="line"><span class="comment"># 判断</span></span><br><span class="line"><span class="keyword">if</span> score &gt;= <span class="number">90</span> <span class="keyword">and</span> score &lt;= <span class="number">100</span>:    <span class="comment"># Python语句独有特点也可写作 if 90 &lt;= score &lt;= 100: </span></span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&#x27;A级&#x27;</span>)</span><br><span class="line"><span class="keyword">elif</span> score &gt;= <span class="number">80</span> <span class="keyword">and</span> score &lt;= <span class="number">89</span>:</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&#x27;B级&#x27;</span>)</span><br><span class="line"><span class="keyword">elif</span> score &gt;= <span class="number">70</span> <span class="keyword">and</span> score &lt;= <span class="number">79</span>:</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&#x27;C级&#x27;</span>)</span><br><span class="line"><span class="keyword">elif</span> score &gt;= <span class="number">60</span> <span class="keyword">and</span> score &lt;= <span class="number">69</span>:</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&#x27;D级&#x27;</span>)</span><br><span class="line"><span class="keyword">elif</span> score &gt;= <span class="number">50</span> <span class="keyword">and</span> score &lt;= <span class="number">59</span>:</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&#x27;E级&#x27;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&#x27;对不起，成绩有误，不在成绩的有效范围&#x27;</span>)</span><br></pre></td></tr></table></figure></div>
+<h3 id="（4）if语句的嵌套">（4）if语句的嵌套</h3>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;&#x27;会员    &gt;= 200   8折</span></span><br><span class="line"><span class="string">          &gt;= 100    9折</span></span><br><span class="line"><span class="string">          不打折</span></span><br><span class="line"><span class="string">  非会员   &gt;=200     9.5折</span></span><br><span class="line"><span class="string">          不打折&#x27;&#x27;&#x27;</span></span><br><span class="line">answer = <span class="built_in">input</span>(<span class="string">&#x27;您是会员吗？y/n \n&#x27;</span>)</span><br><span class="line">money = <span class="built_in">float</span>(<span class="built_in">input</span>(<span class="string">&#x27;请输入您的购物金额：&#x27;</span>))</span><br><span class="line"><span class="comment">#外层判断是否是会员</span></span><br><span class="line"><span class="keyword">if</span> answer == <span class="string">&#x27;y&#x27;</span>:   <span class="comment">#会员</span></span><br><span class="line">  <span class="keyword">if</span> money &gt;= <span class="number">200</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;打8折，付款金额为：&#x27;</span>,money*<span class="number">0.8</span>,<span class="string">&#x27;元&#x27;</span>)</span><br><span class="line">  <span class="keyword">elif</span> money &gt;= <span class="number">100</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;打9折，付款金额为：&#x27;</span>,money*<span class="number">0.9</span>,<span class="string">&#x27;元&#x27;</span>)</span><br><span class="line">  <span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;不打折，付款金额为：&#x27;</span>,money,<span class="string">&#x27;元&#x27;</span>)</span><br><span class="line"><span class="keyword">else</span>:              <span class="comment">#非会员</span></span><br><span class="line">  <span class="keyword">if</span> money &gt;= <span class="number">200</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;打9.5折，付款金额为：&#x27;</span>,money*<span class="number">0.95</span>,<span class="string">&#x27;元&#x27;</span>)</span><br><span class="line">  <span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;不打折，付款金额为：&#x27;</span>,money,<span class="string">&#x27;元&#x27;</span>)</span><br></pre></td></tr></table></figure></div>
+<h3 id="（5）条件表达式">（5）条件表达式</h3>
+<p><em>条件表达式</em>是<code>if...else</code>的简写，语法结构为：<code>x if 判断条件 else y</code></p>
+<p>运算规则：如果判断条件的布尔值为True，条件表达式的返回值为x，否则条件表达式的返回值为False。</p>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;&#x27;从键盘录入两个整数，比较两个整数的大小&#x27;&#x27;&#x27;</span></span><br><span class="line">num_a = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&#x27;请输入第一个整数：&#x27;</span>))</span><br><span class="line">num_b = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&#x27;请输入第二个整数：&#x27;</span>))</span><br><span class="line"><span class="comment">#比较大小</span></span><br><span class="line"><span class="keyword">if</span> num_a &gt;= num_b:</span><br><span class="line">  <span class="built_in">print</span>(num_a,<span class="string">&#x27;大于等于&#x27;</span>,num_b)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">  <span class="built_in">print</span>(num_a,<span class="string">&#x27;小于&#x27;</span>,num_b)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;---------使用条件表达式进行比较-------------&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(( <span class="built_in">str</span>(num_a) + <span class="string">&#x27;大于等于&#x27;</span> + <span class="built_in">str</span>(num_b))  <span class="keyword">if</span> num_a&gt;=num_b <span class="keyword">else</span> <span class="built_in">str</span>(num_a)+<span class="string">&#x27;小于&#x27;</span>+<span class="built_in">str</span>(num_b))</span><br></pre></td></tr></table></figure></div>
+<h2 id="5-pass空语句">5. pass空语句</h2>
+<p>语句什么都不做，只是一个占位符，用在语法上需要语句的地方。</p>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#pass语句</span></span><br><span class="line">answer = <span class="built_in">input</span>(‘您是会员吗？y/n’)</span><br><span class="line"><span class="keyword">if</span> answer == <span class="string">&#x27;y&#x27;</span>:</span><br><span class="line">  <span class="keyword">pass</span></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">  <span class="keyword">pass</span></span><br></pre></td></tr></table></figure></div>
 ]]></content>
       <categories>
         <category>Python</category>
@@ -3194,87 +3194,6 @@ range 类型的优点：不管 range 对象表示的整数序列有多长，所�
       </tags>
   </entry>
   <entry>
-    <title>爬虫学习笔记(4)--验证码</title>
-    <url>/posts/814742/</url>
-    <content><![CDATA[<h2 id="1-验证码识别简介">1. 验证码识别简介</h2>
-<p>验证码和爬虫之间的爱恨情仇：</p>
-<ul>
-<li>反爬机制：验证码。识别验证码图片中的数据，用于模拟登录操作。</li>
-</ul>
-<p>识别验证码的操作：</p>
-<ul>
-<li>人工肉眼识别（不推荐）</li>
-<li>第三方自动识别（推荐）</li>
-</ul>
-<span id="more"></span>
-<h2 id="2-云打码使用流程">2. 云打码使用流程</h2>
-<!--作者学习期间，该平台已经挂掉，故而使用超级鹰进行代替。同类打码平台可以自行百度选择-->
-<ul>
-<li>注册：用户中心身份</li>
-<li>登录：用户中心身份
-<ul>
-<li>查询余额，题分是否足够（第一次使用，绑定微信即可免费获赠1000题分；非首次使用，建议小额充值，1元即可）</li>
-<li>创建软件 ID —— 用户中心左下角</li>
-<li>下载示例代码 —— 开发文档</li>
-</ul>
-</li>
-</ul>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python</span></span><br><span class="line"><span class="comment"># coding:utf-8</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> lxml <span class="keyword">import</span> etree</span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">from</span> hashlib <span class="keyword">import</span> md5</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Chaojiying_Client</span>(<span class="params"><span class="built_in">object</span></span>):</span></span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, username, password, soft_id</span>):</span></span><br><span class="line">		self.username = username</span><br><span class="line">		password =  password.encode(<span class="string">&#x27;utf8&#x27;</span>)</span><br><span class="line">		self.password = md5(password).hexdigest()</span><br><span class="line">		self.soft_id = soft_id</span><br><span class="line">		self.base_params = &#123;</span><br><span class="line">			<span class="string">&#x27;user&#x27;</span>: self.username,</span><br><span class="line">			<span class="string">&#x27;pass2&#x27;</span>: self.password,</span><br><span class="line">			<span class="string">&#x27;softid&#x27;</span>: self.soft_id,</span><br><span class="line">		&#125;</span><br><span class="line">		self.headers = &#123;</span><br><span class="line">			<span class="string">&#x27;Connection&#x27;</span>: <span class="string">&#x27;Keep-Alive&#x27;</span>,</span><br><span class="line">			<span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0)&#x27;</span>,</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">PostPic</span>(<span class="params">self, im, codetype</span>):</span></span><br><span class="line">		<span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">		im: 图片字节</span></span><br><span class="line"><span class="string">		codetype: 题目类型 参考 http://www.chaojiying.com/price.html</span></span><br><span class="line"><span class="string">		&quot;&quot;&quot;</span></span><br><span class="line">		params = &#123;</span><br><span class="line">			<span class="string">&#x27;codetype&#x27;</span>: codetype,</span><br><span class="line">		&#125;</span><br><span class="line">		params.update(self.base_params)</span><br><span class="line">		files = &#123;<span class="string">&#x27;userfile&#x27;</span>: (<span class="string">&#x27;ccc.jpg&#x27;</span>, im)&#125;</span><br><span class="line">		r = requests.post(<span class="string">&#x27;http://upload.chaojiying.net/Upload/Processing.php&#x27;</span>, data=params, files=files, headers=self.headers)</span><br><span class="line">		<span class="keyword">return</span> r.json()</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">ReportError</span>(<span class="params">self, im_id</span>):</span></span><br><span class="line">		<span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">		im_id:报错题目的图片ID</span></span><br><span class="line"><span class="string">		&quot;&quot;&quot;</span></span><br><span class="line">		params = &#123;</span><br><span class="line">			<span class="string">&#x27;id&#x27;</span>: im_id,</span><br><span class="line">		&#125;</span><br><span class="line">		params.update(self.base_params)</span><br><span class="line">		r = requests.post(<span class="string">&#x27;http://upload.chaojiying.net/Upload/ReportError.php&#x27;</span>, data=params, headers=self.headers)</span><br><span class="line">		<span class="keyword">return</span> r.json()</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">tranformImgCode</span>(<span class="params">imgPath,imgType</span>):</span></span><br><span class="line">	chaojiying = Chaojiying_Client(<span class="string">&#x27;此处是账户&#x27;</span>, <span class="string">&#x27;此处是密码&#x27;</span>, <span class="string">&#x27;此处是软件ID&#x27;</span>)	<span class="comment">#用户中心&gt;&gt;软件ID 生成一个替换 </span></span><br><span class="line">	im = <span class="built_in">open</span>(imgPath, <span class="string">&#x27;rb&#x27;</span>).read()	</span><br><span class="line">	<span class="keyword">return</span> chaojiying.PostPic(im,imgType)[<span class="string">&#x27;pic_str&#x27;</span>]	<span class="comment">#1902 验证码类型  官方网站&gt;&gt;价格体系 3.4+版 </span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(tranformImgCode(<span class="string">&#x27;./a.jpg&#x27;</span>,<span class="number">1902</span>))</span><br></pre></td></tr></table></figure></div>
-<h2 id="3-古诗文网验证码识别">3. 古诗文网验证码识别</h2>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#### 将本部分代码复制到上一节代码之后，因为要调用上述封装的tranformImgCode方法</span></span><br><span class="line"></span><br><span class="line">session = requests.Session()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 识别验证码图下载</span></span><br><span class="line">headers = &#123;</span><br><span class="line"><span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line">url = <span class="string">&#x27;https://so.gushiwen.cn/user/login.aspx?from=http://so.gushiwen.cn/user/collect.aspx&#x27;</span></span><br><span class="line">page_text = session.get(url=url, headers=headers).text</span><br><span class="line"><span class="comment"># 解析验证码图片的地址</span></span><br><span class="line">tree = etree.HTML(page_text)</span><br><span class="line">img_src = <span class="string">&#x27;https://so.gushiwen.org&#x27;</span> + tree.xpath(<span class="string">&#x27;//*[@id=&quot;imgCode&quot;]/@src&#x27;</span>)[<span class="number">0</span>]</span><br><span class="line"><span class="comment"># 将验证码图片保存本地</span></span><br><span class="line">img_data = session.get(img_src, headers=headers).content</span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;./code.jpg&#x27;</span>, <span class="string">&#x27;wb&#x27;</span>) <span class="keyword">as</span> fp:</span><br><span class="line">	fp.write(img_data)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 识别验证码</span></span><br><span class="line">code_text = tranformImgCode(<span class="string">&#x27;./code.jpg&#x27;</span>, <span class="number">1902</span>)</span><br><span class="line"><span class="built_in">print</span>(code_text)</span><br><span class="line">login_url = <span class="string">&#x27;https://so.gushiwen.cn/user/login.aspx?from=http%3a%2f%2fso.gushiwen.cn%2fuser%2fcollect.aspx&#x27;</span></span><br><span class="line">data = &#123;</span><br><span class="line">	<span class="string">&#x27;__VIEWSTATE&#x27;</span>: <span class="string">&#x27;f1ECt6+6MPtdTZMJtYOYS/7ww2d/DPy9t8JQcIt1QuOneLTbNQuYqPcCjZNbDAbfb9vj3k6f0M7EKTf0YqElM1k1A5ELwyTvUzBii+9LDRBbIMmc/jb0DJPsYfI=&#x27;</span>,</span><br><span class="line">	<span class="string">&#x27;__VIEWSTATEGENERATOR&#x27;</span>: <span class="string">&#x27;C93BE1AE&#x27;</span>,</span><br><span class="line">	<span class="string">&#x27;from&#x27;</span>: <span class="string">&#x27;http://so.gushiwen.cn/user/collect.aspx&#x27;</span>,</span><br><span class="line">	<span class="string">&#x27;email&#x27;</span>: <span class="string">&#x27;账号&#x27;</span>,</span><br><span class="line">	<span class="string">&#x27;pwd&#x27;</span>: <span class="string">&#x27;密码&#x27;</span>,</span><br><span class="line">	<span class="string">&#x27;code&#x27;</span>: code_text,  <span class="comment"># 动态变化</span></span><br><span class="line">	<span class="string">&#x27;denglu&#x27;</span>: <span class="string">&#x27;登录&#x27;</span>,</span><br><span class="line">	&#125;</span><br><span class="line"><span class="comment"># 对点击登录按钮发起请求</span></span><br><span class="line">page_text_login = session.post(url=login_url, headers=headers, data=data).text</span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;./gushiwen.html&#x27;</span>, <span class="string">&#x27;w&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>) <span class="keyword">as</span> fp:</span><br><span class="line">	fp.write(page_text_login)</span><br></pre></td></tr></table></figure></div>
-<ul>
-<li>
-<p>在请求参数中如果看到了一组乱序的请求参数，最好去验证这组请求参数是否为动态变化</p>
-<ul>
-<li>处理：
-<ul>
-<li>方式1：常规来讲一般动态变化的请求参数会被隐藏在前台页面中，那么我们就要去前台页面源码中寻找；</li>
-<li>方式2：如果前台页面没有的话，我们就可以基于抓包工具进行全局搜索。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p>基于百度AI实现的爬虫给功能：</p>
-<ul>
-<li>图像识别</li>
-<li>语音识别&amp;合成</li>
-<li>自然语言处理</li>
-</ul>
-</li>
-<li>
-<p>使用流程：</p>
-<ul>
-<li>
-<p>点击控制台进行登录</p>
-</li>
-<li>
-<p>选择想要实现的功能</p>
-</li>
-<li>
-<p>实现功能下创建一个 app</p>
-</li>
-<li>
-<p>选择对应的 pythonSDK 文档进行代码实现</p>
-<blockquote>
-<p>需求：<a href="https://duanziwang.com/">https://duanziwang.com/</a></p>
-<p>讲段子王中的段子内容爬取到本地，然后基于语音合成为mp3的音频文件，然后自己搭建一个web服务器，线上实时播放音频文件。</p>
-</blockquote>
-</li>
-</ul>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>Python</category>
-        <category>爬虫</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>爬虫</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>爬虫学习笔记(3)--数据解析</title>
     <url>/posts/5e6336de/</url>
     <content><![CDATA[<h2 id="1-数据解析概述">1. 数据解析概述</h2>
@@ -3570,6 +3489,87 @@ range 类型的优点：不管 range 对象表示的整数序列有多长，所�
       </tags>
   </entry>
   <entry>
+    <title>爬虫学习笔记(4)--验证码</title>
+    <url>/posts/814742/</url>
+    <content><![CDATA[<h2 id="1-验证码识别简介">1. 验证码识别简介</h2>
+<p>验证码和爬虫之间的爱恨情仇：</p>
+<ul>
+<li>反爬机制：验证码。识别验证码图片中的数据，用于模拟登录操作。</li>
+</ul>
+<p>识别验证码的操作：</p>
+<ul>
+<li>人工肉眼识别（不推荐）</li>
+<li>第三方自动识别（推荐）</li>
+</ul>
+<span id="more"></span>
+<h2 id="2-云打码使用流程">2. 云打码使用流程</h2>
+<!--作者学习期间，该平台已经挂掉，故而使用超级鹰进行代替。同类打码平台可以自行百度选择-->
+<ul>
+<li>注册：用户中心身份</li>
+<li>登录：用户中心身份
+<ul>
+<li>查询余额，题分是否足够（第一次使用，绑定微信即可免费获赠1000题分；非首次使用，建议小额充值，1元即可）</li>
+<li>创建软件 ID —— 用户中心左下角</li>
+<li>下载示例代码 —— 开发文档</li>
+</ul>
+</li>
+</ul>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python</span></span><br><span class="line"><span class="comment"># coding:utf-8</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> lxml <span class="keyword">import</span> etree</span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">from</span> hashlib <span class="keyword">import</span> md5</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Chaojiying_Client</span>(<span class="params"><span class="built_in">object</span></span>):</span></span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, username, password, soft_id</span>):</span></span><br><span class="line">		self.username = username</span><br><span class="line">		password =  password.encode(<span class="string">&#x27;utf8&#x27;</span>)</span><br><span class="line">		self.password = md5(password).hexdigest()</span><br><span class="line">		self.soft_id = soft_id</span><br><span class="line">		self.base_params = &#123;</span><br><span class="line">			<span class="string">&#x27;user&#x27;</span>: self.username,</span><br><span class="line">			<span class="string">&#x27;pass2&#x27;</span>: self.password,</span><br><span class="line">			<span class="string">&#x27;softid&#x27;</span>: self.soft_id,</span><br><span class="line">		&#125;</span><br><span class="line">		self.headers = &#123;</span><br><span class="line">			<span class="string">&#x27;Connection&#x27;</span>: <span class="string">&#x27;Keep-Alive&#x27;</span>,</span><br><span class="line">			<span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0)&#x27;</span>,</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">PostPic</span>(<span class="params">self, im, codetype</span>):</span></span><br><span class="line">		<span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">		im: 图片字节</span></span><br><span class="line"><span class="string">		codetype: 题目类型 参考 http://www.chaojiying.com/price.html</span></span><br><span class="line"><span class="string">		&quot;&quot;&quot;</span></span><br><span class="line">		params = &#123;</span><br><span class="line">			<span class="string">&#x27;codetype&#x27;</span>: codetype,</span><br><span class="line">		&#125;</span><br><span class="line">		params.update(self.base_params)</span><br><span class="line">		files = &#123;<span class="string">&#x27;userfile&#x27;</span>: (<span class="string">&#x27;ccc.jpg&#x27;</span>, im)&#125;</span><br><span class="line">		r = requests.post(<span class="string">&#x27;http://upload.chaojiying.net/Upload/Processing.php&#x27;</span>, data=params, files=files, headers=self.headers)</span><br><span class="line">		<span class="keyword">return</span> r.json()</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">ReportError</span>(<span class="params">self, im_id</span>):</span></span><br><span class="line">		<span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">		im_id:报错题目的图片ID</span></span><br><span class="line"><span class="string">		&quot;&quot;&quot;</span></span><br><span class="line">		params = &#123;</span><br><span class="line">			<span class="string">&#x27;id&#x27;</span>: im_id,</span><br><span class="line">		&#125;</span><br><span class="line">		params.update(self.base_params)</span><br><span class="line">		r = requests.post(<span class="string">&#x27;http://upload.chaojiying.net/Upload/ReportError.php&#x27;</span>, data=params, headers=self.headers)</span><br><span class="line">		<span class="keyword">return</span> r.json()</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">tranformImgCode</span>(<span class="params">imgPath,imgType</span>):</span></span><br><span class="line">	chaojiying = Chaojiying_Client(<span class="string">&#x27;此处是账户&#x27;</span>, <span class="string">&#x27;此处是密码&#x27;</span>, <span class="string">&#x27;此处是软件ID&#x27;</span>)	<span class="comment">#用户中心&gt;&gt;软件ID 生成一个替换 </span></span><br><span class="line">	im = <span class="built_in">open</span>(imgPath, <span class="string">&#x27;rb&#x27;</span>).read()	</span><br><span class="line">	<span class="keyword">return</span> chaojiying.PostPic(im,imgType)[<span class="string">&#x27;pic_str&#x27;</span>]	<span class="comment">#1902 验证码类型  官方网站&gt;&gt;价格体系 3.4+版 </span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(tranformImgCode(<span class="string">&#x27;./a.jpg&#x27;</span>,<span class="number">1902</span>))</span><br></pre></td></tr></table></figure></div>
+<h2 id="3-古诗文网验证码识别">3. 古诗文网验证码识别</h2>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#### 将本部分代码复制到上一节代码之后，因为要调用上述封装的tranformImgCode方法</span></span><br><span class="line"></span><br><span class="line">session = requests.Session()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 识别验证码图下载</span></span><br><span class="line">headers = &#123;</span><br><span class="line"><span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line">url = <span class="string">&#x27;https://so.gushiwen.cn/user/login.aspx?from=http://so.gushiwen.cn/user/collect.aspx&#x27;</span></span><br><span class="line">page_text = session.get(url=url, headers=headers).text</span><br><span class="line"><span class="comment"># 解析验证码图片的地址</span></span><br><span class="line">tree = etree.HTML(page_text)</span><br><span class="line">img_src = <span class="string">&#x27;https://so.gushiwen.org&#x27;</span> + tree.xpath(<span class="string">&#x27;//*[@id=&quot;imgCode&quot;]/@src&#x27;</span>)[<span class="number">0</span>]</span><br><span class="line"><span class="comment"># 将验证码图片保存本地</span></span><br><span class="line">img_data = session.get(img_src, headers=headers).content</span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;./code.jpg&#x27;</span>, <span class="string">&#x27;wb&#x27;</span>) <span class="keyword">as</span> fp:</span><br><span class="line">	fp.write(img_data)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 识别验证码</span></span><br><span class="line">code_text = tranformImgCode(<span class="string">&#x27;./code.jpg&#x27;</span>, <span class="number">1902</span>)</span><br><span class="line"><span class="built_in">print</span>(code_text)</span><br><span class="line">login_url = <span class="string">&#x27;https://so.gushiwen.cn/user/login.aspx?from=http%3a%2f%2fso.gushiwen.cn%2fuser%2fcollect.aspx&#x27;</span></span><br><span class="line">data = &#123;</span><br><span class="line">	<span class="string">&#x27;__VIEWSTATE&#x27;</span>: <span class="string">&#x27;f1ECt6+6MPtdTZMJtYOYS/7ww2d/DPy9t8JQcIt1QuOneLTbNQuYqPcCjZNbDAbfb9vj3k6f0M7EKTf0YqElM1k1A5ELwyTvUzBii+9LDRBbIMmc/jb0DJPsYfI=&#x27;</span>,</span><br><span class="line">	<span class="string">&#x27;__VIEWSTATEGENERATOR&#x27;</span>: <span class="string">&#x27;C93BE1AE&#x27;</span>,</span><br><span class="line">	<span class="string">&#x27;from&#x27;</span>: <span class="string">&#x27;http://so.gushiwen.cn/user/collect.aspx&#x27;</span>,</span><br><span class="line">	<span class="string">&#x27;email&#x27;</span>: <span class="string">&#x27;账号&#x27;</span>,</span><br><span class="line">	<span class="string">&#x27;pwd&#x27;</span>: <span class="string">&#x27;密码&#x27;</span>,</span><br><span class="line">	<span class="string">&#x27;code&#x27;</span>: code_text,  <span class="comment"># 动态变化</span></span><br><span class="line">	<span class="string">&#x27;denglu&#x27;</span>: <span class="string">&#x27;登录&#x27;</span>,</span><br><span class="line">	&#125;</span><br><span class="line"><span class="comment"># 对点击登录按钮发起请求</span></span><br><span class="line">page_text_login = session.post(url=login_url, headers=headers, data=data).text</span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;./gushiwen.html&#x27;</span>, <span class="string">&#x27;w&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>) <span class="keyword">as</span> fp:</span><br><span class="line">	fp.write(page_text_login)</span><br></pre></td></tr></table></figure></div>
+<ul>
+<li>
+<p>在请求参数中如果看到了一组乱序的请求参数，最好去验证这组请求参数是否为动态变化</p>
+<ul>
+<li>处理：
+<ul>
+<li>方式1：常规来讲一般动态变化的请求参数会被隐藏在前台页面中，那么我们就要去前台页面源码中寻找；</li>
+<li>方式2：如果前台页面没有的话，我们就可以基于抓包工具进行全局搜索。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>基于百度AI实现的爬虫给功能：</p>
+<ul>
+<li>图像识别</li>
+<li>语音识别&amp;合成</li>
+<li>自然语言处理</li>
+</ul>
+</li>
+<li>
+<p>使用流程：</p>
+<ul>
+<li>
+<p>点击控制台进行登录</p>
+</li>
+<li>
+<p>选择想要实现的功能</p>
+</li>
+<li>
+<p>实现功能下创建一个 app</p>
+</li>
+<li>
+<p>选择对应的 pythonSDK 文档进行代码实现</p>
+<blockquote>
+<p>需求：<a href="https://duanziwang.com/">https://duanziwang.com/</a></p>
+<p>讲段子王中的段子内容爬取到本地，然后基于语音合成为mp3的音频文件，然后自己搭建一个web服务器，线上实时播放音频文件。</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Python</category>
+        <category>爬虫</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>爬虫</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>爬虫学习笔记(5)--requests 模块高级</title>
     <url>/posts/7b6c8a34/</url>
     <content><![CDATA[<h2 id="1-模拟登录实现流程梳理">1. 模拟登录实现流程梳理</h2>
@@ -3818,109 +3818,6 @@ range 类型的优点：不管 range 对象表示的整数序列有多长，所�
       <tags>
         <tag>Python</tag>
         <tag>爬虫</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python数据结构与算法(1)--复杂度及递归</title>
-    <url>/posts/5fc41c76/</url>
-    <content><![CDATA[<blockquote>
-<p>本文档基于<a href="https://www.bilibili.com/video/av332150111?from=search&amp;seid=6537256928008332308&amp;spm_id_from=333.337.0.0">B站视频课程</a></p>
-</blockquote>
-<h2 id="算法概念">算法概念</h2>
-<p><strong>算法（Algorithm）</strong>：一个计算过程，解决问题的办法</p>
-<p><strong>Niklaus Wirth</strong> ：“程序 = 数据结构 + 算法“</p>
-<h2 id="时间复杂度">时间复杂度</h2>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 1</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Hello World&quot;</span>)</span><br><span class="line"><span class="comment"># 2 </span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Hello World&quot;</span>)</span><br><span class="line"><span class="comment"># 3</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;Hello World&quot;</span>)        </span><br><span class="line"><span class="comment"># 4</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">        <span class="keyword">for</span> k <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&quot;Hello World&quot;</span>)</span><br></pre></td></tr></table></figure></div>
-<span id="more"></span>
-<h3 id="算法运行的快慢">算法运行的快慢</h3>
-<p>如何体现算法运行的快慢？</p>
-<p>不能够使用<strong>时间</strong>来体现算法运行的快慢，因为程序在不同的设备上运行时间也会不同，并且程序中的 n 不同，也会影响程序的运行。所以选择时间复杂度来体现算法运行的快慢。</p>
-<p>用时间复杂度来评估算法运行效率，以上述四段代码为例：</p>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 1</span></span><br><span class="line">O(<span class="number">1</span>)</span><br><span class="line"><span class="comment"># 2</span></span><br><span class="line">O(n)</span><br><span class="line"><span class="comment"># 3</span></span><br><span class="line">O(n²)</span><br><span class="line"><span class="comment"># 4</span></span><br><span class="line">O(n³)</span><br></pre></td></tr></table></figure></div>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 时间复杂度为 O(1)，并不是 O(3)；类似生活中回答几秒，而不是几个一秒;</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Hello World&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Hello Python&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Hello Algorithm&quot;</span>)</span><br><span class="line"><span class="comment"># 时间复杂度为 O(n²)。并不是 O(n²+n)；类似生活中回答睡觉大概几个小时，而不是具体精确到分钟秒的精度;</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Hello World&quot;</span>)</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;Hello World&quot;</span>)</span><br></pre></td></tr></table></figure></div>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 记时间复杂度为 O(log₂N) 或者 O(logN)</span></span><br><span class="line"><span class="comment"># 只要循环出现问题规格折半的时候，复杂度式子中会出现 logN</span></span><br><span class="line"><span class="keyword">while</span> n &gt; <span class="number">1</span>:</span><br><span class="line">    <span class="built_in">print</span>(n)    </span><br><span class="line">    n = n // <span class="number">2</span></span><br></pre></td></tr></table></figure></div>
-<h3 id="小结">小结</h3>
-<ol>
-<li>
-<p>时间复杂度是用来估计算法运行时间的一个式子(单位)；</p>
-</li>
-<li>
-<p><strong>一般来说</strong>，时间复杂度高的算法比时间复杂度低的算法慢；</p>
-</li>
-<li>
-<p>常见的时间复杂度(按效率排序)</p>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">O(<span class="number">1</span>) &lt; O(logn) &lt; O(n) &lt; O(nlogn) &lt; O(n²) &lt; O(n²logn) &lt; O(n³)</span><br></pre></td></tr></table></figure></div>
-</li>
-<li>
-<p>复杂问题的时间复杂度</p>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">O(n!)	O(<span class="number">2</span>ⁿ)	O(nⁿ)  ...</span><br></pre></td></tr></table></figure></div>
-</li>
-</ol>
-<h3 id="快速判断算法复杂度">快速判断算法复杂度</h3>
-<p>并不是针对所有算法都适用，适用于大多数简单情况。</p>
-<ul>
-<li>确定问题规格 n</li>
-<li>循环减半过程 logn</li>
-<li>k 层关于 n 的循环  n<sup>k</sup></li>
-</ul>
-<p>对于更加复杂的情况，则要根据算法执行过程进行判断。</p>
-<h2 id="空间复杂度">空间复杂度</h2>
-<p><strong>空间复杂度</strong>：用来评估算法内存占用大小的式子</p>
-<p>空间复杂度的表示方式与时间复杂度完全一样：</p>
-<ul>
-<li>算法使用了几个变量 O(1)</li>
-<li>算法使用了长度为 n 的一维列表  O(n)</li>
-<li>算法使用了 m 行 n 列的二维列表  O(mn)</li>
-</ul>
-<p>空间换时间：例如分布式程序。</p>
-<h2 id="复习：递归">复习：递归</h2>
-<p>递归的两个特点：</p>
-<ul>
-<li>调用自身</li>
-<li>结束条件</li>
-</ul>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># func1 不合法，没有结束条件</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func1</span>(<span class="params">x</span>):</span></span><br><span class="line">    <span class="built_in">print</span>(x)</span><br><span class="line">    func1(x-<span class="number">1</span>)</span><br><span class="line"><span class="comment"># func2 不合法，没有结束条件</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func2</span>(<span class="params">x</span>):</span></span><br><span class="line">    <span class="keyword">if</span> x &gt; <span class="number">0</span>:</span><br><span class="line">        <span class="built_in">print</span>(x)</span><br><span class="line">        func2(x+<span class="number">1</span>)</span><br><span class="line"><span class="comment"># func3 合法</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func3</span>(<span class="params">x</span>):</span></span><br><span class="line">    <span class="keyword">if</span> x &gt; <span class="number">0</span>:</span><br><span class="line">        <span class="built_in">print</span>(x)</span><br><span class="line">        func3(x-<span class="number">1</span>)</span><br><span class="line"><span class="comment"># func4 合法</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func4</span>(<span class="params">x</span>):</span></span><br><span class="line">    <span class="keyword">if</span> x &gt; <span class="number">0</span>:</span><br><span class="line">        func4(x-<span class="number">1</span>)</span><br><span class="line">        <span class="built_in">print</span>(x)</span><br></pre></td></tr></table></figure></div>
-<h2 id="汉诺塔问题">汉诺塔问题</h2>
-<p><img src="https://gitee.com/zyzhang98/typoraofimages/raw/master/Images/image-20220307090340059.png" alt="汉诺塔问题"></p>
-<ul>
-<li>大梵天创造世界的时候做了三根金刚石柱子，在一根柱子上从上往下按照大小顺序摞着64片黄金圆盘。</li>
-<li>大梵天命令婆罗门把圆盘从下面开始按大小顺序重新摆放在另一根柱子上。</li>
-<li>在小圆盘上不能放大圆盘，在三根柱子之间一次只能移动一个圆盘。</li>
-<li>64根柱子移动完毕之日，就是世界毁灭之时。</li>
-</ul>
-<h3 id="分析">分析</h3>
-<p>当 n=2 时：</p>
-<ol>
-<li>把小圆盘从 A 移动到 B</li>
-<li>把大圆盘从 A 移动到 C</li>
-<li>把小圆盘从 B 移动到 C</li>
-</ol>
-<p>当 n 个盘时(上面 n-1 个盘子看成一个整体，最下面一个盘子为一个整体)</p>
-<ol>
-<li>把 n-1 个圆盘从 A 经过 C 移动到 B (原问题的 -1 次的递归问题)</li>
-<li>把第 n 个圆盘从 A 移动到 C (因为仅一个盘子，仅一次移动即可)</li>
-<li>把 n-1 个圆盘从 B 经过 A 移动到 C</li>
-</ol>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hanoi</span>(<span class="params">n, a, b, c</span>):</span>							<span class="comment"># 把n个圆盘从a经过b移动到c</span></span><br><span class="line">    <span class="keyword">if</span> n&gt;<span class="number">0</span>:</span><br><span class="line">        hanoi(n-<span class="number">1</span>, a, c, b)						<span class="comment"># 把n-1个圆盘从a经过c移动到b</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;moving from %s to %s&quot;</span> % (a, c))  <span class="comment"># 把第n个圆盘从a移动到c</span></span><br><span class="line">        hanoi(n-<span class="number">1</span>, b, a, c)						<span class="comment"># 把n-1个圆盘从b经过a移动到c</span></span><br><span class="line">hanoi(<span class="number">3</span>, <span class="string">&quot;A&quot;</span>, <span class="string">&quot;B&quot;</span>, <span class="string">&quot;C&quot;</span>)        </span><br></pre></td></tr></table></figure></div>
-<ul>
-<li>
-<p>汉诺塔移动次数的递推式：<br>
-$$<br>
-H(n) = 2H(n-1) + 1<br>
-$$</p>
-</li>
-<li>
-<p>假设婆罗门每秒钟搬运一个盘子，则总共需要 5800 亿年。</p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>Python</category>
-        <category>Algorithm</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>算法</tag>
       </tags>
   </entry>
   <entry>
@@ -4427,30 +4324,98 @@ $$</p>
       </tags>
   </entry>
   <entry>
-    <title>Python数据结构与算法(2)--查找</title>
-    <url>/posts/20a79595/</url>
-    <content><![CDATA[<h2 id="列表查找">列表查找</h2>
-<h3 id="概念">概念</h3>
-<p><strong>查找</strong>：在一些数据元素中，通过一定的方法找出与给定关键字相同的数据元素的过程</p>
-<p><strong>列表查找</strong>：(线性表查找)从列表中查找指定元素</p>
-<ul>
-<li>输入：列表、待查找元素</li>
-<li>输出：元素下标(未找到元素时一般返回 None 或者 -1)</li>
-</ul>
-<p>内置列表查找函数：index()</p>
+    <title>Python数据结构与算法(1)--复杂度及递归</title>
+    <url>/posts/5fc41c76/</url>
+    <content><![CDATA[<blockquote>
+<p>本文档基于<a href="https://www.bilibili.com/video/av332150111?from=search&amp;seid=6537256928008332308&amp;spm_id_from=333.337.0.0">B站视频课程</a></p>
+</blockquote>
+<h2 id="算法概念">算法概念</h2>
+<p><strong>算法（Algorithm）</strong>：一个计算过程，解决问题的办法</p>
+<p><strong>Niklaus Wirth</strong> ：“程序 = 数据结构 + 算法“</p>
+<h2 id="时间复杂度">时间复杂度</h2>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 1</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Hello World&quot;</span>)</span><br><span class="line"><span class="comment"># 2 </span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Hello World&quot;</span>)</span><br><span class="line"><span class="comment"># 3</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;Hello World&quot;</span>)        </span><br><span class="line"><span class="comment"># 4</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">        <span class="keyword">for</span> k <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&quot;Hello World&quot;</span>)</span><br></pre></td></tr></table></figure></div>
 <span id="more"></span>
-<h3 id="顺序查找-Linear-Search">顺序查找(Linear Search)</h3>
-<p><strong>顺序查找</strong>：也叫线性查找，从列表第一个元素开始，顺序进行搜索，直到找到元素或者搜索到列表的最后一个元素为止。</p>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">linear_search</span>(<span class="params">li, val</span>):</span></span><br><span class="line">    <span class="keyword">for</span> index, value <span class="keyword">in</span> <span class="built_in">enumerate</span>(li):</span><br><span class="line">        <span class="keyword">if</span> value == val:</span><br><span class="line">            <span class="keyword">return</span> index</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">None</span></span><br></pre></td></tr></table></figure></div>
-<h3 id="二分查找-Binary-Search">二分查找(Binary Search)</h3>
-<p><strong>二分查找</strong>：又叫折半查找，从有序列表的初识候选区<code>li[0:n]</code>开始，通过对待查找的值与候选区中间值的比较，可以使候选区减少一半。</p>
-<p><img src="https://gitee.com/zyzhang98/typoraofimages/raw/master/Images/image-20220307090627559.png" alt="二分查找"></p>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">binary_search</span>(<span class="params">li, val</span>):</span></span><br><span class="line">    left = <span class="number">0</span></span><br><span class="line">    right = <span class="built_in">len</span>(li) - <span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span> left &lt;= right:		<span class="comment"># 候选区有值</span></span><br><span class="line">        mid = (left + right) // <span class="number">2</span></span><br><span class="line">        <span class="keyword">if</span> li[mid] == val:</span><br><span class="line">            <span class="keyword">return</span> mid</span><br><span class="line">        <span class="keyword">elif</span> li[mid] &gt; val:		<span class="comment"># 待查找的值在 mid 左侧</span></span><br><span class="line">            right = mid - <span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>:					<span class="comment"># 待查找的值在 mid 右侧</span></span><br><span class="line">            left = mid + <span class="number">1</span></span><br><span class="line">	<span class="keyword">else</span>：</span><br><span class="line">    	<span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line">li = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>]</span><br><span class="line"><span class="built_in">print</span>(binary_search(li, <span class="number">3</span>))</span><br></pre></td></tr></table></figure></div>
-<p>时间复杂度：<code>O(logn)</code></p>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># cal_time.py</span></span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">cal_time</span>(<span class="params">func</span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">wrapper</span>(<span class="params">*args, **kwargs</span>):</span></span><br><span class="line">        t1 = time.time()</span><br><span class="line">        result = func(*args, **kwargs)</span><br><span class="line">        t2 = time.time()</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;%s running time: %s secs.&quot;</span> % (func.__name__, t2 - t1))</span><br><span class="line">        <span class="keyword">return</span> result</span><br><span class="line">    <span class="keyword">return</span> wrapper</span><br></pre></td></tr></table></figure></div>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 将上述两个 py 文件放在一个文件夹中</span></span><br><span class="line"><span class="keyword">from</span> cal_time <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line"><span class="meta">@cal_time</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">linear_search</span>(<span class="params">li, val</span>):</span></span><br><span class="line">    <span class="keyword">for</span> index, value <span class="keyword">in</span> <span class="built_in">enumerate</span>(li):</span><br><span class="line">        <span class="keyword">if</span> value == val:</span><br><span class="line">            <span class="keyword">return</span> index</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line"></span><br><span class="line"><span class="meta">@cal_time    </span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">binary_search</span>(<span class="params">li, val</span>):</span></span><br><span class="line">    left = <span class="number">0</span></span><br><span class="line">    right = <span class="built_in">len</span>(li) - <span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span> left &lt;= right:		<span class="comment"># 候选区有值</span></span><br><span class="line">        mid = (left + right) // <span class="number">2</span></span><br><span class="line">        <span class="keyword">if</span> li[mid] == val:</span><br><span class="line">            <span class="keyword">return</span> mid</span><br><span class="line">        <span class="keyword">elif</span> li[mid] &gt; val:		<span class="comment"># 待查找的值在 mid 左侧</span></span><br><span class="line">            right = mid - <span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>:					<span class="comment"># 待查找的值在 mid 右侧</span></span><br><span class="line">            left = mid + <span class="number">1</span></span><br><span class="line">	<span class="keyword">else</span>：</span><br><span class="line">    	<span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line">li = <span class="built_in">list</span>(<span class="built_in">range</span>(<span class="number">10000</span>))</span><br><span class="line">linear_search(li, <span class="number">3890</span>)</span><br><span class="line">binary_search(li, <span class="number">3890</span>)</span><br></pre></td></tr></table></figure></div>
-<h3 id="index">index()</h3>
-<p>内置列表查找函数<code>index()</code>是线性查找。</p>
+<h3 id="算法运行的快慢">算法运行的快慢</h3>
+<p>如何体现算法运行的快慢？</p>
+<p>不能够使用<strong>时间</strong>来体现算法运行的快慢，因为程序在不同的设备上运行时间也会不同，并且程序中的 n 不同，也会影响程序的运行。所以选择时间复杂度来体现算法运行的快慢。</p>
+<p>用时间复杂度来评估算法运行效率，以上述四段代码为例：</p>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 1</span></span><br><span class="line">O(<span class="number">1</span>)</span><br><span class="line"><span class="comment"># 2</span></span><br><span class="line">O(n)</span><br><span class="line"><span class="comment"># 3</span></span><br><span class="line">O(n²)</span><br><span class="line"><span class="comment"># 4</span></span><br><span class="line">O(n³)</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 时间复杂度为 O(1)，并不是 O(3)；类似生活中回答几秒，而不是几个一秒;</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Hello World&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Hello Python&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Hello Algorithm&quot;</span>)</span><br><span class="line"><span class="comment"># 时间复杂度为 O(n²)。并不是 O(n²+n)；类似生活中回答睡觉大概几个小时，而不是具体精确到分钟秒的精度;</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Hello World&quot;</span>)</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;Hello World&quot;</span>)</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 记时间复杂度为 O(log₂N) 或者 O(logN)</span></span><br><span class="line"><span class="comment"># 只要循环出现问题规格折半的时候，复杂度式子中会出现 logN</span></span><br><span class="line"><span class="keyword">while</span> n &gt; <span class="number">1</span>:</span><br><span class="line">    <span class="built_in">print</span>(n)    </span><br><span class="line">    n = n // <span class="number">2</span></span><br></pre></td></tr></table></figure></div>
+<h3 id="小结">小结</h3>
+<ol>
+<li>
+<p>时间复杂度是用来估计算法运行时间的一个式子(单位)；</p>
+</li>
+<li>
+<p><strong>一般来说</strong>，时间复杂度高的算法比时间复杂度低的算法慢；</p>
+</li>
+<li>
+<p>常见的时间复杂度(按效率排序)</p>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">O(<span class="number">1</span>) &lt; O(logn) &lt; O(n) &lt; O(nlogn) &lt; O(n²) &lt; O(n²logn) &lt; O(n³)</span><br></pre></td></tr></table></figure></div>
+</li>
+<li>
+<p>复杂问题的时间复杂度</p>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">O(n!)	O(<span class="number">2</span>ⁿ)	O(nⁿ)  ...</span><br></pre></td></tr></table></figure></div>
+</li>
+</ol>
+<h3 id="快速判断算法复杂度">快速判断算法复杂度</h3>
+<p>并不是针对所有算法都适用，适用于大多数简单情况。</p>
+<ul>
+<li>确定问题规格 n</li>
+<li>循环减半过程 logn</li>
+<li>k 层关于 n 的循环  n<sup>k</sup></li>
+</ul>
+<p>对于更加复杂的情况，则要根据算法执行过程进行判断。</p>
+<h2 id="空间复杂度">空间复杂度</h2>
+<p><strong>空间复杂度</strong>：用来评估算法内存占用大小的式子</p>
+<p>空间复杂度的表示方式与时间复杂度完全一样：</p>
+<ul>
+<li>算法使用了几个变量 O(1)</li>
+<li>算法使用了长度为 n 的一维列表  O(n)</li>
+<li>算法使用了 m 行 n 列的二维列表  O(mn)</li>
+</ul>
+<p>空间换时间：例如分布式程序。</p>
+<h2 id="复习：递归">复习：递归</h2>
+<p>递归的两个特点：</p>
+<ul>
+<li>调用自身</li>
+<li>结束条件</li>
+</ul>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># func1 不合法，没有结束条件</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func1</span>(<span class="params">x</span>):</span></span><br><span class="line">    <span class="built_in">print</span>(x)</span><br><span class="line">    func1(x-<span class="number">1</span>)</span><br><span class="line"><span class="comment"># func2 不合法，没有结束条件</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func2</span>(<span class="params">x</span>):</span></span><br><span class="line">    <span class="keyword">if</span> x &gt; <span class="number">0</span>:</span><br><span class="line">        <span class="built_in">print</span>(x)</span><br><span class="line">        func2(x+<span class="number">1</span>)</span><br><span class="line"><span class="comment"># func3 合法</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func3</span>(<span class="params">x</span>):</span></span><br><span class="line">    <span class="keyword">if</span> x &gt; <span class="number">0</span>:</span><br><span class="line">        <span class="built_in">print</span>(x)</span><br><span class="line">        func3(x-<span class="number">1</span>)</span><br><span class="line"><span class="comment"># func4 合法</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func4</span>(<span class="params">x</span>):</span></span><br><span class="line">    <span class="keyword">if</span> x &gt; <span class="number">0</span>:</span><br><span class="line">        func4(x-<span class="number">1</span>)</span><br><span class="line">        <span class="built_in">print</span>(x)</span><br></pre></td></tr></table></figure></div>
+<h2 id="汉诺塔问题">汉诺塔问题</h2>
+<p><img src="https://gitee.com/zyzhang98/typoraofimages/raw/master/Images/image-20220307090340059.png" alt="汉诺塔问题"></p>
+<ul>
+<li>大梵天创造世界的时候做了三根金刚石柱子，在一根柱子上从上往下按照大小顺序摞着64片黄金圆盘。</li>
+<li>大梵天命令婆罗门把圆盘从下面开始按大小顺序重新摆放在另一根柱子上。</li>
+<li>在小圆盘上不能放大圆盘，在三根柱子之间一次只能移动一个圆盘。</li>
+<li>64根柱子移动完毕之日，就是世界毁灭之时。</li>
+</ul>
+<h3 id="分析">分析</h3>
+<p>当 n=2 时：</p>
+<ol>
+<li>把小圆盘从 A 移动到 B</li>
+<li>把大圆盘从 A 移动到 C</li>
+<li>把小圆盘从 B 移动到 C</li>
+</ol>
+<p>当 n 个盘时(上面 n-1 个盘子看成一个整体，最下面一个盘子为一个整体)</p>
+<ol>
+<li>把 n-1 个圆盘从 A 经过 C 移动到 B (原问题的 -1 次的递归问题)</li>
+<li>把第 n 个圆盘从 A 移动到 C (因为仅一个盘子，仅一次移动即可)</li>
+<li>把 n-1 个圆盘从 B 经过 A 移动到 C</li>
+</ol>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hanoi</span>(<span class="params">n, a, b, c</span>):</span>							<span class="comment"># 把n个圆盘从a经过b移动到c</span></span><br><span class="line">    <span class="keyword">if</span> n&gt;<span class="number">0</span>:</span><br><span class="line">        hanoi(n-<span class="number">1</span>, a, c, b)						<span class="comment"># 把n-1个圆盘从a经过c移动到b</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;moving from %s to %s&quot;</span> % (a, c))  <span class="comment"># 把第n个圆盘从a移动到c</span></span><br><span class="line">        hanoi(n-<span class="number">1</span>, b, a, c)						<span class="comment"># 把n-1个圆盘从b经过a移动到c</span></span><br><span class="line">hanoi(<span class="number">3</span>, <span class="string">&quot;A&quot;</span>, <span class="string">&quot;B&quot;</span>, <span class="string">&quot;C&quot;</span>)        </span><br></pre></td></tr></table></figure></div>
+<ul>
+<li>
+<p>汉诺塔移动次数的递推式：<br>
+$$<br>
+H(n) = 2H(n-1) + 1<br>
+$$</p>
+</li>
+<li>
+<p>假设婆罗门每秒钟搬运一个盘子，则总共需要 5800 亿年。</p>
+</li>
+</ul>
 ]]></content>
       <categories>
         <category>Python</category>
@@ -4549,7 +4514,7 @@ $$</p>
 <p>或者直接点击本文下载链接进行下载。<a href="https://zyzhang.lanzouw.com/iyD75014ekaf">IDM 下载</a>，密码:<code>sdu827</code></p>
 <p>下载过程中，记得将电脑所有的杀毒软件以及防火墙关闭，因为软件安装包中含有破解程序，故可能会报毒。</p>
 <p>下载完成后，点击<code>绿化与卸载.exe</code>选择绿化，然后打开程序文件夹<code>Bin</code>中的<code>IDMan.exe</code>即为主应用程序。界面如下：</p>
-<p><img src="https://gitee.com/zyzhang98/typoraofimages/raw/master/Images/20220327155559.png" alt="image-20220327155558579"></p>
+<p><img src="https://gitee.com/zyzhang98/typoraofimages/raw/master/Images/2022/03/20220327171241-.png" alt="image-20220327171240714"></p>
 <p>第一次安装，默认按钮的样式可能与我的不同，但功能一致，点击菜单栏的<code>查看/工具栏</code>可以对样式进行更换。</p>
 <p>使用 IDM 之前，我们需要一些特殊的设置：</p>
 <ul>
@@ -4572,16 +4537,16 @@ $$</p>
 <p>这里只介绍配合插件下载网盘文件，IDM 其他下载小技巧，感兴趣的可以自行发掘。</p>
 <h2 id="3-使用效果">3.使用效果</h2>
 <p>首先登陆自己网页版的某度网盘，前边脚本安装成功的话，会多出一个<code>简易下载助手</code>的红色按钮。</p>
-<p><img src="https://gitee.com/zyzhang98/typoraofimages/raw/master/Images/2022/03/26/20220326-130219.png" alt="image-20220326130219154"></p>
+<p><img src="https://gitee.com/zyzhang98/typoraofimages/raw/master/Images/2022/03/20220327171330-.png" alt="image-20220327171329337"></p>
 <p>并且，右上角可以看到，我的账号并没有开通任何会员的。</p>
 <p>接下来，选中某一个文件，然后点击<code>简易下载助手</code>，然后点击<code>点击获取直链</code>，第一次使用可能需要关注公众号，成功获取直链就会出现以下界面。</p>
-<p><img src="https://gitee.com/zyzhang98/typoraofimages/raw/master/Images/image-20220326114312995.png" alt="获取直链"></p>
+<p><img src="https://gitee.com/zyzhang98/typoraofimages/raw/master/Images/2022/03/20220327171422-.png" alt="image-20220327171421900"></p>
 <p>然后点击<code>复制直链地址</code>，打开 IDM ,找到<code>新建任务</code>，将链接 粘贴进去，点击确定就可以了。</p>
-<p><img src="https://gitee.com/zyzhang98/typoraofimages/raw/master/Images/image-20220326114732238.png" alt="下载详情"></p>
-<p><img src="https://gitee.com/zyzhang98/typoraofimages/raw/master/Images/image-20220326114842654.png" alt="文件2下载速度"></p>
+<p><img src="https://gitee.com/zyzhang98/typoraofimages/raw/master/Images/2022/03/20220327171509-.png" alt="文件1下载速度示例"></p>
+<p><img src="https://gitee.com/zyzhang98/typoraofimages/raw/master/Images/2022/03/20220327171601-.png" alt="文件2下载示例"></p>
 <p>下载速度可能会受到账号、网络和文件等多方面的影响，每个人的下载速度都不尽相同。</p>
 <p>同理，使用脚本的方法二<code>Aria2</code>下载另一个文件，下载速度如下所示。</p>
-<p><img src="https://gitee.com/zyzhang98/typoraofimages/raw/master/Images/image-20220326114929757.png" alt="Aria2下载示例"></p>
+<p><img src="https://gitee.com/zyzhang98/typoraofimages/raw/master/Images/2022/03/20220327171743-.png" alt="Aria2下载示例"></p>
 <h2 id="特殊说明">特殊说明</h2>
 <ul>
 <li>
@@ -4605,6 +4570,41 @@ $$</p>
         <tag>插件</tag>
         <tag>百度网盘</tag>
         <tag>IDM</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python数据结构与算法(2)--查找</title>
+    <url>/posts/20a79595/</url>
+    <content><![CDATA[<h2 id="列表查找">列表查找</h2>
+<h3 id="概念">概念</h3>
+<p><strong>查找</strong>：在一些数据元素中，通过一定的方法找出与给定关键字相同的数据元素的过程</p>
+<p><strong>列表查找</strong>：(线性表查找)从列表中查找指定元素</p>
+<ul>
+<li>输入：列表、待查找元素</li>
+<li>输出：元素下标(未找到元素时一般返回 None 或者 -1)</li>
+</ul>
+<p>内置列表查找函数：index()</p>
+<span id="more"></span>
+<h3 id="顺序查找-Linear-Search">顺序查找(Linear Search)</h3>
+<p><strong>顺序查找</strong>：也叫线性查找，从列表第一个元素开始，顺序进行搜索，直到找到元素或者搜索到列表的最后一个元素为止。</p>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">linear_search</span>(<span class="params">li, val</span>):</span></span><br><span class="line">    <span class="keyword">for</span> index, value <span class="keyword">in</span> <span class="built_in">enumerate</span>(li):</span><br><span class="line">        <span class="keyword">if</span> value == val:</span><br><span class="line">            <span class="keyword">return</span> index</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">None</span></span><br></pre></td></tr></table></figure></div>
+<h3 id="二分查找-Binary-Search">二分查找(Binary Search)</h3>
+<p><strong>二分查找</strong>：又叫折半查找，从有序列表的初识候选区<code>li[0:n]</code>开始，通过对待查找的值与候选区中间值的比较，可以使候选区减少一半。</p>
+<p><img src="https://gitee.com/zyzhang98/typoraofimages/raw/master/Images/image-20220307090627559.png" alt="二分查找"></p>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">binary_search</span>(<span class="params">li, val</span>):</span></span><br><span class="line">    left = <span class="number">0</span></span><br><span class="line">    right = <span class="built_in">len</span>(li) - <span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span> left &lt;= right:		<span class="comment"># 候选区有值</span></span><br><span class="line">        mid = (left + right) // <span class="number">2</span></span><br><span class="line">        <span class="keyword">if</span> li[mid] == val:</span><br><span class="line">            <span class="keyword">return</span> mid</span><br><span class="line">        <span class="keyword">elif</span> li[mid] &gt; val:		<span class="comment"># 待查找的值在 mid 左侧</span></span><br><span class="line">            right = mid - <span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>:					<span class="comment"># 待查找的值在 mid 右侧</span></span><br><span class="line">            left = mid + <span class="number">1</span></span><br><span class="line">	<span class="keyword">else</span>：</span><br><span class="line">    	<span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line">li = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>]</span><br><span class="line"><span class="built_in">print</span>(binary_search(li, <span class="number">3</span>))</span><br></pre></td></tr></table></figure></div>
+<p>时间复杂度：<code>O(logn)</code></p>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># cal_time.py</span></span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">cal_time</span>(<span class="params">func</span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">wrapper</span>(<span class="params">*args, **kwargs</span>):</span></span><br><span class="line">        t1 = time.time()</span><br><span class="line">        result = func(*args, **kwargs)</span><br><span class="line">        t2 = time.time()</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;%s running time: %s secs.&quot;</span> % (func.__name__, t2 - t1))</span><br><span class="line">        <span class="keyword">return</span> result</span><br><span class="line">    <span class="keyword">return</span> wrapper</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 将上述两个 py 文件放在一个文件夹中</span></span><br><span class="line"><span class="keyword">from</span> cal_time <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line"><span class="meta">@cal_time</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">linear_search</span>(<span class="params">li, val</span>):</span></span><br><span class="line">    <span class="keyword">for</span> index, value <span class="keyword">in</span> <span class="built_in">enumerate</span>(li):</span><br><span class="line">        <span class="keyword">if</span> value == val:</span><br><span class="line">            <span class="keyword">return</span> index</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line"></span><br><span class="line"><span class="meta">@cal_time    </span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">binary_search</span>(<span class="params">li, val</span>):</span></span><br><span class="line">    left = <span class="number">0</span></span><br><span class="line">    right = <span class="built_in">len</span>(li) - <span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span> left &lt;= right:		<span class="comment"># 候选区有值</span></span><br><span class="line">        mid = (left + right) // <span class="number">2</span></span><br><span class="line">        <span class="keyword">if</span> li[mid] == val:</span><br><span class="line">            <span class="keyword">return</span> mid</span><br><span class="line">        <span class="keyword">elif</span> li[mid] &gt; val:		<span class="comment"># 待查找的值在 mid 左侧</span></span><br><span class="line">            right = mid - <span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>:					<span class="comment"># 待查找的值在 mid 右侧</span></span><br><span class="line">            left = mid + <span class="number">1</span></span><br><span class="line">	<span class="keyword">else</span>：</span><br><span class="line">    	<span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line">li = <span class="built_in">list</span>(<span class="built_in">range</span>(<span class="number">10000</span>))</span><br><span class="line">linear_search(li, <span class="number">3890</span>)</span><br><span class="line">binary_search(li, <span class="number">3890</span>)</span><br></pre></td></tr></table></figure></div>
+<h3 id="index">index()</h3>
+<p>内置列表查找函数<code>index()</code>是线性查找。</p>
+]]></content>
+      <categories>
+        <category>Python</category>
+        <category>Algorithm</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>算法</tag>
       </tags>
   </entry>
   <entry>
