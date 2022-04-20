@@ -1,19 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>About Me</title>
-    <url>/posts/f0b34752/</url>
-    <content><![CDATA[<blockquote>
-<p>A student, live in Ji’nan, China.</p>
-</blockquote>
-<span id="more"></span>
-<h4 id="姓名：ZYZhang">姓名：ZYZhang</h4>
-<h4 id="性别：男">性别：男</h4>
-<h4 id="Github：ZYZhang">Github：<a href="https://github.com/zyzhang827">ZYZhang</a></h4>
-<h4 id="Gitee：ZYZhang">Gitee：<a href="https://gitee.com/zyzhang98">ZYZhang</a></h4>
-]]></content>
-  </entry>
-  <entry>
     <title>博客搭建(2)---主题配置遗留问题</title>
     <url>/posts/2ceebbb0/</url>
     <content><![CDATA[<h2 id="分类、标签、关于我">分类、标签、关于我</h2>
@@ -85,6 +72,19 @@
         <tag>ayer</tag>
         <tag>美化</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>About Me</title>
+    <url>/posts/f0b34752/</url>
+    <content><![CDATA[<blockquote>
+<p>A student, live in Ji’nan, China.</p>
+</blockquote>
+<span id="more"></span>
+<h4 id="姓名：ZYZhang">姓名：ZYZhang</h4>
+<h4 id="性别：男">性别：男</h4>
+<h4 id="Github：ZYZhang">Github：<a href="https://github.com/zyzhang827">ZYZhang</a></h4>
+<h4 id="Gitee：ZYZhang">Gitee：<a href="https://gitee.com/zyzhang98">ZYZhang</a></h4>
+]]></content>
   </entry>
   <entry>
     <title>博客搭建(3)---Github部署</title>
@@ -374,6 +374,36 @@
       </tags>
   </entry>
   <entry>
+    <title>装系统神器--Ventoy</title>
+    <url>/posts/274e9706/</url>
+    <content><![CDATA[<h2 id="介绍">介绍</h2>
+<p>Ventoy 是国人自己开发的 ISO 启动引导程序软件，其主要的功能就是可以通过 Ventoy 存储系统的 ISO 镜像文件，然后对电脑进行系统重装。</p>
+<span id="more"></span>
+<h2 id="优势">优势</h2>
+<p>选择 Ventoy 的原因有很多：</p>
+<ul>
+<li>首先，由于是国人自己开发的，所以界面为中文，简单方便；</li>
+<li>支持包括 Windows、WinPE、Ubuntu、Deepin 等多种系统的安装；</li>
+<li>无差别支持 Legacy BIOS 和 UEFI 两种模式；</li>
+<li>支持 MBR 和 GPT 分区格式；</li>
+<li>镜像文件可以与其他文件共存，即装机 U 盘仍然可以作为普通 U 盘使用；</li>
+</ul>
+<h2 id="使用教程">使用教程</h2>
+<p>去<a href="https://www.ventoy.net/en/download.html">Ventoy官网</a>下载<code>Windows</code>版本的 Ventoy 安装包，解压缩之后得到一个<code>Ventoy2Disk.exe</code>文件，然后插入一个干净的 U 盘，打开<code>Ventoy2Disk.exe</code>，主界面选择自己刚才插入的 U 盘的盘符，然后点击<code>Install</code>即可。</p>
+<p>安装完成后，进入 U 盘，然后直接将自己下载好的系统镜像文件放入其中即可，推荐下载系统镜像文件网址<a href="https://next.itellyou.cn/">itellyou</a>.</p>
+<h2 id="重装系统教程">重装系统教程</h2>
+<p>将制作好的 Ventoy 启动盘插入电脑，然后重启计算机，按热键进入 BIOS Setup 模式，将其中的 SecureBoot 关闭；</p>
+<p>然后重新启动计算机，按热键进入 BIOS 界面，在 UEFI OPTIONS 中选择自己的 U 盘进行启动，启动后，选择自己想要安装的系统的镜像文件，一路回车即可。</p>
+<p>上述中所涉及到的热键，各型号的电脑互有差异，一般在重启界面会有提示按键，再不清楚的可以自行按照自己的电脑型号进行百度。</p>
+]]></content>
+      <categories>
+        <category>软件</category>
+      </categories>
+      <tags>
+        <tag>ventoy</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>C++学习笔记(2)--数据类型</title>
     <url>/posts/69e69c5/</url>
     <content><![CDATA[<p>C++ 规定在创建一个变量或者常量的时候，必须要指定出相应的数据类型，否则无法给变量分配内存。</p>
@@ -556,36 +586,6 @@
       </categories>
       <tags>
         <tag>C++</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>装系统神器--Ventoy</title>
-    <url>/posts/274e9706/</url>
-    <content><![CDATA[<h2 id="介绍">介绍</h2>
-<p>Ventoy 是国人自己开发的 ISO 启动引导程序软件，其主要的功能就是可以通过 Ventoy 存储系统的 ISO 镜像文件，然后对电脑进行系统重装。</p>
-<span id="more"></span>
-<h2 id="优势">优势</h2>
-<p>选择 Ventoy 的原因有很多：</p>
-<ul>
-<li>首先，由于是国人自己开发的，所以界面为中文，简单方便；</li>
-<li>支持包括 Windows、WinPE、Ubuntu、Deepin 等多种系统的安装；</li>
-<li>无差别支持 Legacy BIOS 和 UEFI 两种模式；</li>
-<li>支持 MBR 和 GPT 分区格式；</li>
-<li>镜像文件可以与其他文件共存，即装机 U 盘仍然可以作为普通 U 盘使用；</li>
-</ul>
-<h2 id="使用教程">使用教程</h2>
-<p>去<a href="https://www.ventoy.net/en/download.html">Ventoy官网</a>下载<code>Windows</code>版本的 Ventoy 安装包，解压缩之后得到一个<code>Ventoy2Disk.exe</code>文件，然后插入一个干净的 U 盘，打开<code>Ventoy2Disk.exe</code>，主界面选择自己刚才插入的 U 盘的盘符，然后点击<code>Install</code>即可。</p>
-<p>安装完成后，进入 U 盘，然后直接将自己下载好的系统镜像文件放入其中即可，推荐下载系统镜像文件网址<a href="https://next.itellyou.cn/">itellyou</a>.</p>
-<h2 id="重装系统教程">重装系统教程</h2>
-<p>将制作好的 Ventoy 启动盘插入电脑，然后重启计算机，按热键进入 BIOS Setup 模式，将其中的 SecureBoot 关闭；</p>
-<p>然后重新启动计算机，按热键进入 BIOS 界面，在 UEFI OPTIONS 中选择自己的 U 盘进行启动，启动后，选择自己想要安装的系统的镜像文件，一路回车即可。</p>
-<p>上述中所涉及到的热键，各型号的电脑互有差异，一般在重启界面会有提示按键，再不清楚的可以自行按照自己的电脑型号进行百度。</p>
-]]></content>
-      <categories>
-        <category>软件</category>
-      </categories>
-      <tags>
-        <tag>ventoy</tag>
       </tags>
   </entry>
   <entry>
@@ -974,75 +974,6 @@
       </tags>
   </entry>
   <entry>
-    <title>C++学习笔记(6)--函数</title>
-    <url>/posts/62589642/</url>
-    <content><![CDATA[<h2 id="概述">概述</h2>
-<p><strong>作用</strong>：将一段经常使用的代码封装起来，减少重复代码</p>
-<p>一个较大的程序，一般分为若干个程序块，每个模块实现待定的功能</p>
-<span id="more"></span>
-<h2 id="函数的定义">函数的定义</h2>
-<p>函数的定义一般主要为5个步骤：</p>
-<ol>
-<li>返回值类型</li>
-<li>函数名</li>
-<li>参数表列</li>
-<li>函数体语句</li>
-<li>return 表达式</li>
-</ol>
-<p>语法：</p>
-<div class="highlight-wrap" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line">返回值类型 函数名(参数列表)</span><br><span class="line">&#123;</span><br><span class="line">    函数体语句</span><br><span class="line">        <span class="keyword">return</span> 表达式</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
-<div class="highlight-wrap" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> num1, <span class="keyword">int</span> num2)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> sum = num1 + num2;</span><br><span class="line">    <span class="keyword">return</span> sum;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
-<h2 id="函数的调用">函数的调用</h2>
-<p><strong>功能</strong>：使用定义好的函数</p>
-<p><strong>语法</strong>：<code>函数名 (参数)</code></p>
-<div class="highlight-wrap" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 定义加法函数</span></span><br><span class="line"><span class="comment">// 函数定义的时候，num1 和 num2 并没有真实的数据，知识形式上的参数，简称形参</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> num1, <span class="keyword">int</span> num2)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> sum = num1 + num2;</span><br><span class="line">    <span class="keyword">return</span> sum;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// main函数中调用add函数</span></span><br><span class="line">    <span class="keyword">int</span> a = <span class="number">10</span>;</span><br><span class="line">    <span class="keyword">int</span> b = <span class="number">20</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 函数调用的语法：函数名称 (参数)</span></span><br><span class="line">    <span class="comment">// a b 称为实际的参数，简称实参</span></span><br><span class="line">    <span class="comment">// 调用函数的时候，实参的值 会传递给 形参</span></span><br><span class="line">    <span class="keyword">int</span> c = <span class="built_in">add</span>(a, b);</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;c = &quot;</span> &lt;&lt; c &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
-<h2 id="值传递">值传递</h2>
-<ul>
-<li>
-<p>所谓值传递，就是函数调用时<strong>实参</strong>将数值传递给<strong>形参</strong></p>
-</li>
-<li>
-<p>值传递时，如果形参发生任何改变，并不会影响实参</p>
-</li>
-</ul>
-<div class="highlight-wrap" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 定义函数，实现两个数字进行交换的函数</span></span><br><span class="line"><span class="comment">// 如果函数不需要返回值，声明的时候可以写 void </span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span> num1, <span class="keyword">int</span> num2)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;交换前的数字是：&quot;</span> &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;num1 = &quot;</span> &lt;&lt; num1 &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;num2 = &quot;</span> &lt;&lt; num2 &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> temp = num1;</span><br><span class="line">    num1 = num2;</span><br><span class="line">    num2 = temp;</span><br><span class="line"></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;交换后的数字是：&quot;</span> &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;num1 = &quot;</span> &lt;&lt; num1 &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;num2 = &quot;</span> &lt;&lt; num2 &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a = <span class="number">10</span>;</span><br><span class="line">    <span class="keyword">int</span> b = <span class="number">20</span>;</span><br><span class="line">    <span class="comment">// 当我们做值传递的时候，函数的形参发生改变，并不会影响实参</span></span><br><span class="line">    <span class="built_in">swap</span>(a, b);</span><br><span class="line">    <span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
-<h2 id="函数的常见样式">函数的常见样式</h2>
-<p>常见的函数样式有 4 种：</p>
-<ul>
-<li>无参无返</li>
-<li>有参无返</li>
-<li>无参有返</li>
-<li>有参有返</li>
-</ul>
-<div class="highlight-wrap" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 1.无参无返</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">test01</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;this is test01&quot;</span> &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 2.有参无返</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">test02</span><span class="params">(<span class="keyword">int</span> a)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;this is test02&quot;</span> &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 3.无参有返</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">test03</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot; this is test03&quot;</span> &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">03</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 4.有参有返</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">test04</span><span class="params">(<span class="keyword">int</span> a)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;this is test04 a =&quot;</span> &lt;&lt; a &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> a;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 1 的调用</span></span><br><span class="line">    <span class="built_in">test01</span>();</span><br><span class="line">    <span class="comment">// 2 的调用</span></span><br><span class="line">    <span class="built_in">test02</span>(<span class="number">100</span>);</span><br><span class="line">    <span class="comment">// 3 的调用</span></span><br><span class="line">    <span class="keyword">int</span> num1 = <span class="built_in">test03</span>();</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;num1 = &quot;</span> &lt;&lt; num1 &lt;&lt; endl;</span><br><span class="line">    <span class="comment">// 4 的调用</span></span><br><span class="line">    <span class="keyword">int</span> num2 = <span class="built_in">test04</span>(<span class="number">10000</span>);</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;num2 = &quot;</span> &lt;&lt; num2 &lt;&lt; endl;</span><br><span class="line">    <span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
-<h2 id="函数的声明">函数的声明</h2>
-<p><strong>作用</strong>：告诉编译器函数名称及如何调用函数。函数的实际主体可以单独定义</p>
-<ul>
-<li>函数的声明可以是<strong>多次</strong>的，但是函数的定义只能是<strong>一次</strong></li>
-</ul>
-<div class="highlight-wrap" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 函数的声明</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 利用函数的声明告诉编译器函数的存在</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">max</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 定义比较函数，实现两个整数数字进行比较，返回较大的值</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">max</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a &gt; b ? a : b;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a = <span class="number">10</span>;</span><br><span class="line">    <span class="keyword">int</span> b = <span class="number">20</span>;</span><br><span class="line">    cout &lt;&lt; <span class="built_in">max</span>(a, b) &lt;&lt; endl;</span><br><span class="line">    <span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
-<h2 id="函数的分文件编写">函数的分文件编写</h2>
-<p><strong>作用</strong>：让代码结构更加清晰</p>
-<p>函数文件编写一般有4个步骤</p>
-<ol>
-<li>创建后缀名为<code>.h</code>的头文件</li>
-<li>创建后缀名为<code>.cpp</code>的源文件</li>
-<li>在头文件中写函数的声明</li>
-<li>在源文件中写函数的定义</li>
-</ol>
-<div class="highlight-wrap" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// swap.h 文件</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="comment">// 实现两个数字交换的函数的声明</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// swap.cpp 文件</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&quot;swap.h&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> temp = a;</span><br><span class="line">    a = b;</span><br><span class="line">    b = temp;</span><br><span class="line">    </span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;a = &quot;</span> &lt;&lt; a &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;b = &quot;</span> &lt;&lt; b &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// main 主函数文件</span></span><br><span class="line"><span class="comment">// 函数的分文件编写</span></span><br><span class="line"><span class="comment">// 实现两个数字交换的函数</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a = <span class="number">10</span>;</span><br><span class="line">    <span class="keyword">int</span> b = <span class="number">20</span>;</span><br><span class="line">    <span class="built_in">swap</span>(a, b);</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
-<p><code>Visual Studio</code>可以直接按照视频方法运文件。</p>
-<p><code>VSCode</code>中推荐使用<code>C/C++ Project Generator</code>管理项目文件。</p>
-]]></content>
-      <categories>
-        <category>C++</category>
-        <category>学习笔记</category>
-      </categories>
-      <tags>
-        <tag>C++</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>C++学习笔记(5)--数组</title>
     <url>/posts/ccc0d47e/</url>
     <content><![CDATA[<h2 id="概述">概述</h2>
@@ -1139,6 +1070,75 @@
 </tbody>
 </table>
 <div class="highlight-wrap" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 1. 创建二维数组</span></span><br><span class="line">    <span class="keyword">int</span> scores[<span class="number">3</span>][<span class="number">3</span>]=</span><br><span class="line">    &#123;</span><br><span class="line">        &#123;<span class="number">100</span>, <span class="number">100</span>, <span class="number">100</span>&#125;,</span><br><span class="line">        &#123;<span class="number">90</span>, <span class="number">50</span>, <span class="number">100</span>&#125;,</span><br><span class="line">        &#123;<span class="number">60</span>, <span class="number">70</span>, <span class="number">80</span>&#125;</span><br><span class="line">    &#125;;</span><br><span class="line">    string names[<span class="number">3</span>] = &#123;<span class="string">&quot;张三&quot;</span>, <span class="string">&quot;李四&quot;</span>, <span class="string">&quot;王五&quot;</span>&#125;;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; <span class="number">3</span>; j++)</span><br><span class="line">        &#123;</span><br><span class="line">            sum += scores[i][j];</span><br><span class="line">            <span class="comment">//cout &lt;&lt; scores[i][j] &lt;&lt; &quot; &quot;;</span></span><br><span class="line">        &#125;</span><br><span class="line">        cout &lt;&lt; names[i] &lt;&lt; <span class="string">&quot;的总分为：&quot;</span> &lt;&lt; sum &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 2. 统计每个人的总和分数</span></span><br><span class="line">    <span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+]]></content>
+      <categories>
+        <category>C++</category>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C++学习笔记(6)--函数</title>
+    <url>/posts/62589642/</url>
+    <content><![CDATA[<h2 id="概述">概述</h2>
+<p><strong>作用</strong>：将一段经常使用的代码封装起来，减少重复代码</p>
+<p>一个较大的程序，一般分为若干个程序块，每个模块实现待定的功能</p>
+<span id="more"></span>
+<h2 id="函数的定义">函数的定义</h2>
+<p>函数的定义一般主要为5个步骤：</p>
+<ol>
+<li>返回值类型</li>
+<li>函数名</li>
+<li>参数表列</li>
+<li>函数体语句</li>
+<li>return 表达式</li>
+</ol>
+<p>语法：</p>
+<div class="highlight-wrap" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line">返回值类型 函数名(参数列表)</span><br><span class="line">&#123;</span><br><span class="line">    函数体语句</span><br><span class="line">        <span class="keyword">return</span> 表达式</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-wrap" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> num1, <span class="keyword">int</span> num2)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> sum = num1 + num2;</span><br><span class="line">    <span class="keyword">return</span> sum;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<h2 id="函数的调用">函数的调用</h2>
+<p><strong>功能</strong>：使用定义好的函数</p>
+<p><strong>语法</strong>：<code>函数名 (参数)</code></p>
+<div class="highlight-wrap" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 定义加法函数</span></span><br><span class="line"><span class="comment">// 函数定义的时候，num1 和 num2 并没有真实的数据，知识形式上的参数，简称形参</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> num1, <span class="keyword">int</span> num2)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> sum = num1 + num2;</span><br><span class="line">    <span class="keyword">return</span> sum;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// main函数中调用add函数</span></span><br><span class="line">    <span class="keyword">int</span> a = <span class="number">10</span>;</span><br><span class="line">    <span class="keyword">int</span> b = <span class="number">20</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 函数调用的语法：函数名称 (参数)</span></span><br><span class="line">    <span class="comment">// a b 称为实际的参数，简称实参</span></span><br><span class="line">    <span class="comment">// 调用函数的时候，实参的值 会传递给 形参</span></span><br><span class="line">    <span class="keyword">int</span> c = <span class="built_in">add</span>(a, b);</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;c = &quot;</span> &lt;&lt; c &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<h2 id="值传递">值传递</h2>
+<ul>
+<li>
+<p>所谓值传递，就是函数调用时<strong>实参</strong>将数值传递给<strong>形参</strong></p>
+</li>
+<li>
+<p>值传递时，如果形参发生任何改变，并不会影响实参</p>
+</li>
+</ul>
+<div class="highlight-wrap" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 定义函数，实现两个数字进行交换的函数</span></span><br><span class="line"><span class="comment">// 如果函数不需要返回值，声明的时候可以写 void </span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span> num1, <span class="keyword">int</span> num2)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;交换前的数字是：&quot;</span> &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;num1 = &quot;</span> &lt;&lt; num1 &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;num2 = &quot;</span> &lt;&lt; num2 &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> temp = num1;</span><br><span class="line">    num1 = num2;</span><br><span class="line">    num2 = temp;</span><br><span class="line"></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;交换后的数字是：&quot;</span> &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;num1 = &quot;</span> &lt;&lt; num1 &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;num2 = &quot;</span> &lt;&lt; num2 &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a = <span class="number">10</span>;</span><br><span class="line">    <span class="keyword">int</span> b = <span class="number">20</span>;</span><br><span class="line">    <span class="comment">// 当我们做值传递的时候，函数的形参发生改变，并不会影响实参</span></span><br><span class="line">    <span class="built_in">swap</span>(a, b);</span><br><span class="line">    <span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<h2 id="函数的常见样式">函数的常见样式</h2>
+<p>常见的函数样式有 4 种：</p>
+<ul>
+<li>无参无返</li>
+<li>有参无返</li>
+<li>无参有返</li>
+<li>有参有返</li>
+</ul>
+<div class="highlight-wrap" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 1.无参无返</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">test01</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;this is test01&quot;</span> &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 2.有参无返</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">test02</span><span class="params">(<span class="keyword">int</span> a)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;this is test02&quot;</span> &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 3.无参有返</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">test03</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot; this is test03&quot;</span> &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">03</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 4.有参有返</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">test04</span><span class="params">(<span class="keyword">int</span> a)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;this is test04 a =&quot;</span> &lt;&lt; a &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> a;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 1 的调用</span></span><br><span class="line">    <span class="built_in">test01</span>();</span><br><span class="line">    <span class="comment">// 2 的调用</span></span><br><span class="line">    <span class="built_in">test02</span>(<span class="number">100</span>);</span><br><span class="line">    <span class="comment">// 3 的调用</span></span><br><span class="line">    <span class="keyword">int</span> num1 = <span class="built_in">test03</span>();</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;num1 = &quot;</span> &lt;&lt; num1 &lt;&lt; endl;</span><br><span class="line">    <span class="comment">// 4 的调用</span></span><br><span class="line">    <span class="keyword">int</span> num2 = <span class="built_in">test04</span>(<span class="number">10000</span>);</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;num2 = &quot;</span> &lt;&lt; num2 &lt;&lt; endl;</span><br><span class="line">    <span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<h2 id="函数的声明">函数的声明</h2>
+<p><strong>作用</strong>：告诉编译器函数名称及如何调用函数。函数的实际主体可以单独定义</p>
+<ul>
+<li>函数的声明可以是<strong>多次</strong>的，但是函数的定义只能是<strong>一次</strong></li>
+</ul>
+<div class="highlight-wrap" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 函数的声明</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 利用函数的声明告诉编译器函数的存在</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">max</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 定义比较函数，实现两个整数数字进行比较，返回较大的值</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">max</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a &gt; b ? a : b;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a = <span class="number">10</span>;</span><br><span class="line">    <span class="keyword">int</span> b = <span class="number">20</span>;</span><br><span class="line">    cout &lt;&lt; <span class="built_in">max</span>(a, b) &lt;&lt; endl;</span><br><span class="line">    <span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<h2 id="函数的分文件编写">函数的分文件编写</h2>
+<p><strong>作用</strong>：让代码结构更加清晰</p>
+<p>函数文件编写一般有4个步骤</p>
+<ol>
+<li>创建后缀名为<code>.h</code>的头文件</li>
+<li>创建后缀名为<code>.cpp</code>的源文件</li>
+<li>在头文件中写函数的声明</li>
+<li>在源文件中写函数的定义</li>
+</ol>
+<div class="highlight-wrap" data-rel="C++"><figure class="iseeu highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// swap.h 文件</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="comment">// 实现两个数字交换的函数的声明</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// swap.cpp 文件</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&quot;swap.h&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> temp = a;</span><br><span class="line">    a = b;</span><br><span class="line">    b = temp;</span><br><span class="line">    </span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;a = &quot;</span> &lt;&lt; a &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;b = &quot;</span> &lt;&lt; b &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// main 主函数文件</span></span><br><span class="line"><span class="comment">// 函数的分文件编写</span></span><br><span class="line"><span class="comment">// 实现两个数字交换的函数</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a = <span class="number">10</span>;</span><br><span class="line">    <span class="keyword">int</span> b = <span class="number">20</span>;</span><br><span class="line">    <span class="built_in">swap</span>(a, b);</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<p><code>Visual Studio</code>可以直接按照视频方法运文件。</p>
+<p><code>VSCode</code>中推荐使用<code>C/C++ Project Generator</code>管理项目文件。</p>
 ]]></content>
       <categories>
         <category>C++</category>
@@ -1465,6 +1465,28 @@
       </tags>
   </entry>
   <entry>
+    <title>飞鸟集</title>
+    <url>/posts/2f2ba896/</url>
+    <content><![CDATA[<p>🟩 What you are you do not see, what you see is your shadow.<br>
+🟪 你无法看到自己, 你看到的是你认为的自己.</p>
+<p>🟨 I cannot choose the best. The best chooses me.<br>
+🟥 我做不到选择最好的, 是最好的选择了我.</p>
+<p>🟦 Let him only see the thorns who has eyes to see the rose.<br>
+🟧 让那些盯着玫瑰花的人啊, 多看看玫瑰的刺吧.</p>
+<p>⬛ “Who drives me forward like fate?” “The Myself striding on my back.”<br>
+🟫 “是谁像命运一样催我向前?” “是我自己一直在我后面.”</p>
+<p>⬜ Power takes as ingratitude the writhings of its victims.<br>
+🟪 在强权看来, 牺牲品的痛苦是不知好歹.</p>
+]]></content>
+      <categories>
+        <category>鸡汤</category>
+      </categories>
+      <tags>
+        <tag>文化</tag>
+        <tag>诗词</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Python 学习笔记(1)--print()函数</title>
     <url>/posts/79e6c2f2/</url>
     <content><![CDATA[<blockquote>
@@ -1489,28 +1511,6 @@
         <category>Python</category>
         <category>基础语法</category>
       </categories>
-  </entry>
-  <entry>
-    <title>飞鸟集</title>
-    <url>/posts/2f2ba896/</url>
-    <content><![CDATA[<p>🟩 What you are you do not see, what you see is your shadow.<br>
-🟪 你无法看到自己, 你看到的是你认为的自己.</p>
-<p>🟨 I cannot choose the best. The best chooses me.<br>
-🟥 我做不到选择最好的, 是最好的选择了我.</p>
-<p>🟦 Let him only see the thorns who has eyes to see the rose.<br>
-🟧 让那些盯着玫瑰花的人啊, 多看看玫瑰的刺吧.</p>
-<p>⬛ “Who drives me forward like fate?” “The Myself striding on my back.”<br>
-🟫 “是谁像命运一样催我向前?” “是我自己一直在我后面.”</p>
-<p>⬜ Power takes as ingratitude the writhings of its victims.<br>
-🟪 在强权看来, 牺牲品的痛苦是不知好歹.</p>
-]]></content>
-      <categories>
-        <category>鸡汤</category>
-      </categories>
-      <tags>
-        <tag>文化</tag>
-        <tag>诗词</tag>
-      </tags>
   </entry>
   <entry>
     <title>Python 学习笔记(10)--字符串</title>
@@ -3024,78 +3024,6 @@ range 类型的优点：不管 range 对象表示的整数序列有多长，所�
       </tags>
   </entry>
   <entry>
-    <title>爬虫学习笔记(2)--requests 模块基础</title>
-    <url>/posts/9058b1e5/</url>
-    <content><![CDATA[<h2 id="1-requests-第一血">1. requests 第一血</h2>
-<p>requests 模块：Python 中原生的一款基于网络请求的模块，功能非常强大，简单便捷，效率极高。</p>
-<p>作用：模拟浏览器发请求。</p>
-<p>如何使用：（requests 模块的编码流程）</p>
-<ul>
-<li>指定 url</li>
-<li>发起请求</li>
-<li>获取响应数据</li>
-<li>持久化存储</li>
-</ul>
-<span id="more"></span>
-<p>环境的安装：<code>pip install requests</code></p>
-<p>实战编码：</p>
-<ul>
-<li>需求：爬取搜狗首页的数据</li>
-</ul>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    <span class="comment"># step1 指定url</span></span><br><span class="line">    url = <span class="string">&#x27;https://www.sogou.com/&#x27;</span></span><br><span class="line">    <span class="comment"># step2 发起请求</span></span><br><span class="line">    <span class="comment"># get方法会返回一个响应对象</span></span><br><span class="line">    response = requests.get(url = url)</span><br><span class="line">    <span class="comment"># step3 获取响应数据，text返回的是字符串形式的响应数据</span></span><br><span class="line">    page_text = response.text</span><br><span class="line">    <span class="built_in">print</span>(page_text)</span><br><span class="line">    <span class="comment"># step4 持久化存储</span></span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;./sogou.html&#x27;</span>,<span class="string">&#x27;w&#x27;</span>,encoding = <span class="string">&#x27;utf-8&#x27;</span>) <span class="keyword">as</span> fp:</span><br><span class="line">        fp.write(page_text)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;爬取数据结束！&#x27;</span>)</span><br></pre></td></tr></table></figure></div>
-<h2 id="2-requests-巩固深入案例介绍">2. requests 巩固深入案例介绍</h2>
-<h3 id="（1）简易网页采集器">（1）简易网页采集器</h3>
-<ul>
-<li>UA 检测</li>
-<li>UA 伪装</li>
-</ul>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># UA：User-Agent请求载体的身份标识</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;UA检测：门户网站的服务器会监测对应请求的载体身份标识，</span></span><br><span class="line"><span class="string">如果检测到请求载体身份标识是某一款浏览器,说明该请求时一个正常的请求；</span></span><br><span class="line"><span class="string">但是，如果检测到请求的载体身份不是基于某一款浏览器的，则表示该请求为不正常请求（爬虫）,</span></span><br><span class="line"><span class="string">则服务器很有可能拒绝该次请求&#x27;&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># UA伪装：让爬虫对应的请求载体身份标识伪装成某一款浏览器，躲过UA检测</span></span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    <span class="comment"># UA伪装：将对应的User-Agent封装到一个字典中</span></span><br><span class="line">    headers = &#123;</span><br><span class="line">    <span class="string">&#x27;User-Agent&#x27;</span>:<span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment"># step1 指定url query</span></span><br><span class="line">    url = <span class="string">&#x27;https://www.sogou.com/web&#x27;</span></span><br><span class="line">    <span class="comment"># 处理url携带的参数 封装到字典中</span></span><br><span class="line">    kw = <span class="built_in">input</span>(<span class="string">&#x27;Enter a word:&#x27;</span>)</span><br><span class="line">    param =&#123;</span><br><span class="line">        <span class="string">&#x27;query&#x27;</span>:kw</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment"># step2 对指定的url发起请求，对应的url是携带参数的，并且处理过程中处理了参数</span></span><br><span class="line">    response = requests.get(url = url,params = param,headers = headers)</span><br><span class="line">    <span class="comment"># step3</span></span><br><span class="line">    page_text = response.text</span><br><span class="line">    <span class="comment"># step4</span></span><br><span class="line">    fileName = kw + <span class="string">&#x27;.html&#x27;</span></span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(fileName,<span class="string">&#x27;w&#x27;</span>,encoding =<span class="string">&#x27;utf-8&#x27;</span>) <span class="keyword">as</span> fp:</span><br><span class="line">        fp.write(page_text)</span><br><span class="line">    <span class="built_in">print</span>(fileName,<span class="string">&#x27;保存成功！！&#x27;</span>)</span><br></pre></td></tr></table></figure></div>
-<h3 id="（2）破解百度翻译">（2）破解百度翻译</h3>
-<ul>
-<li>post 请求（携带了参数）</li>
-<li>响应数据是一组 json 数据</li>
-</ul>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    <span class="comment"># step1 指定URL</span></span><br><span class="line">    post_url = <span class="string">&#x27;https://fanyi.baidu.com/sug&#x27;</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment"># step2 进行UA伪装</span></span><br><span class="line">    headers = &#123;</span><br><span class="line">    <span class="string">&#x27;User-Agent&#x27;</span>:<span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># step3 post请求参数处理（同get请求类似）</span></span><br><span class="line">    word = <span class="built_in">input</span>(<span class="string">&#x27;Enter a word:\n&#x27;</span>)</span><br><span class="line">    data = &#123;</span><br><span class="line">        <span class="string">&#x27;kw&#x27;</span>:word</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># step4 请求发送</span></span><br><span class="line">    response = requests.post(url = post_url,data = data,headers = headers)</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># step5 获取响应数据:json()方法返回的是obj  (如果确认响应数据是json类型--&gt;通过Content-Type分辨，才可以直接用json方法)</span></span><br><span class="line">    dict_obj = response.json()</span><br><span class="line">    <span class="built_in">print</span>(dict_obj)</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># step6 持久化存储</span></span><br><span class="line">    fileName = word + <span class="string">&#x27;.json&#x27;</span></span><br><span class="line">    fp = <span class="built_in">open</span>(fileName,<span class="string">&#x27;w&#x27;</span>,encoding=<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line">    json.dump(dict_obj,fp = fp,ensure_ascii = <span class="literal">False</span>)</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;Over!&#x27;</span>)</span><br></pre></td></tr></table></figure></div>
-<h3 id="（3）豆瓣电影">（3）豆瓣电影</h3>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    url = <span class="string">&#x27;https://movie.douban.com/j/chart/top_list&#x27;</span></span><br><span class="line">    param = &#123;</span><br><span class="line">        <span class="string">&#x27;type&#x27;</span>:<span class="string">&#x27;24&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;interval_id&#x27;</span>:<span class="string">&#x27;100:90&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;action&#x27;</span>:<span class="string">&#x27;&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;start&#x27;</span>:<span class="string">&#x27;0&#x27;</span>,	<span class="comment"># 从库中的第几部电影去取</span></span><br><span class="line">        <span class="string">&#x27;limit&#x27;</span>:<span class="string">&#x27;20&#x27;</span>	<span class="comment"># 一次取出的个数</span></span><br><span class="line">    &#125;</span><br><span class="line">    headers = &#123;</span><br><span class="line">    <span class="string">&#x27;User-Agent&#x27;</span>:<span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">    response = requests.get(url = url,params = param,headers = headers)</span><br><span class="line">    list_data = response.json()</span><br><span class="line">    fp = <span class="built_in">open</span>(<span class="string">&#x27;./douban.json&#x27;</span>,<span class="string">&#x27;w&#x27;</span>,encoding = <span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line">    json.dump(list_data,fp = fp,ensure_ascii = <span class="literal">False</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;Over!&#x27;</span>)</span><br></pre></td></tr></table></figure></div>
-<h2 id="3-作业—肯德基餐厅查询">3. 作业—肯德基餐厅查询</h2>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    post_url = <span class="string">&#x27;https://www.kfc.com.cn/kfccda/ashx/GetStoreList.ashx?op=keyword&#x27;</span></span><br><span class="line">    keyword = <span class="built_in">input</span>(<span class="string">&#x27;请输入要查询的城市：&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    data =&#123;</span><br><span class="line">        <span class="string">&#x27;cname&#x27;</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;pid&#x27;</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;keyword&#x27;</span>: keyword,</span><br><span class="line">        <span class="string">&#x27;pageindex&#x27;</span>: <span class="string">&#x27;1&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;pageSize&#x27;</span>: <span class="string">&#x27;10&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">    headers = &#123;</span><br><span class="line">    <span class="string">&#x27;User-Agent&#x27;</span>:<span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">    response = requests.post(url = post_url, data = data, headers = headers)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 持久化存储</span></span><br><span class="line">    <span class="comment"># page_text = response.text</span></span><br><span class="line">    <span class="comment"># fileName = keyword + &#x27;.html&#x27;</span></span><br><span class="line">    <span class="comment"># with open(fileName, &#x27;w&#x27;, encoding= &#x27;utf-8&#x27;) as fp:</span></span><br><span class="line">    <span class="comment">#     fp.write(page_text)</span></span><br><span class="line">    <span class="comment"># print(fileName, &#x27;Over!&#x27;)</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 直接打印出来</span></span><br><span class="line">    page = response.json()</span><br><span class="line">    <span class="keyword">for</span> <span class="built_in">dict</span> <span class="keyword">in</span> page[<span class="string">&#x27;Table1&#x27;</span>]:</span><br><span class="line">        StoreName = <span class="built_in">dict</span>[<span class="string">&#x27;storeName&#x27;</span>]</span><br><span class="line">        address = <span class="built_in">dict</span>[<span class="string">&#x27;addressDetail&#x27;</span>]</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;StoreName:&#x27;</span> + StoreName, <span class="string">&#x27;address:&#x27;</span> + address + <span class="string">&#x27;\n&#x27;</span>)</span><br></pre></td></tr></table></figure></div>
-<h2 id="4-综合练习—药监总局">4. 综合练习—药监总局</h2>
-<ul>
-<li>
-<p>爬取国家药品监督管理总局中基于中华人民共和国化妆品生产许可证相关数据（<a href="http://scxk.nmpa.gov.cn:81/xk/%EF%BC%89">http://scxk.nmpa.gov.cn:81/xk/）</a></p>
-</li>
-<li>
-<p>动态加载数据：首页中对应的企业信息是通过 <code>ajax</code> 动态请求到的</p>
-</li>
-<li>
-<p>通过对详情页 url 的观察发现：</p>
-<ul>
-<li>url 的域名都是一样的，只有携带的参数（id）不一样</li>
-<li>id 值可以从首页对应的 <code>ajax</code> 请求到的 <code>json</code> 串中获取</li>
-<li>域名和 id 值拼接出一个完整的企业对应的详情页的 url</li>
-</ul>
-</li>
-<li>
-<p>详情页的企业详情数据也是动态加载出来的！！！</p>
-<ul>
-<li>观察后发现，所有 <code>post</code> 请求的 url 都是一样的，只有参数 id 值不同</li>
-<li>如果我们可以批量获取多家企业的id后，就可以就 id 和 url 形成一个完整的详情页对应详情数据的 <code>ajax</code> 请求的 url</li>
-</ul>
-</li>
-</ul>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    headers = &#123;</span><br><span class="line">        <span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">    id_list = []  							<span class="comment"># 存储企业的id</span></span><br><span class="line">    all_data_list = []  					<span class="comment"># 存储企业所有的详情数据</span></span><br><span class="line">    <span class="comment"># 批量获取不同企业的id值</span></span><br><span class="line">    url = <span class="string">&#x27;http://scxk.nmpa.gov.cn:81/xk/itownet/portalAction.do?method=getXkzsList&#x27;</span></span><br><span class="line">    <span class="comment"># 参数的封装</span></span><br><span class="line">    <span class="keyword">for</span> page <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="number">11</span>):</span><br><span class="line">        page = <span class="built_in">str</span>(page)</span><br><span class="line">        data = &#123;</span><br><span class="line">            <span class="string">&#x27;on&#x27;</span>: <span class="string">&#x27;true&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;page&#x27;</span>: page,</span><br><span class="line">            <span class="string">&#x27;pageSize&#x27;</span>: <span class="string">&#x27;15&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;productName&#x27;</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;conditionType&#x27;</span>: <span class="string">&#x27;1&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;applyname&#x27;</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;applysn&#x27;</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">        &#125;</span><br><span class="line">    json_ids = requests.post(url=url, headers=headers, data=data).json()</span><br><span class="line">    <span class="comment"># 从 json_ids 字典中拿到 list 对应的 value 值，对 value 值列表进行遍历</span></span><br><span class="line">    <span class="keyword">for</span> dic <span class="keyword">in</span> json_ids[<span class="string">&#x27;list&#x27;</span>]:</span><br><span class="line">        id_list.append(dic[<span class="string">&#x27;ID&#x27;</span>])</span><br><span class="line">    <span class="comment"># print(id_list,&#x27;\n&#x27;)</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 获取企业详情数据,也是动态加载出来的，携带一个参数 id，其值可以通过前一步生成的 id列表提取</span></span><br><span class="line">    post_url = <span class="string">&#x27;http://scxk.nmpa.gov.cn:81/xk/itownet/portalAction.do?method=getXkzsById&#x27;</span></span><br><span class="line">    <span class="keyword">for</span> <span class="built_in">id</span> <span class="keyword">in</span> id_list:</span><br><span class="line">        data = &#123;</span><br><span class="line">        <span class="string">&#x27;id&#x27;</span>: <span class="built_in">id</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        json_detail = requests.post(url=post_url, data=data, headers=headers).json()</span><br><span class="line">        <span class="comment">#print(json_detail, &#x27;-------------END----------&#x27;)</span></span><br><span class="line">        all_data_list.append(json_detail )</span><br><span class="line">        all_data_list.append(<span class="string">&#x27;---------------------------------------------------------&#x27;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 持久化存储all_data_list</span></span><br><span class="line">    fp = <span class="built_in">open</span>(<span class="string">&#x27;./allData.json&#x27;</span>, <span class="string">&#x27;w&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line">    json.dump(all_data_list, fp=fp, ensure_ascii=<span class="literal">False</span>, indent= <span class="literal">True</span>)  <span class="comment"># indent 自动排版</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;Over!&#x27;</span>)</span><br></pre></td></tr></table></figure></div>
-]]></content>
-      <categories>
-        <category>Python</category>
-        <category>爬虫</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>爬虫</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>爬虫学习笔记(1)--基础简介</title>
     <url>/posts/5223358a/</url>
     <content><![CDATA[<blockquote>
@@ -3190,76 +3118,67 @@ range 类型的优点：不管 range 对象表示的整数序列有多长，所�
       </tags>
   </entry>
   <entry>
-    <title>爬虫学习笔记(4)--验证码</title>
-    <url>/posts/814742/</url>
-    <content><![CDATA[<h2 id="1-验证码识别简介">1. 验证码识别简介</h2>
-<p>验证码和爬虫之间的爱恨情仇：</p>
+    <title>爬虫学习笔记(2)--requests 模块基础</title>
+    <url>/posts/9058b1e5/</url>
+    <content><![CDATA[<h2 id="1-requests-第一血">1. requests 第一血</h2>
+<p>requests 模块：Python 中原生的一款基于网络请求的模块，功能非常强大，简单便捷，效率极高。</p>
+<p>作用：模拟浏览器发请求。</p>
+<p>如何使用：（requests 模块的编码流程）</p>
 <ul>
-<li>反爬机制：验证码。识别验证码图片中的数据，用于模拟登录操作。</li>
-</ul>
-<p>识别验证码的操作：</p>
-<ul>
-<li>人工肉眼识别（不推荐）</li>
-<li>第三方自动识别（推荐）</li>
+<li>指定 url</li>
+<li>发起请求</li>
+<li>获取响应数据</li>
+<li>持久化存储</li>
 </ul>
 <span id="more"></span>
-<h2 id="2-云打码使用流程">2. 云打码使用流程</h2>
-<!--作者学习期间，该平台已经挂掉，故而使用超级鹰进行代替。同类打码平台可以自行百度选择-->
+<p>环境的安装：<code>pip install requests</code></p>
+<p>实战编码：</p>
 <ul>
-<li>注册：用户中心身份</li>
-<li>登录：用户中心身份
+<li>需求：爬取搜狗首页的数据</li>
+</ul>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    <span class="comment"># step1 指定url</span></span><br><span class="line">    url = <span class="string">&#x27;https://www.sogou.com/&#x27;</span></span><br><span class="line">    <span class="comment"># step2 发起请求</span></span><br><span class="line">    <span class="comment"># get方法会返回一个响应对象</span></span><br><span class="line">    response = requests.get(url = url)</span><br><span class="line">    <span class="comment"># step3 获取响应数据，text返回的是字符串形式的响应数据</span></span><br><span class="line">    page_text = response.text</span><br><span class="line">    <span class="built_in">print</span>(page_text)</span><br><span class="line">    <span class="comment"># step4 持久化存储</span></span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;./sogou.html&#x27;</span>,<span class="string">&#x27;w&#x27;</span>,encoding = <span class="string">&#x27;utf-8&#x27;</span>) <span class="keyword">as</span> fp:</span><br><span class="line">        fp.write(page_text)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;爬取数据结束！&#x27;</span>)</span><br></pre></td></tr></table></figure></div>
+<h2 id="2-requests-巩固深入案例介绍">2. requests 巩固深入案例介绍</h2>
+<h3 id="（1）简易网页采集器">（1）简易网页采集器</h3>
 <ul>
-<li>查询余额，题分是否足够（第一次使用，绑定微信即可免费获赠1000题分；非首次使用，建议小额充值，1元即可）</li>
-<li>创建软件 ID —— 用户中心左下角</li>
-<li>下载示例代码 —— 开发文档</li>
+<li>UA 检测</li>
+<li>UA 伪装</li>
+</ul>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># UA：User-Agent请求载体的身份标识</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;UA检测：门户网站的服务器会监测对应请求的载体身份标识，</span></span><br><span class="line"><span class="string">如果检测到请求载体身份标识是某一款浏览器,说明该请求时一个正常的请求；</span></span><br><span class="line"><span class="string">但是，如果检测到请求的载体身份不是基于某一款浏览器的，则表示该请求为不正常请求（爬虫）,</span></span><br><span class="line"><span class="string">则服务器很有可能拒绝该次请求&#x27;&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># UA伪装：让爬虫对应的请求载体身份标识伪装成某一款浏览器，躲过UA检测</span></span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    <span class="comment"># UA伪装：将对应的User-Agent封装到一个字典中</span></span><br><span class="line">    headers = &#123;</span><br><span class="line">    <span class="string">&#x27;User-Agent&#x27;</span>:<span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment"># step1 指定url query</span></span><br><span class="line">    url = <span class="string">&#x27;https://www.sogou.com/web&#x27;</span></span><br><span class="line">    <span class="comment"># 处理url携带的参数 封装到字典中</span></span><br><span class="line">    kw = <span class="built_in">input</span>(<span class="string">&#x27;Enter a word:&#x27;</span>)</span><br><span class="line">    param =&#123;</span><br><span class="line">        <span class="string">&#x27;query&#x27;</span>:kw</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment"># step2 对指定的url发起请求，对应的url是携带参数的，并且处理过程中处理了参数</span></span><br><span class="line">    response = requests.get(url = url,params = param,headers = headers)</span><br><span class="line">    <span class="comment"># step3</span></span><br><span class="line">    page_text = response.text</span><br><span class="line">    <span class="comment"># step4</span></span><br><span class="line">    fileName = kw + <span class="string">&#x27;.html&#x27;</span></span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(fileName,<span class="string">&#x27;w&#x27;</span>,encoding =<span class="string">&#x27;utf-8&#x27;</span>) <span class="keyword">as</span> fp:</span><br><span class="line">        fp.write(page_text)</span><br><span class="line">    <span class="built_in">print</span>(fileName,<span class="string">&#x27;保存成功！！&#x27;</span>)</span><br></pre></td></tr></table></figure></div>
+<h3 id="（2）破解百度翻译">（2）破解百度翻译</h3>
+<ul>
+<li>post 请求（携带了参数）</li>
+<li>响应数据是一组 json 数据</li>
+</ul>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    <span class="comment"># step1 指定URL</span></span><br><span class="line">    post_url = <span class="string">&#x27;https://fanyi.baidu.com/sug&#x27;</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment"># step2 进行UA伪装</span></span><br><span class="line">    headers = &#123;</span><br><span class="line">    <span class="string">&#x27;User-Agent&#x27;</span>:<span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># step3 post请求参数处理（同get请求类似）</span></span><br><span class="line">    word = <span class="built_in">input</span>(<span class="string">&#x27;Enter a word:\n&#x27;</span>)</span><br><span class="line">    data = &#123;</span><br><span class="line">        <span class="string">&#x27;kw&#x27;</span>:word</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># step4 请求发送</span></span><br><span class="line">    response = requests.post(url = post_url,data = data,headers = headers)</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># step5 获取响应数据:json()方法返回的是obj  (如果确认响应数据是json类型--&gt;通过Content-Type分辨，才可以直接用json方法)</span></span><br><span class="line">    dict_obj = response.json()</span><br><span class="line">    <span class="built_in">print</span>(dict_obj)</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># step6 持久化存储</span></span><br><span class="line">    fileName = word + <span class="string">&#x27;.json&#x27;</span></span><br><span class="line">    fp = <span class="built_in">open</span>(fileName,<span class="string">&#x27;w&#x27;</span>,encoding=<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line">    json.dump(dict_obj,fp = fp,ensure_ascii = <span class="literal">False</span>)</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;Over!&#x27;</span>)</span><br></pre></td></tr></table></figure></div>
+<h3 id="（3）豆瓣电影">（3）豆瓣电影</h3>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    url = <span class="string">&#x27;https://movie.douban.com/j/chart/top_list&#x27;</span></span><br><span class="line">    param = &#123;</span><br><span class="line">        <span class="string">&#x27;type&#x27;</span>:<span class="string">&#x27;24&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;interval_id&#x27;</span>:<span class="string">&#x27;100:90&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;action&#x27;</span>:<span class="string">&#x27;&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;start&#x27;</span>:<span class="string">&#x27;0&#x27;</span>,	<span class="comment"># 从库中的第几部电影去取</span></span><br><span class="line">        <span class="string">&#x27;limit&#x27;</span>:<span class="string">&#x27;20&#x27;</span>	<span class="comment"># 一次取出的个数</span></span><br><span class="line">    &#125;</span><br><span class="line">    headers = &#123;</span><br><span class="line">    <span class="string">&#x27;User-Agent&#x27;</span>:<span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">    response = requests.get(url = url,params = param,headers = headers)</span><br><span class="line">    list_data = response.json()</span><br><span class="line">    fp = <span class="built_in">open</span>(<span class="string">&#x27;./douban.json&#x27;</span>,<span class="string">&#x27;w&#x27;</span>,encoding = <span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line">    json.dump(list_data,fp = fp,ensure_ascii = <span class="literal">False</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;Over!&#x27;</span>)</span><br></pre></td></tr></table></figure></div>
+<h2 id="3-作业—肯德基餐厅查询">3. 作业—肯德基餐厅查询</h2>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    post_url = <span class="string">&#x27;https://www.kfc.com.cn/kfccda/ashx/GetStoreList.ashx?op=keyword&#x27;</span></span><br><span class="line">    keyword = <span class="built_in">input</span>(<span class="string">&#x27;请输入要查询的城市：&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    data =&#123;</span><br><span class="line">        <span class="string">&#x27;cname&#x27;</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;pid&#x27;</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;keyword&#x27;</span>: keyword,</span><br><span class="line">        <span class="string">&#x27;pageindex&#x27;</span>: <span class="string">&#x27;1&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;pageSize&#x27;</span>: <span class="string">&#x27;10&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">    headers = &#123;</span><br><span class="line">    <span class="string">&#x27;User-Agent&#x27;</span>:<span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">    response = requests.post(url = post_url, data = data, headers = headers)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 持久化存储</span></span><br><span class="line">    <span class="comment"># page_text = response.text</span></span><br><span class="line">    <span class="comment"># fileName = keyword + &#x27;.html&#x27;</span></span><br><span class="line">    <span class="comment"># with open(fileName, &#x27;w&#x27;, encoding= &#x27;utf-8&#x27;) as fp:</span></span><br><span class="line">    <span class="comment">#     fp.write(page_text)</span></span><br><span class="line">    <span class="comment"># print(fileName, &#x27;Over!&#x27;)</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 直接打印出来</span></span><br><span class="line">    page = response.json()</span><br><span class="line">    <span class="keyword">for</span> <span class="built_in">dict</span> <span class="keyword">in</span> page[<span class="string">&#x27;Table1&#x27;</span>]:</span><br><span class="line">        StoreName = <span class="built_in">dict</span>[<span class="string">&#x27;storeName&#x27;</span>]</span><br><span class="line">        address = <span class="built_in">dict</span>[<span class="string">&#x27;addressDetail&#x27;</span>]</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;StoreName:&#x27;</span> + StoreName, <span class="string">&#x27;address:&#x27;</span> + address + <span class="string">&#x27;\n&#x27;</span>)</span><br></pre></td></tr></table></figure></div>
+<h2 id="4-综合练习—药监总局">4. 综合练习—药监总局</h2>
+<ul>
+<li>
+<p>爬取国家药品监督管理总局中基于中华人民共和国化妆品生产许可证相关数据（<a href="http://scxk.nmpa.gov.cn:81/xk/%EF%BC%89">http://scxk.nmpa.gov.cn:81/xk/）</a></p>
+</li>
+<li>
+<p>动态加载数据：首页中对应的企业信息是通过 <code>ajax</code> 动态请求到的</p>
+</li>
+<li>
+<p>通过对详情页 url 的观察发现：</p>
+<ul>
+<li>url 的域名都是一样的，只有携带的参数（id）不一样</li>
+<li>id 值可以从首页对应的 <code>ajax</code> 请求到的 <code>json</code> 串中获取</li>
+<li>域名和 id 值拼接出一个完整的企业对应的详情页的 url</li>
+</ul>
+</li>
+<li>
+<p>详情页的企业详情数据也是动态加载出来的！！！</p>
+<ul>
+<li>观察后发现，所有 <code>post</code> 请求的 url 都是一样的，只有参数 id 值不同</li>
+<li>如果我们可以批量获取多家企业的id后，就可以就 id 和 url 形成一个完整的详情页对应详情数据的 <code>ajax</code> 请求的 url</li>
 </ul>
 </li>
 </ul>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python</span></span><br><span class="line"><span class="comment"># coding:utf-8</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> lxml <span class="keyword">import</span> etree</span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">from</span> hashlib <span class="keyword">import</span> md5</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Chaojiying_Client</span>(<span class="params"><span class="built_in">object</span></span>):</span></span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, username, password, soft_id</span>):</span></span><br><span class="line">		self.username = username</span><br><span class="line">		password =  password.encode(<span class="string">&#x27;utf8&#x27;</span>)</span><br><span class="line">		self.password = md5(password).hexdigest()</span><br><span class="line">		self.soft_id = soft_id</span><br><span class="line">		self.base_params = &#123;</span><br><span class="line">			<span class="string">&#x27;user&#x27;</span>: self.username,</span><br><span class="line">			<span class="string">&#x27;pass2&#x27;</span>: self.password,</span><br><span class="line">			<span class="string">&#x27;softid&#x27;</span>: self.soft_id,</span><br><span class="line">		&#125;</span><br><span class="line">		self.headers = &#123;</span><br><span class="line">			<span class="string">&#x27;Connection&#x27;</span>: <span class="string">&#x27;Keep-Alive&#x27;</span>,</span><br><span class="line">			<span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0)&#x27;</span>,</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">PostPic</span>(<span class="params">self, im, codetype</span>):</span></span><br><span class="line">		<span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">		im: 图片字节</span></span><br><span class="line"><span class="string">		codetype: 题目类型 参考 http://www.chaojiying.com/price.html</span></span><br><span class="line"><span class="string">		&quot;&quot;&quot;</span></span><br><span class="line">		params = &#123;</span><br><span class="line">			<span class="string">&#x27;codetype&#x27;</span>: codetype,</span><br><span class="line">		&#125;</span><br><span class="line">		params.update(self.base_params)</span><br><span class="line">		files = &#123;<span class="string">&#x27;userfile&#x27;</span>: (<span class="string">&#x27;ccc.jpg&#x27;</span>, im)&#125;</span><br><span class="line">		r = requests.post(<span class="string">&#x27;http://upload.chaojiying.net/Upload/Processing.php&#x27;</span>, data=params, files=files, headers=self.headers)</span><br><span class="line">		<span class="keyword">return</span> r.json()</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">ReportError</span>(<span class="params">self, im_id</span>):</span></span><br><span class="line">		<span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">		im_id:报错题目的图片ID</span></span><br><span class="line"><span class="string">		&quot;&quot;&quot;</span></span><br><span class="line">		params = &#123;</span><br><span class="line">			<span class="string">&#x27;id&#x27;</span>: im_id,</span><br><span class="line">		&#125;</span><br><span class="line">		params.update(self.base_params)</span><br><span class="line">		r = requests.post(<span class="string">&#x27;http://upload.chaojiying.net/Upload/ReportError.php&#x27;</span>, data=params, headers=self.headers)</span><br><span class="line">		<span class="keyword">return</span> r.json()</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">tranformImgCode</span>(<span class="params">imgPath,imgType</span>):</span></span><br><span class="line">	chaojiying = Chaojiying_Client(<span class="string">&#x27;此处是账户&#x27;</span>, <span class="string">&#x27;此处是密码&#x27;</span>, <span class="string">&#x27;此处是软件ID&#x27;</span>)	<span class="comment">#用户中心&gt;&gt;软件ID 生成一个替换 </span></span><br><span class="line">	im = <span class="built_in">open</span>(imgPath, <span class="string">&#x27;rb&#x27;</span>).read()	</span><br><span class="line">	<span class="keyword">return</span> chaojiying.PostPic(im,imgType)[<span class="string">&#x27;pic_str&#x27;</span>]	<span class="comment">#1902 验证码类型  官方网站&gt;&gt;价格体系 3.4+版 </span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(tranformImgCode(<span class="string">&#x27;./a.jpg&#x27;</span>,<span class="number">1902</span>))</span><br></pre></td></tr></table></figure></div>
-<h2 id="3-古诗文网验证码识别">3. 古诗文网验证码识别</h2>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#### 将本部分代码复制到上一节代码之后，因为要调用上述封装的tranformImgCode方法</span></span><br><span class="line"></span><br><span class="line">session = requests.Session()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 识别验证码图下载</span></span><br><span class="line">headers = &#123;</span><br><span class="line"><span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line">url = <span class="string">&#x27;https://so.gushiwen.cn/user/login.aspx?from=http://so.gushiwen.cn/user/collect.aspx&#x27;</span></span><br><span class="line">page_text = session.get(url=url, headers=headers).text</span><br><span class="line"><span class="comment"># 解析验证码图片的地址</span></span><br><span class="line">tree = etree.HTML(page_text)</span><br><span class="line">img_src = <span class="string">&#x27;https://so.gushiwen.org&#x27;</span> + tree.xpath(<span class="string">&#x27;//*[@id=&quot;imgCode&quot;]/@src&#x27;</span>)[<span class="number">0</span>]</span><br><span class="line"><span class="comment"># 将验证码图片保存本地</span></span><br><span class="line">img_data = session.get(img_src, headers=headers).content</span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;./code.jpg&#x27;</span>, <span class="string">&#x27;wb&#x27;</span>) <span class="keyword">as</span> fp:</span><br><span class="line">	fp.write(img_data)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 识别验证码</span></span><br><span class="line">code_text = tranformImgCode(<span class="string">&#x27;./code.jpg&#x27;</span>, <span class="number">1902</span>)</span><br><span class="line"><span class="built_in">print</span>(code_text)</span><br><span class="line">login_url = <span class="string">&#x27;https://so.gushiwen.cn/user/login.aspx?from=http%3a%2f%2fso.gushiwen.cn%2fuser%2fcollect.aspx&#x27;</span></span><br><span class="line">data = &#123;</span><br><span class="line">	<span class="string">&#x27;__VIEWSTATE&#x27;</span>: <span class="string">&#x27;f1ECt6+6MPtdTZMJtYOYS/7ww2d/DPy9t8JQcIt1QuOneLTbNQuYqPcCjZNbDAbfb9vj3k6f0M7EKTf0YqElM1k1A5ELwyTvUzBii+9LDRBbIMmc/jb0DJPsYfI=&#x27;</span>,</span><br><span class="line">	<span class="string">&#x27;__VIEWSTATEGENERATOR&#x27;</span>: <span class="string">&#x27;C93BE1AE&#x27;</span>,</span><br><span class="line">	<span class="string">&#x27;from&#x27;</span>: <span class="string">&#x27;http://so.gushiwen.cn/user/collect.aspx&#x27;</span>,</span><br><span class="line">	<span class="string">&#x27;email&#x27;</span>: <span class="string">&#x27;账号&#x27;</span>,</span><br><span class="line">	<span class="string">&#x27;pwd&#x27;</span>: <span class="string">&#x27;密码&#x27;</span>,</span><br><span class="line">	<span class="string">&#x27;code&#x27;</span>: code_text,  <span class="comment"># 动态变化</span></span><br><span class="line">	<span class="string">&#x27;denglu&#x27;</span>: <span class="string">&#x27;登录&#x27;</span>,</span><br><span class="line">	&#125;</span><br><span class="line"><span class="comment"># 对点击登录按钮发起请求</span></span><br><span class="line">page_text_login = session.post(url=login_url, headers=headers, data=data).text</span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;./gushiwen.html&#x27;</span>, <span class="string">&#x27;w&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>) <span class="keyword">as</span> fp:</span><br><span class="line">	fp.write(page_text_login)</span><br></pre></td></tr></table></figure></div>
-<ul>
-<li>
-<p>在请求参数中如果看到了一组乱序的请求参数，最好去验证这组请求参数是否为动态变化</p>
-<ul>
-<li>处理：
-<ul>
-<li>方式1：常规来讲一般动态变化的请求参数会被隐藏在前台页面中，那么我们就要去前台页面源码中寻找；</li>
-<li>方式2：如果前台页面没有的话，我们就可以基于抓包工具进行全局搜索。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p>基于百度AI实现的爬虫给功能：</p>
-<ul>
-<li>图像识别</li>
-<li>语音识别&amp;合成</li>
-<li>自然语言处理</li>
-</ul>
-</li>
-<li>
-<p>使用流程：</p>
-<ul>
-<li>
-<p>点击控制台进行登录</p>
-</li>
-<li>
-<p>选择想要实现的功能</p>
-</li>
-<li>
-<p>实现功能下创建一个 app</p>
-</li>
-<li>
-<p>选择对应的 pythonSDK 文档进行代码实现</p>
-<blockquote>
-<p>需求：<a href="https://duanziwang.com/">https://duanziwang.com/</a></p>
-<p>讲段子王中的段子内容爬取到本地，然后基于语音合成为mp3的音频文件，然后自己搭建一个web服务器，线上实时播放音频文件。</p>
-</blockquote>
-</li>
-</ul>
-</li>
-</ul>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    headers = &#123;</span><br><span class="line">        <span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">    id_list = []  							<span class="comment"># 存储企业的id</span></span><br><span class="line">    all_data_list = []  					<span class="comment"># 存储企业所有的详情数据</span></span><br><span class="line">    <span class="comment"># 批量获取不同企业的id值</span></span><br><span class="line">    url = <span class="string">&#x27;http://scxk.nmpa.gov.cn:81/xk/itownet/portalAction.do?method=getXkzsList&#x27;</span></span><br><span class="line">    <span class="comment"># 参数的封装</span></span><br><span class="line">    <span class="keyword">for</span> page <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="number">11</span>):</span><br><span class="line">        page = <span class="built_in">str</span>(page)</span><br><span class="line">        data = &#123;</span><br><span class="line">            <span class="string">&#x27;on&#x27;</span>: <span class="string">&#x27;true&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;page&#x27;</span>: page,</span><br><span class="line">            <span class="string">&#x27;pageSize&#x27;</span>: <span class="string">&#x27;15&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;productName&#x27;</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;conditionType&#x27;</span>: <span class="string">&#x27;1&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;applyname&#x27;</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;applysn&#x27;</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">        &#125;</span><br><span class="line">    json_ids = requests.post(url=url, headers=headers, data=data).json()</span><br><span class="line">    <span class="comment"># 从 json_ids 字典中拿到 list 对应的 value 值，对 value 值列表进行遍历</span></span><br><span class="line">    <span class="keyword">for</span> dic <span class="keyword">in</span> json_ids[<span class="string">&#x27;list&#x27;</span>]:</span><br><span class="line">        id_list.append(dic[<span class="string">&#x27;ID&#x27;</span>])</span><br><span class="line">    <span class="comment"># print(id_list,&#x27;\n&#x27;)</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 获取企业详情数据,也是动态加载出来的，携带一个参数 id，其值可以通过前一步生成的 id列表提取</span></span><br><span class="line">    post_url = <span class="string">&#x27;http://scxk.nmpa.gov.cn:81/xk/itownet/portalAction.do?method=getXkzsById&#x27;</span></span><br><span class="line">    <span class="keyword">for</span> <span class="built_in">id</span> <span class="keyword">in</span> id_list:</span><br><span class="line">        data = &#123;</span><br><span class="line">        <span class="string">&#x27;id&#x27;</span>: <span class="built_in">id</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        json_detail = requests.post(url=post_url, data=data, headers=headers).json()</span><br><span class="line">        <span class="comment">#print(json_detail, &#x27;-------------END----------&#x27;)</span></span><br><span class="line">        all_data_list.append(json_detail )</span><br><span class="line">        all_data_list.append(<span class="string">&#x27;---------------------------------------------------------&#x27;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 持久化存储all_data_list</span></span><br><span class="line">    fp = <span class="built_in">open</span>(<span class="string">&#x27;./allData.json&#x27;</span>, <span class="string">&#x27;w&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line">    json.dump(all_data_list, fp=fp, ensure_ascii=<span class="literal">False</span>, indent= <span class="literal">True</span>)  <span class="comment"># indent 自动排版</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;Over!&#x27;</span>)</span><br></pre></td></tr></table></figure></div>
 ]]></content>
       <categories>
         <category>Python</category>
@@ -3555,6 +3474,87 @@ range 类型的优点：不管 range 对象表示的整数序列有多长，所�
 <div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 需求：解析出所有城市名称  https://www.aqistudy.cn/historydata/</span></span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">from</span> lxml <span class="keyword">import</span> etree</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27;headers = &#123;</span></span><br><span class="line"><span class="string">    &#x27;User-Agent&#x27;:&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36&#x27;</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">    url = &#x27;https://www.aqistudy.cn/historydata/&#x27;</span></span><br><span class="line"><span class="string">    page_text = requests.get(url=url,headers=headers).text</span></span><br><span class="line"><span class="string">    tree = etree.HTML(page_text)</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    #数据解析</span></span><br><span class="line"><span class="string">    hot_li_list = tree.xpath(&#x27;//div[@class=&quot;bottom&quot;]/ul/li&#x27;)</span></span><br><span class="line"><span class="string">    all_city_names = []</span></span><br><span class="line"><span class="string">    #解析热门城市名字</span></span><br><span class="line"><span class="string">    for li in hot_li_list:</span></span><br><span class="line"><span class="string">        hot_city_names = li.xpath(&#x27;./a/text()&#x27;)[0]</span></span><br><span class="line"><span class="string">        all_city_names.append(hot_city_names)</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    #解析全部城市名字：</span></span><br><span class="line"><span class="string">    city_names_list = tree.xpath(&#x27;.//div[@class=&quot;bottom&quot;]/ul/div[2]/li&#x27;)</span></span><br><span class="line"><span class="string">    for li in city_names_list:</span></span><br><span class="line"><span class="string">        city_name = li.xpath(&#x27;./a/text()&#x27;)[0]</span></span><br><span class="line"><span class="string">        all_city_names.append(city_name)</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    print(all_city_names,len(all_city_names))&#x27;&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 第二种方法，一起解析</span></span><br><span class="line"></span><br><span class="line">    headers = &#123;</span><br><span class="line"><span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">    url = <span class="string">&#x27;https://www.aqistudy.cn/historydata/&#x27;</span></span><br><span class="line">    page_text = requests.get(url=url, headers=headers).text</span><br><span class="line"></span><br><span class="line">    tree = etree.HTML(page_text)</span><br><span class="line">    <span class="comment"># 数据解析  解析到热门城市和全部城市对应的a标签</span></span><br><span class="line">    <span class="comment"># 热门城市标签层级div/ul/li/a</span></span><br><span class="line">    <span class="comment"># 全部城市标签层级div/ul/div[2]/li/a</span></span><br><span class="line">    a_list = tree.xpath(<span class="string">&#x27;//div[@class=&quot;bottom&quot;]/ul/li/a | //div[@class=&quot;bottom&quot;]/ul/div[2]/li/a &#x27;</span>)</span><br><span class="line">    all_city_names = []</span><br><span class="line">    <span class="keyword">for</span> a <span class="keyword">in</span> a_list:</span><br><span class="line">        a_name = a.xpath(<span class="string">&#x27;./text()&#x27;</span>)[<span class="number">0</span>]</span><br><span class="line">        all_city_names.append(a_name)</span><br><span class="line">    <span class="built_in">print</span>(all_city_names, <span class="built_in">len</span>(all_city_names))</span><br></pre></td></tr></table></figure></div>
 <h2 id="10-xpath-作业—爬取站长素材中免费简历模板">10. xpath 作业—爬取站长素材中免费简历模板</h2>
 <div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 爬取站长素材中免费的简历模板  https://sc.chinaz.com/jianli/free.html</span></span><br><span class="line"><span class="comment"># 代码参考：https://blog.csdn.net/nanke_nk/article/details/108966854</span></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">from</span> lxml <span class="keyword">import</span> etree</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> os.path.exists(<span class="string">&#x27;./jianli&#x27;</span>):</span><br><span class="line">        os.mkdir(<span class="string">&#x27;./jianli&#x27;</span>)</span><br><span class="line">    headers = &#123;</span><br><span class="line">        <span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">    url = <span class="string">&#x27;https://sc.chinaz.com/jianli/free_%d.html&#x27;</span></span><br><span class="line">    page = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&#x27;您一共想要爬取多少页：&#x27;</span>))</span><br><span class="line">    <span class="keyword">for</span> pageNum <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, page):</span><br><span class="line">        <span class="keyword">if</span> pageNum == <span class="number">1</span>:</span><br><span class="line">            new_url = <span class="string">&#x27;https://sc.chinaz.com/jianli/free.html&#x27;</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            new_url = <span class="built_in">format</span>(url%pageNum)</span><br><span class="line">        page_text = requests.get(url = new_url, headers = headers).text</span><br><span class="line">        tree = etree.HTML(page_text)</span><br><span class="line">        url_div_list = tree.xpath(<span class="string">&#x27;//*[@id=&quot;container&quot;]/div&#x27;</span>)</span><br><span class="line">        <span class="keyword">for</span> detail_url <span class="keyword">in</span> url_div_list:</span><br><span class="line">            detail_url = <span class="string">&#x27;https:&#x27;</span> + detail_url.xpath(<span class="string">&#x27;./a/@href&#x27;</span>)[<span class="number">0</span>]</span><br><span class="line"></span><br><span class="line">            detail_page_text = requests.get(url = detail_url, headers =headers).text</span><br><span class="line">            tree = etree.HTML(detail_page_text)</span><br><span class="line">            name = tree.xpath(<span class="string">&#x27;//h1/text()&#x27;</span>)[<span class="number">0</span>].encode(<span class="string">&#x27;iso-8859-1&#x27;</span>).decode(<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line">            download_url = tree.xpath(<span class="string">&#x27;//*[@id=&quot;down&quot;]/div[2]/ul/li[1]/a/@href&#x27;</span>)[<span class="number">0</span>]</span><br><span class="line">            file_path = <span class="string">&#x27;jianli/&#x27;</span> + name + <span class="string">&#x27;.rar&#x27;</span></span><br><span class="line">            download_content = requests.get(url = download_url, headers = headers).content</span><br><span class="line">            <span class="keyword">with</span> <span class="built_in">open</span>(file_path, <span class="string">&#x27;wb&#x27;</span>) <span class="keyword">as</span> fp:</span><br><span class="line">                fp.write(download_content)</span><br><span class="line">            <span class="built_in">print</span>(name, <span class="string">&#x27;下载完成&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;-------------------------------OVER!---------------------------------------&#x27;</span>)</span><br></pre></td></tr></table></figure></div>
+]]></content>
+      <categories>
+        <category>Python</category>
+        <category>爬虫</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>爬虫</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>爬虫学习笔记(4)--验证码</title>
+    <url>/posts/814742/</url>
+    <content><![CDATA[<h2 id="1-验证码识别简介">1. 验证码识别简介</h2>
+<p>验证码和爬虫之间的爱恨情仇：</p>
+<ul>
+<li>反爬机制：验证码。识别验证码图片中的数据，用于模拟登录操作。</li>
+</ul>
+<p>识别验证码的操作：</p>
+<ul>
+<li>人工肉眼识别（不推荐）</li>
+<li>第三方自动识别（推荐）</li>
+</ul>
+<span id="more"></span>
+<h2 id="2-云打码使用流程">2. 云打码使用流程</h2>
+<!--作者学习期间，该平台已经挂掉，故而使用超级鹰进行代替。同类打码平台可以自行百度选择-->
+<ul>
+<li>注册：用户中心身份</li>
+<li>登录：用户中心身份
+<ul>
+<li>查询余额，题分是否足够（第一次使用，绑定微信即可免费获赠1000题分；非首次使用，建议小额充值，1元即可）</li>
+<li>创建软件 ID —— 用户中心左下角</li>
+<li>下载示例代码 —— 开发文档</li>
+</ul>
+</li>
+</ul>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python</span></span><br><span class="line"><span class="comment"># coding:utf-8</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> lxml <span class="keyword">import</span> etree</span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">from</span> hashlib <span class="keyword">import</span> md5</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Chaojiying_Client</span>(<span class="params"><span class="built_in">object</span></span>):</span></span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, username, password, soft_id</span>):</span></span><br><span class="line">		self.username = username</span><br><span class="line">		password =  password.encode(<span class="string">&#x27;utf8&#x27;</span>)</span><br><span class="line">		self.password = md5(password).hexdigest()</span><br><span class="line">		self.soft_id = soft_id</span><br><span class="line">		self.base_params = &#123;</span><br><span class="line">			<span class="string">&#x27;user&#x27;</span>: self.username,</span><br><span class="line">			<span class="string">&#x27;pass2&#x27;</span>: self.password,</span><br><span class="line">			<span class="string">&#x27;softid&#x27;</span>: self.soft_id,</span><br><span class="line">		&#125;</span><br><span class="line">		self.headers = &#123;</span><br><span class="line">			<span class="string">&#x27;Connection&#x27;</span>: <span class="string">&#x27;Keep-Alive&#x27;</span>,</span><br><span class="line">			<span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0)&#x27;</span>,</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">PostPic</span>(<span class="params">self, im, codetype</span>):</span></span><br><span class="line">		<span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">		im: 图片字节</span></span><br><span class="line"><span class="string">		codetype: 题目类型 参考 http://www.chaojiying.com/price.html</span></span><br><span class="line"><span class="string">		&quot;&quot;&quot;</span></span><br><span class="line">		params = &#123;</span><br><span class="line">			<span class="string">&#x27;codetype&#x27;</span>: codetype,</span><br><span class="line">		&#125;</span><br><span class="line">		params.update(self.base_params)</span><br><span class="line">		files = &#123;<span class="string">&#x27;userfile&#x27;</span>: (<span class="string">&#x27;ccc.jpg&#x27;</span>, im)&#125;</span><br><span class="line">		r = requests.post(<span class="string">&#x27;http://upload.chaojiying.net/Upload/Processing.php&#x27;</span>, data=params, files=files, headers=self.headers)</span><br><span class="line">		<span class="keyword">return</span> r.json()</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">ReportError</span>(<span class="params">self, im_id</span>):</span></span><br><span class="line">		<span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">		im_id:报错题目的图片ID</span></span><br><span class="line"><span class="string">		&quot;&quot;&quot;</span></span><br><span class="line">		params = &#123;</span><br><span class="line">			<span class="string">&#x27;id&#x27;</span>: im_id,</span><br><span class="line">		&#125;</span><br><span class="line">		params.update(self.base_params)</span><br><span class="line">		r = requests.post(<span class="string">&#x27;http://upload.chaojiying.net/Upload/ReportError.php&#x27;</span>, data=params, headers=self.headers)</span><br><span class="line">		<span class="keyword">return</span> r.json()</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">tranformImgCode</span>(<span class="params">imgPath,imgType</span>):</span></span><br><span class="line">	chaojiying = Chaojiying_Client(<span class="string">&#x27;此处是账户&#x27;</span>, <span class="string">&#x27;此处是密码&#x27;</span>, <span class="string">&#x27;此处是软件ID&#x27;</span>)	<span class="comment">#用户中心&gt;&gt;软件ID 生成一个替换 </span></span><br><span class="line">	im = <span class="built_in">open</span>(imgPath, <span class="string">&#x27;rb&#x27;</span>).read()	</span><br><span class="line">	<span class="keyword">return</span> chaojiying.PostPic(im,imgType)[<span class="string">&#x27;pic_str&#x27;</span>]	<span class="comment">#1902 验证码类型  官方网站&gt;&gt;价格体系 3.4+版 </span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(tranformImgCode(<span class="string">&#x27;./a.jpg&#x27;</span>,<span class="number">1902</span>))</span><br></pre></td></tr></table></figure></div>
+<h2 id="3-古诗文网验证码识别">3. 古诗文网验证码识别</h2>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#### 将本部分代码复制到上一节代码之后，因为要调用上述封装的tranformImgCode方法</span></span><br><span class="line"></span><br><span class="line">session = requests.Session()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 识别验证码图下载</span></span><br><span class="line">headers = &#123;</span><br><span class="line"><span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line">url = <span class="string">&#x27;https://so.gushiwen.cn/user/login.aspx?from=http://so.gushiwen.cn/user/collect.aspx&#x27;</span></span><br><span class="line">page_text = session.get(url=url, headers=headers).text</span><br><span class="line"><span class="comment"># 解析验证码图片的地址</span></span><br><span class="line">tree = etree.HTML(page_text)</span><br><span class="line">img_src = <span class="string">&#x27;https://so.gushiwen.org&#x27;</span> + tree.xpath(<span class="string">&#x27;//*[@id=&quot;imgCode&quot;]/@src&#x27;</span>)[<span class="number">0</span>]</span><br><span class="line"><span class="comment"># 将验证码图片保存本地</span></span><br><span class="line">img_data = session.get(img_src, headers=headers).content</span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;./code.jpg&#x27;</span>, <span class="string">&#x27;wb&#x27;</span>) <span class="keyword">as</span> fp:</span><br><span class="line">	fp.write(img_data)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 识别验证码</span></span><br><span class="line">code_text = tranformImgCode(<span class="string">&#x27;./code.jpg&#x27;</span>, <span class="number">1902</span>)</span><br><span class="line"><span class="built_in">print</span>(code_text)</span><br><span class="line">login_url = <span class="string">&#x27;https://so.gushiwen.cn/user/login.aspx?from=http%3a%2f%2fso.gushiwen.cn%2fuser%2fcollect.aspx&#x27;</span></span><br><span class="line">data = &#123;</span><br><span class="line">	<span class="string">&#x27;__VIEWSTATE&#x27;</span>: <span class="string">&#x27;f1ECt6+6MPtdTZMJtYOYS/7ww2d/DPy9t8JQcIt1QuOneLTbNQuYqPcCjZNbDAbfb9vj3k6f0M7EKTf0YqElM1k1A5ELwyTvUzBii+9LDRBbIMmc/jb0DJPsYfI=&#x27;</span>,</span><br><span class="line">	<span class="string">&#x27;__VIEWSTATEGENERATOR&#x27;</span>: <span class="string">&#x27;C93BE1AE&#x27;</span>,</span><br><span class="line">	<span class="string">&#x27;from&#x27;</span>: <span class="string">&#x27;http://so.gushiwen.cn/user/collect.aspx&#x27;</span>,</span><br><span class="line">	<span class="string">&#x27;email&#x27;</span>: <span class="string">&#x27;账号&#x27;</span>,</span><br><span class="line">	<span class="string">&#x27;pwd&#x27;</span>: <span class="string">&#x27;密码&#x27;</span>,</span><br><span class="line">	<span class="string">&#x27;code&#x27;</span>: code_text,  <span class="comment"># 动态变化</span></span><br><span class="line">	<span class="string">&#x27;denglu&#x27;</span>: <span class="string">&#x27;登录&#x27;</span>,</span><br><span class="line">	&#125;</span><br><span class="line"><span class="comment"># 对点击登录按钮发起请求</span></span><br><span class="line">page_text_login = session.post(url=login_url, headers=headers, data=data).text</span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;./gushiwen.html&#x27;</span>, <span class="string">&#x27;w&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>) <span class="keyword">as</span> fp:</span><br><span class="line">	fp.write(page_text_login)</span><br></pre></td></tr></table></figure></div>
+<ul>
+<li>
+<p>在请求参数中如果看到了一组乱序的请求参数，最好去验证这组请求参数是否为动态变化</p>
+<ul>
+<li>处理：
+<ul>
+<li>方式1：常规来讲一般动态变化的请求参数会被隐藏在前台页面中，那么我们就要去前台页面源码中寻找；</li>
+<li>方式2：如果前台页面没有的话，我们就可以基于抓包工具进行全局搜索。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>基于百度AI实现的爬虫给功能：</p>
+<ul>
+<li>图像识别</li>
+<li>语音识别&amp;合成</li>
+<li>自然语言处理</li>
+</ul>
+</li>
+<li>
+<p>使用流程：</p>
+<ul>
+<li>
+<p>点击控制台进行登录</p>
+</li>
+<li>
+<p>选择想要实现的功能</p>
+</li>
+<li>
+<p>实现功能下创建一个 app</p>
+</li>
+<li>
+<p>选择对应的 pythonSDK 文档进行代码实现</p>
+<blockquote>
+<p>需求：<a href="https://duanziwang.com/">https://duanziwang.com/</a></p>
+<p>讲段子王中的段子内容爬取到本地，然后基于语音合成为mp3的音频文件，然后自己搭建一个web服务器，线上实时播放音频文件。</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
 ]]></content>
       <categories>
         <category>Python</category>
@@ -5218,6 +5218,7 @@ $$</p>
 <li><code>get(key):</code>如果存在键为 key 的键值对则返回其 value，否则返回空值</li>
 <li><code>delete(key):</code>删除键为 key 的键值对</li>
 </ul>
+<span id="more"></span>
 <h3 id="直接寻址表">直接寻址表</h3>
 <p><img src="https://s2.loli.net/2022/04/18/8LpQn23jhvlCD9q.png" alt="直接寻址表"></p>
 <ul>
@@ -5346,6 +5347,7 @@ $$</p>
     <url>/posts/265f4dd2/</url>
     <content><![CDATA[<p>##　树的实例：模拟文件系统</p>
 <div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Node</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, name, <span class="built_in">type</span>=<span class="string">&#x27;dir&#x27;</span></span>):</span></span><br><span class="line">        self.name = name</span><br><span class="line">        self.<span class="built_in">type</span> = <span class="built_in">type</span></span><br><span class="line">        self.children = []</span><br><span class="line">        self.parent = <span class="literal">None</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__repr__</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="keyword">return</span> self.name</span><br><span class="line"></span><br><span class="line">n = Node(<span class="string">&quot;hello&quot;</span>)</span><br><span class="line">n2 = Node(<span class="string">&quot;world&quot;</span>)</span><br><span class="line">n.children.append(n2)</span><br><span class="line">n2.parent = n</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">FileSystemTree</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self</span>) -&gt; <span class="literal">None</span>:</span></span><br><span class="line">        self.root = Node(<span class="string">&quot;/&quot;</span>)</span><br><span class="line">        self.now = self.root</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">mkdir</span>(<span class="params">self, name</span>):</span></span><br><span class="line">        <span class="comment"># name 以 / 结尾</span></span><br><span class="line">        <span class="keyword">if</span> name[-<span class="number">1</span>] != <span class="string">&quot;/&quot;</span>:</span><br><span class="line">            name += <span class="string">&quot;/&quot;</span></span><br><span class="line">        node = Node(name)</span><br><span class="line">        self.now.children.append(node)</span><br><span class="line">        node.parent = self.now</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">def</span>  <span class="title">ls</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="keyword">return</span> self.now.children</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">cd</span>(<span class="params">self, name</span>):</span></span><br><span class="line">        <span class="keyword">if</span> name[-<span class="number">1</span>] != <span class="string">&quot;/&quot;</span>:</span><br><span class="line">            name += <span class="string">&quot;/&quot;</span></span><br><span class="line">        <span class="keyword">if</span> name == <span class="string">&quot;../&quot;</span>:</span><br><span class="line">            self.now = self.now.parent</span><br><span class="line">            <span class="keyword">return</span></span><br><span class="line">        <span class="keyword">for</span> child <span class="keyword">in</span> self.now.children:</span><br><span class="line">            <span class="keyword">if</span> child.name == name:</span><br><span class="line">                self.now = child</span><br><span class="line">                <span class="keyword">return</span></span><br><span class="line">        <span class="keyword">raise</span> ValueError(<span class="string">&#x27;invalid dir&#x27;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">tree = FileSystemTree()</span><br><span class="line">tree.mkdir(<span class="string">&quot;var/&quot;</span>)</span><br><span class="line">tree.mkdir(<span class="string">&#x27;bin/&#x27;</span>)</span><br><span class="line">tree.mkdir(<span class="string">&#x27;usr/&#x27;</span>)</span><br><span class="line"></span><br><span class="line">tree.cd(<span class="string">&#x27;bin/&#x27;</span>)</span><br><span class="line">tree.mkdir(<span class="string">&#x27;python/&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(tree.root.children)</span><br><span class="line"><span class="built_in">print</span>(tree.ls())</span><br></pre></td></tr></table></figure></div>
+<span id="more"></span>
 <h2 id="二叉树">二叉树</h2>
 <p><img src="https://s2.loli.net/2022/04/18/Q3UvKW8itLeqAXI.png" alt="简单二叉树"></p>
 <ul>
@@ -5434,6 +5436,7 @@ $$</p>
 </li>
 </ul>
 <p><img src="https://s2.loli.net/2022/04/19/qt5rZx4PCQkvbEn.png" alt="平衡因子"></p>
+<span id="more"></span>
 <h2 id="旋转">旋转</h2>
 <p>视频演示网址：<a href="https://www.visualgo.net/en/bst">VISUALGO</a></p>
 <ul>
@@ -5484,6 +5487,25 @@ $$</p>
       </tags>
   </entry>
   <entry>
+    <title>不宠无惊过一生</title>
+    <url>/posts/cf8b4b16/</url>
+    <content><![CDATA[<p>不乱于心，不困于情。不畏将来，不念过往。如此，安好。</p>
+<p>深谋若谷，深交若水。深明大义，深悉小节。已然，静舒。</p>
+<span id="more"></span>
+<p>善宽以怀，善感以恩。善博以浪，善精以业。这般，最佳。</p>
+<p>勿感于时，勿伤于怀。勿耽美色，勿沉虚妄。从今，进取。</p>
+<p>无愧于天，无愧于地。无怍于人，无惧于鬼。这样，人生。</p>
+]]></content>
+      <categories>
+        <category>鸡汤</category>
+      </categories>
+      <tags>
+        <tag>文化</tag>
+        <tag>诗词</tag>
+        <tag>丰子恺</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Python数据结构与算法(13)--贪心算法</title>
     <url>/posts/4c52af8a/</url>
     <content><![CDATA[<h2 id="介绍">介绍</h2>
@@ -5491,6 +5513,7 @@ $$</p>
 <li>贪心算法(又称贪婪算法)是指，在对问题求解时，总是做出在当前看来是最好的选择。也就是说，不从整体最优上加以考虑，他所做出的是在某种意义上的局部最优解。</li>
 <li>贪心算法并不保证会得到最优解，但是在某些问题上贪心算法的解就是最优解。要会判断一个问题能否用贪心算法来计算</li>
 </ul>
+<span id="more"></span>
 <h2 id="找零问题">找零问题</h2>
 <ul>
 <li>假设商店老板需要找零 n 元钱，钱币的面额有：100 元、50 元、20 元、5 元、1 元，如何找零使得所需钱币的数量最少？</li>
@@ -5539,25 +5562,6 @@ $$</p>
       <tags>
         <tag>Python</tag>
         <tag>算法</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>不宠无惊过一生</title>
-    <url>/posts/cf8b4b16/</url>
-    <content><![CDATA[<p>不乱于心，不困于情。不畏将来，不念过往。如此，安好。</p>
-<p>深谋若谷，深交若水。深明大义，深悉小节。已然，静舒。</p>
-<span id="more"></span>
-<p>善宽以怀，善感以恩。善博以浪，善精以业。这般，最佳。</p>
-<p>勿感于时，勿伤于怀。勿耽美色，勿沉虚妄。从今，进取。</p>
-<p>无愧于天，无愧于地。无怍于人，无惧于鬼。这样，人生。</p>
-]]></content>
-      <categories>
-        <category>鸡汤</category>
-      </categories>
-      <tags>
-        <tag>文化</tag>
-        <tag>诗词</tag>
-        <tag>丰子恺</tag>
       </tags>
   </entry>
   <entry>
