@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>About Me</title>
+    <url>/posts/f0b34752/</url>
+    <content><![CDATA[<blockquote>
+<p>A student, live in Ji’nan, China.</p>
+</blockquote>
+<span id="more"></span>
+<h4 id="姓名：ZYZhang">姓名：ZYZhang</h4>
+<h4 id="性别：男">性别：男</h4>
+<h4 id="Github：ZYZhang">Github：<a href="https://github.com/zyzhang827">ZYZhang</a></h4>
+<h4 id="Gitee：ZYZhang">Gitee：<a href="https://gitee.com/zyzhang98">ZYZhang</a></h4>
+]]></content>
+  </entry>
+  <entry>
     <title>博客搭建(2)---主题配置遗留问题</title>
     <url>/posts/2ceebbb0/</url>
     <content><![CDATA[<h2 id="分类、标签、关于我">分类、标签、关于我</h2>
@@ -72,19 +85,6 @@
         <tag>ayer</tag>
         <tag>美化</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>About Me</title>
-    <url>/posts/f0b34752/</url>
-    <content><![CDATA[<blockquote>
-<p>A student, live in Ji’nan, China.</p>
-</blockquote>
-<span id="more"></span>
-<h4 id="姓名：ZYZhang">姓名：ZYZhang</h4>
-<h4 id="性别：男">性别：男</h4>
-<h4 id="Github：ZYZhang">Github：<a href="https://github.com/zyzhang827">ZYZhang</a></h4>
-<h4 id="Gitee：ZYZhang">Gitee：<a href="https://gitee.com/zyzhang98">ZYZhang</a></h4>
-]]></content>
   </entry>
   <entry>
     <title>博客搭建(3)---Github部署</title>
@@ -6397,7 +6397,7 @@ c[i-1,j-1]+1 &amp; 若\quad i,j&gt;0\quad 且\quad x_i=y_i \<br>
       <categories>
         <category>Python</category>
         <category>LeetCode</category>
-        <category>medium</category>
+        <category>Medium</category>
       </categories>
       <tags>
         <tag>Python</tag>
