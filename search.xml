@@ -207,7 +207,6 @@
 <p>本教程基于<a href="https://www.bilibili.com/video/BV1et411b73Z?">B站视频教程</a></p>
 </blockquote>
 </blockquote>
-<p>学习期间，因为自己电脑安装有 Visual Studio Code，故直接在 VSCode 中配置了 C++ 环境，所以作者使用软件与视频软件不同，还是推荐 Microsoft Visual Studio，望周知。</p>
 <h2 id="第一个C-程序">第一个C++程序</h2>
 <p>编写一个 C++ 程序一共分为4个步骤：</p>
 <ul>
@@ -1310,6 +1309,44 @@
       </tags>
   </entry>
   <entry>
+    <title>Lammps安装</title>
+    <url>/posts/81c58c19/</url>
+    <content><![CDATA[<h2 id="基础安装包">基础安装包</h2>
+<p>打开电脑终端<code>ctrl+alt+t</code>，依次键入以下命令，<code>#</code>后的文字为注释部分</p>
+<div class="highlight-wrap" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">sudo apt-get install build-essential</span><br><span class="line"><span class="meta">#</span><span class="bash"> 基于cmake安装lammps</span></span><br><span class="line">sudo apt-get install cmake</span><br><span class="line"><span class="meta">#</span><span class="bash"> 安装fortran编译器</span></span><br><span class="line">sudo apt-get install gfortran</span><br><span class="line"><span class="meta">#</span><span class="bash"> 安装自己熟悉的文本编辑器vim, vi, emacs等</span></span><br><span class="line">sudo apt-get install vim</span><br><span class="line">sudo apt-get install libssl-dev</span><br><span class="line"><span class="meta">#</span><span class="bash"> 更新已安装的所有包</span></span><br><span class="line">sudo apt update &amp;&amp; sudo apt upgrade</span><br></pre></td></tr></table></figure></div>
+<span id="more"></span>
+<h2 id="mpich安装">mpich安装</h2>
+<p>可以根据自己的需要，自行选择实现 MPI 的包，这里以 mpich 为例。</p>
+<p>打开电脑终端，依次输入以下命令</p>
+<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 使用内置 wget 命令下载 mpich 安装包文件</span></span><br><span class="line">wget https://www.mpich.org/static/downloads/3.4.3/mpich-3.4.3.tar.gz</span><br><span class="line"><span class="comment"># 对安装包进行解压缩</span></span><br><span class="line">tar -xvf mpich-3.4.3.tar.gz</span><br><span class="line"><span class="comment"># 进入解压后的 mpich 文件夹</span></span><br><span class="line"><span class="built_in">cd</span> mpich-3.4.3/</span><br><span class="line"><span class="comment"># mpich 安装配置</span></span><br><span class="line">./configure --enable-shared=yes</span><br></pre></td></tr></table></figure></div>
+<p>在上一步最后安装配置后，可能出现以下问题：</p>
+<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">The default ch4 device could not detect a preferred network</span><br><span class="line">library. Supported options are ofi (libfabric) and ucx:</span><br><span class="line">    --with-device=ch4:ofi or --with-device=ch4:ucx</span><br><span class="line">Configure will use an embedded copy of libfabric or ucx <span class="keyword">if</span> one is</span><br><span class="line">not found <span class="keyword">in</span> the user environment. An installation can be specified</span><br><span class="line">by adding</span><br><span class="line">    --with-libfabric=&lt;path/to/install&gt; or --with-ucx=&lt;path/to/install&gt;</span><br><span class="line">to the configuration.</span><br><span class="line">The previous MPICH default device (ch3) is also available and</span><br><span class="line">supported with option:</span><br><span class="line">    --with-device=ch3</span><br></pre></td></tr></table></figure></div>
+<p>使用以下命令重新进行安装配置</p>
+<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">./configure --with-device=ch4:ofi --enable-shared=yes</span><br></pre></td></tr></table></figure></div>
+<p>完成上述配置后，最后显示<code>Configuration completed</code>即说明配置完成。</p>
+<p>然后继续键入以下命令</p>
+<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">make</span><br><span class="line">sudo make install</span><br></pre></td></tr></table></figure></div>
+<p>对文件进行 make 编译后，之后的操作出现错误需要重新输入命令的时候，建议先回到<code>mpich-3.3.4</code>文件夹进行<code>make clean-all</code>和<code>make</code>，删除之前的错误编译文件，防止出现其他问题。</p>
+<h2 id="环境变量添加">环境变量添加</h2>
+<p>然后在<code>~/.bashrc</code>文件中添加路径，终端中输入<code>sudo gedit ~/.bashrc</code>，然后在文件末尾中添加以下内容。</p>
+<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">export</span> PATH=/usr/<span class="built_in">local</span>/bin:<span class="variable">$PATH</span></span><br><span class="line"><span class="built_in">export</span> LD_LIBRARY_PATH=/usr/<span class="built_in">local</span>/lib:<span class="variable">$LD_LIBRARY_PATH</span></span><br></pre></td></tr></table></figure></div>
+<p>然后更新环境变量，使修改后的环境变量生效。</p>
+<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.bashrc</span><br></pre></td></tr></table></figure></div>
+<h2 id="lammps安装">lammps安装</h2>
+<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 下载文件</span></span><br><span class="line">wget https://download.lammps.org/tars/lammps-stable.tar.gz</span><br><span class="line"><span class="comment"># 解压文件</span></span><br><span class="line">tar -xvf lammps-stable.tar.gz</span><br><span class="line"><span class="comment"># 进入解压后的文件夹</span></span><br><span class="line"><span class="built_in">cd</span> lammps-29Sep2021/</span><br><span class="line"><span class="comment"># 创建 build 目录</span></span><br><span class="line">mkdir build</span><br><span class="line"><span class="comment"># 进入 build 文件夹</span></span><br><span class="line"><span class="built_in">cd</span> build</span><br><span class="line"><span class="comment"># 编译安装</span></span><br><span class="line">cmake ../cmake</span><br><span class="line">make</span><br><span class="line">sudo make install</span><br><span class="line"><span class="comment"># 返回上级目录</span></span><br><span class="line"><span class="built_in">cd</span> ..</span><br></pre></td></tr></table></figure></div>
+<p>以下进行测试</p>
+<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 进入lammps文件夹中的 deposit 文件夹</span></span><br><span class="line"><span class="built_in">cd</span> examples/deposit</span><br><span class="line"><span class="comment"># 运行</span></span><br><span class="line">mpirun -n 2 lmp &lt; in.deposit.atom</span><br></pre></td></tr></table></figure></div>
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+      <categories>
+        <category>Molecular Dynamics</category>
+        <category>LAMMPS</category>
+      </categories>
+      <tags>
+        <tag>MD</tag>
+        <tag>lammps</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>KMCLib安装</title>
     <url>/posts/1f98607f/</url>
     <content><![CDATA[<h2 id="基础包安装">基础包安装</h2>
@@ -1372,44 +1409,6 @@
         <tag>C++</tag>
         <tag>KMCLib</tag>
         <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Lammps安装</title>
-    <url>/posts/81c58c19/</url>
-    <content><![CDATA[<h2 id="基础安装包">基础安装包</h2>
-<p>打开电脑终端<code>ctrl+alt+t</code>，依次键入以下命令，<code>#</code>后的文字为注释部分</p>
-<div class="highlight-wrap" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">sudo apt-get install build-essential</span><br><span class="line"><span class="meta">#</span><span class="bash"> 基于cmake安装lammps</span></span><br><span class="line">sudo apt-get install cmake</span><br><span class="line"><span class="meta">#</span><span class="bash"> 安装fortran编译器</span></span><br><span class="line">sudo apt-get install gfortran</span><br><span class="line"><span class="meta">#</span><span class="bash"> 安装自己熟悉的文本编辑器vim, vi, emacs等</span></span><br><span class="line">sudo apt-get install vim</span><br><span class="line">sudo apt-get install libssl-dev</span><br><span class="line"><span class="meta">#</span><span class="bash"> 更新已安装的所有包</span></span><br><span class="line">sudo apt update &amp;&amp; sudo apt upgrade</span><br></pre></td></tr></table></figure></div>
-<span id="more"></span>
-<h2 id="mpich安装">mpich安装</h2>
-<p>可以根据自己的需要，自行选择实现 MPI 的包，这里以 mpich 为例。</p>
-<p>打开电脑终端，依次输入以下命令</p>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 使用内置 wget 命令下载 mpich 安装包文件</span></span><br><span class="line">wget https://www.mpich.org/static/downloads/3.4.3/mpich-3.4.3.tar.gz</span><br><span class="line"><span class="comment"># 对安装包进行解压缩</span></span><br><span class="line">tar -xvf mpich-3.4.3.tar.gz</span><br><span class="line"><span class="comment"># 进入解压后的 mpich 文件夹</span></span><br><span class="line"><span class="built_in">cd</span> mpich-3.4.3/</span><br><span class="line"><span class="comment"># mpich 安装配置</span></span><br><span class="line">./configure --enable-shared=yes</span><br></pre></td></tr></table></figure></div>
-<p>在上一步最后安装配置后，可能出现以下问题：</p>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">The default ch4 device could not detect a preferred network</span><br><span class="line">library. Supported options are ofi (libfabric) and ucx:</span><br><span class="line">    --with-device=ch4:ofi or --with-device=ch4:ucx</span><br><span class="line">Configure will use an embedded copy of libfabric or ucx <span class="keyword">if</span> one is</span><br><span class="line">not found <span class="keyword">in</span> the user environment. An installation can be specified</span><br><span class="line">by adding</span><br><span class="line">    --with-libfabric=&lt;path/to/install&gt; or --with-ucx=&lt;path/to/install&gt;</span><br><span class="line">to the configuration.</span><br><span class="line">The previous MPICH default device (ch3) is also available and</span><br><span class="line">supported with option:</span><br><span class="line">    --with-device=ch3</span><br></pre></td></tr></table></figure></div>
-<p>使用以下命令重新进行安装配置</p>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">./configure --with-device=ch4:ofi --enable-shared=yes</span><br></pre></td></tr></table></figure></div>
-<p>完成上述配置后，最后显示<code>Configuration completed</code>即说明配置完成。</p>
-<p>然后继续键入以下命令</p>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">make</span><br><span class="line">sudo make install</span><br></pre></td></tr></table></figure></div>
-<p>对文件进行 make 编译后，之后的操作出现错误需要重新输入命令的时候，建议先回到<code>mpich-3.3.4</code>文件夹进行<code>make clean-all</code>和<code>make</code>，删除之前的错误编译文件，防止出现其他问题。</p>
-<h2 id="环境变量添加">环境变量添加</h2>
-<p>然后在<code>~/.bashrc</code>文件中添加路径，终端中输入<code>sudo gedit ~/.bashrc</code>，然后在文件末尾中添加以下内容。</p>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">export</span> PATH=/usr/<span class="built_in">local</span>/bin:<span class="variable">$PATH</span></span><br><span class="line"><span class="built_in">export</span> LD_LIBRARY_PATH=/usr/<span class="built_in">local</span>/lib:<span class="variable">$LD_LIBRARY_PATH</span></span><br></pre></td></tr></table></figure></div>
-<p>然后更新环境变量，使修改后的环境变量生效。</p>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.bashrc</span><br></pre></td></tr></table></figure></div>
-<h2 id="lammps安装">lammps安装</h2>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 下载文件</span></span><br><span class="line">wget https://download.lammps.org/tars/lammps-stable.tar.gz</span><br><span class="line"><span class="comment"># 解压文件</span></span><br><span class="line">tar -xvf lammps-stable.tar.gz</span><br><span class="line"><span class="comment"># 进入解压后的文件夹</span></span><br><span class="line"><span class="built_in">cd</span> lammps-29Sep2021/</span><br><span class="line"><span class="comment"># 创建 build 目录</span></span><br><span class="line">mkdir build</span><br><span class="line"><span class="comment"># 进入 build 文件夹</span></span><br><span class="line"><span class="built_in">cd</span> build</span><br><span class="line"><span class="comment"># 编译安装</span></span><br><span class="line">cmake ../cmake</span><br><span class="line">make</span><br><span class="line">sudo make install</span><br><span class="line"><span class="comment"># 返回上级目录</span></span><br><span class="line"><span class="built_in">cd</span> ..</span><br></pre></td></tr></table></figure></div>
-<p>以下进行测试</p>
-<div class="highlight-wrap" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 进入lammps文件夹中的 deposit 文件夹</span></span><br><span class="line"><span class="built_in">cd</span> examples/deposit</span><br><span class="line"><span class="comment"># 运行</span></span><br><span class="line">mpirun -n 2 lmp &lt; in.deposit.atom</span><br></pre></td></tr></table></figure></div>
-<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
-      <categories>
-        <category>Molecular Dynamics</category>
-        <category>LAMMPS</category>
-      </categories>
-      <tags>
-        <tag>MD</tag>
-        <tag>lammps</tag>
       </tags>
   </entry>
   <entry>
@@ -5902,6 +5901,44 @@ c[i-1,j-1]+1 &amp; 若\quad i,j&gt;0\quad 且\quad x_i=y_i \<br>
       </tags>
   </entry>
   <entry>
+    <title>1. Two Sum</title>
+    <url>/posts/a2a205d7/</url>
+    <content><![CDATA[<h2 id="Description">Description</h2>
+<p>Given an array of integers <code>nums</code> and an integer <code>target</code>, return <strong>indices</strong> of the two numbers such that they add up to <code>target</code>.</p>
+<p>You may assume that each input would have <strong>exactly one solution</strong>, and you may not use the same element twice.</p>
+<p>You can return the answer in any order.</p>
+<span id="more"></span>
+<h3 id="Example-1">Example 1:</h3>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">Input: nums = [<span class="number">2</span>,<span class="number">7</span>,<span class="number">11</span>,<span class="number">15</span>], target = <span class="number">9</span></span><br><span class="line">Output: [<span class="number">0</span>,<span class="number">1</span>]</span><br><span class="line">Explanation: Because nums[<span class="number">0</span>] + nums[<span class="number">1</span>] == <span class="number">9</span>, we <span class="keyword">return</span> [<span class="number">0</span>, <span class="number">1</span>].</span><br></pre></td></tr></table></figure></div>
+<h3 id="Example-2">Example 2:</h3>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">Input: nums = [<span class="number">3</span>,<span class="number">2</span>,<span class="number">4</span>], target = <span class="number">6</span></span><br><span class="line">Output: [<span class="number">1</span>,<span class="number">2</span>]</span><br></pre></td></tr></table></figure></div>
+<h3 id="Example-3">Example 3:</h3>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">Input: nums = [<span class="number">3</span>,<span class="number">3</span>], target = <span class="number">6</span></span><br><span class="line">Output: [<span class="number">0</span>,<span class="number">1</span>]</span><br></pre></td></tr></table></figure></div>
+<h3 id="Constraints">Constraints:</h3>
+<ul>
+<li><code>2 &lt;= nums.length &lt;= 10^4</code></li>
+<li><code>-10^9 &lt;= nums[i] &lt;= 10^9</code></li>
+<li><code>-10^9 &lt;= target &lt;= 10^9</code></li>
+<li>Only one valid answer exists</li>
+</ul>
+<h3 id="Follow-up">Follow-up:</h3>
+<p>Can you come up with an algorithm that is less than <code>O(n2) </code>time complexity?</p>
+<h2 id="Solution">Solution</h2>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">twoSum</span>(<span class="params">self, nums, target</span>):</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> nums:</span><br><span class="line">            j = target - i</span><br><span class="line">            start_index = nums.index(i)</span><br><span class="line">            next_index = start_index + <span class="number">1</span></span><br><span class="line">            temp_nums = nums[next_index: ]</span><br><span class="line">            <span class="keyword">if</span> j <span class="keyword">in</span> temp_nums:</span><br><span class="line">                <span class="keyword">return</span>(nums.index(i), next_index + temp_nums.index(j))</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">twoSum</span>(<span class="params">self, nums, target</span>):</span>        </span><br><span class="line">        <span class="built_in">dict</span> = &#123;&#125;</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(nums)):</span><br><span class="line">            <span class="keyword">if</span> target - nums[i] <span class="keyword">not</span> <span class="keyword">in</span> <span class="built_in">dict</span>:</span><br><span class="line">                <span class="built_in">dict</span>[nums[i]] = i</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="keyword">return</span> [<span class="built_in">dict</span>[target-nums[i]], i]</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">twoSum</span>(<span class="params">self, nums, target</span>):</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> nums <span class="keyword">or</span> <span class="built_in">len</span>(nums) &lt; <span class="number">2</span>:</span><br><span class="line">            <span class="keyword">return</span> []</span><br><span class="line">        v2idx = <span class="built_in">dict</span>()</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(nums)):</span><br><span class="line">            remain = target - nums[i]</span><br><span class="line">            <span class="keyword">if</span> remain <span class="keyword">in</span> v2idx:</span><br><span class="line">                <span class="keyword">return</span> [v2idx[remain], i]</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                v2idx[nums[i]] = i</span><br><span class="line">        <span class="keyword">return</span> []</span><br></pre></td></tr></table></figure></div>
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+      <categories>
+        <category>Python</category>
+        <category>LeetCode</category>
+        <category>Easy</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>LeetCode</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Python数据结构与算法(17)--设计模式与面向对象</title>
     <url>/posts/d7b3f4f7/</url>
     <content><![CDATA[<h2 id="设计模式">设计模式</h2>
@@ -6274,44 +6311,6 @@ c[i-1,j-1]+1 &amp; 若\quad i,j&gt;0\quad 且\quad x_i=y_i \<br>
       </tags>
   </entry>
   <entry>
-    <title>1. Two Sum</title>
-    <url>/posts/a2a205d7/</url>
-    <content><![CDATA[<h2 id="Description">Description</h2>
-<p>Given an array of integers <code>nums</code> and an integer <code>target</code>, return <strong>indices</strong> of the two numbers such that they add up to <code>target</code>.</p>
-<p>You may assume that each input would have <strong>exactly one solution</strong>, and you may not use the same element twice.</p>
-<p>You can return the answer in any order.</p>
-<span id="more"></span>
-<h3 id="Example-1">Example 1:</h3>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">Input: nums = [<span class="number">2</span>,<span class="number">7</span>,<span class="number">11</span>,<span class="number">15</span>], target = <span class="number">9</span></span><br><span class="line">Output: [<span class="number">0</span>,<span class="number">1</span>]</span><br><span class="line">Explanation: Because nums[<span class="number">0</span>] + nums[<span class="number">1</span>] == <span class="number">9</span>, we <span class="keyword">return</span> [<span class="number">0</span>, <span class="number">1</span>].</span><br></pre></td></tr></table></figure></div>
-<h3 id="Example-2">Example 2:</h3>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">Input: nums = [<span class="number">3</span>,<span class="number">2</span>,<span class="number">4</span>], target = <span class="number">6</span></span><br><span class="line">Output: [<span class="number">1</span>,<span class="number">2</span>]</span><br></pre></td></tr></table></figure></div>
-<h3 id="Example-3">Example 3:</h3>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">Input: nums = [<span class="number">3</span>,<span class="number">3</span>], target = <span class="number">6</span></span><br><span class="line">Output: [<span class="number">0</span>,<span class="number">1</span>]</span><br></pre></td></tr></table></figure></div>
-<h3 id="Constraints">Constraints:</h3>
-<ul>
-<li><code>2 &lt;= nums.length &lt;= 10^4</code></li>
-<li><code>-10^9 &lt;= nums[i] &lt;= 10^9</code></li>
-<li><code>-10^9 &lt;= target &lt;= 10^9</code></li>
-<li>Only one valid answer exists</li>
-</ul>
-<h3 id="Follow-up">Follow-up:</h3>
-<p>Can you come up with an algorithm that is less than <code>O(n2) </code>time complexity?</p>
-<h2 id="Solution">Solution</h2>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">twoSum</span>(<span class="params">self, nums, target</span>):</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> nums:</span><br><span class="line">            j = target - i</span><br><span class="line">            start_index = nums.index(i)</span><br><span class="line">            next_index = start_index + <span class="number">1</span></span><br><span class="line">            temp_nums = nums[next_index: ]</span><br><span class="line">            <span class="keyword">if</span> j <span class="keyword">in</span> temp_nums:</span><br><span class="line">                <span class="keyword">return</span>(nums.index(i), next_index + temp_nums.index(j))</span><br></pre></td></tr></table></figure></div>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">twoSum</span>(<span class="params">self, nums, target</span>):</span>        </span><br><span class="line">        <span class="built_in">dict</span> = &#123;&#125;</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(nums)):</span><br><span class="line">            <span class="keyword">if</span> target - nums[i] <span class="keyword">not</span> <span class="keyword">in</span> <span class="built_in">dict</span>:</span><br><span class="line">                <span class="built_in">dict</span>[nums[i]] = i</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="keyword">return</span> [<span class="built_in">dict</span>[target-nums[i]], i]</span><br></pre></td></tr></table></figure></div>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">twoSum</span>(<span class="params">self, nums, target</span>):</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> nums <span class="keyword">or</span> <span class="built_in">len</span>(nums) &lt; <span class="number">2</span>:</span><br><span class="line">            <span class="keyword">return</span> []</span><br><span class="line">        v2idx = <span class="built_in">dict</span>()</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(nums)):</span><br><span class="line">            remain = target - nums[i]</span><br><span class="line">            <span class="keyword">if</span> remain <span class="keyword">in</span> v2idx:</span><br><span class="line">                <span class="keyword">return</span> [v2idx[remain], i]</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                v2idx[nums[i]] = i</span><br><span class="line">        <span class="keyword">return</span> []</span><br></pre></td></tr></table></figure></div>
-<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
-      <categories>
-        <category>Python</category>
-        <category>LeetCode</category>
-        <category>Easy</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>LeetCode</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>2. Add Two Numbers</title>
     <url>/posts/da890a1f/</url>
     <content><![CDATA[<h2 id="Description">Description</h2>
@@ -6334,6 +6333,36 @@ c[i-1,j-1]+1 &amp; 若\quad i,j&gt;0\quad 且\quad x_i=y_i \<br>
 <h2 id="Solution">Solution</h2>
 <div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">addTwoNumbers</span>(<span class="params">self, l1: <span class="type">Optional</span>[ListNode], l2: <span class="type">Optional</span>[ListNode]</span>) -&gt; <span class="type">Optional</span>[ListNode]:</span>        </span><br><span class="line">        <span class="keyword">if</span> l1 == <span class="literal">None</span>:</span><br><span class="line">            <span class="keyword">return</span> l2</span><br><span class="line">        <span class="keyword">if</span> l2 == <span class="literal">None</span>:</span><br><span class="line">            <span class="keyword">return</span> l1</span><br><span class="line"></span><br><span class="line">        dummy = ListNode(<span class="number">0</span>)</span><br><span class="line">        p = dummy</span><br><span class="line">        carry = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> l1 <span class="keyword">and</span> l2:</span><br><span class="line">            p.<span class="built_in">next</span> = ListNode((l1.val + l2.val + carry) % <span class="number">10</span>)</span><br><span class="line">            carry = (l1.val + l2.val + carry) // <span class="number">10</span></span><br><span class="line">            l1 = l1.<span class="built_in">next</span></span><br><span class="line">            l2 = l2.<span class="built_in">next</span></span><br><span class="line">            p = p.<span class="built_in">next</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> l2:</span><br><span class="line">            <span class="keyword">while</span> l2:</span><br><span class="line">                p.<span class="built_in">next</span> = ListNode((l2.val + carry) % <span class="number">10</span>)</span><br><span class="line">                carry = (l2.val + carry) // <span class="number">10</span></span><br><span class="line">                l2 = l2.<span class="built_in">next</span></span><br><span class="line">                p = p.<span class="built_in">next</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> l1:</span><br><span class="line">            <span class="keyword">while</span> l1:</span><br><span class="line">                p.<span class="built_in">next</span> = ListNode((l1.val + carry) % <span class="number">10</span>)</span><br><span class="line">                carry = (l1.val + carry) // <span class="number">10</span></span><br><span class="line">                l1 = l1.<span class="built_in">next</span></span><br><span class="line">                p = p.<span class="built_in">next</span>     </span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> carry == <span class="number">1</span>:</span><br><span class="line">            p.<span class="built_in">next</span> = ListNode(<span class="number">1</span>)</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> dummy.<span class="built_in">next</span></span><br></pre></td></tr></table></figure></div>
 <div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">addTwoNumbers</span>(<span class="params">self, l1: <span class="type">Optional</span>[ListNode], l2: <span class="type">Optional</span>[ListNode]</span>) -&gt; <span class="type">Optional</span>[ListNode]:</span>        </span><br><span class="line">        re = temp = ListNode(<span class="literal">None</span>)</span><br><span class="line">        add = <span class="number">0</span></span><br><span class="line">        <span class="keyword">while</span> l1 <span class="keyword">or</span> l2 <span class="keyword">or</span> add:</span><br><span class="line">            add += (l1.val <span class="keyword">if</span> l1 <span class="keyword">else</span> <span class="number">0</span>) + (l2.val <span class="keyword">if</span> l2 <span class="keyword">else</span> <span class="number">0</span>)</span><br><span class="line">            temp.<span class="built_in">next</span> = ListNode(add%<span class="number">10</span>)</span><br><span class="line">            add //= <span class="number">10</span></span><br><span class="line">            temp = temp.<span class="built_in">next</span></span><br><span class="line">            l1 = l1.<span class="built_in">next</span> <span class="keyword">if</span> l1 <span class="keyword">else</span> <span class="literal">None</span></span><br><span class="line">            l2 = l2.<span class="built_in">next</span> <span class="keyword">if</span> l2 <span class="keyword">else</span> <span class="literal">None</span></span><br><span class="line">        <span class="keyword">return</span> re.<span class="built_in">next</span></span><br></pre></td></tr></table></figure></div>
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+      <categories>
+        <category>Python</category>
+        <category>LeetCode</category>
+        <category>Medium</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>LeetCode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>3. Longest Substring Without Repeating Characters</title>
+    <url>/posts/c5a2b098/</url>
+    <content><![CDATA[<h2 id="Description">Description</h2>
+<p>Given a string <code>s</code>, find the length of the <strong>longest substring</strong> without repeating characters.</p>
+<span id="more"></span>
+<h3 id="Example-1">Example 1:</h3>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">Input: s = <span class="string">&quot;abcabcbb&quot;</span></span><br><span class="line">Output: <span class="number">3</span></span><br><span class="line">Explanation: The answer <span class="keyword">is</span> <span class="string">&quot;abc&quot;</span>, <span class="keyword">with</span> the length of <span class="number">3.</span></span><br></pre></td></tr></table></figure></div>
+<h3 id="Example-2">Example 2:</h3>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">Input: s = <span class="string">&quot;bbbbb&quot;</span></span><br><span class="line">Output: <span class="number">1</span></span><br><span class="line">Explanation: The answer <span class="keyword">is</span> <span class="string">&quot;b&quot;</span>, <span class="keyword">with</span> the length of <span class="number">1.</span></span><br></pre></td></tr></table></figure></div>
+<h3 id="Example-3">Example 3:</h3>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">Input: s = <span class="string">&quot;pwwkew&quot;</span></span><br><span class="line">Output: <span class="number">3</span></span><br><span class="line">Explanation: The answer <span class="keyword">is</span> <span class="string">&quot;wke&quot;</span>, <span class="keyword">with</span> the length of <span class="number">3.</span></span><br><span class="line">Notice that the answer must be a substring, <span class="string">&quot;pwke&quot;</span> <span class="keyword">is</span> a subsequence <span class="keyword">and</span> <span class="keyword">not</span> a substring.</span><br></pre></td></tr></table></figure></div>
+<h3 id="Constraints">Constraints:</h3>
+<ul>
+<li><code>0 &lt;= s.length &lt;= 5 * 10^4</code></li>
+<li><code>s</code> consists of English letters, digits, symbols and spaces.</li>
+</ul>
+<h2 id="Solution">Solution</h2>
+<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">lengthOfLongestSubstring</span>(<span class="params">self, s: <span class="built_in">str</span></span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        start = -<span class="number">1</span></span><br><span class="line">        <span class="built_in">max</span> = <span class="number">0</span></span><br><span class="line">        <span class="built_in">dict</span> = &#123;&#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(s)):</span><br><span class="line">            <span class="comment"># s[i] in dict</span></span><br><span class="line">            <span class="keyword">if</span> s[i] <span class="keyword">in</span> <span class="built_in">dict</span> <span class="keyword">and</span> <span class="built_in">dict</span>[s[i]] &gt; start:</span><br><span class="line">                start = <span class="built_in">dict</span>[s[i]]</span><br><span class="line">                <span class="built_in">dict</span>[s[i]] = i            </span><br><span class="line">            <span class="comment"># s[i] not in dict</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="built_in">dict</span>[s[i]] = i</span><br><span class="line">                <span class="keyword">if</span> i - start &gt; <span class="built_in">max</span>:</span><br><span class="line">                    <span class="built_in">max</span> = i - start</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">max</span></span><br></pre></td></tr></table></figure></div>
 <link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
       <categories>
         <category>Python</category>
@@ -6398,36 +6427,6 @@ c[i-1,j-1]+1 &amp; 若\quad i,j&gt;0\quad 且\quad x_i=y_i \<br>
 </ul>
 <h2 id="Solution">Solution</h2>
 <div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">convert</span>(<span class="params">self, s: <span class="built_in">str</span>, numRows: <span class="built_in">int</span></span>) -&gt; <span class="built_in">str</span>:</span></span><br><span class="line">        <span class="keyword">if</span> numRows &lt;= <span class="number">1</span> <span class="keyword">or</span> numRows &gt;= <span class="built_in">len</span>(s):</span><br><span class="line">            <span class="keyword">return</span> s</span><br><span class="line"></span><br><span class="line">        zigzag = [<span class="string">&#x27;&#x27;</span> <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(numRows)]</span><br><span class="line"></span><br><span class="line">        row = <span class="number">0</span></span><br><span class="line">        step = <span class="number">1</span></span><br><span class="line">        <span class="keyword">for</span> achar <span class="keyword">in</span> s:</span><br><span class="line">            zigzag[row] += achar</span><br><span class="line">            <span class="keyword">if</span> row == <span class="number">0</span>:</span><br><span class="line">                step = <span class="number">1</span></span><br><span class="line">            <span class="keyword">elif</span> row == numRows - <span class="number">1</span>:</span><br><span class="line">                step = -<span class="number">1</span></span><br><span class="line">            row = row + step</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="string">&#x27;&#x27;</span>.join(zigzag)</span><br></pre></td></tr></table></figure></div>
-<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
-      <categories>
-        <category>Python</category>
-        <category>LeetCode</category>
-        <category>Medium</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>LeetCode</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>3. Longest Substring Without Repeating Characters</title>
-    <url>/posts/c5a2b098/</url>
-    <content><![CDATA[<h2 id="Description">Description</h2>
-<p>Given a string <code>s</code>, find the length of the <strong>longest substring</strong> without repeating characters.</p>
-<span id="more"></span>
-<h3 id="Example-1">Example 1:</h3>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">Input: s = <span class="string">&quot;abcabcbb&quot;</span></span><br><span class="line">Output: <span class="number">3</span></span><br><span class="line">Explanation: The answer <span class="keyword">is</span> <span class="string">&quot;abc&quot;</span>, <span class="keyword">with</span> the length of <span class="number">3.</span></span><br></pre></td></tr></table></figure></div>
-<h3 id="Example-2">Example 2:</h3>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">Input: s = <span class="string">&quot;bbbbb&quot;</span></span><br><span class="line">Output: <span class="number">1</span></span><br><span class="line">Explanation: The answer <span class="keyword">is</span> <span class="string">&quot;b&quot;</span>, <span class="keyword">with</span> the length of <span class="number">1.</span></span><br></pre></td></tr></table></figure></div>
-<h3 id="Example-3">Example 3:</h3>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">Input: s = <span class="string">&quot;pwwkew&quot;</span></span><br><span class="line">Output: <span class="number">3</span></span><br><span class="line">Explanation: The answer <span class="keyword">is</span> <span class="string">&quot;wke&quot;</span>, <span class="keyword">with</span> the length of <span class="number">3.</span></span><br><span class="line">Notice that the answer must be a substring, <span class="string">&quot;pwke&quot;</span> <span class="keyword">is</span> a subsequence <span class="keyword">and</span> <span class="keyword">not</span> a substring.</span><br></pre></td></tr></table></figure></div>
-<h3 id="Constraints">Constraints:</h3>
-<ul>
-<li><code>0 &lt;= s.length &lt;= 5 * 10^4</code></li>
-<li><code>s</code> consists of English letters, digits, symbols and spaces.</li>
-</ul>
-<h2 id="Solution">Solution</h2>
-<div class="highlight-wrap" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">lengthOfLongestSubstring</span>(<span class="params">self, s: <span class="built_in">str</span></span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        start = -<span class="number">1</span></span><br><span class="line">        <span class="built_in">max</span> = <span class="number">0</span></span><br><span class="line">        <span class="built_in">dict</span> = &#123;&#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(s)):</span><br><span class="line">            <span class="comment"># s[i] in dict</span></span><br><span class="line">            <span class="keyword">if</span> s[i] <span class="keyword">in</span> <span class="built_in">dict</span> <span class="keyword">and</span> <span class="built_in">dict</span>[s[i]] &gt; start:</span><br><span class="line">                start = <span class="built_in">dict</span>[s[i]]</span><br><span class="line">                <span class="built_in">dict</span>[s[i]] = i            </span><br><span class="line">            <span class="comment"># s[i] not in dict</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="built_in">dict</span>[s[i]] = i</span><br><span class="line">                <span class="keyword">if</span> i - start &gt; <span class="built_in">max</span>:</span><br><span class="line">                    <span class="built_in">max</span> = i - start</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">max</span></span><br></pre></td></tr></table></figure></div>
 <link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
       <categories>
         <category>Python</category>
